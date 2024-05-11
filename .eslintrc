@@ -1,0 +1,3 @@
+{
+//	"extends": ["@babel/core", ...EXISTING-CONFIGS-HERE]
+}
