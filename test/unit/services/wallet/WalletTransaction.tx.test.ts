@@ -27,7 +27,7 @@ describe( "WalletTransaction.tx", () =>
 	describe( "Send transaction", () =>
 	{
 		const sendValue1 : string = '0.001124';	//	in ETH
-		const publicWalletPrivateKey = 'c7f832621897e67d973f0f1c497198ed1b89a138f2fe3cc6ce6a59cd3fb7cd4c'.trim().toLowerCase();
+		const publicWalletPrivateKey = '0xc7f832621897e67d973f0f1c497198ed1b89a138f2fe3cc6ce6a59cd3fb7cd4c'.trim().toLowerCase();
 		const publicWalletAddress : string = '0xcC361BDf821563d2a8aC5B57A9e34EC5cA48C5F3'.trim().toLowerCase();
 		const payeeAddress : string = `0x8B4c0Dc5AA90c322C747c10FDD7cf1759D343573`.trim().toLowerCase();
 
@@ -49,9 +49,9 @@ describe( "WalletTransaction.tx", () =>
 			//       isHD: false,
 			//       mnemonic: '',
 			//       password: '',
-			//       address: '0x8B4c0Dc5AA90c322C747c10FDD7cf1759D343573',
-			//       publicKey: '0x0203e70364e42205e9d1ab8b437bfe7f1277a4061942abdb146e6e1828d48d24aa',
-			//       privateKey: '0x948427c37d662bde57c4d52116b63a87083186149ac6040b976a3ebb3398fc98',
+			//       address: '0xcc361bdf821563d2a8ac5b57a9e34ec5ca48c5f3',
+			//       publicKey: '0x03f2a1155a81b2b5c5e61ec0c148d5465432e9f4b4904e3a25513b27055b0719bb',
+			//       privateKey: '0xc7f832621897e67d973f0f1c497198ed1b89a138f2fe3cc6ce6a59cd3fb7cd4c',
 			//       index: 0,
 			//       path: null
 			//     }
@@ -179,7 +179,7 @@ describe( "WalletTransaction.tx", () =>
 
 
 		const sendValueUsdt : string = '1.1';	//	in USDT
-		it( `should send ${ sendValueUsdt }USDT from one account to other by method .sendContractTransaction`, async () =>
+		it( `should send ${ sendValueUsdt }USDT/USD from one account to other by method .sendContractTransaction`, async () =>
 		{
 			//	wallet public
 			const walletObj = new WalletFactory().createWalletFromPrivateKey( publicWalletPrivateKey );
@@ -210,7 +210,7 @@ describe( "WalletTransaction.tx", () =>
 			//	send translation from [oneKey wallet 1] to [oneKey wallet 2]
 			//
 			//	this is USDT contract address on sepolia
-			const usdtContractAddress = '0x9e15898acf36C544B6f4547269Ca8385Ce6304d8';
+			const usdtContractAddress = '0x271B34781c76fB06bfc54eD9cfE7c817d89f7759';
 			const broadcastResponse : TransactionResponse = await new WalletTransaction().sendContractTransaction
 			(
 				usdtContractAddress,

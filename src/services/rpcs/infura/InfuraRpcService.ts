@@ -7,6 +7,7 @@ import { TypeUtil } from "debeem-utils";
 import { TransactionRequest } from "ethers/src.ts";
 import { EthersNetworkProvider } from "../../../models/EthersNetworkProvider";
 import { IRpcService } from "../IRpcService";
+import _ from "lodash";
 
 
 export class InfuraRpcService extends AbstractRpcService implements IRpcService
@@ -169,23 +170,52 @@ export class InfuraRpcService extends AbstractRpcService implements IRpcService
 	 * 	The transaction will not be added to the blockchain.
 	 * 	Note that the estimate may be significantly more than the amount of gas actually used by the transaction,
 	 * 	for a variety of reasons including EVM mechanics and node performance.
-	 * 	https://docs.infura.io/networks/ethereum/json-rpc-methods/eth_estimategas
+	 * 	https://docs.infura.io/api/networks/ethereum/json-rpc-methods/eth_estimategas
 	 */
-	public async fetchEthEstimateGas( transactionRequest : TransactionRequest ) : Promise<bigint>
+	public async fetchEthEstimatedGasLimit( transactionRequest : TransactionRequest ) : Promise<number>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
 			try
 			{
-				if ( ! TypeUtil.isNotNullObject( transactionRequest ) )
+				//
+				//	@documentation
+				//	https://docs.infura.io/api/networks/ethereum/json-rpc-methods/eth_estimategas
+				//
+				if ( ! _.isObject( transactionRequest ) || ! _.has( transactionRequest, `to` ) )
 				{
-					return reject( `invalid transactionRequest` );
+					return reject( `${ this.constructor.name }.fetchEthEstimatedGasLimit :: invalid transactionRequest` );
 				}
 
 				//	...
-				const params = [ this.wrapTransactionRequest( transactionRequest ) ];
+				const txReq : any = {
+					... _.cloneDeep( transactionRequest ),
+					block : `safe`
+				};
+				const params = [ this.wrapTransactionRequest( txReq ) ];
 				const result = await this.fetchEthValue( 'eth_estimateGas', params );
-				resolve( BigInt( result ) );
+				if ( _.isString( result ) && _.startsWith( `0x` ) )
+				{
+					try
+					{
+						//
+						//	{
+						//		"jsonrpc": "2.0",
+						//		"id": 1,
+						//		"result": "0x5cec"
+						//	}
+						//
+						const decimalGasLimit : number = parseInt( result, 16 );
+						return resolve( decimalGasLimit );
+					}
+					catch ( err )
+					{
+						console.error( `${ this.constructor.name }.fetchEthEstimatedGasLimit error in parseInt :`, err );
+					}
+				}
+
+				//	failed
+				resolve( 0 );
 			}
 			catch ( err )
 			{

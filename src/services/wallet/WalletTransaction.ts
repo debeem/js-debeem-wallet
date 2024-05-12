@@ -11,6 +11,8 @@ import { FetchListOptions } from "debeem-utils";
 import { AlchemyService } from "../rpcs/alchemy/AlchemyService";
 import { WalletEntityBaseItem } from "../../entities/WalletEntity";
 import { TransactionHistoryResult } from "../../models/Transaction";
+import _ from "lodash";
+import {AddressLike} from "ethers/src.ts/address";
 
 
 
@@ -28,14 +30,70 @@ export class WalletTransaction
 	 */
 	public getDefaultGasLimit()
 	{
-		return 21000;
+		return 31000;
+	}
+
+	/**
+	 *	@param toAddress	{AddressLike}
+	 *	@returns {Promise<number>}
+	 */
+	public estimateEthGasLimitByToAddress( toAddress : AddressLike )  : Promise<number>
+	{
+		return new Promise( async ( resolve, reject) =>
+		{
+			try
+			{
+				if ( ! _.isString( toAddress ) || ! isAddress( toAddress ) )
+				{
+					return reject( `${ this.constructor.name }.estimateEthGasLimitByToAddress :: invalid toAddress` );
+				}
+
+				const transactionRequest : TransactionRequest = {
+					to : toAddress,
+				};
+				resolve( await this.estimateEthGasLimit( transactionRequest ) );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+	/**
+	 *	@param transactionRequest	{TransactionRequest}
+	 * 	@returns {Promise<number>}
+	 */
+	public estimateEthGasLimit( transactionRequest : TransactionRequest )  : Promise<number>
+	{
+		return new Promise( async ( resolve, reject) =>
+		{
+			try
+			{
+				//
+				//	@documentation
+				//	https://docs.infura.io/api/networks/ethereum/json-rpc-methods/eth_estimategas
+				//
+				if ( ! _.isObject( transactionRequest ) || ! _.has( transactionRequest, `to` ) )
+				{
+					return reject( `${ this.constructor.name }.estimateEthGasLimit :: invalid transactionRequest` );
+				}
+
+				const gasLimit : number = await new InfuraRpcService( getCurrentChain() ).fetchEthEstimatedGasLimit( transactionRequest );
+				resolve( gasLimit );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
 	}
 
 	/**
 	 * 	get last nonce count
 	 *	@param address		- wallet address
 	 */
-	public async getNonce( address : string ) : Promise<number>
+	public async queryNonce( address : string ) : Promise<number>
 	{
 		return new Promise( async ( resolve, reject) =>
 		{
@@ -43,7 +101,7 @@ export class WalletTransaction
 			{
 				if ( ! TypeUtil.isNotEmptyString( address ) )
 				{
-					return reject( 'wallet address not specified' );
+					return reject( `${ this.constructor.name }.queryNonce :: invalid address` );
 				}
 
 				const config : EthersNetworkProvider = new InfuraRpcService( getCurrentChain() ).config;
@@ -67,11 +125,11 @@ export class WalletTransaction
 
 	/**
 	 * 	send a transaction for native currency
-	 *	@param wallet
-	 *	@param to
-	 *	@param value
-	 *	@param nonce
-	 *	@param gasLimit
+	 *	@param wallet		{WalletEntityBaseItem}
+	 *	@param to		{string}
+	 *	@param value		{string}
+	 *	@param [nonce]		{number}
+	 *	@param [gasLimit]	{number}
 	 */
 	public async send
 	(
@@ -79,13 +137,26 @@ export class WalletTransaction
 		to : string,
 		value : string,
 		nonce : number = -1,
-		gasLimit: number = this.getDefaultGasLimit()
+		gasLimit: number = 0
 	) : Promise<TransactionResponse>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
 			try
 			{
+				if ( ! wallet )
+				{
+					return reject( `${ this.constructor.name }.send :: invalid wallet` );
+				}
+				if ( ! _.isString( wallet.privateKey ) || _.isEmpty( wallet.privateKey ) )
+				{
+					return reject( `${ this.constructor.name }.send :: invalid wallet.privateKey` );
+				}
+				if ( ! isAddress( wallet.address ) )
+				{
+					return reject( `${ this.constructor.name }.send :: invalid wallet.address` );
+				}
+
 				const signedTx : string = await this.signTransaction( wallet, to, value, nonce, gasLimit );
 				const res : TransactionResponse = await this.broadcastTransaction( signedTx );
 				resolve( res );
@@ -99,11 +170,13 @@ export class WalletTransaction
 
 	/**
 	 * 	sign a transaction before it will be broadcast
-	 *	@param {*} wallet
-	 *	@param {*} toAddress        Receiver's wallet address
-	 *	@param {*} value     ETH 数量，单位 ETH，例如："0.001" ETH
-	 *	@param {*} nonce     nonce 非常重要，可以通过 infura 接口查询当前 nonce
-	 *	@param {*} gasLimit  发送 ETH 的 gasLimit 是固定的 21000，调用其他合约的交易需要提前预估 gasLimit
+	 *
+	 *	@param wallet		{WalletEntityBaseItem}
+	 *	@param toAddress  	{string}	Receiver's wallet address
+	 *	@param value		{string}	ETH quantity, unit ETH, for example: "0.001" ETH
+	 *	@param [nonce]		{number}	The nonce is very important. We can query the current nonce through the Infura API.
+	 *	@param [gasLimit] 	{number}	The gasLimit for sending ETH is fixed at 21,000.
+	 *						Transactions calling other contracts need to estimate the gasLimit in advance.
 	 *	@returns
 	 */
 	public async signTransaction
@@ -112,7 +185,7 @@ export class WalletTransaction
 		toAddress : string,
 		value : string,
 		nonce : number = -1,
-		gasLimit: number = this.getDefaultGasLimit()
+		gasLimit: number = 0
 	) : Promise<string>
 	{
 		return new Promise( async ( resolve, reject ) =>
@@ -121,29 +194,45 @@ export class WalletTransaction
 			{
 				if ( ! wallet )
 				{
-					return reject( 'invalid wallet' );
+					return reject( `${ this.constructor.name }.signTransaction :: invalid wallet` );
 				}
-				if ( ! TypeUtil.isNotEmptyString( wallet.privateKey ) )
+				if ( ! _.isString( wallet.privateKey ) || _.isEmpty( wallet.privateKey ) )
 				{
-					return reject( 'invalid wallet.privateKey' );
+					return reject( `${ this.constructor.name }.signTransaction :: invalid wallet.privateKey` );
 				}
 				if ( ! isAddress( wallet.address ) )
 				{
-					return reject( 'invalid wallet.address' );
+					return reject( `${ this.constructor.name }.signTransaction :: invalid wallet.address` );
 				}
 
+				//
+				//	Calculate nonce
+				//
 				if ( -1 === nonce )
 				{
-					nonce = await this.getNonce( wallet.address );
+					nonce = await this.queryNonce( wallet.address );
 				}
 				if ( nonce < 0 )
 				{
-					return reject( 'invalid nonce' );
+					return reject( `${ this.constructor.name }.signTransaction :: invalid nonce` );
+				}
+
+				//
+				//	Calculate gasLimit
+				//
+				if ( gasLimit <= 0 )
+				{
+					gasLimit = await this.estimateEthGasLimitByToAddress( toAddress );
+					if ( gasLimit <= 0 )
+					{
+						gasLimit = this.getDefaultGasLimit();
+					}
 				}
 				if ( gasLimit <= 0 )
 				{
-					return reject( 'invalid gasLimit' );
+					return reject( `${ this.constructor.name }.signTransaction :: invalid gasLimit` );
 				}
+
 
 				const sendValue : bigint = ethers.parseEther( value );
 
@@ -154,19 +243,10 @@ export class WalletTransaction
 				//console.log( `sendValue : `, sendValue );
 				if ( balanceOfSender < sendValue )
 				{
-					return reject( 'insufficient funds' );
+					return reject( `${ this.constructor.name }.signTransaction :: insufficient funds` );
 				}
 
 				const gasPrice : bigint = await new InfuraRpcService( getCurrentChain() ).fetchEthGasPrice();
-				const bigGasLimit : bigint = BigInt( gasLimit );
-				const totalCost : bigint = bigGasLimit * gasPrice + sendValue;
-				//console.log( `totalCost : `, totalCost );
-
-				if ( totalCost > balanceOfSender )
-				{
-					//	send have not enough money to perform this transaction
-					return reject( 'insufficient funds for intrinsic transaction cost' );
-				}
 
 				//	sign now
 				const config : EthersNetworkProvider = new InfuraRpcService( getCurrentChain() ).config;
@@ -174,7 +254,7 @@ export class WalletTransaction
 				const signWallet = new ethers.Wallet( privateKey );
 				const chain = ethers.Network.from( config.network );
 
-				const transaction = {
+				const transaction : TransactionRequest = {
 					to: toAddress,
 					value: sendValue,
 					chainId: chain.chainId,
@@ -182,6 +262,15 @@ export class WalletTransaction
 					gasLimit: gasLimit,
 					gasPrice: BigInt( gasPrice ),
 				}
+
+				const bigGasLimit : bigint = BigInt( gasLimit );
+				const totalCost : bigint = bigGasLimit * gasPrice + sendValue;
+				if ( totalCost > balanceOfSender )
+				{
+					//	send have not enough money to perform this transaction
+					return reject( `${ this.constructor.name }.signTransaction :: insufficient funds for intrinsic transaction cost` );
+				}
+
 				const signedTransaction = await signWallet.signTransaction( transaction );
 				resolve( signedTransaction );
 			}
@@ -193,8 +282,9 @@ export class WalletTransaction
 	}
 
 	/**
-	 *	broadcast transacation
-	 *	@param {*} signedTx
+	 *	broadcast transaction
+	 *	@param signedTx		{string}
+	 *	@returns {Promise<TransactionResponse>}
 	 */
 	public async broadcastTransaction( signedTx : string ) : Promise<TransactionResponse>
 	{
@@ -204,7 +294,7 @@ export class WalletTransaction
 			{
 				if ( ! TypeUtil.isNotEmptyString( signedTx ) )
 				{
-					return reject('invalid signature of transaction' );
+					return reject(`${ this.constructor.name }.broadcastTransaction :: invalid signature of transaction` );
 				}
 
 				//	...
@@ -224,6 +314,14 @@ export class WalletTransaction
 
 	/**
 	 * 	Send Derivative Token Transaction
+	 * 	@param contractAddress		{string}
+	 * 	@param wallet			{WalletEntityBaseItem}
+	 *	@param toAddress		{string}
+	 *	@param value			{string}
+	 *	@param decimals			{number}
+	 *	@param nonce			{number}
+	 *	@param gasLimit			{number}
+	 *	@returns {Promise<TransactionResponse>}
 	 */
 	public async sendContractTransaction
 	(
@@ -233,7 +331,7 @@ export class WalletTransaction
 		value : string,
 		decimals : number = 18,
 		nonce : number = -1,
-		gasLimit: number = this.getDefaultGasLimit()
+		gasLimit: number = 0
 	) : Promise<TransactionResponse>
 	{
 		return new Promise( async ( resolve, reject) =>
@@ -242,15 +340,24 @@ export class WalletTransaction
 			{
 				if ( -1 === nonce )
 				{
-					nonce = await this.getNonce( wallet.address );
+					nonce = await this.queryNonce( wallet.address );
 				}
 				if ( nonce < 0 )
 				{
-					return reject( 'invalid nonce' );
+					return reject( `${ this.constructor.name }.sendContractTransaction :: invalid nonce` );
+				}
+
+				if ( gasLimit <= 0 )
+				{
+					gasLimit = await this.estimateEthGasLimitByToAddress( toAddress );
+					if ( gasLimit <= 0 )
+					{
+						gasLimit = this.getDefaultGasLimit();
+					}
 				}
 				if ( gasLimit <= 0 )
 				{
-					return reject( 'invalid gasLimit' );
+					return reject( `${ this.constructor.name }.sendContractTransaction :: invalid gasLimit` );
 				}
 
 				const config : EthersNetworkProvider = new InfuraRpcService( getCurrentChain() ).config;
@@ -271,7 +378,7 @@ export class WalletTransaction
 
 				//	Get the current gas price
 				const gasPrice : bigint = await new InfuraRpcService( getCurrentChain() ).fetchEthGasPrice();
-				const bigGasLimit : bigint = BigInt( gasLimit + 200000 );
+				//const bigGasLimit : bigint = BigInt( gasLimit + 300000 );
 				//const totalCost : bigint = bigGasLimit * gasPrice + sendValue;
 
 				//	build the transaction object and sign it
@@ -281,11 +388,10 @@ export class WalletTransaction
 					value: 0,
 					chainId: chain.chainId,
 					nonce: nonce,
-					gasLimit: bigGasLimit,
+					gasLimit: gasLimit,
 					gasPrice: BigInt( gasPrice ),
 					data: transferData,
 				};
-				transactionRequest.gasLimit = ( await new InfuraRpcService( getCurrentChain() ).fetchEthEstimateGas( transactionRequest ) ) + BigInt( 500000 );
 
 				//console.log( transactionRequest );
 				const signedTx = await signWallet.signTransaction( transactionRequest );
@@ -303,6 +409,9 @@ export class WalletTransaction
 
 	/**
 	 * 	Query all transaction history of a wallet
+	 *	@param address	{string}
+	 *	@param options	{FetchListOptions}
+	 *	@returns {Promise<TransactionHistoryResult>}
 	 */
 	public async queryTransactionHistory( address : string, options? : FetchListOptions ) : Promise<TransactionHistoryResult>
 	{

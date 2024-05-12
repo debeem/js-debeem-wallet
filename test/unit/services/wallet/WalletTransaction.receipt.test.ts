@@ -79,7 +79,7 @@ describe( "WalletTransaction.receipt", () =>
 		it( `should return the receipt of a transaction by hash`, async () =>
 		{
 			const detail : any = await new WalletTransaction().queryTransactionReceipt( txHash );
-			console.log( detail )
+			//console.log( detail )
 			expect( detail ).toBeDefined();
 			expect( detail ).toHaveProperty( 'blobGasPrice' );
 			expect( detail ).toHaveProperty( 'blobGasUsed' );

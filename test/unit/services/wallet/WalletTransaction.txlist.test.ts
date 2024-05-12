@@ -3,6 +3,8 @@ import {setCurrentChain, WalletTransaction} from "../../../../src";
 import { FetchListOptions } from "debeem-utils";
 import { TypeUtil } from "../../../../src/utils/TypeUtil";
 import { TransactionHistoryResult } from "../../../../src/models/Transaction";
+import _ from "lodash";
+import {isAddress} from "ethers";
 
 
 /**
@@ -25,7 +27,7 @@ describe( "WalletTransaction.txlist", () =>
 
 	describe( "Query transaction list", () =>
 	{
-		const walletAddress = `0x47B506704DA0370840c2992A3d3d301FD3c260D3`;
+		const walletAddress = `0xcC361BDf821563d2a8aC5B57A9e34EC5cA48C5F3`;
 
 		it( `should return the number of transactions sent from the address`, async () =>
 		{
@@ -119,7 +121,82 @@ describe( "WalletTransaction.txlist", () =>
 			{
 				for ( const tx of txList )
 				{
+					//	should output:
+					//	tx : {
+					//       blockNum: '0x59d179',
+					//       uniqueId: '0xdfea059e0fa92f4e91f27c0c32a87dc8939fe2a52ef6da8f5b58066b5b8981ce:log:10',
+					//       hash: '0xdfea059e0fa92f4e91f27c0c32a87dc8939fe2a52ef6da8f5b58066b5b8981ce',
+					//       from: '0xcc361bdf821563d2a8ac5b57a9e34ec5ca48c5f3',
+					//       to: '0x8b4c0dc5aa90c322c747c10fdd7cf1759d343573',
+					//       value: 1.1,
+					//       erc721TokenId: null,
+					//       erc1155Metadata: null,
+					//       tokenId: null,
+					//       asset: 'USDT',
+					//       category: 'erc20',
+					//       rawContract: {
+					//         value: '0x10c8e0',
+					//         address: '0x271b34781c76fb06bfc54ed9cfe7c817d89f7759',
+					//         decimal: '0x6'
+					//       },
+					//       metadata: { blockTimestamp: '2024-05-12T08:00:12.000Z' }
+					//     }
+					//console.log( `tx :`, tx );
+					expect( tx ).toBeDefined();
+					expect( tx ).toHaveProperty( 'blockNum' );
+					expect( tx ).toHaveProperty( 'uniqueId' );
+					expect( tx ).toHaveProperty( 'hash' );
+					expect( tx ).toHaveProperty( 'from' );
+					expect( isAddress( tx.from ) ).toBeTruthy();
+					expect( tx ).toHaveProperty( 'to' );
+					expect( isAddress( tx.to ) ).toBeTruthy();
+					expect( tx ).toHaveProperty( 'value' );
+					expect( tx ).toHaveProperty( 'erc721TokenId' );
+					expect( tx ).toHaveProperty( 'erc1155Metadata' );
+					expect( tx ).toHaveProperty( 'tokenId' );
+					expect( tx ).toHaveProperty( 'asset' );
+					expect( tx ).toHaveProperty( 'category' );
+
+					expect( tx ).toHaveProperty( 'rawContract' );
+					expect( _.isObject( tx.rawContract ) ).toBeTruthy();
+					expect( tx.rawContract ).toHaveProperty( 'value' );
+					expect( tx.rawContract ).toHaveProperty( 'address' );
+					expect( tx.rawContract ).toHaveProperty( 'decimal' );
+					expect( _.startsWith( tx.rawContract.value, `0x` ) ).toBeTruthy();
+					expect( _.startsWith( tx.rawContract.decimal, `0x` ) ).toBeTruthy();
+					expect( isAddress( tx.rawContract.address ) || null === tx.rawContract.address ).toBeTruthy();
+
+					expect( tx ).toHaveProperty( 'metadata' );
+					expect( _.isObject( tx.metadata ) ).toBeTruthy();
+					expect( tx.metadata ).toHaveProperty( 'blockTimestamp' );
+
+					//
+					//	...
+					//
 					const txDetail : any = await new WalletTransaction().queryTransactionDetail( tx.hash );
+					//	should output:
+					//	txDetail : {
+					//       accessList: [],
+					//       blockHash: '0xbd9c276d82fb06dff0f010471a9b91a5be8c0e9cfa468a7a3bdd35c880d7bdef',
+					//       blockNumber: '0x59d179',
+					//       chainId: '0xaa36a7',
+					//       from: '0xcc361bdf821563d2a8ac5b57a9e34ec5ca48c5f3',
+					//       gas: '0x828ad',
+					//       gasPrice: '0x17f99cb64a',
+					//       hash: '0xdfea059e0fa92f4e91f27c0c32a87dc8939fe2a52ef6da8f5b58066b5b8981ce',
+					//       input: '0xa9059cbb0000000000000000000000008b4c0dc5aa90c322c747c10fdd7cf1759d343573000000000000000000000000000000000000000000000000000000000010c8e0',
+					//       nonce: '0xc',
+					//       r: '0xe0d1ea780f9cfd429e141863fd1616f98db35b8263d67d33e3cf87feac357956',
+					//       s: '0x49ae605f3b387d979bbc6279f637108db3cb6ae18bfcc05f6bfc0d98cbb689e8',
+					//       to: '0x271b34781c76fb06bfc54ed9cfe7c817d89f7759',
+					//       transactionIndex: '0xf',
+					//       type: '0x1',
+					//       v: '0x0',
+					//       value: '0x0',
+					//       yParity: '0x0'
+					//     }
+					//console.log( `txDetail :`, txDetail );
+
 					expect( txDetail ).toBeDefined();
 					expect( txDetail ).toHaveProperty( 'accessList' );
 					expect( txDetail ).toHaveProperty( 'blockHash' );
@@ -130,14 +207,17 @@ describe( "WalletTransaction.txlist", () =>
 					expect( txDetail ).toHaveProperty( 'gasPrice' );
 					expect( txDetail ).toHaveProperty( 'hash' );
 					expect( txDetail ).toHaveProperty( 'input' );
-					expect( txDetail ).toHaveProperty( 'maxFeePerGas' );
-					expect( txDetail ).toHaveProperty( 'maxPriorityFeePerGas' );
+					//expect( txDetail ).toHaveProperty( 'maxFeePerGas' );
+					//expect( txDetail ).toHaveProperty( 'maxPriorityFeePerGas' );
 					expect( txDetail ).toHaveProperty( 'nonce' );
 					expect( txDetail ).toHaveProperty( 'r' );
 					expect( txDetail ).toHaveProperty( 's' );
-					expect( txDetail ).toHaveProperty( 'v' );
+					expect( txDetail ).toHaveProperty( 'to' );
+					expect( txDetail ).toHaveProperty( 'transactionIndex' );
 					expect( txDetail ).toHaveProperty( 'type' );
+					expect( txDetail ).toHaveProperty( 'v' );
 					expect( txDetail ).toHaveProperty( 'value' );
+					expect( txDetail ).toHaveProperty( 'yParity' );
 					//
 					//	should output:
 					//	{

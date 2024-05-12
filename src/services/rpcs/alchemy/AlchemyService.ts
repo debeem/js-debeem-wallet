@@ -75,16 +75,18 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 
 		switch ( network )
 		{
-			case 'eth-mainnet' :
-			case 'eth-goerli' :
+			case `eth-mainnet` :
+			case `eth-goerli` :
+			case `eth-sepolia`:
 			case 'polygon-mainnet' :
-				return [ 'external', 'internal', 'erc20', 'erc721', 'erc1155', 'specialnft' ];
-			case 'polygon-mumbai' :
-			case 'arb-mainnet' :
-			case 'arb-goerli' :
-			case 'opt-mainnet' :
-			case 'opt-goerli' :
-				return [ 'external', 'erc20', 'erc721', 'erc1155', 'specialnft' ];
+				return [ `external`, `internal`, `erc20`, `erc721`, `erc1155`, `specialnft` ];
+
+			case `polygon-mumbai` :
+			case `arb-mainnet` :
+			case `arb-goerli` :
+			case `opt-mainnet` :
+			case `opt-goerli` :
+				return [ `external`, `erc20`, `erc721`, `erc1155`, `specialnft` ];
 		}
 
 		return null;
@@ -422,6 +424,7 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 			{
 				//	transfers, pageKey
 				const result = await this.queryByParameter( 'alchemy_getAssetTransfers', transactionParam, options );
+				//console.log( `result :`, transactionParam, result );
 				if ( !TypeUtil.isNotNullObjectWithKeys( result, [ 'transfers' ] ) || ! Array.isArray( result.transfers ) )
 				{
 					return reject( `invalid response transfers` );

@@ -75,9 +75,10 @@ describe( "WalletTransaction.account", () =>
 		{
 			//
 			//	on Ethereum Sepolia Testnet
+			//	Wallet : SPubUSDT100
 			//	This account permanently stores 100 USDT
 			//
-			const address = '0x8B4c0Dc5AA90c322C747c10FDD7cf1759D343573';
+			const address = '0x30560B6A2214858Caf6C17c75732A8309049BfAC';
 
 			//	mint USDT/USD:
 			//	https://sepolia.etherscan.io/token/0x271b34781c76fb06bfc54ed9cfe7c817d89f7759#writeContract

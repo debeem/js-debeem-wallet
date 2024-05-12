@@ -1,6 +1,6 @@
 {
 	"name": "debeem-wallet",
-	"version": "1.0.36",
+	"version": "1.0.38",
 	"description": "Ethereum Wallet by DeBeem, Team.",
 	"main": "dist/index.js",
 	"browser": "dist/index.js",
@@ -25,7 +25,7 @@
 		"fake-indexeddb": "^4.0.2",
 		"jest": "^29.5.0",
 		"ts-jest": "^29.1.0",
-		"ts-node": "^10.9.1"
+		"ts-node": "^10.9.2"
 	},
 	"dependencies": {
 		"debeem-crypto": "^1.0.1",
