@@ -104,8 +104,6 @@ export const InfuraNetworks : Array<InfuraNetworkItem> = [
 		]
 	},
 	{
-		//	TODO
-		//	不清楚哪个是主网
 		name : 'arbitrum',
 		network : 'arbitrum',
 		chainId : 0,
