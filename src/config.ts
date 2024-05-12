@@ -24,8 +24,9 @@ let configurations : ConfigurationType =
 		},
 	alchemy :
 		{
-			network   : "eth-goerli",
-			apiKey    : "oQilV7SCeUMQMb9b49wnCDFcxvE3UZ3E"
+			//	kamen
+			network   : "eth-sepolia",
+			apiKey    : "qFtLxSOgkike5Gs_yO363-NAb2l0Blwj"
 		},
 	coinGecko :
 		{
@@ -185,7 +186,7 @@ export const defaultEthereumTokensGoerli	= configDefaultEthereumTokensGoerli;
 /**
  * 	current chain
  */
-const defaultChain : number = 5;
+const defaultChain : number = 11155111;
 let currentChain : number = defaultChain;
 
 export function getDefaultChain() : number

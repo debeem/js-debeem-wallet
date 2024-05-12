@@ -1,6 +1,6 @@
 import { describe, expect } from '@jest/globals';
 import { ethers } from "ethers";
-import { WalletFactory, WalletTransaction } from "../../../../src";
+import {setCurrentChain, WalletFactory, WalletTransaction} from "../../../../src";
 import { TransactionResponse } from "ethers";
 import { TestUtil } from "debeem-utils";
 import { WalletAccount } from "../../../../src";
@@ -17,6 +17,12 @@ describe( "WalletTransaction.tx", () =>
 	afterAll( async () =>
 	{
 	} );
+
+	beforeEach(() =>
+	{
+		//	switch chain/network to Eth.Sepolia
+		setCurrentChain( 11155111 );
+	});
 
 	describe( "Send transaction", () =>
 	{

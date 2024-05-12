@@ -26,6 +26,14 @@ describe( "WalletTransaction.balance", () =>
 	{
 	} );
 
+	beforeEach(() =>
+	{
+		//	switch chain/network to Eth.Sepolia
+		setCurrentChain( 11155111 );
+	});
+
+
+
 	describe( "Query Account Balance", () =>
 	{
 		it( "should return the Ether balance in the mainnet address", async () =>
@@ -66,7 +74,7 @@ describe( "WalletTransaction.balance", () =>
 		it( "Should return the balance of a derived contract token in the specified address", async () =>
 		{
 			//
-			//	on Ethereum Goerli Testnet
+			//	on Ethereum Sepolia Testnet
 			//	This account permanently stores 100 USDT
 			//
 			const address = '0xd56f36DbA1D212e51952C4f69785f114D3Dd2A6A';
@@ -170,16 +178,16 @@ describe( "WalletTransaction.balance", () =>
 			const balance : bigint = await new WalletAccount().ethQueryBalance( walletObj.address );
 			const balanceStr : string = ethers.formatEther( balance );
 
-			//	will output: 0n
+			//	will output: 191529955215828684n
 			//console.log( balance );
 
-			//	will output: "0.0"
+			//	will output: "0.191529955215828684"
 			//console.log( balanceStr );
 
 			//	...
-			expect( balance ).toBe( BigInt( 0 ) );
+			expect( balance ).toBe( BigInt( `191529955215828684` ) );
 			expect( balanceStr ).toBeDefined();
-			expect( balanceStr ).toBe( "0.0" );
+			expect( balanceStr ).toBe( "0.191529955215828684" );
 
 			await TestUtil.sleep(3 * 1000 );
 

@@ -1,5 +1,5 @@
 import { describe, expect } from '@jest/globals';
-import { WalletTransaction } from "../../../../src";
+import {setCurrentChain, WalletTransaction} from "../../../../src";
 import { FetchListOptions } from "debeem-utils";
 import { TypeUtil } from "../../../../src/utils/TypeUtil";
 import { TransactionHistoryResult } from "../../../../src/models/Transaction";
@@ -16,6 +16,12 @@ describe( "WalletTransaction.txlist", () =>
 	afterAll( async () =>
 	{
 	} );
+
+	beforeEach(() =>
+	{
+		//	switch chain/network to Eth.Sepolia
+		setCurrentChain( 11155111 );
+	});
 
 	describe( "Query transaction list", () =>
 	{

@@ -1,7 +1,7 @@
 import { describe, expect } from '@jest/globals';
 import { FetchListOptions } from "debeem-utils";
 import { TypeUtil } from "../../../../src/utils/TypeUtil";
-import { WalletNFT } from "../../../../src";
+import {setCurrentChain, WalletNFT} from "../../../../src";
 
 
 /**
@@ -15,6 +15,12 @@ describe( "WalletTransaction.NFT", () =>
 	afterAll( async () =>
 	{
 	} );
+
+	beforeEach(() =>
+	{
+		//	switch chain/network to Eth.Sepolia
+		setCurrentChain( 11155111 );
+	});
 
 	describe( "Query transaction list", () =>
 	{

@@ -27,8 +27,9 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 		super( chainId );
 		this.setChainMap( {
 			1 : 'eth-mainnet',
-			5 : 'eth-goerli',
-			137 : 'polygon-mainnet',		//	Polygon Mainnet
+			//5 : 'eth-goerli',		//	not supported @202405
+			11155111 : 'eth-sepolia',
+			137 : 'polygon-mainnet',	//	Polygon Mainnet
 			80001 : 'polygon-mumbai',	//	Polygon Testnet Mumbai
 			42161 : 'arb-mainnet',		//	Arbitrum One / arb-mainnet
 			421613 : 'arb-goerli',		//	Arbitrum Goerli / Arbitrum Goerli Rollup Testnet

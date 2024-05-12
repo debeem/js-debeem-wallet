@@ -1,5 +1,5 @@
 import { describe, expect } from '@jest/globals';
-import { WalletTransaction } from "../../../../src";
+import {setCurrentChain, WalletTransaction} from "../../../../src";
 
 
 /**
@@ -13,6 +13,12 @@ describe( "WalletTransaction.receipt", () =>
 	afterAll( async () =>
 	{
 	} );
+
+	beforeEach(() =>
+	{
+		//	switch chain/network to Eth.Sepolia
+		setCurrentChain( 11155111 );
+	});
 
 	describe( "Query transaction list", () =>
 	{
