@@ -17,7 +17,7 @@ import { ChainLinkPriceResult } from "../../../../src/services/rpcs/chainLink/Ch
 /**
  *	WalletTransaction unit test
  */
-describe( "WalletTransaction.balance", () =>
+describe( "WalletTransaction.account", () =>
 {
 	beforeAll( async () =>
 	{
@@ -77,11 +77,17 @@ describe( "WalletTransaction.balance", () =>
 			//	on Ethereum Sepolia Testnet
 			//	This account permanently stores 100 USDT
 			//
-			const address = '0xd56f36DbA1D212e51952C4f69785f114D3Dd2A6A';
+			const address = '0x8B4c0Dc5AA90c322C747c10FDD7cf1759D343573';
+
+			//	mint USDT/USD:
+			//	https://sepolia.etherscan.io/token/0x271b34781c76fb06bfc54ed9cfe7c817d89f7759#writeContract
+			//
+			//	Transfers:
+			//	https://sepolia.etherscan.io/token/0x271b34781c76fb06bfc54ed9cfe7c817d89f7759?a=0x47b506704da0370840c2992a3d3d301fd3c260d3
 			const tokens : Array<ContractTokenBalanceItem> = [
 				{
 					pair : "USDT/USD",
-					contractAddress : '0x9DC9a9a2a753c13b63526d628B1Bf43CabB468Fe',
+					contractAddress : '0x271B34781c76fB06bfc54eD9cfE7c817d89f7759',
 					tokenBalance : BigInt( 0 )
 				}
 			];
@@ -91,7 +97,7 @@ describe( "WalletTransaction.balance", () =>
 			//       {
 			//         pair: 'USDT/USD',
 			//         decimals: undefined,
-			//         contractAddress: '0x9DC9a9a2a753c13b63526d628B1Bf43CabB468Fe',
+			//         contractAddress: '0x271B34781c76fB06bfc54eD9cfE7c817d89f7759',
 			//         tokenBalance: 100000000n
 			//       }
 			//     ]

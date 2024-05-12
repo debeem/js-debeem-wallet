@@ -27,9 +27,9 @@ describe( "WalletTransaction.tx", () =>
 	describe( "Send transaction", () =>
 	{
 		const sendValue1 : string = '0.001124';	//	in ETH
-		const publicWalletPrivateKey = '0x948427c37d662bde57c4d52116b63a87083186149ac6040b976a3ebb3398fc98'.trim().toLowerCase();
-		const publicWalletAddress : string = '0x8B4c0Dc5AA90c322C747c10FDD7cf1759D343573'.trim().toLowerCase();
-		const payeeAddress : string = `0xcC361BDf821563d2a8aC5B57A9e34EC5cA48C5F3`.trim().toLowerCase();
+		const publicWalletPrivateKey = 'c7f832621897e67d973f0f1c497198ed1b89a138f2fe3cc6ce6a59cd3fb7cd4c'.trim().toLowerCase();
+		const publicWalletAddress : string = '0xcC361BDf821563d2a8aC5B57A9e34EC5cA48C5F3'.trim().toLowerCase();
+		const payeeAddress : string = `0x8B4c0Dc5AA90c322C747c10FDD7cf1759D343573`.trim().toLowerCase();
 
 		it( `should send ${ sendValue1 }ETH from one account to other by .sign and .broadcast`, async () =>
 		{
