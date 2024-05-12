@@ -1,4 +1,4 @@
-import { TestUtil, TypeUtil } from "debeem-utils";
+import { TestUtil } from "debeem-utils";
 
 if ( typeof process !== 'undefined' && process.env )
 {
