@@ -1,5 +1,5 @@
 import { describe, expect } from '@jest/globals';
-import { AesHex } from "debeem-crypto"
+import { AesHex } from "debeem-cipher"
 
 /**
  *	AesCrypt unit test

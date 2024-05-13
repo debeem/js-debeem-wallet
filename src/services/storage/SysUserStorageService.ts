@@ -10,7 +10,7 @@ import _ from "lodash";
 import { v4 as uuidv4 } from 'uuid';
 import { openDB, StoreNames } from "idb";
 import { IDBPDatabase } from "idb/build/entry";
-import { AesCrypto } from "debeem-crypto";
+import { AesCrypto } from "debeem-cipher";
 import { SysUserEntity } from "../../entities/SysUserEntity";
 
 

@@ -2,7 +2,7 @@ import { IDBPDatabase } from "idb/build/entry";
 import { openDB, StoreNames } from "idb";
 import { StorageEntity } from "../../entities/StorageEntity";
 import { TypeUtil } from "debeem-utils";
-import { AesCrypto } from "debeem-crypto";
+import { AesCrypto } from "debeem-cipher";
 import { IStorageService } from "./IStorageService";
 import { TestUtil } from "debeem-utils";
 import { SysUserStorageService } from "./SysUserStorageService";
