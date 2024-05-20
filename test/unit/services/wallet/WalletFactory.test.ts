@@ -2,7 +2,7 @@ import { describe, expect } from '@jest/globals';
 import { WalletEntityBaseItem, WalletFactory } from "../../../../src";
 import { ethers, isAddress } from "ethers";
 import { TypeUtil } from "debeem-utils";
-import { EtherWallet } from "web3id";
+import { EtherWallet } from "debeem-id";
 
 /**
  *	WalletFactory unit test

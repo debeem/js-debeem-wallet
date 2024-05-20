@@ -3,8 +3,8 @@ import {
 } from "ethers";
 import { TypeUtil } from "debeem-utils";
 import { WalletEntityBaseItem } from "../../entities/WalletEntity";
-import { EtherWallet } from "web3id";
-import { TWalletBaseItem } from "web3id/src/models/TWallet";
+import { EtherWallet } from "debeem-id";
+import { TWalletBaseItem } from "debeem-id";
 
 
 /**
