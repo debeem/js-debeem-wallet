@@ -1,4 +1,5 @@
 /**
+ * 	@module entities
  * 	https://github.com/jakearchibald/idb
  */
 export interface WalletEntityBaseItem
@@ -64,6 +65,10 @@ export interface WalletEntityBaseItem
 	chainCode ?: string;
 }
 
+
+/**
+ * 	@module
+ */
 export interface WalletEntityItem extends WalletEntityBaseItem
 {
 	name: string;

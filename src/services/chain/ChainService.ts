@@ -1,6 +1,9 @@
 import { chains } from '../../resources/chains.json';
 import { TypeUtil } from "debeem-utils";
 
+/**
+ * 	@category Services
+ */
 export class ChainService
 {
 	public exists( chainId : number ) : boolean

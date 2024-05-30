@@ -14,7 +14,9 @@ import { TransactionHistoryResult } from "../../models/Transaction";
 import _ from "lodash";
 import {AddressLike} from "ethers/src.ts/address";
 
-
+/**
+ * 	@category Wallet Services
+ */
 
 /**
  * 	@class

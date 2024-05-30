@@ -1,3 +1,8 @@
+/**
+ * 	@category Data Models
+ *
+ *	@module
+ */
 export interface EthersNetworkProvider
 {
 	network : string,	//	network name

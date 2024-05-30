@@ -1,4 +1,5 @@
 /**
+ * 	@module entities
  * 	https://github.com/jakearchibald/idb
  */
 export interface TokenEntityItem

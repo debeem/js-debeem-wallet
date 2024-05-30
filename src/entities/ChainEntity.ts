@@ -1,5 +1,8 @@
 /**
- * 	https://github.com/jakearchibald/idb
+ * 	@remark
+ *	Definition of the structure of the database entities
+ *
+ * 	@module
  */
 export interface ChainEntityRpcItem
 {
@@ -7,6 +10,10 @@ export interface ChainEntityRpcItem
 	url : string;		//	rpc url
 	selected : boolean;	//	current selected
 }
+
+/**
+ * 	@module
+ */
 export interface ChainEntityItem
 {
 	name: string;			//	chain name

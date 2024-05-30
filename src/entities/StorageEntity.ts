@@ -1,7 +1,7 @@
 import { DBSchema } from 'idb';
 
 /**
- * 	https://github.com/jakearchibald/idb
+ * 	@module
  */
 export interface StorageEntity extends DBSchema
 {

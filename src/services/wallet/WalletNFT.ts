@@ -2,6 +2,9 @@ import { FetchListOptions } from "debeem-utils";
 import { AlchemyService } from "../rpcs/alchemy/AlchemyService";
 import { getCurrentChain } from "../../config";
 
+/**
+ * 	@category Wallet Services
+ */
 
 /**
  * 	@class

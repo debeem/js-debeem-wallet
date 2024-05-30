@@ -1,4 +1,8 @@
-
+/**
+ * 	@category Data Models
+ *
+ * 	@module
+ */
 export type TransactionHistoryResult =
 {
 	//	transfer list

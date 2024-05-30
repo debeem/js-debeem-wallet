@@ -1,0 +1,50 @@
+{
+	"entryPointStrategy": "expand",
+	"entryPoints": [
+		"src/entities/",
+		"src/models/",
+		"src/services/chain/",
+		"src/services/storage",
+		"src/services/token",
+		"src/services/wallet"
+	],
+	"out": "docs",
+	"plugin": [
+		"typedoc-plugin-markdown"
+	],
+	"outputFileStrategy": "modules",
+	"flattenOutputFiles" : false,
+	"membersWithOwnFile": [
+		"Enum",
+		"Variable",
+		"Function",
+		"Class",
+		"Interface",
+		"TypeAlias"
+	],
+	"navigation": {
+		"includeCategories": true,
+		"includeGroups": false,
+		"includeFolders": true
+	},
+	"categorizeByGroup": false,
+	"textContentMappings": {
+		"header.title": "{projectName} {version}",
+		"header.docs": "Docs",
+		"breadcrumbs.home": "{projectName} {version}"
+	},
+	"mergeReadme": true,
+	"includeVersion": false,
+	"hideBreadcrumbs": false,
+	"hidePageHeader": true,
+	"hidePageTitle": false,
+	"disableSources": true,
+	"expandParameters": true,
+	"indexFormat": "table",
+	"parametersFormat": "table",
+	"propertiesFormat": "table",
+	"enumMembersFormat": "table",
+	"typeDeclarationFormat": "table",
+	"useCodeBlocks": true,
+	"expandObjects": true
+}

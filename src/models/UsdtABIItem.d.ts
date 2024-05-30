@@ -1,3 +1,8 @@
+/**
+ * 	@category Data Models
+ *
+ * 	@module
+ */
 export interface UsdtABIItem
 {
 	constant: boolean,

@@ -6,15 +6,31 @@ import { WalletEntityBaseItem } from "../../entities/WalletEntity";
 import { EtherWallet } from "debeem-id";
 import { TWalletBaseItem } from "debeem-id";
 
+/**
+ * 	@category Wallet Services
+ */
 
 /**
  * 	@class
+ * Code blocks are great for examples
+ *
+ * ```ts
+ * // run typedoc --help for a list of supported languages
+ * const instance = new MyClass();
+ * ```
+ *
  */
 export class WalletFactory
 {
 	constructor()
 	{
 	}
+
+	/**
+	 * @categoryDescription Advanced Use
+	 * These functions are available for...
+	 * @module
+	 */
 
 	/**
 	 *	@param wallet	{any}

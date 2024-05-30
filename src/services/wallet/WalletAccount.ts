@@ -20,6 +20,9 @@ import { WalletFactory } from "./WalletFactory";
 import { TokenStorageService } from "../storage/TokenStorageService";
 import { TokenEntityItem } from "../../entities/TokenEntity";
 
+/**
+ * 	@category Wallet Services
+ */
 
 /**
  * 	@class
