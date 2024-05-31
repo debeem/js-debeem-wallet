@@ -12,6 +12,18 @@ A complete, compact, and simple Ethereum wallet library based on the ethers libr
 1. Provides network information query by chainId.
 1. Provide local structured data storage based on AES256 encryption algorithm, and the password can be modified at will.
 
+
+### Architecture
+
+```mermaid
+graph LR
+A[Square Rect] -- Link text --> B((Circle))
+A --> C(Round Rect)
+B --> D{Rhombus}
+C --> D
+```
+
+
 1. [Unit Test](#unit-test)
 
 # Installation
