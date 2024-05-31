@@ -85,7 +85,7 @@ npm i debeem-wallet
 
 ## Usage
 ### Configuration
-Get, set, and reset the current network configuration.
+Get, set and reset the configuration of the chain used by the wallet.
 
 | Function                                                 | Description                                   |
 |----------------------------------------------------------|-----------------------------------------------|
