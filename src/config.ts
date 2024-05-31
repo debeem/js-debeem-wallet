@@ -1,38 +1,67 @@
 import { EthersNetworkProvider } from "./models/EthersNetworkProvider";
 import { TypeUtil } from "debeem-utils";
 
+/**
+ * 	@hidden
+ */
 export type ConfigurationType = {
 	[key: string]: EthersNetworkProvider;
 };
 
+/**
+ * 	@hidden
+ */
 let configurations : ConfigurationType =
 {
+	/**
+	 * 	@ignore
+	 */
 	infura :
 		{
 			network : "goerli",
 			apiKey : "807f91ef9c064ddcbedf22d087dc1e3e",	//"a56c02ba9c8a4137a2a0767e4cdee7f5",
 		},
+
+	/**
+	 * 	@ignore
+	 */
 	oneInch :
 		{
 			network		: "sepolia",
 			apiKey		: '9khBH8yzfCW4YVsQmLbspLF4ahzBWaTn',
 		},
+
+	/**
+	 * 	@ignore
+	 */
 	etherscan :
 		{
 			network   : "sepolia",
 			apiKey    : "E9CHZABUH6BMDVX35PWB4WHSYNHZ53J5NE"
 		},
+
+	/**
+	 * 	@ignore
+	 */
 	alchemy :
 		{
 			//	kamen
 			network   : "eth-sepolia",
 			apiKey    : "qFtLxSOgkike5Gs_yO363-NAb2l0Blwj"
 		},
+
+	/**
+	 * 	@ignore
+	 */
 	coinGecko :
 		{
 			network   : "mainnet",
 			apiKey    : ""
 		},
+
+	/**
+	 * 	@ignore
+	 */
 	chainLink :
 		{
 			network   : "mainnet",
@@ -41,21 +70,35 @@ let configurations : ConfigurationType =
 };
 
 
-
+/**
+ * 	@hidden
+ * @internal
+ */
 let configDefaultEthereumTokensMainnet = [
 	"0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",	//	ETH
 	"0xdac17f958d2ee523a2206206994597c13d831ec7",	//	USDT
 	"0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",	//	USDC
 ];
+
+/**
+ * 	@hidden
+ * @internal
+ */
 let configDefaultEthereumTokensSepolia = [
 	"0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",	//	ETH
 	"0x9e15898acf36C544B6f4547269Ca8385Ce6304d8",	//	USDT
 	"0x51fCe89b9f6D4c530698f181167043e1bB4abf89",	//	USDC
 ];
+
+/**
+ * 	@hidden
+ * @internal
+ */
 let configDefaultEthereumTokensGoerli = [
 	"0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",	//	ETH
 	"0x9DC9a9a2a753c13b63526d628B1Bf43CabB468Fe",	//	USDT
 ];
+
 
 
 
@@ -145,42 +188,58 @@ let configDefaultEthereumTokensGoerli = [
 
 
 /**
+ * 	@hidden
  * 	configuration for infura
  */
 export const infura = configurations.infura;
 
 /**
+ * 	@hidden
  * 	configuration for 1inch service
  */
 export const oneInch = configurations.oneInch;
 
 /**
+ * 	@hidden
  * 	configuration for etherscan
  */
 export const etherscan = configurations.etherscan;
 
 /**
+ * 	@hidden
  * 	configuration for alchemy
  */
 export const alchemy = configurations.alchemy;
 
 /**
+ * 	@hidden
  * 	configuration for coinGecko
  */
 export const coinGecko = configurations.coinGecko;
 
 /**
+ * 	@hidden
  *	configuration for chainLink
  */
 export const chainLink = configurations.chainLink;
 
 
 /**
+ * 	@hidden
  * 	define default tokens/contracts on chain ethereum
  */
 export const defaultEthereumTokensMainnet	= configDefaultEthereumTokensMainnet;
+
+/**
+ * 	@hidden
+ */
 export const defaultEthereumTokensSepolia	= configDefaultEthereumTokensSepolia;
+
+/**
+ * 	@hidden
+ */
 export const defaultEthereumTokensGoerli	= configDefaultEthereumTokensGoerli;
+
 
 
 /**
@@ -189,24 +248,51 @@ export const defaultEthereumTokensGoerli	= configDefaultEthereumTokensGoerli;
 const defaultChain : number = 11155111;
 let currentChain : number = defaultChain;
 
+/**
+ * 	get default chainId
+ * 	@returns {number}
+ */
 export function getDefaultChain() : number
 {
 	return defaultChain;
 }
+
+/**
+ * 	get current chainId
+ * 	@returns {number}
+ */
 export function getCurrentChain() : number
 {
 	return currentChain;
 }
+
+/**
+ * 	set/update current chainId
+ *	@param chainId	{number} numeric chainId
+ * 	@returns {void}
+ */
 export function setCurrentChain( chainId : number ) : void
 {
 	currentChain = chainId;
 }
-export function revertToDefaultChain()
+
+/**
+ * 	revert the current chain to the default chain
+ * 	@returns {void}
+ */
+export function revertToDefaultChain() : void
 {
 	currentChain = defaultChain;
 }
 
-export function setConfig( key : string, value : EthersNetworkProvider )
+
+/**
+ * 	@ignore
+ *	@param key	{string}
+ *	@param value	{EthersNetworkProvider}
+ *	@returns {void}
+ */
+export function setConfig( key : string, value : EthersNetworkProvider ) : void
 {
 	if ( ! Object.keys( configurations ).includes( key ) )
 	{
