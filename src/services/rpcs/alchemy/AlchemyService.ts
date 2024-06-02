@@ -544,7 +544,7 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 
 	/**
 	 * 	https://docs.alchemy.com/reference/getnfts
-	 *	@param address	{string}	Address for NFT owner (can be in ENS format on mainnet).
+	 *	@param address	{string}	wallet Address for NFT owner (can be in ENS format on mainnet).
 	 *	@param options
 	 */
 	public async queryNFTs( address : string, options? : FetchListOptions ) : Promise<Array<any> | null>

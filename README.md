@@ -8,8 +8,8 @@ A complete, compact, and simple Ethereum wallet library based on the ethers libr
 - [Installation](#Installation)
 - [Usage](#Usage)
   - [Configuration](#Configuration)
-  - [Getting started](#Getting started)
-
+  - [Services](#Services)
+- [Unit Tests](#Unit Tests)
 
 
 ## Features
@@ -24,7 +24,7 @@ A complete, compact, and simple Ethereum wallet library based on the ethers libr
 
 
 ## Architecture
-
+### UML Graph
 ```mermaid
 flowchart TD
 
@@ -78,6 +78,14 @@ flowchart TD
     end
 ```
 
+### Dependency Packages
+
+- [debeem-id](https://www.npmjs.com/package/debeem-id)
+- [debeem-cipher](https://www.npmjs.com/package/debeem-cipher)
+- [ethers](https://www.npmjs.com/package/ethers)
+- [idb](https://www.npmjs.com/package/idb)
+
+
 ## Installation
 ```
 npm i debeem-wallet
@@ -85,7 +93,7 @@ npm i debeem-wallet
 
 ## Usage
 ### Configuration
-Get, set and reset the configuration of the chain used by the wallet.
+Before using this development kit, you must first use the following function to set the current chain/network for the wallet.
 
 | Function                                                 | Description                                   |
 |----------------------------------------------------------|-----------------------------------------------|
@@ -95,31 +103,36 @@ Get, set and reset the configuration of the chain used by the wallet.
 | [revertToDefaultChain](config.md#revertToDefaultChain()) | revert the current chain to the default chain |
 
 
-### Getting started
+### Wallet Services
 
-#### Wallet Services
-  - WalletFactory
-  - WalletAccount
-  - WalletTransaction
-  - WalletNFT
+| Class                                            | Description                                                                                                                                                 |
+|--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [WalletFactory](config.md#getDefaultChain())     | create a new wallet, or import a wallet from a specified mnemonic, keystore, private key or wallet address                                                  |
+| [WalletAccount](config.md#getCurrentChain())     | query balance, calculate total value, and request real-time quotes for Ethereum native token and derivative tokens                                          |
+| [WalletTransaction](config.md#setCurrentChain()) | send and receive Ethereum native token and derivative tokens, estimate transaction gas fee in real time, and query transaction history, details and receipt |
+| [WalletNFT](config.md#revertToDefaultChain())    | query NFTs by wallet address                                                                                                                                |
 
-#### Storage Services
+
+### Storage Services
   - SysUserStorageService
   - BasicStorageService
   - ChainStorageService
   - TokenStorageService
   - WalletStorageService
 
-#### Chain Service
+### Chain Service
   - ChainService
 
-#### Token Service
+### Token Service
   - TokenService
 
 
 
-
-
+## Unit Tests
+This project has complete unit tests with an average coverage of over 90%. Run the unit tests in the project root directory:
+```shell
+jest
+```
 
 
 # API

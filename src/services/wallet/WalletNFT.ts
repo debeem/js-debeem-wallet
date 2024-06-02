@@ -16,9 +16,9 @@ export class WalletNFT
 	}
 
 	/**
-	 * 	Query the receipt of a transaction
-	 *	@param address
-	 *	@param options
+	 * 	Query NFT by address
+	 *	@param address	{string} wallet address
+	 *	@param options	{FetchListOptions}
 	 */
 	public async queryNFTs( address : string, options? : FetchListOptions ) : Promise< Array<any> | null >
 	{

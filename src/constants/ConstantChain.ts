@@ -23,21 +23,21 @@ export const defaultChains : Array<ChainEntityItem> = [
 			"https://etherscan.io"
 		],
 	},
-	{
-		name: "Ethereum Testnet Goerli",
-		chainId: 5,
-		token: "ETH",
-		rpcs: [
-			{
-				name : "https://goerli.infura.io/v3/${INFURA_API_KEY}",
-				url : "https://goerli.infura.io/v3/${INFURA_API_KEY}",
-				selected : true,
-			}
-		],
-		explorers: [
-			"https://goerli.etherscan.io"
-		],
-	},
+	// {
+	// 	name: "Ethereum Testnet Goerli",
+	// 	chainId: 5,
+	// 	token: "ETH",
+	// 	rpcs: [
+	// 		{
+	// 			name : "https://goerli.infura.io/v3/${INFURA_API_KEY}",
+	// 			url : "https://goerli.infura.io/v3/${INFURA_API_KEY}",
+	// 			selected : true,
+	// 		}
+	// 	],
+	// 	explorers: [
+	// 		"https://goerli.etherscan.io"
+	// 	],
+	// },
 	{
 		name: "Ethereum Testnet Sepolia",
 		chainId: 11155111,
