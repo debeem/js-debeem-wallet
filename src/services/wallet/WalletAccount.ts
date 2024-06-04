@@ -35,6 +35,7 @@ export class WalletAccount
 
 	/**
 	 * 	query the balance of native currency on chain
+	 *
 	 *	@param address		- wallet address
 	 *	@return {bigint}	- balance in wei, 18 decimal places
 	 */

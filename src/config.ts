@@ -264,7 +264,6 @@ let currentChain : number = defaultChain;
  * const chainId = getDefaultChain();
  * ```
  *
- * 	@group get config
  * 	@returns {number}
  */
 export function getDefaultChain() : number
@@ -282,7 +281,6 @@ export function getDefaultChain() : number
  * const chainId = getCurrentChain();
  * ```
  *
- * 	@group get config
  * 	@returns {number}
  */
 export function getCurrentChain() : number
@@ -301,7 +299,6 @@ export function getCurrentChain() : number
  * setCurrentChain( chainId );
  * ```
  *
- * 	@group set config
  *	@param chainId	{number} numeric chainId
  * 	@returns {void}
  */
@@ -320,7 +317,6 @@ export function setCurrentChain( chainId : number ) : void
  * revertToDefaultChain();
  * ```
  *
- * 	@group set config
  * 	@returns {void}
  */
 export function revertToDefaultChain() : void

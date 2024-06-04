@@ -28,12 +28,8 @@ export class WalletFactory
 	}
 
 	/**
-	 * @categoryDescription Advanced Use
-	 * These functions are available for...
-	 * @module
-	 */
-
-	/**
+	 * 	Check if the input data is valid WalletFactory data
+	 *
 	 *	@param wallet	{any}
 	 *	@returns {boolean}
 	 */
@@ -44,7 +40,48 @@ export class WalletFactory
 
 	/**
 	 * 	Create a wallet from a mnemonic phrase.
-	 *	@param mnemonic	- string
+	 * 	If the parameter is not specified, a random wallet will be created.
+	 *
+	 * ```ts
+	 * //
+	 * //	create a random wallet
+	 * //
+	 * const walletObj = new WalletFactory().createWalletFromMnemonic();
+	 *
+	 * //	will return a WalletEntityBaseItem object:
+	 * {
+	 *       isHD: true,
+	 *       mnemonic: 'million butter obtain fuel address truck grunt recall gain rotate debris flee',
+	 *       password: '',
+	 *       address: '0x03a06e86556C819199E602851e4453a89718cB36',
+	 *       publicKey: '0x0384636daeaf2f410f7c4a6749a143096838a0482bcee94e412ca3a683bca3ac00',
+	 *       privateKey: '0x44dd0864d00e37090622a17e66c0914bd71a1245a3a2e4f88611775854f4eafc',
+	 *       index: 0,
+	 *       path: "m/44'/60'/0'/0/0"
+	 * }
+	 * ```
+	 *
+	 * ```ts
+	 * //
+	 * //	Create a wallet from a mnemonic phrase
+	 * //
+	 * const mnemonic = 'olympic cradle tragic crucial exit annual silly cloth scale fine gesture ancient';
+	 * const walletObj = new WalletFactory().createWalletFromMnemonic( mnemonic );
+	 *
+	 * //	will return a WalletEntityBaseItem object:
+	 * {
+	 *    isHD: true,
+	 *    mnemonic: 'olympic cradle tragic crucial exit annual silly cloth scale fine gesture ancient',
+	 *    password: '',
+	 *    address: '0xC8F60EaF5988aC37a2963aC5Fabe97f709d6b357',
+	 *    publicKey: '0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970a89b5aa622',
+	 *    privateKey: '0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a',
+	 *    index: 0,
+	 *    path: "m/44'/60'/0'/0/0"
+	 * }
+	 * ```
+	 *
+	 *	@param mnemonic	{string} mnemonic string
 	 *	@returns {WalletEntityBaseItem}
 	 */
 	public createWalletFromMnemonic( mnemonic? : string ) : WalletEntityBaseItem
@@ -54,8 +91,12 @@ export class WalletFactory
 
 	/**
 	 * 	Returns the wallet details for the JSON Keystore Wallet json using {password}.
+	 *
+	 * 	@remark
 	 * 	https://docs.ethers.org/v6/api/wallet/
+	 * 	@remark
 	 *	https://docs.ethers.org/v6/api/wallet/#KeystoreAccount
+	 *
 	 *	@param keystoreJson	{string} Wallet keystore JSON string
 	 *	@param password		{string} decrypt keystoreJson using {password}
 	 *	@returns {Promise<WalletEntityBaseItem>}
@@ -78,7 +119,8 @@ export class WalletFactory
 
 	/**
 	 * 	Resolved to the JSON Keystore Wallet for {wallet} encrypted with {password}.
-	 *	@param wallet	{WalletEntityBaseItem}
+	 *
+	 *	@param wallet	{WalletEntityBaseItem}	wallet entity base item object
 	 *	@param password	{string}		encrypt {wallet} with {password}
 	 *	@returns {Promise<string>}
 	 */
@@ -88,13 +130,14 @@ export class WalletFactory
 	}
 
 	/**
+	 * 	Create a wallet from an extended private key.
+	 * 	supported BIP32 Root Key | Account Extended Private Key | BIP32 Extended Private Key
+	 *
+	 * 	@remark
 	 * 	https://iancoleman.io/bip39/
-	 * 	扩展私钥不是钱包的私钥，是助记词
 	 * 	m/44'/60'/0'/0
 	 * 	Derivation Path  BIP44
 	 *
-	 * 	Create a wallet from an extended private key.
-	 *	supported BIP32 Root Key | Account Extended Private Key | BIP32 Extended Private Key
 	 *	@param extendedKey	{string}	- BIP32 Extended Private Key
 	 *	@returns {WalletEntityBaseItem}
 	 */
@@ -106,6 +149,7 @@ export class WalletFactory
 
 	/**
 	 *	Create a wallet from a wallet private key
+	 *
 	 *	@param privateKey	{any}
 	 *	@returns {WalletEntityBaseItem}
 	 */
@@ -116,6 +160,7 @@ export class WalletFactory
 
 	/**
 	 *	Create a watch wallet from a wallet address
+	 *
 	 *	@param address	{string}
 	 *	@returns {WalletEntityBaseItem}
 	 */
@@ -125,7 +170,9 @@ export class WalletFactory
 	}
 
 	/**
-	 *	@param address	{string}
+	 * 	Create a watch wallet
+	 *
+	 *	@param address	{string}	wallet address
 	 *	@returns {WalletEntityBaseItem}
 	 */
 	public createWatchWallet( address : string ) : WalletEntityBaseItem
@@ -135,6 +182,7 @@ export class WalletFactory
 
 
 	/**
+	 * 	Check the input value is a valid address
 	 *	@param address	{string}	- wallet address
 	 *	@return {boolean}
 	 */
@@ -145,7 +193,8 @@ export class WalletFactory
 
 	/**
 	 *	Generate a new address for the specified wallet
-	 *	@param wallet	{any}
+	 *
+	 *	@param wallet	{any}	wallet object
 	 *	@returns {WalletEntityBaseItem}
 	 */
 	public createNewAddress( wallet : any ) : WalletEntityBaseItem
