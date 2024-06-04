@@ -6,10 +6,16 @@ A complete, compact, and simple Ethereum wallet library based on the ethers libr
 - [Features](#Features)
 - [Architecture](#Architecture)
 - [Installation](#Installation)
+- [Configuration](#Configuration)
+  - [About chain](#About chain) 
+  - [Configure a chain for your wallet](#Configure a chain for your wallet) 
 - [Usage](#Usage)
-  - [Configuration](#Configuration)
-  - [Services](#Services)
+  - [Wallet Services](#Wallet Services)
+  - [Storage Services](#Storage Services)
+  - [Chain Service](#Chain Service)
+  - [Token Service](#Token Service)
 - [Unit Tests](#Unit Tests)
+- [Documentation](#Documentation)
 
 
 ## Features
@@ -41,10 +47,12 @@ flowchart TD
     subgraph debeem-wallet
         root([debeem-wallet])
 
+        config(Config)
         walletServices(Wallet Services)
         storageServices(Storage Services)
         chainService(Chain Service)
         tokenService(Token Service)
+        root --- config
         root --- walletServices
         root --- storageServices
         root --- chainService
@@ -91,9 +99,18 @@ flowchart TD
 npm i debeem-wallet
 ```
 
-## Usage
-### Configuration
-Before using this development kit, you must first use the following function to set the current chain/network for the wallet.
+## Configuration
+
+### About chain
+There are many chains in the entire blockchain world, such as the Bitcoin chain, Ethereum chain, etc. Every wallet **MUST** work on a certain chain (or call it a network).
+
+So, before using any functions or classes in this development package, you **MUST** first configure a chain/network for your wallet.
+
+View all chains on:  
+https://chainlist.org/
+
+
+### Configure a chain for your wallet
 
 | Function                                                 | Description                                   |
 |----------------------------------------------------------|-----------------------------------------------|
@@ -103,29 +120,43 @@ Before using this development kit, you must first use the following function to 
 | [revertToDefaultChain](config.md#revertToDefaultChain()) | revert the current chain to the default chain |
 
 
+
+
+## Usage
+
 ### Wallet Services
 
-| Class                                            | Description                                                                                                                                                 |
-|--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [WalletFactory](config.md#getDefaultChain())     | create a new wallet, or import a wallet from a specified mnemonic, keystore, private key or wallet address                                                  |
-| [WalletAccount](config.md#getCurrentChain())     | query balance, calculate total value, and request real-time quotes for Ethereum native token and derivative tokens                                          |
-| [WalletTransaction](config.md#setCurrentChain()) | send and receive Ethereum native token and derivative tokens, estimate transaction gas fee in real time, and query transaction history, details and receipt |
-| [WalletNFT](config.md#revertToDefaultChain())    | query NFTs by wallet address                                                                                                                                |
+| Class                                                     | Description                                                                                                                                                 |
+|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [WalletFactory](services/wallet/WalletFactory.md)         | create a new wallet, or import a wallet from a specified mnemonic, keystore, private key or wallet address                                                  |
+| [WalletAccount](services/wallet/WalletAccount.md)         | query balance, calculate total value, and request real-time quotes for Ethereum native token and derivative tokens                                          |
+| [WalletTransaction](services/wallet/WalletTransaction.md) | send and receive Ethereum native token and derivative tokens, estimate transaction gas fee in real time, and query transaction history, details and receipt |
+| [WalletNFT](services/wallet/WalletNFT.md)                 | query NFTs by wallet address                                                                                                                                |
 
 
 ### Storage Services
-  - SysUserStorageService
-  - BasicStorageService
-  - ChainStorageService
-  - TokenStorageService
-  - WalletStorageService
+
+| Class                                                                 | Description                                                                                                         |
+|-----------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
+| [SysUserStorageService](services/storage/SysUserStorageService.md)    | manage table encryption, modify pinCode                                                                             |
+| [BasicStorageService](services/storage/BasicStorageService/README.md) | simple storage based on key-value                                                                                   |
+| [ChainStorageService](services/storage/ChainStorageService.md)        | get the default supported chain list, get the specified chain information, add, delete and update chain information |
+| [TokenStorageService](services/storage/TokenStorageService.md)        | get the default supported token list, get the specified token information, add, delete and update token information |
+| [WalletStorageService](services/storage/WalletStorageService.md)      | based on secure encryption, obtain the specified wallet information, add, delete and update wallet information      |
+
 
 ### Chain Service
-  - ChainService
+
+| Class                                          | Description                                                                |
+|------------------------------------------------|----------------------------------------------------------------------------|
+| [ChainService](services/chain/ChainService.md) | check whether a chain exists and obtain the chain information by chain id. |
+
 
 ### Token Service
-  - TokenService
 
+| Class                                          | Description                                                                        |
+|------------------------------------------------|------------------------------------------------------------------------------------|
+| [TokenService](services/token/TokenService.md) | check whether a token exists and obtain the token information by contract address. |
 
 
 ## Unit Tests
@@ -135,19 +166,12 @@ jest
 ```
 
 
-# API
+## Documentation
+- [https://doc.debeem.metabeem.com](#https://doc.debeem.metabeem.com)
+
+
+## License
+- MIT ([LICENSE-MIT](https://github.com/libp2p/js-libp2p/blob/main/LICENSE-MIT) / <http://opensource.org/licenses/MIT>)
 
 
 
-# Unit Test
-
-```
-npm test
-```
-Or
-
-```bash
-npm install -g jest
-
-jest
-```

@@ -1,7 +1,7 @@
 /**
  * 	@category Data Models
  *
- * 	@module
+ * 	@module TransactionModels
  */
 export type TransactionHistoryResult =
 {

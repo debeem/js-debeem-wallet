@@ -1,7 +1,7 @@
 /**
  * 	@category Data Models
  *
- * 	@module
+ * 	@module ABIModels
  */
 export interface UsdtABIItem
 {

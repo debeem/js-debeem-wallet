@@ -1,6 +1,10 @@
+/**
+ * 	@category Services / Wallet
+ * 	@module WalletTransaction
+ */
 import { ethers, isAddress } from "ethers";
 import { TypeUtil } from "debeem-utils";
-import { EthersNetworkProvider } from "../../models/EthersNetworkProvider";
+import { NetworkModels } from "../../models/NetworkModels";
 import { usdtABI } from "../../resources/usdtABI";
 import { getCurrentChain } from "../../config";
 import { InfuraRpcService } from "../rpcs/infura/InfuraRpcService";
@@ -10,13 +14,9 @@ import { WalletAccount } from "./WalletAccount";
 import { FetchListOptions } from "debeem-utils";
 import { AlchemyService } from "../rpcs/alchemy/AlchemyService";
 import { WalletEntityBaseItem } from "../../entities/WalletEntity";
-import { TransactionHistoryResult } from "../../models/Transaction";
+import { TransactionHistoryResult } from "../../models/TransactionModels";
 import _ from "lodash";
 import {AddressLike} from "ethers/src.ts/address";
-
-/**
- * 	@category Wallet Services
- */
 
 /**
  * 	@class
@@ -106,7 +106,7 @@ export class WalletTransaction
 					return reject( `${ this.constructor.name }.queryNonce :: invalid address` );
 				}
 
-				const config : EthersNetworkProvider = new InfuraRpcService( getCurrentChain() ).config;
+				const config : NetworkModels = new InfuraRpcService( getCurrentChain() ).config;
 				const provider = new ethers.InfuraProvider( config.network, config.apiKey );
 
 				//
@@ -251,7 +251,7 @@ export class WalletTransaction
 				const gasPrice : bigint = await new InfuraRpcService( getCurrentChain() ).fetchEthGasPrice();
 
 				//	sign now
-				const config : EthersNetworkProvider = new InfuraRpcService( getCurrentChain() ).config;
+				const config : NetworkModels = new InfuraRpcService( getCurrentChain() ).config;
 				const privateKey = wallet.privateKey;
 				const signWallet = new ethers.Wallet( privateKey );
 				const chain = ethers.Network.from( config.network );
@@ -300,7 +300,7 @@ export class WalletTransaction
 				}
 
 				//	...
-				const config : EthersNetworkProvider = new InfuraRpcService( getCurrentChain() ).config;
+				const config : NetworkModels = new InfuraRpcService( getCurrentChain() ).config;
 				const provider = new ethers.InfuraProvider( config.network, config.apiKey );
 				const response : TransactionResponse = await provider.broadcastTransaction( signedTx );
 
@@ -362,7 +362,7 @@ export class WalletTransaction
 					return reject( `${ this.constructor.name }.sendContractTransaction :: invalid gasLimit` );
 				}
 
-				const config : EthersNetworkProvider = new InfuraRpcService( getCurrentChain() ).config;
+				const config : NetworkModels = new InfuraRpcService( getCurrentChain() ).config;
 				//	Amount of derivative token to send (in the smallest unit, i.e., wei)
 				const sendValue = ethers.parseUnits( value, decimals );
 

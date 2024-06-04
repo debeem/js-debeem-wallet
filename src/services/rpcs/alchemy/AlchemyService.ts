@@ -1,3 +1,7 @@
+/**
+ * 	@category Services / Rpc
+ * 	@module AlchemyService
+ */
 import { isAddress } from "ethers";
 import { AbstractRpcService } from "../AbstractRpcService";
 import {
@@ -7,13 +11,13 @@ import {
 } from "../../../config";
 import { FetchUtil, FetchListOptions, FetchOptions } from "debeem-utils";
 import { FetchResponse } from "ethers";
-import { EthersNetworkProvider } from "../../../models/EthersNetworkProvider";
+import { NetworkModels } from "../../../models/NetworkModels";
 import { TypeUtil } from "debeem-utils";
 import { IRpcService } from "../IRpcService";
 import { ContractTokenBalanceItem } from "../../../models/TokenModels";
 import { TokenService } from "../../token/TokenService";
 import { MathUtil } from "debeem-utils";
-import { TransactionHistoryResult } from "../../../models/Transaction";
+import { TransactionHistoryResult } from "../../../models/TransactionModels";
 
 
 
@@ -47,7 +51,7 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 		this.setApiKey( this._config.apiKey );
 	}
 
-	public get config() : EthersNetworkProvider
+	public get config() : NetworkModels
 	{
 		return this._config;
 	}

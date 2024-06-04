@@ -1,3 +1,7 @@
+/**
+ * 	@category Services / Storage
+ * 	@module SysUserStorageService
+ */
 import { TestUtil } from "debeem-utils";
 
 if ( typeof process !== 'undefined' && process.env )

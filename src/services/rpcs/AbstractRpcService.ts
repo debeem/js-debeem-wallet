@@ -1,13 +1,13 @@
 import { IRpcService } from "./IRpcService";
 import lodash from "lodash";
-import { EthersNetworkProvider } from "../../models/EthersNetworkProvider";
+import { NetworkModels } from "../../models/NetworkModels";
 
 /**
  * 	https://portal.1inch.dev/documentation/authentication
  */
 export abstract class AbstractRpcService implements IRpcService
 {
-	protected _config : EthersNetworkProvider = {} as EthersNetworkProvider;
+	protected _config : NetworkModels = {} as NetworkModels;
 
 	/**
 	 * 	define a map containing all supported chains
@@ -66,9 +66,9 @@ export abstract class AbstractRpcService implements IRpcService
 		return Object.values( this.supportedChainMap );
 	}
 
-	public get config() : EthersNetworkProvider
+	public get config() : NetworkModels
 	{
-		return {} as EthersNetworkProvider;
+		return {} as NetworkModels;
 	}
 
 	public getNetworkByChainId( chainId : number ) : string | null
@@ -86,9 +86,9 @@ export abstract class AbstractRpcService implements IRpcService
 		return '';
 	}
 
-	protected loadConfig( config : EthersNetworkProvider ) : EthersNetworkProvider
+	protected loadConfig( config : NetworkModels ) : NetworkModels
 	{
-		let newConfig : EthersNetworkProvider  = lodash.cloneDeep( config ) as EthersNetworkProvider;
+		let newConfig : NetworkModels  = lodash.cloneDeep( config ) as NetworkModels;
 		const newNetwork : string | null = this.getNetworkByChainId( this.chainId );
 		if ( null === newNetwork )
 		{

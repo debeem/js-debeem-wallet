@@ -1,3 +1,7 @@
+/**
+ * 	@category Services / Storage
+ * 	@module ChainStorageService
+ */
 import { IStorageService } from "./IStorageService";
 
 if ( typeof process !== 'undefined' && process.env )
@@ -10,7 +14,7 @@ import { TypeUtil } from "debeem-utils";
 import { ChainEntityItem } from "../../entities/ChainEntity";
 import { defaultChains } from '../../constants/ConstantChain';
 import { AbstractStorageService } from "./AbstractStorageService";
-import { CallbackSetDesc } from "../../models/CallbackSetDesc";
+import { CallbackModels } from "../../models/CallbackModels";
 import { VerifyUtil } from "../../utils/VerifyUtil";
 
 
@@ -50,7 +54,7 @@ export class ChainStorageService extends AbstractStorageService<ChainEntityItem>
 	// 	});
 	// }
 
-	public isValidRpcItem( item : any, callback ?: CallbackSetDesc ) : boolean
+	public isValidRpcItem( item : any, callback ?: CallbackModels ) : boolean
 	{
 		if ( ! VerifyUtil.returnNotNullObject( item, callback, `null rpcItem` ) )
 		{
@@ -75,7 +79,7 @@ export class ChainStorageService extends AbstractStorageService<ChainEntityItem>
 
 		return true;
 	}
-	public isValidItem( item : any, callback ?: CallbackSetDesc ) : boolean
+	public isValidItem( item : any, callback ?: CallbackModels ) : boolean
 	{
 		if ( ! VerifyUtil.returnNotNullObject( item, callback, `null item` ) )
 		{

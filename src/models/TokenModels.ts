@@ -1,7 +1,8 @@
 /**
  * 	@category Data Models
  *
- * 	@module
+ * 	@module TokenModels
+ * 	@interface
  */
 export type ContractTokenBalanceItem = {
 	pair : string,			//	e.g.: ETH/USD, see: EthereumPriceFeedAddresses.ts
@@ -11,7 +12,8 @@ export type ContractTokenBalanceItem = {
 };
 
 /**
- * 	@module
+ * 	@module TokenModels
+ * 	@interface
  */
 export type TokenValueItem = {
 	//	balance
@@ -24,7 +26,8 @@ export type TokenValueItem = {
 };
 
 /**
- * 	@module
+ * 	@module TokenModels
+ * 	@interface
  */
 export type ContractTokenValueItem = TokenValueItem & {
 	pair : string,
@@ -32,7 +35,8 @@ export type ContractTokenValueItem = TokenValueItem & {
 };
 
 /**
- * 	@module
+ * 	@module TokenModels
+ *	@interface
  */
 export type TotalValues = {
 	values : Array<ContractTokenValueItem>,
@@ -40,7 +44,8 @@ export type TotalValues = {
 };
 
 /**
- * 	@module
+ * 	@module TokenModels
+ * 	@interface
  */
 export type ContractTokenBalances = {
 	//	wallet address

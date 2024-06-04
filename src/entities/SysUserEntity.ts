@@ -1,3 +1,8 @@
+/**
+ * 	@category Storage Entities
+ *
+ * 	@module SysUserEntity
+ */
 import { DBSchema } from "idb";
 
 /**
@@ -5,7 +10,7 @@ import { DBSchema } from "idb";
  * 	IndexedDB, but with promises:
  * 	https://github.com/jakearchibald/idb
  *
- * 	@module
+ * 	@interface
  */
 export interface SysUserEntity extends DBSchema
 {

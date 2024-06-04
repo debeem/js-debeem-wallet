@@ -1,52 +1,42 @@
 {
+	"name": "debeem-wallet",
 	"entryPointStrategy": "expand",
 	"entryPoints": [
 		"src/config.ts",
 		"src/entities/",
 		"src/models/",
-		"src/services/chain/",
+		"src/services/wallet",
 		"src/services/storage",
-		"src/services/token",
-		"src/services/wallet"
+		"src/services/chain/",
+		"src/services/token"
 	],
-	"out": "docs",
+	"out": "docs/js-debeem-wallet",
+	"cleanOutputDir": true,
+	"categorizeByGroup": false,
 	"plugin": [
-		"typedoc-plugin-markdown"
+		"typedoc-theme-category-nav"
 	],
-	"outputFileStrategy": "modules",
-	"flattenOutputFiles" : false,
-	"membersWithOwnFile": [
-		"Enum",
-		"Variable",
-		"Function",
-		"Class",
-		"Interface",
-		"TypeAlias"
-	],
+	"theme": "navigation",
+	"readme": "DOCUMENT.md",
+	"basePath": "docs/js-debeem-wallet",
+	"cname": "doc.debeem.metabeem.com",
 	"navigation": {
 		"includeCategories": true,
 		"includeGroups": false,
-		"includeFolders": true
+		"includeFolders": false
 	},
-	"categorizeByGroup": false,
-	"textContentMappings": {
-		"header.title": "{projectName} {version}",
-		"header.docs": "Docs",
-		"breadcrumbs.home": "{projectName} {version}"
-	},
-	"mergeReadme": true,
-	"includeVersion": false,
-	"hideBreadcrumbs": false,
-	"hidePageHeader": true,
-	"hidePageTitle": false,
+	"categoryOrder": [
+		"Configuration",
+		"Services / Wallet",
+		"Services / Storage",
+		"Services / Chain",
+		"Services / Token",
+		"Services / Rpc",
+		"Data Models",
+		"Storage Entities",
+		"*"
+	],
+	"includeVersion": true,
 	"disableSources": true,
-	"expandParameters": true,
-	"indexFormat": "table",
-	"parametersFormat": "table",
-	"propertiesFormat": "table",
-	"enumMembersFormat": "table",
-	"typeDeclarationFormat": "table",
-	"useCodeBlocks": true,
-	"expandObjects": true,
 	"excludeInternal": true
 }

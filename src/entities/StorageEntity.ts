@@ -1,7 +1,12 @@
+/**
+ * 	@category Storage Entities
+ *
+ * 	@module StorageEntity
+ */
 import { DBSchema } from 'idb';
 
 /**
- * 	@module
+ * 	@interface
  */
 export interface StorageEntity extends DBSchema
 {

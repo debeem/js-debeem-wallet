@@ -1,4 +1,4 @@
-import { EthersNetworkProvider } from "../../models/EthersNetworkProvider";
+import { NetworkModels } from "../../models/NetworkModels";
 
 export interface IRpcService
 {
@@ -9,7 +9,7 @@ export interface IRpcService
 	/**
 	 * 	return verified configurations
 	 */
-	get config() : EthersNetworkProvider;
+	get config() : NetworkModels;
 
 	getNetworkByChainId( chainId : number ) : string | null;
 	getEndpointByNetwork( network : string ) : string;

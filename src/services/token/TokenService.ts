@@ -1,6 +1,13 @@
+/**
+ * 	@category Services / Token
+ * 	@module TokenService
+ */
 import { ethereumTokens } from "../../resources/ethereumTokens.json";
 import { TypeUtil } from "debeem-utils";
 import { MathUtil } from "debeem-utils";
+
+//	todo
+//	根据 config 处理下面的请求，否则就出问题了
 
 /**
  * 	class TokenService

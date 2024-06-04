@@ -3,7 +3,7 @@ import { FetchResponse } from "ethers";
 import { AbstractRpcService } from "../AbstractRpcService";
 import { IRpcService } from "../IRpcService";
 import { oneInch } from "../../../config";
-import { EthersNetworkProvider } from "../../../models/EthersNetworkProvider";
+import { NetworkModels } from "../../../models/NetworkModels";
 
 /**
  * 	https://portal.1inch.dev/documentation/authentication
@@ -28,7 +28,7 @@ export class OneInchTokenService extends AbstractRpcService implements IRpcServi
 		this.setApiKey( oneInch.apiKey );
 	}
 
-	public get config() : EthersNetworkProvider
+	public get config() : NetworkModels
 	{
 		return this._config;
 	}

@@ -1,4 +1,8 @@
-import { CallbackSetDesc } from "../../models/CallbackSetDesc";
+/**
+ * 	@category Services / Storage
+ * 	@module BasicStorageService
+ */
+import { CallbackModels } from "../../models/CallbackModels";
 
 if ( typeof process !== 'undefined' && process.env )
 {
@@ -23,7 +27,7 @@ export class BasicStorageService extends AbstractStorageService<string> implemen
 		super( 'basic_entity', pinCode );
 	}
 
-	public isValidItem( item : any, callback ?: CallbackSetDesc ) : boolean
+	public isValidItem( item : any, callback ?: CallbackModels ) : boolean
 	{
 		return true;
 	}

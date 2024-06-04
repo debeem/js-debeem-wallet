@@ -1,9 +1,9 @@
-import { CallbackSetDesc } from "../models/CallbackSetDesc";
+import { CallbackModels } from "../models/CallbackModels";
 import { TypeUtil } from "debeem-utils";
 
 export class VerifyUtil
 {
-	static setErrorDesc( callback? : CallbackSetDesc, desc? : string ) : boolean
+	static setErrorDesc(callback? : CallbackModels, desc? : string ) : boolean
 	{
 		if ( callback )
 		{
@@ -13,7 +13,7 @@ export class VerifyUtil
 		return false;
 	}
 
-	static returnNotNullObject( obj : any, callback? : CallbackSetDesc, desc? : string ) : boolean
+	static returnNotNullObject(obj : any, callback? : CallbackModels, desc? : string ) : boolean
 	{
 		if ( ! TypeUtil.isNotNullObject( obj ) )
 		{
@@ -23,7 +23,7 @@ export class VerifyUtil
 
 		return true;
 	}
-	static returnNotEmptyString( str : any, callback? : CallbackSetDesc, desc? : string ) : boolean
+	static returnNotEmptyString(str : any, callback? : CallbackModels, desc? : string ) : boolean
 	{
 		if ( ! TypeUtil.isNotEmptyString( str ) )
 		{
@@ -34,7 +34,7 @@ export class VerifyUtil
 		return true;
 	}
 
-	static returnNotGreaterThanNumeric( num : any, target : number, callback? : CallbackSetDesc, desc? : string ) : boolean
+	static returnNotGreaterThanNumeric(num : any, target : number, callback? : CallbackModels, desc? : string ) : boolean
 	{
 		if ( ! ( TypeUtil.isNumeric( num ) && num > target ) )
 		{

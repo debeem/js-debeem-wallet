@@ -1,8 +1,15 @@
-import { CallbackSetDesc } from "../../models/CallbackSetDesc";
+/**
+ * 	@category Services / Storage
+ * 	@module IStorageService
+ */
+import { CallbackModels } from "../../models/CallbackModels";
 
+/**
+ * 	@interface
+ */
 export interface IStorageService
 {
-	isValidItem( item : any, callback ?: CallbackSetDesc ) : boolean;
+	isValidItem( item : any, callback ?: CallbackModels ) : boolean;
 	getKeyByItem( value : any ) : string | null;
 
 	get( key : string ) : Promise<any | null>;

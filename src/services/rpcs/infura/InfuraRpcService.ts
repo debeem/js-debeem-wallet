@@ -5,7 +5,7 @@ import { AbstractRpcService } from "../AbstractRpcService";
 import { infura } from "../../../config";
 import { TypeUtil } from "debeem-utils";
 import { TransactionRequest } from "ethers/src.ts";
-import { EthersNetworkProvider } from "../../../models/EthersNetworkProvider";
+import { NetworkModels } from "../../../models/NetworkModels";
 import { IRpcService } from "../IRpcService";
 import _ from "lodash";
 
@@ -31,7 +31,7 @@ export class InfuraRpcService extends AbstractRpcService implements IRpcService
 		this.setApiKey( this._config.apiKey );
 	}
 
-	public get config() : EthersNetworkProvider
+	public get config() : NetworkModels
 	{
 		return this._config;
 	}

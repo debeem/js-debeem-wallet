@@ -1,4 +1,4 @@
-import { UsdtABIItem } from "../models/UsdtABIItem";
+import { UsdtABIItem } from "../models/ABIModels";
 
 export const usdtABI : Array<UsdtABIItem> = [{
 	"constant": true,

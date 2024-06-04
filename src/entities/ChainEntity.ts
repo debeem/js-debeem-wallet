@@ -1,8 +1,14 @@
 /**
+ * 	@category Storage Entities
+ *
+ * 	@module ChainEntity
+ */
+
+/**
  * 	@remark
  *	Definition of the structure of the database entities
  *
- * 	@module
+ * 	@interface
  */
 export interface ChainEntityRpcItem
 {

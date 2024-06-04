@@ -2,7 +2,7 @@ import { AbstractRpcService } from "../AbstractRpcService";
 import { etherscan } from "../../../config";
 import { FetchUtil, FetchListOptions, FetchOptions } from "debeem-utils";
 import { FetchResponse } from "ethers";
-import { EthersNetworkProvider } from "../../../models/EthersNetworkProvider";
+import { NetworkModels } from "../../../models/NetworkModels";
 import { TypeUtil } from "debeem-utils";
 import { IRpcService } from "../IRpcService";
 
@@ -31,7 +31,7 @@ export class EtherscanService extends AbstractRpcService implements IRpcService
 		this.setApiKey( this._config.apiKey );
 	}
 
-	public get config() : EthersNetworkProvider
+	public get config() : NetworkModels
 	{
 		return this._config;
 	}

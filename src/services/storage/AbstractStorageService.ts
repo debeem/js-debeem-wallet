@@ -1,3 +1,7 @@
+/**
+ * 	@category Services / Storage
+ * 	@module AbstractStorageService
+ */
 import { IDBPDatabase } from "idb/build/entry";
 import { openDB, StoreNames } from "idb";
 import { StorageEntity } from "../../entities/StorageEntity";

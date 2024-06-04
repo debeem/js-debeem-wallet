@@ -1,5 +1,13 @@
 /**
- * 	@module entities
+ * 	@category Storage Entities
+ *
+ * 	@module TokenEntityItem
+ */
+
+/**
+ * 	@interface
+ *
+ * 	@remark
  * 	https://github.com/jakearchibald/idb
  */
 export interface TokenEntityItem

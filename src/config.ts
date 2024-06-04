@@ -1,11 +1,16 @@
-import { EthersNetworkProvider } from "./models/EthersNetworkProvider";
+/**
+ * 	@category Configuration
+ * 	@module config functions
+ */
+import { NetworkModels } from "./models/NetworkModels";
 import { TypeUtil } from "debeem-utils";
+
 
 /**
  * 	@hidden
  */
 export type ConfigurationType = {
-	[key: string]: EthersNetworkProvider;
+	[key: string]: NetworkModels;
 };
 
 /**
@@ -250,6 +255,8 @@ let currentChain : number = defaultChain;
 
 /**
  * 	get default chainId
+ *
+ * 	@group get config
  * 	@returns {number}
  */
 export function getDefaultChain() : number
@@ -259,6 +266,8 @@ export function getDefaultChain() : number
 
 /**
  * 	get current chainId
+ *
+ * 	@group get config
  * 	@returns {number}
  */
 export function getCurrentChain() : number
@@ -268,6 +277,8 @@ export function getCurrentChain() : number
 
 /**
  * 	set/update current chainId
+ *
+ * 	@group set config
  *	@param chainId	{number} numeric chainId
  * 	@returns {void}
  */
@@ -278,6 +289,8 @@ export function setCurrentChain( chainId : number ) : void
 
 /**
  * 	revert the current chain to the default chain
+ *
+ * 	@group set config
  * 	@returns {void}
  */
 export function revertToDefaultChain() : void
@@ -289,10 +302,10 @@ export function revertToDefaultChain() : void
 /**
  * 	@ignore
  *	@param key	{string}
- *	@param value	{EthersNetworkProvider}
+ *	@param value	{NetworkModels}
  *	@returns {void}
  */
-export function setConfig( key : string, value : EthersNetworkProvider ) : void
+export function setConfig( key : string, value : NetworkModels ) : void
 {
 	if ( ! Object.keys( configurations ).includes( key ) )
 	{

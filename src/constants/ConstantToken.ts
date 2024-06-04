@@ -1,3 +1,7 @@
+/**
+ * 	@category Constants
+ * 	@module ConstantToken
+ */
 import { TokenEntityItem } from "../entities/TokenEntity";
 import { TokenValueItem } from "../models/TokenModels";
 

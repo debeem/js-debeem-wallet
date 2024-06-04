@@ -1,3 +1,7 @@
+/**
+ * 	@category Services / Storage
+ * 	@module TokenStorageService
+ */
 import { VerifyUtil } from "../../utils/VerifyUtil";
 
 if ( typeof process !== 'undefined' && process.env )
@@ -11,7 +15,7 @@ import { TypeUtil } from "debeem-utils";
 import { TokenEntityItem } from "../../entities/TokenEntity";
 import { defaultTokens } from "../../constants/ConstantToken";
 import { AbstractStorageService } from "./AbstractStorageService";
-import { CallbackSetDesc } from "../../models/CallbackSetDesc";
+import { CallbackModels } from "../../models/CallbackModels";
 import { IStorageService } from "./IStorageService";
 
 
@@ -51,7 +55,7 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	// 	});
 	// }
 
-	public isValidItem( item : any, callback ?: CallbackSetDesc ) : boolean
+	public isValidItem( item : any, callback ?: CallbackModels ) : boolean
 	{
 		if ( ! VerifyUtil.returnNotNullObject( item, callback, `null item` ) )
 		{

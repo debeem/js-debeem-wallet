@@ -1,9 +1,10 @@
 /**
  * 	@category Data Models
  *
- *	@module
+ *	@module EthersNetworkProvider
+ * 	@interface
  */
-export interface EthersNetworkProvider
+export interface NetworkModels
 {
 	network : string,	//	network name
 	apiKey : string,	//	the key for calling infra API

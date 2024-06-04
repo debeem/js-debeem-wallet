@@ -2,7 +2,7 @@ import { describe, expect } from '@jest/globals';
 import {setCurrentChain, WalletTransaction} from "../../../../src";
 import { FetchListOptions } from "debeem-utils";
 import { TypeUtil } from "../../../../src/utils/TypeUtil";
-import { TransactionHistoryResult } from "../../../../src/models/Transaction";
+import { TransactionHistoryResult } from "../../../../src/models/TransactionModels";
 import _ from "lodash";
 import {isAddress} from "ethers";
 

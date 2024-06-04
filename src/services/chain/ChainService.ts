@@ -1,8 +1,12 @@
+/**
+ * 	@category Services / Chain
+ * 	@module ChainService
+ */
 import { chains } from '../../resources/chains.json';
 import { TypeUtil } from "debeem-utils";
 
 /**
- * 	@category Services
+ * 	@class
  */
 export class ChainService
 {

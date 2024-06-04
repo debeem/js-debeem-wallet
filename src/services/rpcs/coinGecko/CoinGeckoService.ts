@@ -1,7 +1,7 @@
 import { AbstractRpcService } from "../AbstractRpcService";
 import { IRpcService } from "../IRpcService";
 import { coinGecko } from "../../../config";
-import { EthersNetworkProvider } from "../../../models/EthersNetworkProvider";
+import { NetworkModels } from "../../../models/NetworkModels";
 import { FetchUtil, FetchOptions } from "debeem-utils";
 import { FetchResponse } from "ethers";
 import { TypeUtil } from "debeem-utils";
@@ -30,7 +30,7 @@ export class CoinGeckoService extends AbstractRpcService implements IRpcService
 		this.setApiKey( this._config.apiKey );
 	}
 
-	public get config() : EthersNetworkProvider
+	public get config() : NetworkModels
 	{
 		return this._config;
 	}
@@ -39,9 +39,9 @@ export class CoinGeckoService extends AbstractRpcService implements IRpcService
 	 * 	overwrite
 	 *	@param config
 	 */
-	protected loadConfig( config : EthersNetworkProvider ) : EthersNetworkProvider
+	protected loadConfig( config : NetworkModels ) : NetworkModels
 	{
-		return lodash.cloneDeep( config ) as EthersNetworkProvider;
+		return lodash.cloneDeep( config ) as NetworkModels;
 	}
 
 	public getEndpointByNetwork( network : string ) : string

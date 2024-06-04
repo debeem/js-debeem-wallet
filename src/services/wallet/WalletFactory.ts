@@ -1,3 +1,7 @@
+/**
+ * 	@category Services / Wallet
+ * 	@module WalletFactory
+ */
 import {
 	isAddress
 } from "ethers";
@@ -6,17 +10,14 @@ import { WalletEntityBaseItem } from "../../entities/WalletEntity";
 import { EtherWallet } from "debeem-id";
 import { TWalletBaseItem } from "debeem-id";
 
-/**
- * 	@category Wallet Services
- */
 
 /**
  * 	@class
- * Code blocks are great for examples
+ *	create a new wallet, or import a wallet from a specified mnemonic, keystore, private key or wallet address.
  *
  * ```ts
- * // run typedoc --help for a list of supported languages
- * const instance = new MyClass();
+ * //	create a new instance of WalletFactory
+ * const instance = new WalletFactory();
  * ```
  *
  */

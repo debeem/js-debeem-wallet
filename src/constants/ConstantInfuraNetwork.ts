@@ -1,3 +1,7 @@
+/**
+ * 	@category Constants
+ * 	@module infuraNetworks
+ */
 export const infuraNetworks = {
 	1		: {
 		chainId : 1,

@@ -4,9 +4,10 @@
  * 	@remark
  * 	Definition of data models
  *
- * 	@module
+ * 	@module CallbackSetDesc
+ * 	@interface
  */
-export interface CallbackSetDesc
+export interface CallbackModels
 {
 	( desc: string | null ): void;
 }

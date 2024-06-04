@@ -1,3 +1,7 @@
+/**
+ * 	@category Constants
+ * 	@module ConstantChain
+ */
 import { ChainEntityItem } from "../entities/ChainEntity";
 
 export const supportedChains : Array<number> = [

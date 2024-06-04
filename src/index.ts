@@ -38,11 +38,13 @@ export { TokenService } from "./services/token/TokenService";
 
 
 /**
+ *	@category Services
+ *
  * 	services/wallet
  */
-import type { EthersNetworkProvider } from "./models/EthersNetworkProvider";
-import type { UsdtABIItem } from "./models/UsdtABIItem";
-export type { EthersNetworkProvider, UsdtABIItem }
+import type { NetworkModels } from "./models/NetworkModels";
+import type { UsdtABIItem } from "./models/ABIModels";
+export type { NetworkModels, UsdtABIItem }
 
 export { WalletFactory } from "./services/wallet/WalletFactory";
 export { WalletAccount } from "./services/wallet/WalletAccount";

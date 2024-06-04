@@ -1,4 +1,8 @@
-import { CallbackSetDesc } from "../../models/CallbackSetDesc";
+/**
+ * 	@category Services / Storage
+ * 	@module WalletStorageService
+ */
+import { CallbackModels } from "../../models/CallbackModels";
 
 if ( typeof process !== 'undefined' && process.env )
 {
@@ -56,7 +60,7 @@ export class WalletStorageService extends AbstractStorageService<WalletEntityIte
 		return Wallet.createRandom().address;
 	}
 
-	public isValidItem( item : any, callback ?: CallbackSetDesc ) : boolean
+	public isValidItem( item : any, callback ?: CallbackModels ) : boolean
 	{
 		if ( ! VerifyUtil.returnNotNullObject( item, callback, `null item` ) )
 		{

@@ -1,7 +1,11 @@
+/**
+ * 	@category Services / Wallet
+ * 	@module WalletAccount
+ */
 import { ethers } from "ethers";
 import { TypeUtil } from "debeem-utils";
-import { EthersNetworkProvider } from "../../models/EthersNetworkProvider";
-import { UsdtABIItem } from "../../models/UsdtABIItem";
+import { NetworkModels } from "../../models/NetworkModels";
+import { UsdtABIItem } from "../../models/ABIModels";
 import { usdtABI } from "../../resources/usdtABI";
 import { InfuraRpcService } from "../rpcs/infura/InfuraRpcService";
 import { getCurrentChain } from "../../config";
@@ -19,10 +23,6 @@ import { MathUtil } from "debeem-utils";
 import { WalletFactory } from "./WalletFactory";
 import { TokenStorageService } from "../storage/TokenStorageService";
 import { TokenEntityItem } from "../../entities/TokenEntity";
-
-/**
- * 	@category Wallet Services
- */
 
 /**
  * 	@class
@@ -57,7 +57,7 @@ export class WalletAccount
 						balance = await new AlchemyService( getCurrentChain() ).ethQueryBalance( address );
 						break;
 					case 'infura' :
-						const config : EthersNetworkProvider = new InfuraRpcService( getCurrentChain() ).config;
+						const config : NetworkModels = new InfuraRpcService( getCurrentChain() ).config;
 						const provider = new ethers.InfuraProvider( config.network, config.apiKey );
 
 						//	in wei, 18 decimal places
@@ -117,7 +117,7 @@ export class WalletAccount
 				//	...
 				resolve( tokenBalances );
 
-				// const config : EthersNetworkProvider = new InfuraRpcService( getCurrentChain() ).config;
+				// const config : NetworkModels = new InfuraRpcService( getCurrentChain() ).config;
 				// console.log( getCurrentChain(), config );
 				// const provider = new ethers.InfuraProvider( config.network, config.apiKey );
 				// const tokenContract = new ethers.Contract( contractAddress, ABI, provider );
