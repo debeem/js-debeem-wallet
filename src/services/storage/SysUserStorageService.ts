@@ -1,5 +1,5 @@
 /**
- * 	@category Services / Storage
+ * 	@category Storage Services
  * 	@module SysUserStorageService
  */
 import { TestUtil } from "debeem-utils";

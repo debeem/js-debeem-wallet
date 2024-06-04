@@ -1,5 +1,5 @@
 /**
- * 	@category Services / Storage
+ * 	@category Storage Services
  * 	@module BasicStorageService
  */
 import { CallbackModels } from "../../models/CallbackModels";

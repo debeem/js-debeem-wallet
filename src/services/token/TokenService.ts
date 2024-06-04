@@ -1,5 +1,5 @@
 /**
- * 	@category Services / Token
+ * 	@category Token Services
  * 	@module TokenService
  */
 import { ethereumTokens } from "../../resources/ethereumTokens.json";

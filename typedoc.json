@@ -14,7 +14,9 @@
 	"cleanOutputDir": true,
 	"categorizeByGroup": false,
 	"plugin": [
-		"typedoc-theme-category-nav"
+		"typedoc-theme-category-nav",
+		"typedoc-plugin-merge-modules",
+		"typedoc-plugin-extra-footer"
 	],
 	"theme": "navigation",
 	"readme": "DOCUMENT.md",
@@ -27,16 +29,26 @@
 	},
 	"categoryOrder": [
 		"Configuration",
-		"Services / Wallet",
-		"Services / Storage",
-		"Services / Chain",
-		"Services / Token",
-		"Services / Rpc",
+		"Wallet Services",
+		"Storage Services",
+		"Chain Services",
+		"Token Services",
 		"Data Models",
 		"Storage Entities",
 		"*"
 	],
 	"includeVersion": true,
 	"disableSources": true,
-	"excludeInternal": true
+	"excludeInternal": true,
+	"visibilityFilters": {
+		"protected": true,
+		"private": false,
+		"inherited": true,
+		"external": false,
+		"@alpha": false,
+		"@beta": false
+	},
+	"mergeModulesRenameDefaults": false,
+	"mergeModulesMergeMode" : "module",
+	"extraFooter": "&copy; [year] <a href=\"https://www.metabeem.com/\">MetaBeem, Inc.</a>"
 }

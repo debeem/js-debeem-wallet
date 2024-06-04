@@ -1,5 +1,5 @@
 /**
- * 	@category Services / Wallet
+ * 	@category Wallet Services
  * 	@module WalletTransaction
  */
 import { ethers, isAddress } from "ethers";

@@ -254,7 +254,15 @@ const defaultChain : number = 11155111;
 let currentChain : number = defaultChain;
 
 /**
- * 	get default chainId
+ * 	Get the default ChainId number
+ *
+ *
+ * for example:
+ * ```ts
+ * import { getDefaultChain } from "debeem-wallet";
+ *
+ * const chainId = getDefaultChain();
+ * ```
  *
  * 	@group get config
  * 	@returns {number}
@@ -265,7 +273,14 @@ export function getDefaultChain() : number
 }
 
 /**
- * 	get current chainId
+ * 	Get the chainId number currently in use
+ *
+ * for example:
+ * ```ts
+ * import { getCurrentChain } from "debeem-wallet";
+ *
+ * const chainId = getCurrentChain();
+ * ```
  *
  * 	@group get config
  * 	@returns {number}
@@ -276,7 +291,15 @@ export function getCurrentChain() : number
 }
 
 /**
- * 	set/update current chainId
+ * 	set/update the ChainId
+ *
+ * for example:
+ * ```ts
+ * import { setCurrentChain } from "debeem-wallet";
+ *
+ * const chainId = 1;
+ * setCurrentChain( chainId );
+ * ```
  *
  * 	@group set config
  *	@param chainId	{number} numeric chainId
@@ -288,7 +311,14 @@ export function setCurrentChain( chainId : number ) : void
 }
 
 /**
- * 	revert the current chain to the default chain
+ * 	Revert the currently used ChainId to the default ChainId
+ *
+ * for example:
+ * ```ts
+ * import { revertToDefaultChain } from "debeem-wallet";
+ *
+ * revertToDefaultChain();
+ * ```
  *
  * 	@group set config
  * 	@returns {void}

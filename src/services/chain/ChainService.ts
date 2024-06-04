@@ -1,5 +1,5 @@
 /**
- * 	@category Services / Chain
+ * 	@category Chain Services
  * 	@module ChainService
  */
 import { chains } from '../../resources/chains.json';

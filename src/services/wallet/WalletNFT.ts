@@ -1,5 +1,5 @@
 /**
- * 	@category Services / Wallet
+ * 	@category Wallet Services
  * 	@module WalletNFT
  */
 import { FetchListOptions } from "debeem-utils";

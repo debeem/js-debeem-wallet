@@ -1,5 +1,5 @@
 /**
- * 	@category Services / Storage
+ * 	@category Storage Services
  * 	@module TokenStorageService
  */
 import { VerifyUtil } from "../../utils/VerifyUtil";

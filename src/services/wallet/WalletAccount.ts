@@ -1,5 +1,5 @@
 /**
- * 	@category Services / Wallet
+ * 	@category Wallet Services
  * 	@module WalletAccount
  */
 import { ethers } from "ethers";

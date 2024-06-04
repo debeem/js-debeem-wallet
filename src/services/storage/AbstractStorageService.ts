@@ -1,5 +1,5 @@
 /**
- * 	@category Services / Storage
+ * 	@category Storage Services
  * 	@module AbstractStorageService
  */
 import { IDBPDatabase } from "idb/build/entry";

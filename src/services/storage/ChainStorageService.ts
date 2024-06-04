@@ -1,5 +1,5 @@
 /**
- * 	@category Services / Storage
+ * 	@category Storage Services
  * 	@module ChainStorageService
  */
 import { IStorageService } from "./IStorageService";
