@@ -59,7 +59,7 @@ describe( "WalletTransaction.tx", () =>
 			//console.log( walletObj );
 
 			//	wei, 18 decimal places
-			const balance : bigint = await new WalletAccount().ethQueryBalance( walletObj.address );
+			const balance : bigint = await new WalletAccount().queryBalance( walletObj.address );
 			const balanceStr : string = ethers.formatEther( balance );
 
 			//	will output: 19926499999559000n
@@ -128,7 +128,7 @@ describe( "WalletTransaction.tx", () =>
 			expect( walletObj.path ).toBe( null );
 
 			//	wei, 18 decimal places
-			const balance : bigint = await new WalletAccount().ethQueryBalance( walletObj.address );
+			const balance : bigint = await new WalletAccount().queryBalance( walletObj.address );
 			const balanceStr : string = ethers.formatEther( balance );
 
 			//	will output: 19926499999559000n
@@ -192,7 +192,7 @@ describe( "WalletTransaction.tx", () =>
 			expect( walletObj.path ).toBe( null );
 
 			//	wei, 18 decimal places
-			const balance : bigint = await new WalletAccount().ethQueryBalance( walletObj.address );
+			const balance : bigint = await new WalletAccount().queryBalance( walletObj.address );
 			const balanceStr : string = ethers.formatEther( balance );
 
 			//	will output: 19926499999559000n

@@ -241,7 +241,7 @@ export class WalletTransaction
 				const sendValue : bigint = ethers.parseEther( value );
 
 				//	get current balance of sender
-				const balanceOfSender : bigint = await new WalletAccount().ethQueryBalance( wallet.address );
+				const balanceOfSender : bigint = await new WalletAccount().queryBalance( wallet.address );
 				//console.log( `wallet.address : `, wallet.address );
 				//console.log( `balanceOfSender : `, balanceOfSender );
 				//console.log( `sendValue : `, sendValue );

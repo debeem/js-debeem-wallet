@@ -26,6 +26,7 @@ import { WalletFactory } from "./WalletFactory";
 import { TokenStorageService } from "../storage/TokenStorageService";
 import { TokenEntityItem } from "../../entities/TokenEntity";
 
+
 /**
  * 	@class
  */
@@ -39,9 +40,9 @@ export class WalletAccount
 	 * 	query the balance of native currency on chain
 	 *
 	 *	@param address		- wallet address
-	 *	@return {bigint}	- balance in wei, 18 decimal places
+	 * 	@return {Promise<bigint>} balance in wei, 18 decimal places
 	 */
-	public async ethQueryBalance( address : string ) : Promise<bigint>
+	public async queryBalance( address : string ) : Promise<bigint>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -57,7 +58,7 @@ export class WalletAccount
 				switch ( service )
 				{
 					case 'alchemy':
-						balance = await new AlchemyService( getCurrentChain() ).ethQueryBalance( address );
+						balance = await new AlchemyService( getCurrentChain() ).queryBalance( address );
 						break;
 					case 'infura' :
 						const config : NetworkModels = new InfuraRpcService( getCurrentChain() ).config;
@@ -78,13 +79,29 @@ export class WalletAccount
 	}
 
 	/**
+	 * 	@deprecated
+	 * 	query the balance of native currency on chain
+	 *
+	 *	@param address {string} wallet address
+	 *	@return {Promise<bigint>} balance in wei, 18 decimal places
+	 */
+	public async ethQueryBalance( address : string ) : Promise<bigint>
+	{
+		return this.queryBalance( address );
+	}
+
+	/**
 	 * 	query balance of derivative tokens, and try to query the balance of the native token, if specified.
 	 *
 	 *	@param address	{string} wallet address
 	 *	@param tokens	{Array<ContractTokenBalanceItem>} contract addresses list
 	 *	@param ABI	{Array<UsdtABIItem>} Application Binary Interface
+	 *	@returns {Promise<Array<ContractTokenBalanceItem>>}
 	 */
-	public async queryTokenBalances( address : string, tokens : Array<ContractTokenBalanceItem>, ABI? : Array<UsdtABIItem> ) : Promise<Array<ContractTokenBalanceItem>>
+	public async queryTokenBalances(
+		address : string,
+		tokens : Array<ContractTokenBalanceItem>,
+		ABI? : Array<UsdtABIItem> ) : Promise<Array<ContractTokenBalanceItem>>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -146,6 +163,7 @@ export class WalletAccount
 
 	/**
 	 *	Get the current price of the specified pair
+	 *
 	 *	@param pair	{string} - e.g.: BTC/USD, see: EthereumPriceFeedAddresses.ts
 	 *	@return {Promise< ChainLinkPriceResult | null >}
 	 */
@@ -160,6 +178,7 @@ export class WalletAccount
 	 *					 see: src/resources/coinGeckoCoinList.json
 	 *	@param vsCurrencies	{string} vs_currency of coins, comma-separated if querying more than 1 vs_currency.
 	 *					 see: src/resources/coinGeckoSupportedVsCurrencies.json
+	 *	@returns {Promise<any>}
 	 */
 	public async querySimplePrice( ids : string, vsCurrencies : string ) : Promise<any>
 	{
@@ -174,6 +193,7 @@ export class WalletAccount
 	 *						 see: src/resources/ethereumTokens.json.ts
 	 *	@param vsCurrencies		{string} vs_currency of coins, comma-separated if querying more than 1 vs_currency
 	 * 						 see: src/resources/coinGeckoSupportedVsCurrencies.json
+	 *	@returns {Promise<any>}
 	 */
 	public async querySimpleTokenPrice( platformId : string, contractAddresses : string, vsCurrencies : string ) : Promise<any>
 	{
@@ -185,8 +205,8 @@ export class WalletAccount
 	 * 	query value
 	 *	@param address	{string} wallet address
 	 *	@param pair	{string} e.g.: ETH/USD, see: EthereumPriceFeedAddresses.ts
-	 * 	@param decimals	{number}
-	 *	@return {bigint}
+	 * 	@param decimals	{number} decimals, default ot 18
+	 *	@return {Promise<TokenValueItem>}
 	 */
 	public async queryValue( address : string, pair : string, decimals : number = 18 ) : Promise<TokenValueItem>
 	{

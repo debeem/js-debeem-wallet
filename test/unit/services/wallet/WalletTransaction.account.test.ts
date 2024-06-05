@@ -40,7 +40,7 @@ describe( "WalletTransaction.account", () =>
 		{
 			const address = '0x47B506704DA0370840c2992A3d3d301FD3c260D3';
 
-			const balance = await new WalletAccount().ethQueryBalance( address );
+			const balance = await new WalletAccount().queryBalance( address );
 			expect( balance ).toBeGreaterThan( 0 );
 			expect( TypeUtil.isNotEmptyString( ethers.formatEther( balance ) ) ).toBeTruthy();
 
@@ -52,7 +52,7 @@ describe( "WalletTransaction.account", () =>
 		{
 			const address = '0x47B506704DA0370840c2992A3d3d301FD3c260D3';
 
-			const balance = await new WalletAccount().ethQueryBalance( address );
+			const balance = await new WalletAccount().queryBalance( address );
 			expect( balance ).toBeGreaterThan( 0 );
 			expect( TypeUtil.isNotEmptyString( ethers.formatEther( balance ) ) ).toBeTruthy();
 
@@ -64,7 +64,7 @@ describe( "WalletTransaction.account", () =>
 		{
 			const address = '0x30560B6A2214858Caf6C17c75732A8309049BfAC';
 
-			const balance = await new WalletAccount().ethQueryBalance( address );
+			const balance = await new WalletAccount().queryBalance( address );
 			expect( ethers.formatEther( balance ) ).toBe( "0.0" );
 
 			await TestUtil.sleep(3 * 1000 );
@@ -127,7 +127,7 @@ describe( "WalletTransaction.account", () =>
 		{
 			try
 			{
-				await new WalletAccount().ethQueryBalance( "" );
+				await new WalletAccount().queryBalance( "" );
 			}
 			catch ( error )
 			{
@@ -182,7 +182,7 @@ describe( "WalletTransaction.account", () =>
 			expect( walletObj.path ).toBe( ethers.defaultPath );
 
 			//	wei, 18 decimal places
-			const balance : bigint = await new WalletAccount().ethQueryBalance( walletObj.address );
+			const balance : bigint = await new WalletAccount().queryBalance( walletObj.address );
 			const balanceStr : string = ethers.formatEther( balance );
 
 			//	will output: 191529955215828684n

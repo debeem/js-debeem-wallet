@@ -239,11 +239,12 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 	}
 
 	/**
-	 * 	query balance
+	 * 	query balance of native token, ETH
+	 *
 	 *	@param address	{string}
 	 *	@return {Promise<bigint>}
 	 */
-	public async ethQueryBalance( address : string ) : Promise<bigint>
+	public async queryBalance(address : string ) : Promise<bigint>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -383,7 +384,7 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 					{
 						if ( tokenBalance <= 0 )
 						{
-							tokenBalance = await this.ethQueryBalance( address );
+							tokenBalance = await this.queryBalance( address );
 						}
 					}
 
