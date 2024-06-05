@@ -1,5 +1,6 @@
 /**
- * 	send and receive Ethereum native token and derivative tokens, estimate transaction gas fee in real time, and query transaction history, details and receipt
+ * 	send and receive Ethereum native token and derivative tokens,
+ * 	estimate transaction gas fee in real time, and query transaction history, details and receipt
  *
  * 	@category Wallet Services
  * 	@module WalletTransaction
@@ -31,14 +32,18 @@ export class WalletTransaction
 
 	/**
 	 * 	return default gas limit
+	 *
+	 * 	@returns {number}
 	 */
-	public getDefaultGasLimit()
+	public getDefaultGasLimit() : number
 	{
 		return 31000;
 	}
 
 	/**
-	 *	@param toAddress	{AddressLike}
+	 * 	estimate gas limit by recipient's wallet address
+	 *
+	 *	@param toAddress {AddressLike} recipient's wallet address
 	 *	@returns {Promise<number>}
 	 */
 	public estimateEthGasLimitByToAddress( toAddress : AddressLike )  : Promise<number>
@@ -65,7 +70,9 @@ export class WalletTransaction
 	}
 
 	/**
-	 *	@param transactionRequest	{TransactionRequest}
+	 * 	estimate gas limit by transaction request object
+	 *
+	 *	@param transactionRequest {TransactionRequest} transaction request object
 	 * 	@returns {Promise<number>}
 	 */
 	public estimateEthGasLimit( transactionRequest : TransactionRequest )  : Promise<number>
@@ -95,7 +102,9 @@ export class WalletTransaction
 
 	/**
 	 * 	get last nonce count
-	 *	@param address		- wallet address
+	 *
+	 *	@param address {string} wallet address
+	 *	@returns {Promise<number>}
 	 */
 	public async queryNonce( address : string ) : Promise<number>
 	{
@@ -128,12 +137,14 @@ export class WalletTransaction
 	}
 
 	/**
-	 * 	send a transaction for native currency
-	 *	@param wallet		{WalletEntityBaseItem}
-	 *	@param to		{string}
-	 *	@param value		{string}
-	 *	@param [nonce]		{number}
-	 *	@param [gasLimit]	{number}
+	 * 	send ETH/native token
+	 *
+	 *	@param wallet		{WalletEntityBaseItem} wallet object
+	 *	@param to		{string} recipient's wallet address
+	 *	@param value		{string} value in ETH. for example: '0.2' ETH
+	 *	@param [nonce]		{number} nonce value
+	 *	@param [gasLimit]	{number} gas limit value
+	 *	@returns {Promise<TransactionResponse>}
 	 */
 	public async send
 	(
@@ -176,12 +187,12 @@ export class WalletTransaction
 	 * 	sign a transaction before it will be broadcast
 	 *
 	 *	@param wallet		{WalletEntityBaseItem}
-	 *	@param toAddress  	{string}	Receiver's wallet address
+	 *	@param toAddress  	{string}	recipient's wallet address
 	 *	@param value		{string}	ETH quantity, unit ETH, for example: "0.001" ETH
 	 *	@param [nonce]		{number}	The nonce is very important. We can query the current nonce through the Infura API.
 	 *	@param [gasLimit] 	{number}	The gasLimit for sending ETH is fixed at 21,000.
 	 *						Transactions calling other contracts need to estimate the gasLimit in advance.
-	 *	@returns
+	 *	@returns {Promise<string>}
 	 */
 	public async signTransaction
 	(
@@ -286,8 +297,9 @@ export class WalletTransaction
 	}
 
 	/**
-	 *	broadcast transaction
-	 *	@param signedTx		{string}
+	 *	Broadcast transaction
+	 *
+	 *	@param signedTx		{string} the string of the signed transaction object
 	 *	@returns {Promise<TransactionResponse>}
 	 */
 	public async broadcastTransaction( signedTx : string ) : Promise<TransactionResponse>
@@ -317,14 +329,15 @@ export class WalletTransaction
 	}
 
 	/**
-	 * 	Send Derivative Token Transaction
-	 * 	@param contractAddress		{string}
-	 * 	@param wallet			{WalletEntityBaseItem}
-	 *	@param toAddress		{string}
-	 *	@param value			{string}
-	 *	@param decimals			{number}
-	 *	@param nonce			{number}
-	 *	@param gasLimit			{number}
+	 * 	Send derivative token
+	 *
+	 * 	@param contractAddress		{string} contract address
+	 * 	@param wallet			{WalletEntityBaseItem} wallet object
+	 *	@param toAddress		{string} recipient's wallet address
+	 *	@param value			{string} value
+	 *	@param decimals			{number} decimals
+	 *	@param nonce			{number} nonce value
+	 *	@param gasLimit			{number} gas limit value
 	 *	@returns {Promise<TransactionResponse>}
 	 */
 	public async sendContractTransaction
@@ -413,8 +426,9 @@ export class WalletTransaction
 
 	/**
 	 * 	Query all transaction history of a wallet
-	 *	@param address	{string}
-	 *	@param options	{FetchListOptions}
+	 *
+	 *	@param address	{string} wallet address
+	 *	@param options	{FetchListOptions} fetch options
 	 *	@returns {Promise<TransactionHistoryResult>}
 	 */
 	public async queryTransactionHistory( address : string, options? : FetchListOptions ) : Promise<TransactionHistoryResult>
@@ -424,6 +438,10 @@ export class WalletTransaction
 
 	/**
 	 * 	Query the transactions of a wallet by fromAddress
+	 *
+	 *	@param address	{string} wallet address
+	 *	@param options	{FetchListOptions} fetch options
+	 *	@returns {Promise<TransactionHistoryResult>}
 	 */
 	public async queryTransactionHistoryFromAddress( address : string, options? : FetchListOptions ) : Promise<TransactionHistoryResult>
 	{
@@ -432,6 +450,10 @@ export class WalletTransaction
 
 	/**
 	 * 	Query the transactions of a wallet by toAddress
+	 *
+	 *	@param address	{string} wallet address
+	 *	@param options	{FetchListOptions} fetch options
+	 *	@returns {Promise<TransactionHistoryResult>}
 	 */
 	public async queryTransactionHistoryToAddress( address : string, options? : FetchListOptions ) : Promise<TransactionHistoryResult>
 	{
@@ -440,8 +462,10 @@ export class WalletTransaction
 
 
 	/**
-	 * 	returns the number of transactions sent from the address
-	 *	@param address	- {string}
+	 * 	Query the number of transactions sent from the address
+	 *
+	 *	@param address	{string} wallet address
+	 *	@returns {Promise<bigint>}
 	 */
 	public async queryTransactionCountFromAddress( address : string ) : Promise<bigint>
 	{
@@ -450,7 +474,9 @@ export class WalletTransaction
 
 	/**
 	 * 	Query the details of a transaction
-	 *	@param txHash
+	 *
+	 *	@param txHash	{string} transaction hash value
+	 *	@returns {Promise<any>}
 	 */
 	public async queryTransactionDetail( txHash : string ) : Promise<any>
 	{
@@ -459,7 +485,9 @@ export class WalletTransaction
 
 	/**
 	 * 	Query the receipt of a transaction
-	 *	@param txHash
+	 *
+	 * 	@param txHash	{string} transaction hash value
+	 * 	@returns {Promise<any>}
 	 */
 	public async queryTransactionReceipt( txHash : string ) : Promise<any>
 	{

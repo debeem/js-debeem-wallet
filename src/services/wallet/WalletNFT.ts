@@ -1,5 +1,5 @@
 /**
- * 	query NFTs information
+ * 	NFT asset service
  *
  * 	@category Wallet Services
  * 	@module WalletNFT
@@ -18,9 +18,11 @@ export class WalletNFT
 	}
 
 	/**
-	 * 	Query NFT by address
+	 * 	Query NFT by wallet address
+	 *
 	 *	@param address	{string} wallet address
 	 *	@param options	{FetchListOptions}
+	 *	@returns {Promise< Array<any> | null >}
 	 */
 	public async queryNFTs( address : string, options? : FetchListOptions ) : Promise< Array<any> | null >
 	{

@@ -80,6 +80,7 @@ export class WalletAccount
 
 	/**
 	 * 	@deprecated
+	 * 	@hidden
 	 * 	query the balance of native currency on chain
 	 *
 	 *	@param address {string} wallet address
