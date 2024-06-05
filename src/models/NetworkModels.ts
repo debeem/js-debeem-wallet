@@ -1,7 +1,7 @@
 /**
  * 	@category Data Models
  *
- *	@module EthersNetworkProvider
+ *	@module NetworkModels
  * 	@interface
  */
 export interface NetworkModels

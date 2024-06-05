@@ -14,7 +14,11 @@ A complete, compact, and simple Ethereum wallet library based on the `ethers` li
 1. Provide local structured data storage based on AES256 encryption algorithm, and the password can be modified at will.
 
 
-## Dependency Packages
+## Architecture
+### UML Graph
+<img src="https://raw.githubusercontent.com/debeem/debeem.github.io/main/resources/images/debeem-wallet-architecture-w.png" />
+
+### Dependency Packages
 
 - [debeem-id](https://www.npmjs.com/package/debeem-id)
 - [debeem-cipher](https://www.npmjs.com/package/debeem-cipher)
@@ -26,3 +30,13 @@ A complete, compact, and simple Ethereum wallet library based on the `ethers` li
 ```
 npm i debeem-wallet
 ```
+
+## Unit Tests
+This project has complete unit tests with an average coverage of over 90%. Run the unit tests in the project root directory:
+```shell
+jest
+```
+
+
+## License
+- MIT ([LICENSE-MIT](https://github.com/libp2p/js-libp2p/blob/main/LICENSE-MIT) / <http://opensource.org/licenses/MIT>)

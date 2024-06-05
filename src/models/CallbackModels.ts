@@ -4,7 +4,7 @@
  * 	@remark
  * 	Definition of data models
  *
- * 	@module CallbackSetDesc
+ * 	@module CallbackModels
  * 	@interface
  */
 export interface CallbackModels

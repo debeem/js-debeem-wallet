@@ -1,4 +1,12 @@
 /**
+ * 	There are many chains in the entire blockchain world, such as the Bitcoin chain, Ethereum chain, etc.
+ * 	Every wallet MUST work on a certain chain (or call it a network).
+ *	So, before using any functions or classes in this development package, you MUST first configure a chain/network for your wallet.
+ *
+ * 	@remark
+ *	View all chains on:
+ *	https://chainlist.org/
+ *
  * 	@category Configuration
  * 	@module config functions
  */
