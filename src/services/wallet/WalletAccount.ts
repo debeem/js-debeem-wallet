@@ -1,4 +1,6 @@
 /**
+ * 	query balance, calculate total value, and request real-time quotes for Ethereum native token and derivative tokens
+ *
  * 	@category Wallet Services
  * 	@module WalletAccount
  */

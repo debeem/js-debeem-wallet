@@ -131,7 +131,7 @@ https://chainlist.org/
 | [WalletFactory](services/wallet/WalletFactory.md)         | create a new wallet, or import a wallet from a specified mnemonic, keystore, private key or wallet address                                                  |
 | [WalletAccount](services/wallet/WalletAccount.md)         | query balance, calculate total value, and request real-time quotes for Ethereum native token and derivative tokens                                          |
 | [WalletTransaction](services/wallet/WalletTransaction.md) | send and receive Ethereum native token and derivative tokens, estimate transaction gas fee in real time, and query transaction history, details and receipt |
-| [WalletNFT](services/wallet/WalletNFT.md)                 | query NFTs by wallet address                                                                                                                                |
+| [WalletNFT](services/wallet/WalletNFT.md)                 | query NFTs information                                                                                                                                      |
 
 
 ### Storage Services
@@ -167,7 +167,7 @@ jest
 
 
 ## Documentation
-- [https://doc.debeem.metabeem.com](#https://doc.debeem.metabeem.com)
+- [https://debeem.github.io/docs/js-debeem-wallet/](#https://debeem.github.io/docs/js-debeem-wallet/)
 
 
 ## License

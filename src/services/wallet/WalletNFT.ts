@@ -1,4 +1,6 @@
 /**
+ * 	query NFTs information
+ *
  * 	@category Wallet Services
  * 	@module WalletNFT
  */

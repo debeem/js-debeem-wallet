@@ -1,4 +1,6 @@
 /**
+ * 	create a new wallet, or import a wallet from a specified mnemonic, keystore, private key or wallet address
+ *
  * 	@category Wallet Services
  * 	@module WalletFactory
  */
@@ -48,7 +50,7 @@ export class WalletFactory
 	 * //
 	 * const walletObj = new WalletFactory().createWalletFromMnemonic();
 	 *
-	 * //	will return a WalletEntityBaseItem object:
+	 * //	should return a WalletEntityBaseItem object:
 	 * {
 	 *       isHD: true,
 	 *       mnemonic: 'million butter obtain fuel address truck grunt recall gain rotate debris flee',
@@ -68,7 +70,7 @@ export class WalletFactory
 	 * const mnemonic = 'olympic cradle tragic crucial exit annual silly cloth scale fine gesture ancient';
 	 * const walletObj = new WalletFactory().createWalletFromMnemonic( mnemonic );
 	 *
-	 * //	will return a WalletEntityBaseItem object:
+	 * //	should return a WalletEntityBaseItem object:
 	 * {
 	 *    isHD: true,
 	 *    mnemonic: 'olympic cradle tragic crucial exit annual silly cloth scale fine gesture ancient',
@@ -150,6 +152,25 @@ export class WalletFactory
 	/**
 	 *	Create a wallet from a wallet private key
 	 *
+	 * ```ts
+	 * //
+	 * //	Create a wallet from a private key
+	 * //
+	 * const privateKey = '0xc7f832621897e67d973f0f1c497198ed1b89a138f2fe3cc6ce6a59cd3fb7cd4c';
+	 * const walletObj = new WalletFactory().createWalletFromPrivateKey( privateKey );
+	 *
+	 * //	should return a WalletEntityBaseItem object:
+	 * {
+	 *    isHD: false,
+	 *    mnemonic: '',
+	 *    password: '',
+	 *    address: '0xcc361bdf821563d2a8ac5b57a9e34ec5ca48c5f3',
+	 *    publicKey: '0x03f2a1155a81b2b5c5e61ec0c148d5465432e9f4b4904e3a25513b27055b0719bb',
+	 *    privateKey: '0xc7f832621897e67d973f0f1c497198ed1b89a138f2fe3cc6ce6a59cd3fb7cd4c',
+	 *    index: 0,
+	 *    path: null
+	 * }
+	 * ```
 	 *	@param privateKey	{any}
 	 *	@returns {WalletEntityBaseItem}
 	 */
@@ -183,6 +204,16 @@ export class WalletFactory
 
 	/**
 	 * 	Check the input value is a valid address
+	 *
+	 * ```ts
+	 * //	should return true
+	 * isValidAddress( '0xcc361bdf821563d2a8ac5b57a9e34ec5ca48c5f3' );
+	 *
+	 * //	should return false
+	 * isValidAddress( '0x1111' );
+	 * isValidAddress( null );
+	 * isValidAddress( undefined );
+	 * ```
 	 *	@param address	{string}	- wallet address
 	 *	@return {boolean}
 	 */

@@ -16,12 +16,15 @@
 	"plugin": [
 		"typedoc-theme-category-nav",
 		"typedoc-plugin-merge-modules",
-		"typedoc-plugin-extra-footer"
+		"typedoc-plugin-extra-footer",
+		"typedoc-material-theme"
 	],
 	"theme": "navigation",
+	"themeColor": "#FFFFFF",
 	"readme": "DOCUMENT.md",
+	"customCss": "typedoc/typedoc.css",
 	"basePath": "docs/js-debeem-wallet",
-	"cname": "doc.debeem.metabeem.com",
+	"cname": "debeem.metabeem.com",
 	"navigation": {
 		"includeCategories": true,
 		"includeGroups": false,

@@ -18,12 +18,45 @@ import _ from "lodash";
  */
 export abstract class AbstractStorageService<T> implements IStorageService
 {
+	/**
+	 *	@ignore
+	 */
 	protected db !: IDBPDatabase<StorageEntity>;
+
+	/**
+	 *	@ignore
+	 *	@protected
+	 */
 	protected databaseName : string = '';
+
+	/**
+	 *	@ignore
+	 *	@protected
+	 */
 	protected storeName : StoreNames<StorageEntity> = 'root';
+
+	/**
+	 *	@ignore
+	 *	@protected
+	 */
 	protected pinCode : string = '';
+
+	/**
+	 *	@ignore
+	 *	@protected
+	 */
 	protected password : string = '';
+
+	/**
+	 *	@ignore
+	 *	@protected
+	 */
 	protected sysUserStorageService : SysUserStorageService = new SysUserStorageService();
+
+	/**
+	 *	@ignore
+	 *	@protected
+	 */
 	protected storageCrypto : AesCrypto = new AesCrypto( `metabeem_password_` );
 
 
@@ -33,6 +66,12 @@ export abstract class AbstractStorageService<T> implements IStorageService
 		this.pinCode = pinCode;
 	}
 
+	/**
+	 * 	initialize table
+	 *
+	 * 	@ignore
+	 * 	@returns {Promise< IDBPDatabase<StorageEntity> | null >}
+	 */
 	public init() : Promise< IDBPDatabase<StorageEntity> | null >
 	{
 		return new Promise( async ( resolve, reject ) =>
@@ -86,7 +125,10 @@ export abstract class AbstractStorageService<T> implements IStorageService
 	}
 
 	/**
-	 *	@param pinCode	{string}
+	 *	Check if the pinCode is correct
+	 *
+	 * 	@group Extended Methods
+	 *	@param pinCode	{string} the pinCode to be checked
 	 *	@returns {Promise< boolean >}
 	 */
 	public isValidPinCode( pinCode : string ) : Promise< boolean >
@@ -95,8 +137,11 @@ export abstract class AbstractStorageService<T> implements IStorageService
 	}
 
 	/**
-	 *	@param oldPinCode	{string}
-	 *	@param newPinCode	{string}
+	 * 	change pinCode
+	 *
+	 * 	@group Extended Methods
+	 *	@param oldPinCode	{string} old pinCode
+	 *	@param newPinCode	{string} new pinCode
 	 *	@returns {Promise<boolean>}
 	 */
 	public changePinCode( oldPinCode : string, newPinCode : string ) : Promise<boolean>
@@ -105,7 +150,10 @@ export abstract class AbstractStorageService<T> implements IStorageService
 	}
 
 	/**
-	 *	@param item	{any}
+	 *	Check if the input object is valid object
+	 *
+	 * 	@group Basic Methods
+	 *	@param item	{any} the object to be checked
 	 *	@returns {boolean}
 	 */
 	isValidItem( item : any ) : boolean
@@ -115,6 +163,9 @@ export abstract class AbstractStorageService<T> implements IStorageService
 
 	/**
 	 * 	delete all items
+	 *
+	 * 	@group Basic Methods
+	 * 	@returns {Promise<boolean>}
 	 */
 	public async clear() : Promise<boolean>
 	{
@@ -140,7 +191,11 @@ export abstract class AbstractStorageService<T> implements IStorageService
 	}
 
 	/**
-	 *	@param key	- wallet address is the key
+	 *	delete item by key
+	 *
+	 * 	@group Basic Methods
+	 *	@param key {string} wallet address is the key
+	 *	@returns {Promise<boolean>}
 	 */
 	public async delete( key : string ) : Promise<boolean>
 	{
@@ -170,8 +225,11 @@ export abstract class AbstractStorageService<T> implements IStorageService
 	}
 
 	/**
-	 * 	get item by key
-	 *	@param key
+	 * 	get item object by key
+	 *
+	 * 	@group Basic Methods
+	 *	@param key {string} storage key
+	 *	@returns {Promise<T | null>}
 	 */
 	public async get( key : string ) : Promise<T | null>
 	{
@@ -210,9 +268,11 @@ export abstract class AbstractStorageService<T> implements IStorageService
 
 	/**
 	 *	Put an item into database. replaces the item with the same key.
-	 * 	value.chainId will be the storage key
-	 *	@param key
-	 *	@param value
+	 *
+	 * 	@group Basic Methods
+	 *	@param key	{string} storage key
+	 *	@param value	{T}	structured data objects
+	 *	@returns {Promise<boolean>}
 	 */
 	public async put( key: string, value : T ) : Promise<boolean>
 	{
@@ -250,6 +310,9 @@ export abstract class AbstractStorageService<T> implements IStorageService
 
 	/**
 	 * 	get the first item
+	 *
+	 * 	@group Basic Methods
+	 * 	@returns {Promise<T | null>}
 	 */
 	public async getFirst() : Promise<T | null>
 	{
@@ -275,8 +338,11 @@ export abstract class AbstractStorageService<T> implements IStorageService
 
 	/**
 	 * 	get all of keys
-	 *	@param query
-	 *	@param maxCount
+	 *
+	 * 	@group Basic Methods
+	 *	@param query	{string} query string
+	 *	@param maxCount	{number} maximum limit number
+	 *	@returns {Promise<Array<string> | null>}
 	 */
 	public async getAllKeys( query? : string, maxCount? : number ) : Promise<Array<string> | null>
 	{
@@ -303,8 +369,11 @@ export abstract class AbstractStorageService<T> implements IStorageService
 
 	/**
 	 * 	query all items
-	 *	@param query
-	 *	@param maxCount
+	 *
+	 * 	@group Basic Methods
+	 *	@param query	{string} query string
+	 *	@param maxCount	{number} maximum limit number
+	 *	@returns {Promise<Array< T | null > | null>}
 	 */
 	public async getAll( query? : string, maxCount? : number ) : Promise<Array< T | null > | null>
 	{
@@ -352,7 +421,10 @@ export abstract class AbstractStorageService<T> implements IStorageService
 
 	/**
 	 * 	Retrieves the number of records matching the given query in a store.
-	 *	@param query
+	 *
+	 * 	@group Basic Methods
+	 *	@param query	{string} query string
+	 *	@returns {Promise<number>}
 	 */
 	public async count( query? : string ) : Promise<number>
 	{
@@ -377,6 +449,13 @@ export abstract class AbstractStorageService<T> implements IStorageService
 		});
 	}
 
+	/**
+	 * 	get storage key by item
+	 *
+	 * 	@group Basic Methods
+	 *	@param value	{any} item object
+	 *	@returns {string | null}
+	 */
 	getKeyByItem( value : any ) : string | null
 	{
 		return null;

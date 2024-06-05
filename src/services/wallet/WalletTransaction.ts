@@ -1,4 +1,6 @@
 /**
+ * 	send and receive Ethereum native token and derivative tokens, estimate transaction gas fee in real time, and query transaction history, details and receipt
+ *
  * 	@category Wallet Services
  * 	@module WalletTransaction
  */

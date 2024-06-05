@@ -1,4 +1,6 @@
 /**
+ * 	get the default supported chain list, get the specified chain information, add, delete and update chain information
+ *
  * 	@category Storage Services
  * 	@module ChainStorageService
  */
@@ -18,6 +20,11 @@ import { CallbackModels } from "../../models/CallbackModels";
 import { VerifyUtil } from "../../utils/VerifyUtil";
 
 
+/**
+ * 	@class
+ *
+ * 	get the default supported chain list, get the specified chain information, add, delete and update chain information
+ */
 export class ChainStorageService extends AbstractStorageService<ChainEntityItem> implements IStorageService
 {
 	constructor( pinCode : string = '' )
@@ -54,6 +61,14 @@ export class ChainStorageService extends AbstractStorageService<ChainEntityItem>
 	// 	});
 	// }
 
+	/**
+	 *	Check if the input object is a valid Rpc Item
+	 *
+	 * 	@group Extended Methods
+	 *	@param item	{any}	the object to be checked
+	 *	@param callback	{CallbackModels} a callback function address to receive error information
+	 *	@returns {boolean}
+	 */
 	public isValidRpcItem( item : any, callback ?: CallbackModels ) : boolean
 	{
 		if ( ! VerifyUtil.returnNotNullObject( item, callback, `null rpcItem` ) )
@@ -79,6 +94,15 @@ export class ChainStorageService extends AbstractStorageService<ChainEntityItem>
 
 		return true;
 	}
+
+	/**
+	 *	Check if the input object is a valid item
+	 *
+	 * 	@group Basic Methods
+	 *	@param item	{any}	the object to be checked
+	 *	@param callback	{CallbackModels} a callback function address to receive error information
+	 * 	@returns {boolean}
+	 */
 	public isValidItem( item : any, callback ?: CallbackModels ) : boolean
 	{
 		if ( ! VerifyUtil.returnNotNullObject( item, callback, `null item` ) )
@@ -117,13 +141,26 @@ export class ChainStorageService extends AbstractStorageService<ChainEntityItem>
 		return true;
 	}
 
+	/**
+	 *	Get the default list of ChainEntityItem object
+	 *
+	 * 	@group Extended Methods
+	 *	@returns {Array<ChainEntityItem>}
+	 */
 	public getDefault() : Array<ChainEntityItem>
 	{
 		return defaultChains;
 	}
 
 	/**
-	 * 	flush the default data into database
+	 * 	Get the default data by the this.getDefault() method and flush the data into the database
+	 *
+	 * 	@remark
+	 * 	Data is stored in a key-value structure. If a key with the same name already exists,
+	 * 	the original data will be overwritten instead of inserting a new record.
+	 *
+	 * 	@group Extended Methods
+	 * 	@returns {Promise<boolean>}
 	 */
 	public flushDefault() : Promise<boolean>
 	{
@@ -160,8 +197,11 @@ export class ChainStorageService extends AbstractStorageService<ChainEntityItem>
 	}
 
 	/**
-	 * 	get storage key
-	 *	@param value
+	 * 	get storage key by item object
+	 *
+	 * 	@group Basic Methods
+	 *	@param value {ChainEntityItem} ChainEntityItem object
+	 *	@returns {string | null}
 	 */
 	public getKeyByItem( value : ChainEntityItem ) : string | null
 	{
@@ -172,6 +212,14 @@ export class ChainStorageService extends AbstractStorageService<ChainEntityItem>
 
 		return null;
 	}
+
+	/**
+	 * 	get storage key by chainId
+	 *
+	 * 	@group Extended Methods
+	 *	@param chainId {number} the chainId number
+	 *	@returns {string}
+	 */
 	public getKeyByChainId( chainId : number ) : string
 	{
 		return `chain-${ chainId }`;
@@ -241,6 +289,13 @@ export class ChainStorageService extends AbstractStorageService<ChainEntityItem>
 	// 	});
 	// }
 
+	/**
+	 * 	get ChainEntityItem object by chainId
+	 *
+	 * 	@group Extended Methods
+	 *	@param chainId {number} the chainId number
+	 *	@returns {Promise<ChainEntityItem | null>}
+	 */
 	public async getByChainId( chainId : number ) : Promise<ChainEntityItem | null>
 	{
 		const key : string = this.getKeyByChainId( chainId );
