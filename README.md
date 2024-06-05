@@ -7,15 +7,16 @@ A complete, compact, and simple Ethereum wallet library based on the ethers libr
 - [Architecture](#Architecture)
 - [Installation](#Installation)
 - [Configuration](#Configuration)
-  - [About chain](#About chain) 
-  - [Configure a chain for your wallet](#Configure a chain for your wallet) 
+  - [About chain](#about-chain) 
+  - [Configure a chain for your wallet](#configure-a-chain-for-your-wallet) 
 - [Usage](#Usage)
-  - [Wallet Services](#Wallet Services)
-  - [Storage Services](#Storage Services)
-  - [Chain Service](#Chain Service)
-  - [Token Service](#Token Service)
-- [Unit Tests](#Unit Tests)
-- [Documentation](#Documentation)
+  - [Wallet Services](#wallet-services)
+  - [Storage Services](#storage-services)
+  - [Chain Service](#chain-service)
+  - [Token Service](#token-service)
+- [Unit Tests](#unit-tests)
+- [Documentation](#documentation)
+- [License](#license)
 
 
 ## Features
@@ -167,7 +168,7 @@ jest
 
 
 ## Documentation
-- [https://debeem.github.io/docs/js-debeem-wallet/](#https://debeem.github.io/docs/js-debeem-wallet/)
+- [https://debeem.github.io/docs/js-debeem-wallet/](https://debeem.github.io/docs/js-debeem-wallet/)
 
 
 ## License
