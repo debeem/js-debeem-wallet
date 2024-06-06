@@ -163,8 +163,29 @@ export class WalletAccount
 	}
 
 	/**
-	 *	Get the current price of the specified pair
+	 *	Get the price of the specified pair in real-time
 	 *
+	 * ```ts
+	 * //
+	 * //    Check the price of BTC/USD in real-time
+	 * //
+	 * const priceObj : ChainLinkPriceResult | null = await new WalletAccount().queryPairPrice( `BTC/USD` );
+	 *
+	 * //    should return:
+	 * {
+	 *    chainLink: {
+	 *      roundId: 110680464442257326336n,
+	 *      answer: 7087192046296n,
+	 *      startedAt: 1717653347n,
+	 *      updatedAt: 1717653347n,
+	 *      answeredInRound: 110680464442257326336n,
+	 *      address: '0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c',
+	 *      decimals: 8
+	 *    },
+	 *    price: 7087192046296n,
+	 *    floatPrice: 70871.92
+	 * }
+	 * ```
 	 *	@param pair	{string} - e.g.: BTC/USD, see: EthereumPriceFeedAddresses.ts
 	 *	@return {Promise< ChainLinkPriceResult | null >}
 	 */

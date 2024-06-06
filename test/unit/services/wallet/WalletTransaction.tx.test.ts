@@ -4,6 +4,8 @@ import {setCurrentChain, WalletFactory, WalletTransaction} from "../../../../src
 import { TransactionResponse } from "ethers";
 import { TestUtil } from "debeem-utils";
 import { WalletAccount } from "../../../../src";
+import _ from "lodash";
+import {TransactionRequest} from "ethers/src.ts";
 
 
 /**
@@ -23,6 +25,37 @@ describe( "WalletTransaction.tx", () =>
 		//	switch chain/network to Eth.Sepolia
 		setCurrentChain( 11155111 );
 	});
+
+	describe( "Estimate gas limit", () =>
+	{
+		const payeeAddress : string = `0x8B4c0Dc5AA90c322C747c10FDD7cf1759D343573`;
+		it( `should return an appropriate gas limit by a TransactionRequest`, async () =>
+		{
+			const transactionRequest : TransactionRequest = {
+				to : payeeAddress,
+			};
+			const gasLimit = await new WalletTransaction().estimateEthGasLimit( transactionRequest );
+			//console.log( `gasLimit :`, gasLimit );
+			//	should output:
+			//	    gasLimit : 21000
+			//
+			expect( gasLimit ).not.toBeNull();
+			expect( _.isNumber( gasLimit ) ).toBeTruthy();
+			expect( gasLimit ).toBeGreaterThan( 0 );
+		});
+		it( `should return an appropriate gas limit by the payee address`, async () =>
+		{
+			const gasLimit = await new WalletTransaction().estimateEthGasLimitByToAddress( payeeAddress );
+			//console.log( `gasLimit :`, gasLimit );
+			//	should output:
+			//	    gasLimit : 21000
+			//
+			expect( gasLimit ).not.toBeNull();
+			expect( _.isNumber( gasLimit ) ).toBeTruthy();
+			expect( gasLimit ).toBeGreaterThan( 0 );
+		});
+	});
+
 
 	describe( "Send transaction", () =>
 	{

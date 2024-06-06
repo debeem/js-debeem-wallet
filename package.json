@@ -12,7 +12,7 @@
 	"scripts": {
 		"clean": "rm -rf dist",
 		"build": "npm run clean && tsc",
-		"build:docs": "npx typedoc",
+		"build:doc": "npx typedoc",
 		"test": "jest"
 	},
 	"devDependencies": {

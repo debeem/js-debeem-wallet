@@ -171,6 +171,9 @@ export class InfuraRpcService extends AbstractRpcService implements IRpcService
 	 * 	Note that the estimate may be significantly more than the amount of gas actually used by the transaction,
 	 * 	for a variety of reasons including EVM mechanics and node performance.
 	 * 	https://docs.infura.io/api/networks/ethereum/json-rpc-methods/eth_estimategas
+	 *
+	 * 	@param transactionRequest {TransactionRequest} transaction request object
+	 * 	@returns {Promise<number>} gas limit in wei.
 	 */
 	public async fetchEthEstimatedGasLimit( transactionRequest : TransactionRequest ) : Promise<number>
 	{
@@ -194,7 +197,11 @@ export class InfuraRpcService extends AbstractRpcService implements IRpcService
 				};
 				const params = [ this.wrapTransactionRequest( txReq ) ];
 				const result = await this.fetchEthValue( 'eth_estimateGas', params );
-				if ( _.isString( result ) && _.startsWith( `0x` ) )
+				if ( _.isString( result ) &&
+					(
+						_.startsWith( result, `0x` ) || _.startsWith( result, `0X` )
+					)
+				)
 				{
 					try
 					{

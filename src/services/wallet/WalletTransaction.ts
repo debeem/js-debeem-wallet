@@ -43,8 +43,19 @@ export class WalletTransaction
 	/**
 	 * 	estimate gas limit by recipient's wallet address
 	 *
+	 * ```ts
+	 * //
+	 * //    estimate gas limit by transaction request object
+	 * //
+	 * const payeeAddress : string = `0x8B4c0Dc5AA90c322C747c10FDD7cf1759D343573`;
+	 * const gasLimit = await new WalletTransaction().estimateEthGasLimitByToAddress( payeeAddress );
+	 * //
+	 * //    should return:
+	 * //        gasLimit : 21000
+	 * //
+	 * ```
 	 *	@param toAddress {AddressLike} recipient's wallet address
-	 *	@returns {Promise<number>}
+	 * 	@returns {Promise<number>} gas limit in wei.
 	 */
 	public estimateEthGasLimitByToAddress( toAddress : AddressLike )  : Promise<number>
 	{
@@ -72,8 +83,22 @@ export class WalletTransaction
 	/**
 	 * 	estimate gas limit by transaction request object
 	 *
+	 * ```ts
+	 * //
+	 * //    estimate gas limit by transaction request object
+	 * //
+	 * const payeeAddress : string = `0x8B4c0Dc5AA90c322C747c10FDD7cf1759D343573`;
+	 * const transactionRequest : TransactionRequest = {
+	 *       to : payeeAddress,
+	 * };
+	 * const gasLimit = await new WalletTransaction().estimateEthGasLimit( transactionRequest );
+	 * //
+	 * //    should return:
+	 * //        gasLimit : 21000
+	 * //
+	 * ```
 	 *	@param transactionRequest {TransactionRequest} transaction request object
-	 * 	@returns {Promise<number>}
+	 * 	@returns {Promise<number>} gas limit in wei.
 	 */
 	public estimateEthGasLimit( transactionRequest : TransactionRequest )  : Promise<number>
 	{

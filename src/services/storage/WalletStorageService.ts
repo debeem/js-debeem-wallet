@@ -55,11 +55,26 @@ export class WalletStorageService extends AbstractStorageService<WalletEntityIte
 	// 	});
 	// }
 
+
+	/**
+	 *	generate a random wallet address
+	 *
+	 * 	@group Extended Methods
+	 * 	@returns {string} wallet address
+	 */
 	public generateRandomWalletAddress() : string
 	{
 		return Wallet.createRandom().address;
 	}
 
+	/**
+	 *	Check if the input object is a valid item
+	 *
+	 * 	@group Basic Methods
+	 *	@param item	{any}	the object to be checked
+	 *	@param callback	{CallbackModels} a callback function address to receive error information
+	 * 	@returns {boolean}
+	 */
 	public isValidItem( item : any, callback ?: CallbackModels ) : boolean
 	{
 		if ( ! VerifyUtil.returnNotNullObject( item, callback, `null item` ) )
@@ -96,8 +111,11 @@ export class WalletStorageService extends AbstractStorageService<WalletEntityIte
 	}
 
 	/**
-	 * 	get storage key
-	 *	@param value
+	 * 	get storage key by item object
+	 *
+	 * 	@group Basic Methods
+	 *	@param value {WalletEntityItem} WalletEntityItem object
+	 *	@returns {string | null}
 	 */
 	public getKeyByItem( value : WalletEntityItem ) : string | null
 	{

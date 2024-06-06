@@ -55,6 +55,15 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	// 	});
 	// }
 
+
+	/**
+	 *	Check if the input object is a valid item
+	 *
+	 * 	@group Basic Methods
+	 *	@param item	{any}	the object to be checked
+	 *	@param callback	{CallbackModels} a callback function address to receive error information
+	 * 	@returns {boolean}
+	 */
 	public isValidItem( item : any, callback ?: CallbackModels ) : boolean
 	{
 		if ( ! VerifyUtil.returnNotNullObject( item, callback, `null item` ) )
@@ -90,9 +99,13 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 		return true;
 	}
 
+
 	/**
-	 *	@param wallet	{string} wallet address
-	 *	@return {Array<TokenEntityItem>}
+	 *	Get the default token list by wallet address
+	 *
+	 * 	@group Extended Methods
+	 * 	@param wallet	{string} wallet address
+	 *	@returns {Array<TokenEntityItem>}
 	 */
 	public getDefault( wallet : string ) : Array<TokenEntityItem>
 	{
@@ -112,8 +125,15 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	}
 
 	/**
-	 * 	flush the default data into database
-	 *	@param wallet	{string} wallet address
+	 * 	Get the default data by the this.getDefault() method and flush the data into the database
+	 *
+	 * 	@remark
+	 * 	Data is stored in a key-value structure. If a key with the same name already exists,
+	 * 	the original data will be overwritten instead of inserting a new record.
+	 *
+	 * 	@group Extended Methods
+	 * 	@param wallet	{string} wallet address
+	 * 	@returns {Promise<boolean>}
 	 */
 	public flushDefault( wallet : string ) : Promise<boolean>
 	{
@@ -161,8 +181,11 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	}
 
 	/**
-	 * 	get storage key
-	 *	@param value
+	 * 	get storage key by item object
+	 *
+	 * 	@group Basic Methods
+	 *	@param value {TokenEntityItem} TokenEntityItem object
+	 *	@returns {string | null}
 	 */
 	public getKeyByItem( value : TokenEntityItem ) : string | null
 	{
@@ -174,10 +197,12 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 		return null;
 	}
 
-
 	/**
-	 *	@param wallet	{string} wallet address
-	 *	@return {Promise<TokenEntityItem | null>}
+	 * 	get the first item by wallet address
+	 *
+	 * 	@group Basic Methods
+	 * 	@param wallet	{string} wallet address
+	 * 	@returns {Promise<TokenEntityItem | null>}
 	 */
 	public async getFirstByWallet( wallet : string ) : Promise<TokenEntityItem | null>
 	{
@@ -201,10 +226,13 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	}
 
 	/**
-	 *	@param wallet	{string} wallet address
-	 *	@param query	{string}
-	 *	@param maxCount	{number}
-	 *	@return {Promise<Array<string> | null>}
+	 * 	get all keys by wallet address
+	 *
+	 * 	@group Basic Methods
+	 * 	@param wallet	{string} wallet address
+	 *	@param query	{string} query string
+	 *	@param maxCount	{number} maximum limit number
+	 *	@returns {Promise<Array<string> | null>}
 	 */
 	public async getAllKeysByWallet( wallet : string, query? : string, maxCount? : number ) : Promise<Array<string> | null>
 	{
@@ -242,10 +270,13 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	}
 
 	/**
-	 *	@param wallet	{string} wallet address
-	 *	@param query	{string}
-	 *	@param maxCount	{number}
-	 *	@return {Promise<Array<TokenEntityItem> | null>}
+	 * 	query all items by wallet address
+	 *
+	 * 	@group Basic Methods
+	 * 	@param wallet	{string} wallet address
+	 *	@param query	{string} query string
+	 *	@param maxCount	{number} maximum limit number
+	 * 	@return {Promise<Array<TokenEntityItem> | null>}
 	 */
 	public async getAllByWallet( wallet : string, query? : string, maxCount? : number ) : Promise<Array<TokenEntityItem> | null>
 	{
@@ -284,7 +315,11 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	}
 
 	/**
-	 *	@param wallet	{string} wallet address
+	 * 	delete all items by wallet address
+	 *
+	 * 	@group Basic Methods
+	 * 	@param wallet	{string} wallet address
+	 * 	@returns {Promise<boolean>}
 	 */
 	public async clearByWallet( wallet : string ) : Promise<boolean>
 	{
@@ -316,9 +351,12 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	}
 
 	/**
-	 *	@param wallet	{string} wallet address
-	 *	@param query	{string}
-	 *	@return {Promise<number>}
+	 * 	Retrieves the number of records matching the given wallet and query in a store.
+	 *
+	 * 	@group Basic Methods
+	 * 	@param wallet	{string} wallet address
+	 *	@param query	{string} query string
+	 *	@returns {Promise<number>}
 	 */
 	public async countByWallet( wallet : string, query? : string ) : Promise<number>
 	{
@@ -344,6 +382,7 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 
 
 	/**
+	 * 	@hidden
 	 * 	@deprecated
 	 */
 	public async getFirst() : Promise<TokenEntityItem | null>
@@ -352,6 +391,7 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	}
 
 	/**
+	 * 	@hidden
 	 * 	@deprecated
 	 */
 	public async getAllKeys( query? : string, maxCount? : number ) : Promise<Array<string> | null>
@@ -360,6 +400,7 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	}
 
 	/**
+	 * 	@hidden
 	 * 	@deprecated
 	 */
 	public async getAll( query? : string, maxCount? : number ) : Promise<Array<TokenEntityItem | null> | null>
@@ -368,6 +409,7 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	}
 
 	/**
+	 * 	@hidden
 	 * 	@deprecated
 	 */
 	public async clear() : Promise<boolean>
@@ -376,6 +418,7 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	}
 
 	/**
+	 * 	@hidden
 	 * 	@deprecated
 	 */
 	public async count( query? : string ) : Promise<number>

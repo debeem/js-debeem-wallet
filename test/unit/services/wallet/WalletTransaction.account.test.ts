@@ -215,17 +215,31 @@ describe( "WalletTransaction.account", () =>
 				//    should output:
 				//    priceObj : {
 				//       chainLink: {
-				//         roundId: 110680464442257317867n,
-				//         answer: 207587000000n,
-				//         startedAt: 1700788631n,
-				//         updatedAt: 1700788631n,
-				//         answeredInRound: 110680464442257317867n,
+				//         roundId: 110680464442257326336n,
+				//         answer: 7087192046296n,
+				//         startedAt: 1717653347n,
+				//         updatedAt: 1717653347n,
+				//         answeredInRound: 110680464442257326336n,
+				//         address: '0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c',
+				//         decimals: 8
+				//       },
+				//       price: 7087192046296n,
+				//       floatPrice: 70871.92
+				//     }
+				//
+				//    priceObj : {
+				//       chainLink: {
+				//         roundId: 110680464442257327677n,
+				//         answer: 384815800000n,
+				//         startedAt: 1717653323n,
+				//         updatedAt: 1717653323n,
+				//         answeredInRound: 110680464442257327677n,
 				//         address: '0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419',
 				//         decimals: 8
 				//       },
-				//       price: 207587000000n,
-				//       floatPrice: 2075.87
-				//    }
+				//       price: 384815800000n,
+				//       floatPrice: 3848.15
+				//     }
 				//
 				expect( priceObj ).toBeDefined();
 				expect( priceObj ).toHaveProperty( 'chainLink' );

@@ -16,6 +16,7 @@ import { openDB, StoreNames } from "idb";
 import { IDBPDatabase } from "idb/build/entry";
 import { AesCrypto } from "debeem-cipher";
 import { SysUserEntity } from "../../entities/SysUserEntity";
+import {StorageEntity} from "../../entities/StorageEntity";
 
 
 /**
@@ -23,9 +24,24 @@ import { SysUserEntity } from "../../entities/SysUserEntity";
  */
 export class SysUserStorageService
 {
+	/**
+	 *	@ignore
+	 */
 	protected sysDb !: IDBPDatabase<SysUserEntity>;
+
+	/**
+	 *	@ignore
+	 */
 	protected databaseName : string = 'sys_user_entity';
+
+	/**
+	 *	@ignore
+	 */
 	protected storeName : StoreNames<SysUserEntity> = 'root';
+
+	/**
+	 *	@ignore
+	 */
 	protected storageCrypto : AesCrypto = new AesCrypto( `meta_beem_password_` );
 
 
@@ -33,39 +49,58 @@ export class SysUserStorageService
 	{
 	}
 
-	async initDb()
+	/**
+	 * 	initialize table
+	 *
+	 * 	@ignore
+	 * 	@returns {Promise< IDBPDatabase<SysUserEntity> | null >}
+	 */
+	async initDb()  : Promise< IDBPDatabase<SysUserEntity> | null >
 	{
-		if ( this.sysDb )
+		return new Promise( async ( resolve, reject ) =>
 		{
-			return this.sysDb;
-		}
-		if ( ! _.isString( this.databaseName ) || _.isEmpty( this.databaseName ) )
-		{
-			return null;
-		}
-
-		const storeName = this.storeName;
-		this.sysDb = await openDB<SysUserEntity>
-		(
-			this.databaseName,
-			1,
+			try
 			{
-				upgrade( db )
+				if ( this.sysDb )
 				{
-					db.createObjectStore( storeName );
-				},
-			} );
-		if ( ! this.sysDb )
-		{
-			throw new Error( `${ this.constructor.name }.initDb :: null sysDb` );
-		}
+					return resolve( this.sysDb );
+				}
+				if ( ! _.isString( this.databaseName ) || _.isEmpty( this.databaseName ) )
+				{
+					return resolve( null );
+				}
 
-		return this.sysDb;
+				const storeName = this.storeName;
+				this.sysDb = await openDB<SysUserEntity>
+				(
+					this.databaseName,
+					1,
+					{
+						upgrade( db )
+						{
+							db.createObjectStore( storeName );
+						},
+					} );
+				if ( ! this.sysDb )
+				{
+					return reject( `${ this.constructor.name }.initDb :: null sysDb` );
+				}
+
+				return this.sysDb;
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
 	}
 
 	/**
-	 *	@param entityName	{string}
-	 *	@param pinCode		{string}
+	 * 	Check if the pinCode is correct
+	 *
+	 * 	@group Extended Methods
+	 *	@param entityName	{string} entityName, for WalletStorageService, it is: `wallet_entity`
+	 *	@param pinCode		{string} the pinCode to be checked
 	 *	@returns { Promise< boolean > }
 	 */
 	public isValidPinCode( entityName : string, pinCode : string ) : Promise< boolean >
@@ -110,9 +145,12 @@ export class SysUserStorageService
 	}
 
 	/**
-	 *	@param entityName	{string}
-	 *	@param oldPinCode	{string}
-	 *	@param newPinCode	{string}
+	 * 	change pinCode
+	 *
+	 * 	@group Extended Methods
+	 * 	@param entityName	{string} entityName, for WalletStorageService, it is: `wallet_entity`
+	 *	@param oldPinCode	{string} the old pinCode
+	 *	@param newPinCode	{string} the new pinCode
 	 *	@returns {Promise<boolean>}
 	 */
 	public changePinCode( entityName : string, oldPinCode : string, newPinCode : string ) : Promise<boolean>
@@ -171,7 +209,10 @@ export class SysUserStorageService
 	}
 
 	/**
-	 * 	generate password
+	 * 	generate a password
+	 *
+	 * 	@group Extended Methods
+	 * 	@returns {string}
 	 */
 	public generatePassword() : string
 	{
@@ -179,8 +220,11 @@ export class SysUserStorageService
 	}
 
 	/**
-	 *	@param entityName	{string}
-	 *	@param pinCode		{string}
+	 * 	Extract the password for the specified entity using pinCode
+	 *
+	 * 	@group Extended Methods
+	 * 	@param entityName	{string} entityName, for WalletStorageService, it is: `wallet_entity`
+	 *	@param pinCode		{string} pinCode for decryption
 	 *	@returns { Promise< string | null > }
 	 */
 	public extractPassword( entityName : string, pinCode : string ) : Promise< string | null >
@@ -230,9 +274,12 @@ export class SysUserStorageService
 	}
 
 	/**
-	 *	@param entityName	{string}
-	 *	@param pinCode		{string}
-	 *	@param password		{string}
+	 *	Saves the password encrypted with pinCode for the specified entity
+	 *
+	 * 	@group Extended Methods
+	 * 	@param entityName	{string} entityName, for WalletStorageService, it is: `wallet_entity`
+	 *	@param pinCode		{string} pinCode
+	 *	@param password		{string} The password to be saved. If the user does not specify one, a new password will be randomly generated.
 	 *	@returns { Promise<string> }
 	 */
 	public savePassword( entityName : string, pinCode : string, password ?: string ) : Promise<string>
@@ -273,6 +320,9 @@ export class SysUserStorageService
 
 	/**
 	 * 	delete all items
+	 *
+	 * 	@group Basic Methods
+	 * 	@returns {Promise<boolean>}
 	 */
 	public clear() : Promise<boolean>
 	{
