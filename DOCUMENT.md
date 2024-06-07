@@ -27,6 +27,22 @@ A complete, compact, and simple Ethereum wallet library based on the `ethers` li
 
 
 ## Installation
+### 1, install nvm
+use the following cURL or Wget command to install [nvm](https://github.com/nvm-sh/nvm?tab=readme-ov-file):
+```shell
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+```
+```shell
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+```
+### 2, install node
+
+install the latest LTS version of node, for example: v18.20.3 (Latest LTS: Hydrogen)
+```shell
+nvm install v18.20.3
+nvm use v18.20.3
+```
+### 3, install our package
 ```
 npm i debeem-wallet
 ```
