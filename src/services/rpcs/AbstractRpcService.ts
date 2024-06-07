@@ -56,6 +56,11 @@ export abstract class AbstractRpcService implements IRpcService
 		return this.chainMap;
 	}
 
+	/**
+	 * 	get supported chain list
+	 *
+	 * 	@returns {Array<number>}
+	 */
 	public get supportedChains() : Array<number>
 	{
 		return Object.keys( this.supportedChainMap ).map( Number );

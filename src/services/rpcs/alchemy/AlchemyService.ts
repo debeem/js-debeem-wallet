@@ -380,7 +380,7 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 					//
 					//	try to query the balance of native ETH
 					//
-					if ( item.contractAddress.trim().toLowerCase() === tokenService.ETHAddress.trim().toLowerCase() )
+					if ( item.contractAddress.trim().toLowerCase() === tokenService.nativeTokenAddress.trim().toLowerCase() )
 					{
 						if ( tokenBalance <= 0 )
 						{

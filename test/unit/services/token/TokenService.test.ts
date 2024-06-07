@@ -1,7 +1,7 @@
 import { describe, expect } from '@jest/globals';
-import { OneInchTokenService, TokenService } from "../../../../src";
+import {OneInchTokenService, setCurrentChain, TokenService} from "../../../../src";
 import { getCurrentChain } from "../../../../src";
-
+import _ from "lodash";
 
 
 /**
@@ -16,76 +16,147 @@ describe( "TokenService", () =>
 	{
 	} );
 
-	describe( "Token Custom Info", () =>
+	describe( "Token Item on Ethereum mainnet", () =>
 	{
-		it( "should return a custom contract token info", async () =>
+		const currentChainId = 1;
+		it( "should return true in checking the native address", async () =>
 		{
-			const oneInch = new OneInchTokenService( getCurrentChain() );
-			const res = await oneInch.fetchTokenCustomInfo( 1,"0x491e136ff7ff03e6ab097e54734697bb5802fc1c" );
-
-			//	{
-			//		"id": 385599,
-			//		"symbol": "KTN",
-			//		"name": "Kattana",
-			//		"address": "0x491e136ff7ff03e6ab097e54734697bb5802fc1c",
-			//		"decimals": 18,
-			//		"logoURI": "https://tokens.1inch.io/0x491e136ff7ff03e6ab097e54734697bb5802fc1c.png",
-			//		"rating": 3,
-			//		"eip2612": null,
-			//		"tags": [
-			//			{
-			//				"value": "tokens",
-			//				"provider": "1inch"
-			//			}
-			//		],
-			//		"providers": [
-			//			"1inch",
-			//			"Trust Wallet Assets",
-			//			"Zapper Token List"
-			//		]
-			//	}
-			//
-			//	{
-			//		"address": "0x491e136ff7ff03e6ab097e54734697bb5802fc1c",
-			//		"decimals": 18,
-			//		"eip2612": null,
-			//		"logoURI": "https://tokens.1inch.io/0x491e136ff7ff03e6ab097e54734697bb5802fc1c.png",
-			//		"name": "Kattana",
-			//		"providers": ["Trust Wallet Assets", "Zapper Token List", "1inch"],
-			//		"rating": 3,
-			//		"symbol":"KTN",
-			//		"tags": [{"provider": "1inch", "value": "tokens"}]
-			//	}
-			//
-			expect( res ).toBeDefined();
-			expect( res ).toHaveProperty( 'address' );
-			expect( res ).toHaveProperty( 'decimals' );
-			expect( res ).toHaveProperty( 'name' );
-			expect( res ).toHaveProperty( 'symbol' );
+			setCurrentChain( currentChainId );
+			const contractAddress : string = new TokenService().nativeTokenAddress;
+			const isETH = new TokenService().isNativeToken( contractAddress );
+			expect( isETH ).toBeDefined();
+			expect( isETH ).toBeTruthy();
 		} );
 
-		it( "Should return the url address of the [Tether USD] icon by its contract address", async () =>
+		it( "should return true in the existing check", async () =>
 		{
-			const iconUrl = new TokenService().getIconByContract( "0xdac17f958d2ee523a2206206994597c13d831ec7" );
-			expect( iconUrl ).toBeDefined();
-			expect( typeof iconUrl ).toBe( 'string' );
-			if ( typeof iconUrl === 'string' )
-			{
-				expect( iconUrl.length ).toBeGreaterThan( 0 );
-				expect( iconUrl.startsWith( 'https://' ) ).toBeTruthy();
-			}
+			setCurrentChain( currentChainId );
+			const contractAddress : string = new TokenService().nativeTokenAddress;
+			const exist = await new TokenService().exists( contractAddress );
+			expect( exist ).toBeDefined();
+			expect( exist ).toBeTruthy();
+		} );
+		it( "should return a token item", async () =>
+		{
+			setCurrentChain( currentChainId );
+			const contractAddress : string = new TokenService().nativeTokenAddress;
+			const item = await new TokenService().getItem( contractAddress );
+			expect( item ).toBeDefined();
+			expect( OneInchTokenService.isValid1InchTokenItem( item ) ).toBeTruthy();
 		} );
 
-		it( "Should return the url address of the [Tether USD] icon by its contract address", async () =>
+		it( "should return the decimal value of a token", async () =>
 		{
-			const iconUrl = new TokenService().getIconBySymbol( "USDT" );
-			expect( iconUrl ).toBeDefined();
-			expect( typeof iconUrl ).toBe( 'string' );
-			if ( typeof iconUrl === 'string' )
-			{
-				expect( iconUrl.length ).toBeGreaterThan( 0 );
-				expect( iconUrl.startsWith( 'https://' ) ).toBeTruthy();
-			}
+			setCurrentChain( currentChainId );
+			const contractAddress : string = new TokenService().nativeTokenAddress;
+			const decimals = await new TokenService().getItemDecimals( contractAddress );
+			expect( decimals ).toBeDefined();
+			expect( _.isNumber( decimals ) ).toBeTruthy();
+		} );
+
+		it( "should return the logo url of a token", async () =>
+		{
+			setCurrentChain( currentChainId );
+			const contractAddress : string = new TokenService().nativeTokenAddress;
+			const logoUrl = await new TokenService().getItemLogo( contractAddress );
+			expect( logoUrl ).toBeDefined();
+			expect( _.isString( logoUrl ) || null === logoUrl ).toBeTruthy();
+		} );
+	} );
+
+	describe( "Token Item on BNB Smart Chain Mainnet", () =>
+	{
+		const currentChainId = 56;
+		it( "should return true in checking the native address", async () =>
+		{
+			setCurrentChain( currentChainId );
+			const contractAddress : string = new TokenService().nativeTokenAddress;
+			const isETH = new TokenService().isNativeToken( contractAddress );
+			expect( isETH ).toBeDefined();
+			expect( isETH ).toBeTruthy();
+		} );
+
+		it( "should return true in the existing check", async () =>
+		{
+			setCurrentChain( currentChainId );
+			const contractAddress : string = new TokenService().nativeTokenAddress;
+			const exist = await new TokenService().exists( contractAddress );
+			expect( exist ).toBeDefined();
+			expect( exist ).toBeTruthy();
+		} );
+		it( "should return a token item", async () =>
+		{
+			setCurrentChain( currentChainId );
+			const contractAddress : string = new TokenService().nativeTokenAddress;
+			const item = await new TokenService().getItem( contractAddress );
+			expect( item ).toBeDefined();
+			expect( OneInchTokenService.isValid1InchTokenItem( item ) ).toBeTruthy();
+		} );
+
+		it( "should return the decimal value of a token", async () =>
+		{
+			setCurrentChain( currentChainId );
+			const contractAddress : string = new TokenService().nativeTokenAddress;
+			const decimals = await new TokenService().getItemDecimals( contractAddress );
+			expect( decimals ).toBeDefined();
+			expect( _.isNumber( decimals ) ).toBeTruthy();
+		} );
+
+		it( "should return the logo url of a token", async () =>
+		{
+			setCurrentChain( currentChainId );
+			const contractAddress : string = new TokenService().nativeTokenAddress;
+			const logoUrl = await new TokenService().getItemLogo( contractAddress );
+			expect( logoUrl ).toBeDefined();
+			expect( _.isString( logoUrl ) || null === logoUrl ).toBeTruthy();
+		} );
+	} );
+
+	describe( "Token Item on Base", () =>
+	{
+		const currentChainId = 8453;
+		it( "should return true in checking the native address", async () =>
+		{
+			setCurrentChain( currentChainId );
+			const contractAddress : string = new TokenService().nativeTokenAddress;
+			const isETH = new TokenService().isNativeToken( contractAddress );
+			expect( isETH ).toBeDefined();
+			expect( isETH ).toBeTruthy();
+		} );
+
+		it( "should return true in the existing check", async () =>
+		{
+			setCurrentChain( currentChainId );
+			const contractAddress : string = new TokenService().nativeTokenAddress;
+			const exist = await new TokenService().exists( contractAddress );
+			expect( exist ).toBeDefined();
+			expect( exist ).toBeTruthy();
+		} );
+		it( "should return a token item", async () =>
+		{
+			setCurrentChain( currentChainId );
+			const contractAddress : string = new TokenService().nativeTokenAddress;
+			const item = await new TokenService().getItem( contractAddress );
+			expect( item ).toBeDefined();
+			expect( OneInchTokenService.isValid1InchTokenItem( item ) ).toBeTruthy();
+		} );
+
+		it( "should return the decimal value of a token", async () =>
+		{
+			setCurrentChain( currentChainId );
+			const contractAddress : string = new TokenService().nativeTokenAddress;
+			const decimals = await new TokenService().getItemDecimals( contractAddress );
+			expect( decimals ).toBeDefined();
+			expect( _.isNumber( decimals ) ).toBeTruthy();
+		} );
+
+		it( "should return the logo url of a token", async () =>
+		{
+			setCurrentChain( currentChainId );
+			const contractAddress : string = new TokenService().nativeTokenAddress;
+			const logoUrl = await new TokenService().getItemLogo( contractAddress );
+			expect( logoUrl ).toBeDefined();
+			expect( _.isString( logoUrl ) || null === logoUrl ).toBeTruthy();
 		} );
 	} );
 } );

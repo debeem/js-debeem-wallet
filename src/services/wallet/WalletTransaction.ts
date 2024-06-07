@@ -311,7 +311,7 @@ export class WalletTransaction
 					return reject( `${ this.constructor.name }.signTransaction :: insufficient funds for intrinsic transaction cost` );
 				}
 
-				const signedTransaction = await signWallet.signTransaction( transaction );
+				const signedTransaction : string = await signWallet.signTransaction( transaction );
 				resolve( signedTransaction );
 			}
 			catch ( err )

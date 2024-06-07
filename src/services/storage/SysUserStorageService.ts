@@ -55,7 +55,7 @@ export class SysUserStorageService
 	 * 	@ignore
 	 * 	@returns {Promise< IDBPDatabase<SysUserEntity> | null >}
 	 */
-	async initDb()  : Promise< IDBPDatabase<SysUserEntity> | null >
+	async initDb() : Promise< IDBPDatabase<SysUserEntity> | null >
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -86,7 +86,7 @@ export class SysUserStorageService
 					return reject( `${ this.constructor.name }.initDb :: null sysDb` );
 				}
 
-				return this.sysDb;
+				return resolve( this.sysDb );
 			}
 			catch ( err )
 			{

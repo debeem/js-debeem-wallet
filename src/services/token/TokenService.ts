@@ -2,116 +2,187 @@
  * 	@category Token Services
  * 	@module TokenService
  */
-import { ethereumTokens } from "../../resources/ethereumTokens.json";
-import { TypeUtil } from "debeem-utils";
 import { MathUtil } from "debeem-utils";
+import _ from "lodash";
+import {getCurrentChain} from "../../config";
+import {OneInchTokenService} from "../rpcs/oneInchToken/OneInchTokenService";
+import {OneInchTokenItem} from "../../models/TokenModels";
 
-//	todo
-//	根据 config 处理下面的请求，否则就出问题了
 
 /**
  * 	class TokenService
  */
 export class TokenService
 {
-	public exists( contractAddress : string ) : boolean
+	/**
+	 * 	get token item
+	 *
+	 *	@param contractAddress	{string} contract address
+	 *	@returns {Promise<OneInchTokenItem | Object | null>}
+	 */
+	public getItem( contractAddress : string ) : Promise<OneInchTokenItem | Object | null>
 	{
-		return Boolean( this.getItem( contractAddress ) );
-	}
-
-	public getItem( contractAddress : string ) : Object | null
-	{
-		if ( ! TypeUtil.isNotEmptyString( contractAddress ) )
+		return new Promise( async ( resolve, reject ) =>
 		{
-			return null;
-		}
-
-		contractAddress = contractAddress.trim().toLowerCase();
-		const keys : Array<string> = Object.keys( ethereumTokens );
-		for ( const key of keys )
-		{
-			if ( key.trim().toLowerCase() === contractAddress )
+			try
 			{
-				return ethereumTokens[ key ];
-			}
-		}
+				const chainId = getCurrentChain();
+				if ( ! _.isNumber( chainId ) || chainId <= 0 )
+				{
+					return reject( `${ this.constructor.name }.getItem :: invalid chainId` );
+				}
+				if ( ! _.isString( contractAddress ) || _.isEmpty( contractAddress ) )
+				{
+					return reject( `${ this.constructor.name }.getItem :: invalid contractAddress` );
+				}
 
-		return null;
+				contractAddress = contractAddress.trim().toLowerCase();
+
+				//
+				//	search item from local
+				//
+				const supportedChains = new OneInchTokenService( 1 ).supportedChains;
+				if ( supportedChains.includes( chainId ) )
+				{
+					const { ethereumTokens } = await import( `../../resources/oneInchTokenMap.${ chainId }` );
+					if ( _.isObject( ethereumTokens ) &&
+						_.has( ethereumTokens, contractAddress ) )
+					{
+						const item = ethereumTokens[ contractAddress ];
+						if ( _.isObject( item ) )
+						{
+							return resolve( item );
+						}
+					}
+				}
+
+				//
+				//	fetch from internet
+				//
+				try
+				{
+					const item = await new OneInchTokenService( chainId ).fetchTokenCustomInfo( contractAddress );
+					if ( _.isObject( item ) )
+					{
+						return resolve( item );
+					}
+				}
+				catch ( err )
+				{
+				}
+
+				//	...
+				return null;
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
 	}
 
 	/**
-	 *	@param contractAddress	{string}
+	 * 	check if the token exists by contractAddress
+	 *
+	 *	@param contractAddress	{string} contract address
+	 *	@returns {boolean}
 	 */
-	public getItemDecimals( contractAddress : string ) : number
+	public exists( contractAddress : string ) : Promise<boolean>
 	{
-		try
+		return new Promise( async ( resolve, reject ) =>
 		{
-			const item : any = this.getItem( contractAddress );
-			if ( item && TypeUtil.isNotNullObjectWithKeys( item, [ 'decimals' ] ) )
+			try
 			{
-				return MathUtil.intFromAny( item[ 'decimals' ] );
+				return resolve( Boolean( null !== await this.getItem( contractAddress ) ) );
 			}
-		}
-		catch ( err )
-		{
-		}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
 
-		return NaN;
+
+	/**
+	 * 	get the decimals value of a token
+	 *
+	 * 	@param contractAddress	{string} contract address
+	 * 	@returns {Promise<number>}
+	 */
+	public getItemDecimals( contractAddress : string ) : Promise<number>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				const item : OneInchTokenItem | Object | null = await this.getItem( contractAddress );
+				if ( item &&
+					_.has( item, 'decimals' ) )
+				{
+					return resolve( MathUtil.intFromAny( item[ 'decimals' ] ) );
+				}
+			}
+			catch ( err )
+			{
+			}
+
+			return resolve( NaN );
+		});
 	}
 
 	/**
-	 * 	get token icon by contract
-	 *	@param contractAddress
+	 * 	get the logo url of a token
+	 *
+	 * 	@param contractAddress	{string} contract address
+	 * 	@returns {Promise<string | null>}
 	 */
-	public getIconByContract( contractAddress : string ) : string | null
+	public getItemLogo( contractAddress : string ) : Promise<string | null>
 	{
-		if ( ethereumTokens.hasOwnProperty( contractAddress ) &&
-			TypeUtil.isNotNullObjectWithKeys( ethereumTokens[ contractAddress ],  [ 'symbol', 'logoURI' ] ) &&
-			TypeUtil.isNotEmptyString( ethereumTokens[ contractAddress ][ 'logoURI' ] ) )
+		return new Promise( async ( resolve, reject ) =>
 		{
-			return ethereumTokens[ contractAddress ][ 'logoURI' ];
-		}
+			try
+			{
+				const item : OneInchTokenItem | Object | null = await this.getItem( contractAddress );
+				if ( item &&
+					_.has( item, 'logoURI' ) &&
+					_.isString( item[ 'logoURI' ] ) )
+				{
+					return resolve( item[ 'logoURI' ] );
+				}
 
-		return null;
+				return resolve( null );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
 	}
+
 
 	/**
-	 * 	get icon by symbol
-	 *	@param	symbol	- e.g. "ETH", "USDT"
+	 * 	get the contract address of the native token
+	 *
+	 * 	@returns {string}
 	 */
-	public getIconBySymbol( symbol : string ) : string | null
-	{
-		for ( const [ _key, value ] of Object.entries( ethereumTokens ) )
-		{
-			symbol = symbol.trim().toUpperCase();
-			if ( TypeUtil.isNotNullObjectWithKeys( value,  [ 'symbol', 'logoURI' ] ) &&
-				TypeUtil.isNotEmptyString( value[ 'symbol' ] ) &&
-				TypeUtil.isNotEmptyString( value[ 'logoURI' ] ) &&
-				0 === value[ 'symbol' ].trim().toUpperCase().localeCompare( symbol )
-			)
-			{
-				return value[ 'logoURI' ];
-			}
-		}
-
-		return null;
-	}
-
-	public get ETHAddress()
+	public get nativeTokenAddress() : string
 	{
 		return `0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee`;
 	}
 
 	/**
+	 * 	check if the input value is the contract address of the native token
+	 *
 	 *	@param contractAddress	{string}
+	 *	@returns {boolean}
 	 */
-	public isETH( contractAddress : string )
+	public isNativeToken( contractAddress : string ) : boolean
 	{
-		if ( ! TypeUtil.isNotEmptyString( contractAddress ) )
+		if ( ! _.isString( contractAddress ) || _.isEmpty( contractAddress ) )
 		{
 			return false;
 		}
 
-		return this.ETHAddress.trim().toLowerCase() === contractAddress.trim().toLowerCase();
+		return this.nativeTokenAddress.trim().toLowerCase() === contractAddress.trim().toLowerCase();
 	}
 }

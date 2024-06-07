@@ -1,6 +1,6 @@
 {
 	"name": "debeem-wallet",
-	"version": "1.0.42",
+	"version": "1.0.43",
 	"description": "Ethereum Wallet by DeBeem, Team.",
 	"main": "dist/index.js",
 	"browser": "dist/index.js",
@@ -13,6 +13,7 @@
 		"clean": "rm -rf dist",
 		"build": "npm run clean && tsc",
 		"build:doc": "npx typedoc",
+		"update": "ts-node src/update.ts",
 		"test": "jest"
 	},
 	"devDependencies": {
