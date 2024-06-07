@@ -79,9 +79,10 @@ export class WalletAccount
 	}
 
 	/**
+	 * 	query the balance of native currency on chain
+	 *
 	 * 	@deprecated
 	 * 	@hidden
-	 * 	query the balance of native currency on chain
 	 *
 	 *	@param address {string} wallet address
 	 *	@return {Promise<bigint>} balance in wei, 18 decimal places
@@ -167,7 +168,7 @@ export class WalletAccount
 	 *
 	 * ```ts
 	 * //
-	 * //    Check the price of BTC/USD in real-time
+	 * //    query the price of BTC/USD in real-time
 	 * //
 	 * const priceObj : ChainLinkPriceResult | null = await new WalletAccount().queryPairPrice( `BTC/USD` );
 	 *
@@ -196,6 +197,7 @@ export class WalletAccount
 
 	/**
 	 *	Get the current price of any cryptocurrencies in any other supported currencies that you need.
+	 *
 	 *	@param ids		{string} id of coins, comma-separated if querying more than 1 coin.
 	 *					 see: src/resources/coinGeckoCoinList.json
 	 *	@param vsCurrencies	{string} vs_currency of coins, comma-separated if querying more than 1 vs_currency.
@@ -209,6 +211,7 @@ export class WalletAccount
 
 	/**
 	 * 	Get current price of tokens (using contract addresses) for a given platform in any other currency that you need.
+	 *
 	 *	@param platformId		{string} The id of the platform issuing tokens.
 	 *						 see: src/resources/coinGeckoAssetPlatforms.json
 	 *	@param contractAddresses	{string} The contract address of tokens, comma separated
@@ -225,6 +228,7 @@ export class WalletAccount
 
 	/**
 	 * 	query value
+	 *
 	 *	@param address	{string} wallet address
 	 *	@param pair	{string} e.g.: ETH/USD, see: EthereumPriceFeedAddresses.ts
 	 * 	@param decimals	{number} decimals, default ot 18
@@ -301,6 +305,7 @@ export class WalletAccount
 
 	/**
 	 * 	query the value of derivative tokens
+	 *
 	 *	@param address	{string} wallet address
 	 *	@param tokens	{Array<ContractTokenBalanceItem>}
 	 *	@param ABI	{Array<UsdtABIItem>}
@@ -445,6 +450,7 @@ export class WalletAccount
 
 	/**
 	 * 	query the value of derivative tokens
+	 *
 	 *	@param address		{string} wallet address
 	 *	@param storagePassword	{string} password for storage
 	 *	@param ABI	{Array<UsdtABIItem>}

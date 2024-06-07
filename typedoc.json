@@ -41,7 +41,7 @@
 		"*"
 	],
 	"includeVersion": true,
-	"disableSources": true,
+	"disableSources": false,
 	"excludeInternal": true,
 	"visibilityFilters": {
 		"protected": true,
