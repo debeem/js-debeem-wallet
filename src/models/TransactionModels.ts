@@ -1,6 +1,5 @@
 /**
  * 	@category Data Models
- *
  * 	@module TransactionModels
  */
 export type TransactionHistoryResult =
@@ -16,4 +15,17 @@ export type TransactionHistoryResult =
 
 	//	pageKey of toAddress list
 	toPageKey ?: string;
-}
+};
+
+
+/**
+ *	Minimum Needed Gas Limit from InfuraRpcService error
+ *
+ * 	@category Data Models
+ * 	@module TransactionModels
+ */
+export type TransactionMinimumNeededGas =
+{
+	gas: number;
+	minimum: number;
+};

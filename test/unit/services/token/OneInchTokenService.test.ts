@@ -38,7 +38,7 @@ describe( "OneInchTokenService", () =>
 		it( "should return a custom contract token info", async () =>
 		{
 			const oneInch = new OneInchTokenService( getCurrentChain() );
-			const res = await oneInch.fetchTokenCustomInfo( "0x491e136ff7ff03e6ab097e54734697bb5802fc1c" );
+			const res = await oneInch.fetchTokenItemInfo( "0x491e136ff7ff03e6ab097e54734697bb5802fc1c" );
 
 			//	{
 			//		"id": 385599,
@@ -83,7 +83,7 @@ describe( "OneInchTokenService", () =>
 
 		it( "Should return the url address of the [Tether USD] icon by its contract address", async () =>
 		{
-			const iconUrl = await new TokenService().getItemLogo( "0xdac17f958d2ee523a2206206994597c13d831ec7" );
+			const iconUrl = await new TokenService( getCurrentChain() ).getItemLogo( "0xdac17f958d2ee523a2206206994597c13d831ec7" );
 			expect( iconUrl ).toBeDefined();
 			expect( typeof iconUrl ).toBe( 'string' );
 			if ( typeof iconUrl === 'string' )

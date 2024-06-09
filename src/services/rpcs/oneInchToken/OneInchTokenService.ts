@@ -1,3 +1,7 @@
+/**
+ * 	@category Rpc Services
+ * 	@module OneInchTokenService
+ */
 import { FetchUtil, FetchOptions, HttpUtil } from "debeem-utils";
 import { FetchResponse } from "ethers";
 import { AbstractRpcService } from "../AbstractRpcService";
@@ -8,6 +12,9 @@ import {OneInchTokenItem, OneInchTokenMap} from "../../../models/TokenModels";
 import _ from "lodash";
 
 /**
+ * 	@class OneInchTokenService
+ *
+ * 	@remark
  * 	https://portal.1inch.dev/documentation/authentication
  */
 export class OneInchTokenService extends AbstractRpcService implements IRpcService
@@ -33,9 +40,9 @@ export class OneInchTokenService extends AbstractRpcService implements IRpcServi
 
 		//	load config
 		//	it will check whether the network specified by chainId can be supported
-		this._config = this.loadConfig( oneInch );
+		this._config = this.cloneConfig( oneInch );
 
-		this.setEndpoint( this.getEndpointByNetwork( this._config.network ) );
+		this.setEndpoint( this.getEndpointByChainId( this.chainId ) );
 		this.setVersion( "v1.2" );
 		this.setApiKey( oneInch.apiKey );
 	}
@@ -45,7 +52,14 @@ export class OneInchTokenService extends AbstractRpcService implements IRpcServi
 		return this._config;
 	}
 
-	public getEndpointByNetwork( network : string ) : string
+	/**
+	 * 	set end point by chainId
+	 *
+	 * 	@group Basic Methods
+	 * 	@param chainId {number} the chainId number
+	 *	@returns {string}
+	 */
+	public getEndpointByChainId( chainId ?: number ) : string
 	{
 		return `https://api.1inch.dev`;
 	}
@@ -56,7 +70,7 @@ export class OneInchTokenService extends AbstractRpcService implements IRpcServi
 	 *	@param contractAddress	{string} contract address
 	 *	@returns {Promise<OneInchTokenItem>}
 	 */
-	public async fetchTokenCustomInfo( contractAddress : string ) : Promise<OneInchTokenItem>
+	public async fetchTokenItemInfo( contractAddress : string ) : Promise<OneInchTokenItem>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -64,7 +78,7 @@ export class OneInchTokenService extends AbstractRpcService implements IRpcServi
 			{
 				if ( ! _.isNumber( this.chainId ) || this.chainId <= 0 )
 				{
-					return reject( `${ this.constructor.name }.fetchTokenCustomInfo :: invalid chainId` );
+					return reject( `${ this.constructor.name }.fetchTokenItemInfo :: invalid chainId` );
 				}
 
 				//	https://api.1inch.dev/token/v1.2/1/custom/0x491e136ff7ff03e6ab097e54734697bb5802fc1c
@@ -81,11 +95,11 @@ export class OneInchTokenService extends AbstractRpcService implements IRpcServi
 				const response : FetchResponse = await FetchUtil.getRequest( options );
 				if ( ! response || ! _.isObject( response.bodyJson ) )
 				{
-					return reject( `${ this.constructor.name }.fetchTokenCustomInfo :: invalid response` );
+					return reject( `${ this.constructor.name }.fetchTokenItemInfo :: invalid response` );
 				}
 				if ( ! OneInchTokenService.isValid1InchTokenItem( response.bodyJson ) )
 				{
-					return reject( `${ this.constructor.name }.fetchTokenCustomInfo :: invalid 1inch token item` );
+					return reject( `${ this.constructor.name }.fetchTokenItemInfo :: invalid 1inch token item` );
 				}
 
 				//

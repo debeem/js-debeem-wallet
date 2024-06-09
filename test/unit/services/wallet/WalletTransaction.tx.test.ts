@@ -6,6 +6,7 @@ import { TestUtil } from "debeem-utils";
 import { WalletAccount } from "../../../../src";
 import _ from "lodash";
 import {TransactionRequest} from "ethers/src.ts";
+import {TransactionMinimumNeededGas} from "../../../../src/models/TransactionModels";
 
 
 /**
@@ -108,13 +109,39 @@ describe( "WalletTransaction.tx", () =>
 
 			//
 			//	send translation from [oneKey wallet 1] to [oneKey wallet 2]
+			//	intentionally sending transactions with very low gas fees, in wei.
 			//
-			const singedTx : string = await new WalletTransaction().signTransaction( walletObj, payeeAddress, sendValue1 );
+			let singedTx : string = await new WalletTransaction().signTransaction( walletObj, payeeAddress, sendValue1, -1, 100 );
 			expect( singedTx ).toBeDefined();
 			expect( typeof singedTx ).toBe( "string" );
 			expect( singedTx.length ).toBeGreaterThan( 0 );
 
-			const broadcastResponse : TransactionResponse = await new WalletTransaction().broadcastTransaction( singedTx );
+			let broadcastResponse : TransactionResponse | undefined = undefined;
+			try
+			{
+				broadcastResponse = await new WalletTransaction().broadcastTransaction( singedTx );
+			}
+			catch ( err )
+			{
+				const minimumNeededGas : TransactionMinimumNeededGas | null = new WalletTransaction().extractMinimumNeededGasLimit( err );
+				if ( minimumNeededGas )
+				{
+					//
+					//	The reason for the abnormal transaction is that the gas fee is too low,
+					//	and we have successfully extracted the lowest gas fee reminder from the error
+					//
+					//	Now, let’s try to send this transaction again with more gas fee.
+					//
+					singedTx = await new WalletTransaction().signTransaction( walletObj, payeeAddress, sendValue1, -1, minimumNeededGas.minimum + 100 );
+					broadcastResponse = await new WalletTransaction().broadcastTransaction( singedTx );
+				}
+				else
+				{
+					//	just throw the error again
+					throw err;
+				}
+			}
+
 			expect( broadcastResponse ).toBeDefined();
 			expect( typeof broadcastResponse ).toBe( "object" );
 			expect( broadcastResponse ).toHaveProperty( 'provider' );
@@ -148,7 +175,7 @@ describe( "WalletTransaction.tx", () =>
 
 
 		const sendValue2 : string = '0.0020010';	//	in ETH
-		it( `should send ${ sendValue2 }ETH from one account to other by method .send`, async () =>
+		it( `should send ${ sendValue2 }ETH from one account to other by method .sendToken`, async () =>
 		{
 			//	wallet public
 			const walletObj = new WalletFactory().createWalletFromPrivateKey( publicWalletPrivateKey );
@@ -178,7 +205,32 @@ describe( "WalletTransaction.tx", () =>
 			//
 			//	send translation from [oneKey wallet 1] to [oneKey wallet 2]
 			//
-			const broadcastResponse : TransactionResponse = await new WalletTransaction().send( walletObj, payeeAddress, sendValue2 );
+			let broadcastResponse : TransactionResponse | undefined = undefined;
+			try
+			{
+				//	intentionally sending transactions with very low gas fees
+				broadcastResponse = await new WalletTransaction().sendToken( walletObj, payeeAddress, sendValue2, -1, 100 );
+			}
+			catch ( err )
+			{
+				const minimumNeededGas : TransactionMinimumNeededGas | null = new WalletTransaction().extractMinimumNeededGasLimit( err );
+				if ( minimumNeededGas )
+				{
+					//
+					//	The reason for the abnormal transaction is that the gas fee is too low,
+					//	and we have successfully extracted the lowest gas fee reminder from the error
+					//
+					//	Now, let’s try to send this transaction again with more gas fee.
+					//
+					broadcastResponse = await new WalletTransaction().sendToken( walletObj, payeeAddress, sendValue2, -1, minimumNeededGas.minimum + 100 );
+				}
+				else
+				{
+					//	just throw the error again
+					throw err;
+				}
+			}
+
 			expect( broadcastResponse ).toBeDefined();
 			expect( typeof broadcastResponse ).toBe( "object" );
 			expect( broadcastResponse ).toHaveProperty( 'provider' );
@@ -212,7 +264,7 @@ describe( "WalletTransaction.tx", () =>
 
 
 		const sendValueUsdt : string = '1.1';	//	in USDT
-		it( `should send ${ sendValueUsdt }USDT/USD from one account to other by method .sendContractTransaction`, async () =>
+		it( `should send ${ sendValueUsdt }USDT/USD from one account to other by method .sendContractToken`, async () =>
 		{
 			//	wallet public
 			const walletObj = new WalletFactory().createWalletFromPrivateKey( publicWalletPrivateKey );
@@ -244,37 +296,73 @@ describe( "WalletTransaction.tx", () =>
 			//
 			//	this is USDT contract address on sepolia
 			const usdtContractAddress = '0x271B34781c76fB06bfc54eD9cfE7c817d89f7759';
-			const broadcastResponse : TransactionResponse = await new WalletTransaction().sendContractTransaction
-			(
-				usdtContractAddress,
-				walletObj,
-				payeeAddress,
-				sendValueUsdt,
-				6
-			);
+			let broadcastResponse : TransactionResponse | undefined = undefined;
+			try
+			{
+				broadcastResponse = await new WalletTransaction().sendContractToken
+				(
+					usdtContractAddress,
+					walletObj,
+					payeeAddress,
+					sendValueUsdt,
+					6
+				);
+			}
+			catch ( err : any )
+			{
+				const minimumNeededGas : TransactionMinimumNeededGas | null = new WalletTransaction().extractMinimumNeededGasLimit( err );
+				if ( minimumNeededGas )
+				{
+					//
+					//	The reason for the abnormal transaction is that the gas fee is too low,
+					//	and we have successfully extracted the lowest gas fee reminder from the error
+					//
+					//	Now, let’s try to send this transaction again with more gas fee.
+					//
+					broadcastResponse = await new WalletTransaction().sendContractToken
+					(
+						usdtContractAddress,
+						walletObj,
+						payeeAddress,
+						sendValueUsdt,
+						6,
+						-1,
+						minimumNeededGas.minimum + 100
+					);
+				}
+				else
+				{
+					//	just throw the error again
+					throw err;
+				}
+			}
+
 			expect( broadcastResponse ).toBeDefined();
 			expect( typeof broadcastResponse ).toBe( "object" );
-			expect( broadcastResponse ).toHaveProperty( 'provider' );
-			expect( broadcastResponse ).toHaveProperty( 'blockNumber' );
-			expect( broadcastResponse ).toHaveProperty( 'blockHash' );
-			expect( broadcastResponse ).toHaveProperty( 'index' );
-			expect( broadcastResponse ).toHaveProperty( 'hash' );
-			expect( broadcastResponse ).toHaveProperty( 'type' );
-			expect( broadcastResponse ).toHaveProperty( 'to' );
-			expect( broadcastResponse ).toHaveProperty( 'from' );
-			expect( broadcastResponse ).toHaveProperty( 'nonce' );
-			expect( broadcastResponse.nonce ).toBeGreaterThan( 0 );
-			expect( broadcastResponse ).toHaveProperty( 'gasLimit' );
-			expect( broadcastResponse ).toHaveProperty( 'gasPrice' );
-			expect( broadcastResponse ).toHaveProperty( 'maxPriorityFeePerGas' );
-			expect( broadcastResponse ).toHaveProperty( 'maxFeePerGas' );
-			expect( broadcastResponse ).toHaveProperty( 'data' );
-			expect( broadcastResponse ).toHaveProperty( 'value' );
-			expect( broadcastResponse ).toHaveProperty( 'chainId' );
-			expect( broadcastResponse ).toHaveProperty( 'signature' );
-			expect( broadcastResponse.signature ).toHaveProperty( 'r' );
-			expect( broadcastResponse.signature ).toHaveProperty( 's' );
-			expect( broadcastResponse ).toHaveProperty( 'accessList' );
+			if ( broadcastResponse )
+			{
+				expect( broadcastResponse ).toHaveProperty( 'provider' );
+				expect( broadcastResponse ).toHaveProperty( 'blockNumber' );
+				expect( broadcastResponse ).toHaveProperty( 'blockHash' );
+				expect( broadcastResponse ).toHaveProperty( 'index' );
+				expect( broadcastResponse ).toHaveProperty( 'hash' );
+				expect( broadcastResponse ).toHaveProperty( 'type' );
+				expect( broadcastResponse ).toHaveProperty( 'to' );
+				expect( broadcastResponse ).toHaveProperty( 'from' );
+				expect( broadcastResponse ).toHaveProperty( 'nonce' );
+				expect( broadcastResponse.nonce ).toBeGreaterThan( 0 );
+				expect( broadcastResponse ).toHaveProperty( 'gasLimit' );
+				expect( broadcastResponse ).toHaveProperty( 'gasPrice' );
+				expect( broadcastResponse ).toHaveProperty( 'maxPriorityFeePerGas' );
+				expect( broadcastResponse ).toHaveProperty( 'maxFeePerGas' );
+				expect( broadcastResponse ).toHaveProperty( 'data' );
+				expect( broadcastResponse ).toHaveProperty( 'value' );
+				expect( broadcastResponse ).toHaveProperty( 'chainId' );
+				expect( broadcastResponse ).toHaveProperty( 'signature' );
+				expect( broadcastResponse.signature ).toHaveProperty( 'r' );
+				expect( broadcastResponse.signature ).toHaveProperty( 's' );
+				expect( broadcastResponse ).toHaveProperty( 'accessList' );
+			}
 
 			//	...
 			//console.log( broadcastResponse );

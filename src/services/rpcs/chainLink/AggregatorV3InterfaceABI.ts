@@ -1,3 +1,9 @@
+/**
+ * 	@category Rpc Services
+ * 	@module ChainLinkService
+ */
+
+
 export type AggregatorV3InterfaceABIOutputItem = {
 	internalType: string,
 	name: string,

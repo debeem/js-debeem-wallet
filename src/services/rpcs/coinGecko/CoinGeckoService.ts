@@ -1,3 +1,7 @@
+/**
+ * 	@category Rpc Services
+ * 	@module CoinGeckoService
+ */
 import { AbstractRpcService } from "../AbstractRpcService";
 import { IRpcService } from "../IRpcService";
 import { coinGecko } from "../../../config";
@@ -22,39 +26,54 @@ export class CoinGeckoService extends AbstractRpcService implements IRpcService
 
 		//	load config
 		//	it will check whether the network specified by chainId can be supported
-		this._config = this.loadConfig( coinGecko );
+		this._config = this.cloneConfig( coinGecko );
 
 		//	...
-		this.setEndpoint( this.getEndpointByNetwork( this._config.network ) );
+		this.setEndpoint( this.getEndpointByChainId( this.chainId ) );
 		this.setVersion( "v3" );
 		this.setApiKey( this._config.apiKey );
 	}
 
+	/**
+	 * 	get current config
+	 *
+	 * 	@returns {NetworkModels}
+	 */
 	public get config() : NetworkModels
 	{
 		return this._config;
 	}
 
 	/**
-	 * 	overwrite
-	 *	@param config
+	 * 	deep clone configuration from the input
+	 *
+	 *	@param config	{NetworkModels}
+	 *	@returns {NetworkModels}
 	 */
-	protected loadConfig( config : NetworkModels ) : NetworkModels
+	protected cloneConfig( config : NetworkModels ) : NetworkModels
 	{
 		return lodash.cloneDeep( config ) as NetworkModels;
 	}
 
-	public getEndpointByNetwork( network : string ) : string
+	/**
+	 * 	get endpoint by network
+	 *
+	 * 	@param chainId	{number} the chainId number
+	 *	@returns {string}
+	 */
+	public getEndpointByChainId( chainId ?: number ) : string
 	{
 		return `https://api.coingecko.com`;
 	}
 
 	/**
 	 *	Get the current price of any cryptocurrencies in any other supported currencies that you need.
+	 *
 	 *	@param ids		{string} id of coins, comma-separated if querying more than 1 coin.
 	 *					 see: src/resources/coinGeckoCoinList.json
 	 *	@param vsCurrencies	{string} vs_currency of coins, comma-separated if querying more than 1 vs_currency.
 	 *					 see: src/resources/coinGeckoSupportedVsCurrencies.json
+	 *	@returns {Promise<any>}
 	 */
 	public async fetchSimplePrice( ids : string, vsCurrencies : string ) : Promise<any>
 	{
@@ -123,6 +142,7 @@ export class CoinGeckoService extends AbstractRpcService implements IRpcService
 	 *						 see: src/resources/ethereumTokens.json.ts
 	 *	@param vsCurrencies		{string} vs_currency of coins, comma-separated if querying more than 1 vs_currency
 	 * 						 see: src/resources/coinGeckoSupportedVsCurrencies.json
+	 *	@returns {Promise<any>}
 	 */
 	public async fetchSimpleTokenPrice( platformId : string, contractAddresses : string,  vsCurrencies : string ) : Promise<any>
 	{

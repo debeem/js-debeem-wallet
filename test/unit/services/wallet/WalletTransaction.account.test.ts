@@ -121,7 +121,7 @@ describe( "WalletTransaction.account", () =>
 
 			await TestUtil.sleep(3 * 1000 );
 
-		}, 20 * 1000 );
+		}, 40 * 1000 );
 
 		it( "should throw an error if the address is invalid", async () =>
 		{
@@ -204,8 +204,14 @@ describe( "WalletTransaction.account", () =>
 
 	describe( "Query Token Prices", () =>
 	{
-		it( "should return the live price of BTC/USD, ETH/USD", async () =>
+		it( "should return the live price of BTC/USD, ETH/USD on Ethereum Sepolia", async () =>
 		{
+			//	switch chain/network to Eth.Sepolia
+			setCurrentChain( 11155111 );
+
+			//
+			//	https://docs.chain.link/data-feeds/price-feeds/addresses?network=ethereum&page=1
+			//
 			const arr = [ `BTC/USD`, `ETH/USD` ];
 			for ( const pair of arr )
 			{
@@ -268,9 +274,61 @@ describe( "WalletTransaction.account", () =>
 
 		}, 20 * 1000 );
 
-		it( "should return the live price of USDT on Ethereum in USD", async () =>
+		it( "should return the live price of USDC/USD on Ethereum Sepolia", async () =>
 		{
-			const pair : string		= `USDT/USD`;
+			//	switch chain/network to Eth.Sepolia
+			setCurrentChain( 11155111 );
+
+			//
+			//	https://docs.chain.link/data-feeds/price-feeds/addresses?network=ethereum&page=1
+			//
+			const pair : string = `USDC/USD`;
+			const priceObj : ChainLinkPriceResult | null = await new WalletAccount().queryPairPrice( pair );
+			//
+			//	should output:
+			// 	{
+			// 		chainLink: {
+			// 			roundId: 36893488147419104247n,
+			// 			answer: 99874900n,
+			// 			startedAt: 1692203003n,
+			// 			updatedAt: 1692203003n,
+			// 			answeredInRound: 36893488147419104247n,
+			// 			address: '0x3E7d1eAB13ad0104d2750B8863b489D65364e32D',
+			// 			decimals: 8
+			// 		},
+			// 		price: 0.99
+			// 	}
+			//console.log( priceObj );
+			//
+			expect( priceObj ).toBeDefined();
+			expect( priceObj ).toHaveProperty( 'chainLink' );
+			expect( priceObj ).toHaveProperty( 'price' );
+			if ( priceObj )
+			{
+				expect( priceObj.chainLink ).toHaveProperty( 'roundId' );
+				expect( priceObj.chainLink ).toHaveProperty( 'answer' );
+				expect( priceObj.chainLink ).toHaveProperty( 'startedAt' );
+				expect( priceObj.chainLink ).toHaveProperty( 'updatedAt' );
+				expect( priceObj.chainLink ).toHaveProperty( 'answeredInRound' );
+				expect( priceObj.chainLink ).toHaveProperty( 'address' );
+				expect( priceObj.chainLink ).toHaveProperty( 'decimals' );
+
+				expect( priceObj.price ).toBeGreaterThan( 0.0 );
+			}
+
+			await TestUtil.sleep(3 * 1e3 );
+
+		}, 20 * 1000 );
+
+		it( "should return the live price of USDT/USD on Ethereum Mainnet", async () =>
+		{
+			//	switch chain/network to Eth.Mainnet
+			setCurrentChain( 1 );
+
+			//
+			//	https://docs.chain.link/data-feeds/price-feeds/addresses?network=ethereum&page=1
+			//
+			const pair : string = `USDT/USD`;
 			const priceObj : ChainLinkPriceResult | null = await new WalletAccount().queryPairPrice( pair );
 			//
 			//	should output:

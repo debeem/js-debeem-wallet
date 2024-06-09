@@ -1,3 +1,7 @@
+/**
+ * 	@category Rpc Services
+ * 	@module IRpcService
+ */
 import { NetworkModels } from "../../models/NetworkModels";
 
 export interface IRpcService
@@ -11,6 +15,6 @@ export interface IRpcService
 	 */
 	get config() : NetworkModels;
 
-	getNetworkByChainId( chainId : number ) : string | null;
-	getEndpointByNetwork( network : string ) : string;
+	getNetworkByChainId( chainId ?: number ) : string | null;
+	getEndpointByChainId( chainId ?: number ) : string;
 }

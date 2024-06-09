@@ -1,3 +1,7 @@
+/**
+ * 	@category Rpc Services
+ * 	@module ChainLinkService
+ */
 import { AbstractRpcService } from "../AbstractRpcService";
 import { IRpcService } from "../IRpcService";
 import { chainLink } from "../../../config";
@@ -12,6 +16,7 @@ import {
 	priceFeedAddressesOnSepoliaTestnet
 } from "./EthereumPriceFeedAddresses";
 import { aggregatorV3InterfaceABI } from "./AggregatorV3InterfaceABI";
+import _ from "lodash";
 
 
 /**
@@ -32,6 +37,9 @@ export type ChainLinkPriceResult = {
 };
 
 /**
+ * 	@class ChainLinkService
+ *
+ * 	@remark
  * 	https://docs.chain.link/data-feeds/price-feeds/addresses
  */
 export class ChainLinkService extends AbstractRpcService implements IRpcService
@@ -42,14 +50,15 @@ export class ChainLinkService extends AbstractRpcService implements IRpcService
 		super( chainId );
 		this.setChainMap({
 			1: 'mainnet',
+			//11155111 : 'sepolia'
 		});
 
 		//	load config
 		//	it will check whether the network specified by chainId can be supported
-		this._config = this.loadConfig( chainLink );
+		this._config = this.cloneConfig( chainLink );
 
 		//	...
-		this.setEndpoint( this.getEndpointByNetwork( this._config.network ) );
+		this.setEndpoint( this.getEndpointByChainId( this.chainId ) );
 		this.setVersion( "v3" );
 		this.setApiKey( this._config.apiKey );
 	}
@@ -63,26 +72,27 @@ export class ChainLinkService extends AbstractRpcService implements IRpcService
 	 * 	overwrite
 	 *	@param config
 	 */
-	protected loadConfig( config : NetworkModels ) : NetworkModels
+	protected cloneConfig(config : NetworkModels ) : NetworkModels
 	{
 		return lodash.cloneDeep( config ) as NetworkModels;
 	}
 
-	public getEndpointByNetwork( network? : string ) : string
+	/**
+	 * 	set end point by chainId
+	 *
+	 * 	@group Basic Methods
+	 * 	@param chainId	{number} the chainId number
+	 * 	@returns {string}
+	 */
+	public getEndpointByChainId( chainId ?: number ) : string
 	{
-		if ( ! TypeUtil.isNotEmptyString( network ) )
+		chainId = _.isNumber( chainId ) ? chainId : this.chainId;
+		switch ( chainId )
 		{
-			network = this._config.network;
-		}
-
-		switch ( network )
-		{
-			case "mainnet":
+			case 1 :		//	mainnet
 				return "https://rpc.ankr.com/eth";
-			case "sepolia":
+			case 11155111 :		//	sepolia
 				return "https://rpc.ankr.com/eth_sepolia";
-			case "goerli":
-				return "https://rpc.ankr.com/eth_goerli";
 		}
 
 		return "https://rpc.ankr.com/eth";
@@ -90,35 +100,27 @@ export class ChainLinkService extends AbstractRpcService implements IRpcService
 
 	/**
 	 *	@param pair	{string} e.g.: BTC/USD, see the keys in file EthereumPriceFeedAddresses.ts
-	 *	@param network	{string}
+	 *	@param chainId	{number}
 	 *	@return { ChainLinkPriceFeedAddressItem | null }
 	 */
-	public getAddressByPair( pair : string, network? : string ) : ChainLinkPriceFeedAddressItem | null
+	public getAddressByPair( pair : string, chainId ?: number ) : ChainLinkPriceFeedAddressItem | null
 	{
 		if ( ! TypeUtil.isNotEmptyString( pair ) )
 		{
 			return null;
 		}
 
-		if ( ! TypeUtil.isNotEmptyString( network ) )
-		{
-			network = this._config.network;
-		}
-
 		//	...
+		chainId = _.isNumber( chainId ) ? chainId : this.chainId;
 		let priceFeedAddresses = null;
-		switch ( network )
+		switch ( chainId )
 		{
-			case "mainnet":
+			case 1 : 		//	mainnet
 				priceFeedAddresses = priceFeedAddressesOnMainnet;
 				break;
 
-			case "sepolia":
+			case 11155111 :		//	sepolia
 				priceFeedAddresses = priceFeedAddressesOnSepoliaTestnet;
-				break;
-
-			case "goerli":
-				priceFeedAddresses = priceFeedAddressesOnGoerliTestnet;
 				break;
 		}
 		if ( priceFeedAddresses )
@@ -162,7 +164,7 @@ export class ChainLinkService extends AbstractRpcService implements IRpcService
 					return reject( `unsupported pair` );
 				}
 
-				const endpoint : string = this.getEndpointByNetwork();
+				const endpoint : string = this.getEndpointByChainId();
 				const provider = new JsonRpcProvider( endpoint );
 				const priceFeed = new ethers.Contract( addressItem.address, aggregatorV3InterfaceABI, provider )
 				const roundData = await priceFeed.latestRoundData();

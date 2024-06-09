@@ -8,7 +8,14 @@
 		"src/services/wallet",
 		"src/services/storage",
 		"src/services/chain/",
-		"src/services/token"
+		"src/services/token",
+		"src/services/rpcs/AbstractRpcService.ts",
+		"src/services/rpcs/IRpcService.ts",
+		"src/services/rpcs/alchemy",
+		"src/services/rpcs/chainLink",
+		"src/services/rpcs/coinGecko",
+		"src/services/rpcs/infura",
+		"src/services/rpcs/oneInchToken"
 	],
 	"out": "docs/js-debeem-wallet",
 	"cleanOutputDir": true,
@@ -36,6 +43,7 @@
 		"Storage Services",
 		"Chain Services",
 		"Token Services",
+		"Rpc Services",
 		"Data Models",
 		"Storage Entities",
 		"*"
@@ -44,9 +52,9 @@
 	"disableSources": false,
 	"excludeInternal": true,
 	"visibilityFilters": {
-		"protected": true,
+		"protected": false,
 		"private": false,
-		"inherited": true,
+		"inherited": false,
 		"external": false,
 		"@alpha": false,
 		"@beta": false

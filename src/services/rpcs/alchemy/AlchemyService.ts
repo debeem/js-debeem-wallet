@@ -1,5 +1,5 @@
 /**
- * 	@category Services / Rpc
+ * 	@category Rpc Services
  * 	@module AlchemyService
  */
 import { isAddress } from "ethers";
@@ -14,10 +14,11 @@ import { FetchResponse } from "ethers";
 import { NetworkModels } from "../../../models/NetworkModels";
 import { TypeUtil } from "debeem-utils";
 import { IRpcService } from "../IRpcService";
-import { ContractTokenBalanceItem } from "../../../models/TokenModels";
+import {ContractTokenBalanceItem, OneInchTokenItem} from "../../../models/TokenModels";
 import { TokenService } from "../../token/TokenService";
 import { MathUtil } from "debeem-utils";
 import { TransactionHistoryResult } from "../../../models/TransactionModels";
+import _ from "lodash";
 
 
 
@@ -43,10 +44,10 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 
 		//	load config
 		//	it will check whether the network specified by chainId can be supported
-		this._config = this.loadConfig( alchemy );
+		this._config = this.cloneConfig( alchemy );
 
 		//	...
-		this.setEndpoint( this.getEndpointByNetwork( this._config.network ) );
+		this.setEndpoint( this.getEndpointByChainId() );
 		this.setVersion( "v2" );
 		this.setApiKey( this._config.apiKey );
 	}
@@ -56,11 +57,21 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 		return this._config;
 	}
 
-	public getEndpointByNetwork( network : string ) : string
+	/**
+	 * 	set end point by chainId
+	 *
+	 * 	@group Basic Methods
+	 * 	@param chainId {number} the chainId number
+	 *	@returns {string}
+	 */
+	public getEndpointByChainId( chainId ?: number ) : string
 	{
-		if ( !this.supportedNetworks.includes( network ) )
+		chainId = _.isNumber( chainId ) ? chainId : this.chainId;
+		const network : string | null = this.getNetworkByChainId( chainId );
+		if ( ! _.isString( network ) ||
+			! this.supportedNetworks.includes( network ) )
 		{
-			throw new Error( 'invalid network' );
+			throw new Error( `${ this.constructor.name }.getEndpointByChainId :: invalid network` );
 		}
 
 		return `https://${ network }.g.alchemy.com`;
@@ -68,53 +79,53 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 
 	/**
 	 * 	return type list of transfer on special network
-	 *	@param network
+	 *
+	 * 	@param chainId {number} the chainId number
+	 * 	@returns {Array<string> | null}
 	 */
-	public getTransferTypes( network : string ) : Array<string> | null
+	public getTransferTypes( chainId ?: number ) : Array<string> | null
 	{
-		if ( !this.supportedNetworks.includes( network ) )
+		chainId = _.isNumber( chainId ) ? chainId : this.chainId;
+		switch ( chainId )
 		{
-			return null;
-		}
-
-		switch ( network )
-		{
-			case `eth-mainnet` :
-			case `eth-goerli` :
-			case `eth-sepolia`:
-			case 'polygon-mainnet' :
+			case 1 :		//	eth-mainnet
+			case 5 :		//	eth-goerli
+			case 11155111 :		//	eth-sepolia
+			case 137 :		//	polygon-mainnet
 				return [ `external`, `internal`, `erc20`, `erc721`, `erc1155`, `specialnft` ];
 
-			case `polygon-mumbai` :
-			case `arb-mainnet` :
-			case `arb-goerli` :
-			case `opt-mainnet` :
-			case `opt-goerli` :
+			case 80001 :		//	polygon-mumbai
+			case 42161 :		//	arb-mainnet
+			case 421613 :		//	arb-goerli
+			case 10 :		//	opt-mainnet
+			case 420 :		//	opt-goerli
 				return [ `external`, `erc20`, `erc721`, `erc1155`, `specialnft` ];
 		}
 
 		return null;
 	}
 
-	public getContractAddresses( network : string ) : Array<string>
+	/**
+	 * 	get contract address of default tokens
+	 *
+	 * 	@param chainId	{number} the chainId number
+	 * 	@returns {Array<string>}
+	 */
+	public getContractAddresses( chainId ?: number ) : Array<string>
 	{
-		if ( !this.supportedNetworks.includes( network ) )
+		chainId = _.isNumber( chainId ) ? chainId : this.chainId;
+		switch ( chainId )
 		{
-			return [];
-		}
-
-		switch ( network )
-		{
-			case 'eth-mainnet' :
+			case 1 :		//	eth-mainnet
 				return defaultEthereumTokensMainnet;
-			case 'eth-goerli' :
+			case 5 :		//	eth-goerli
 				return defaultEthereumTokensGoerli;
-			case 'polygon-mainnet' :
-			case 'polygon-mumbai' :
-			case 'arb-mainnet' :
-			case 'arb-goerli' :
-			case 'opt-mainnet' :
-			case 'opt-goerli' :
+			case 137 :		//	polygon-mainnet
+			case 80001 :		//	polygon-mumbai
+			case 42161 :		//	arb-mainnet
+			case 421613 :		//	arb-goerli
+			case 10 :		//	opt-mainnet
+			case 420 :		//	opt-goerli
 				return [];
 		}
 
@@ -123,8 +134,10 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 
 	/**
 	 * 	query all transaction list from/to the special address
-	 *	@param address	{string}
+	 *
+	 *	@param address	{string} wallet address
 	 *	@param options	{FetchListOptions}
+	 *	@returns {Promise<TransactionHistoryResult>}
 	 */
 	public async queryTransactions( address : string, options? : FetchListOptions ) : Promise<TransactionHistoryResult>
 	{
@@ -188,8 +201,10 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 
 	/**
 	 * 	query transaction list filter by fromAddress
-	 *	@param fromAddress	{string}
+	 *
+	 *	@param fromAddress	{string} payer's wallet address
 	 *	@param options		{FetchListOptions}
+	 *	@returns {Promise<TransactionHistoryResult>}
 	 */
 	public async queryTransactionsFromAddress( fromAddress : string, options? : FetchListOptions ) : Promise<TransactionHistoryResult>
 	{
@@ -197,11 +212,11 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 		const pageSize = FetchUtil.getSafePageSize( options?.pageSize, 100 );
 		const transactionParam = [
 			{
-				contractAddresses : this.getContractAddresses( this._config.network ),
+				contractAddresses : this.getContractAddresses(),
 				"fromBlock" : "0x0",
 				"toBlock" : "latest",
 				"fromAddress" : fromAddress,
-				"category" : this.getTransferTypes( this._config.network ),
+				"category" : this.getTransferTypes(),
 				"order" : sort,
 				"withMetadata" : true,
 				"excludeZeroValue" : true,
@@ -214,8 +229,10 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 
 	/**
 	 * 	query transaction list filter by toAddress
-	 *	@param toAddress	{string}
+	 *
+	 *	@param toAddress	{string} the recipient's wallet address
 	 *	@param options		{FetchListOptions}
+	 *	@returns {Promise<TransactionHistoryResult>}
 	 */
 	public async queryTransactionsToAddress( toAddress : string, options? : FetchListOptions ) : Promise<TransactionHistoryResult>
 	{
@@ -223,11 +240,11 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 		const pageSize = FetchUtil.getSafePageSize( options?.pageSize, 100 );
 		const transactionParam = [
 			{
-				contractAddresses : this.getContractAddresses( this._config.network ),
+				contractAddresses : this.getContractAddresses(),
 				"fromBlock" : "0x0",
 				"toBlock" : "latest",
 				"toAddress" : toAddress,
-				"category" : this.getTransferTypes( this._config.network ),
+				"category" : this.getTransferTypes(),
 				"order" : sort,
 				"withMetadata" : true,
 				"excludeZeroValue" : true,
@@ -241,10 +258,10 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 	/**
 	 * 	query balance of native token, ETH
 	 *
-	 *	@param address	{string}
+	 *	@param address	{string} wallet address
 	 *	@return {Promise<bigint>}
 	 */
-	public async queryBalance(address : string ) : Promise<bigint>
+	public async queryBalance( address : string ) : Promise<bigint>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -252,7 +269,7 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 			{
 				if ( ! isAddress( address ) )
 				{
-					return reject( `invalid address` );
+					return reject( `${ this.constructor.name }.queryBalance :: invalid address` );
 				}
 				const paramData = [
 					address,
@@ -278,8 +295,9 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 	}
 
 	/**
-	 * 	query token balance
-	 *	@param address		{string}
+	 * 	query token balance by token contract address
+	 *
+	 *	@param address		{string} wallet address
 	 *	@param tokens		{Array<ContractTokenBalanceItem>}
 	 *	@param options		{FetchListOptions}
 	 *	@return {Promise<Array<ContractTokenBalanceItem>>}
@@ -290,19 +308,19 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 		{
 			try
 			{
-				if ( !TypeUtil.isNotEmptyString( address ) )
+				if ( ! TypeUtil.isNotEmptyString( address ) )
 				{
-					return reject( `invalid address` );
+					return reject( `${ this.constructor.name }.queryTokenBalances :: invalid address` );
 				}
 				if ( !Array.isArray( tokens ) )
 				{
-					return reject( `invalid contractAddresses` );
+					return reject( `${ this.constructor.name }.queryTokenBalances :: invalid contractAddresses` );
 				}
 				for ( const token of tokens )
 				{
 					if ( !TypeUtil.isNotEmptyString( token.contractAddress ) )
 					{
-						return reject( `invalid contractAddresses` );
+						return reject( `${ this.constructor.name }.queryTokenBalances :: invalid contractAddresses` );
 					}
 				}
 
@@ -328,42 +346,14 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 				// 	}
 				if ( !TypeUtil.isNotNullObjectWithKeys( result, [ 'address', 'tokenBalances' ] ) )
 				{
-					return reject( `invalid response for TokenBalances` );
+					return reject( `${ this.constructor.name }.queryTokenBalances :: invalid response for TokenBalances` );
 				}
 				if ( !Array.isArray( result.tokenBalances ) )
 				{
-					return reject( `invalid response for TokenBalances` );
+					return reject( `${ this.constructor.name }.queryTokenBalances :: invalid response for TokenBalances` );
 				}
 
-				const tokenService = new TokenService();
-				const funcMoreInfo = ({ contractAddress = '', tokenBalance = '' }) : ContractTokenBalanceItem | undefined =>
-				{
-					if ( ! Array.isArray( tokens ) || 0 === tokens.length )
-					{
-						return undefined;
-					}
-
-					//	...
-					let find : ContractTokenBalanceItem | undefined = tokens.find( f => f.contractAddress.trim().toLowerCase() === contractAddress.trim().toLowerCase() );
-					if ( find )
-					{
-						if ( ! find.decimals || find.decimals <= 0 )
-						{
-							//	try to find the value of decimals from TokenService on Ethereum Mainnet
-							const tokenSrvItem : any = tokenService.getItem( contractAddress );
-							if ( tokenSrvItem &&
-								TypeUtil.isNotNullObjectWithKeys( tokenSrvItem, [ 'decimals' ] ) &&
-								TypeUtil.isNumeric( tokenSrvItem[ 'decimals' ] ) &&
-								tokenSrvItem[ 'decimals' ] > 0 )
-							{
-								find.decimals = tokenSrvItem[ 'decimals' ];
-							}
-						}
-					}
-
-					return find;
-				};
-
+				const tokenService = new TokenService( this.chainId );
 				let tokenBalances : Array<ContractTokenBalanceItem> = [];
 				for ( let item of result.tokenBalances )
 				{
@@ -371,14 +361,17 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 						!TypeUtil.isString( item.contractAddress ) ||
 						!TypeUtil.isString( item.tokenBalance ) )
 					{
-						return reject( `invalid response for TokenBalances` );
+						return reject( `${ this.constructor.name }.queryTokenBalances :: invalid response for TokenBalances` );
 					}
 
 					//	...
 					let tokenBalance : bigint = MathUtil.bigintFromString( item.tokenBalance );
 
 					//
-					//	try to query the balance of native ETH
+					//	try to query the balance of native token
+					//	for ETH mainnet, it's ETH
+					//	for BNB Smart Chain Mainnet, it's BNB
+					//	...
 					//
 					if ( item.contractAddress.trim().toLowerCase() === tokenService.nativeTokenAddress.trim().toLowerCase() )
 					{
@@ -389,10 +382,10 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 					}
 
 					//	find more info
-					let find : ContractTokenBalanceItem | undefined = funcMoreInfo( item );
+					let find : ContractTokenBalanceItem | undefined = await this.queryTokenBalancesFindMoreInfo( tokens, item.contractAddress );
 					if ( ! find )
 					{
-						return reject( `invalid response for TokenBalances` );
+						return reject( `${ this.constructor.name }.queryTokenBalances :: invalid response for TokenBalances` );
 					}
 
 					const balance : ContractTokenBalanceItem = {
@@ -414,9 +407,63 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 		} );
 	}
 
+	/**
+	 *	An extension function of queryTokenBalances
+	 *	that queries more information about a specified token through TokenService by contractAddress.
+	 *
+	 *	@param tokens	{Array<ContractTokenBalanceItem>} token list
+	 *	@param contractAddress	{string} the contract address of a token
+	 *	@returns {Promise< ContractTokenBalanceItem | undefined >}
+	 *	@private
+	 */
+	private async queryTokenBalancesFindMoreInfo(
+		tokens : Array<ContractTokenBalanceItem>,
+		contractAddress : string ) : Promise< ContractTokenBalanceItem | undefined >
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( ! Array.isArray( tokens ) || 0 === tokens.length )
+				{
+					return resolve( undefined );
+				}
+
+				//	...
+				const tokenService = new TokenService( this.chainId );
+				contractAddress = contractAddress.trim().toLowerCase();
+				let find : ContractTokenBalanceItem | undefined = tokens.find(
+					( f : ContractTokenBalanceItem ) => f.contractAddress.trim().toLowerCase() === contractAddress
+				);
+				if ( find )
+				{
+					if ( ! find.decimals || find.decimals <= 0 )
+					{
+						//	try to find the value of decimals from TokenService on Ethereum Mainnet
+						const tokenSrvItem : OneInchTokenItem | null = await tokenService.getItem( contractAddress );
+						if ( _.isObject( tokenSrvItem ) &&
+							_.isNumber( tokenSrvItem.decimals ) &&
+							tokenSrvItem.decimals > 0 )
+						{
+							find.decimals = tokenSrvItem.decimals;
+						}
+					}
+				}
+
+				//	...
+				resolve( find );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
 
 	/**
 	 * 	query transaction list by param
+	 *
 	 *	@param transactionParam		{Array<any>}
 	 *	@param options			{FetchListOptions}
 	 *	@return {Promise< Array<any> | null >}
@@ -432,7 +479,7 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 				//console.log( `result :`, transactionParam, result );
 				if ( !TypeUtil.isNotNullObjectWithKeys( result, [ 'transfers' ] ) || ! Array.isArray( result.transfers ) )
 				{
-					return reject( `invalid response transfers` );
+					return reject( `${ this.constructor.name }.queryTransactionsByParameter :: invalid response transfers` );
 				}
 
 				//console.log( `result : `, result );
@@ -469,6 +516,7 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 
 	/**
 	 * 	query transaction list by param
+	 *
 	 *	@param method		{string}
 	 *	@param paramData	{any}
 	 *	@param options		{FetchListOptions}
@@ -482,7 +530,7 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 			{
 				if ( !TypeUtil.isNotEmptyString( method ) )
 				{
-					return reject( `invalid method` );
+					return reject( `${ this.constructor.name }.queryByParameter :: invalid method` );
 				}
 
 				//	...

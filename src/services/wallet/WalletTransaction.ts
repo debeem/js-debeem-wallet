@@ -17,12 +17,23 @@ import { WalletAccount } from "./WalletAccount";
 import { FetchListOptions } from "debeem-utils";
 import { AlchemyService } from "../rpcs/alchemy/AlchemyService";
 import { WalletEntityBaseItem } from "../../entities/WalletEntity";
-import { TransactionHistoryResult } from "../../models/TransactionModels";
+import {TransactionHistoryResult, TransactionMinimumNeededGas} from "../../models/TransactionModels";
 import _ from "lodash";
 import {AddressLike} from "ethers/src.ts/address";
 
 /**
- * 	@class
+ *	Please configure chain/network before using this class.
+ * ```ts
+ * //	switch chain/network to Eth Sepolia
+ * setCurrentChain( 11155111 );
+ *
+ * //	query currently supported chain/network
+ * const supportedChains : Array<number> = new InfuraRpcService( 1 ).supportedChains();
+ *
+ * //	should return a supported chain list, for example:
+ * [ 1, 11155111 ]
+ *
+ * ```
  */
 export class WalletTransaction
 {
@@ -31,8 +42,9 @@ export class WalletTransaction
 	}
 
 	/**
-	 * 	return default gas limit
+	 * 	return default gas limit in wei
 	 *
+	 * 	@group Transaction Helper
 	 * 	@returns {number}
 	 */
 	public getDefaultGasLimit() : number
@@ -54,6 +66,8 @@ export class WalletTransaction
 	 * //        gasLimit : 21000
 	 * //
 	 * ```
+	 *
+	 * 	@group Transaction Helper
 	 *	@param toAddress {AddressLike} recipient's wallet address
 	 * 	@returns {Promise<number>} gas limit in wei.
 	 */
@@ -97,6 +111,8 @@ export class WalletTransaction
 	 * //        gasLimit : 21000
 	 * //
 	 * ```
+	 *
+	 * 	@group Transaction Helper
 	 *	@param transactionRequest {TransactionRequest} transaction request object
 	 * 	@returns {Promise<number>} gas limit in wei.
 	 */
@@ -126,8 +142,63 @@ export class WalletTransaction
 	}
 
 	/**
+	 * 	extract Minimum Needed Gas Limit from error
+	 *
+	 * 	@group Transaction Helper
+	 *	@param errorObject	{any} error object
+	 *	@returns {TransactionMinimumNeededGas | null}
+	 */
+	public extractMinimumNeededGasLimit( errorObject: any ): TransactionMinimumNeededGas | null
+	{
+		//
+		//	InfuraRpcService error:
+		//	errorObject.error =
+		//	{
+		//		code: -32000,
+		//		message: 'intrinsic gas too low: gas 21000, minimum needed 21596'
+		//	}
+		//
+		if ( errorObject &&
+			errorObject.error &&
+			_.isNumber( errorObject.error.code ) &&
+			-32000 === errorObject.error.code &&
+			_.isString( errorObject.error.message ) &&
+			! _.isEmpty( errorObject.error.message ) &&
+			errorObject.error.message.includes( `intrinsic gas too low` ) &&
+			errorObject.error.message.includes( `minimum needed` ) )
+		{
+			//	define a regular expression to match the required numbers
+			const regex = /intrinsic gas too low: gas (\d+), minimum needed (\d+)/;
+
+			//	use regular expressions to match input strings
+			const match = errorObject.error.message.match( regex );
+			if ( match &&
+				Array.isArray( match ) &&
+				match.length > 2 )
+			{
+				//	extract the matching digits and convert to integers
+				const gas = parseInt( match[ 1 ], 10 );
+				const minimum = parseInt( match[ 2 ], 10 );
+
+				if ( _.isNumber( gas ) && _.isNumber( minimum ) )
+				{
+					return { gas: gas, minimum: minimum }
+				}
+			}
+		}
+
+		//
+		//	try to match others
+		//
+
+		//	none matched
+		return null;
+	}
+
+	/**
 	 * 	get last nonce count
 	 *
+	 * 	@group Transaction Helper
 	 *	@param address {string} wallet address
 	 *	@returns {Promise<number>}
 	 */
@@ -162,60 +233,14 @@ export class WalletTransaction
 	}
 
 	/**
-	 * 	send ETH/native token
+	 * 	sign a transaction of sending native token, before it will be broadcast
 	 *
-	 *	@param wallet		{WalletEntityBaseItem} wallet object
-	 *	@param to		{string} recipient's wallet address
-	 *	@param value		{string} value in ETH. for example: '0.2' ETH
-	 *	@param [nonce]		{number} nonce value
-	 *	@param [gasLimit]	{number} gas limit value
-	 *	@returns {Promise<TransactionResponse>}
-	 */
-	public async send
-	(
-		wallet : WalletEntityBaseItem,
-		to : string,
-		value : string,
-		nonce : number = -1,
-		gasLimit: number = 0
-	) : Promise<TransactionResponse>
-	{
-		return new Promise( async ( resolve, reject ) =>
-		{
-			try
-			{
-				if ( ! wallet )
-				{
-					return reject( `${ this.constructor.name }.send :: invalid wallet` );
-				}
-				if ( ! _.isString( wallet.privateKey ) || _.isEmpty( wallet.privateKey ) )
-				{
-					return reject( `${ this.constructor.name }.send :: invalid wallet.privateKey` );
-				}
-				if ( ! isAddress( wallet.address ) )
-				{
-					return reject( `${ this.constructor.name }.send :: invalid wallet.address` );
-				}
-
-				const signedTx : string = await this.signTransaction( wallet, to, value, nonce, gasLimit );
-				const res : TransactionResponse = await this.broadcastTransaction( signedTx );
-				resolve( res );
-			}
-			catch ( err )
-			{
-				reject( err );
-			}
-		});
-	}
-
-	/**
-	 * 	sign a transaction before it will be broadcast
-	 *
+	 * 	@group Send Transaction
 	 *	@param wallet		{WalletEntityBaseItem}
 	 *	@param toAddress  	{string}	recipient's wallet address
 	 *	@param value		{string}	ETH quantity, unit ETH, for example: "0.001" ETH
 	 *	@param [nonce]		{number}	The nonce is very important. We can query the current nonce through the Infura API.
-	 *	@param [gasLimit] 	{number}	The gasLimit for sending ETH is fixed at 21,000.
+	 *	@param [gasLimit] 	{number}	in wei. The gasLimit for sending ETH is fixed at 21,000.
 	 *						Transactions calling other contracts need to estimate the gasLimit in advance.
 	 *	@returns {Promise<string>}
 	 */
@@ -248,11 +273,11 @@ export class WalletTransaction
 				//
 				//	Calculate nonce
 				//
-				if ( -1 === nonce )
+				if ( nonce <= 0 )
 				{
 					nonce = await this.queryNonce( wallet.address );
 				}
-				if ( nonce < 0 )
+				if ( nonce <= 0 )
 				{
 					return reject( `${ this.constructor.name }.signTransaction :: invalid nonce` );
 				}
@@ -322,8 +347,56 @@ export class WalletTransaction
 	}
 
 	/**
-	 *	Broadcast transaction
+	 *	Broadcast a transaction
 	 *
+	 * 	@example
+	 * ```ts
+	 * //
+	 * //	This is a complete example of how to send a transaction using .signTransaction and .broadcastTransaction
+	 * //
+	 *
+	 * //    switch chain/network to Eth.Sepolia
+	 * setCurrentChain( 11155111 );
+	 *
+	 * //    try to create a wallet from a private key
+	 * const publicWalletPrivateKey = '0xc7f832621897e67d973f0f1c497198ed1b89a138f2fe3cc6ce6a59cd3fb7cd4c';
+	 * const walletObj = new WalletFactory().createWalletFromPrivateKey( publicWalletPrivateKey );
+	 *
+	 * //
+	 * //    send translation from [oneKey wallet 1] to [oneKey wallet 2]
+	 * //
+	 * const payeeAddress : string = `0x8B4c0Dc5AA90c322C747c10FDD7cf1759D343573`.trim().toLowerCase();
+	 * const sendValue1 : string = '0.001124';	//	in ETH
+	 *
+	 * let singedTx : string = await new WalletTransaction().signTransaction( walletObj, payeeAddress, sendValue1, -1, 100 );
+	 * let broadcastResponse : TransactionResponse | undefined = undefined;
+	 * try
+	 * {
+	 *	 broadcastResponse = await new WalletTransaction().broadcastTransaction( singedTx );
+	 * }
+	 * catch ( err : any )
+	 * {
+	 *       const minimumNeededGas : TransactionMinimumNeededGas | null = new WalletTransaction().extractMinimumNeededGasLimit( err );
+	 *       if ( minimumNeededGas )
+	 *       {
+	 *             //
+	 *             //    The reason for the abnormal transaction is that the gas fee is too low,
+	 *             //    and we have successfully extracted the lowest gas fee reminder from the error
+	 *             //
+	 *             //    Now, let’s try to send this transaction again with more gas fee.
+	 *             //
+	 * 	       singedTx = await new WalletTransaction().signTransaction( walletObj, payeeAddress, sendValue1, -1, minimumNeededGas.minimum + 100 );
+	 * 	       broadcastResponse = await new WalletTransaction().broadcastTransaction( singedTx );
+	 *       }
+	 *       else
+	 *       {
+	 *             //    just throw the error again
+	 *             throw err;
+	 *       }
+	 * }
+	 * ```
+	 *
+	 * 	@group Send Transaction
 	 *	@param signedTx		{string} the string of the signed transaction object
 	 *	@returns {Promise<TransactionResponse>}
 	 */
@@ -354,18 +427,176 @@ export class WalletTransaction
 	}
 
 	/**
-	 * 	Send derivative token
+	 * 	send a native token
 	 *
+	 * 	@example
+	 * ```ts
+	 * //
+	 * //	This is a complete example of how to send a native token using .sendToken
+	 * //
+	 *
+	 * //    switch chain/network to Eth.Sepolia
+	 * setCurrentChain( 11155111 );
+	 *
+	 * //    try to create a wallet from a private key
+	 * const publicWalletPrivateKey = '0xc7f832621897e67d973f0f1c497198ed1b89a138f2fe3cc6ce6a59cd3fb7cd4c';
+	 * const walletObj = new WalletFactory().createWalletFromPrivateKey( publicWalletPrivateKey );
+	 *
+	 * //
+	 * //    send translation from [oneKey wallet 1] to [oneKey wallet 2]
+	 * //
+	 * const payeeAddress : string = `0x8B4c0Dc5AA90c322C747c10FDD7cf1759D343573`.trim().toLowerCase();
+	 * const sendValue2 : string = '0.0020010';	//	in ETH
+	 * let broadcastResponse : TransactionResponse | undefined = undefined;
+	 * try
+	 * {
+	 *	 broadcastResponse = await new WalletTransaction().sendToken( walletObj, payeeAddress, sendValue2, -1, 100 );
+	 * }
+	 * catch ( err : any )
+	 * {
+	 *       const minimumNeededGas : TransactionMinimumNeededGas | null = new WalletTransaction().extractMinimumNeededGasLimit( err );
+	 *       if ( minimumNeededGas )
+	 *       {
+	 *             //
+	 *             //    The reason for the abnormal transaction is that the gas fee is too low,
+	 *             //    and we have successfully extracted the lowest gas fee reminder from the error
+	 *             //
+	 *             //    Now, let’s try to send this transaction again with more gas fee.
+	 *             //
+	 *             broadcastResponse = await new WalletTransaction().sendToken( walletObj, payeeAddress, sendValue2, -1, minimumNeededGas.minimum + 100 );
+	 *       }
+	 *       else
+	 *       {
+	 *             //    just throw the error again
+	 *             throw err;
+	 *       }
+	 * }
+	 * ```
+	 *
+	 * 	@group Send Transaction
+	 *	@param wallet		{WalletEntityBaseItem} wallet object
+	 *	@param to		{string} recipient's wallet address
+	 *	@param value		{string} value in ETH. for example: '0.2' ETH
+	 *	@param [nonce]		{number} nonce value
+	 *	@param [gasLimit]	{number} gas limit value, in wei.
+	 *	@returns {Promise<TransactionResponse>}
+	 */
+	public async sendToken
+	(
+		wallet : WalletEntityBaseItem,
+		to : string,
+		value : string,
+		nonce : number = -1,
+		gasLimit: number = -1
+	) : Promise<TransactionResponse>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( ! wallet )
+				{
+					return reject( `${ this.constructor.name }.send :: invalid wallet` );
+				}
+				if ( ! _.isString( wallet.privateKey ) || _.isEmpty( wallet.privateKey ) )
+				{
+					return reject( `${ this.constructor.name }.send :: invalid wallet.privateKey` );
+				}
+				if ( ! isAddress( wallet.address ) )
+				{
+					return reject( `${ this.constructor.name }.send :: invalid wallet.address` );
+				}
+
+				if ( nonce <= 0 )
+				{
+					nonce = await this.queryNonce( wallet.address );
+				}
+				const signedTx : string = await this.signTransaction( wallet, to, value, nonce, gasLimit );
+				const res : TransactionResponse = await this.broadcastTransaction( signedTx );
+				resolve( res );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+	/**
+	 * 	Send a derivative token
+	 *
+	 * 	@example
+	 * ```ts
+	 * //
+	 * //	This is a complete example of how to send a transaction
+	 * //
+	 *
+	 * //    switch chain/network to Eth.Sepolia
+	 * setCurrentChain( 11155111 );
+	 *
+	 * //    try to create a wallet from a private key
+	 * const publicWalletPrivateKey = '0xc7f832621897e67d973f0f1c497198ed1b89a138f2fe3cc6ce6a59cd3fb7cd4c';
+	 * const walletObj = new WalletFactory().createWalletFromPrivateKey( publicWalletPrivateKey );
+	 *
+	 * //
+	 * //    send translation from [oneKey wallet 1] to [oneKey wallet 2]
+	 * //
+	 * const payeeAddress : string = `0x8B4c0Dc5AA90c322C747c10FDD7cf1759D343573`.trim().toLowerCase();
+	 * const usdtContractAddress = '0x271B34781c76fB06bfc54eD9cfE7c817d89f7759';	//    USDT contract address on sepolia
+	 * const sendValueUsdt : string = '1.1';	//	in USDT
+	 * let broadcastResponse : TransactionResponse | undefined = undefined;
+	 * try
+	 * {
+	 *       broadcastResponse = await new WalletTransaction().sendContractToken
+	 *       (
+	 *             usdtContractAddress,
+	 *             walletObj,
+	 *             payeeAddress,
+	 *             sendValueUsdt,
+	 *             6
+	 *       );
+	 * }
+	 * catch ( err : any )
+	 * {
+	 *       const minimumNeededGas : TransactionMinimumNeededGas | null = new WalletTransaction().extractMinimumNeededGasLimit( err );
+	 *       if ( minimumNeededGas )
+	 *       {
+	 *             //
+	 *             //    The reason for the abnormal transaction is that the gas fee is too low,
+	 *             //    and we have successfully extracted the lowest gas fee reminder from the error
+	 *             //
+	 *             //    Now, let’s try to send this transaction again with more gas fee.
+	 *             //
+	 *             broadcastResponse = await new WalletTransaction().sendContractToken
+	 *             (
+	 *                   usdtContractAddress,
+	 *                   walletObj,
+	 *                   payeeAddress,
+	 *                   sendValueUsdt,
+	 *                   6,
+	 *                   -1,
+	 *                   minimumNeededGas.minimum + 100
+	 *             );
+	 *       }
+	 *       else
+	 *       {
+	 *             //    just throw the error again
+	 *             throw err;
+	 *       }
+	 * }
+	 * ```
+	 *
+	 * 	@group Send Transaction
 	 * 	@param contractAddress		{string} contract address
 	 * 	@param wallet			{WalletEntityBaseItem} wallet object
 	 *	@param toAddress		{string} recipient's wallet address
 	 *	@param value			{string} value
 	 *	@param decimals			{number} decimals
 	 *	@param nonce			{number} nonce value
-	 *	@param gasLimit			{number} gas limit value
+	 *	@param gasLimit			{number} gas limit value, in wei
 	 *	@returns {Promise<TransactionResponse>}
 	 */
-	public async sendContractTransaction
+	public async sendContractToken
 	(
 		contractAddress : string,
 		wallet : WalletEntityBaseItem,
@@ -386,7 +617,7 @@ export class WalletTransaction
 				}
 				if ( nonce < 0 )
 				{
-					return reject( `${ this.constructor.name }.sendContractTransaction :: invalid nonce` );
+					return reject( `${ this.constructor.name }.sendContractToken :: invalid nonce` );
 				}
 
 				if ( gasLimit <= 0 )
@@ -399,7 +630,7 @@ export class WalletTransaction
 				}
 				if ( gasLimit <= 0 )
 				{
-					return reject( `${ this.constructor.name }.sendContractTransaction :: invalid gasLimit` );
+					return reject( `${ this.constructor.name }.sendContractToken :: invalid gasLimit` );
 				}
 
 				const config : NetworkModels = new InfuraRpcService( getCurrentChain() ).config;
@@ -452,6 +683,7 @@ export class WalletTransaction
 	/**
 	 * 	Query all transaction history of a wallet
 	 *
+	 * 	@group query Transaction
 	 *	@param address	{string} wallet address
 	 *	@param options	{FetchListOptions} fetch options
 	 *	@returns {Promise<TransactionHistoryResult>}
@@ -464,6 +696,7 @@ export class WalletTransaction
 	/**
 	 * 	Query the transactions of a wallet by fromAddress
 	 *
+	 * 	@group query Transaction
 	 *	@param address	{string} wallet address
 	 *	@param options	{FetchListOptions} fetch options
 	 *	@returns {Promise<TransactionHistoryResult>}
@@ -476,6 +709,7 @@ export class WalletTransaction
 	/**
 	 * 	Query the transactions of a wallet by toAddress
 	 *
+	 * 	@group query Transaction
 	 *	@param address	{string} wallet address
 	 *	@param options	{FetchListOptions} fetch options
 	 *	@returns {Promise<TransactionHistoryResult>}
@@ -489,6 +723,7 @@ export class WalletTransaction
 	/**
 	 * 	Query the number of transactions sent from the address
 	 *
+	 * 	@group query Transaction
 	 *	@param address	{string} wallet address
 	 *	@returns {Promise<bigint>}
 	 */
@@ -500,6 +735,7 @@ export class WalletTransaction
 	/**
 	 * 	Query the details of a transaction
 	 *
+	 * 	@group query Transaction
 	 *	@param txHash	{string} transaction hash value
 	 *	@returns {Promise<any>}
 	 */
@@ -511,6 +747,7 @@ export class WalletTransaction
 	/**
 	 * 	Query the receipt of a transaction
 	 *
+	 * 	@group query Transaction
 	 * 	@param txHash	{string} transaction hash value
 	 * 	@returns {Promise<any>}
 	 */
@@ -545,7 +782,7 @@ export class WalletTransaction
 // 	//
 // 	const usdtContractAddress = '0x9e15898acf36C544B6f4547269Ca8385Ce6304d8';
 // 	const sendValueUsdt : string = '1.1';	//	in USDT
-// 	const broadcastResponse : TransactionResponse = await new WalletTransaction().sendContractTransaction
+// 	const broadcastResponse : TransactionResponse = await new WalletTransaction().sendContractToken
 // 	(
 // 		usdtContractAddress,
 // 		walletObj,

@@ -1,3 +1,7 @@
+/**
+ * 	@category Rpc Services
+ * 	@module InfuraRpcService
+ */
 import lodash from 'lodash';
 import { FetchUtil, FetchOptions } from "debeem-utils";
 import { FetchResponse } from "ethers";
@@ -18,15 +22,14 @@ export class InfuraRpcService extends AbstractRpcService implements IRpcService
 		this.setChainMap({
 			1 : "mainnet",		//	Ethereum mainnet
 			11155111 : "sepolia",	//	Ethereum Testnet Sepolia
-			5 : "goerli",		//	Ethereum Testnet Goerli
 		});
 
 		//	load config
 		//	it will check whether the network specified by chainId can be supported
-		this._config = this.loadConfig( infura );
+		this._config = this.cloneConfig( infura );
 
 		//	...
-		this.setEndpoint( this.getEndpointByNetwork( this._config.network ) );
+		this.setEndpoint( this.getEndpointByChainId( this.chainId ) );
 		this.setVersion( "v3" );
 		this.setApiKey( this._config.apiKey );
 	}
@@ -36,34 +39,23 @@ export class InfuraRpcService extends AbstractRpcService implements IRpcService
 		return this._config;
 	}
 
-	public getEndpointByNetwork( network : string ) : string
+	/**
+	 * 	set end point by chainId
+	 *
+	 * 	@group Basic Methods
+	 * 	@param chainId {number} the chainId number
+	 *	@returns {string}
+	 */
+	public getEndpointByChainId( chainId ?: number ) : string
 	{
-		if ( ! this.supportedNetworks.includes( network ) )
+		chainId = _.isNumber( chainId ) ? chainId : this.chainId;
+		const network : string | null = this.getNetworkByChainId( chainId );
+		if ( ! _.isString( network ) ||
+			! this.supportedNetworks.includes( network ) )
 		{
-			throw new Error( 'invalid network' );
+			throw new Error( `${ this.constructor.name }.getEndpointByChainId :: invalid network` );
 		}
 
-		// case "mainnet":
-		// 	return "mainnet.infura.io";
-		// case "goerli":
-		// 	return "goerli.infura.io";
-		// case "sepolia":
-		// 	return "sepolia.infura.io";
-		//
-		// case "arbitrum":
-		// 	return "arbitrum-mainnet.infura.io";
-		// case "arbitrum-goerli":
-		// 	return "arbitrum-goerli.infura.io";
-		// case "matic":
-		// 	return "polygon-mainnet.infura.io";
-		// case "matic-mumbai":
-		// 	return "polygon-mumbai.infura.io";
-		// case "optimism":
-		// 	return "optimism-mainnet.infura.io";
-		// case "optimism-goerli":
-		// 	return "optimism-goerli.infura.io";
-
-		//	...
 		return `https://${ network }.infura.io`;
 	}
 

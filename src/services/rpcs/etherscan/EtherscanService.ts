@@ -1,3 +1,7 @@
+/**
+ * 	@category Rpc Services
+ * 	@module EtherscanService
+ */
 import { AbstractRpcService } from "../AbstractRpcService";
 import { etherscan } from "../../../config";
 import { FetchUtil, FetchListOptions, FetchOptions } from "debeem-utils";
@@ -5,6 +9,7 @@ import { FetchResponse } from "ethers";
 import { NetworkModels } from "../../../models/NetworkModels";
 import { TypeUtil } from "debeem-utils";
 import { IRpcService } from "../IRpcService";
+import _ from "lodash";
 
 
 /**
@@ -23,10 +28,10 @@ export class EtherscanService extends AbstractRpcService implements IRpcService
 
 		//	load config
 		//	it will check whether the network specified by chainId can be supported
-		this._config = this.loadConfig( etherscan );
+		this._config = this.cloneConfig( etherscan );
 
 		//	...
-		this.setEndpoint( this.getEndpointByNetwork( this._config.network ) );
+		this.setEndpoint( this.getEndpointByChainId( this.chainId ) );
 		this.setVersion( "" );
 		this.setApiKey( this._config.apiKey );
 	}
@@ -36,15 +41,23 @@ export class EtherscanService extends AbstractRpcService implements IRpcService
 		return this._config;
 	}
 
-	public getEndpointByNetwork( network : string ) : string
+	/**
+	 * 	set end point by chainId
+	 *
+	 * 	@group Basic Methods
+	 * 	@param chainId	{number} the chainId number
+	 * 	@returns {string}
+	 */
+	public getEndpointByChainId( chainId ?: number ) : string
 	{
-		switch ( network )
+		chainId = _.isNumber( chainId ) ? chainId : this.chainId;
+		switch ( chainId )
 		{
-			case "mainnet":
+			case 1 :		//	mainnet
 				return "https://api.etherscan.io";
-			case "sepolia":
+			case 11155111 :		//	sepolia
 				return "https://api-sepolia.etherscan.io";
-			case "goerli":
+			case 5 :		//	goerli
 				return "https://api-goerli.etherscan.io";
 		}
 

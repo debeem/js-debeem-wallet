@@ -1,3 +1,9 @@
+/**
+ * 	@category Rpc Services
+ * 	@module ChainLinkService
+ */
+
+
 export type ChainLinkPriceFeedAddressItem = {
 	address : string,
 	decimals : number,

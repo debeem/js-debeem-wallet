@@ -1,4 +1,8 @@
 /**
+ * 	@category Rpc Services
+ * 	@module InfuraRpcService
+ *
+ * 	@remark
  * 	https://chainid.network/chains.json
  */
 
