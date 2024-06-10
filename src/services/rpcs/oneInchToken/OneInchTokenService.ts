@@ -19,7 +19,10 @@ import _ from "lodash";
  */
 export class OneInchTokenService extends AbstractRpcService implements IRpcService
 {
-	constructor( chainId : number )
+	/**
+	 *	@param chainId {number} the chainId number. defaults to getCurrentChain()
+	 */
+	constructor( chainId ?: number )
 	{
 		super( chainId );
 		this.setChainMap({

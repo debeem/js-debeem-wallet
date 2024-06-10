@@ -1,5 +1,5 @@
 import { describe, expect } from '@jest/globals';
-import {OneInchTokenService, TokenService} from "../../../../src";
+import {OneInchTokenService, setCurrentChain, TokenService} from "../../../../src";
 import _ from "lodash";
 import {RpcSupportedChainMap} from "../../../../src/models/RpcModels";
 
@@ -42,6 +42,77 @@ describe( "TokenService", () =>
 			//console.log( `supportedChainMap :`, supportedChainMap );
 		} );
 	});
+
+	describe( "Token Item on Ethereum mainnet by creating the instance without chainId", () =>
+	{
+		const currentChainId = 1;
+		it( "should return true in checking the native address", async () =>
+		{
+			setCurrentChain( currentChainId );
+			const contractAddress : string = new TokenService().nativeTokenAddress;
+			const isETH = new TokenService().isNativeToken( contractAddress );
+			expect( isETH ).toBeDefined();
+			expect( isETH ).toBeTruthy();
+		} );
+
+		it( "should return true in the existing check", async () =>
+		{
+			setCurrentChain( currentChainId );
+			const contractAddress : string = new TokenService().nativeTokenAddress;
+			const exist = await new TokenService().exists( contractAddress );
+			expect( exist ).toBeDefined();
+			expect( exist ).toBeTruthy();
+		} );
+		it( "should return a token item", async () =>
+		{
+			setCurrentChain( currentChainId );
+			const contractAddress : string = new TokenService().nativeTokenAddress;
+			const item = await new TokenService().getItem( contractAddress );
+			expect( item ).toBeDefined();
+			expect( OneInchTokenService.isValid1InchTokenItem( item ) ).toBeTruthy();
+		} );
+
+		it( "should return the decimal value of a token", async () =>
+		{
+			setCurrentChain( currentChainId );
+			const contractAddress : string = new TokenService().nativeTokenAddress;
+			const decimals = await new TokenService().getItemDecimals( contractAddress );
+			//console.log( `decimals:`, decimals );
+			//	should output:
+			//	 decimals: 18
+			expect( decimals ).toBeDefined();
+			expect( _.isNumber( decimals ) ).toBeTruthy();
+			expect( decimals ).toBe( 18 );
+		} );
+
+		it( "should return the decimal value of the Tether USD", async () =>
+		{
+			setCurrentChain( currentChainId );
+
+			//	contract address of Tether USD
+			const contractAddress : string = `0xdac17f958d2ee523a2206206994597c13d831ec7`;
+			const decimals = await new TokenService().getItemDecimals( contractAddress );
+			//console.log( `decimals:`, decimals );
+			//	should output:
+			//	 decimals: 6
+			expect( decimals ).toBeDefined();
+			expect( _.isNumber( decimals ) ).toBeTruthy();
+			expect( decimals ).toBe( 6 );
+		} );
+
+		it( "should return the logo url of a token", async () =>
+		{
+			setCurrentChain( currentChainId );
+
+			const contractAddress : string = new TokenService().nativeTokenAddress;
+			const logoUrl = await new TokenService().getItemLogo( contractAddress );
+			//console.log( `logoUrl :`, logoUrl );
+			//    should output:
+			//     logoUrl : https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png
+			expect( logoUrl ).toBeDefined();
+			expect( _.isString( logoUrl ) || null === logoUrl ).toBeTruthy();
+		} );
+	} );
 
 	describe( "Token Item on Ethereum mainnet", () =>
 	{

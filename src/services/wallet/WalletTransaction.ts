@@ -365,7 +365,7 @@ export class WalletTransaction
 	 * //
 	 * //    send translation from [oneKey wallet 1] to [oneKey wallet 2]
 	 * //
-	 * const payeeAddress : string = `0x8B4c0Dc5AA90c322C747c10FDD7cf1759D343573`.trim().toLowerCase();
+	 * const payeeAddress : string = `0x8B4c0Dc5AA90c322C747c10FDD7cf1759D343573`;
 	 * const sendValue1 : string = '0.001124';	//	in ETH
 	 *
 	 * let singedTx : string = await new WalletTransaction().signTransaction( walletObj, payeeAddress, sendValue1, -1, 100 );
@@ -445,7 +445,7 @@ export class WalletTransaction
 	 * //
 	 * //    send translation from [oneKey wallet 1] to [oneKey wallet 2]
 	 * //
-	 * const payeeAddress : string = `0x8B4c0Dc5AA90c322C747c10FDD7cf1759D343573`.trim().toLowerCase();
+	 * const payeeAddress : string = `0x8B4c0Dc5AA90c322C747c10FDD7cf1759D343573`;
 	 * const sendValue2 : string = '0.0020010';	//	in ETH
 	 * let broadcastResponse : TransactionResponse | undefined = undefined;
 	 * try
@@ -541,7 +541,7 @@ export class WalletTransaction
 	 * //
 	 * //    send translation from [oneKey wallet 1] to [oneKey wallet 2]
 	 * //
-	 * const payeeAddress : string = `0x8B4c0Dc5AA90c322C747c10FDD7cf1759D343573`.trim().toLowerCase();
+	 * const payeeAddress : string = `0x8B4c0Dc5AA90c322C747c10FDD7cf1759D343573`;
 	 * const usdtContractAddress = '0x271B34781c76fB06bfc54eD9cfE7c817d89f7759';	//    USDT contract address on sepolia
 	 * const sendValueUsdt : string = '1.1';	//	in USDT
 	 * let broadcastResponse : TransactionResponse | undefined = undefined;

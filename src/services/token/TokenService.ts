@@ -34,9 +34,9 @@ export class TokenService extends AbstractRpcService implements IRpcService
 	/**
 	 * 	Create an instance of TokenService
 	 *
-	 *	@param chainId {number} the chainId number
+	 *	@param chainId {number} the chainId number. defaults to getCurrentChain()
 	 */
-	constructor( chainId : number )
+	constructor( chainId ?: number )
 	{
 		super( chainId );
 		this.setChainMap( new OneInchTokenService( 1 ).supportedChainMap );

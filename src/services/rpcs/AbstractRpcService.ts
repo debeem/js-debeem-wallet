@@ -7,6 +7,7 @@ import lodash from "lodash";
 import { NetworkModels } from "../../models/NetworkModels";
 import {RpcSupportedChainMap} from "../../models/RpcModels";
 import _ from "lodash";
+import {getCurrentChain} from "../../config";
 
 /**
  * 	https://portal.1inch.dev/documentation/authentication
@@ -52,8 +53,17 @@ export abstract class AbstractRpcService implements IRpcService
 	protected apiKey : string = '';
 
 
-	protected constructor( chainId : number )
+	/**
+	 *	@param chainId {number} the chainId number. defaults to getCurrentChain()
+	 */
+	protected constructor( chainId ?: number )
 	{
+		chainId = _.isNumber( chainId ) ? chainId : getCurrentChain();
+		if ( ! _.isNumber( chainId ) || chainId <= 0 )
+		{
+			throw new Error( `${ this.constructor.name }.constructor :: invalid chainId` );
+		}
+
 		this.chainId = chainId;
 	}
 

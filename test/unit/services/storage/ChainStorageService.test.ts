@@ -78,6 +78,25 @@ describe( "ChainStorageService", () =>
 
 			//	query all items
 			const chainList : Array<ChainEntityItem | null > | null = await chainStorageService.getAll();
+			//console.log( `chainList :`, chainList );
+			//	should output:
+			//	chainList : [
+			//       {
+			//         name: 'Ethereum Mainnet',
+			//         chainId: 1,
+			//         token: 'ETH',
+			//         rpcs: [ [Object] ],
+			//         explorers: [ 'https://etherscan.io' ]
+			//       },
+			//       {
+			//         name: 'Ethereum Testnet Sepolia',
+			//         chainId: 11155111,
+			//         token: 'ETH',
+			//         rpcs: [ [Object] ],
+			//         explorers: [ 'https://sepolia.etherscan.io' ]
+			//       }
+			//     ]
+			//
 			expect( Array.isArray( chainList ) ).toBeTruthy();
 			if ( Array.isArray( chainList ) )
 			{

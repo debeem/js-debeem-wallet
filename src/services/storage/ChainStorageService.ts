@@ -24,6 +24,50 @@ import { VerifyUtil } from "../../utils/VerifyUtil";
  * 	@class
  *
  * 	get the default supported chain list, get the specified chain information, add, delete and update chain information
+ *
+ * 	@example
+ * get the current chain/network list:
+ *
+ * ```ts
+ * //
+ * //	get the current chain/network list
+ * //
+ * const chainStorageService = new ChainStorageService();
+ *
+ * //    flush the default chains into database
+ * await chainStorageService.flushDefault();
+ *
+ * //    query all items
+ * const chainList : Array<ChainEntityItem | null > | null = await chainStorageService.getAll();
+ *
+ * //    should return:
+ * [
+ *    {
+ *      name: 'Ethereum Mainnet',
+ *      chainId: 1,
+ *      token: 'ETH',
+ *      rpcs: [ [Object] ],
+ *      explorers: [ 'https://etherscan.io' ]
+ *    },
+ *    {
+ *      name: 'Ethereum Testnet Sepolia',
+ *      chainId: 11155111,
+ *      token: 'ETH',
+ *      rpcs: [ [Object] ],
+ *      explorers: [ 'https://sepolia.etherscan.io' ]
+ *    }
+ * ]
+ *
+ * //
+ * //    get the logo url of a specified chain/network
+ * //
+ * const chainId = 1;
+ * const contractAddress : string = new TokenService( chainId ).nativeTokenAddress;
+ * const logoUrl = await new TokenService( chainId ).getItemLogo( contractAddress );
+ *
+ * //    should return:
+ * 'https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png'
+ * ```
  */
 export class ChainStorageService extends AbstractStorageService<ChainEntityItem> implements IStorageService
 {

@@ -44,7 +44,7 @@ export type ChainLinkPriceResult = {
  */
 export class ChainLinkService extends AbstractRpcService implements IRpcService
 {
-	constructor( chainId : number )
+	constructor( chainId ?: number )
 	{
 		//	there is no chainId limited
 		super( chainId );

@@ -16,7 +16,7 @@ import lodash from "lodash";
  */
 export class CoinGeckoService extends AbstractRpcService implements IRpcService
 {
-	constructor( chainId : number )
+	constructor( chainId ?: number )
 	{
 		//	there is no chainId limited
 		super( chainId );
