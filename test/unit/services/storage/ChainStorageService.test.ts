@@ -112,6 +112,57 @@ describe( "ChainStorageService", () =>
 			}
 		});
 
+		it( "should flush default chain list into database without pinCode", async () =>
+		{
+			await new SysUserStorageService().clear();
+
+			const chainStorageService = new ChainStorageService();
+
+			//	clear all items in database and flush the default chains into database
+			await chainStorageService.clear();
+			await chainStorageService.flushDefault();
+
+			//	load default chain list
+			const defaultChainList : Array<ChainEntityItem> = chainStorageService.getDefault();
+			expect( Array.isArray( defaultChainList ) ).toBeTruthy();
+			expect( defaultChainList.length ).toBeGreaterThan( 0 );
+
+			//	query all items
+			const chainList : Array<ChainEntityItem | null > | null = await chainStorageService.getAll();
+			//console.log( `chainList :`, chainList );
+			//	should output:
+			//	chainList : [
+			//       {
+			//         name: 'Ethereum Mainnet',
+			//         chainId: 1,
+			//         token: 'ETH',
+			//         rpcs: [ [Object] ],
+			//         explorers: [ 'https://etherscan.io' ]
+			//       },
+			//       {
+			//         name: 'Ethereum Testnet Sepolia',
+			//         chainId: 11155111,
+			//         token: 'ETH',
+			//         rpcs: [ [Object] ],
+			//         explorers: [ 'https://sepolia.etherscan.io' ]
+			//       }
+			//     ]
+			//
+			expect( Array.isArray( chainList ) ).toBeTruthy();
+			if ( Array.isArray( chainList ) )
+			{
+				expect( chainList.length ).toBeGreaterThan( 0 );
+
+				//	compare the length of two arrays
+				expect( chainList.length ).toBe( defaultChainList.length );
+
+				for ( const chain of chainList )
+				{
+					expect( chainStorageService.isValidItem( chain ) ).toBeTruthy();
+				}
+			}
+		});
+
 		it( "should return a storage key by item object", async () =>
 		{
 			await new SysUserStorageService().clear();
