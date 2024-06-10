@@ -129,12 +129,12 @@ https://chainlist.org/
 
 ### Configure a chain for your wallet
 
-| Function                                                 | Description                                   |
-|----------------------------------------------------------|-----------------------------------------------|
-| [getDefaultChain](config.md#getDefaultChain())           | get default chainId                           |
-| [getCurrentChain](config.md#getCurrentChain())           | get current chainId                           |
-| [setCurrentChain](config.md#setCurrentChain())           | set/update current chainId                    |
-| [revertToDefaultChain](config.md#revertToDefaultChain()) | revert the current chain to the default chain |
+| Function                                                                                                                    | Description                                   |
+|-----------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
+| [getDefaultChain](https://debeem.github.io/docs/js-debeem-wallet/functions/config_functions.getDefaultChain.html)           | get default chainId                           |
+| [getCurrentChain](https://debeem.github.io/docs/js-debeem-wallet/functions/config_functions.getCurrentChain.html)           | get current chainId                           |
+| [setCurrentChain](https://debeem.github.io/docs/js-debeem-wallet/functions/config_functions.setCurrentChain.html)           | set/update current chainId                    |
+| [revertToDefaultChain](https://debeem.github.io/docs/js-debeem-wallet/functions/config_functions.revertToDefaultChain.html) | revert the current chain to the default chain |
 
 
 
@@ -143,37 +143,37 @@ https://chainlist.org/
 
 ### Wallet Services
 
-| Class                                                     | Description                                                                                                                                                 |
-|-----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [WalletFactory](services/wallet/WalletFactory.md)         | create a new wallet, or import a wallet from a specified mnemonic, keystore, private key or wallet address                                                  |
-| [WalletAccount](services/wallet/WalletAccount.md)         | query balance, calculate total value, and request real-time quotes for Ethereum native token and derivative tokens                                          |
-| [WalletTransaction](services/wallet/WalletTransaction.md) | send and receive Ethereum native token and derivative tokens, estimate transaction gas fee in real time, and query transaction history, details and receipt |
-| [WalletNFT](services/wallet/WalletNFT.md)                 | query NFTs information                                                                                                                                      |
+| Class                                                                                              | Description                                                                                                                                                 |
+|----------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [WalletFactory](https://debeem.github.io/docs/js-debeem-wallet/modules/WalletFactory.html)         | create a new wallet, or import a wallet from a specified mnemonic, keystore, private key or wallet address                                                  |
+| [WalletAccount](https://debeem.github.io/docs/js-debeem-wallet/modules/WalletAccount.html)         | query balance, calculate total value, and request real-time quotes for Ethereum native token and derivative tokens                                          |
+| [WalletTransaction](https://debeem.github.io/docs/js-debeem-wallet/modules/WalletTransaction.html) | send and receive Ethereum native token and derivative tokens, estimate transaction gas fee in real time, and query transaction history, details and receipt |
+| [WalletNFT](https://debeem.github.io/docs/js-debeem-wallet/modules/WalletNFT.html)                 | query NFTs information                                                                                                                                      |
 
 
 ### Storage Services
 
-| Class                                                                 | Description                                                                                                         |
-|-----------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| [SysUserStorageService](services/storage/SysUserStorageService.md)    | manage table encryption, modify pinCode                                                                             |
-| [BasicStorageService](services/storage/BasicStorageService/README.md) | simple storage based on key-value                                                                                   |
-| [ChainStorageService](services/storage/ChainStorageService.md)        | get the default supported chain list, get the specified chain information, add, delete and update chain information |
-| [TokenStorageService](services/storage/TokenStorageService.md)        | get the default supported token list, get the specified token information, add, delete and update token information |
-| [WalletStorageService](services/storage/WalletStorageService.md)      | based on secure encryption, obtain the specified wallet information, add, delete and update wallet information      |
+| Class                                                                                                      | Description                                                                                                         |
+|------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
+| [SysUserStorageService](https://debeem.github.io/docs/js-debeem-wallet/modules/SysUserStorageService.html) | manage table encryption, modify pinCode                                                                             |
+| [BasicStorageService](https://debeem.github.io/docs/js-debeem-wallet/modules/BasicStorageService.html)     | simple storage based on key-value                                                                                   |
+| [ChainStorageService](https://debeem.github.io/docs/js-debeem-wallet/modules/ChainStorageService.html)     | get the default supported chain list, get the specified chain information, add, delete and update chain information |
+| [TokenStorageService](https://debeem.github.io/docs/js-debeem-wallet/modules/TokenStorageService.html)     | get the default supported token list, get the specified token information, add, delete and update token information |
+| [WalletStorageService](https://debeem.github.io/docs/js-debeem-wallet/modules/WalletStorageService.html)   | based on secure encryption, obtain the specified wallet information, add, delete and update wallet information      |
 
 
 ### Chain Service
 
 | Class                                          | Description                                                                |
 |------------------------------------------------|----------------------------------------------------------------------------|
-| [ChainService](services/chain/ChainService.md) | check whether a chain exists and obtain the chain information by chain id. |
+| [ChainService](https://debeem.github.io/docs/js-debeem-wallet/modules/ChainService.html) | check whether a chain exists and obtain the chain information by chain id. |
 
 
 ### Token Service
 
-| Class                                          | Description                                                                        |
-|------------------------------------------------|------------------------------------------------------------------------------------|
-| [TokenService](services/token/TokenService.md) | check whether a token exists and obtain the token information by contract address. |
+| Class                                                                                    | Description                                                                        |
+|------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| [TokenService](https://debeem.github.io/docs/js-debeem-wallet/modules/TokenService.html) | check whether a token exists and obtain the token information by contract address. |
 
 
 ## Unit Tests
