@@ -224,6 +224,7 @@ export class TokenService extends AbstractRpcService implements IRpcService
 	 * //
 	 * const currentChainId = 1;
 	 *
+	 * //    contract address of ETH
 	 * const contractAddress : string = new TokenService( currentChainId ).nativeTokenAddress;
 	 * const decimals = await new TokenService( currentChainId ).getItemDecimals( contractAddress );
 	 * //    should return:
