@@ -16,6 +16,7 @@ A complete, compact, and simple Ethereum wallet library based on the ethers libr
   - [Token Service](#token-service)
 - [Unit Tests](#unit-tests)
 - [Documentation](#documentation)
+  - [API Docs](#api_docs) 
 - [License](#license)
 
 
@@ -184,6 +185,7 @@ jest
 
 
 ## Documentation
+### API Docs
 - [https://debeem.github.io/docs/js-debeem-wallet/](https://debeem.github.io/docs/js-debeem-wallet/)
 
 
