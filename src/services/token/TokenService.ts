@@ -75,6 +75,11 @@ export class TokenService extends AbstractRpcService implements IRpcService
 	/**
 	 * 	get the contract address of the native token
 	 *
+	 * ```ts
+	 * //	should always return:
+	 * '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee'
+	 * ```
+	 *
 	 * 	@returns {string}
 	 */
 	public get nativeTokenAddress() : string
