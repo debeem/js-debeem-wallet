@@ -103,6 +103,29 @@ export class TokenService extends AbstractRpcService implements IRpcService
 	/**
 	 * 	get token item
 	 *
+	 * 	@example
+	 * ```ts
+	 * //
+	 * //    switch chain/network to BNB Smart Chain Mainnet
+	 * //
+	 * const currentChainId = 56;
+	 *
+	 * const contractAddress : string = new TokenService( currentChainId ).nativeTokenAddress;
+	 * const item = await new TokenService( currentChainId ).getItem( contractAddress );
+	 * //    should return:
+	 * {
+	 *    chainId: 56,
+	 *    symbol: 'BNB',
+	 *    name: 'BNB',
+	 *    address: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
+	 *    decimals: 18,
+	 *    logoURI: 'https://tokens.1inch.io/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png',
+	 *    providers: [ '1inch', 'Curve Token List' ],
+	 *    eip2612: false,
+	 *    tags: [ 'native' ]
+	 * }
+	 * ```
+	 *
 	 * 	@group Extended Methods
 	 *	@param contractAddress	{string} contract address
 	 *	@returns {Promise<OneInchTokenItem | null>}
@@ -194,6 +217,32 @@ export class TokenService extends AbstractRpcService implements IRpcService
 	/**
 	 * 	get the decimals value of a token
 	 *
+	 * 	@example
+	 * ```ts
+	 * //
+	 * //    switch chain/network to Ethereum Mainnet
+	 * //
+	 * const currentChainId = 1;
+	 *
+	 * const contractAddress : string = new TokenService( currentChainId ).nativeTokenAddress;
+	 * const decimals = await new TokenService( currentChainId ).getItemDecimals( contractAddress );
+	 * //    should return:
+	 * 18
+	 * ```
+	 *
+	 * 	@example
+	 * ```ts
+	 * //
+	 * //    switch chain/network to Ethereum Mainnet
+	 * //
+	 * const currentChainId = 1;
+	 *
+	 * //    contract address of Tether USD
+	 * const contractAddress : string = `0xdac17f958d2ee523a2206206994597c13d831ec7`;
+	 * const decimals = await new TokenService( currentChainId ).getItemDecimals( contractAddress );
+	 * //    should return:
+	 * 6
+	 * ```
 	 * 	@group Extended Methods
 	 * 	@param contractAddress	{string} contract address
 	 * 	@returns {Promise<number>}
@@ -221,6 +270,19 @@ export class TokenService extends AbstractRpcService implements IRpcService
 
 	/**
 	 * 	get the logo url of a token
+	 *
+	 * 	@example
+	 * ```ts
+	 * //
+	 * //    switch chain/network to Ethereum Mainnet
+	 * //
+	 * const currentChainId = 1;
+	 *
+	 * const contractAddress : string = new TokenService( currentChainId ).nativeTokenAddress;
+	 * const logoUrl = await new TokenService( currentChainId ).getItemLogo( contractAddress );
+	 * //    should return:
+	 * 'https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png'
+	 * ```
 	 *
 	 * 	@group Extended Methods
 	 * 	@param contractAddress	{string} contract address

@@ -73,14 +73,34 @@ describe( "TokenService", () =>
 		{
 			const contractAddress : string = new TokenService( currentChainId ).nativeTokenAddress;
 			const decimals = await new TokenService( currentChainId ).getItemDecimals( contractAddress );
+			//console.log( `decimals:`, decimals );
+			//	should output:
+			//	 decimals: 18
 			expect( decimals ).toBeDefined();
 			expect( _.isNumber( decimals ) ).toBeTruthy();
+			expect( decimals ).toBe( 18 );
+		} );
+
+		it( "should return the decimal value of the Tether USD", async () =>
+		{
+			//	contract address of Tether USD
+			const contractAddress : string = `0xdac17f958d2ee523a2206206994597c13d831ec7`;
+			const decimals = await new TokenService( currentChainId ).getItemDecimals( contractAddress );
+			//console.log( `decimals:`, decimals );
+			//	should output:
+			//	 decimals: 6
+			expect( decimals ).toBeDefined();
+			expect( _.isNumber( decimals ) ).toBeTruthy();
+			expect( decimals ).toBe( 6 );
 		} );
 
 		it( "should return the logo url of a token", async () =>
 		{
 			const contractAddress : string = new TokenService( currentChainId ).nativeTokenAddress;
 			const logoUrl = await new TokenService( currentChainId ).getItemLogo( contractAddress );
+			//console.log( `logoUrl :`, logoUrl );
+			//    should output:
+			//     logoUrl : https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png
 			expect( logoUrl ).toBeDefined();
 			expect( _.isString( logoUrl ) || null === logoUrl ).toBeTruthy();
 		} );
@@ -109,7 +129,7 @@ describe( "TokenService", () =>
 			const contractAddress : string = new TokenService( currentChainId ).nativeTokenAddress;
 			const item = await new TokenService( currentChainId ).getItem( contractAddress );
 			//console.log( `item: `, item );
-			//    will output:
+			//    should output:
 			//    item:  {
 			//       chainId: 56,
 			//       symbol: 'BNB',
