@@ -16,7 +16,7 @@ A complete, compact, and simple Ethereum wallet library based on the ethers libr
   - [Token Service](#token-service)
 - [Unit Tests](#unit-tests)
 - [Documentation](#documentation)
-  - [API Docs](#api_docs) 
+  - [API Docs](#api-docs) 
 - [License](#license)
 
 

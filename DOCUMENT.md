@@ -16,7 +16,7 @@ A complete, compact, and simple Ethereum wallet library based on the `ethers` li
 
 ## Architecture
 ### UML Graph
-<img src="https://raw.githubusercontent.com/debeem/debeem.github.io/main/resources/images/debeem-wallet-architecture-w.png" />
+<img alt="UML Graph" src="https://raw.githubusercontent.com/debeem/debeem.github.io/main/resources/images/debeem-wallet-architecture-w.png" />
 
 ### Dependency Packages
 
