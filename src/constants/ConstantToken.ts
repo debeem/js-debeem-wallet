@@ -35,7 +35,9 @@ export const defaultTokens : Array<TokenEntityItem> = [
 
 export const defaultTokenValueItem : TokenValueItem = {
 	balance : BigInt( 0 ),
+	balanceDecimals : 0,
 	floatBalance : 0,
 	value : BigInt( 0 ),
+	valueDecimals : 0,
 	floatValue : 0,
 };

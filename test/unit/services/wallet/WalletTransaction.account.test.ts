@@ -1,8 +1,8 @@
 import { describe, expect } from '@jest/globals';
-import { TokenStorageService, WalletFactory } from "../../../../src";
+import {TokenService, TokenStorageService, WalletFactory} from "../../../../src";
 import { ethers } from "ethers";
 import { WalletAccount } from "../../../../src";
-import { TypeUtil, TestUtil } from "debeem-utils";
+import {TypeUtil, TestUtil, MathUtil} from "debeem-utils";
 import { setCurrentChain } from "../../../../src";
 import { revertToDefaultChain } from "../../../../src";
 import {
@@ -12,6 +12,7 @@ import {
 	TotalValues
 } from "../../../../src/models/TokenModels";
 import { ChainLinkPriceResult } from "../../../../src/services/rpcs/chainLink/ChainLinkService";
+import _ from "lodash";
 
 
 /**
@@ -36,19 +37,7 @@ describe( "WalletTransaction.account", () =>
 
 	describe( "Query Account Balance", () =>
 	{
-		it( "should return the Ether balance in the mainnet address", async () =>
-		{
-			const address = '0x47B506704DA0370840c2992A3d3d301FD3c260D3';
-
-			const balance = await new WalletAccount().queryBalance( address );
-			expect( balance ).toBeGreaterThan( 0 );
-			expect( TypeUtil.isNotEmptyString( ethers.formatEther( balance ) ) ).toBeTruthy();
-
-			await TestUtil.sleep(3 * 1000 );
-
-		}, 20 * 1000 );
-
-		it( "should return the Ether balance in the specified address", async () =>
+		it( "should return the Ether balance", async () =>
 		{
 			const address = '0x47B506704DA0370840c2992A3d3d301FD3c260D3';
 
@@ -71,7 +60,7 @@ describe( "WalletTransaction.account", () =>
 
 		}, 20 * 1000 );
 
-		it( "Should return the balance of a derived contract token in the specified address", async () =>
+		it( "Should return the balance of a derived token", async () =>
 		{
 			//
 			//	on Ethereum Sepolia Testnet
@@ -89,6 +78,7 @@ describe( "WalletTransaction.account", () =>
 				{
 					pair : "USDT/USD",
 					contractAddress : '0x271B34781c76fB06bfc54eD9cfE7c817d89f7759',
+					decimals : 6,
 					tokenBalance : BigInt( 0 )
 				}
 			];
@@ -110,12 +100,30 @@ describe( "WalletTransaction.account", () =>
 			{
 				for ( const balance of balances )
 				{
+					//console.log( balance );
+					//	should output:
+					//	{
+					//       pair: 'USDT/USD',
+					//       decimals: 6,
+					//       contractAddress: '0x271B34781c76fB06bfc54eD9cfE7c817d89f7759',
+					//       tokenBalance: 100000000n
+					//     }
 					expect( balance ).toBeDefined();
 					expect( typeof balance.pair ).toBe( `string` );
-					expect( typeof balance.decimals ).toBe( `undefined` );
-					expect( typeof balance.contractAddress ).toBe( `string` );
+					expect( _.isNumber( balance.decimals ) ).toBeTruthy();
+					expect( _.isString( balance.contractAddress ) && ! _.isEmpty( balance.contractAddress ) ).toBeTruthy();
 					expect( typeof balance.tokenBalance ).toBe( `bigint` );
 					expect( balance.tokenBalance ).toBe( BigInt( 100000000 ) );	//	100000000 / 1e6 = 100
+
+					//	decimals
+					let find : ContractTokenBalanceItem | undefined = tokens.find(
+						( f : ContractTokenBalanceItem ) => f.contractAddress.trim().toLowerCase() === balance.contractAddress.trim().toLowerCase()
+					);
+					expect( find ).toBeDefined();
+					expect( find && _.isString( find.contractAddress ) ).toBeTruthy();
+					expect( find && find.contractAddress.trim().toLowerCase() === balance.contractAddress.trim().toLowerCase() ).toBeTruthy();
+					expect( find && find.decimals > 0 ).toBeTruthy();
+					expect( find && find.decimals === balance.decimals ).toBeTruthy();
 				}
 			}
 
@@ -370,24 +378,26 @@ describe( "WalletTransaction.account", () =>
 
 	describe( "Query Token Values", () =>
 	{
-		it( "should return the value in USD of the ETH in the specified wallet", async () =>
+		//	todo
+		//	query eth balance and value by calling queryTokenValues
+		//
+		it( "should return the ETH balance and value in USD using .queryValue", async () =>
 		{
 			const address = '0x47B506704DA0370840c2992A3d3d301FD3c260D3';
 			const pair : string	= `ETH/USD`;
 			const value : TokenValueItem = await new WalletAccount().queryValue( address, pair );
+			//console.log( `value :`, value );
 			//
 			//	should output:
-			//    {
-			//       balance: 1199778463286275302n,
-			//       floatBalance: 1.19,
-			//       value: 198131415427095503372280000000n,
-			//       floatValue: 1981.31
+			//	value : {
+			//       balance: 109962561842472260n,
+			//       balanceDecimals: 18,
+			//       floatBalance: 0.1,
+			//       value: 38747122937502939760817740000n,
+			//       valueDecimals: 26,
+			//       floatValue: 387.47
 			//     }
 			//
-			//	202760040760607624859865800000n
-			//	$2027.6 = 202760040760607624859865800000n / ( 10 ** 18 ) / ( 10 ** 8 )
-			//
-			//console.log( value );
 			expect( value ).toBeDefined();
 			if ( value )
 			{
@@ -400,13 +410,84 @@ describe( "WalletTransaction.account", () =>
 				expect( typeof value.floatValue ).toBe( 'number' );
 				expect( value.value ).toBeGreaterThan( 0 );
 				expect( value.floatValue ).toBeGreaterThan( 0 );
+
+				const calcFloatBalance = MathUtil.floatValueFromBigint( value.balance, value.balanceDecimals );
+				const calcFloatValue = MathUtil.floatValueFromBigint( value.value, value.valueDecimals );
+				expect( calcFloatBalance ).toBe( value.floatBalance );
+				expect( calcFloatValue ).toBe( value.floatValue );
 			}
 
 			await TestUtil.sleep(3 * 1000 );
 
 		}, 20 * 1000 );
 
-		it( "should return the value in USD of the USDT in the specified wallet", async () =>
+		it( "should return the ETH balance and value in USD using .queryTokenValues", async () =>
+		{
+			const address = '0x47B506704DA0370840c2992A3d3d301FD3c260D3';
+			const tokens : Array<ContractTokenBalanceItem> = [
+				{
+					pair : "ETH/USD",
+					contractAddress : new TokenService().nativeTokenAddress,
+					decimals : 18,
+					tokenBalance : BigInt( 0 )
+				}
+			];
+			const values : Array<ContractTokenValueItem> = await new WalletAccount().queryTokenValues( address, tokens );
+			//console.log( `values`, values );
+			//	should output:
+			//	values [
+			//       {
+			//         pair: 'ETH/USD',
+			//         contractAddress: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
+			//         balance: 109962561842472260n,
+			//         balanceDecimals: 18,
+			//         floatBalance: 0.1,
+			//         value: 38747122937502939760817740000n,
+			//         valueDecimals: 26,
+			//         floatValue: 387.47
+			//       }
+			//     ]
+			//
+			expect( values ).toBeDefined();
+			expect( Array.isArray( values ) ).toBeTruthy();
+			if ( values )
+			{
+				for ( const value of values )
+				{
+					expect( value ).toBeDefined();
+					if ( values )
+					{
+						expect( typeof value.pair ).toBe( 'string' );
+						expect( typeof value.contractAddress ).toBe( 'string' );
+
+						expect( typeof value.balance ).toBe( 'bigint' );
+						expect( typeof value.balanceDecimals ).toBe( 'number' );
+						expect( typeof value.floatBalance ).toBe( 'number' );
+						expect( value.balance ).toBeGreaterThanOrEqual( 0 );
+						expect( value.balanceDecimals ).toBeGreaterThanOrEqual( 0 );
+						expect( value.floatBalance ).toBeGreaterThanOrEqual( 0 );
+
+						expect( typeof value.value ).toBe( 'bigint' );
+						expect( typeof value.valueDecimals ).toBe( 'number' );
+						expect( typeof value.floatValue ).toBe( 'number' );
+						expect( value.value ).toBeGreaterThanOrEqual( 0 );
+						expect( value.valueDecimals ).toBeGreaterThanOrEqual( 0 );
+						expect( value.floatValue ).toBeGreaterThanOrEqual( 0 );
+
+						const calcFloatBalance = MathUtil.floatValueFromBigint( value.balance, value.balanceDecimals );
+						const calcFloatValue = MathUtil.floatValueFromBigint( value.value, value.valueDecimals );
+						expect( calcFloatBalance ).toBe( value.floatBalance );
+						expect( calcFloatValue ).toBe( value.floatValue );
+					}
+				}
+			}
+
+			await TestUtil.sleep(3 * 1000 );
+
+		}, 20 * 1000 );
+
+
+		it( "should return the USDT value in USD using .queryTokenValues on Ethereum MainNet", async () =>
 		{
 			//
 			//	test on Ethereum MainNet
@@ -423,26 +504,29 @@ describe( "WalletTransaction.account", () =>
 				{
 					pair : "USDT/USD",
 					contractAddress : '0xdAC17F958D2ee523a2206206994597C13D831ec7',
+					decimals : 6,
 					tokenBalance : BigInt( 0 )
 				}
 			];
 			const values : Array<ContractTokenValueItem> = await new WalletAccount().queryTokenValues( address, tokens );
+			//console.log( values );
 			//
 			//	should output:
-			//    [
+			//	[
 			//       {
 			//         pair: 'USDT/USD',
 			//         contractAddress: '0xdAC17F958D2ee523a2206206994597C13D831ec7',
-			//         balance: 80230000n,
-			//         floatBalance: 80.23,
-			//         value: 8018426890000000n,
-			//         floatValue: 80.18
+			//         balance: 914883658n,
+			//         balanceDecimals: 6,
+			//         floatBalance: 914.88,
+			//         value: 91464578824892000n,
+			//         valueDecimals: 14,
+			//         floatValue: 914.64
 			//       }
 			//     ]
 			//
 			//     8012963227000000n / ( 10 ** 8 ) / ( 10 ** 6 ) = 80.12963227000000
 			//
-			//console.log( values );
 			expect( values ).toBeDefined();
 			expect( Array.isArray( values ) ).toBeTruthy();
 			if ( values )
@@ -464,6 +548,11 @@ describe( "WalletTransaction.account", () =>
 						expect( typeof value.floatValue ).toBe( 'number' );
 						expect( value.value ).toBeGreaterThanOrEqual( 0 );
 						expect( value.floatValue ).toBeGreaterThanOrEqual( 0 );
+
+						const calcFloatBalance = MathUtil.floatValueFromBigint( value.balance, value.balanceDecimals );
+						const calcFloatValue = MathUtil.floatValueFromBigint( value.value, value.valueDecimals );
+						expect( calcFloatBalance ).toBe( value.floatBalance );
+						expect( calcFloatValue ).toBe( value.floatValue );
 					}
 				}
 			}
@@ -479,7 +568,7 @@ describe( "WalletTransaction.account", () =>
 		}, 20 * 1000 );
 
 
-		it( "should return total values in USD in the specified wallet", async () =>
+		it( "should return total values in USD", async () =>
 		{
 			//
 			//	test on Ethereum MainNet
@@ -505,35 +594,41 @@ describe( "WalletTransaction.account", () =>
 			//	should output:
 			//	{
 			//       total: {
-			//         balance: 3933800246759461826841n,
-			//         floatBalance: 4014.03,
-			//         value: 646382387546267795103355805000000n,
-			//         floatValue: 6463904.05
+			//         balance: 0n,
+			//         floatBalance: 0,
+			//         value: 160830858755224499501518022432629n,
+			//         floatValue: 1616288.62
 			//       },
 			//       values: [
 			//         {
 			//           pair: 'USDC/USD',
 			//           contractAddress: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
-			//           balance: 0n,
-			//           floatBalance: 0,
-			//           value: 0n,
-			//           floatValue: 0
+			//           balance: 7065377042n,
+			//           balanceDecimals: 6,
+			//           floatBalance: 7065.37,
+			//           value: 706540699919865808n,
+			//           valueDecimals: 14,
+			//           floatValue: 7065.4
 			//         },
 			//         {
 			//           pair: 'USDT/USD',
 			//           contractAddress: '0xdac17f958d2ee523a2206206994597c13d831ec7',
-			//           balance: 80230000n,
-			//           floatBalance: 80.23,
-			//           value: 8018426890000000n,
-			//           floatValue: 80.18
+			//           balance: 914883658n,
+			//           balanceDecimals: 6,
+			//           floatBalance: 914.88,
+			//           value: 91464578824892000n,
+			//           valueDecimals: 14,
+			//           floatValue: 914.64
 			//         },
 			//         {
 			//           pair: 'ETH/USD',
 			//           contractAddress: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
-			//           balance: 3933800246759381596841n,
-			//           floatBalance: 3933.8,
-			//           value: 646382387546267787084928915000000n,
-			//           floatValue: 6463823.87
+			//           balance: 456110626955260336927n,
+			//           balanceDecimals: 18,
+			//           floatBalance: 456.11,
+			//           value: 160830858755223701496239277674821n,
+			//           valueDecimals: 26,
+			//           floatValue: 1608308.58
 			//         }
 			//       ]
 			//     }
@@ -554,6 +649,9 @@ describe( "WalletTransaction.account", () =>
 
 				expect( totalValues ).toHaveProperty( 'values' );
 				expect( Array.isArray( totalValues.values ) ).toBeTruthy();
+
+				let calcTotalValue : bigint = BigInt( 0 );
+				let calcTotalFloatValue : number = 0.0;
 				for ( const value of totalValues.values )
 				{
 					expect( value ).toBeDefined();
@@ -573,7 +671,21 @@ describe( "WalletTransaction.account", () =>
 					expect( typeof value.floatValue ).toBe( 'number' );
 					expect( value.value ).toBeGreaterThanOrEqual( 0 );
 					expect( value.floatValue ).toBeGreaterThanOrEqual( 0 );
+
+					//	...
+					const calcFloatBalance = MathUtil.floatValueFromBigint( value.balance, value.balanceDecimals );
+					const calcFloatValue = MathUtil.floatValueFromBigint( value.value, value.valueDecimals );
+					expect( calcFloatBalance ).toBe( value.floatBalance );
+					expect( calcFloatValue ).toBe( value.floatValue );
+
+					//	...
+					calcTotalValue += value.value;
+					calcTotalFloatValue += value.floatValue;
 				}
+
+				//	check total values
+				expect( totalValues.total.value ).toBeGreaterThanOrEqual( calcTotalValue );
+				expect( totalValues.total.floatValue ).toBeGreaterThanOrEqual( calcTotalFloatValue );
 			}
 
 			//

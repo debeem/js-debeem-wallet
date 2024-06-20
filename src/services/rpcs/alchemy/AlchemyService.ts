@@ -19,6 +19,7 @@ import { TokenService } from "../../token/TokenService";
 import { MathUtil } from "debeem-utils";
 import { TransactionHistoryResult } from "../../../models/TransactionModels";
 import _ from "lodash";
+import {VaTokenItem} from "../../../validators/VaTokenItem";
 
 
 
@@ -321,9 +322,10 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 				}
 				for ( const token of tokens )
 				{
-					if ( !TypeUtil.isNotEmptyString( token.contractAddress ) )
+					const errorItem = VaTokenItem.validateContractTokenBalanceItem( token );
+					if ( null !== errorItem )
 					{
-						return reject( `${ this.constructor.name }.queryTokenBalances :: invalid contractAddresses` );
+						return reject( `${ this.constructor.name }.queryTokenBalances :: ${ errorItem }` );
 					}
 				}
 
@@ -440,7 +442,7 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 				);
 				if ( find )
 				{
-					if ( ! find.decimals || find.decimals <= 0 )
+					if ( ! VaTokenItem.validateContractTokenBalanceItemDecimals( find.decimals ) || find.decimals <= 0 )
 					{
 						//	try to find the value of decimals from TokenService on Ethereum Mainnet
 						const tokenSrvItem : OneInchTokenItem | null = await tokenService.getItem( contractAddress );

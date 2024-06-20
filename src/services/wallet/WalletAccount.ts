@@ -97,7 +97,7 @@ export class WalletAccount
 	 *
 	 *	@param address	{string} wallet address
 	 *	@param tokens	{Array<ContractTokenBalanceItem>} contract addresses list
-	 *	@param ABI	{Array<UsdtABIItem>} Application Binary Interface
+	 *	@param [ABI]	{Array<UsdtABIItem>} Application Binary Interface
 	 *	@returns {Promise<Array<ContractTokenBalanceItem>>}
 	 */
 	public async queryTokenBalances(
@@ -249,9 +249,10 @@ export class WalletAccount
 					return reject( 'invalid pair' );
 				}
 
-				let bigValue : bigint = BigInt( 0 );
-				let floatValue : number = 0.00;
 				let floatBalance : number = 0.00;
+				let bigValue : bigint = BigInt( 0 );
+				let valueDecimals : number = 0;
+				let floatValue : number = 0.00;
 
 				//	query the balance of native ETH
 				const balance : bigint = await this.ethQueryBalance( address );
@@ -282,7 +283,8 @@ export class WalletAccount
 							decimals > 0 )
 						{
 							//	decimals for balance
-							floatValue = MathUtil.floatValueFromBigint( bigValue, priceFeedAddressItem.decimals + decimals );
+							valueDecimals = priceFeedAddressItem.decimals + decimals;
+							floatValue = MathUtil.floatValueFromBigint( bigValue, valueDecimals );
 						}
 					}
 				}
@@ -290,8 +292,11 @@ export class WalletAccount
 				//	...
 				const value : TokenValueItem = {
 					balance : balance,
+					balanceDecimals : decimals,
 					floatBalance : floatBalance,
+
 					value : bigValue,
+					valueDecimals : valueDecimals,
 					floatValue : floatValue,
 				};
 				resolve( value );
@@ -326,7 +331,7 @@ export class WalletAccount
 				{
 					return reject( 'invalid address' );
 				}
-				if ( !Array.isArray( tokens ) )
+				if ( ! Array.isArray( tokens ) )
 				{
 					return reject( 'invalid tokens' );
 				}
@@ -338,19 +343,19 @@ export class WalletAccount
 				//	balances :  [
 				//       {
 				//         pair: 'USDC/USD',
-				//         decimals: 6,
+				//         decimals: 6, or undefined
 				//         contractAddress: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
 				//         tokenBalance: 0n
 				//       },
 				//       {
 				//         pair: 'USDT/USD',
-				//         decimals: 6,
+				//         decimals: 6, or undefined
 				//         contractAddress: '0xdac17f958d2ee523a2206206994597c13d831ec7',
 				//         tokenBalance: 80230000n
 				//       },
 				//       {
 				//         pair: 'ETH/USD',
-				//         decimals: 18,
+				//         decimals: 18, or undefined
 				//         contractAddress: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
 				//         tokenBalance: 4533795296872777595458n
 				//       }
@@ -368,9 +373,11 @@ export class WalletAccount
 					// 	"contractAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
 					// 	"tokenBalance": 11111111n
 					// },
-					let bigValue : bigint = BigInt( 0 );
-					let floatValue : number = 0.00;
 					let floatBalance : number = 0.00;
+
+					let bigValue : bigint = BigInt( 0 );
+					let valueDecimals : number = 0;
+					let floatValue : number = 0.00;
 					if ( balance.tokenBalance > 0 )
 					{
 						if ( balance.decimals && balance.decimals > 0 )
@@ -397,7 +404,8 @@ export class WalletAccount
 								balance.decimals && balance.decimals > 0 )
 							{
 								//	update floatValue
-								floatValue = MathUtil.floatValueFromBigint( bigValue, priceFeedItem.decimals + balance.decimals );
+								valueDecimals = priceFeedItem.decimals + balance.decimals;
+								floatValue = MathUtil.floatValueFromBigint( bigValue, valueDecimals );
 							}
 						}
 					}
@@ -408,9 +416,11 @@ export class WalletAccount
 						contractAddress : balance.contractAddress,
 
 						balance : balance.tokenBalance,
+						balanceDecimals : balance.decimals,
 						floatBalance : floatBalance,
 
 						value : bigValue,
+						valueDecimals : valueDecimals,
 						floatValue : floatValue,
 					};
 					values.push( value );

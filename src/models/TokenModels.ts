@@ -8,7 +8,7 @@ export type ContractTokenBalanceItem = {
 	pair : string,			//	e.g.: ETH/USD, see: EthereumPriceFeedAddresses.ts
 	contractAddress : string,	//	key
 	tokenBalance : bigint,
-	decimals ?: number,
+	decimals : number,
 };
 
 /**
@@ -18,10 +18,12 @@ export type ContractTokenBalanceItem = {
 export type TokenValueItem = {
 	//	balance
 	balance : bigint,
+	balanceDecimals : number,
 	floatBalance : number,
 
 	//	value
 	value : bigint,
+	valueDecimals : number,
 	floatValue : number,
 };
 

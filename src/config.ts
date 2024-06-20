@@ -31,7 +31,7 @@ let configurations : ConfigurationType =
 	 */
 	infura :
 		{
-			network : "goerli",
+			network : "sepolia",
 			apiKey : "807f91ef9c064ddcbedf22d087dc1e3e",	//"a56c02ba9c8a4137a2a0767e4cdee7f5",
 		},
 

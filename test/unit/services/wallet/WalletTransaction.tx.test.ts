@@ -1,6 +1,6 @@
 import { describe, expect } from '@jest/globals';
 import { ethers } from "ethers";
-import {setCurrentChain, WalletFactory, WalletTransaction} from "../../../../src";
+import {InfuraRpcService, setCurrentChain, WalletFactory, WalletTransaction} from "../../../../src";
 import { TransactionResponse } from "ethers";
 import { TestUtil } from "debeem-utils";
 import { WalletAccount } from "../../../../src";
@@ -111,7 +111,8 @@ describe( "WalletTransaction.tx", () =>
 			//	send translation from [oneKey wallet 1] to [oneKey wallet 2]
 			//	intentionally sending transactions with very low gas fees, in wei.
 			//
-			let singedTx : string = await new WalletTransaction().signTransaction( walletObj, payeeAddress, sendValue1, -1, 100 );
+			const estimatedGas = await new WalletTransaction().estimateEthGasLimitByToAddress( payeeAddress );
+			let singedTx : string = await new WalletTransaction().signTransaction( walletObj, payeeAddress, sendValue1, -1, estimatedGas );
 			expect( singedTx ).toBeDefined();
 			expect( typeof singedTx ).toBe( "string" );
 			expect( singedTx.length ).toBeGreaterThan( 0 );
@@ -209,7 +210,9 @@ describe( "WalletTransaction.tx", () =>
 			try
 			{
 				//	intentionally sending transactions with very low gas fees
-				broadcastResponse = await new WalletTransaction().sendToken( walletObj, payeeAddress, sendValue2, -1, 100 );
+				const nonce = await new WalletTransaction().queryNonce( walletObj.address );
+				const estimatedGas = await new WalletTransaction().estimateEthGasLimitByToAddress( payeeAddress );
+				broadcastResponse = await new WalletTransaction().sendToken( walletObj, payeeAddress, sendValue2, nonce, estimatedGas );
 			}
 			catch ( err )
 			{

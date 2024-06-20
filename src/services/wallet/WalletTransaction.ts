@@ -196,6 +196,16 @@ export class WalletTransaction
 	}
 
 	/**
+	 * 	check if the input value is a valid nonce
+	 *	@param nonce	{any}
+	 *	@return {boolean}
+	 */
+	public isValidNonce( nonce : any ) : boolean
+	{
+		return _.isNumber( nonce ) && nonce >= 0;
+	}
+
+	/**
 	 * 	get last nonce count
 	 *
 	 * 	@group Transaction Helper
@@ -273,11 +283,11 @@ export class WalletTransaction
 				//
 				//	Calculate nonce
 				//
-				if ( nonce <= 0 )
+				if ( ! this.isValidNonce( nonce ) )
 				{
 					nonce = await this.queryNonce( wallet.address );
 				}
-				if ( nonce <= 0 )
+				if ( ! this.isValidNonce( nonce ) )
 				{
 					return reject( `${ this.constructor.name }.signTransaction :: invalid nonce` );
 				}
@@ -450,7 +460,9 @@ export class WalletTransaction
 	 * let broadcastResponse : TransactionResponse | undefined = undefined;
 	 * try
 	 * {
-	 *	 broadcastResponse = await new WalletTransaction().sendToken( walletObj, payeeAddress, sendValue2, -1, 100 );
+	 * 	 const nonce = await new WalletTransaction().queryNonce( walletObj.address );
+	 * 	 const estimatedGas = await new WalletTransaction().estimateEthGasLimitByToAddress( payeeAddress );
+	 *	 broadcastResponse = await new WalletTransaction().sendToken( walletObj, payeeAddress, sendValue2, nonce, estimatedGas );
 	 * }
 	 * catch ( err : any )
 	 * {
@@ -487,7 +499,7 @@ export class WalletTransaction
 		to : string,
 		value : string,
 		nonce : number = -1,
-		gasLimit: number = -1
+		gasLimit: number = 0
 	) : Promise<TransactionResponse>
 	{
 		return new Promise( async ( resolve, reject ) =>
@@ -507,7 +519,7 @@ export class WalletTransaction
 					return reject( `${ this.constructor.name }.send :: invalid wallet.address` );
 				}
 
-				if ( nonce <= 0 )
+				if ( ! this.isValidNonce( nonce ) )
 				{
 					nonce = await this.queryNonce( wallet.address );
 				}
@@ -611,11 +623,11 @@ export class WalletTransaction
 		{
 			try
 			{
-				if ( -1 === nonce )
+				if ( ! this.isValidNonce( nonce ) )
 				{
 					nonce = await this.queryNonce( wallet.address );
 				}
-				if ( nonce < 0 )
+				if ( ! this.isValidNonce( nonce ) )
 				{
 					return reject( `${ this.constructor.name }.sendContractToken :: invalid nonce` );
 				}
