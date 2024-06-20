@@ -8,8 +8,6 @@ export const supportedChains : Array<number> = [
 	1, 11155111
 ];
 
-//	TODO
-//	用一个函数获取 icon
 
 export const defaultChains : Array<ChainEntityItem> = [
 	{

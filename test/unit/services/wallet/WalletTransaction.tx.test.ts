@@ -1,6 +1,6 @@
 import { describe, expect } from '@jest/globals';
 import { ethers } from "ethers";
-import {InfuraRpcService, setCurrentChain, WalletFactory, WalletTransaction} from "../../../../src";
+import {setCurrentChain, WalletFactory, WalletTransaction} from "../../../../src";
 import { TransactionResponse } from "ethers";
 import { TestUtil } from "debeem-utils";
 import { WalletAccount } from "../../../../src";

@@ -378,9 +378,6 @@ describe( "WalletTransaction.account", () =>
 
 	describe( "Query Token Values", () =>
 	{
-		//	todo
-		//	query eth balance and value by calling queryTokenValues
-		//
 		it( "should return the ETH balance and value in USD using .queryValue", async () =>
 		{
 			const address = '0x47B506704DA0370840c2992A3d3d301FD3c260D3';
