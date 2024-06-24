@@ -4,9 +4,9 @@
  */
 import lodash from 'lodash';
 import { FetchUtil, FetchOptions, MathUtil } from "debeem-utils";
-import { BigNumberish, FetchResponse } from "ethers";
+import { FetchResponse } from "ethers";
 import { AbstractRpcService } from "../AbstractRpcService";
-import { getCurrentChain, infura } from "../../../config";
+import { infura } from "../../../config";
 import { TypeUtil } from "debeem-utils";
 import { TransactionRequest } from "ethers/src.ts";
 import { NetworkModels } from "../../../models/NetworkModels";
