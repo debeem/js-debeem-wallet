@@ -18,6 +18,7 @@ import { FetchListOptions } from "debeem-utils";
 import { AlchemyService } from "../rpcs/alchemy/AlchemyService";
 import { WalletEntityBaseItem } from "../../entities/WalletEntity";
 import {
+	TransactionDetailItem,
 	TransactionHistoryQueryOptions,
 	TransactionHistoryResult,
 	TransactionMinimumNeededGas
@@ -761,7 +762,7 @@ export class WalletTransaction
 	 *	@param txHash	{string} transaction hash value
 	 *	@returns {Promise<any>}
 	 */
-	public async queryTransactionDetail( txHash : string ) : Promise<any>
+	public async queryTransactionDetail( txHash : string ) : Promise<TransactionDetailItem>
 	{
 		return new InfuraRpcService( getCurrentChain() ).fetchEthTransactionByHash( txHash );
 	}

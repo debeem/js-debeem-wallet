@@ -1,3 +1,9 @@
+/**
+ * 	@category Data Models
+ *
+ * 	@module TransactionModels
+ * 	@interface
+ */
 import { FetchListOptions } from "debeem-utils";
 import { TransactionLike } from 'ethers';
 
