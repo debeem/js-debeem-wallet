@@ -123,7 +123,7 @@ export class WalletAccount
 					ABI = usdtABI;
 				}
 
-				let tokenBalances : Array<ContractTokenBalanceItem> = await new AlchemyService( getCurrentChain() ).queryTokenBalances( address, tokens );
+				let tokenBalances : Array<ContractTokenBalanceItem> = await new AlchemyService().queryTokenBalances( address, tokens );
 				//
 				//	[
 				//		{

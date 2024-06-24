@@ -224,7 +224,7 @@ export abstract class AbstractRpcService implements IRpcService
 		const newNetwork : string | null = this.getNetworkByChainId( this.chainId );
 		if ( null === newNetwork )
 		{
-			throw new Error( 'unsupported network by chainId' );
+			throw new Error( `unsupported network by chainId(${ this.chainId })` );
 		}
 
 		newConfig.network = newNetwork;

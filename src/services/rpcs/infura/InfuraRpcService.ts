@@ -14,6 +14,8 @@ import { IRpcService } from "../IRpcService";
 import _ from "lodash";
 import { TransactionDetailItem } from "../../../models/TransactionModels";
 import { AccessListish } from "ethers/src.ts/transaction";
+import { RpcCache } from "../RpcCache";
+import { RpcCacheItem } from "../../../models/RpcCacheModels";
 
 
 export class InfuraRpcService extends AbstractRpcService implements IRpcService
@@ -22,7 +24,7 @@ export class InfuraRpcService extends AbstractRpcService implements IRpcService
 	 * 	cache of Latest Gas Limit
 	 *	@private
 	 */
-	private static cacheLatestGasLimit : { value : number, ts : number } = { value : 0, ts : 0 };
+	private static cacheLatestGasLimit = new RpcCache( 10 * 60 * 1000 );
 
 
 
@@ -190,15 +192,19 @@ export class InfuraRpcService extends AbstractRpcService implements IRpcService
 				//	@documentation
 				//	https://docs.infura.io/api/networks/ethereum/json-rpc-methods/eth_estimategas
 				//
-				if ( ! _.isObject( transactionRequest ) || ! _.has( transactionRequest, `to` ) )
+				if ( ! _.isObject( transactionRequest ) ||
+					! _.isString( transactionRequest.to ) ||
+					_.isEmpty( transactionRequest.to ) )
 				{
 					return reject( `${ this.constructor.name }.fetchEthEstimatedGasLimit :: invalid transactionRequest` );
 				}
 
-				//	query from the cache
-				if ( InfuraRpcService.cacheLatestGasLimit.value > 0 && InfuraRpcService.cacheLatestGasLimit.ts > ( new Date().getTime() - 10 * 60 * 1000 ) )
+				//	try to get the item from the cache
+				const cacheKey : string = `latestGasLimit`;
+				const cacheItem : RpcCacheItem | null = InfuraRpcService.cacheLatestGasLimit.get( cacheKey );
+				if ( null !== cacheItem )
 				{
-					return resolve( InfuraRpcService.cacheLatestGasLimit.value );
+					return resolve( cacheItem.value );
 				}
 
 				//	...
@@ -226,8 +232,7 @@ export class InfuraRpcService extends AbstractRpcService implements IRpcService
 						const decimalGasLimit : number = parseInt( result, 16 );
 
 						//	update cache
-						InfuraRpcService.cacheLatestGasLimit.value = decimalGasLimit;
-						InfuraRpcService.cacheLatestGasLimit.ts = new Date().getTime();
+						InfuraRpcService.cacheLatestGasLimit.set( cacheKey, decimalGasLimit );
 
 						//	...
 						return resolve( decimalGasLimit );

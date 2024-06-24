@@ -54,7 +54,7 @@ export class WalletTransaction
 	 */
 	public getDefaultGasLimit() : number
 	{
-		return 31000;
+		return 21000;
 	}
 
 	/**

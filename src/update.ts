@@ -1,35 +1,47 @@
 import {OneInchTokenService} from "./services/rpcs/oneInchToken/OneInchTokenService";
-import {getCurrentChain} from "./config";
 import _ from "lodash";
 import path from "path";
 import fs from "fs";
-import {OneInchTokenMap} from "./models/TokenModels";
 
 
-async function updateOneInchTokenResources( chainId : number )
+async function updateOneInchTokenResources()
 {
 	return new Promise( async ( resolve, reject ) =>
 	{
 		try
 		{
-			console.log( `will update token resources for chain: ${ chainId }` );
-			const oneInch = new OneInchTokenService( chainId );
-			const res = await oneInch.fetchTokenMap();
-			if ( ! _.isObject( res ) )
+			const chainIdList = new OneInchTokenService( 1 ).supportedChains;
+			console.log( `chainIdList :`, chainIdList );
+
+			let tsContent = `` +
+			`import { OneInchTokenMap } from "../models/TokenModels";\n\n` +
+			`export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {\n`;
+
+			for ( let i = 0; i < chainIdList.length; i ++ )
 			{
-				return reject( `invalid res` );
+				console.log( `>>> ${ i + 1 }/${ chainIdList.length }` );
+				const chainId = chainIdList[ i ];
+
+				console.log( `will update token resources for chain: ${ chainId }` );
+				const oneInch = new OneInchTokenService( chainId );
+				const res = await oneInch.fetchTokenMap();
+				if ( ! _.isObject( res ) )
+				{
+					return reject( `invalid res` );
+				}
+
+				const keys = _.keys( res );
+				if ( ! Array.isArray( keys ) || 0 === keys.length )
+				{
+					return reject( `invalid res, empty` );
+				}
+
+				tsContent += `${ chainId } : ${ JSON.stringify( res, null, 4 ) },\n`;
 			}
 
-			const keys = _.keys( res );
-			if ( ! Array.isArray( keys ) || 0 === keys.length )
-			{
-				return reject( `invalid res, empty` );
-			}
+			tsContent += `};`;
 
-			const tsContent = `import { OneInchTokenMap } from "../models/TokenModels";\n\n
-export const ethereumTokens : OneInchTokenMap = ${ JSON.stringify( res, null, 4 ) };`;
-
-			const outputPath = path.join(__dirname, `resources/oneInchTokenMap.${ chainId }.ts` );
+			const outputPath = path.join(__dirname, `resources/oneInchTokens.ts` );
 			fs.writeFileSync( outputPath, tsContent, 'utf8' );
 			console.log( `Object written to ${outputPath}` );
 			console.log( `` );
@@ -50,15 +62,10 @@ async function main()
 	{
 		try
 		{
-			const chainIdList = new OneInchTokenService( 1 ).supportedChains;
-			console.log( `chainIdList :`, chainIdList );
-			console.log( `` );
-			for ( let i = 0; i < chainIdList.length; i ++ )
-			{
-				console.log( `>>> ${ i + 1 }/${ chainIdList.length }` );
-				const chainId = chainIdList[ i ];
-				await updateOneInchTokenResources( chainId );
-			}
+			//
+			//	1, update oneInch Tokens
+			//
+			await updateOneInchTokenResources();
 
 			//	...
 			resolve( true );

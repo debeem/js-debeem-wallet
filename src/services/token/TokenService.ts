@@ -12,6 +12,8 @@ import {RpcSupportedChainMap} from "../../models/RpcModels";
 import {AbstractRpcService} from "../rpcs/AbstractRpcService";
 import {IRpcService} from "../rpcs/IRpcService";
 import {NetworkModels} from "../../models/NetworkModels";
+import { oneInchTokens } from "../../resources/oneInchTokens";
+
 
 
 /**
@@ -157,25 +159,27 @@ export class TokenService extends AbstractRpcService implements IRpcService
 				//	search item from local
 				//
 				const supportedChains = new OneInchTokenService( 1 ).supportedChains;
-				if ( supportedChains.includes( this.chainId ) )
+				if ( ! supportedChains.includes( this.chainId ) )
 				{
-					const { ethereumTokens } = await import( `../../resources/oneInchTokenMap.${ this.chainId }` );
-					if ( _.isObject( ethereumTokens ) &&
-						_.has( ethereumTokens, contractAddress ) )
+					//	unsupported by chainId
+					return resolve( null );
+				}
+
+				//	get from local cache file
+				let tokenMap = oneInchTokens[ this.chainId ];
+				if ( _.isObject( tokenMap ) &&
+					_.has( tokenMap, contractAddress ) )
+				{
+					const item = tokenMap[ contractAddress ];
+					if ( _.isObject( item ) )
 					{
-						const item = ethereumTokens[ contractAddress ];
-						if ( _.isObject( item ) )
-						{
-							return resolve( item );
-						}
+						return resolve( item );
 					}
 				}
 
-				//
-				//	fetch from internet
-				//
 				try
 				{
+					//	fetch from internet
 					const item : OneInchTokenItem = await new OneInchTokenService( this.chainId ).fetchTokenItemInfo( contractAddress );
 					if ( OneInchTokenService.isValid1InchTokenItem( item ) )
 					{

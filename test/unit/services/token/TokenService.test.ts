@@ -100,7 +100,7 @@ describe( "TokenService", () =>
 			expect( decimals ).toBe( 6 );
 		} );
 
-		it( "should return the logo url of a token", async () =>
+		it( "should return the logo url of ETH", async () =>
 		{
 			setCurrentChain( currentChainId );
 
@@ -110,7 +110,26 @@ describe( "TokenService", () =>
 			//    should output:
 			//     logoUrl : https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png
 			expect( logoUrl ).toBeDefined();
-			expect( _.isString( logoUrl ) || null === logoUrl ).toBeTruthy();
+			expect( _.isString( logoUrl ) ).toBeTruthy();
+			expect( ! _.isEmpty( logoUrl ) ).toBeTruthy();
+			expect( logoUrl && logoUrl.includes( contractAddress ) ).toBeTruthy();
+		} );
+
+		it( "should return the logo url of Tether USD on chain 1", async () =>
+		{
+			setCurrentChain( 1 );
+
+			const contractAddress : string = `0xdac17f958d2ee523a2206206994597c13d831ec7`;
+			const logoUrl : string | null = await new TokenService().getItemLogo( contractAddress );
+			//console.log( `logoUrl :`, logoUrl );
+			//    should output:
+			//     logoUrl : https://tokens.1inch.io/0xdac17f958d2ee523a2206206994597c13d831ec7.png
+			expect( logoUrl ).toBeDefined();
+			expect( _.isString( logoUrl ) ).toBeTruthy();
+			expect( ! _.isEmpty( logoUrl ) ).toBeTruthy();
+			expect( logoUrl && logoUrl.includes( contractAddress ) ).toBeTruthy();
+
+			setCurrentChain( currentChainId );
 		} );
 	} );
 
