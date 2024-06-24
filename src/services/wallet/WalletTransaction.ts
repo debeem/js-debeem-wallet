@@ -17,7 +17,11 @@ import { WalletAccount } from "./WalletAccount";
 import { FetchListOptions } from "debeem-utils";
 import { AlchemyService } from "../rpcs/alchemy/AlchemyService";
 import { WalletEntityBaseItem } from "../../entities/WalletEntity";
-import {TransactionHistoryResult, TransactionMinimumNeededGas} from "../../models/TransactionModels";
+import {
+	TransactionHistoryQueryOptions,
+	TransactionHistoryResult,
+	TransactionMinimumNeededGas
+} from "../../models/TransactionModels";
 import _ from "lodash";
 import {AddressLike} from "ethers/src.ts/address";
 
@@ -602,10 +606,10 @@ export class WalletTransaction
 	 * 	@param contractAddress		{string} contract address
 	 * 	@param wallet			{WalletEntityBaseItem} wallet object
 	 *	@param toAddress		{string} recipient's wallet address
-	 *	@param value			{string} value
-	 *	@param decimals			{number} decimals
-	 *	@param nonce			{number} nonce value
-	 *	@param gasLimit			{number} gas limit value, in wei
+	 *	@param value			{string} value string in ETH. for example: `0.01`
+	 *	@param [decimals]		{number} decimals
+	 *	@param [nonce]			{number} nonce value
+	 *	@param [gasLimit]		{number} gas limit value, in wei
 	 *	@returns {Promise<TransactionResponse>}
 	 */
 	public async sendContractToken
@@ -646,7 +650,9 @@ export class WalletTransaction
 				}
 
 				const config : NetworkModels = new InfuraRpcService( getCurrentChain() ).config;
+
 				//	Amount of derivative token to send (in the smallest unit, i.e., wei)
+				//	value : string value in ETH, e.g.: `0.01`
 				const sendValue = ethers.parseUnits( value, decimals );
 
 				//	Create a new provider (Infura) and a new wallet using the private key
@@ -696,39 +702,43 @@ export class WalletTransaction
 	 * 	Query all transaction history of a wallet
 	 *
 	 * 	@group query Transaction
-	 *	@param address	{string} wallet address
-	 *	@param options	{FetchListOptions} fetch options
+	 *	@param address			{string} wallet address
+	 *	@param [queryOptions]		{TransactionHistoryQueryOptions}
+	 *	@param [fetchOptions]		{FetchListOptions} fetch options
 	 *	@returns {Promise<TransactionHistoryResult>}
 	 */
-	public async queryTransactionHistory( address : string, options? : FetchListOptions ) : Promise<TransactionHistoryResult>
+	public async queryTransactionHistory(
+		address : string,
+		queryOptions ?: TransactionHistoryQueryOptions,
+		fetchOptions? : FetchListOptions ) : Promise<TransactionHistoryResult>
 	{
-		return new AlchemyService( getCurrentChain() ).queryTransactions( address, options );
+		return new AlchemyService( getCurrentChain() ).queryTransactions( address, queryOptions, fetchOptions );
 	}
 
 	/**
 	 * 	Query the transactions of a wallet by fromAddress
 	 *
 	 * 	@group query Transaction
-	 *	@param address	{string} wallet address
-	 *	@param options	{FetchListOptions} fetch options
+	 *	@param address		{string} wallet address
+	 *	@param [options]	{FetchListOptions} fetch options
 	 *	@returns {Promise<TransactionHistoryResult>}
 	 */
 	public async queryTransactionHistoryFromAddress( address : string, options? : FetchListOptions ) : Promise<TransactionHistoryResult>
 	{
-		return new AlchemyService( getCurrentChain() ).queryTransactionsFromAddress( address, options );
+		return new AlchemyService( getCurrentChain() ).queryTransactionsByFromAddress( address, options );
 	}
 
 	/**
 	 * 	Query the transactions of a wallet by toAddress
 	 *
 	 * 	@group query Transaction
-	 *	@param address	{string} wallet address
-	 *	@param options	{FetchListOptions} fetch options
+	 *	@param address		{string} wallet address
+	 *	@param [options]	{FetchListOptions} fetch options
 	 *	@returns {Promise<TransactionHistoryResult>}
 	 */
 	public async queryTransactionHistoryToAddress( address : string, options? : FetchListOptions ) : Promise<TransactionHistoryResult>
 	{
-		return new AlchemyService( getCurrentChain() ).queryTransactionsToAddress( address, options );
+		return new AlchemyService( getCurrentChain() ).queryTransactionsByToAddress( address, options );
 	}
 
 
@@ -768,49 +778,3 @@ export class WalletTransaction
 		return new InfuraRpcService( getCurrentChain() ).fetchEthTransactionReceipt( txHash );
 	}
 }
-
-
-
-// async function main()
-// {
-// 	//	oneKey wallet 1
-// 	const mnemonic = 'lab ball helmet sure replace gauge size rescue radar cluster remember twenty';
-// 	const walletObj = new WalletFactory().createWalletFromMnemonic( mnemonic );
-// 	console.log( walletObj );
-//
-// 	//	wei, 18 decimal places
-// 	const balance : bigint = await new WalletTransaction().getAccountBalance( walletObj.address );
-// 	const balanceStr : string = ethers.formatEther( balance );
-//
-// 	//	will output: 19926499999559000n
-// 	console.log( balance );
-//
-// 	//	will output: "0.019926499999559"
-// 	console.log( balanceStr );
-//
-//
-// 	//
-// 	//	send translation from [oneKey wallet 1] to [oneKey wallet 2]
-// 	//
-// 	const usdtContractAddress = '0x9e15898acf36C544B6f4547269Ca8385Ce6304d8';
-// 	const sendValueUsdt : string = '1.1';	//	in USDT
-// 	const broadcastResponse : TransactionResponse = await new WalletTransaction().sendContractToken
-// 	(
-// 		usdtContractAddress,
-// 		walletObj,
-// 		'0x1c33566D0e191a1FCe9885470362e85A757d9aBA',
-// 		sendValueUsdt,
-// 		6
-// 	);
-// 	console.log( broadcastResponse )
-//
-// 	// const toAddress : string = '0x1c33566D0e191a1FCe9885470362e85A757d9aBA';	//	oneKey wallet 2
-// 	// const txValue : string = '0.001';
-// 	// const singedTx : string = await new WalletTransaction().signTransaction( walletObj, toAddress, txValue );
-// 	// console.log( singedTx );
-// 	//
-// 	// const broadcastResponse : TransactionResponse = await new WalletTransaction().broadcastTransaction( singedTx );
-// 	// console.log( broadcastResponse );
-// }
-//
-// main().then();

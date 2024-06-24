@@ -17,7 +17,12 @@ import { IRpcService } from "../IRpcService";
 import {ContractTokenBalanceItem, OneInchTokenItem} from "../../../models/TokenModels";
 import { TokenService } from "../../token/TokenService";
 import { MathUtil } from "debeem-utils";
-import { TransactionHistoryResult } from "../../../models/TransactionModels";
+import {
+	EnumTransactionTransferTypes,
+	TransactionHistoryFetchOptions, TransactionHistoryItem,
+	TransactionHistoryQueryOptions,
+	TransactionHistoryResult
+} from "../../../models/TransactionModels";
 import _ from "lodash";
 import {VaTokenItem} from "../../../validators/VaTokenItem";
 
@@ -28,8 +33,15 @@ import {VaTokenItem} from "../../../validators/VaTokenItem";
  */
 export class AlchemyService extends AbstractRpcService implements IRpcService
 {
+	public static pageKeySplitter : string = `|M|`;
+	public static enumPageKeyTypes = {
+		from : 0,
+		to : 1
+	};
+
+
 	/**
-	 *	@param chainId {number} the chainId number. defaults to getCurrentChain()
+	 *	@param [chainId] 	{number} the chainId number. defaults to getCurrentChain()
 	 */
 	constructor( chainId ?: number )
 	{
@@ -65,7 +77,7 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 	 * 	set end point by chainId
 	 *
 	 * 	@group Basic Methods
-	 * 	@param chainId {number} the chainId number
+	 * 	@param [chainId] 	{number} the chainId number
 	 *	@returns {string}
 	 */
 	public getEndpointByChainId( chainId ?: number ) : string
@@ -82,12 +94,12 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 	}
 
 	/**
-	 * 	return type list of transfer on special network
+	 * 	get default transfer types
 	 *
-	 * 	@param chainId {number} the chainId number
-	 * 	@returns {Array<string> | null}
+	 * 	@param [chainId]	{number} the chainId number
+	 * 	@returns {Array<string>}
 	 */
-	public getTransferTypes( chainId ?: number ) : Array<string> | null
+	public getDefaultTransferTypes( chainId ?: number ) : Array<string>
 	{
 		chainId = _.isNumber( chainId ) ? chainId : this.chainId;
 		switch ( chainId )
@@ -96,26 +108,39 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 			case 5 :		//	eth-goerli
 			case 11155111 :		//	eth-sepolia
 			case 137 :		//	polygon-mainnet
-				return [ `external`, `internal`, `erc20`, `erc721`, `erc1155`, `specialnft` ];
+				return [
+					EnumTransactionTransferTypes.external,
+					EnumTransactionTransferTypes.internal,
+					EnumTransactionTransferTypes.erc20,
+					EnumTransactionTransferTypes.erc721,
+					EnumTransactionTransferTypes.erc1155,
+					EnumTransactionTransferTypes.specialnft,
+				];
 
 			case 80001 :		//	polygon-mumbai
 			case 42161 :		//	arb-mainnet
 			case 421613 :		//	arb-goerli
 			case 10 :		//	opt-mainnet
 			case 420 :		//	opt-goerli
-				return [ `external`, `erc20`, `erc721`, `erc1155`, `specialnft` ];
+				return [
+					EnumTransactionTransferTypes.external,
+					EnumTransactionTransferTypes.erc20,
+					EnumTransactionTransferTypes.erc721,
+					EnumTransactionTransferTypes.erc1155,
+					EnumTransactionTransferTypes.specialnft,
+				];
 		}
 
-		return null;
+		return [];
 	}
 
 	/**
-	 * 	get contract address of default tokens
+	 * 	get default contract addresses
 	 *
-	 * 	@param chainId	{number} the chainId number
+	 * 	@param [chainId]	{number} the chainId number
 	 * 	@returns {Array<string>}
 	 */
-	public getContractAddresses( chainId ?: number ) : Array<string>
+	public getDefaultContractAddresses( chainId ?: number ) : Array<string>
 	{
 		chainId = _.isNumber( chainId ) ? chainId : this.chainId;
 		switch ( chainId )
@@ -139,58 +164,75 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 	/**
 	 * 	query all transaction list from/to the special address
 	 *
-	 *	@param address	{string} wallet address
-	 *	@param options	{FetchListOptions}
+	 *	@param address			{string} wallet address
+	 *	@param [queryOptions]		{TransactionHistoryQueryOptions}
+	 *	@param [fetchOptions]		{TransactionHistoryFetchOptions}
+	 *					.fromPageKey and .toPageKey can be defined as:
+	 *					- undefined : will start querying from the first page.
+	 *					- empty string : no query request will be sent.
 	 *	@returns {Promise<TransactionHistoryResult>}
 	 */
-	public async queryTransactions( address : string, options? : FetchListOptions ) : Promise<TransactionHistoryResult>
+	public async queryTransactions(
+		address : string,
+		queryOptions ?: TransactionHistoryQueryOptions,
+		fetchOptions? : TransactionHistoryFetchOptions ) : Promise<TransactionHistoryResult>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
 			try
 			{
-				let resultFromAddress = await this.queryTransactionsFromAddress( address, options );
-				let resultToAddress = await this.queryTransactionsToAddress( address, options );
+				const resultByFromAddress : TransactionHistoryResult = await this.queryTransactionsByFromAddress( address, queryOptions, fetchOptions );
+				const resultByToAddress : TransactionHistoryResult = await this.queryTransactionsByToAddress( address, queryOptions, fetchOptions );
 
-				let transactionsFromAddress = resultFromAddress?.transfers;
-				let transactionsToAddress = resultToAddress?.transfers;
-				if ( !Array.isArray( transactionsFromAddress ) )
+				let transactionsByFromAddress : Array<TransactionHistoryItem> | undefined = resultByFromAddress?.transfers;
+				let transactionsByToAddress : Array<TransactionHistoryItem> | undefined = resultByToAddress?.transfers;
+				if ( ! Array.isArray( transactionsByFromAddress ) )
 				{
-					transactionsFromAddress = [];
+					transactionsByFromAddress = [];
 				}
-				if ( !Array.isArray( transactionsToAddress ) )
+				if ( ! Array.isArray( transactionsByToAddress ) )
 				{
-					transactionsToAddress = [];
+					transactionsByToAddress = [];
 				}
-				const mergedArray = transactionsFromAddress.concat( transactionsToAddress );
-				const sort = FetchUtil.getSafeSort( options?.sort );
+				const mergedArray = transactionsByFromAddress.concat( transactionsByToAddress );
+				const sort = FetchUtil.getSafeSort( fetchOptions?.sort );
 
 				//	Sort the merged array based on the sortField
 				const sortField = 'blockNum';
 				if ( 'asc' === sort.trim().toLowerCase() )
 				{
-					mergedArray.sort( ( a: { [x: string]: string; }, b: { [x: string]: any; } ) =>
+					mergedArray.sort( ( a: TransactionHistoryItem, b: TransactionHistoryItem ) =>
 					{
 						return a[ sortField ].localeCompare( b[ sortField ] );
 					} );
 				}
 				else
 				{
-					mergedArray.sort( ( a: { [x: string]: any; }, b: { [x: string]: string; } ) =>
+					mergedArray.sort( ( a: TransactionHistoryItem, b: TransactionHistoryItem ) =>
 					{
 						return b[ sortField ].localeCompare( a[ sortField ] );
 					} );
 				}
 
+				//
+				//	.pageKey RETURNED FROM THE SERVER
+				//		if there is no more result available for the next request,
+				//		resultByFromAddress?.pageKey or resultByToAddress?.pageKey will be undefined
+				//
+				//	FOR THE NEXT REQUEST
+				//		If the values of the variables fromPageKey and toPageKey are empty strings,
+				//		indicating that there is no more item available and is no need to send the next request.
+				//
+				const fromPageKey = _.isString( resultByFromAddress?.pageKey ) ? resultByFromAddress?.pageKey : ``;	//	defaults to ``
+				const toPageKey = _.isString( resultByToAddress?.pageKey ) ? resultByToAddress?.pageKey : ``;		//	defaults to ``
+				const pageKey = `${ fromPageKey }${ AlchemyService.pageKeySplitter }${ toPageKey }`.trim();
 				const result : TransactionHistoryResult = {
 					//	transfer list
 					transfers : mergedArray,
 
-					//	pageKey of fromAddress list
-					fromPageKey : resultFromAddress.pageKey && TypeUtil.isNotEmptyString( resultFromAddress.pageKey ) ? resultFromAddress.pageKey : undefined,
-
-					//	pageKey of toAddress list
-					toPageKey : resultToAddress.pageKey && TypeUtil.isNotEmptyString( resultToAddress.pageKey ) ? resultToAddress.pageKey : undefined,
+					//	fromPageKey and toPageKey
+					//	`` : there is no more item available and is no need to send the next request.
+					pageKey : AlchemyService.pageKeySplitter !== pageKey ? pageKey : ``,
 				};
 
 				//	...
@@ -206,58 +248,206 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 	/**
 	 * 	query transaction list filter by fromAddress
 	 *
-	 *	@param fromAddress	{string} payer's wallet address
-	 *	@param options		{FetchListOptions}
+	 * 	@remark
+	 * 	https://docs.alchemy.com/reference/alchemy-getassettransfers
+	 *
+	 *	@param fromAddress		{string} payer's wallet address
+	 *	@param [queryOptions]		{TransactionHistoryQueryOptions}
+	 *	@param [fetchOptions]		{TransactionHistoryFetchOptions}
 	 *	@returns {Promise<TransactionHistoryResult>}
 	 */
-	public async queryTransactionsFromAddress( fromAddress : string, options? : FetchListOptions ) : Promise<TransactionHistoryResult>
+	public async queryTransactionsByFromAddress(
+		fromAddress : string,
+		queryOptions ?: TransactionHistoryQueryOptions,
+		fetchOptions? : TransactionHistoryFetchOptions ) : Promise<TransactionHistoryResult>
 	{
-		const sort = FetchUtil.getSafeSort( options?.sort );
-		const pageSize = FetchUtil.getSafePageSize( options?.pageSize, 100 );
-		const transactionParam = [
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
 			{
-				contractAddresses : this.getContractAddresses(),
-				"fromBlock" : "0x0",
-				"toBlock" : "latest",
-				"fromAddress" : fromAddress,
-				"category" : this.getTransferTypes(),
-				"order" : sort,
-				"withMetadata" : true,
-				"excludeZeroValue" : true,
-				"maxCount" : MathUtil.decimalNumberToHex( pageSize ),	//100 = "0x64", 1000 = "0x3e8"
-				"pageKey" : options?.fromPageKey && TypeUtil.isNotEmptyString( options?.fromPageKey ) ? options?.fromPageKey : undefined
+				if ( ! _.isString( fromAddress ) || _.isEmpty( fromAddress ) )
+				{
+					return reject( `${ this.constructor.name }.queryTransactionsFromAddress :: invalid fromAddress` );
+				}
+
+
+				let pageKey = this.extractTransactionHistoryFetchOptionsPageKey( 0, fetchOptions );
+				const upFetchOptions = { ...fetchOptions, pageKey : pageKey };
+				const transactionParam = [
+					{
+						...this.buildQueryingTransactionsCommonParameters( queryOptions, fetchOptions ),
+						fromAddress : fromAddress,
+					}
+				];
+				const result = await this.queryTransactionsByParameter( transactionParam, fetchOptions );
+				resolve( result );
 			}
-		];
-		return this.queryTransactionsByParameter( transactionParam, options );
+			catch ( err )
+			{
+				reject( err );
+			}
+		} );
 	}
 
 	/**
 	 * 	query transaction list filter by toAddress
 	 *
-	 *	@param toAddress	{string} the recipient's wallet address
-	 *	@param options		{FetchListOptions}
+	 * 	@remark
+	 * 	https://docs.alchemy.com/reference/alchemy-getassettransfers
+	 *
+	 *	@param toAddress		{string} the recipient's wallet address
+	 *	@param [queryOptions]		{TransactionHistoryQueryOptions}
+	 *	@param [fetchOptions]		{TransactionHistoryFetchOptions}
 	 *	@returns {Promise<TransactionHistoryResult>}
 	 */
-	public async queryTransactionsToAddress( toAddress : string, options? : FetchListOptions ) : Promise<TransactionHistoryResult>
+	public async queryTransactionsByToAddress(
+		toAddress : string,
+		queryOptions ?: TransactionHistoryQueryOptions,
+		fetchOptions? : TransactionHistoryFetchOptions ) : Promise<TransactionHistoryResult>
 	{
-		const sort = FetchUtil.getSafeSort( options?.sort );
-		const pageSize = FetchUtil.getSafePageSize( options?.pageSize, 100 );
-		const transactionParam = [
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
 			{
-				contractAddresses : this.getContractAddresses(),
-				"fromBlock" : "0x0",
-				"toBlock" : "latest",
-				"toAddress" : toAddress,
-				"category" : this.getTransferTypes(),
-				"order" : sort,
-				"withMetadata" : true,
-				"excludeZeroValue" : true,
-				"maxCount" : MathUtil.decimalNumberToHex( pageSize ),	//100 = "0x64", 1000 = "0x3e8"
-				"pageKey" : options?.toPageKey && TypeUtil.isNotEmptyString( options?.toPageKey ) ? options?.toPageKey : undefined
+				if ( ! _.isString( toAddress ) || _.isEmpty( toAddress ) )
+				{
+					return reject( `${ this.constructor.name }.queryTransactionsToAddress :: invalid toAddress` );
+				}
+
+				let pageKey = this.extractTransactionHistoryFetchOptionsPageKey( 1, fetchOptions );
+				const upFetchOptions = { ...fetchOptions, pageKey : pageKey };
+				const transactionParam = [
+					{
+						...this.buildQueryingTransactionsCommonParameters( queryOptions, upFetchOptions ),
+						toAddress : toAddress
+					}
+				];
+				const result = await this.queryTransactionsByParameter( transactionParam, fetchOptions );
+				resolve( result );
 			}
-		];
-		return this.queryTransactionsByParameter( transactionParam, options );
+			catch ( err )
+			{
+				reject( err );
+			}
+		} );
 	}
+
+	/**
+	 * 	extract pageKey from fetchOptions
+	 *	@param pageKeyType		{number}
+	 *	@param [fetchOptions]		{TransactionHistoryFetchOptions}
+	 *	@private
+	 */
+	private extractTransactionHistoryFetchOptionsPageKey( pageKeyType : number, fetchOptions? : TransactionHistoryFetchOptions ) : string | undefined
+	{
+		if ( AlchemyService.enumPageKeyTypes.from !== pageKeyType &&
+			AlchemyService.enumPageKeyTypes.to !== pageKeyType )
+		{
+			//
+			//	0	- fromPageKey
+			//	1	- toPageKey
+			//
+			return undefined;
+		}
+
+		let pageKey = undefined;
+		if ( _.isString( fetchOptions?.pageKey ) )
+		{
+			if ( fetchOptions?.pageKey.includes( AlchemyService.pageKeySplitter ) )
+			{
+				//
+				//	`{fromPageKey}|M|{toPageKey}`
+				//	`59c5c02f-f661-403b-acf1-fafbdb782cdc|M|59c5c02f-f661-403b-acf1-fafbdb782cdc`
+				//	`|M|59c5c02f-f661-403b-acf1-fafbdb782cdc`
+				//	`59c5c02f-f661-403b-acf1-fafbdb782cdc|M|`
+				//
+				const arr : string[] = fetchOptions?.pageKey.split( AlchemyService.pageKeySplitter ).map( item => item.trim() );
+				if ( Array.isArray( arr ) && 2 === arr.length )
+				{
+					pageKey = arr[ pageKeyType ];
+				}
+			}
+			else
+			{
+				pageKey = fetchOptions?.pageKey;
+			}
+		}
+
+		return pageKey;
+	}
+
+	/**
+	 *	build the common parameters for querying transactions
+	 *
+	 *	@param [queryOptions]	{TransactionHistoryQueryOptions}
+	 *	@param [fetchOptions]	{FetchListOptions}
+	 *	@return {object}
+	 * 	@private
+	 */
+	private buildQueryingTransactionsCommonParameters( queryOptions ?: TransactionHistoryQueryOptions, fetchOptions? : FetchListOptions ) : object
+	{
+		let contractAddresses = this.getDefaultContractAddresses();
+		if ( Array.isArray( queryOptions?.contractAddresses ) )
+		{
+			contractAddresses = queryOptions?.contractAddresses;
+		}
+
+		let fromBlock = `0x0`;
+		if ( _.isString( queryOptions?.fromBlock ) && ! _.isEmpty( queryOptions?.fromBlock ) )
+		{
+			fromBlock = queryOptions?.fromBlock;
+		}
+
+		let toBlock = `latest`;
+		if ( _.isString( queryOptions?.toBlock ) && ! _.isEmpty( queryOptions?.toBlock ) )
+		{
+			toBlock = queryOptions?.toBlock;
+		}
+
+		let category = this.getDefaultTransferTypes();
+		if ( Array.isArray( queryOptions?.category ) )
+		{
+			category = queryOptions?.category;
+		}
+
+		const withMetadata = _.isBoolean( queryOptions?.withMetadata ) ? queryOptions?.withMetadata : false;
+		const excludeZeroValue = _.isBoolean( queryOptions?.excludeZeroValue ) ? queryOptions?.excludeZeroValue : true;
+
+		const sort = FetchUtil.getSafeSort( fetchOptions?.sort );
+		let maxCount = `0x3e8`;
+		if ( _.isNumber( fetchOptions?.pageSize ) && fetchOptions?.pageSize > 0 )
+		{
+			const pageSize = FetchUtil.getSafePageSize( fetchOptions?.pageSize, 100 );
+
+			//	100 = "0x64", 1000 = "0x3e8"
+			const maxCountHex = MathUtil.hexFromInt( pageSize );
+			if ( _.isString( maxCountHex ) )
+			{
+				maxCount = maxCountHex;
+			}
+		}
+
+		let pageKey = undefined;
+		if ( _.isString( fetchOptions?.pageKey ) )
+		{
+			//	undefined	: first request
+			//	empty string	: no more items available
+			pageKey = fetchOptions?.pageKey;
+		}
+
+		return {
+			contractAddresses : contractAddresses,
+			fromBlock : fromBlock,
+			toBlock : toBlock,
+			category : category,
+			order : sort,
+			withMetadata : withMetadata,
+			excludeZeroValue : excludeZeroValue,
+			maxCount : maxCount,
+			pageKey : pageKey,
+		};
+	}
+
 
 	/**
 	 * 	query balance of native token, ETH
@@ -286,7 +476,7 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 				//
 				if ( TypeUtil.isNotEmptyString( result ) )
 				{
-					return resolve( MathUtil.bigintFromString( result ) );
+					return resolve( MathUtil.bigintFromHex( result ) );
 				}
 
 				return resolve( BigInt( 0 ) );
@@ -303,7 +493,7 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 	 *
 	 *	@param address		{string} wallet address
 	 *	@param tokens		{Array<ContractTokenBalanceItem>}
-	 *	@param options		{FetchListOptions}
+	 *	@param [options]	{FetchListOptions}
 	 *	@return {Promise<Array<ContractTokenBalanceItem>>}
 	 */
 	public async queryTokenBalances( address : string, tokens : Array<ContractTokenBalanceItem>, options? : FetchListOptions ) : Promise<Array<ContractTokenBalanceItem>>
@@ -370,7 +560,7 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 					}
 
 					//	...
-					let tokenBalance : bigint = MathUtil.bigintFromString( item.tokenBalance );
+					let tokenBalance : bigint = MathUtil.bigintFromHex( item.tokenBalance );
 
 					//
 					//	try to query the balance of native token
@@ -470,25 +660,32 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 	 * 	query transaction list by param
 	 *
 	 *	@param transactionParam		{Array<any>}
-	 *	@param options			{FetchListOptions}
+	 *	@param [fetchOptions]		{FetchListOptions}
 	 *	@return {Promise< Array<any> | null >}
 	 */
-	public async queryTransactionsByParameter( transactionParam : Array<any>, options? : FetchListOptions ) : Promise<TransactionHistoryResult>
+	public async queryTransactionsByParameter( transactionParam : Array<any>, fetchOptions? : FetchListOptions ) : Promise<TransactionHistoryResult>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
 			try
 			{
-				//	transfers, pageKey
-				const result = await this.queryByParameter( 'alchemy_getAssetTransfers', transactionParam, options );
-				//console.log( `result :`, transactionParam, result );
-				if ( !TypeUtil.isNotNullObjectWithKeys( result, [ 'transfers' ] ) || ! Array.isArray( result.transfers ) )
+				if ( `` === fetchOptions?.pageKey || `-` === fetchOptions?.pageKey )
 				{
-					return reject( `${ this.constructor.name }.queryTransactionsByParameter :: invalid response transfers` );
+					//	no more items available
+					return resolve( {} );
 				}
 
-				//console.log( `result : `, result );
-				//result :  {
+				//	transfers, pageKey
+				const result = await this.queryByParameter( 'alchemy_getAssetTransfers', transactionParam, fetchOptions );
+				if ( ! result || ! Array.isArray( result.transfers ) )
+				{
+					return resolve( {} );
+					//return reject( `${ this.constructor.name }.queryTransactionsByParameter :: invalid response transfers` );
+				}
+
+				//
+				//	console.log( `result : `, result );
+				//	result :  {
 				//       transfers: [
 				//         {
 				//           blockNum: '0x90030d',
@@ -508,6 +705,28 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 				//       ],
 				//       pageKey: 'e78062fc-ece2-445f-9381-27c12ce0ae82'
 				//     }
+				//
+				let txList : Array<TransactionHistoryItem> = [];
+				for ( const transfer of result.transfers )
+				{
+					txList.push({
+						...transfer,
+						blockNum: transfer.blockNum,
+						uniqueId: transfer.uniqueId,
+						hash: transfer.hash,
+						from: transfer.from,
+						to: transfer.to,
+						value: transfer.value,
+						erc721TokenId: transfer.erc721TokenId,
+						erc1155Metadata: transfer.erc1155Metadata,
+						tokenId: transfer.tokenId,
+						asset: transfer.asset,
+						category: transfer.category,
+						rawContract: transfer.rawContract,
+						metadata: transfer.metadata,
+					});
+				}
+				result.transfers = txList;
 
 				//	...
 				resolve( result );
@@ -524,7 +743,7 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 	 *
 	 *	@param method		{string}
 	 *	@param paramData	{any}
-	 *	@param options		{FetchListOptions}
+	 *	@param [options]	{FetchListOptions}
 	 *	@return {Promise<any>}
 	 */
 	private async queryByParameter( method : string, paramData : any, options? : FetchListOptions ) : Promise<any>
@@ -602,8 +821,8 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 
 	/**
 	 * 	https://docs.alchemy.com/reference/getnfts
-	 *	@param address	{string}	wallet Address for NFT owner (can be in ENS format on mainnet).
-	 *	@param options
+	 *	@param address		{string}	wallet Address for NFT owner (can be in ENS format on mainnet).
+	 *	@param [options]	{FetchListOptions}
 	 */
 	public async queryNFTs( address : string, options? : FetchListOptions ) : Promise<Array<any> | null>
 	{

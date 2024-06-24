@@ -3,19 +3,29 @@
  * 	@module InfuraRpcService
  */
 import lodash from 'lodash';
-import { FetchUtil, FetchOptions } from "debeem-utils";
-import { FetchResponse } from "ethers";
+import { FetchUtil, FetchOptions, MathUtil } from "debeem-utils";
+import { BigNumberish, FetchResponse } from "ethers";
 import { AbstractRpcService } from "../AbstractRpcService";
-import { infura } from "../../../config";
+import { getCurrentChain, infura } from "../../../config";
 import { TypeUtil } from "debeem-utils";
 import { TransactionRequest } from "ethers/src.ts";
 import { NetworkModels } from "../../../models/NetworkModels";
 import { IRpcService } from "../IRpcService";
 import _ from "lodash";
+import { TransactionDetailItem } from "../../../models/TransactionModels";
+import { AccessListish } from "ethers/src.ts/transaction";
 
 
 export class InfuraRpcService extends AbstractRpcService implements IRpcService
 {
+	/**
+	 * 	cache of Latest Gas Limit
+	 *	@private
+	 */
+	private static cacheLatestGasLimit : { value : number, ts : number } = { value : 0, ts : 0 };
+
+
+
 	/**
 	 *	@param chainId {number} the chainId number. defaults to getCurrentChain()
 	 */
@@ -185,6 +195,12 @@ export class InfuraRpcService extends AbstractRpcService implements IRpcService
 					return reject( `${ this.constructor.name }.fetchEthEstimatedGasLimit :: invalid transactionRequest` );
 				}
 
+				//	query from the cache
+				if ( InfuraRpcService.cacheLatestGasLimit.value > 0 && InfuraRpcService.cacheLatestGasLimit.ts > ( new Date().getTime() - 10 * 60 * 1000 ) )
+				{
+					return resolve( InfuraRpcService.cacheLatestGasLimit.value );
+				}
+
 				//	...
 				const txReq : any = {
 					... _.cloneDeep( transactionRequest ),
@@ -208,6 +224,12 @@ export class InfuraRpcService extends AbstractRpcService implements IRpcService
 						//	}
 						//
 						const decimalGasLimit : number = parseInt( result, 16 );
+
+						//	update cache
+						InfuraRpcService.cacheLatestGasLimit.value = decimalGasLimit;
+						InfuraRpcService.cacheLatestGasLimit.ts = new Date().getTime();
+
+						//	...
 						return resolve( decimalGasLimit );
 					}
 					catch ( err )
@@ -262,10 +284,13 @@ export class InfuraRpcService extends AbstractRpcService implements IRpcService
 
 
 	/**
-	 *	fetch information about a transaction for a given hash.
-	 *	@param txHash
+	 *	fetch information about a transaction by a given hash.
+	 *
+	 *	@param txHash	{string}
+	 *	@returns {TransactionDetailItem}
+	 *
 	 */
-	public async fetchEthTransactionByHash( txHash : string ) : Promise<any>
+	public async fetchEthTransactionByHash( txHash : string ) : Promise<TransactionDetailItem>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -273,12 +298,115 @@ export class InfuraRpcService extends AbstractRpcService implements IRpcService
 			{
 				if ( ! TypeUtil.isNotEmptyString( txHash ) )
 				{
-					return reject( `invalid txHash` );
+					return reject( `${ this.constructor.name }.fetchEthTransactionByHash :: invalid txHash` );
 				}
 
 				//	...
 				const params = [ txHash ];
-				resolve( await this.fetchEthValue( 'eth_getTransactionByHash', params ) );
+				const result : any = await this.fetchEthValue( 'eth_getTransactionByHash', params );
+				if ( ! result )
+				{
+					return reject( `${ this.constructor.name }.fetchEthTransactionByHash :: invalid response` );
+				}
+
+				//	accessList: [],
+				const accessList : AccessListish | null = result.accessList;
+
+				//	chainId: '0xaa36a7',
+				const chainId : number = MathUtil.intFromHex( result.chainId );
+
+				//	gasPrice: '0x60d781ab',
+				//	The price per gas unit in wei that the sender is willing to pay.
+				const gasPrice : number = MathUtil.intFromHex( result.gasPrice );
+
+				//	maxFeePerGas: '0x62f63262',
+				//	The maximum fee per gas that the sender is willing to pay (for EIP-1559 transactions).
+				const maxFeePerGas : number = MathUtil.intFromHex( result.maxFeePerGas );
+
+				//	maxPriorityFeePerGas: '0x59682f00',
+				//	The maximum priority fee per gas (tip) that the sender is willing to pay.
+				const maxPriorityFeePerGas : number = MathUtil.intFromHex( result.maxPriorityFeePerGas );
+
+				//	nonce: '0xc',
+				//	The number of transactions sent from the sender's address.
+				const nonce : number = MathUtil.intFromHex( result.nonce );
+
+				//	type: '0x2',
+				//	The type of the transaction.
+				//	0x2 indicates it is an EIP-1559 (London hard fork) transaction.
+				const type : number = MathUtil.intFromHex( result.type );
+
+				//	value: '0x2386f26fc10000',
+				//	The amount of Ether (in wei) being transferred.
+				//	Decimal: 0x2386f26fc10000 converts to 10000000000000000 wei, which is 0.01 Ether.
+				const value : bigint = MathUtil.bigintFromHex( result.value );
+				const floatValue : number = MathUtil.floatValueFromBigint( value, 18 );
+
+				//	blockNumber: '0x5dcff7',
+				//	The number of the block containing this transaction.
+				// 	Decimal: `0x5dcff7` converts to 6147063.
+				const blockNumber: number = MathUtil.intFromHex( result.blockNumber );
+
+				//	gas limit
+				const transactionRequest : TransactionRequest = {
+					to : result.to,
+				};
+				const gasLimit : number = await this.fetchEthEstimatedGasLimit( transactionRequest );
+
+				//	gas used
+				//	gas: '0x5208',
+				//	the maximum amount of gas units that the transaction can consume.
+				// 	Decimal: `0x5208` converts to 21000.
+				const gas : number = MathUtil.intFromHex( result.gas );
+				const totalGasFee : bigint = BigInt( gas ) * BigInt( gasPrice );
+				const floatTotalGasFee : number = MathUtil.floatValueFromBigint( totalGasFee, 18 );
+				const total : bigint = value + totalGasFee;
+				const floatTotal : number = MathUtil.floatValueFromBigint( total, 18 );
+
+				//	the recovery id of the transaction signature
+				const v : number = MathUtil.intFromHex( result.v );
+
+				//	transactionIndex: '0xd',
+				//	the index of the transaction in the block.
+				// 	Decimal: `0xd` converts to 13.
+				const transactionIndex: number = MathUtil.intFromHex( result.transactionIndex );
+
+				//	yParity: '0x1'
+				//	the parity bit for the v value in EIP-1559 transactions,
+				// 	indicating the y-coordinate of the curve point for the public key recovery.
+				const yParity : number = MathUtil.intFromHex( result.yParity );
+
+
+				//	...
+				resolve( {
+					accessList : accessList,
+					chainId : chainId,
+					from : result.from,
+					to : result.to,
+					gasPrice : gasPrice,
+					hash : result.hash,
+					maxFeePerGas : maxFeePerGas,
+					maxPriorityFeePerGas : maxPriorityFeePerGas,
+					nonce : nonce,
+					type : type,
+					value : value,
+					floatValue : floatValue,
+
+					blockHash : result.blockHash,
+					blockNumber : blockNumber,
+					gasLimit : gasLimit,
+					gas : gas,
+					totalGasFee : totalGasFee,
+					floatTotalGasFee : floatTotalGasFee,
+					total : total,
+					floatTotal : floatTotal,
+					input : result.input,
+					r: result.r,
+					s: result.s,
+					v: v,
+					transactionIndex : transactionIndex,
+					yParity : yParity,
+				} );
 			}
 			catch ( err )
 			{
