@@ -8,7 +8,6 @@ import { StorageEntity } from "../../entities/StorageEntity";
 import { TypeUtil } from "debeem-utils";
 import { AesCrypto } from "debeem-cipher";
 import { IStorageService } from "./IStorageService";
-import { TestUtil } from "debeem-utils";
 import { SysUserStorageService } from "./SysUserStorageService";
 import _ from "lodash";
 
@@ -245,7 +244,7 @@ export abstract class AbstractStorageService<T> implements IStorageService
 				await this.init();
 				if ( this.db )
 				{
-					await TestUtil.sleep( 1 );
+					//await TestUtil.sleep( 1 );
 
 					const encrypted : string | undefined = await this.db.get( this.storeName, key );
 					if ( encrypted )

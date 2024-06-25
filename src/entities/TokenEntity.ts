@@ -12,11 +12,35 @@
  */
 export interface TokenEntityItem
 {
-	wallet : string;	//	wallet address, all tokens belongs to wallet
-	name: string;		//	token name
-	chainId: number;	//	globally unique chain id
-	address: string;	//	storage key : contract address. see file ethereumToken.json.ts
-	symbol: string;		//	token name
+	/**
+	 * 	globally unique chain id
+	 */
+	chainId: number;
+
+	/**
+	 * 	wallet address, tokens belongs to a wallet
+	 */
+	wallet : string;
+
+	/**
+	 * 	token name
+	 */
+	name: string;
+
+	/**
+	 * 	storage key : contract address. see file ethereumToken.json.ts
+	 */
+	address: string;
+
+	/**
+	 * 	token symbol
+	 */
+	symbol: string;
+
+	/**
+	 * 	decimals.
+	 * 	for ETH, it is 18
+	 */
 	decimals: number;
 }
 

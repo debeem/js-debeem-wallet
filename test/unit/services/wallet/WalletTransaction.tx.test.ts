@@ -297,7 +297,9 @@ describe( "WalletTransaction.tx", () =>
 			//
 			//	send translation from [oneKey wallet 1] to [oneKey wallet 2]
 			//
-			//	this is USDT contract address on sepolia
+			//	USDT contract address on sepolia
+			//	https://sepolia.etherscan.io/address/0x271B34781c76fB06bfc54eD9cfE7c817d89f7759
+			//
 			const usdtContractAddress = '0x271B34781c76fB06bfc54eD9cfE7c817d89f7759';
 			let broadcastResponse : TransactionResponse | undefined = undefined;
 			try

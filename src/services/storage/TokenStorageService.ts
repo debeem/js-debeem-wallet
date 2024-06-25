@@ -10,13 +10,15 @@ if ( TestUtil.isTestEnv() )
 	require('fake-indexeddb/auto');
 }
 
-import { isAddress } from "ethers";
-import { TestUtil, TypeUtil } from "debeem-utils";
+import { TestUtil } from "debeem-utils";
 import { TokenEntityItem } from "../../entities/TokenEntity";
 import { defaultTokens } from "../../constants/ConstantToken";
 import { AbstractStorageService } from "./AbstractStorageService";
 import { CallbackModels } from "../../models/CallbackModels";
 import { IStorageService } from "./IStorageService";
+import _ from "lodash";
+import { VaTokenEntity } from "../../validators/VaTokenEntity";
+import { getCurrentChain } from "../../config";
 
 
 export class TokenStorageService extends AbstractStorageService<TokenEntityItem> implements IStorageService
@@ -66,33 +68,10 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	 */
 	public isValidItem( item : any, callback ?: CallbackModels ) : boolean
 	{
-		if ( ! VerifyUtil.returnNotNullObject( item, callback, `null item` ) )
+		const error : string | null = VaTokenEntity.validateTokenEntityItem( item );
+		if ( null !== error )
 		{
-			return false;
-		}
-		if ( ! VerifyUtil.returnNotEmptyString( item.wallet, callback, `empty .wallet` ) )
-		{
-			return false;
-		}
-		if ( ! VerifyUtil.returnNotEmptyString( item.name, callback, `empty .name` ) )
-		{
-			return false;
-		}
-		if ( ! VerifyUtil.returnNotGreaterThanNumeric( item.chainId, 0, callback, `invalid .chainId` ) )
-		{
-			return false;
-		}
-		if ( ! isAddress( item.address ) )
-		{
-			VerifyUtil.setErrorDesc( callback, `invalid .address` );
-			return false;
-		}
-		if ( ! VerifyUtil.returnNotEmptyString( item.symbol, callback, `empty .symbol` ) )
-		{
-			return false;
-		}
-		if ( ! VerifyUtil.returnNotGreaterThanNumeric( item.decimals, 0, callback, `invalid .decimals` ) )
-		{
+			VerifyUtil.setErrorDesc( callback, `${ this.constructor.name }.isValidItem :: ${ error }` );
 			return false;
 		}
 
@@ -109,14 +88,36 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	 */
 	public getDefault( wallet : string ) : Array<TokenEntityItem>
 	{
-		if ( ! TypeUtil.isNotEmptyString( wallet ) )
+		const chainId : number = getCurrentChain();
+		const errorChainId : string | null = VaTokenEntity.validateTokenEntityItemChainId( chainId );
+		if ( null !== errorChainId )
 		{
-			throw new Error( `invalid wallet` );
+			throw new Error( `${ this.constructor.name }.getDefault :: invalid chainId` );
+		}
+
+		const errorWallet : string | null = VaTokenEntity.validateTokenEntityItemWallet( wallet );
+		if ( null !== errorWallet )
+		{
+			throw new Error( `${ this.constructor.name }.getDefault :: invalid wallet` );
+		}
+
+		if ( ! _.has( defaultTokens, chainId ) )
+		{
+			return [];
+			//throw new Error( `${ this.constructor.name }.getDefault :: unsupported chain/network` );
+		}
+
+		const defaultTokenList : Array<TokenEntityItem> = defaultTokens[ chainId ];
+		if ( ! Array.isArray( defaultTokenList ) || 0 === defaultTokenList.length )
+		{
+			return [];
+			//throw new Error( `${ this.constructor.name }.getDefault :: failed to get the tokens on chain ${ chainId }` );
 		}
 
 		let tokens : Array<TokenEntityItem> = [];
-		for ( let item of defaultTokens )
+		for ( let item of defaultTokenList )
 		{
+			item.chainId = chainId;
 			item.wallet = wallet;
 			tokens.push( item );
 		}
@@ -141,12 +142,28 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 		{
 			try
 			{
-				if ( ! TypeUtil.isNotEmptyString( wallet ) )
+				const chainId : number = getCurrentChain();
+				const errorChainId : string | null = VaTokenEntity.validateTokenEntityItemChainId( chainId );
+				if ( null !== errorChainId )
 				{
-					return reject( `invalid wallet` );
+					return reject( `${ this.constructor.name }.flushDefault :: invalid chainId` );
 				}
 
-				for ( let item of this.getDefault( wallet ) )
+				const errorWallet : string | null = VaTokenEntity.validateTokenEntityItemWallet( wallet );
+				if ( null !== errorWallet )
+				{
+					return reject( `${ this.constructor.name }.flushDefault :: invalid wallet` );
+				}
+
+				//	...
+				const defaultTokens : Array<TokenEntityItem> = this.getDefault( wallet );
+				if ( ! Array.isArray( defaultTokens ) || 0 === defaultTokens.length )
+				{
+					return resolve( false );
+				}
+
+				//	...
+				for ( let item of defaultTokens )
 				{
 					if ( ! this.isValidItem( item ) )
 					{
@@ -154,18 +171,17 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 					}
 
 					const key : string | null = this.getKeyByItem( item );
-					if ( key )
+					if ( _.isString( key ) && ! _.isEmpty( key ) )
 					{
 						const checkItem : TokenEntityItem | null = await this.get( key );
 						if ( ! this.isValidItem( checkItem ) )
 						{
-							const key : string | null = this.getKeyByItem( item );
-							if ( key && TypeUtil.isNotEmptyString( key ) )
-							{
-								//	set wallet address and put
-								item.wallet = wallet;
-								await this.put( key, item );
-							}
+							//	set chainId and wallet address
+							item.chainId = chainId;
+							item.wallet = wallet;
+
+							//	save the item into our database
+							await this.put( key, item );
 						}
 					}
 				}
@@ -184,24 +200,75 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	 * 	get storage key by item object
 	 *
 	 * 	@group Basic Methods
-	 *	@param value {TokenEntityItem} TokenEntityItem object
+	 *	@param item {TokenEntityItem} TokenEntityItem object
 	 *	@returns {string | null}
 	 */
-	public getKeyByItem( value : TokenEntityItem ) : string | null
+	public getKeyByItem( item : TokenEntityItem ) : string | null
 	{
-		if ( this.isValidItem( value ) )
+		if ( this.isValidItem( item ) )
 		{
-			return value.address;
+			//
+			//	chainId		- chain id
+			//	address		= contract address
+			//
+			const prefix : string | null = this.getKeyPrefixByItem( item );
+			if ( _.isString( prefix ) && ! _.isEmpty( prefix ) )
+			{
+				return `${ prefix.trim() }-${ item.address.trim() }`.toLowerCase();
+			}
 		}
 
 		return null;
 	}
 
 	/**
+	 * 	get the prefix of a storage key by item object
+	 *
+	 * 	@group Basic Methods
+	 *	@param item {TokenEntityItem} TokenEntityItem object
+	 *	@returns {string | null}
+	 */
+	public getKeyPrefixByItem( item : TokenEntityItem ) : string | null
+	{
+		if ( this.isValidItem( item ) )
+		{
+			//
+			//	chainId		- chain id
+			//	address		= contract address
+			//
+			return this.getKeyPrefixByChainIdAndWallet( item.chainId, item.wallet );
+		}
+
+		return null;
+	}
+
+	/**
+	 * 	get the prefix of a storage key by chainId and wallet
+	 *
+	 *	@param chainId		{number}
+	 *	@param wallet		{string}
+	 * 	@returns {string | null}
+	 */
+	public getKeyPrefixByChainIdAndWallet( chainId : number, wallet : string ) : string | null
+	{
+		if ( null !== VaTokenEntity.validateTokenEntityItemChainId( chainId ) )
+		{
+			return null;
+		}
+		if ( null !== VaTokenEntity.validateTokenEntityItemWallet( wallet ) )
+		{
+			return null;
+		}
+
+		return `chain-${ chainId }-wallet-${ wallet.trim() }`.toLowerCase();
+	}
+
+
+	/**
 	 * 	get the first item by wallet address
 	 *
 	 * 	@group Basic Methods
-	 * 	@param wallet	{string} wallet address
+	 * 	@param wallet		{string} wallet address
 	 * 	@returns {Promise<TokenEntityItem | null>}
 	 */
 	public async getFirstByWallet( wallet : string ) : Promise<TokenEntityItem | null>
@@ -229,9 +296,9 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	 * 	get all keys by wallet address
 	 *
 	 * 	@group Basic Methods
-	 * 	@param wallet	{string} wallet address
-	 *	@param query	{string} query string
-	 *	@param maxCount	{number} maximum limit number
+	 * 	@param wallet		{string} wallet address
+	 *	@param [query]		{string} query string
+	 *	@param [maxCount]	{number} maximum limit number
 	 *	@returns {Promise<Array<string> | null>}
 	 */
 	public async getAllKeysByWallet( wallet : string, query? : string, maxCount? : number ) : Promise<Array<string> | null>
@@ -240,27 +307,57 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 		{
 			try
 			{
-				if ( ! TypeUtil.isNotEmptyString( wallet ) )
+				const chainId : number = getCurrentChain();
+				const errorChainId : string | null = VaTokenEntity.validateTokenEntityItemChainId( chainId );
+				if ( null !== errorChainId )
 				{
-					return reject( `invalid wallet` );
+					return reject( `${ this.constructor.name }.getAllKeysByWallet :: invalid chainId` );
 				}
 
-				const values = await this.getAllByWallet( wallet, query, maxCount );
-				if ( Array.isArray( values ) )
+				const errorWallet : string | null = VaTokenEntity.validateTokenEntityItemWallet( wallet );
+				if ( null !== errorWallet )
 				{
-					let keys : Array<string> = [];
-					for ( const item of values )
-					{
-						const key : string | null = this.getKeyByItem( item );
-						if ( key && TypeUtil.isNotEmptyString( key ) )
-						{
-							keys.push( key );
-						}
-					}
-					return resolve( keys );
+					return reject( `${ this.constructor.name }.getAllKeysByWallet :: invalid wallet` );
 				}
 
-				resolve( null );
+				//	...
+				const prefix : string | null = this.getKeyPrefixByChainIdAndWallet( chainId, wallet );
+				if ( null === prefix )
+				{
+					return reject( `${ this.constructor.name }.getAllKeysByWallet :: failed to build prefix` );
+				}
+
+				//	...
+				const allKeys : Array<string> | null = await super.getAllKeys( query, maxCount );
+				if ( ! Array.isArray( allKeys ) || 0 === allKeys.length )
+				{
+					return resolve( null );
+				}
+
+				//	...
+				const allTokenStorageKeys = allKeys.filter( k => k.startsWith( prefix ) );
+				if ( ! Array.isArray( allTokenStorageKeys ) || 0 === allTokenStorageKeys.length )
+				{
+					return resolve( null );
+				}
+
+				resolve( allTokenStorageKeys );
+				// const values = await this.getAllByWallet( wallet, query, maxCount );
+				// if ( Array.isArray( values ) )
+				// {
+				// 	let keys : Array<string> = [];
+				// 	for ( const item of values )
+				// 	{
+				// 		const key : string | null = this.getKeyByItem( item );
+				// 		if ( key && TypeUtil.isNotEmptyString( key ) )
+				// 		{
+				// 			keys.push( key );
+				// 		}
+				// 	}
+				// 	return resolve( keys );
+				// }
+				//
+				// resolve( null );
 			}
 			catch ( err )
 			{
@@ -273,9 +370,9 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	 * 	query all items by wallet address
 	 *
 	 * 	@group Basic Methods
-	 * 	@param wallet	{string} wallet address
-	 *	@param query	{string} query string
-	 *	@param maxCount	{number} maximum limit number
+	 * 	@param wallet		{string} wallet address
+	 *	@param [query]		{string} query string
+	 *	@param [maxCount]	{number} maximum limit number
 	 * 	@return {Promise<Array<TokenEntityItem> | null>}
 	 */
 	public async getAllByWallet( wallet : string, query? : string, maxCount? : number ) : Promise<Array<TokenEntityItem> | null>
@@ -284,28 +381,75 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 		{
 			try
 			{
-				if ( ! TypeUtil.isNotEmptyString( wallet ) )
+				const chainId : number = getCurrentChain();
+				const errorChainId : string | null = VaTokenEntity.validateTokenEntityItemChainId( chainId );
+				if ( null !== errorChainId )
 				{
-					return reject( `invalid wallet` );
+					return reject( `${ this.constructor.name }.getAllByWallet :: invalid chainId` );
 				}
 
-				const rawValues = await super.getAll( query, maxCount );
-				if ( Array.isArray( rawValues ) )
+				const errorWallet : string | null = VaTokenEntity.validateTokenEntityItemWallet( wallet );
+				if ( null !== errorWallet )
 				{
-					let values : Array<TokenEntityItem> = [];
-					for ( const item of rawValues )
+					return reject( `${ this.constructor.name }.getAllByWallet :: invalid wallet` );
+				}
+
+				//	...
+				const allTokenStorageKeys : Array<string> | null = await this.getAllKeysByWallet( wallet, query, maxCount );
+				//	console.log( `allTokenStorageKeys`, allTokenStorageKeys );
+				//	should output:
+				//	allTokenStorageKeys [
+				//       'chain-11155111-wallet-0x47b506704da0370840c2992a3d3d301fd3c260d3-0x271b34781c76fb06bfc54ed9cfe7c817d89f7759',
+				//       'chain-11155111-wallet-0x47b506704da0370840c2992a3d3d301fd3c260d3-0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee'
+				//     ]
+				//
+				if ( ! Array.isArray( allTokenStorageKeys ) )
+				{
+					return resolve( null );
+				}
+
+				//	...
+				let tokenItems : Array<TokenEntityItem> = [];
+				for ( const tsKey of allTokenStorageKeys )
+				{
+					const item : TokenEntityItem | null = await super.get( tsKey );
+					if ( null === item )
 					{
-						if ( item &&
-							TypeUtil.isNotEmptyString( item.wallet ) &&
-							item.wallet.trim().toLowerCase() === wallet.trim().toLowerCase() )
-						{
-							values.push( item );
-						}
+						continue;
 					}
-					return resolve( values );
+
+					//	verify again
+					if ( item &&
+						null === VaTokenEntity.validateTokenEntityItemChainId( item.chainId ) &&
+						null === VaTokenEntity.validateTokenEntityItemWallet( item.wallet ) &&
+						chainId === item.chainId &&
+						item.wallet.trim().toLowerCase() === wallet.trim().toLowerCase() )
+					{
+						tokenItems.push( item );
+					}
 				}
 
-				resolve( null );
+				return resolve( tokenItems );
+
+				// const rawValues = await super.getAll( query, maxCount );
+				// if ( Array.isArray( rawValues ) )
+				// {
+				// 	let values : Array<TokenEntityItem> = [];
+				// 	for ( const item of rawValues )
+				// 	{
+				// 		if ( item &&
+				// 			null === VaTokenEntity.validateTokenEntityItemChainId( item.chainId ) &&
+				// 			null === VaTokenEntity.validateTokenEntityItemWallet( item.wallet ) &&
+				// 			chainId === item.chainId &&
+				// 			item.wallet.trim().toLowerCase() === wallet.trim().toLowerCase() )
+				// 		{
+				// 			values.push( item );
+				// 		}
+				// 	}
+				// 	return resolve( values );
+				// }
+				//
+				//resolve( null );
 			}
 			catch ( err )
 			{
@@ -327,11 +471,6 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 		{
 			try
 			{
-				if ( ! TypeUtil.isNotEmptyString( wallet ) )
-				{
-					return reject( `invalid wallet` );
-				}
-
 				const keys : Array<string> | null = await this.getAllKeysByWallet( wallet );
 				if ( Array.isArray( keys ) )
 				{
@@ -364,11 +503,6 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 		{
 			try
 			{
-				if ( ! TypeUtil.isNotEmptyString( wallet ) )
-				{
-					return reject( `invalid wallet` );
-				}
-
 				const keys : Array<string> | null = await this.getAllKeysByWallet( wallet );
 				resolve( Array.isArray( keys ) ? keys.length : 0 );
 			}
