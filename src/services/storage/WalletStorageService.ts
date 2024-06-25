@@ -4,7 +4,7 @@
  */
 import { CallbackModels } from "../../models/CallbackModels";
 
-if ( typeof process !== 'undefined' && process.env )
+if ( TestUtil.isTestEnv() )
 {
 	//import "fake-indexeddb/auto";
 	require('fake-indexeddb/auto');
@@ -17,6 +17,7 @@ import { WalletEntityItem } from "../../entities/WalletEntity";
 import { AbstractStorageService } from "./AbstractStorageService";
 import { IStorageService } from "./IStorageService";
 import { VerifyUtil } from "../../utils/VerifyUtil";
+import { TestUtil } from "debeem-utils";
 
 
 export class WalletStorageService extends AbstractStorageService<WalletEntityItem> implements IStorageService

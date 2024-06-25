@@ -4,15 +4,15 @@
  */
 import { CallbackModels } from "../../models/CallbackModels";
 
-if ( typeof process !== 'undefined' && process.env )
+if ( TestUtil.isTestEnv() )
 {
 	//import "fake-indexeddb/auto";
 	require('fake-indexeddb/auto');
 }
 
-
 import { AbstractStorageService } from "./AbstractStorageService";
 import { IStorageService } from "./IStorageService";
+import { TestUtil } from "debeem-utils";
 
 
 export namespace WalletBasicKeys

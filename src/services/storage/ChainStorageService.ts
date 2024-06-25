@@ -6,13 +6,13 @@
  */
 import { IStorageService } from "./IStorageService";
 
-if ( typeof process !== 'undefined' && process.env )
+if ( TestUtil.isTestEnv() )
 {
 	//import "fake-indexeddb/auto";
 	require('fake-indexeddb/auto');
 }
 
-import { TypeUtil } from "debeem-utils";
+import { TestUtil, TypeUtil } from "debeem-utils";
 import { ChainEntityItem } from "../../entities/ChainEntity";
 import { defaultChains } from '../../constants/ConstantChain';
 import { AbstractStorageService } from "./AbstractStorageService";

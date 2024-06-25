@@ -4,14 +4,14 @@
  */
 import { VerifyUtil } from "../../utils/VerifyUtil";
 
-if ( typeof process !== 'undefined' && process.env )
+if ( TestUtil.isTestEnv() )
 {
 	//import "fake-indexeddb/auto";
 	require('fake-indexeddb/auto');
 }
 
 import { isAddress } from "ethers";
-import { TypeUtil } from "debeem-utils";
+import { TestUtil, TypeUtil } from "debeem-utils";
 import { TokenEntityItem } from "../../entities/TokenEntity";
 import { defaultTokens } from "../../constants/ConstantToken";
 import { AbstractStorageService } from "./AbstractStorageService";

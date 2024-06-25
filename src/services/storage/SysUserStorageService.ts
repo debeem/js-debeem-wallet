@@ -4,7 +4,7 @@
  */
 import { TestUtil } from "debeem-utils";
 
-if ( typeof process !== 'undefined' && process.env )
+if ( TestUtil.isTestEnv() )
 {
 	//import "fake-indexeddb/auto";
 	require('fake-indexeddb/auto');
