@@ -43,8 +43,12 @@ nvm install v18.20.3
 nvm use v18.20.3
 ```
 ### 3, install our package
-```
+```shell
 npm i debeem-wallet
+```
+*to fix issue: `Module not found: Error: Can't resolve 'fake-indexeddb/auto'`*
+```shell
+npm i -D fake-indexeddb
 ```
 
 
