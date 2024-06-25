@@ -16,7 +16,6 @@ import { openDB, StoreNames } from "idb";
 import { IDBPDatabase } from "idb/build/entry";
 import { AesCrypto } from "debeem-cipher";
 import { SysUserEntity } from "../../entities/SysUserEntity";
-import {StorageEntity} from "../../entities/StorageEntity";
 
 
 /**
