@@ -1,6 +1,6 @@
 {
 	"name": "debeem-wallet",
-	"version": "1.0.52",
+	"version": "1.0.53",
 	"description": "Ethereum Wallet by DeBeem, Team.",
 	"main": "dist/index.js",
 	"browser": "dist/index.js",
@@ -40,7 +40,7 @@
 	"dependencies": {
 		"debeem-cipher": "^1.0.1",
 		"debeem-id": "^1.0.18",
-		"debeem-utils": "^1.0.68",
+		"debeem-utils": "^1.0.70",
 		"ethers": "^6.13.1",
 		"idb": "^7.1.1",
 		"lodash": "^4.17.21",
