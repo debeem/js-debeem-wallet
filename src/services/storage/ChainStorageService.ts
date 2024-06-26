@@ -5,6 +5,7 @@
  * 	@module ChainStorageService
  */
 import { IStorageService } from "./IStorageService";
+import { TestUtil, TypeUtil } from "debeem-utils";
 
 if ( TestUtil.isTestEnv() )
 {
@@ -12,7 +13,6 @@ if ( TestUtil.isTestEnv() )
 	require('fake-indexeddb/auto');
 }
 
-import { TestUtil, TypeUtil } from "debeem-utils";
 import { ChainEntityItem } from "../../entities/ChainEntity";
 import { defaultChains } from '../../constants/ConstantChain';
 import { AbstractStorageService } from "./AbstractStorageService";

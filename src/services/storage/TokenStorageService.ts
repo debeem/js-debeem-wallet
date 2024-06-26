@@ -3,6 +3,7 @@
  * 	@module TokenStorageService
  */
 import { VerifyUtil } from "../../utils/VerifyUtil";
+import { TestUtil } from "debeem-utils";
 
 if ( TestUtil.isTestEnv() )
 {
@@ -10,7 +11,6 @@ if ( TestUtil.isTestEnv() )
 	require('fake-indexeddb/auto');
 }
 
-import { TestUtil } from "debeem-utils";
 import { TokenEntityItem } from "../../entities/TokenEntity";
 import { defaultTokens } from "../../constants/ConstantToken";
 import { AbstractStorageService } from "./AbstractStorageService";

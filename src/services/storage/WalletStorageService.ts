@@ -3,6 +3,7 @@
  * 	@module WalletStorageService
  */
 import { CallbackModels } from "../../models/CallbackModels";
+import { TestUtil } from "debeem-utils";
 
 if ( TestUtil.isTestEnv() )
 {
@@ -17,7 +18,6 @@ import { WalletEntityItem } from "../../entities/WalletEntity";
 import { AbstractStorageService } from "./AbstractStorageService";
 import { IStorageService } from "./IStorageService";
 import { VerifyUtil } from "../../utils/VerifyUtil";
-import { TestUtil } from "debeem-utils";
 
 
 export class WalletStorageService extends AbstractStorageService<WalletEntityItem> implements IStorageService

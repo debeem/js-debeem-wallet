@@ -11,7 +11,7 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"debeem-wallet": "^1.0.4"
+		"debeem-wallet": "^1.0.54"
 	},
 	"devDependencies": {
 		"http-server": "^14.1.1",

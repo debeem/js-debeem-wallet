@@ -24,45 +24,44 @@ class StorageKeys
 }
 
 
-async function initSettings()
+async function initSettings( pinCode : string = `` ) : Promise<WalletEntityItem | null>
 {
-	//	user input
-	const pinCode : string = '111111';
-	const basicStore = new Wallet.BasicStorageService();
-	const currentWalletKey : string | null = await basicStore.get( StorageKeys.CURRENT_WALLET );
-	if ( ! currentWalletKey )
+	return new Promise( async ( resolve, reject ) =>
 	{
-		//	brand new
-		//	redirect to page creating or importing
-		throw new Error( `please create a wallet.` );
-	}
-
-	const walletStore = new WalletStorageService( pinCode );
-	const walletItems : string[] | null = await walletStore.getAllKeys();
-	if ( null == walletItems || 0 === walletItems.length )
-	{
-		//	redirect to page creating or importing
-		throw new Error( `please create a wallet.` );
-	}
-
-	const walletItem : WalletEntityItem | null = await walletStore.get( currentWalletKey );
-	if ( walletItem )
-	{
-		return walletItem;
-	}
-	else
-	{
-		const walletItemFirst : WalletEntityItem | null = await walletStore.getFirst();
-		const key : string | null = walletStore.getKeyByItem( walletItemFirst );
-		if ( ! key )
+		try
 		{
-			throw new Error( `failed to getKeyByItem` );
-		}
+			const basicStore = new Wallet.BasicStorageService();
+			const walletStore = new WalletStorageService( pinCode );
 
-		//	save StorageKeys.CURRENT_WALLET to database
-		await basicStore.put( StorageKeys.CURRENT_WALLET, key );
-		return walletItemFirst;
-	}
+			//	...
+			let currentWalletKey : string | null = await basicStore.get( StorageKeys.CURRENT_WALLET );
+			if ( null === currentWalletKey )
+			{
+				currentWalletKey = `wallet1`;
+				await basicStore.put( StorageKeys.CURRENT_WALLET, currentWalletKey );
+			}
+
+			//	...
+			const walletItem : WalletEntityItem | null = await walletStore.get( currentWalletKey );
+			if ( walletItem )
+			{
+				return resolve( walletItem );
+			}
+
+			resolve( null );
+		}
+		catch ( err )
+		{
+			reject( err );
+		}
+	});
 }
 
-initSettings().then();
+initSettings().then( res =>
+{
+	console.log( `asynchronously loaded walletEntityItem object :`, res );
+})
+.catch( err => {
+
+	console.error( `err :`, err );
+} );

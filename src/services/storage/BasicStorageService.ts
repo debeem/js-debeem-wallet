@@ -3,6 +3,7 @@
  * 	@module BasicStorageService
  */
 import { CallbackModels } from "../../models/CallbackModels";
+import { TestUtil } from "debeem-utils";
 
 if ( TestUtil.isTestEnv() )
 {
@@ -12,7 +13,6 @@ if ( TestUtil.isTestEnv() )
 
 import { AbstractStorageService } from "./AbstractStorageService";
 import { IStorageService } from "./IStorageService";
-import { TestUtil } from "debeem-utils";
 
 
 export namespace WalletBasicKeys
