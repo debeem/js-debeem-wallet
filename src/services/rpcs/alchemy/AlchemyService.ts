@@ -387,26 +387,29 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 	 */
 	private buildQueryingTransactionsCommonParameters( queryOptions ?: TransactionHistoryQueryOptions, fetchOptions? : FetchListOptions ) : object
 	{
-		let contractAddresses = this.getDefaultContractAddresses();
-		if ( Array.isArray( queryOptions?.contractAddresses ) )
+		let contractAddresses : Array<string> = this.getDefaultContractAddresses();
+		if ( queryOptions?.contractAddresses && Array.isArray( queryOptions?.contractAddresses ) )
 		{
 			contractAddresses = queryOptions?.contractAddresses;
 		}
 
 		let fromBlock = `0x0`;
-		if ( _.isString( queryOptions?.fromBlock ) && ! _.isEmpty( queryOptions?.fromBlock ) )
+		if ( queryOptions?.fromBlock &&
+			_.isString( queryOptions?.fromBlock ) && ! _.isEmpty( queryOptions?.fromBlock ) )
 		{
 			fromBlock = queryOptions?.fromBlock;
 		}
 
 		let toBlock = `latest`;
-		if ( _.isString( queryOptions?.toBlock ) && ! _.isEmpty( queryOptions?.toBlock ) )
+		if ( queryOptions?.toBlock &&
+			_.isString( queryOptions?.toBlock ) && ! _.isEmpty( queryOptions?.toBlock ) )
 		{
 			toBlock = queryOptions?.toBlock;
 		}
 
 		let category = this.getDefaultTransferTypes();
-		if ( Array.isArray( queryOptions?.category ) )
+		if ( queryOptions?.category &&
+			Array.isArray( queryOptions?.category ) )
 		{
 			category = queryOptions?.category;
 		}
@@ -416,7 +419,8 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 
 		const sort = FetchUtil.getSafeSort( fetchOptions?.sort );
 		let maxCount = `0x3e8`;
-		if ( _.isNumber( fetchOptions?.pageSize ) && fetchOptions?.pageSize > 0 )
+		if ( fetchOptions?.pageSize &&
+			_.isNumber( fetchOptions?.pageSize ) && fetchOptions?.pageSize > 0 )
 		{
 			const pageSize = FetchUtil.getSafePageSize( fetchOptions?.pageSize, 100 );
 

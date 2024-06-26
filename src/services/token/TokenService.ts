@@ -288,7 +288,7 @@ export class TokenService extends AbstractRpcService implements IRpcService
 	 */
 	public getItemDecimals( contractAddress : string ) : Promise<number>
 	{
-		return new Promise( async ( resolve, reject ) =>
+		return new Promise( async ( resolve, _reject ) =>
 		{
 			try
 			{
