@@ -323,7 +323,7 @@ export class TokenService extends AbstractRpcService implements IRpcService
 	 * {
 	 * 	oneInch : "https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",
 	 * 	metaBeem : "https://tokens.metabeem.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",
-	 * 	base64 : "UklGRlYLAABXRUJQVlA4TEkLAAAv/8A/EC8FoW0kQZKnD8Dzh3p/Mx0aENpIkiS5ZjEcf5hvTYWDt...",
+	 * 	base64 : "data:image/png;base64,UklGRlYLAABXRUJQVlA4TEkLAAAv/8A/EC8FoW0kQZKnD8Dzh3p/Mx0aENpIkiS5ZjEcf5hvTYWDt...",
 	 * }
 	 * ```
 	 *
