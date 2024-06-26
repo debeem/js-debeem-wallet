@@ -2,7 +2,6 @@ import {OneInchTokenService} from "./services/rpcs/oneInchToken/OneInchTokenServ
 import _ from "lodash";
 import path from "path";
 import fs from "fs";
-import { HttpUtil } from "debeem-utils";
 
 
 async function updateOneInchTokenResources()
