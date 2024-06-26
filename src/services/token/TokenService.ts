@@ -7,12 +7,14 @@
 import { MathUtil } from "debeem-utils";
 import _ from "lodash";
 import {OneInchTokenService} from "../rpcs/oneInchToken/OneInchTokenService";
-import {OneInchTokenItem} from "../../models/TokenModels";
+import { OneInchTokenItem, OneInchTokenLogoImageItem, OneInchTokenLogoItem } from "../../models/TokenModels";
 import {RpcSupportedChainMap} from "../../models/RpcModels";
 import {AbstractRpcService} from "../rpcs/AbstractRpcService";
 import {IRpcService} from "../rpcs/IRpcService";
 import {NetworkModels} from "../../models/NetworkModels";
 import { oneInchTokens } from "../../resources/oneInchTokens";
+import { oneInchTokensSepolia } from "../../resources/oneInchTokens.sepolia";
+import { oneInchTokenLogoImages } from "../../resources/oneInchTokenLogoImages";
 
 
 
@@ -159,39 +161,66 @@ export class TokenService extends AbstractRpcService implements IRpcService
 				//	search item from local
 				//
 				const supportedChains = new OneInchTokenService( 1 ).supportedChains;
-				if ( ! supportedChains.includes( this.chainId ) )
+				if ( ! supportedChains.includes( this.chainId ) &&
+					11155111 !== this.chainId )
 				{
 					//	unsupported by chainId
 					return resolve( null );
 				}
 
-				//	get from local cache file
-				let tokenMap = oneInchTokens[ this.chainId ];
-				if ( _.isObject( tokenMap ) &&
-					_.has( tokenMap, contractAddress ) )
+				let item : OneInchTokenItem | null = null;
+
+				//	on Sepolia
+				if ( 11155111 === this.chainId )
 				{
-					const item = tokenMap[ contractAddress ];
-					if ( _.isObject( item ) )
+					if ( _.has( oneInchTokensSepolia, contractAddress ) )
 					{
-						return resolve( item );
+						item = oneInchTokensSepolia[ contractAddress ];
 					}
 				}
 
-				try
+				//	try to get from local cache file
+				if ( ! OneInchTokenService.isValid1InchTokenItem( item ) )
 				{
-					//	fetch from internet
-					const item : OneInchTokenItem = await new OneInchTokenService( this.chainId ).fetchTokenItemInfo( contractAddress );
-					if ( OneInchTokenService.isValid1InchTokenItem( item ) )
+					let tokenMap = oneInchTokens[ this.chainId ];
+					if ( _.isObject( tokenMap ) &&
+						_.has( tokenMap, contractAddress ) )
 					{
-						return resolve( item );
+						item = tokenMap[ contractAddress ];
 					}
 				}
-				catch ( err )
+
+				//	try to fetch from internet
+				if ( ! OneInchTokenService.isValid1InchTokenItem( item ) )
 				{
+					try
+					{
+						item = await new OneInchTokenService( this.chainId ).fetchTokenItemInfo( contractAddress );
+					}
+					catch ( err )
+					{
+					}
+				}
+
+				if ( item && OneInchTokenService.isValid1InchTokenItem( item ) )
+				{
+					const contractAddress : string = item.address;
+					item.logo = {
+						oneInch : `https://tokens.1inch.io/${ contractAddress }.png`,
+						metaBeem : `https://tokens.metabeem.io/${ contractAddress }.png`,
+					};
+					if ( _.has( oneInchTokenLogoImages, contractAddress ) )
+					{
+						const logoImage : OneInchTokenLogoImageItem | null = oneInchTokenLogoImages[ contractAddress ];
+						if ( null !== logoImage )
+						{
+							item.logo.base64 = logoImage.base64;
+						}
+					}
 				}
 
 				//	...
-				resolve( null );
+				resolve( OneInchTokenService.isValid1InchTokenItem( item ) ? item : null );
 			}
 			catch ( err )
 			{
@@ -291,25 +320,28 @@ export class TokenService extends AbstractRpcService implements IRpcService
 	 * const contractAddress : string = new TokenService( currentChainId ).nativeTokenAddress;
 	 * const logoUrl = await new TokenService( currentChainId ).getItemLogo( contractAddress );
 	 * //    should return:
-	 * 'https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png'
+	 * {
+	 * 	oneInch : "https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",
+	 * 	metaBeem : "https://tokens.metabeem.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png",
+	 * 	base64 : "UklGRlYLAABXRUJQVlA4TEkLAAAv/8A/EC8FoW0kQZKnD8Dzh3p/Mx0aENpIkiS5ZjEcf5hvTYWDt...",
+	 * }
 	 * ```
 	 *
 	 * 	@group Extended Methods
 	 * 	@param contractAddress	{string} contract address
-	 * 	@returns {Promise<string | null>}
+	 * 	@returns {Promise<OneInchTokenLogoItem | null>}
 	 */
-	public getItemLogo( contractAddress : string ) : Promise<string | null>
+	public getItemLogo( contractAddress : string ) : Promise<OneInchTokenLogoItem | null>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
 			try
 			{
-				const item : OneInchTokenItem | Object | null = await this.getItem( contractAddress );
+				const item : OneInchTokenItem | null = await this.getItem( contractAddress );
 				if ( item &&
-					_.has( item, 'logoURI' ) &&
-					_.isString( item[ 'logoURI' ] ) )
+					OneInchTokenService.isValid1InchTokenLogoItem( item.logo ) )
 				{
-					return resolve( item[ 'logoURI' ] );
+					return resolve( item.logo );
 				}
 
 				resolve( null );

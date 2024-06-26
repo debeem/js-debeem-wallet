@@ -58,6 +58,39 @@ export type ContractTokenBalances = {
 
 
 
+/**
+ * 	@module TokenModels
+ * 	@interface
+ */
+export type OneInchTokenLogoItem = {
+
+	/**
+	 * 	logo url provided by OneInch
+	 */
+	oneInch : string,
+
+	/**
+	 *	logo url provided by MetaBeem
+	 */
+	metaBeem : string,
+
+	/**
+	 * 	base64-encoded string of the image file
+	 */
+	base64 ?: string,
+
+};
+
+/**
+ * 	@module TokenModels
+ * 	@interface
+ */
+export const defaultOneInchTokenLogoItem = {
+
+	oneInch : ``,
+	metaBeem : ``,
+};
+
 
 /**
  * 	@module TokenModels
@@ -90,6 +123,8 @@ export type OneInchTokenItem = {
 	name : string,
 
 	/**
+	 *	contract address
+	 *
 	 * 	@example
 	 * 	"0x8a9c67fee641579deba04928c4bc45f66e26343a"
 	 */
@@ -106,6 +141,11 @@ export type OneInchTokenItem = {
 	 * 	"https://tokens.1inch.io/0x8a9c67fee641579deba04928c4bc45f66e26343a.png"
 	 */
 	logoURI : string | null,
+
+	/**
+	 *	logo data
+	 */
+	logo : OneInchTokenLogoItem,
 
 	/**
 	 * 	@example
@@ -142,6 +182,8 @@ export type OneInchTokenItem = {
 export type OneInchTokenMap = {
 
 	/**
+	 * 	string index is the contract address
+	 *
 	 * 	@example
 	 * 	"0x8a9c67fee641579deba04928c4bc45f66e26343a": {
 	 *		"chainId": 1,
@@ -166,4 +208,37 @@ export type OneInchTokenMap = {
 	 *	},
 	 */
 	[ index: string ] : OneInchTokenItem
+};
+
+
+/**
+ * 	@module TokenModels
+ * 	@interface
+ */
+export type OneInchTokenLogoImageItem = {
+
+	/**
+	 *	contract address
+	 *
+	 * 	@example
+	 * 	"0x8a9c67fee641579deba04928c4bc45f66e26343a"
+	 */
+	address : string,
+
+	/**
+	 * 	base64-encoded string of the image file
+	 */
+	base64 : string,
+};
+
+/**
+ * 	@module TokenModels
+ * 	@interface
+ */
+export type OneInchTokenLogoImageMap = {
+
+	/**
+	 * 	string index is the contract address
+	 */
+	[ index: string ] : OneInchTokenLogoImageItem
 };

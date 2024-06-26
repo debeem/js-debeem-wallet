@@ -5,9 +5,7 @@
 import { isAddress } from "ethers";
 import { AbstractRpcService } from "../AbstractRpcService";
 import {
-	alchemy,
-	defaultEthereumTokensGoerli,
-	defaultEthereumTokensMainnet,
+	alchemy
 } from "../../../config";
 import { FetchUtil, FetchListOptions, FetchOptions } from "debeem-utils";
 import { FetchResponse } from "ethers";
@@ -25,6 +23,7 @@ import {
 } from "../../../models/TransactionModels";
 import _ from "lodash";
 import {VaTokenItem} from "../../../validators/VaTokenItem";
+import { defaultTokens } from "../../../constants/ConstantToken";
 
 
 
@@ -105,7 +104,7 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 		switch ( chainId )
 		{
 			case 1 :		//	eth-mainnet
-			case 5 :		//	eth-goerli
+			//case 5 :		//	eth-goerli
 			case 11155111 :		//	eth-sepolia
 			case 137 :		//	polygon-mainnet
 				return [
@@ -146,9 +145,11 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 		switch ( chainId )
 		{
 			case 1 :		//	eth-mainnet
-				return defaultEthereumTokensMainnet;
-			case 5 :		//	eth-goerli
-				return defaultEthereumTokensGoerli;
+				return defaultTokens[ 1 ].map( item => item.address );
+			//case 5 :		//	eth-goerli
+			//	return defaultEthereumTokensGoerli;
+			case 11155111 :
+				return defaultTokens[ 11155111 ].map( item => item.address );
 			case 137 :		//	polygon-mainnet
 			case 80001 :		//	polygon-mumbai
 			case 42161 :		//	arb-mainnet

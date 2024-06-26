@@ -8,7 +8,7 @@ import { AbstractRpcService } from "../AbstractRpcService";
 import { IRpcService } from "../IRpcService";
 import { oneInch } from "../../../config";
 import { NetworkModels } from "../../../models/NetworkModels";
-import {OneInchTokenItem, OneInchTokenMap} from "../../../models/TokenModels";
+import { defaultOneInchTokenLogoItem, OneInchTokenItem, OneInchTokenMap } from "../../../models/TokenModels";
 import _ from "lodash";
 
 /**
@@ -100,7 +100,12 @@ export class OneInchTokenService extends AbstractRpcService implements IRpcServi
 				{
 					return reject( `${ this.constructor.name }.fetchTokenItemInfo :: invalid response` );
 				}
-				if ( ! OneInchTokenService.isValid1InchTokenItem( response.bodyJson ) )
+
+				const tokenItem : any = {
+					...response.bodyJson,
+					logo : defaultOneInchTokenLogoItem,
+				}
+				if ( ! OneInchTokenService.isValid1InchTokenItem( tokenItem ) )
 				{
 					return reject( `${ this.constructor.name }.fetchTokenItemInfo :: invalid 1inch token item` );
 				}
@@ -128,7 +133,7 @@ export class OneInchTokenService extends AbstractRpcService implements IRpcServi
 				//		]
 				//	}
 				//
-				return resolve( response.bodyJson as OneInchTokenItem );
+				return resolve( tokenItem as OneInchTokenItem );
 			}
 			catch ( err )
 			{
@@ -173,7 +178,15 @@ export class OneInchTokenService extends AbstractRpcService implements IRpcServi
 				let res : OneInchTokenMap = {};
 				for ( const key in body )
 				{
-					const item = body[ key ];
+					if ( ! _.isObject( body[ key ] ) )
+					{
+						return reject( `${ this.constructor.name }.fetchTokenMap :: invalid 1inch token item by body[ key ]` );
+					}
+
+					const item = {
+						...body[ key ],
+						logo : defaultOneInchTokenLogoItem
+					};
 					if ( OneInchTokenService.isValid1InchTokenItem( item ) )
 					{
 						const contractAddress = key.trim().toLowerCase();
@@ -197,7 +210,8 @@ export class OneInchTokenService extends AbstractRpcService implements IRpcServi
 	}
 
 	/**
-	 * 	check if the input object is a valid Resource1InchTokenItem
+	 * 	check if the input object is a valid OneInchTokenItem
+	 *
 	 *	@param item	{ [ key : string ] : any | null } the object to be checked
 	 *	@returns {boolean}
 	 */
@@ -235,6 +249,11 @@ export class OneInchTokenService extends AbstractRpcService implements IRpcServi
 				return false;
 			}
 		}
+		if ( ! this.isValid1InchTokenLogoItem( item.logo ) )
+		{
+			return false;
+		}
+
 		if ( ! Array.isArray( item.providers ) )
 		{
 			return false;
@@ -259,6 +278,37 @@ export class OneInchTokenService extends AbstractRpcService implements IRpcServi
 		}
 
 		//	...
+		return true;
+	}
+
+	/**
+	 * 	check if the input value is a valid OneInchTokenLogoItem
+	 *
+	 *	@param logoItem		{ { [ key : string ] : any } | null }
+	 *	@returns {boolean}
+	 */
+	public static isValid1InchTokenLogoItem( logoItem : { [ key : string ] : any } | null ) : boolean
+	{
+		if ( ! _.isObject( logoItem ) )
+		{
+			return false;
+		}
+		if ( ! _.isString( logoItem.oneInch ) )
+		{
+			return false;
+		}
+		if ( ! _.isString( logoItem.metaBeem ) )
+		{
+			return false;
+		}
+		if ( undefined !== logoItem.base64 )
+		{
+			if ( ! _.isString( logoItem.base64 ) )
+			{
+				return false;
+			}
+		}
+
 		return true;
 	}
 }
