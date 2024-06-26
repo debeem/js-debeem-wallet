@@ -26,7 +26,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xd01409314acb3b245cea9500ece3f6fd4d70ea30.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -43,6 +44,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
@@ -62,6 +64,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
@@ -110,7 +113,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 9,
         "logoURI": "https://tokens.1inch.io/0x461b71cff4d4334bba09489ace4b5dc1a1813445.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -126,7 +130,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x55c08ca52497e2f1534b59e2917bf524d4765257.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -143,6 +148,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -160,6 +166,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": false,
@@ -176,7 +183,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9e5bd9d9fad182ff0a93ba8085b664bcab00fa68.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -192,7 +200,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x30dcba0405004cf124045793e1933c798af9e66a.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -208,7 +217,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa8c8cfb141a3bb59fea1e2ea6b79b5ecbcd7b6ca.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -224,7 +234,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xfcf8eda095e37a41e002e266daad7efc1579bc0a.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -240,7 +251,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x66761fa41377003622aee3c7675fc7b5c1c2fac5.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -255,7 +267,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x32e6c34cd57087abbd59b5a4aecc4cb495924356.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": true,
         "tags": [
@@ -272,6 +285,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -289,6 +303,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -306,6 +321,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo"
         ],
@@ -341,6 +357,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Uniswap Labs Default"
         ],
@@ -358,7 +375,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1117ac6ad6cdf1a3bc543bad3b133724620522d5.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -375,6 +393,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Roll Social Money",
             "Zerion"
@@ -394,6 +413,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -410,7 +430,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x675bbc7514013e2073db7a919f6e4cbef576de37.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -444,6 +465,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -461,6 +483,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -476,7 +499,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x0b63128c40737b13647552e0c926bcfeccc35f93.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -492,7 +516,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x74232704659ef37c08995e386a2e26cc27a8d7b1.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -508,7 +533,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x35e78b3982e87ecfd5b3f3265b601c046cdbe232.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -524,7 +550,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa41f142b6eb2b164f8164cae0716892ce02f311f.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -555,7 +582,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf0d33beda4d734c72684b5f9abbebf715d0a7935.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -572,6 +600,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -603,7 +632,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3ea8ea4237344c9931214796d9417af1a1180770.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -620,6 +650,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Trust Wallet Assets"
         ],
         "eip2612": true,
@@ -636,7 +667,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9f52c8ecbee10e00d9faaac5ee9ba0ff6550f511.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -652,7 +684,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x329c6e459ffa7475718838145e5e85802db2a303.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -668,7 +701,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x83e9f223e1edb3486f876ee888d76bfba26c475a.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -685,6 +719,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
@@ -702,7 +737,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x616e8bfa43f920657b3497dbf40d6b1a02d4608d.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -718,7 +754,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3819f64f282bf135d62168c1e513280daf905e06.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -735,6 +772,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -752,6 +790,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -768,6 +807,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3ec8798b81485a254928b70cda1cf0a2bb0b74d7.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Defiprime"
         ],
         "eip2612": false,
@@ -785,6 +825,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
@@ -803,6 +844,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": false,
@@ -820,6 +862,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
@@ -837,7 +880,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xe5a733681bbe6cd8c764bb8078ef8e13a576dd78.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -869,7 +913,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x505b5eda5e25a67e1c24a2bf1a527ed9eb88bf04.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -886,6 +931,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": true,
@@ -903,6 +949,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
@@ -920,6 +967,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -937,6 +985,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -954,6 +1003,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -971,6 +1021,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
@@ -988,6 +1039,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x12b6893ce26ea6341919fe289212ef77e51688c8.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
@@ -1003,23 +1055,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x37cd4e8875e3edaffdfe9be63958f07effbd0bfd.png",
         "providers": [
-            "1inch"
-        ],
-        "eip2612": false,
-        "tags": [
-            "tokens"
-        ]
-    },
-    "0x3642c0680329ae3e103e2b5ab29ddfed4d43cbe5": {
-        "chainId": 1,
-        "symbol": "PL2",
-        "name": "Plenny",
-        "address": "0x3642c0680329ae3e103e2b5ab29ddfed4d43cbe5",
-        "decimals": 18,
-        "logoURI": null,
-        "providers": [
             "1inch",
-            "Arb Whitelist Era"
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -1036,6 +1073,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Trust Wallet Assets"
         ],
@@ -1054,6 +1092,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
@@ -1073,6 +1112,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -1089,7 +1129,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xea7cc765ebc94c4805e3bff28d7e4ae48d06468a.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -1106,6 +1147,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": true,
@@ -1121,7 +1163,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xe5f7ef61443fc36ae040650aa585b0395aef77c8.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -1213,6 +1256,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
@@ -1231,6 +1275,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -1253,6 +1298,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Gemini Token List",
             "Kleros Tokens",
@@ -1274,6 +1320,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Gemini Token List",
@@ -1296,6 +1343,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -1331,7 +1379,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x341c05c0e9b33c0e38d64de76516b2ce970bb3be.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -1347,7 +1396,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9a96ec9b57fb64fbc60b423d1f4da7691bd35079.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -1490,7 +1540,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x8c1bed5b9a0928467c9b1341da1d7bd5e10b6549.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -1508,6 +1559,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Dharma Token List",
             "Furucombo",
@@ -1530,6 +1582,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Uniswap Labs Default"
@@ -1551,6 +1604,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Dharma Token List",
@@ -1577,6 +1631,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Dharma Token List",
             "Furucombo",
@@ -1601,6 +1656,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
+            "Coinmarketcap",
             "Compound",
             "Dharma Token List",
             "Furucombo",
@@ -1626,6 +1682,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Trust Wallet Assets",
@@ -1646,6 +1703,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CMC DeFi",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Trust Wallet Assets",
@@ -1668,6 +1726,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Dharma Token List",
             "Furucombo",
@@ -1693,6 +1752,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Uniswap Labs Default",
@@ -1712,7 +1772,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x249ca82617ec3dfb2589c4c17ab7ec9765350a18.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": true,
         "tags": [
@@ -1777,6 +1838,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Uniswap Labs Default",
@@ -1796,6 +1858,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x57700244b20f84799a31c6c96dadff373ca9d6c5.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -1813,6 +1876,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -1835,6 +1899,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Uniswap Labs Default",
@@ -1854,6 +1919,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x5adc961d6ac3f7062d2ea45fefb8d8167d44b190.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
@@ -1873,6 +1939,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Trust Wallet Assets",
             "Zerion"
@@ -1893,6 +1960,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CMC DeFi",
+            "Coinmarketcap",
             "Curve Token List",
             "Dharma Token List",
             "Furucombo",
@@ -1917,6 +1985,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Dharma Token List",
@@ -1970,6 +2039,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC DeFi",
             "CMC Stablecoin",
             "CoinGecko",
+            "Coinmarketcap",
             "Compound",
             "Curve Token List",
             "Defiprime",
@@ -1998,6 +2068,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens",
             "Messari Verified",
@@ -2020,6 +2091,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Zerion"
@@ -2038,6 +2110,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x28dee01d53fed0edf5f6e310bf8ef9311513ae40.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "MyCrypto Token List",
             "Zerion"
         ],
@@ -2058,6 +2131,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -2144,6 +2218,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Dharma Token List",
             "Furucombo",
@@ -2169,6 +2244,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -2186,6 +2262,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -2207,6 +2284,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -2228,6 +2306,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Zerion"
         ],
@@ -2247,6 +2326,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -2272,6 +2352,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Gemini Token List",
@@ -2312,6 +2393,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1a5f9352af8af974bfc03399e3767df6370d82e4.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
@@ -2331,6 +2413,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "MyCrypto Token List",
             "Zerion"
         ],
@@ -2351,6 +2434,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Dharma Token List",
@@ -2376,6 +2460,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -2396,6 +2481,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
@@ -2415,6 +2501,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Gemini Token List",
             "Kleros Tokens",
@@ -2438,6 +2525,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -2465,6 +2553,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Compound",
             "Curve Token List",
             "Defiprime",
@@ -2491,6 +2580,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -2511,6 +2601,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -2530,6 +2621,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Compound",
             "Curve Token List",
             "Dharma Token List",
@@ -2553,6 +2645,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -2570,6 +2663,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x607c794cda77efb21f8848b7910ecf27451ae842.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Dharma Token List",
             "Zerion"
         ],
@@ -2589,6 +2683,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -2629,6 +2724,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "MyCrypto Token List",
             "Zerion"
         ],
@@ -2650,6 +2746,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Dharma Token List",
@@ -2675,6 +2772,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "MyCrypto Token List",
             "Zerion"
         ],
@@ -2693,6 +2791,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -2710,6 +2809,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Zerion"
         ],
@@ -2729,6 +2829,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
@@ -2749,6 +2850,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Zerion"
         ],
@@ -2770,6 +2872,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -2809,6 +2912,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7b123f53421b1bf8533339bfbdc7c98aa94163db.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -2826,6 +2930,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "MyCrypto Token List",
             "Zerion"
         ],
@@ -2844,6 +2949,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Kleros Tokens",
             "Zerion"
@@ -2887,6 +2993,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Uniswap Labs Default",
@@ -2907,6 +3014,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Uniswap Labs Default",
@@ -2929,6 +3037,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC200 ERC20",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -2952,6 +3061,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Agora dataFi Tokens",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -2974,6 +3084,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
@@ -2994,6 +3105,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
@@ -3038,6 +3150,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC Stablecoin",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -3079,6 +3192,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
@@ -3102,6 +3216,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Trust Wallet Assets",
@@ -3123,6 +3238,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -3142,6 +3258,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x95172ccbe8344fecd73d0a30f54123652981bd6f.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Dharma Token List",
             "Kleros Tokens",
             "Zerion"
@@ -3183,6 +3300,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Agora dataFi Tokens",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -3204,6 +3322,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Kleros Tokens",
             "Zerion"
@@ -3223,6 +3342,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Messari Verified",
             "MyCrypto Token List",
@@ -3264,6 +3384,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9cb2f26a23b8d89973f08c957c4d7cdf75cd341c.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Dharma Token List",
             "Kleros Tokens",
             "Zerion"
@@ -3286,6 +3407,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Dharma Token List",
@@ -3315,6 +3437,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC Stablecoin",
             "CoinGecko",
+            "Coinmarketcap",
             "Compound",
             "Curve Token List",
             "Defiprime",
@@ -3344,6 +3467,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -3367,6 +3491,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens",
             "Zerion"
@@ -3407,6 +3532,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa462d0e6bb788c7807b1b1c96992ce1f7069e195.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -3444,6 +3570,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -3465,6 +3592,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -3487,6 +3615,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC Stablecoin",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
@@ -3506,6 +3635,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -3523,6 +3653,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb6c4267c4877bb0d6b1685cfd85b0fbe82f105ec.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -3543,6 +3674,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Dharma Token List",
             "Furucombo",
@@ -3568,6 +3700,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Uniswap Labs Default",
@@ -3591,6 +3724,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Dharma Token List",
             "Furucombo",
@@ -3651,6 +3785,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -3674,6 +3809,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Compound",
             "Curve Token List",
             "Defiprime",
@@ -3702,6 +3838,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Dharma Token List",
@@ -3729,6 +3866,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Uniswap Labs Default",
             "Zerion"
@@ -3749,6 +3887,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -3774,6 +3913,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CMC DeFi",
+            "Coinmarketcap",
             "Compound",
             "Dharma Token List",
             "Kleros Tokens",
@@ -3799,6 +3939,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
@@ -3818,6 +3959,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -3834,6 +3976,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xc3dd23a0a854b4f9ae80670f528094e9eb607ccb.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -3852,6 +3995,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -3872,6 +4016,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CMC DeFi",
+            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
@@ -3892,6 +4037,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xcd62b1c403fa761baadfc74c525ce2b51780b184.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Furucombo",
             "MyCrypto Token List",
             "Zerion"
@@ -3910,6 +4056,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xd15ecdcf5ea68e3995b2d0527a0ae0a3258302f8.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
@@ -3930,6 +4077,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Dharma Token List",
             "Kleros Tokens",
@@ -3954,6 +4102,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Dharma Token List",
             "Furucombo",
@@ -3976,6 +4125,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
@@ -3995,6 +4145,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
@@ -4029,6 +4180,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -4053,6 +4205,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC Stablecoin",
             "CoinGecko",
+            "Coinmarketcap",
             "Compound",
             "Curve Token List",
             "Dharma Token List",
@@ -4082,6 +4235,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC Stablecoin",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -4106,6 +4260,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Compound",
             "Dharma Token List",
             "Furucombo",
@@ -4129,6 +4284,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Messari Verified",
             "MyCrypto Token List",
@@ -4148,6 +4304,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xdfe691f37b6264a90ff507eb359c45d55037951c.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -4164,6 +4321,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xe17f017475a709de58e976081eb916081ff4c9d5.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -4184,6 +4342,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Kleros Tokens",
             "Messari Verified",
@@ -4207,6 +4366,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Compound",
             "Defiprime",
             "Dharma Token List",
@@ -4231,6 +4391,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xe48972fcd82a274411c01834e2f031d4377fa2c0.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -4249,6 +4410,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Dharma Token List",
             "Furucombo",
@@ -4273,6 +4435,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Dharma Token List",
             "Furucombo",
@@ -4296,6 +4459,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf29e46887ffae92f1ff87dfe39713875da541373.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -4313,6 +4477,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf2f9a7e93f845b3ce154efbeb64fb9346fcce509.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -4353,6 +4518,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CMC DeFi",
+            "Coinmarketcap",
             "Compound",
             "Dharma Token List",
             "Furucombo",
@@ -4374,6 +4540,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf8e386eda857484f5a12e4b5daa9984e06e73705.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "MyCrypto Token List",
             "Zerion"
         ],
@@ -4391,6 +4558,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf911a7ec46a2c6fa49193212fe4a2a9b95851c27.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Dharma Token List",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -4412,6 +4580,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Messari Verified",
@@ -4434,6 +4603,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "MyCrypto Token List",
@@ -4491,6 +4661,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CMC DeFi",
+            "Coinmarketcap",
             "Compound",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -4512,6 +4683,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Compound",
             "Dharma Token List",
             "Furucombo",
@@ -4536,6 +4708,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Compound",
             "Curve Token List",
             "Dharma Token List",
@@ -4561,6 +4734,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
@@ -4581,6 +4755,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -4608,6 +4783,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Compound",
             "Curve Token List",
             "Defiprime",
@@ -4638,6 +4814,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC DeFi",
             "CMC Stablecoin",
             "CoinGecko",
+            "Coinmarketcap",
             "Compound",
             "Kleros Tokens",
             "Zerion"
@@ -4660,6 +4837,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Dharma Token List",
             "Furucombo",
@@ -4686,6 +4864,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Compound",
             "Curve Token List",
             "Furucombo",
@@ -4708,6 +4887,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3a3a65aab0dd2a17e3f1947ba16138cd37d08c04.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Curve Token List",
             "Dharma Token List",
             "Furucombo",
@@ -4730,6 +4910,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Zerion"
         ],
@@ -4765,6 +4946,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7d2d3688df45ce7c552e19c27e007673da9204b8.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -4784,6 +4966,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Zerion"
         ],
@@ -4856,6 +5039,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "MyCrypto Token List",
             "Zerion"
@@ -5011,6 +5195,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
@@ -5029,6 +5214,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4de2573e27e648607b50e1cfff921a33e4a34405.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -5047,6 +5233,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC Stablecoin",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -5092,6 +5279,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
@@ -5112,6 +5300,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Messari Verified",
@@ -5132,6 +5321,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1c5db575e2ff833e46a2e9864c22f4b22e0b37c2.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Wrapped Tokens",
@@ -5152,6 +5342,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -5173,6 +5364,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3a9fff453d50d4ac52a6890647b823379ba36b9e.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
@@ -5193,6 +5385,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "MyCrypto Token List",
             "Zerion"
@@ -5213,6 +5406,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Gemini Token List",
             "Kleros Tokens",
@@ -5236,6 +5430,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Gemini Token List",
             "Kleros Tokens",
@@ -5259,6 +5454,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "BA ERC20 SEC Action",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -5277,6 +5473,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
@@ -5323,6 +5520,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -5343,6 +5541,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -5361,6 +5560,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -5379,6 +5579,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -5397,6 +5598,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
@@ -5417,6 +5619,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -5440,6 +5643,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Dharma Token List",
@@ -5464,6 +5668,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -5503,6 +5708,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Uniswap Labs Default",
@@ -5523,6 +5729,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Kleros Tokens",
             "Trust Wallet Assets",
@@ -5543,6 +5750,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Uniswap Labs Default",
@@ -5564,6 +5772,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Kleros Tokens",
             "Zerion"
@@ -5583,6 +5792,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Zerion"
@@ -5603,6 +5813,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
@@ -5623,6 +5834,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Trust Wallet Assets",
@@ -5644,6 +5856,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -5661,6 +5874,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4fe5851c9af07df9e5ad8217afae1ea72737ebda.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Dharma Token List",
             "Zerion"
         ],
@@ -5681,6 +5895,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -5705,6 +5920,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -5722,6 +5938,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xba21ef4c9f433ede00badefcc2754b8e74bd538a.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
@@ -5740,6 +5957,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xfffffffff15abf397da76f1dcc1a1604f45126db.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
@@ -5760,6 +5978,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
@@ -5778,6 +5997,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x8a6f3bf52a26a21531514e23016eeae8ba7e7018.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -5830,6 +6050,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Gemini Token List",
@@ -5853,6 +6074,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Uniswap Labs Default",
@@ -5875,6 +6097,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Compound",
             "Curve Token List",
             "Defiprime",
@@ -5903,6 +6126,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
@@ -5925,6 +6149,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
@@ -5945,6 +6170,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
@@ -5966,6 +6192,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -5983,6 +6210,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Zerion"
@@ -6005,6 +6233,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -6030,6 +6259,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
@@ -6050,6 +6280,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -6068,6 +6299,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -6086,6 +6318,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
@@ -6108,6 +6341,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Uniswap Labs Default",
@@ -6128,6 +6362,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CMC Stablecoin",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -6149,6 +6384,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x87edffde3e14c7a66c9b9724747a1c5696b742e6.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -6165,6 +6401,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xad6a626ae2b43dcb1b39430ce496d2fa0365ba9c.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
@@ -6184,6 +6421,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CMC DeFi",
+            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
@@ -6204,6 +6442,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Compound",
             "Furucombo",
             "Kleros Tokens"
@@ -6224,6 +6463,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -6247,6 +6487,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": true,
@@ -6265,6 +6506,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
@@ -6285,6 +6527,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -6303,6 +6546,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -6325,6 +6569,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Gemini Token List",
             "Kleros Tokens",
@@ -6347,6 +6592,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Uniswap Labs Default",
@@ -6368,6 +6614,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
@@ -6386,6 +6633,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x36f3fd68e7325a35eb768f1aedaae9ea0689d723.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Zerion"
@@ -6405,6 +6653,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Gemini Token List",
@@ -6428,6 +6677,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CMC DeFi",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -6450,6 +6700,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -6467,6 +6718,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -6484,6 +6736,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xea319e87cf06203dae107dd8e5672175e3ee976c.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -6501,6 +6754,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3383c5a8969dc413bfddc9656eb80a1408e4ba20.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Furucombo",
             "Zerion"
         ],
@@ -6519,6 +6773,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Uniswap Labs Default",
@@ -6540,6 +6795,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Gemini Token List",
             "Kleros Tokens",
@@ -6562,6 +6818,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -6581,6 +6838,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -6598,6 +6856,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -6615,6 +6874,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CMC DeFi",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -6632,6 +6892,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Roll Social Money",
@@ -6652,6 +6913,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Trust Wallet Assets",
@@ -6673,6 +6935,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
@@ -6693,6 +6956,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -6711,6 +6975,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Uniswap Labs Default",
@@ -6731,6 +6996,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -6749,6 +7015,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
@@ -6768,6 +7035,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -6784,6 +7052,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9d47894f8becb68b9cf3428d256311affe8b068b.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -6801,6 +7070,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Zerion"
         ],
@@ -6819,6 +7089,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "Zerion"
         ],
@@ -6838,6 +7109,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Trust Wallet Assets",
             "Zerion"
         ],
@@ -6855,6 +7127,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x12e51e77daaa58aa0e9247db7510ea4b46f9bead.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Furucombo",
             "Trust Wallet Assets",
             "Zerion"
@@ -6908,6 +7181,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Zerion"
         ],
@@ -6927,6 +7201,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
@@ -6946,6 +7221,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens",
             "Zerion"
@@ -6965,6 +7241,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -6981,6 +7258,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3e780920601d61cedb860fe9c4a90c9ea6a35e78.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -7000,6 +7278,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -7020,6 +7299,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Uniswap Labs Default",
             "Zerion"
         ],
@@ -7038,6 +7318,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -7055,6 +7336,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Zerion"
         ],
@@ -7073,6 +7355,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -7090,6 +7373,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Trust Wallet Assets",
@@ -7112,6 +7396,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Zerion"
         ],
@@ -7129,6 +7414,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x26607ac599266b21d13c7acf7942c7701a8b699c.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -7147,6 +7433,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Trust Wallet Assets",
             "Zerion"
         ],
@@ -7181,6 +7468,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -7281,6 +7569,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
@@ -7597,6 +7886,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -7614,6 +7904,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
@@ -7633,6 +7924,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -7650,6 +7942,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -7696,6 +7989,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Trust Wallet Assets",
             "Zerion"
         ],
@@ -7713,6 +8007,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x368b3a58b5f49392e5c9e4c998cb0bb966752e51.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -7729,6 +8024,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4b4d2e899658fb59b1d518b68fe836b100ee8958.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -7746,6 +8042,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -7763,6 +8060,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -7780,6 +8078,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -7802,6 +8101,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
@@ -7821,6 +8121,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
@@ -7840,6 +8141,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x2b4200a8d373d484993c37d63ee14aee0096cd12.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": true,
@@ -7859,6 +8161,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Agora dataFi Tokens",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default",
@@ -7879,6 +8182,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -7897,6 +8201,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": true,
@@ -7915,6 +8220,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -7938,6 +8244,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default",
@@ -7958,6 +8265,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -7975,6 +8283,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -7993,6 +8302,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Uniswap Labs Default",
             "Zerion"
@@ -8012,6 +8322,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
@@ -8031,6 +8342,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
@@ -8052,6 +8364,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -8072,6 +8385,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9248c485b0b80f76da451f167a8db30f33c70907.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -8090,6 +8404,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default",
@@ -8110,6 +8425,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Dharma Token List",
             "MyCrypto Token List",
             "Zerion"
@@ -8165,6 +8481,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -8183,6 +8500,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -8207,6 +8525,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens",
             "Zerion"
@@ -8225,6 +8544,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x67c597624b17b16fb77959217360b7cd18284253.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
@@ -8244,6 +8564,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -8263,6 +8584,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
@@ -8282,6 +8604,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -8299,6 +8622,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -8317,6 +8641,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -8335,6 +8660,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -8351,6 +8677,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb987d48ed8f2c468d52d6405624eadba5e76d723.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
@@ -8369,6 +8696,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x159751323a9e0415dd3d6d42a1212fe9f4a0848c.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -8387,6 +8715,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
@@ -8442,6 +8771,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -8482,6 +8812,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -8500,6 +8831,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -8518,6 +8850,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Gemini Token List",
             "Kleros Tokens",
@@ -8541,6 +8874,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -8558,7 +8892,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x298d492e8c1d909d3f63bc4a36c66c64acb3d695.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -8576,6 +8911,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
@@ -8613,6 +8949,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1337def18c680af1f9f45cbcab6309562975b1dd.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Trust Wallet Assets",
             "Zerion"
         ],
@@ -8631,6 +8968,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Zerion"
         ],
@@ -8648,7 +8986,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3fa729b4548becbad4eab6ef18413470e6d5324c.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -8683,6 +9022,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -8704,6 +9044,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Gemini Token List",
             "Kleros Tokens",
@@ -8727,6 +9068,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -8744,6 +9086,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa1afffe3f4d611d252010e3eaf6f4d77088b0cd7.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -8762,6 +9105,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -8783,6 +9127,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Trust Wallet Assets",
@@ -8804,6 +9149,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1d37986f252d0e349522ea6c3b98cb935495e63e.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
@@ -8823,6 +9169,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": true,
@@ -8840,6 +9187,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
@@ -8877,6 +9225,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -8894,6 +9243,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -8911,6 +9261,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
@@ -8929,6 +9280,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -8947,6 +9299,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -8963,6 +9316,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9aeb50f542050172359a0e1a25a9933bc8c01259.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -8997,6 +9351,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Gemini Token List",
@@ -9019,6 +9374,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -9036,6 +9392,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x8a9c4dfe8b9d8962b31e4e16f8321c44d48e246e.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9053,6 +9410,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Uniswap Labs Default",
             "Zerion"
@@ -9072,6 +9430,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -9090,6 +9449,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -9107,6 +9467,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x297d33e17e61c2ddd812389c2105193f8348188a.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -9124,6 +9485,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xec681f28f4561c2a9534799aa38e0d36a83cf478.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9142,6 +9504,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -9161,6 +9524,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -9179,6 +9543,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9196,6 +9561,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -9214,6 +9580,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -9231,6 +9598,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x018fb5af9d015af25592a014c4266a84143de7a0.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9248,6 +9616,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9265,6 +9634,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9281,6 +9651,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x66c0dded8433c9ea86c8cf91237b14e10b4d70b7.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9331,6 +9702,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9348,6 +9720,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Trust Wallet Assets",
@@ -9369,6 +9742,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
@@ -9387,6 +9761,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x76c5449f4950f6338a393f53cda8b53b0cd3ca3a.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": true,
@@ -9404,6 +9779,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9421,6 +9797,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9437,6 +9814,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1456688345527be1f37e9e627da0837d6f08c925.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Zerion"
@@ -9459,6 +9837,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -9496,6 +9875,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9af15d7b8776fa296019979e70a5be53c714a7ec.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9513,6 +9893,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xe6c3502997f97f9bde34cb165fbce191065e068f.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9530,6 +9911,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Zerion"
         ],
@@ -9547,6 +9929,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x196c81385bc536467433014042788eb707703934.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9564,6 +9947,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9581,6 +9965,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -9599,6 +9984,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "MyCrypto Token List",
             "Zerion"
         ],
@@ -9617,6 +10003,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -9634,6 +10021,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xed40834a13129509a89be39a9be9c0e96a0ddd71.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -9652,6 +10040,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens",
             "Zerion"
@@ -9671,6 +10060,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
@@ -9690,6 +10080,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9706,6 +10097,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x10be9a8dae441d276a5027936c3aaded2d82bc15.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Trust Wallet Assets",
             "Zerion"
         ],
@@ -9724,6 +10116,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9741,6 +10134,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "MyCrypto Token List",
             "Uniswap Labs Default",
             "Zerion"
@@ -9759,6 +10153,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x945facb997494cc2570096c74b5f66a3507330a1.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9777,6 +10172,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens",
             "Trust Wallet Assets",
@@ -9798,6 +10194,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Zerion"
         ],
@@ -9816,6 +10213,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9834,6 +10232,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -9857,6 +10256,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -9874,6 +10274,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x34612903db071e888a4dadcaa416d3ee263a87b9.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9891,6 +10292,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9908,6 +10310,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9925,6 +10328,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9941,6 +10345,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7eaf9c89037e4814dc0d9952ac7f888c784548db.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -9959,6 +10364,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -9977,6 +10383,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Compound",
             "Kleros Tokens",
             "Trust Wallet Assets",
@@ -9997,6 +10404,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -10013,6 +10421,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xcb5f72d37685c3d5ad0bb5f982443bc8fcdf570e.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
@@ -10033,6 +10442,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default",
@@ -10053,6 +10463,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -10070,6 +10481,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -10108,6 +10520,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -10126,6 +10539,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Gemini Token List",
             "Kleros Tokens",
@@ -10147,6 +10561,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
@@ -10166,6 +10581,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -10184,6 +10600,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Trust Wallet Assets",
             "Zerion"
         ],
@@ -10202,6 +10619,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
@@ -10221,6 +10639,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -10238,6 +10657,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Uniswap Labs Default",
             "Zerion"
         ],
@@ -10256,6 +10676,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -10273,6 +10694,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Uniswap Labs Default",
             "Zerion"
         ],
@@ -10290,6 +10712,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9b53e429b0badd98ef7f01f03702986c516a5715.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -10308,6 +10731,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Uniswap Labs Default",
@@ -10327,6 +10751,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x6149c26cd2f7b5ccdb32029af817123f6e37df5b.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -10345,6 +10770,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default",
@@ -10366,6 +10792,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -10383,6 +10810,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7777777777697cfeecf846a76326da79cc606517.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -10400,6 +10828,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
@@ -10418,6 +10847,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x6c972b70c533e2e045f333ee28b9ffb8d717be69.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -10435,6 +10865,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default",
@@ -10456,6 +10887,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
@@ -10475,6 +10907,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -10492,6 +10925,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -10542,6 +10976,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": true,
@@ -10558,6 +10993,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x661ab0ed68000491d98c796146bcf28c20d7c559.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -10575,6 +11011,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
@@ -10594,6 +11031,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
@@ -10613,6 +11051,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -10629,6 +11068,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4c25bdf026ea05f32713f00f73ca55857fbf6342.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -10645,6 +11085,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x68a3637ba6e75c0f66b61a42639c4e9fcd3d4824.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -10663,6 +11104,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Uniswap Labs Default",
             "Zerion"
         ],
@@ -10680,6 +11122,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x739763a258640919981f9ba610ae65492455be53.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -10697,6 +11140,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default",
@@ -10717,6 +11161,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -10774,6 +11219,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -10791,6 +11237,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -10844,6 +11291,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Uniswap Labs Default",
             "Zerion"
@@ -10878,6 +11326,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -10894,7 +11343,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x892a6f9df0147e5f079b0993f486f9aca3c87881.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -10928,6 +11378,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default",
@@ -10948,6 +11399,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Uniswap Labs Default",
             "Zerion"
@@ -10968,6 +11420,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -10986,6 +11439,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -11002,6 +11456,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1cbb83ebcd552d5ebf8131ef8c9cd9d9bab342bc.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
@@ -11021,6 +11476,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -11039,6 +11495,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Roll Social Money",
             "Zerion"
         ],
@@ -11087,6 +11544,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -11105,6 +11563,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -11123,6 +11582,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Uniswap Labs Default"
@@ -11141,7 +11601,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x544c42fbb96b39b21df61cf322b5edc285ee7429.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11158,6 +11619,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
@@ -11175,6 +11637,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -11209,6 +11672,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets"
         ],
@@ -11226,7 +11690,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa8b61cff52564758a204f841e636265bebc8db9b.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": true,
         "tags": [
@@ -11242,7 +11707,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x850aab69f0e0171a9a49db8be3e71351c8247df4.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11259,6 +11725,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "MyCrypto Token List"
         ],
         "eip2612": false,
@@ -11275,7 +11742,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x73374ea518de7addd4c2b624c0e8b113955ee041.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11292,6 +11760,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -11309,7 +11778,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xe9a95d175a5f4c9369f3b74222402eb1b837693b.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11325,6 +11795,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xdea67845a51e24461d5fed8084e69b426af3d5db.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens"
         ],
@@ -11342,7 +11813,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x8b39b70e39aa811b69365398e0aace9bee238aeb.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11357,7 +11829,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 8,
         "logoURI": "https://tokens.1inch.io/0xb20043f149817bff5322f1b928e89abfc65a9925.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11389,7 +11862,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x14da7b27b2e0fedefe0a664118b0c9bc68e2e9af.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11421,6 +11895,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -11437,7 +11912,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xd9c2d319cd7e6177336b0a9c93c21cb48d84fb54.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11472,7 +11948,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb9d99c33ea2d86ec5ec6b8a4dd816ebba64404af.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11489,6 +11966,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -11504,7 +11982,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xa42f266684ac2ad6ecb00df95b1c76efbb6f136c.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11520,7 +11999,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x07bac35846e5ed502aa91adf6a9e7aa210f2dcbe.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11537,6 +12017,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Zerion"
         ],
@@ -11554,7 +12035,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9f9c8ec3534c3ce16f928381372bfbfbfb9f4d24.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11571,6 +12053,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List"
         ],
@@ -11589,6 +12072,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -11606,7 +12090,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xfc979087305a826c2b2a0056cfaba50aad3e6439.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11623,6 +12108,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
@@ -11639,7 +12125,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa92e7c82b11d10716ab534051b271d2f6aef7df5.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11654,7 +12141,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xc3d088842dcf02c13699f936bb83dfbbc6f721ab.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11686,6 +12174,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Uniswap Labs Default"
@@ -11705,6 +12194,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens"
@@ -11725,6 +12215,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
@@ -11744,6 +12235,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
@@ -11761,7 +12253,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa0cf46eb152656c7090e769916eb44a138aaa406.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11795,6 +12288,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
@@ -11813,6 +12307,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
@@ -11829,7 +12324,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x99295f1141d58a99e939f7be6bbe734916a875b8.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11846,6 +12342,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -11862,7 +12359,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xff75ced57419bcaebe5f05254983b013b0646ef5.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11878,7 +12376,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x26c8afbbfe1ebaca03c2bb082e69d0476bffe099.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11911,6 +12410,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -11927,7 +12427,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x106538cc16f938776c7c180186975bca23875287.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11943,7 +12444,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3505f494c3f0fed0b594e01fa41dd3967645ca39.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11959,7 +12461,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xfbbe9b1142c699512545f47937ee6fae0e4b0aa9.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11975,7 +12478,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x29cbd0510eec0327992cd6006e63f9fa8e7f33b7.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -11991,6 +12495,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb78b3320493a4efaa1028130c5ba26f0b6085ef8.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
@@ -12009,6 +12514,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Dharma Token List",
             "Kleros Tokens",
@@ -12031,6 +12537,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets"
         ],
@@ -12048,7 +12555,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf3ae5d769e153ef72b4e3591ac004e89f48107a1.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -12065,6 +12573,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Gemini Token List",
@@ -12087,7 +12596,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xe0b9a2c3e9f40cf74b2c7f591b2b0cca055c3112.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -12103,7 +12613,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x88acdd2a6425c3faae4bc9650fd7e27e0bebb7ab.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": true,
         "tags": [
@@ -12134,7 +12645,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x33840024177a7daca3468912363bed8b425015c5.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -12151,6 +12663,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -12168,6 +12681,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
@@ -12185,6 +12699,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
@@ -12202,6 +12717,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -12219,6 +12735,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -12235,6 +12752,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x16c52ceece2ed57dad87319d91b5e3637d50afa4.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Defiprime"
         ],
         "eip2612": false,
@@ -12284,7 +12802,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4730fb1463a6f1f44aeb45f6c5c422427f37f4d0.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -12301,6 +12820,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Uniswap Labs Default"
         ],
@@ -12318,7 +12838,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xe796d6ca1ceb1b022ece5296226bf784110031cd.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -12335,6 +12856,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
@@ -12352,6 +12874,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens"
         ],
@@ -12371,6 +12894,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List"
         ],
@@ -12388,7 +12912,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa02120696c7b8fe16c09c749e4598819b2b0e915.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -12404,7 +12929,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x2f109021afe75b949429fe30523ee7c0d5b27207.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -12421,6 +12947,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Uniswap Labs Default"
@@ -12439,7 +12966,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x5218e472cfcfe0b64a064f055b43b4cdc9efd3a6.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -12487,7 +13015,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x5a666c7d92e5fa7edcb6390e4efd6d0cdd69cf37.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": true,
         "tags": [
@@ -12504,6 +13033,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
@@ -12521,6 +13051,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
@@ -12539,6 +13070,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -12556,7 +13088,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "Arb Whitelist Era",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": true,
         "tags": [
@@ -12573,6 +13106,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
@@ -12591,6 +13125,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -12608,6 +13143,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets"
         ],
@@ -12627,6 +13163,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets"
         ],
@@ -12644,7 +13181,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7c8155909cd385f120a56ef90728dd50f9ccbe52.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -12661,6 +13199,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets"
         ],
@@ -12677,7 +13216,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x182f4c4c97cd1c24e1df8fc4c053e5c47bf53bef.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -12693,7 +13233,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7bef710a5759d197ec0bf621c3df802c2d60d848.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -12709,7 +13250,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x358aa737e033f34df7c54306960a38d09aabd523.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -12726,6 +13268,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Gemini Token List",
             "Kleros Tokens",
@@ -12746,6 +13289,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
@@ -12762,7 +13306,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x841fb148863454a3b3570f515414759be9091465.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -12778,7 +13323,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa2b4c0af19cc16a6cfacce81f192b024d625817d_1.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -12829,6 +13375,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -12846,6 +13393,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -12881,6 +13429,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
@@ -12901,6 +13450,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo"
         ],
@@ -12919,7 +13469,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7697b462a7c4ff5f8b55bdbc2f4076c2af9cf51a.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -12952,6 +13503,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
@@ -12971,6 +13523,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
@@ -12986,7 +13539,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xeb58343b36c7528f23caae63a150240241310049.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -13003,6 +13557,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -13020,6 +13575,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens",
             "Messari Verified",
@@ -13043,7 +13599,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "Arb Whitelist Era",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": true,
         "tags": [
@@ -13060,6 +13617,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Set"
         ],
@@ -13077,7 +13635,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3301ee63fb29f863f2333bd4466acb46cd8323e6.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -13094,6 +13653,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Gemini Token List",
             "Kleros Tokens",
@@ -13114,7 +13674,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x87de305311d5788e8da38d19bb427645b09cb4e5.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -13130,7 +13691,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf65b5c5104c4fafd4b709d9d60a185eae063276c.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -13166,7 +13728,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 9,
         "logoURI": "https://tokens.1inch.io/0x944eee930933be5e23b690c8589021ec8619a301.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -13183,7 +13746,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xdc349913d53b446485e98b76800b6254f43df695.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -13200,6 +13764,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1681bcb589b3cfcf0c0616b0ce9b19b240643dc1.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -13216,7 +13781,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 0,
         "logoURI": "https://tokens.1inch.io/0xa150db9b1fa65b44799d4dd949d922c0a33ee606.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -13234,6 +13800,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "BA ERC20 SEC Action",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets"
         ],
@@ -13253,6 +13820,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens"
@@ -13271,6 +13839,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x456d8f0d25a4e787ee60c401f8b963a465148f70.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -13288,6 +13857,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x8cb924583681cbfe487a62140a994a49f833c244.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -13304,7 +13874,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x10633216e7e8281e33c86f02bf8e565a635d9770.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -13336,7 +13907,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xed30dd7e50edf3581ad970efc5d9379ce2614adb.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": true,
         "tags": [
@@ -13353,6 +13925,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens"
         ],
@@ -13371,6 +13944,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
@@ -13389,6 +13963,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -13405,7 +13980,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x6595b8fd9c920c81500dca94e53cdc712513fb1f.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -13421,7 +13997,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x474021845c4643113458ea4414bdb7fb74a01a77.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -13438,6 +14015,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
@@ -13457,6 +14035,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -13490,7 +14069,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x69fa8e7f6bf1ca1fb0de61e1366f7412b827cc51.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -13507,6 +14087,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
@@ -13523,7 +14104,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x853bb55c1f469902f088a629db8c8803a9be3857.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -13541,6 +14123,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
@@ -13558,6 +14141,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -13575,6 +14159,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo"
         ],
@@ -13594,6 +14179,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -13609,7 +14195,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x76417e660df3e5c90c0361674c192da152a806e4.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -13626,6 +14213,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -13643,6 +14231,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo"
         ],
         "eip2612": true,
@@ -13660,6 +14249,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -13694,7 +14284,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x06f3c323f0238c72bf35011071f2b5b7f43a054c.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -13710,6 +14301,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x106552c11272420aad5d7e94f8acab9095a6c952.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
@@ -13729,6 +14321,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
@@ -13767,7 +14360,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa4ef4b0b23c1fc81d3f9ecf93510e64f58a4a016.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -13784,6 +14378,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "MyCrypto Token List"
         ],
@@ -13801,7 +14396,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x738865301a9b7dd80dc3666dd48cf034ec42bdda.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -13818,6 +14414,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
@@ -13835,6 +14432,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -13851,7 +14449,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x62dc4817588d53a056cbbd18231d91ffccd34b2a.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -13883,6 +14482,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
@@ -13899,7 +14499,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa64dfe8d86963151e6496bee513e366f6e42ed79.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -13917,6 +14518,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Gemini Token List",
@@ -13939,6 +14541,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Gemini Token List",
@@ -13960,7 +14563,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xde5ed76e7c05ec5e4572cfc88d1acea165109e44.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -13977,6 +14581,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Uniswap Labs Default"
         ],
@@ -13995,6 +14600,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": true,
@@ -14066,6 +14672,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -14089,6 +14696,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Dharma Token List",
             "Furucombo",
@@ -14128,7 +14736,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 9,
         "logoURI": "https://tokens.1inch.io/0x0c3685559af6f3d20c501b1076a8056a0a14426a.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -14146,6 +14755,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -14163,6 +14773,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -14179,6 +14790,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xed0889f7e1c7c7267407222be277e1f1ef4d4892.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -14196,6 +14808,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
@@ -14213,7 +14826,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 9,
         "logoURI": "https://tokens.1inch.io/0xfb40e79e56cc7d406707b66c4fd175e07eb2ae3c.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -14228,7 +14842,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 9,
         "logoURI": "https://tokens.1inch.io/0x28c5805b64d163588a909012a628b5a03c1041f9.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -14245,6 +14860,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -14261,7 +14877,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf32aa187d5bc16a2c02a6afb7df1459d0d107574.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -14279,6 +14896,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Uniswap Labs Default"
         ],
@@ -14297,6 +14915,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens"
         ],
@@ -14315,6 +14934,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -14332,6 +14952,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
@@ -14366,6 +14987,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
@@ -14384,6 +15006,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
@@ -14401,7 +15024,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1fbd3df007eb8a7477a1eab2c63483dcc24effd6.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -14416,7 +15040,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 9,
         "logoURI": "https://tokens.1inch.io/0xb1a88c33091490218965787919fcc9862c1798ee.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -14433,7 +15058,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xcfeaead4947f0705a14ec42ac3d44129e1ef3ed5.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -14450,7 +15076,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "Arb Whitelist Era",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -14466,7 +15093,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x8254e26e453eb5abd29b3c37ac9e8da32e5d3299.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": true,
         "tags": [
@@ -14482,7 +15110,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3b484b82567a09e2588a13d54d032153f0c0aee0.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -14498,7 +15127,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x16cc8367055ae7e9157dbcb9d86fd6ce82522b31.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -14515,6 +15145,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -14533,6 +15164,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List"
         ],
@@ -14551,6 +15183,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -14566,7 +15199,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xa68dd8cb83097765263adad881af6eed479c4a33.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -14583,7 +15217,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb56a1f3310578f23120182fb2e58c087efe6e147.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -14617,6 +15252,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
@@ -14636,6 +15272,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -14652,7 +15289,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x73d7c860998ca3c01ce8c808f5577d94d545d1b4.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -14669,6 +15307,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Trust Wallet Assets",
@@ -14690,6 +15329,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Kleros Tokens"
@@ -14708,7 +15348,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x916c5de09cf63f6602d1e1793fb41f6437814a62.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -14726,6 +15367,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": true,
@@ -14742,7 +15384,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x618679df9efcd19694bb1daa8d00718eacfa2883_1.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -14759,6 +15402,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
@@ -14777,7 +15421,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xd38bb40815d2b0c2d2c866e0c72c5728ffc76dd9.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": true,
         "tags": [
@@ -14794,6 +15439,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets"
         ],
@@ -14811,7 +15457,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xd5d86fc8d5c0ea1ac1ac5dfab6e529c9967a45e9.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -14827,7 +15474,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x2602278ee1882889b946eb11dc0e810075650983.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -14844,6 +15492,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -14861,6 +15510,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
@@ -14880,6 +15530,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Gemini Token List",
             "Uniswap Labs Default"
@@ -14916,6 +15567,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Trust Wallet Assets",
             "Uniswap Labs Default"
         ],
@@ -14933,7 +15585,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x5c147e74d63b1d31aa3fd78eb229b65161983b2b.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -14950,6 +15603,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "MyCrypto Token List"
         ],
         "eip2612": false,
@@ -14981,7 +15635,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa5f2211b9b8170f694421f2046281775e8468044.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": true,
         "tags": [
@@ -14997,7 +15652,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4c2e59d098df7b6cbae0848d66de2f8a4889b9c3.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -15014,6 +15670,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
@@ -15033,6 +15690,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
@@ -15050,7 +15708,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 0,
         "logoURI": "https://tokens.1inch.io/0xcc8fa225d80b9c7d42f96e9570156c65d6caaa25.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -15067,6 +15726,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Kleros Tokens"
@@ -15086,6 +15746,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
@@ -15103,7 +15764,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3541a5c1b04adaba0b83f161747815cd7b1516bc.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -15120,6 +15782,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
@@ -15137,7 +15800,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9506d37f70eb4c3d79c398d326c871abbf10521d.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -15153,7 +15817,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4f640f2529ee0cf119a2881485845fa8e61a782a.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -15169,7 +15834,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7f280dac515121dcda3eac69eb4c13a52392cace.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": true,
         "tags": [
@@ -15202,7 +15868,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xab2a7b5876d707e0126b3a75ef7781c77c8877ee.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -15218,6 +15885,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x299698b4b44bd6d023981a7317798dee12860834.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
@@ -15250,7 +15918,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x0ab87046fbb341d058f17cbc4c1133f25a20a52f.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": true,
         "tags": [
@@ -15266,7 +15935,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3b9be07d622accaed78f479bc0edabfd6397e320.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -15283,6 +15953,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -15301,6 +15972,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -15318,6 +15990,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
@@ -15335,7 +16008,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x2ba8349123de45e931a8c8264c332e6e9cf593f9.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -15352,6 +16026,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -15387,6 +16062,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": true,
@@ -15404,6 +16080,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Uniswap Labs Default"
         ],
@@ -15421,7 +16098,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x656c00e1bcd96f256f224ad9112ff426ef053733.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -15437,7 +16115,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xe7f58a92476056627f9fdb92286778abd83b285f.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -15452,7 +16131,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x7815bda662050d84718b988735218cffd32f75ea.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -15469,6 +16149,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
@@ -15486,6 +16167,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
@@ -15520,6 +16202,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Trust Wallet Assets"
@@ -15540,6 +16223,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
@@ -15555,7 +16239,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x632806bf5c8f062932dd121244c9fbe7becb8b48.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": true,
         "tags": [
@@ -15572,6 +16257,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens"
@@ -15591,7 +16277,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7659ce147d0e714454073a5dd7003544234b6aa0.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -15607,7 +16294,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xddd6a0ecc3c6f6c102e5ea3d8af7b801d1a77ac8.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -15624,6 +16312,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
@@ -15640,7 +16329,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x48f07301e9e29c3c38a80ae8d9ae771f224f1054.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -15656,7 +16346,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa52bffad02b1fe3f86a543a4e81962d3b3bb01a7.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -15673,6 +16364,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Trust Wallet Assets",
@@ -15693,7 +16385,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4b520c812e8430659fc9f12f6d0c39026c83588d.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": true,
         "tags": [
@@ -15727,6 +16420,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Gemini Token List",
             "Kleros Tokens",
@@ -15747,7 +16441,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xd0cd466b34a24fcb2f87676278af2005ca8a78c4.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -15763,7 +16458,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x2af1df3ab0ab157e1e2ad8f88a7d04fbea0c7dc6.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -15778,7 +16474,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xf063fe1ab7a291c5d06a86e14730b00bf24cb589.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -15827,6 +16524,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
@@ -15845,6 +16543,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": true,
@@ -15878,6 +16577,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Trust Wallet Assets"
         ],
         "eip2612": true,
@@ -15894,7 +16594,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3aada3e213abf8529606924d8d1c55cbdc70bf74.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -15911,7 +16612,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb4b9dc1c77bdbb135ea907fd5a08094d98883a35.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -15927,7 +16629,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4fd51cb87ffefdf1711112b5bd8ab682e54988ea.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -15944,6 +16647,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
@@ -15961,7 +16665,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xd084944d3c05cd115c09d072b9f44ba3e0e45921.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": true,
         "tags": [
@@ -15977,7 +16682,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb0b195aefa3650a6908f15cdac7d92f8a5791b0b.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": true,
         "tags": [
@@ -15993,6 +16699,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4b13006980acb09645131b91d259eaa111eaf5ba.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": false,
@@ -16010,6 +16717,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
@@ -16029,6 +16737,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": true,
@@ -16046,7 +16755,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3af33bef05c2dcb3c7288b77fe1c8d2aeba4d789.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": true,
         "tags": [
@@ -16063,6 +16773,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
@@ -16081,6 +16792,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
@@ -16098,7 +16810,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x6dca182ac5e3f99985bc4ee0f726d6472ab1ec55.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -16115,7 +16828,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x52662717e448be36cb54588499d5a8328bd95292.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -16133,6 +16847,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
@@ -16151,6 +16866,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
@@ -16168,6 +16884,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo"
         ],
@@ -16185,7 +16902,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xfd09911130e6930bf87f2b0554c44f400bd80d3e.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -16217,6 +16935,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens"
         ],
@@ -16234,7 +16953,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xfb782396c9b20e564a64896181c7ac8d8979d5f4.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -16250,7 +16970,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xfa14fa6958401314851a17d6c5360ca29f74b57b.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -16266,7 +16987,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf8e9f10c22840b613cda05a0c5fdb59a4d6cd7ef.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": true,
         "tags": [
@@ -16298,6 +17020,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -16330,7 +17053,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x1ea48b9965bb5086f3b468e50ed93888a661fc17.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": true,
         "tags": [
@@ -16347,6 +17071,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": true,
@@ -16363,7 +17088,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf203ca1769ca8e9e8fe1da9d147db68b6c919817.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -16380,6 +17106,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -16397,6 +17124,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -16429,7 +17157,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9393fdc77090f31c7db989390d43f454b1a6e7f3.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -16446,6 +17175,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -16462,7 +17192,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4740735aa98dc8aa232bd049f8f0210458e7fca3.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -16479,6 +17210,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
@@ -16495,7 +17227,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xe0a189c975e4928222978a74517442239a0b86ff.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -16512,6 +17245,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Gemini Token List",
             "Uniswap Labs Default"
         ],
@@ -16544,7 +17278,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x5aa158404fed6b4730c13f49d3a7f820e14a636f.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -16576,7 +17311,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x58fcaa970339a9b1f8c0a5b4f3fcd7af2ba3075e.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -16593,6 +17329,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
@@ -16612,6 +17349,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
@@ -16629,7 +17367,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xd3e4ba569045546d09cf021ecc5dfe42b1d7f6e4.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -16645,7 +17384,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xd3c51de3e6dd9b53d7f37699afb3ee3bf9b9b3f4.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -16662,6 +17402,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -16679,7 +17420,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xcb84d72e61e383767c4dfeb2d8ff7f4fb89abc6e.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -16695,7 +17437,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xc98d64da73a6616c42117b582e832812e7b8d57f.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -16711,7 +17454,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xc91a71a1ffa3d8b22ba615ba1b9c01b2bbbf55ad.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -16727,7 +17471,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xc82e3db60a52cf7529253b4ec688f631aad9e7c2.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -16743,7 +17488,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xac57de9c1a09fec648e93eb98875b212db0d460b.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -16776,7 +17522,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xc55c2175e90a46602fd42e931f62b3acc1a013ca.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -16793,6 +17540,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": true,
@@ -16810,6 +17558,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -16826,7 +17575,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xc4f6e93aeddc11dc22268488465babcaf09399ac.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -16861,6 +17611,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -16877,7 +17628,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xba8a621b4a54e61c442f5ec623687e2a942225ef.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -16894,6 +17646,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Uniswap Labs Default"
         ],
         "eip2612": true,
@@ -16910,6 +17663,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb620be8a1949aa9532e6a3510132864ef9bc3f82.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": false,
@@ -16927,6 +17681,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": false,
@@ -16943,7 +17698,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xaa8330fb2b4d5d07abfe7a72262752a8505c6b37.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -16960,6 +17716,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": true,
@@ -17039,7 +17796,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xe5f7ef61443fc36ae040650aa585b0395aef77c8.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -17054,7 +17812,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xe5f7ef61443fc36ae040650aa585b0395aef77c8.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -17069,7 +17828,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xe5f7ef61443fc36ae040650aa585b0395aef77c8.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -17084,7 +17844,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xe5f7ef61443fc36ae040650aa585b0395aef77c8.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -17099,7 +17860,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xe5f7ef61443fc36ae040650aa585b0395aef77c8.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -17114,7 +17876,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xe5f7ef61443fc36ae040650aa585b0395aef77c8.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -17129,7 +17892,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xe5f7ef61443fc36ae040650aa585b0395aef77c8.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -17144,7 +17908,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xe5f7ef61443fc36ae040650aa585b0395aef77c8.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -17159,7 +17924,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xe5f7ef61443fc36ae040650aa585b0395aef77c8.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -17206,6 +17972,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -17718,6 +18485,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
@@ -18231,7 +18999,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x662b67d00a13faf93254714dd601f5ed49ef2f51.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -21232,7 +22001,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7051faed0775f664a0286af4f75ef5ed74e02754.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -21534,6 +22304,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -21550,7 +22321,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9625ce7753ace1fa1865a47aae2c5c2ce4418569.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -21567,6 +22339,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -21584,6 +22357,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -21600,7 +22374,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x98585dfc8d9e7d48f0b1ae47ce33332cf4237d96.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -21617,6 +22392,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -21633,7 +22409,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x8fc8f8269ebca376d046ce292dc7eac40c8d358a.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -21667,6 +22444,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Trust Wallet Assets",
@@ -21686,7 +22464,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x83249c6794bca5a77eb8c0af9f1a86e055459cea.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -21702,7 +22481,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x823556202e86763853b40e9cde725f412e294689.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -21718,7 +22498,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7d29a64504629172a429e64183d6673b9dacbfce.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -21734,7 +22515,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x777e2ae845272a2f540ebf6a3d03734a5a8f618e.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -21751,7 +22533,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x721a1b990699ee9d90b6327faad0a3e840ae8335.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -21767,7 +22550,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7105e64bf67eca3ae9b123f0e5ca2b83b2ef2da0.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -21783,7 +22567,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x70008f18fc58928dce982b0a69c2c21ff80dca54.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -21800,6 +22585,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
@@ -21817,6 +22603,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": false,
@@ -21834,6 +22621,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Furucombo"
         ],
@@ -21852,6 +22640,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Gemini Token List",
@@ -21872,7 +22661,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x5d285f735998f36631f678ff41fb56a10a4d0429.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -21889,6 +22679,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
@@ -21923,6 +22714,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -21940,6 +22732,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -21957,6 +22750,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
@@ -21975,6 +22769,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
@@ -21993,7 +22788,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb755506531786c8ac63b756bab1ac387bacb0c04.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -22074,6 +22870,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": false,
@@ -22091,6 +22888,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
@@ -22109,7 +22907,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x5026f006b85729a8b14553fae6af249ad16c9aab.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -22126,6 +22925,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
@@ -22177,6 +22977,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
@@ -22195,6 +22996,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -22212,6 +23014,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": false,
@@ -22228,7 +23031,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x57f12fe6a4e5fe819eec699fadf9db2d06606bb4.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -22260,7 +23064,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x78a0a62fba6fb21a83fe8a3433d44c73a4017a6f.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -22276,7 +23081,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb2e96a63479c2edd2fd62b382c89d5ca79f572d3.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -22293,6 +23099,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
@@ -22343,6 +23150,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
@@ -22361,6 +23169,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
@@ -22411,6 +23220,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Dharma Token List",
             "Kleros Tokens",
@@ -22447,7 +23257,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x06ddb3a8bc0abc14f85e974cf1a93a6f8d4909d9.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -22464,6 +23275,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -22480,7 +23292,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xed1167b6dc64e8a366db86f2e952a482d0981ebd.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -22529,6 +23342,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": false,
@@ -22545,7 +23359,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x056c1d42fb1326f57da7f19ebb7dda4673f1ff55.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -22578,7 +23393,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb504035a11e672e12a099f32b1672b9c4a78b22f.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -22595,6 +23411,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -22644,6 +23461,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
@@ -22661,7 +23479,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x455e53cbb86018ac2b8092fdcd39d8444affc3f6.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -22678,6 +23497,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -22710,7 +23530,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1a2eb478fa07125c9935a77b3c03a82470801e30.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -22726,7 +23547,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xcd5fe23c85820f7b72d0926fc9b05b43e359b7ee.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -22743,6 +23565,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
@@ -22760,7 +23583,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf1c9acdc66974dfb6decb12aa385b9cd01190e38.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -22793,6 +23617,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -22811,6 +23636,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -22858,7 +23684,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xbf5495efe5db9ce00f80364c8b423567e58d2110.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -22874,7 +23701,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xde342a3e269056fc3305f9e315f4c40d917ba521.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -22890,7 +23718,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa1290d69c65a6fe4df752f95823fae25cb99e5a7.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -22955,7 +23784,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x15e6e0d4ebeac120f9a97e71faa6a0235b85ed12.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -22971,7 +23801,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xfae103dc9cf190ed75350761e95403b7b8afa6c0.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -22987,7 +23818,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xd9a442856c234a39a81a089c06451ebaa4306a72.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -23003,7 +23835,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x922d8563631b03c2c4cf817f4d18f6883aba0109.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -23020,6 +23853,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -23052,7 +23886,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x8aec4bbdcfb451aa289bfbd3c2f4e34a44ada1be.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -23068,7 +23903,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3429d03c6f7521aec737a0bbf2e5ddcef2c3ae31.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -23265,7 +24101,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xfe0c30065b384f05761f15d0cc899d4f9f9cc0eb.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -23282,6 +24119,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -23298,7 +24136,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xdbb7a34bf10169d6d2d0d02a6cbb436cf4381bfa.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -23315,6 +24154,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -23331,6 +24171,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x36e66fbbce51e4cd5bd3c62b637eb411b18949d4.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
@@ -23349,6 +24190,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -23365,7 +24207,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9e6be44cc1236eef7e1f197418592d363bedcd5a.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -23608,7 +24451,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Kleros Tokens"
+            "Kleros Tokens",
+            "Uniswap Labs Default"
         ],
         "eip2612": false,
         "tags": [
@@ -24101,6 +24945,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "PancakeSwap Extended"
@@ -24615,7 +25460,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x6fefd97f328342a8a840546a55fdcfee7542f9a8.png",
         "providers": [
             "1inch",
-            "Coinmarketcap"
+            "Coinmarketcap",
+            "Curve Token List"
         ],
         "eip2612": true,
         "tags": [
@@ -26813,6 +27659,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "PancakeSwap Default List",
             "PancakeSwap Extended",
@@ -29456,7 +30303,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x99c6e435ec259a7e8d65e1955c9423db624ba54c.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -30020,6 +30868,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x46d502fac9aea7c5bc7b13c8ec9d02378c33d36f.png",
         "providers": [
             "1inch",
+            "CoinGecko",
             "Coinmarketcap"
         ],
         "eip2612": false,
@@ -31002,7 +31851,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Coinmarketcap",
             "Kleros Tokens",
-            "PancakeSwap Extended"
+            "PancakeSwap Extended",
+            "Quickswap Token List"
         ],
         "eip2612": false,
         "tags": [
@@ -37743,8 +38593,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Trust Wallet Assets",
-            "Uniswap Labs Default"
+            "Trust Wallet Assets"
         ],
         "eip2612": true,
         "tags": [
@@ -37814,6 +38663,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": true,
@@ -37830,7 +38680,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x0c9c7712c83b3c70e7c5e11100d33d9401bdf9dd.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -38881,6 +39732,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Quickswap Token List",
             "Zerion"
         ],
@@ -40079,7 +40931,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x8623e66bea0dce41b6d47f9c44e806a115babae0.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -41015,6 +41868,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": false,
@@ -41113,8 +41967,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "Coinmarketcap",
-            "Kleros Tokens",
-            "PancakeSwap Extended",
             "Quickswap Token List"
         ],
         "eip2612": false,
@@ -41469,6 +42321,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "SpookySwap Default List"
         ],
         "eip2612": false,
@@ -41518,6 +42371,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "SpookySwap Default List"
         ],
         "eip2612": true,
@@ -42120,6 +42974,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "SpookySwap Default List"
         ],
         "eip2612": true,
@@ -42435,7 +43290,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xfb4d42bed5618fb1a377ddb64eb56b92a6d117f2.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -42468,6 +43324,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens",
             "SpookySwap Default List"
         ],
@@ -42593,6 +43450,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x65def5029a0e7591e46b38742bfedd1fb7b24436.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "SpookySwap Default List"
         ],
         "eip2612": false,
@@ -44471,6 +45329,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
@@ -45599,6 +46458,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -45762,6 +46622,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "PancakeSwap Extended"
@@ -47414,7 +48275,8 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xbd100d061e120b2c67a24453cf6368e63f1be056.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
         "tags": [
@@ -47874,6 +48736,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x501ace9c35e60f03a2af4d484f49f9b1efde9f40.png",
         "providers": [
             "1inch",
+            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,

@@ -3,6 +3,7 @@
 /package-lock.json
 /.idea
 /coverage
+/src/resources/tokenIcons
 .DS_Store
 
 

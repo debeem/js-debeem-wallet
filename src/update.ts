@@ -2,6 +2,7 @@ import {OneInchTokenService} from "./services/rpcs/oneInchToken/OneInchTokenServ
 import _ from "lodash";
 import path from "path";
 import fs from "fs";
+import { HttpUtil } from "debeem-utils";
 
 
 async function updateOneInchTokenResources()
@@ -36,6 +37,30 @@ async function updateOneInchTokenResources()
 					return reject( `invalid res, empty` );
 				}
 
+				// //	download icons
+				// for ( const address of keys )
+				// {
+				// 	const logoURI : string = `https://tokens.1inch.io/${ address }.png`;
+				// 	const logoURIOutputPath = path.join( __dirname, `resources/tokenIcons/${ address }.png` );
+				// 	console.log( `download file: ${ logoURI }` );
+				//
+				// 	try
+				// 	{
+				// 		if ( ! HttpUtil.fileExists( logoURIOutputPath ) )
+				// 		{
+				// 			await HttpUtil.downloadFile( logoURI, logoURIOutputPath );
+				// 		}
+				// 	}
+				// 	catch ( err )
+				// 	{
+				// 		const errObj = err as any;
+				// 		const status = errObj?.response?.status;
+				// 		const statusText = errObj?.response?.statusText;
+				// 		console.error( `[${ status } ${ statusText }] failed to download file: ${ logoURI }` );
+				// 	}
+				// }
+
+				//	...
 				tsContent += `${ chainId } : ${ JSON.stringify( res, null, 4 ) },\n`;
 			}
 
