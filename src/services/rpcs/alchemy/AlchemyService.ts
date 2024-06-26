@@ -276,7 +276,7 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 				const upFetchOptions = { ...fetchOptions, pageKey : pageKey };
 				const transactionParam = [
 					{
-						...this.buildQueryingTransactionsCommonParameters( queryOptions, fetchOptions ),
+						...this.buildQueryingTransactionsCommonParameters( queryOptions, upFetchOptions ),
 						fromAddress : fromAddress,
 					}
 				];
