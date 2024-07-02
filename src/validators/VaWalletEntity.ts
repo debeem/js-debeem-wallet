@@ -1,0 +1,171 @@
+import _ from "lodash";
+import { WalletEntityBaseItem, WalletEntityItem } from "../entities/WalletEntity";
+import { isHexString } from "ethers";
+
+
+export class VaWalletEntity
+{
+	static validateWalletEntityBaseItem( walletEntityBaseItem : WalletEntityBaseItem ) : string | null
+	{
+		if ( ! walletEntityBaseItem )
+		{
+			return `invalid walletEntityBaseItem`;
+		}
+
+		/**
+		 * 	A boolean value indicating if this is an HD wallet
+		 */
+		if ( ! _.isBoolean( walletEntityBaseItem.isHD ) )
+		{
+			return `invalid walletEntityBaseItem.isHD`;
+		}
+
+		/**
+		 * 	mnemonic phrase, a word list
+		 */
+		if ( _.isString( walletEntityBaseItem.mnemonic ) )
+		{
+			if ( _.isEmpty( walletEntityBaseItem.mnemonic ) )
+			{
+				return `invalid walletEntityBaseItem.mnemonic`;
+			}
+		}
+		if ( ! _.isString( walletEntityBaseItem.password ) )
+		{
+			return `invalid walletEntityBaseItem.password`;
+		}
+		if ( ! _.isString( walletEntityBaseItem.address ) || _.isEmpty( walletEntityBaseItem.address ) )
+		{
+			return `invalid walletEntityBaseItem.address`;
+		}
+		if ( ! _.isString( walletEntityBaseItem.privateKey ) ||
+			_.isEmpty( walletEntityBaseItem.privateKey ) ||
+			! isHexString( walletEntityBaseItem.privateKey, 32 ) )
+		{
+			return `invalid walletEntityBaseItem.privateKey`;
+		}
+		if ( ! _.isString( walletEntityBaseItem.publicKey ) ||
+			_.isEmpty( walletEntityBaseItem.publicKey ) ||
+			! isHexString( walletEntityBaseItem.publicKey, 33 ) )
+		{
+			return `invalid walletEntityBaseItem.publicKey`;
+		}
+
+		/**
+		 * 	The index of the generated wallet address. For non-HD wallets, the index will always be 0
+		 */
+		if ( ! _.isNumber( walletEntityBaseItem.index ) )
+		{
+			return `invalid walletEntityBaseItem.index`;
+		}
+
+		/**
+		 * 	Wallet path. For non-HD wallets, the path is empty
+		 */
+		if ( undefined !== walletEntityBaseItem.path )
+		{
+			if ( ! _.isString( walletEntityBaseItem.path ) || null !== walletEntityBaseItem.path )
+			{
+				return `invalid walletEntityBaseItem.path`;
+			}
+		}
+
+		/**
+		 * 	The depth of this wallet, which is the number of components in its path.
+		 */
+		if ( undefined !== walletEntityBaseItem.depth )
+		{
+			if ( ! _.isNumber( walletEntityBaseItem.depth ) )
+			{
+				return `invalid walletEntityBaseItem.depth`;
+			}
+		}
+
+		/**
+		 * 	The fingerprint.
+		 *
+		 *	A fingerprint allows quick qay to detect parent and child nodes,
+		 *	but developers should be prepared to deal with collisions as it is only 4 bytes.
+		 */
+		if ( undefined !== walletEntityBaseItem.fingerprint )
+		{
+			if ( ! _.isString( walletEntityBaseItem.fingerprint ) )
+			{
+				return `invalid walletEntityBaseItem.fingerprint`;
+			}
+		}
+
+		/**
+		 * 	The parent fingerprint
+		 */
+		if ( undefined !== walletEntityBaseItem.parentFingerprint )
+		{
+			if ( ! _.isString( walletEntityBaseItem.parentFingerprint ) )
+			{
+				return `invalid walletEntityBaseItem.parentFingerprint`;
+			}
+		}
+
+		/**
+		 * 	The chaincode, which is effectively a public key used to derive children.
+		 */
+		if ( undefined !== walletEntityBaseItem.chainCode )
+		{
+			if ( ! _.isString( walletEntityBaseItem.chainCode ) )
+			{
+				return `invalid walletEntityBaseItem.chainCode`;
+			}
+		}
+
+		return null;
+	}
+
+	static validateWalletEntityItem( walletEntityItem : WalletEntityItem ) : string | null
+	{
+		if ( ! walletEntityItem )
+		{
+			return `invalid walletEntityItem`;
+		}
+
+		const errorWalletEntityBaseItem : string | null = this.validateWalletEntityBaseItem( walletEntityItem );
+		if ( null !== errorWalletEntityBaseItem )
+		{
+			return errorWalletEntityBaseItem;
+		}
+
+		//	/**
+		// 	 * 	the wallet name
+		// 	 */
+		// 	name: string;
+		//
+		// 	/**
+		// 	 * 	chainId/network
+		// 	 */
+		// 	chainId : number;
+		//
+		// 	/**
+		// 	 * 	the PIN code
+		// 	 * 	password for encrypting the local database storage
+		// 	 */
+		// 	pinCode: string;
+		//
+		// 	/**
+		// 	 * 	remark text
+		// 	 */
+		// 	remark?: string;
+		//
+		// 	/**
+		// 	 * 	wallet avatar
+		// 	 */
+		// 	avatar?: string;
+		//
+		// 	/**
+		// 	 *	Pay freely
+		// 	 */
+		// 	freePayment ?: boolean;
+
+
+		return null;
+	}
+
+}

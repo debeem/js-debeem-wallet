@@ -86,7 +86,10 @@ export abstract class AbstractStorageService<T> implements IStorageService
 					return resolve( null );
 				}
 
-				//	...
+				//
+				//	todo
+				//	get password by wallet address
+				//
 				const password : string | null = await this.sysUserStorageService.extractPassword( this.databaseName, this.pinCode );
 				if ( ! password )
 				{
