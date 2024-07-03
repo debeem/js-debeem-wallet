@@ -3,7 +3,7 @@
  * 	@module WalletStorageService
  */
 import { CallbackModels } from "../../models/CallbackModels";
-import { TestUtil, TypeUtil } from "debeem-utils";
+import { TestUtil } from "debeem-utils";
 
 if ( TestUtil.isTestEnv() )
 {
@@ -11,15 +11,13 @@ if ( TestUtil.isTestEnv() )
 	require('fake-indexeddb/auto');
 }
 
-import { isAddress, Wallet } from 'ethers';
+import { Wallet } from 'ethers';
 import { WalletEntityBaseItem, WalletEntityItem } from "../../entities/WalletEntity";
 import { AbstractEncryptedStorageService } from "./AbstractEncryptedStorageService";
 import { IStorageService } from "./IStorageService";
 import { VerifyUtil } from "../../utils/VerifyUtil";
 import { VaWalletEntity } from "../../validators/VaWalletEntity";
 import _ from "lodash";
-import { SysUserItem } from "../../entities/SysUserEntity";
-import { getCurrentWalletAsync } from "../../config";
 import { SysConfigStorageService } from "./SysConfigStorageService";
 import { SysConfigKeys } from "../../entities/SysConfigEntity";
 
