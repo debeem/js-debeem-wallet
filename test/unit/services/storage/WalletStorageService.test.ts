@@ -3,7 +3,7 @@ import { WalletStorageService } from "../../../../src";
 import { WalletEntityItem } from "../../../../src";
 import { testUserList, testWalletObjList } from "../../../../src/configs/TestConfig";
 import _ from "lodash";
-import { getCurrentWalletAsync, initWalletAsync, putCurrentWalletAsync } from "../../../../src/config";
+import { getCurrentWalletAsync, initWalletAsync, putCurrentWalletAsync } from "../../../../src";
 import { TWalletBaseItem } from "debeem-id";
 
 

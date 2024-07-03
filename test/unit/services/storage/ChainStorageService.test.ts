@@ -1,7 +1,7 @@
 import { describe, expect } from '@jest/globals';
 import { ChainEntityItem, ChainStorageService } from "../../../../src";
 import { TypeUtil } from "../../../../src/utils/TypeUtil";
-import { SysUserStorageService } from "../../../../src/services/storage/SysUserStorageService";
+import { SysUserStorageService } from "../../../../src";
 
 
 /**

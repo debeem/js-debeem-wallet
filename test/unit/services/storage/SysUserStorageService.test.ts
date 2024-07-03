@@ -1,9 +1,9 @@
 import { describe, expect } from '@jest/globals';
 import { WalletEntityBaseItem, WalletEntityItem, WalletStorageService } from "../../../../src";
-import { SysUserStorageService } from "../../../../src/services/storage/SysUserStorageService";
+import { SysUserStorageService } from "../../../../src";
 import _ from "lodash";
 import { testWalletObjList } from "../../../../src/configs/TestConfig";
-import { initWalletAsync, putCurrentWalletAsync } from "../../../../src/config";
+import { initWalletAsync, putCurrentWalletAsync } from "../../../../src";
 import { VaWalletEntity } from "../../../../src/validators/VaWalletEntity";
 
 

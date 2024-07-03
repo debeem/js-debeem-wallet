@@ -1,15 +1,15 @@
 import { describe, expect } from '@jest/globals';
 import { getDefaultChain, WalletEntityItem, WalletStorageService } from "../../../src";
-import { SysConfigStorageService } from "../../../src/services/storage/SysConfigStorageService";
+import { SysConfigStorageService } from "../../../src";
 import {
 	getCurrentChainAsync,
 	getCurrentWalletAsync, initWalletAsync,
 	putCurrentChainAsync,
 	putCurrentWalletAsync
-} from "../../../src/config";
+} from "../../../src";
 import { testWalletObjList } from "../../../src/configs/TestConfig";
 import _ from "lodash";
-import { SysUserStorageService } from "../../../src/services/storage/SysUserStorageService";
+import { SysUserStorageService } from "../../../src";
 import { VaWalletEntity } from "../../../src/validators/VaWalletEntity";
 
 
