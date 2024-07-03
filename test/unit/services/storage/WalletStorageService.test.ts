@@ -32,7 +32,7 @@ describe( "WalletStorageService", () =>
 				const item : WalletEntityItem = {
 					...walletObject,
 					name: 'My-First-Wallet',
-					chainId: 5,		//	Ethereum Goerli Testnet
+					chainId: 1,
 					pinCode: ``,
 				};
 				const key : string | null = walletStorage.getKeyByItem( item );
@@ -65,7 +65,7 @@ describe( "WalletStorageService", () =>
 				const item : WalletEntityItem = {
 					...walletObject,
 					name: 'My-First-Wallet',
-					chainId: 5,		//	Ethereum Goerli Testnet
+					chainId: 1,
 					pinCode: ``,
 				};
 				const key : string | null = walletStorage.getKeyByItem( item );

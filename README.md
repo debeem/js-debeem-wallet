@@ -132,14 +132,27 @@ View all chains on:
 https://chainlist.org/
 
 
-### Configure a chain for your wallet
+### Configurations
 
-| Function                                                                                                                    | Description                                   |
-|-----------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| [getDefaultChain](https://debeem.github.io/docs/js-debeem-wallet/functions/config_functions.getDefaultChain.html)           | get default chainId                           |
-| [getCurrentChain](https://debeem.github.io/docs/js-debeem-wallet/functions/config_functions.getCurrentChain.html)           | get current chainId                           |
-| [setCurrentChain](https://debeem.github.io/docs/js-debeem-wallet/functions/config_functions.setCurrentChain.html)           | set/update current chainId                    |
-| [revertToDefaultChain](https://debeem.github.io/docs/js-debeem-wallet/functions/config_functions.revertToDefaultChain.html) | revert the current chain to the default chain |
+#### 1, Chain Configuration
+| Function                                                                                                                              | Invocations | Storage  | Description                                                                                |
+|---------------------------------------------------------------------------------------------------------------------------------------|-------------|----------|--------------------------------------------------------------------------------------------|
+| [getDefaultChain](https://debeem.github.io/docs/js-debeem-wallet/functions/config_functions.getDefaultChain.html)                     | sync        | memory   | get default chainId from memory                                                            |
+| [getCurrentChain](https://debeem.github.io/docs/js-debeem-wallet/functions/config_functions.getCurrentChain.html)                     | sync        | memory   | get current chainId from memory                                                            |
+| [setCurrentChain](https://debeem.github.io/docs/js-debeem-wallet/functions/config_functions.setCurrentChain.html)                     | sync        | memory   | set/update current chainId to memory                                                       |
+| [revertToDefaultChain](https://debeem.github.io/docs/js-debeem-wallet/functions/config_functions.revertToDefaultChain.html)           | sync        | memory   | revert the current chain to the default value in memory                                    |
+| [getCurrentChainAsync](https://debeem.github.io/docs/js-debeem-wallet/functions/config_functions.getCurrentChainAsync.html)           | async       | database | asynchronously get current chainId from the database                                       |
+| [putCurrentChainAsync](https://debeem.github.io/docs/js-debeem-wallet/functions/config_functions.putCurrentChainAsync.html)           | async       | database | asynchronously set/update current chainId into the database                                |
+| [revertToDefaultChainAsync](https://debeem.github.io/docs/js-debeem-wallet/functions/config_functions.revertToDefaultChainAsync.html) | async       | database | asynchronously revert the current chain to the default value and save it into the database |
+
+#### 2, Wallet Configuration
+
+| Function                                                                                                                      | Invocations | Storage  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|-------------------------------------------------------------------------------------------------------------------------------|-------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [getCurrentWalletAsync](https://debeem.github.io/docs/js-debeem-wallet/functions/config_functions.getCurrentWalletAsync.html) | async       | database | asynchronously get current wallet from the database                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| [putCurrentWalletAsync](https://debeem.github.io/docs/js-debeem-wallet/functions/config_functions.putCurrentWalletAsync.html) | async       | database | asynchronously put current wallet into the database                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| [initWalletAsync](https://debeem.github.io/docs/js-debeem-wallet/functions/config_functions.initWalletAsync.html)             | async       | database | asynchronously create or recover an account. For detailed usage instructions, please refer to the unit tests: [config.test.ts](https://github.com/debeem/js-debeem-wallet/blob/main/test/unit/configs/config.test.ts), [SysUserStorageService.test.ts](https://github.com/debeem/js-debeem-wallet/blob/main/test/unit/services/storage/SysUserStorageService.test.ts), [WalletStorageService.test.ts](https://github.com/debeem/js-debeem-wallet/blob/main/test/unit/services/storage/WalletStorageService.test.ts). |
+
 
 
 
