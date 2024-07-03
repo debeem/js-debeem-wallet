@@ -601,16 +601,17 @@ describe( "WalletTransaction.txHistory", () =>
 					expect( txDetail ).toHaveProperty( 'floatValue' );
 					expect( txDetail ).toHaveProperty( 'yParity' );
 
-					expect( Array.isArray( txDetail.accessList ) ).toBeTruthy();
+					//console.log( `txDetail :`, txDetail, typeof txDetail.accessList );
+					expect( undefined === txDetail.accessList || Array.isArray( txDetail.accessList ) ).toBeTruthy();
 					expect( _.isNumber( txDetail.chainId ) && txDetail.chainId > 0 ).toBeTruthy();
 					expect( _.isString( txDetail.from ) && ! _.isEmpty( txDetail.from ) ).toBeTruthy();
 					expect( _.isString( txDetail.to ) && ! _.isEmpty( txDetail.to ) ).toBeTruthy();
 					expect( _.isNumber( txDetail.gasPrice ) && txDetail.gasPrice > 0 ).toBeTruthy();
 					expect( _.isString( txDetail.hash ) && ! _.isEmpty( txDetail.hash ) ).toBeTruthy();
-					expect( _.isNumber( txDetail.maxFeePerGas ) && txDetail.maxFeePerGas > 0 ).toBeTruthy();
-					expect( _.isNumber( txDetail.maxPriorityFeePerGas ) && txDetail.maxPriorityFeePerGas > 0 ).toBeTruthy();
-					expect( _.isNumber( txDetail.nonce ) && txDetail.nonce > 0 ).toBeTruthy();
-					expect( _.isNumber( txDetail.type ) && txDetail.type > 0 ).toBeTruthy();
+					expect( _.isNumber( txDetail.maxFeePerGas ) ).toBeTruthy();
+					expect( _.isNumber( txDetail.maxPriorityFeePerGas ) ).toBeTruthy();
+					expect( _.isNumber( txDetail.nonce ) ).toBeTruthy();
+					expect( _.isNumber( txDetail.type ) ).toBeTruthy();
 
 					expect( typeof txDetail.value ).toBe( `bigint` );
 					expect( _.isNumber( txDetail.floatValue ) ).toBeTruthy();

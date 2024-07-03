@@ -103,7 +103,7 @@ export class WalletFactory
 	 *	@param password		{string} decrypt keystoreJson using {password}
 	 *	@returns {Promise<WalletEntityBaseItem>}
 	 */
-	public createWalletFromKeystore( keystoreJson : string, password : string = '' ) : Promise<WalletEntityBaseItem>
+	public async createWalletFromKeystore( keystoreJson : string, password : string = '' ) : Promise<WalletEntityBaseItem>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -126,7 +126,7 @@ export class WalletFactory
 	 *	@param password	{string}		encrypt {wallet} with {password}
 	 *	@returns {Promise<string>}
 	 */
-	public getKeystoreOfWallet( wallet : WalletEntityBaseItem, password : string = '' ) : Promise<string>
+	public async getKeystoreOfWallet( wallet : WalletEntityBaseItem, password : string = '' ) : Promise<string>
 	{
 		return EtherWallet.getKeystoreOfWallet( wallet, password );
 	}

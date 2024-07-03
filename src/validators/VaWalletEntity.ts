@@ -1,11 +1,18 @@
 import _ from "lodash";
-import { WalletEntityBaseItem, WalletEntityItem } from "../entities/WalletEntity";
 import { isHexString } from "ethers";
+import { WalletEntityBaseItem, WalletEntityItem } from "../entities/WalletEntity";
+import { isAddress } from "ethers";
 
 
 export class VaWalletEntity
 {
-	static validateWalletEntityBaseItem( walletEntityBaseItem : WalletEntityBaseItem ) : string | null
+	/**
+	 * 	validate if the input value is a valid WalletEntityBaseItem
+	 *
+	 *	@param walletEntityBaseItem	{ WalletEntityBaseItem | any }
+	 *	@returns {string | null}
+	 */
+	static validateWalletEntityBaseItem( walletEntityBaseItem : WalletEntityBaseItem | any ) : string | null
 	{
 		if ( ! walletEntityBaseItem )
 		{
@@ -30,14 +37,26 @@ export class VaWalletEntity
 				return `invalid walletEntityBaseItem.mnemonic`;
 			}
 		}
+
+		/**
+		 * 	The password of the wallet, used to encrypt mnemonic and privateKey.
+		 * 	If password is not empty, mnemonic and privateKey should be ciphertext
+		 */
 		if ( ! _.isString( walletEntityBaseItem.password ) )
 		{
 			return `invalid walletEntityBaseItem.password`;
 		}
-		if ( ! _.isString( walletEntityBaseItem.address ) || _.isEmpty( walletEntityBaseItem.address ) )
+
+		/**
+		 * 	wallet address
+		 */
+		if ( ! _.isString( walletEntityBaseItem.address ) ||
+			_.isEmpty( walletEntityBaseItem.address ) ||
+			! isAddress( walletEntityBaseItem.address ) )
 		{
 			return `invalid walletEntityBaseItem.address`;
 		}
+
 		if ( ! _.isString( walletEntityBaseItem.privateKey ) ||
 			_.isEmpty( walletEntityBaseItem.privateKey ) ||
 			! isHexString( walletEntityBaseItem.privateKey, 32 ) )
@@ -64,7 +83,7 @@ export class VaWalletEntity
 		 */
 		if ( undefined !== walletEntityBaseItem.path )
 		{
-			if ( ! _.isString( walletEntityBaseItem.path ) || null !== walletEntityBaseItem.path )
+			if ( ! _.isString( walletEntityBaseItem.path ) && null !== walletEntityBaseItem.path )
 			{
 				return `invalid walletEntityBaseItem.path`;
 			}
@@ -120,7 +139,13 @@ export class VaWalletEntity
 		return null;
 	}
 
-	static validateWalletEntityItem( walletEntityItem : WalletEntityItem ) : string | null
+	/**
+	 * 	validate if the input is a valid WalletEntityItem
+	 *
+	 *	@param walletEntityItem	{ WalletEntityItem | any }
+	 *	@returns {string | null}
+	 */
+	static validateWalletEntityItem( walletEntityItem : WalletEntityItem | any ) : string | null
 	{
 		if ( ! walletEntityItem )
 		{
@@ -133,37 +158,69 @@ export class VaWalletEntity
 			return errorWalletEntityBaseItem;
 		}
 
-		//	/**
-		// 	 * 	the wallet name
-		// 	 */
-		// 	name: string;
-		//
-		// 	/**
-		// 	 * 	chainId/network
-		// 	 */
-		// 	chainId : number;
-		//
-		// 	/**
-		// 	 * 	the PIN code
-		// 	 * 	password for encrypting the local database storage
-		// 	 */
-		// 	pinCode: string;
-		//
-		// 	/**
-		// 	 * 	remark text
-		// 	 */
-		// 	remark?: string;
-		//
-		// 	/**
-		// 	 * 	wallet avatar
-		// 	 */
-		// 	avatar?: string;
-		//
-		// 	/**
-		// 	 *	Pay freely
-		// 	 */
-		// 	freePayment ?: boolean;
+		/**
+		 * 	the wallet name
+		 */
+		if ( ! _.isString( walletEntityItem.name ) || _.isEmpty( walletEntityItem.name ) )
+		{
+			return `invalid walletEntityItem.name`;
+		}
 
+		/**
+		 * 	chainId/network
+		 */
+		if ( ! _.isNumber( walletEntityItem.chainId ) || walletEntityItem.chainId <= 0 )
+		{
+			return `invalid walletEntityItem.chainId`;
+		}
+
+		/**
+		 * 	MUST BE EMPTY STRING
+		 *
+		 * 	the PIN code (Personal Identification Number Code)
+		 * 	Usually consists of pure numbers, and the common length is 4 to 6 digits.
+		 *
+		 * 	the Password for local storage encryption
+		 */
+		if ( ! _.isString( walletEntityItem.pinCode ) ||
+			! _.isEmpty( walletEntityItem.pinCode ) )
+		{
+			return `invalid walletEntityItem.pinCode`;
+		}
+
+		if ( undefined !== walletEntityItem.remark )
+		{
+			if ( ! _.isString( walletEntityItem.remark ) ||
+				_.isEmpty( walletEntityItem.remark ) )
+			{
+				return `invalid walletEntityItem.remark`;
+			}
+			if ( walletEntityItem.remark.length > 256 )
+			{
+				return `invalid walletEntityItem.remark, cannot be longer than 256 characters`;
+			}
+		}
+
+		if ( undefined !== walletEntityItem.avatar )
+		{
+			if ( ! _.isString( walletEntityItem.avatar ) ||
+				_.isEmpty( walletEntityItem.avatar ) )
+			{
+				return `invalid walletEntityItem.avatar`;
+			}
+			if ( walletEntityItem.avatar.length > 10240 )
+			{
+				return `invalid walletEntityItem.avatar, cannot be longer than 10240 characters`;
+			}
+		}
+
+		if ( undefined !== walletEntityItem.freePayment )
+		{
+			if ( ! _.isBoolean( walletEntityItem.freePayment ) )
+			{
+				return `invalid walletEntityItem.freePayment`;
+			}
+		}
 
 		return null;
 	}

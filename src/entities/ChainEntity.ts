@@ -4,6 +4,9 @@
  * 	@module ChainEntity
  */
 
+import { DBSchema } from "idb";
+
+
 /**
  * 	@remark
  *	Definition of the structure of the database entities
@@ -29,11 +32,11 @@ export interface ChainEntityItem
 	explorers?: Array<string>;
 }
 
-// export interface ChainEntity extends DBSchema
-// {
-// 	root : {
-// 		key: string;
-// 		value: string;	//	encrypted string of ChainEntityItem;
-// 		indexes: { 'by-chainId': number };
-// 	}
-// }
+export interface ChainEntity extends DBSchema
+{
+	root : {
+		key: string;
+		value: ChainEntityItem;
+		//indexes: { 'by-chainId': number };
+	}
+}

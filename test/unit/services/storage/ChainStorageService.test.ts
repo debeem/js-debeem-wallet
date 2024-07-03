@@ -22,7 +22,7 @@ describe( "ChainStorageService", () =>
 		{
 			await new SysUserStorageService().clear();
 
-			const chainStorageService = new ChainStorageService( `111111` );
+			const chainStorageService = new ChainStorageService();
 			const defaultChainList : Array<ChainEntityItem> = chainStorageService.getDefault();
 			expect( Array.isArray( defaultChainList ) ).toBeTruthy();
 			expect( defaultChainList.length ).toBeGreaterThan( 0 );
@@ -65,7 +65,7 @@ describe( "ChainStorageService", () =>
 		{
 			await new SysUserStorageService().clear();
 
-			const chainStorageService = new ChainStorageService( `my password` );
+			const chainStorageService = new ChainStorageService();
 
 			//	clear all items in database and flush the default chains into database
 			await chainStorageService.clear();
@@ -167,7 +167,7 @@ describe( "ChainStorageService", () =>
 		{
 			await new SysUserStorageService().clear();
 
-			const chainStorageService = new ChainStorageService( `my password` );
+			const chainStorageService = new ChainStorageService();
 
 			//	load default chain list
 			const defaultChainList : Array<ChainEntityItem> = chainStorageService.getDefault();

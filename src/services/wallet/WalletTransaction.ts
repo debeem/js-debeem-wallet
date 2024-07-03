@@ -76,7 +76,7 @@ export class WalletTransaction
 	 *	@param toAddress {AddressLike} recipient's wallet address
 	 * 	@returns {Promise<number>} gas limit in wei.
 	 */
-	public estimateEthGasLimitByToAddress( toAddress : AddressLike )  : Promise<number>
+	public async estimateEthGasLimitByToAddress( toAddress : AddressLike )  : Promise<number>
 	{
 		return new Promise( async ( resolve, reject) =>
 		{
@@ -121,7 +121,7 @@ export class WalletTransaction
 	 *	@param transactionRequest {TransactionRequest} transaction request object
 	 * 	@returns {Promise<number>} gas limit in wei.
 	 */
-	public estimateEthGasLimit( transactionRequest : TransactionRequest )  : Promise<number>
+	public async estimateEthGasLimit( transactionRequest : TransactionRequest )  : Promise<number>
 	{
 		return new Promise( async ( resolve, reject) =>
 		{

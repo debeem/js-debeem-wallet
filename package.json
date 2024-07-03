@@ -39,7 +39,7 @@
 	},
 	"dependencies": {
 		"debeem-cipher": "^1.0.1",
-		"debeem-id": "^1.0.18",
+		"debeem-id": "^1.0.20",
 		"debeem-utils": "^1.0.70",
 		"ethers": "^6.13.1",
 		"idb": "^7.1.1",

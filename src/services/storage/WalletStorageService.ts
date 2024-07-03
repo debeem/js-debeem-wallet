@@ -3,7 +3,7 @@
  * 	@module WalletStorageService
  */
 import { CallbackModels } from "../../models/CallbackModels";
-import { TestUtil } from "debeem-utils";
+import { TestUtil, TypeUtil } from "debeem-utils";
 
 if ( TestUtil.isTestEnv() )
 {
@@ -11,16 +11,20 @@ if ( TestUtil.isTestEnv() )
 	require('fake-indexeddb/auto');
 }
 
-//import { v4 as uuidv4 } from 'uuid';
-//import { encodeBase58, toUtf8Bytes } from 'ethers';
 import { isAddress, Wallet } from 'ethers';
-import { WalletEntityItem } from "../../entities/WalletEntity";
-import { AbstractStorageService } from "./AbstractStorageService";
+import { WalletEntityBaseItem, WalletEntityItem } from "../../entities/WalletEntity";
+import { AbstractEncryptedStorageService } from "./AbstractEncryptedStorageService";
 import { IStorageService } from "./IStorageService";
 import { VerifyUtil } from "../../utils/VerifyUtil";
+import { VaWalletEntity } from "../../validators/VaWalletEntity";
+import _ from "lodash";
+import { SysUserItem } from "../../entities/SysUserEntity";
+import { getCurrentWalletAsync } from "../../config";
+import { SysConfigStorageService } from "./SysConfigStorageService";
+import { SysConfigKeys } from "../../entities/SysConfigEntity";
 
 
-export class WalletStorageService extends AbstractStorageService<WalletEntityItem> implements IStorageService
+export class WalletStorageService extends AbstractEncryptedStorageService<WalletEntityItem> implements IStorageService
 {
 	constructor( pinCode : string = '' )
 	{
@@ -78,35 +82,12 @@ export class WalletStorageService extends AbstractStorageService<WalletEntityIte
 	 */
 	public isValidItem( item : any, callback ?: CallbackModels ) : boolean
 	{
-		if ( ! VerifyUtil.returnNotNullObject( item, callback, `null item` ) )
+		const error : string | null = VaWalletEntity.validateWalletEntityItem( item );
+		if ( null !== error )
 		{
+			VerifyUtil.setErrorDesc( callback, error );
 			return false;
 		}
-		if ( ! VerifyUtil.returnNotEmptyString( item.name, callback, `empty .name` ) )
-		{
-			return false;
-		}
-		if ( ! VerifyUtil.returnNotGreaterThanNumeric( item.chainId, 0, callback, `invalid .chainId` ) )
-		{
-			VerifyUtil.setErrorDesc( callback,  );
-			return false;
-		}
-		if ( ! VerifyUtil.returnNotEmptyString( item.pinCode, callback, `empty .pinCode` ) )
-		{
-			return false;
-		}
-		if ( ! VerifyUtil.returnNotEmptyString( item.address, callback, `empty .address` ) )
-		{
-			return false;
-		}
-		if ( ! isAddress( item.address ) )
-		{
-			VerifyUtil.setErrorDesc( callback, `invalid .address` );
-			return false;
-		}
-
-		//	TODO
-		//	check network
 
 		return true;
 	}
@@ -115,16 +96,112 @@ export class WalletStorageService extends AbstractStorageService<WalletEntityIte
 	 * 	get storage key by item object
 	 *
 	 * 	@group Basic Methods
-	 *	@param value {WalletEntityItem} WalletEntityItem object
+	 *	@param item	{WalletEntityItem | WalletEntityBaseItem} WalletEntityItem object
 	 *	@returns {string | null}
 	 */
-	public getKeyByItem( value : WalletEntityItem ) : string | null
+	public getKeyByItem( item : WalletEntityItem | WalletEntityBaseItem ) : string | null
 	{
-		if ( this.isValidItem( value ) )
+		const error : string | null = VaWalletEntity.validateWalletEntityBaseItem( item );
+		if ( null === error )
 		{
-			return value.address;
+			return item.address;
 		}
 
 		return null;
+	}
+
+
+	/**
+	 * 	check if the item is existing
+	 *
+	 * 	@group Basic Methods
+	 *	@param walletBaseItem	{WalletEntityBaseItem} item object
+	 *	@returns {Promise<boolean>}
+	 */
+	public async existByWalletEntityBaseItem( walletBaseItem : WalletEntityBaseItem ) : Promise<boolean>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				const errorVaWalletBaseItem : string | null = VaWalletEntity.validateWalletEntityBaseItem( walletBaseItem );
+				if ( null !== errorVaWalletBaseItem )
+				{
+					return reject( `${ this.constructor.name }.existByWalletEntityBaseItem :: invalid walletBaseItem(${ errorVaWalletBaseItem })` );
+				}
+
+				const key : string | null = this.getKeyByItem( walletBaseItem );
+				if ( _.isString( key ) && ! _.isEmpty( key ) )
+				{
+					const walletEntityItem : WalletEntityItem | null = await this.get( key );
+					return resolve( !! walletEntityItem );
+				}
+
+				resolve( false );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+	/**
+	 * 	get item by CurrentWallet
+	 * 	@returns {Promise< WalletEntityItem | null >}
+	 */
+	public async getByCurrentWallet() : Promise< WalletEntityItem | null >
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				//	get current wallet
+				const currentWallet : string | undefined = await new SysConfigStorageService().getConfig( SysConfigKeys.currentWallet );
+				if ( ! _.isString( currentWallet ) || _.isEmpty( currentWallet ) )
+				{
+					return reject( `${ this.constructor.name }.getByCurrentWallet :: invalid currentWallet` );
+				}
+
+				//	...
+				resolve( await this.get( currentWallet ) );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+	/**
+	 *	Put an item into database. replaces the item with the same key.
+	 *
+	 * 	@group Basic Methods
+	 *	@param key	{string} storage key
+	 *	@param value	{WalletEntityItem}	structured data objects
+	 *	@returns {Promise<boolean>}
+	 */
+	public async put( key: string, value : WalletEntityItem ) : Promise<boolean>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( ! this.isValidItem( value ) )
+				{
+					return reject( `${ this.constructor.name }.put :: invalid value` );
+				}
+
+				value = {
+					...value,
+					pinCode : ``,
+				};
+				resolve( await super.put( key, value ) );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
 	}
 }

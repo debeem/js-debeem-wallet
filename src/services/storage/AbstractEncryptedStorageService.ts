@@ -15,7 +15,7 @@ import _ from "lodash";
 /**
  * 	abstract class AbstractStorageService
  */
-export abstract class AbstractStorageService<T> implements IStorageService
+export abstract class AbstractEncryptedStorageService<T> implements IStorageService
 {
 	/**
 	 *	@ignore
@@ -71,7 +71,7 @@ export abstract class AbstractStorageService<T> implements IStorageService
 	 * 	@ignore
 	 * 	@returns {Promise< IDBPDatabase<StorageEntity> | null >}
 	 */
-	public init() : Promise< IDBPDatabase<StorageEntity> | null >
+	protected async init() : Promise< IDBPDatabase<StorageEntity> | null >
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -86,11 +86,7 @@ export abstract class AbstractStorageService<T> implements IStorageService
 					return resolve( null );
 				}
 
-				//
-				//	todo
-				//	get password by wallet address
-				//
-				const password : string | null = await this.sysUserStorageService.extractPassword( this.databaseName, this.pinCode );
+				const password : string | null = await this.sysUserStorageService.extractPassword( this.pinCode );
 				if ( ! password )
 				{
 					return reject( `${ this.constructor.name } :: invalid pinCode` );
@@ -127,38 +123,13 @@ export abstract class AbstractStorageService<T> implements IStorageService
 	}
 
 	/**
-	 *	Check if the pinCode is correct
-	 *
-	 * 	@group Extended Methods
-	 *	@param pinCode	{string} the pinCode to be checked
-	 *	@returns {Promise< boolean >}
-	 */
-	public isValidPinCode( pinCode : string ) : Promise< boolean >
-	{
-		return this.sysUserStorageService.isValidPinCode( this.databaseName, pinCode );
-	}
-
-	/**
-	 * 	change pinCode
-	 *
-	 * 	@group Extended Methods
-	 *	@param oldPinCode	{string} old pinCode
-	 *	@param newPinCode	{string} new pinCode
-	 *	@returns {Promise<boolean>}
-	 */
-	public changePinCode( oldPinCode : string, newPinCode : string ) : Promise<boolean>
-	{
-		return this.sysUserStorageService.changePinCode( this.databaseName, oldPinCode, newPinCode );
-	}
-
-	/**
 	 *	Check if the input object is valid object
 	 *
 	 * 	@group Basic Methods
 	 *	@param item	{any} the object to be checked
 	 *	@returns {boolean}
 	 */
-	isValidItem( item : any ) : boolean
+	public isValidItem( item : any ) : boolean
 	{
 		return false;
 	}
@@ -252,8 +223,15 @@ export abstract class AbstractStorageService<T> implements IStorageService
 					const encrypted : string | undefined = await this.db.get( this.storeName, key );
 					if ( encrypted )
 					{
-						const value : T | undefined = await this.storageCrypto.decryptToObject( encrypted, this.password );
-						return resolve( value ? value : null );
+						try
+						{
+							const value : T | undefined = await this.storageCrypto.decryptToObject( encrypted, this.password );
+							return resolve( value ? value : null );
+						}
+						catch ( subError )
+						{
+							return resolve( null );
+						}
 					}
 				}
 
@@ -344,9 +322,9 @@ export abstract class AbstractStorageService<T> implements IStorageService
 	 * 	@group Basic Methods
 	 *	@param query	{string} query string
 	 *	@param maxCount	{number} maximum limit number
-	 *	@returns {Promise<Array<string> | null>}
+	 *	@returns {Promise<Array<string>>}
 	 */
-	public async getAllKeys( query? : string, maxCount? : number ) : Promise<Array<string> | null>
+	public async getAllKeys( query? : string, maxCount? : number ) : Promise<Array<string>>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -356,11 +334,11 @@ export abstract class AbstractStorageService<T> implements IStorageService
 				if ( this.db )
 				{
 					const value : Array<string> | null = await this.db.getAllKeys( this.storeName, query, maxCount );
-					return resolve( value ? value : null );
+					return resolve( value ? value : [] );
 				}
 
 				//	...
-				resolve( null );
+				resolve( [] );
 			}
 			catch ( err )
 			{
@@ -375,9 +353,9 @@ export abstract class AbstractStorageService<T> implements IStorageService
 	 * 	@group Basic Methods
 	 *	@param query	{string} query string
 	 *	@param maxCount	{number} maximum limit number
-	 *	@returns {Promise<Array< T | null > | null>}
+	 *	@returns {Promise<Array< T | null >>}
 	 */
-	public async getAll( query? : string, maxCount? : number ) : Promise<Array< T | null > | null>
+	public async getAll( query? : string, maxCount? : number ) : Promise<Array< T | null >>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -412,7 +390,7 @@ export abstract class AbstractStorageService<T> implements IStorageService
 				}
 
 				//	...
-				resolve( null );
+				resolve( [] );
 			}
 			catch ( err )
 			{
@@ -458,7 +436,7 @@ export abstract class AbstractStorageService<T> implements IStorageService
 	 *	@param value	{any} item object
 	 *	@returns {string | null}
 	 */
-	getKeyByItem( value : any ) : string | null
+	public getKeyByItem( value : any ) : string | null
 	{
 		return null;
 	}

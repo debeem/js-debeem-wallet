@@ -1,8 +1,10 @@
 import { describe, expect } from '@jest/globals';
 import { WalletStorageService } from "../../../../src";
 import { WalletEntityItem } from "../../../../src";
-import { TypeUtil } from "../../../../src/utils/TypeUtil";
-import { SysUserStorageService } from "../../../../src/services/storage/SysUserStorageService";
+import { testUserList, testWalletObjList } from "../../../../src/configs/TestConfig";
+import _ from "lodash";
+import { getCurrentWalletAsync, initWalletAsync, putCurrentWalletAsync } from "../../../../src/config";
+import { TWalletBaseItem } from "debeem-id";
 
 
 /**
@@ -19,254 +21,467 @@ describe( "WalletStorageService", () =>
 
 	describe( "Test getting and saving one object", () =>
 	{
-		const walletStorage = new WalletStorageService( `my password` );
-		let walletAddress = walletStorage.generateRandomWalletAddress();
-		//
-		//	should output:
-		//	walletAddress: 0x74F00069E4940a4009A6eF28890D6D877bb0E2a3
-		//
-		//console.log( `walletAddress: ${ walletAddress }` );
+		const walletObject = testWalletObjList.alice;
+		const pinCode = `123456`;
 
-		//	will output: 0xPZ465gonNLd5VGMbRpgpT2ptzd3Ff5Udh7i6cXQUMY8hfTwTD
-		//console.log( walletAddress );
-
-		it( "should save a WalletEntityItem object to indexedDB database", async () =>
+		it( "should throw `invalid currentWallet`", async () =>
 		{
-			const item : WalletEntityItem = {
-				name: 'My-First-Wallet',
-				address: walletAddress,	//	address of wallet
-				chainId: 5,		//	Ethereum Goerli Testnet
-				pinCode: '1234',
-				privateKey: '0x948427c37d662bde57c4d8765da63a87083186149ac6040b976a3ebb99876533',
-				publicKey: 'public key',
-				mnemonic: 'lab ball helmet sure replace gauge size rescue radar cluster remember twenty',
-				isHD: false,		//	HD wallet?
-				password: '11111',	//	The password of the wallet, used to encrypt mnemonic and privateKey. If password is not empty, mnemonic and privateKey should be ciphertext
-				index: 0,		//	The index of the generated wallet address. For non-HD wallets, the index will always be 0
-				path: '',		//	Wallet path. For non-HD wallets, the path is empty
-			};
-			const key : string | null = walletStorage.getKeyByItem( item );
-			expect( key ).toBeDefined();
-			expect( TypeUtil.isNotEmptyString( key ) ).toBeTruthy();
-			if ( key && TypeUtil.isNotEmptyString( key ) )
+			try
 			{
-				const saved : boolean = await walletStorage.put( key, item );
-				const itemKey : string | null = walletStorage.getKeyByItem( item );
-				expect( itemKey ).toBeDefined();
-				expect( TypeUtil.isNotEmptyString( itemKey ) ).toBeTruthy();
-				if ( itemKey && TypeUtil.isNotEmptyString( itemKey ) )
+				const walletStorage = new WalletStorageService( pinCode );
+				const item : WalletEntityItem = {
+					...walletObject,
+					name: 'My-First-Wallet',
+					chainId: 5,		//	Ethereum Goerli Testnet
+					pinCode: ``,
+				};
+				const key : string | null = walletStorage.getKeyByItem( item );
+				expect( key ).toBeDefined();
+				expect( _.isString( key ) ).toBeTruthy();
+				expect( ! _.isEmpty( key ) ).toBeTruthy();
+				if ( key )
 				{
-					const value : WalletEntityItem | null = await walletStorage.get( itemKey );
-					expect( value ).not.toBeNull();
-					expect( value ).toHaveProperty( 'name' );
-					expect( value?.name ).toBe( item.name );
-					expect( value?.address ).toBe( item.address );
-					expect( value?.chainId ).toBe( item.chainId );
-					expect( value?.pinCode ).toBe( item.pinCode );
-					expect( value?.privateKey ).toBe( item.privateKey );
-					expect( value?.publicKey ).toBe( item.publicKey );
-					expect( value?.mnemonic ).toBe( item.mnemonic );
-					expect( value?.isHD ).toBe( item.isHD );
-					expect( value?.password ).toBe( item.password );
-					expect( value?.index ).toBe( item.index );
-					expect( value?.path ).toBe( item.path );
+					await walletStorage.put( key, item );
 				}
+
+				//	do not go here
+				expect( true ).toBeFalsy();
+			}
+			catch ( err )
+			{
+				//console.log( err )
+				const errorText = err as string;
+				expect( _.isString( errorText ) ).toBeTruthy();
+				expect( errorText ).toBe( `SysUserStorageService.extractPassword :: invalid currentWallet` );
 			}
 		});
-		it( "should delete the object just saved", async () =>
-		{
-			const deleted : boolean = await walletStorage.delete( walletAddress );
 
-			expect( deleted ).toBeTruthy();
+		it( "should throw `invalid pinCode`", async () =>
+		{
+			try
+			{
+				await putCurrentWalletAsync( walletObject.address );
+				const walletStorage = new WalletStorageService( pinCode );
+				const item : WalletEntityItem = {
+					...walletObject,
+					name: 'My-First-Wallet',
+					chainId: 5,		//	Ethereum Goerli Testnet
+					pinCode: ``,
+				};
+				const key : string | null = walletStorage.getKeyByItem( item );
+				expect( key ).toBeDefined();
+				expect( _.isString( key ) ).toBeTruthy();
+				expect( ! _.isEmpty( key ) ).toBeTruthy();
+				if ( key )
+				{
+					await walletStorage.put( key, item );
+				}
+
+				//	do not go here
+				expect( true ).toBeFalsy();
+			}
+			catch ( err )
+			{
+				const errorText = err as string;
+				expect( _.isString( errorText ) ).toBeTruthy();
+				expect( errorText ).toBe( `WalletStorageService :: invalid pinCode` );
+			}
+		});
+
+		it( "should create a user using initWalletAsync", async () =>
+		{
+			const walletName = `MyWallet`;
+			const chainId = 1;
+			const toBeCreatedWalletItem : WalletEntityItem = {
+				...walletObject,
+				name : walletName,
+				chainId : chainId,
+				pinCode : ``
+			};
+			const created : boolean = await initWalletAsync( toBeCreatedWalletItem, pinCode, true );
+			expect( created ).toBeTruthy();
+		});
+
+
+		it( "should fail to obtain wallet info by a incorrect PIN Code ", async () =>
+		{
+			const walletName = `MyWallet`;
+			const chainId = 1;
+			const toBeCreatedWalletItem : WalletEntityItem = {
+				...walletObject,
+				name : walletName,
+				chainId : chainId,
+				pinCode : ``
+			};
+			const created : boolean = await initWalletAsync( toBeCreatedWalletItem, pinCode, true );
+			expect( created ).toBeTruthy();
+
+			try
+			{
+				//
+				//	query info
+				//
+				const incorrectPinCode = `889999`;
+				const walletStorage = new WalletStorageService( incorrectPinCode );
+				const itemKey : string | null = walletStorage.getKeyByItem( walletObject );
+				expect( itemKey ).toBeDefined();
+				expect( _.isString( itemKey ) ).toBeTruthy();
+				expect( ! _.isEmpty( itemKey ) ).toBeTruthy();
+				if ( itemKey )
+				{
+					//	exception thrown here
+					const value : WalletEntityItem | null = await walletStorage.get( itemKey );
+
+					//	not go here
+					expect( value ).not.toBeNull();
+				}
+			}
+			catch ( err )
+			{
+				const errorText = err as string;
+				expect( _.isString( errorText ) ).toBeTruthy();
+				expect( errorText ).toBe( `WalletStorageService :: invalid pinCode` );
+			}
+		});
+
+		it( "should save a WalletEntityItem using initWalletAsync", async () =>
+		{
+			const walletName = `MyWallet`;
+			const chainId = 1;
+			const toBeCreatedWalletItem : WalletEntityItem = {
+				...walletObject,
+				name : walletName,
+				chainId : chainId,
+				pinCode : ``
+			};
+			const created : boolean = await initWalletAsync( toBeCreatedWalletItem, pinCode, true );
+			expect( created ).toBeTruthy();
+
+			//
+			//	query info
+			//
+			const walletStorage = new WalletStorageService( pinCode );
+			const itemKey : string | null = walletStorage.getKeyByItem( walletObject );
+			expect( itemKey ).toBeDefined();
+			expect( _.isString( itemKey ) ).toBeTruthy();
+			expect( ! _.isEmpty( itemKey ) ).toBeTruthy();
+			if ( itemKey )
+			{
+				const value : WalletEntityItem | null = await walletStorage.get( itemKey );
+				expect( value ).not.toBeNull();
+				expect( value ).toHaveProperty( 'name' );
+				expect( value?.name ).toBe( toBeCreatedWalletItem.name );
+				expect( value?.address ).toBe( toBeCreatedWalletItem.address );
+				expect( value?.chainId ).toBe( toBeCreatedWalletItem.chainId );
+				expect( value?.pinCode ).toBe( toBeCreatedWalletItem.pinCode );
+				expect( value?.privateKey ).toBe( toBeCreatedWalletItem.privateKey );
+				expect( value?.publicKey ).toBe( toBeCreatedWalletItem.publicKey );
+				expect( value?.mnemonic ).toBe( toBeCreatedWalletItem.mnemonic );
+				expect( value?.isHD ).toBe( toBeCreatedWalletItem.isHD );
+				expect( value?.password ).toBe( toBeCreatedWalletItem.password );
+				expect( value?.index ).toBe( toBeCreatedWalletItem.index );
+				expect( value?.path ).toBe( toBeCreatedWalletItem.path );
+			}
+		});
+
+
+		it( "should delete a WalletEntityItem just saved", async () =>
+		{
+			const walletName = `MyWallet`;
+			const chainId = 1;
+			const toBeCreatedWalletItem : WalletEntityItem = {
+				...walletObject,
+				name : walletName,
+				chainId : chainId,
+				pinCode : ``
+			};
+			const created : boolean = await initWalletAsync( toBeCreatedWalletItem, pinCode, true );
+			expect( created ).toBeTruthy();
+
+			const walletStorage = new WalletStorageService( pinCode );
+			const itemKey : string | null = walletStorage.getKeyByItem( walletObject );
+			expect( itemKey ).toBeDefined();
+			expect( _.isString( itemKey ) ).toBeTruthy();
+			expect( ! _.isEmpty( itemKey ) ).toBeTruthy();
+			if ( itemKey )
+			{
+				const deleted : boolean = await walletStorage.delete( itemKey );
+				expect( deleted ).toBeTruthy();
+
+				const value : WalletEntityItem | null = await walletStorage.get( itemKey );
+				expect( value ).toBeNull();
+			}
+			else
+			{
+				//	not go here
+				expect( true ).toBeFalsy();
+			}
 		});
 	} );
 
 	describe( "Test multiple objects", () =>
 	{
-		const walletStorage = new WalletStorageService( `my password` );
-		let walletAddress : Array<string> = [];
-		for ( let i = 0; i < 5; i ++ )
-		{
-			walletAddress.push( walletStorage.generateRandomWalletAddress() );
-		}
+		const pinCode = `123456`;
+		let walletStorage !: WalletStorageService;
 
-		it( "should save multiple WalletEntityItem objects to indexedDB database", async () =>
+		let lastWalletObject !: TWalletBaseItem;
+		let lastPinCode = ``;
+
+		it( "should clear all users", async () =>
 		{
+			const walletObject = testWalletObjList.alice;
+			const walletName = `MyWallet`;
+			const chainId = 1;
+			const toBeCreatedWalletItem : WalletEntityItem = {
+				...walletObject,
+				name : walletName,
+				chainId : chainId,
+				pinCode : ``
+			};
+			const created : boolean = await initWalletAsync( toBeCreatedWalletItem, pinCode, true );
+			expect( created ).toBeTruthy();
+
+			walletStorage = new WalletStorageService( pinCode );
+			const allKeys1 : Array<string> = await walletStorage.getAllKeys();
+			expect( Array.isArray( allKeys1 ) ).toBeTruthy();
+			expect( allKeys1.length ).toBeGreaterThan( 0 );
+
+			//	should clear all users
 			await walletStorage.clear();
 
-			for ( let i = 0; i < walletAddress.length; i ++ )
+			const allKeys2 : Array<string> = await walletStorage.getAllKeys();
+			expect( Array.isArray( allKeys2 ) ).toBeTruthy();
+			expect( allKeys2.length ).toBe( 0 );
+		});
+
+		it( "should create Bob and Mary", async () =>
+		{
+			//	create 2 users
+			expect( testUserList.length ).toBeGreaterThan( 0 );
+			for ( let i = 1; i < testUserList.length; i ++ )
 			{
-				const item : WalletEntityItem = {
-					name: `My-First-Wallet-${ i }`,
-					address: walletAddress[ i ],	//	address of wallet
-					chainId: 5,		//	Ethereum Goerli Testnet
-					pinCode: '1234',
-					privateKey: 'private key',
-					publicKey: 'public key',
-					mnemonic: 'lab ball helmet sure replace gauge size rescue radar cluster remember twenty',
-					isHD: false,		//	HD wallet?
-					password: '11111',	//	The password of the wallet, used to encrypt mnemonic and privateKey. If password is not empty, mnemonic and privateKey should be ciphertext
-					index: 0,		//	The index of the generated wallet address. For non-HD wallets, the index will always be 0
-					path: '',		//	Wallet path. For non-HD wallets, the path is empty
+				const testUser = testUserList[ i ];
+				lastWalletObject = testUser.walletObj;
+				lastPinCode = `12345${ i }`;
+				const walletName = `MyWallet`;
+				const chainId = 1;
+				const toBeCreatedWalletItem : WalletEntityItem = {
+					...lastWalletObject,
+					name : walletName,
+					chainId : chainId,
+					pinCode : ``
 				};
-				const key : string | null = walletStorage.getKeyByItem( item );
-				expect( key ).toBeDefined();
-				expect( TypeUtil.isNotEmptyString( key ) ).toBeTruthy();
-				if ( key && TypeUtil.isNotEmptyString( key ) )
+				const created : boolean = await initWalletAsync( toBeCreatedWalletItem, lastPinCode, true );
+				expect( created ).toBeTruthy();
+
+				const loopWalletStorage = new WalletStorageService( lastPinCode );
+				const itemKey : string | null = loopWalletStorage.getKeyByItem( lastWalletObject );
+				expect( itemKey ).not.toBeNull();
+				expect( _.isString( itemKey ) ).toBeTruthy();
+				expect( ! _.isEmpty( itemKey ) ).toBeTruthy();
+				if ( itemKey )
 				{
-					const saved : boolean = await walletStorage.put( key, item );
-					expect( saved ).toBeDefined();
+					const value : WalletEntityItem | null = await loopWalletStorage.get( itemKey );
+					expect( value ).not.toBeNull();
+				}
+				else
+				{
+					//	not go here
+					expect( true ).toBeFalsy();
 				}
 			}
 		});
 
-		it( "should query the first WalletEntityItem objects from indexedDB database", async () =>
+		it( "should unable to read wallets encrypted by other private keys", async () =>
 		{
-			await walletStorage.clear();
-
-			for ( let i = 0; i < walletAddress.length; i ++ )
+			const allKeys3 : Array<string> = await walletStorage.getAllKeys();
+			//console.log( `allKeys3 :`, allKeys3 );
+			expect( Array.isArray( allKeys3 ) ).toBeTruthy();
+			expect( allKeys3.length ).toBeGreaterThan( 0 );
+			for ( const wKey of allKeys3 )
 			{
-				const item : WalletEntityItem = {
-					name: `My-First-Wallet-${ i }`,
-					address: walletAddress[ i ],	//	address of wallet
-					chainId: 5,		//	Ethereum Goerli Testnet
-					pinCode: '1234',
-					privateKey: 'private key',
-					publicKey: 'public key',
-					mnemonic: 'lab ball helmet sure replace gauge size rescue radar cluster remember twenty',
-					isHD: false,		//	HD wallet?
-					password: '11111',	//	The password of the wallet, used to encrypt mnemonic and privateKey. If password is not empty, mnemonic and privateKey should be ciphertext
-					index: 0,		//	The index of the generated wallet address. For non-HD wallets, the index will always be 0
-					path: '',		//	Wallet path. For non-HD wallets, the path is empty
-				};
-				const key : string | null = walletStorage.getKeyByItem( item );
-				expect( key ).toBeDefined();
-				expect( TypeUtil.isNotEmptyString( key ) ).toBeTruthy();
-				if ( key && TypeUtil.isNotEmptyString( key ) )
-				{
-					const saved : boolean = await walletStorage.put( key, item );
-					expect( saved ).toBeDefined();
-				}
-			}
-
-			//	...
-			const value : WalletEntityItem | null = await walletStorage.getFirst();
-			expect( value ).toHaveProperty( 'name' );
-			expect( value ).toHaveProperty( 'address' );
-			expect( value ).toHaveProperty( 'chainId' );
-			expect( value ).toHaveProperty( 'pinCode' );
-			expect( value ).toHaveProperty( 'privateKey' );
-			expect( value ).toHaveProperty( 'publicKey' );
-			expect( value ).toHaveProperty( 'mnemonic' );
-		});
-
-		it( "should query all the key of WalletEntityItem objects from indexedDB database", async () =>
-		{
-			await walletStorage.clear();
-
-			for ( let i = 0; i < walletAddress.length; i ++ )
-			{
-				const item : WalletEntityItem = {
-					name: `My-First-Wallet-${ i }`,
-					address: walletAddress[ i ],	//	address of wallet
-					chainId: 5,		//	Ethereum Goerli Testnet
-					pinCode: '1234',
-					privateKey: 'private key',
-					publicKey: 'public key',
-					mnemonic: 'lab ball helmet sure replace gauge size rescue radar cluster remember twenty',
-					isHD: false,		//	HD wallet?
-					password: '11111',	//	The password of the wallet, used to encrypt mnemonic and privateKey. If password is not empty, mnemonic and privateKey should be ciphertext
-					index: 0,		//	The index of the generated wallet address. For non-HD wallets, the index will always be 0
-					path: '',		//	Wallet path. For non-HD wallets, the path is empty
-				};
-				const key : string | null = walletStorage.getKeyByItem( item );
-				expect( key ).toBeDefined();
-				expect( TypeUtil.isNotEmptyString( key ) ).toBeTruthy();
-				if ( key && TypeUtil.isNotEmptyString( key ) )
-				{
-					const saved : boolean = await walletStorage.put( key, item );
-					expect( saved ).toBeDefined();
-				}
-			}
-
-			//	...
-			const queryKeys : Array<string> | null = await walletStorage.getAllKeys();
-
-			expect( Array.isArray( queryKeys ) ).toBeTruthy();
-			expect( queryKeys ).toHaveLength( walletAddress.length );
-			if ( queryKeys )
-			{
-				for ( const key of queryKeys )
-				{
-					expect( walletAddress.includes( key ) ).toBeTruthy();
-				}
+				const value : WalletEntityItem | null = await walletStorage.get( wKey );
+				expect( value ).toBeNull();
 			}
 		});
 
-		it( "should query all WalletEntityItem objects from indexedDB database", async () =>
+		it( "should return the walletItem with lastWalletObject and lastPinCode", async () =>
 		{
-			await walletStorage.clear();
-
-			for ( let i = 0; i < walletAddress.length; i ++ )
+			//	should return the last user
+			const lastWalletStorage = new WalletStorageService( lastPinCode );
+			const lastKey = lastWalletStorage.getKeyByItem( lastWalletObject );
+			expect( lastKey ).not.toBeNull();
+			if ( lastKey )
 			{
-				const item : WalletEntityItem = {
-					isHD: false,			//	HD wallet?
-					mnemonic: 'lab ball helmet sure replace gauge size rescue radar cluster remember twenty',
-					password: '123123',		//	The password of the wallet, used to encrypt mnemonic and privateKey. If password is not empty, mnemonic and privateKey should be ciphertext
-					address: walletAddress[ i ],	//	address of wallet
-					privateKey: 'private key',
-					publicKey: 'public key',
-					index: 0,		//	The index of the generated wallet address. For non-HD wallets, the index will always be 0
-					path: '',		//	Wallet path. For non-HD wallets, the path is empty
-					depth: 0,
-					fingerprint: '',
-					parentFingerprint: '',
-					chainCode: '',
-					name: `My-First-Wallet-${ i }`,
-					chainId: 5,		//	Ethereum Goerli Testnet
-					pinCode: '1234',
-					remark: '',
-					avatar: 'https://sss',
-					freePayment: false,
-				};
-				const key : string | null = walletStorage.getKeyByItem( item );
-				expect( key ).toBeDefined();
-				expect( TypeUtil.isNotEmptyString( key ) ).toBeTruthy();
-				if ( key && TypeUtil.isNotEmptyString( key ) )
-				{
-					const saved : boolean = await walletStorage.put( key, item );
-					expect( saved ).toBeDefined();
-				}
+				const lastSavedWalletItem = await lastWalletStorage.get( lastKey );
+				expect( lastSavedWalletItem ).not.toBeNull();
+				//console.log( `lastSavedWalletItem`, lastSavedWalletItem )
 			}
+		});
+
+		it( "should return the walletItem by .getByCurrentWallet", async () =>
+		{
+			//	...
+			const walletItemByCurrentWallet = await new WalletStorageService( lastPinCode ).getByCurrentWallet();
+			expect( walletItemByCurrentWallet ).not.toBeNull();
+			//console.log( walletItemByCurrentWallet )
+			//	{
+			//       isHD: true,
+			//       mnemonic: 'electric shoot legal trial crane rib garlic claw armed snow blind advance',
+			//       password: '',
+			//       address: '0xc4321e386bbc48692b49ec4230034ea78d2a5b55',
+			//       publicKey: '0x031e3440eb90788bedd955398a039d75ee3ade799d13a48eafe5f20b009cd8bace',
+			//       privateKey: '0xd449e4bb488ca6050beb042f4478214a0fc063aa9ea7c0d865c3813367805e1e',
+			//       index: 0,
+			//       path: "m/44'/60'/0'/0/0",
+			//       name: 'MyWallet',
+			//       chainId: 1,
+			//       pinCode: ''
+			//     }
+		});
+
+		it( "should delete the walletItem with a key given by .getByCurrentWallet", async () =>
+		{
+			const currentWallet = await getCurrentWalletAsync();
+			expect( currentWallet ).not.toBeNull();
 
 			//	...
-			const items : Array<WalletEntityItem | null> | null = await walletStorage.getAll();
-			expect( Array.isArray( items ) ).toBeTruthy();
-			expect( items ).toHaveLength( 5 );
-			if ( Array.isArray( items ) )
+			const walletStorage = new WalletStorageService( lastPinCode );
+
+			//	...
+			const walletItemByCurrentWallet = await walletStorage.getByCurrentWallet();
+			expect( walletItemByCurrentWallet ).not.toBeNull();
+
+			if ( currentWallet )
 			{
-				for ( let i = 0; i < items.length; i ++ )
-				{
-					expect( items[ i ] ).toHaveProperty( 'isHD' );
-					expect( items[ i ] ).toHaveProperty( 'mnemonic' );
-					expect( items[ i ] ).toHaveProperty( 'password' );
-					expect( items[ i ] ).toHaveProperty( 'address' );
-					expect( items[ i ] ).toHaveProperty( 'privateKey' );
-					expect( items[ i ] ).toHaveProperty( 'publicKey' );
-					expect( items[ i ] ).toHaveProperty( 'index' );
-					expect( items[ i ] ).toHaveProperty( 'path' );
-					expect( items[ i ] ).toHaveProperty( 'depth' );
-					expect( items[ i ] ).toHaveProperty( 'fingerprint' );
-					expect( items[ i ] ).toHaveProperty( 'parentFingerprint' );
-					expect( items[ i ] ).toHaveProperty( 'chainCode' );
-					expect( items[ i ] ).toHaveProperty( 'name' );
-					expect( items[ i ] ).toHaveProperty( 'chainId' );
-					expect( items[ i ] ).toHaveProperty( 'pinCode' );
-					expect( items[ i ] ).toHaveProperty( 'remark' );
-					expect( items[ i ] ).toHaveProperty( 'avatar' );
-					expect( items[ i ] ).toHaveProperty( 'freePayment' );
-				}
+				await walletStorage.delete( currentWallet );
 			}
+
+			const walletItemByCurrentWallet2 = await walletStorage.getByCurrentWallet();
+			expect( walletItemByCurrentWallet2 ).toBeNull();
 		});
 	});
+
+	describe( "Switching between multiple wallets", () =>
+	{
+		const pinCodeAlice = `123456`;
+		const walletNameAlice = `Alice's Wallet`;
+
+		const pinCodeBob = `888888`;
+		const walletNameBob = `Bob's Wallet`;
+
+
+		it( "should create a wallet for Alice", async () =>
+		{
+			const walletObject = testWalletObjList.alice;
+			const chainId = 1;
+			const walletItem : WalletEntityItem = {
+				...walletObject,
+				name : walletNameAlice,
+				chainId : chainId,
+				pinCode : ``
+			};
+			const created : boolean = await initWalletAsync( walletItem, pinCodeAlice, true );
+			expect( created ).toBeTruthy();
+		});
+
+		it( "should create a wallet for Bob", async () =>
+		{
+			const walletObject = testWalletObjList.bob;
+			const chainId = 1;
+			const walletItem : WalletEntityItem = {
+				...walletObject,
+				name : walletNameBob,
+				chainId : chainId,
+				pinCode : ``
+			};
+			const created : boolean = await initWalletAsync( walletItem, pinCodeBob, true );
+			expect( created ).toBeTruthy();
+		});
+
+		it( "should return Alice's wallet object, after switching to", async () =>
+		{
+			await putCurrentWalletAsync( testWalletObjList.alice.address );
+
+			const walletStorage = new WalletStorageService( pinCodeAlice );
+			const walletItem = await walletStorage.getByCurrentWallet();
+			//console.log( walletItem );
+			//	{
+			//       isHD: true,
+			//       mnemonic: 'olympic cradle tragic crucial exit annual silly cloth scale fine gesture ancient',
+			//       password: '',
+			//       address: '0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357',
+			//       publicKey: '0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970a89b5aa622',
+			//       privateKey: '0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a',
+			//       index: 0,
+			//       path: "m/44'/60'/0'/0/0",
+			//       name: "Alice's Wallet",
+			//       chainId: 1,
+			//       pinCode: ''
+			//     }
+			expect( walletItem ).not.toBeNull();
+			if ( walletItem )
+			{
+				expect( walletItem.address ).toBe( testWalletObjList.alice.address.trim().toLowerCase() );
+				expect( walletItem.mnemonic ).toBe( testWalletObjList.alice.mnemonic );
+				expect( walletItem.privateKey ).toBe( testWalletObjList.alice.privateKey );
+				expect( walletItem.publicKey ).toBe( testWalletObjList.alice.publicKey );
+				expect( walletItem.name ).toBe( walletNameAlice );
+				expect( walletItem.pinCode ).toBe( `` );
+			}
+		});
+
+		it( "should throw `invalid pinCode` while reading Bob's wallet with Alice's PIN code", async () =>
+		{
+			await putCurrentWalletAsync( testWalletObjList.bob.address );
+
+			try
+			{
+				const walletStorage = new WalletStorageService( pinCodeAlice );
+				const walletItem = await walletStorage.getByCurrentWallet();
+				expect( walletItem ).not.toBeNull();
+				expect( true ).toBeFalsy();
+			}
+			catch ( err )
+			{
+				const errorText = err as string;
+				expect( _.isString( errorText ) ).toBeTruthy();
+				expect( errorText ).toBe( `WalletStorageService :: invalid pinCode` );
+			}
+		});
+
+		it( "should return Bob's wallet object, after switching to", async () =>
+		{
+			await putCurrentWalletAsync( testWalletObjList.bob.address );
+
+			const walletStorage = new WalletStorageService( pinCodeBob );
+			const walletItem = await walletStorage.getByCurrentWallet();
+			//console.log( walletItem );
+			//	{
+			//       isHD: true,
+			//       mnemonic: 'evidence cement snap basket genre fantasy degree ability sunset pistol palace target',
+			//       password: '',
+			//       address: '0xcbb8f66676737f0423bdda7bb1d8b84fc3c257e8',
+			//       publicKey: '0x02fc39345f9e415b421bd06c02f648be13c334b3ec4ab33b2d2437a00d6d7b01cc',
+			//       privateKey: '0x2f246e9d20d984e51800e758def8d99f314f6d1c680277dcc2c0060e4b43dfa3',
+			//       index: 0,
+			//       path: "m/44'/60'/0'/0/0",
+			//       name: "Bob's Wallet",
+			//       chainId: 1,
+			//       pinCode: ''
+			//     }
+			expect( walletItem ).not.toBeNull();
+			if ( walletItem )
+			{
+				expect( walletItem.address ).toBe( testWalletObjList.bob.address.trim().toLowerCase() );
+				expect( walletItem.mnemonic ).toBe( testWalletObjList.bob.mnemonic );
+				expect( walletItem.privateKey ).toBe( testWalletObjList.bob.privateKey );
+				expect( walletItem.publicKey ).toBe( testWalletObjList.bob.publicKey );
+				expect( walletItem.name ).toBe( walletNameBob );
+				expect( walletItem.pinCode ).toBe( `` );
+			}
+		});
+
+	});
+
 } );

@@ -13,11 +13,13 @@ if ( TestUtil.isTestEnv() )
 	require('fake-indexeddb/auto');
 }
 
-import { ChainEntityItem } from "../../entities/ChainEntity";
+import { ChainEntity, ChainEntityItem } from "../../entities/ChainEntity";
 import { defaultChains } from '../../constants/ConstantChain';
-import { AbstractStorageService } from "./AbstractStorageService";
 import { CallbackModels } from "../../models/CallbackModels";
 import { VerifyUtil } from "../../utils/VerifyUtil";
+import _ from "lodash";
+import { openDB, StoreNames } from "idb";
+import { IDBPDatabase } from "idb/build/entry";
 
 
 /**
@@ -69,41 +71,67 @@ import { VerifyUtil } from "../../utils/VerifyUtil";
  * 'https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png'
  * ```
  */
-export class ChainStorageService extends AbstractStorageService<ChainEntityItem> implements IStorageService
+export class ChainStorageService implements IStorageService
 {
-	constructor( pinCode : string = '' )
+	/**
+	 *	@ignore
+	 */
+	protected db !: IDBPDatabase<ChainEntity>;
+
+	/**
+	 *	@ignore
+	 *	@protected
+	 */
+	readonly databaseName : string = 'chain_entity';
+
+	/**
+	 *	@ignore
+	 *	@protected
+	 */
+	readonly storeName : StoreNames<ChainEntity> = 'root';
+
+
+	constructor()
 	{
-		super( 'chain_entity', pinCode );
 	}
 
-	// private async init()
-	// {
-	// 	if ( this.db )
-	// 	{
-	// 		return this.db;
-	// 	}
-	//
-	// 	return this.db = await openDB<ChainEntity>
-	// 	(
-	// 		'chain_entity',
-	// 		1,
-	// 		{
-	// 		upgrade( db )
-	// 		{
-	// 			// const walletStore = db.createObjectStore('wallet', {
-	// 			// 	//	The 'name' property of the object will be the key.
-	// 			// 	keyPath: 'name',
-	// 			// 	autoIncrement : false,
-	// 			// } );
-	//
-	// 			//
-	// 			//	key is a random sha256 value
-	// 			//
-	// 			const walletStore = db.createObjectStore('root' );
-	// 			walletStore.createIndex( 'by-chainId', 'chainId' );
-	// 		},
-	// 	});
-	// }
+	protected async init()
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( this.db )
+				{
+					return resolve( this.db );
+				}
+
+				//	...
+				const storeName = this.storeName;
+				this.db = await openDB<ChainEntity>
+				(
+					this.databaseName,
+					1,
+					{
+						upgrade( db )
+						{
+							db.createObjectStore( storeName );
+						},
+					});
+				if ( ! this.db )
+				{
+					return reject( `${ this.constructor.name }.init :: null db` );
+				}
+
+				//	...
+				resolve( this.db );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
 
 	/**
 	 *	Check if the input object is a valid Rpc Item
@@ -206,7 +234,7 @@ export class ChainStorageService extends AbstractStorageService<ChainEntityItem>
 	 * 	@group Extended Methods
 	 * 	@returns {Promise<boolean>}
 	 */
-	public flushDefault() : Promise<boolean>
+	public async flushDefault() : Promise<boolean>
 	{
 		return new Promise( async ( resolve, reject) =>
 		{
@@ -269,70 +297,6 @@ export class ChainStorageService extends AbstractStorageService<ChainEntityItem>
 		return `chain-${ chainId }`;
 	}
 
-	// /**
-	//  *	Put an item into database. replaces the item with the same key.
-	//  * 	value.chainId will be the storage key
-	//  *	@param value
-	//  *	@param key
-	//  */
-	// public async put( value : ChainEntityItem, key?: string ) : Promise<boolean>
-	// {
-	// 	return new Promise( async ( resolve, reject ) =>
-	// 	{
-	// 		try
-	// 		{
-	// 			if ( ! this.isValidItem( value ) )
-	// 			{
-	// 				return reject( `invalid value for ChainStorage:put` );
-	// 			}
-	//
-	// 			//	...
-	// 			await this.init();
-	// 			if ( this.db )
-	// 			{
-	// 				const key = this.getKeyByItem( value );
-	// 				if ( ! key || ! TypeUtil.isNotEmptyString( key ) )
-	// 				{
-	// 					return reject( `invalid storage key` );
-	// 				}
-	//
-	// 				const encrypted : string = await this.encryptFromObject( value );
-	// 				await this.db.put( 'root', encrypted, key );
-	// 				return resolve( true );
-	// 			}
-	//
-	// 			//	...
-	// 			reject( false );
-	// 		}
-	// 		catch ( err )
-	// 		{
-	// 			reject( err );
-	// 		}
-	// 	});
-	// }
-	//
-	// public async getFirst() : Promise<ChainEntityItem | null>
-	// {
-	// 	return new Promise( async ( resolve, reject ) =>
-	// 	{
-	// 		try
-	// 		{
-	// 			const firstItems : Array<ChainEntityItem> | null = await this.getAll( undefined, 1 );
-	// 			if ( Array.isArray( firstItems ) && 1 === firstItems.length )
-	// 			{
-	// 				return resolve( firstItems[ 0 ] );
-	// 			}
-	//
-	// 			//	...
-	// 			reject( null );
-	// 		}
-	// 		catch ( err )
-	// 		{
-	// 			reject( err );
-	// 		}
-	// 	});
-	// }
-
 	/**
 	 * 	get ChainEntityItem object by chainId
 	 *
@@ -342,137 +306,252 @@ export class ChainStorageService extends AbstractStorageService<ChainEntityItem>
 	 */
 	public async getByChainId( chainId : number ) : Promise<ChainEntityItem | null>
 	{
-		const key : string = this.getKeyByChainId( chainId );
-		return this.get( key );
+		return this.get( this.getKeyByChainId( chainId ) );
 	}
 
-	// public async get( key : string ) : Promise<ChainEntityItem | null>
-	// {
-	// 	return new Promise( async ( resolve, reject ) =>
-	// 	{
-	// 		try
-	// 		{
-	// 			if ( ! TypeUtil.isNotEmptyString( key ) )
-	// 			{
-	// 				return reject( `invalid key for ChainStorage:get` );
-	// 			}
-	//
-	// 			await this.init();
-	// 			if ( this.db )
-	// 			{
-	// 				const value : ChainEntityItem | undefined = await this.db.get( 'root', key );
-	// 				return resolve( value ? value : null );
-	// 			}
-	//
-	// 			//	...
-	// 			reject( null );
-	// 		}
-	// 		catch ( err )
-	// 		{
-	// 			reject( err );
-	// 		}
-	// 	});
-	// }
-	//
-	// public async getAllKeys( query? : string, maxCount? : number ) : Promise<Array<string> | null>
-	// {
-	// 	return new Promise( async ( resolve, reject ) =>
-	// 	{
-	// 		try
-	// 		{
-	// 			await this.init();
-	// 			if ( this.db )
-	// 			{
-	// 				const value : Array<string> | null = await this.db.getAllKeys( 'root', query, maxCount );
-	// 				return resolve( value ? value : null );
-	// 			}
-	//
-	// 			//	...
-	// 			reject( null );
-	// 		}
-	// 		catch ( err )
-	// 		{
-	// 			reject( err );
-	// 		}
-	// 	});
-	// }
-	//
-	// public async getAll( query? : string, maxCount? : number ) : Promise<Array<ChainEntityItem> | null>
-	// {
-	// 	return new Promise( async ( resolve, reject ) =>
-	// 	{
-	// 		try
-	// 		{
-	// 			await this.init();
-	// 			if ( this.db )
-	// 			{
-	// 				const value : Array<ChainEntityItem> | null = await this.db.getAll( 'root', query, maxCount );
-	// 				return resolve( value ? value : null );
-	// 			}
-	//
-	// 			//	...
-	// 			reject( null );
-	// 		}
-	// 		catch ( err )
-	// 		{
-	// 			reject( err );
-	// 		}
-	// 	});
-	// }
-	//
-	// /**
-	//  *	@param key	- wallet address is the key
-	//  */
-	// public async delete( key : string ) : Promise<boolean>
-	// {
-	// 	return new Promise( async ( resolve, reject ) =>
-	// 	{
-	// 		try
-	// 		{
-	// 			if ( ! TypeUtil.isNotEmptyString( key ) )
-	// 			{
-	// 				return reject( `invalid key for ChainStorage:delete` );
-	// 			}
-	//
-	// 			await this.init();
-	// 			if ( this.db )
-	// 			{
-	// 				await this.db.delete( 'root', key );
-	// 				return resolve( true );
-	// 			}
-	//
-	// 			reject( false );
-	// 		}
-	// 		catch ( err )
-	// 		{
-	// 			reject( err );
-	// 		}
-	// 	});
-	// }
-	//
-	// /**
-	//  * 	delete all items
-	//  */
-	// public async clear() : Promise<boolean>
-	// {
-	// 	return new Promise( async ( resolve, reject ) =>
-	// 	{
-	// 		try
-	// 		{
-	// 			await this.init();
-	// 			if ( this.db )
-	// 			{
-	// 				await this.db.clear( 'root' );
-	// 				return resolve( true );
-	// 			}
-	//
-	// 			//	...
-	// 			reject( false );
-	// 		}
-	// 		catch ( err )
-	// 		{
-	// 			reject( err );
-	// 		}
-	// 	});
-	// }
+	/**
+	 * 	get item
+	 *	@param key	{string}
+	 *	@returns {Promise<ChainEntityItem | null>}
+	 */
+	public async get( key : string ) : Promise<ChainEntityItem | null>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( ! _.isString( key ) || _.isEmpty( key ) )
+				{
+					return reject( `${ this.constructor.name }.get :: invalid key` );
+				}
+
+				await this.init();
+				if ( this.db )
+				{
+					const value : ChainEntityItem | undefined = await this.db.get( 'root', key );
+					return resolve( value ? value : null );
+				}
+
+				reject( null );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+	/**
+	 * 	get all keys
+	 *
+	 *	@param [query]		{string}
+	 *	@param [maxCount]	{number}
+	 *	@returns {Promise<Array<string>>}
+	 */
+	public async getAllKeys( query? : string, maxCount? : number ) : Promise<Array<string>>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				await this.init();
+				if ( this.db )
+				{
+					const value : Array<string> | null = await this.db.getAllKeys( 'root', query, maxCount );
+					return resolve( value ? value : [] );
+				}
+
+				//	...
+				reject( [] );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+	/**
+	 * 	get all items
+	 *
+	 * 	@param [query]		{string}
+	 * 	@param [maxCount]	{number}
+	 * 	@returns {Promise<Array<ChainEntityItem>>}
+	 */
+	public async getAll( query? : string, maxCount? : number ) : Promise<Array<ChainEntityItem>>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				await this.init();
+				if ( this.db )
+				{
+					const value : Array<ChainEntityItem> | null = await this.db.getAll( 'root', query, maxCount );
+					return resolve( value ? value : [] );
+				}
+
+				//	...
+				reject( [] );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+	/**
+	 * 	put a value by key
+	 *
+	 * 	@param key	{string}
+	 *	@param value	{ChainEntityItem}
+	 *	@returns {Promise<boolean>}
+	 */
+	public async put( key : string, value : ChainEntityItem ) : Promise<boolean>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( ! _.isString( key ) || _.isEmpty( key ) )
+				{
+					return reject( `${ this.constructor.name }.put :: invalid key` );
+				}
+				if ( ! this.isValidItem( value ) )
+				{
+					return reject( `${ this.constructor.name }.put :: invalid value` );
+				}
+
+				//	...
+				await this.init();
+				if ( this.db )
+				{
+					await this.db.put( 'root', value, key );
+					return resolve( true );
+				}
+
+				//	...
+				reject( false );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+	/**
+	 * 	get the first item
+	 *
+	 * 	@returns {Promise<ChainEntityItem | null>}
+	 */
+	public async getFirst() : Promise<ChainEntityItem | null>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				const firstItems : Array<ChainEntityItem> | null = await this.getAll( undefined, 1 );
+				if ( Array.isArray( firstItems ) && 1 === firstItems.length )
+				{
+					return resolve( firstItems[ 0 ] );
+				}
+
+				//	...
+				reject( null );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+	/**
+	 *	calculate the number of data sets
+	 *
+	 *	@param [query]	{string}
+	 *	@returns {Promise<number>}
+	 */
+	public async count( query? : string ) : Promise<number>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				await this.init();
+				if ( this.db )
+				{
+					const count : number = await this.db.count( this.storeName, query );
+					resolve( count );
+				}
+
+				//	...
+				resolve( 0 );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+	/**
+	 *	@param key	- wallet address is the key
+	 *	@returns {Promise<boolean>}
+	 */
+	public async delete( key : string ) : Promise<boolean>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( ! TypeUtil.isNotEmptyString( key ) )
+				{
+					return reject( `invalid key for ChainStorage:delete` );
+				}
+
+				await this.init();
+				if ( this.db )
+				{
+					await this.db.delete( 'root', key );
+					return resolve( true );
+				}
+
+				reject( false );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+	/**
+	 * 	delete all items
+	 * 	@returns {Promise<boolean>}
+	 */
+	public async clear() : Promise<boolean>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				await this.init();
+				if ( this.db )
+				{
+					await this.db.clear( 'root' );
+					return resolve( true );
+				}
+
+				//	...
+				reject( false );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
 }

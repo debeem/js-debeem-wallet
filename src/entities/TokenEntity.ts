@@ -4,6 +4,9 @@
  * 	@module TokenEntityItem
  */
 
+import { DBSchema } from "idb";
+
+
 /**
  * 	@interface
  *
@@ -44,11 +47,11 @@ export interface TokenEntityItem
 	decimals: number;
 }
 
-// export interface TokenEntity extends DBSchema
-// {
-// 	root : {
-// 		key: string;
-// 		value: TokenEntityItem;
-// 		indexes: { 'by-address': string };
-// 	}
-// }
+export interface TokenEntity extends DBSchema
+{
+	root : {
+		key: string;
+		value: TokenEntityItem;
+		//indexes: { 'by-address': string };
+	}
+}

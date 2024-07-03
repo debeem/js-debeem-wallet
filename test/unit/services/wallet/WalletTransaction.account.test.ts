@@ -586,7 +586,7 @@ describe( "WalletTransaction.account", () =>
 			const count1 : number = await tokenStorageService.countByWallet( walletAddress );
 			expect( count1 ).toBeGreaterThan( 0 );
 
-			const totalValues : TotalValues | null = await new WalletAccount().queryTotalValues( walletAddress, '' );
+			const totalValues : TotalValues | null = await new WalletAccount().queryTotalValues( walletAddress );
 			//console.log( totalValues );
 			//	should output:
 			//	{

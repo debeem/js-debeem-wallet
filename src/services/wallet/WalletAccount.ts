@@ -229,9 +229,9 @@ export class WalletAccount
 	/**
 	 * 	query value
 	 *
-	 *	@param address	{string} wallet address
-	 *	@param pair	{string} e.g.: ETH/USD, see: EthereumPriceFeedAddresses.ts
-	 * 	@param decimals	{number} decimals, default ot 18
+	 *	@param address		{string} wallet address
+	 *	@param pair		{string} e.g.: ETH/USD, see: EthereumPriceFeedAddresses.ts
+	 * 	@param [decimals]	{number} decimals, default ot 18
 	 *	@return {Promise<TokenValueItem>}
 	 */
 	public async queryValue( address : string, pair : string, decimals : number = 18 ) : Promise<TokenValueItem>
@@ -313,7 +313,7 @@ export class WalletAccount
 	 *
 	 *	@param address	{string} wallet address
 	 *	@param tokens	{Array<ContractTokenBalanceItem>}
-	 *	@param ABI	{Array<UsdtABIItem>}
+	 *	@param [ABI]	{Array<UsdtABIItem>}
 	 *	@return	{Array<ContractTokenValueItem>}
 	 */
 	public async queryTokenValues
@@ -462,14 +462,12 @@ export class WalletAccount
 	 * 	query the value of derivative tokens
 	 *
 	 *	@param address		{string} wallet address
-	 *	@param storagePassword	{string} password for storage
-	 *	@param ABI	{Array<UsdtABIItem>}
+	 *	@param [ABI]		{Array<UsdtABIItem>}
 	 *	@return	{Array<ContractTokenValueItem>}
 	 */
 	public async queryTotalValues
 	(
 		address : string,
-		storagePassword : string = "",
 		ABI? : Array<UsdtABIItem>
 	) : Promise<TotalValues | null>
 	{
@@ -483,7 +481,7 @@ export class WalletAccount
 				}
 
 				//	query all tokens of the wallet
-				const tokens : Array<TokenEntityItem> | null = await new TokenStorageService( storagePassword ).getAllByWallet( address );
+				const tokens : Array<TokenEntityItem> | null = await new TokenStorageService().getAllByWallet( address );
 				if ( ! Array.isArray( tokens ) || 0 === tokens.length )
 				{
 					return resolve( null );

@@ -9,7 +9,6 @@ export type { TransactionResponse };
  */
 export { supportedChains, defaultChains } from "./constants/ConstantChain";
 export { defaultTokens, defaultTokenValueItem } from "./constants/ConstantToken";
-export { WalletBasicKeys } from "./services/storage/BasicStorageService";
 
 
 /**

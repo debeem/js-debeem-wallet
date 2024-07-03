@@ -1,8 +1,10 @@
 import { describe, expect } from '@jest/globals';
-import { BasicStorageService, WalletEntityItem, WalletStorageService } from "../../../../src";
+import { WalletEntityBaseItem, WalletEntityItem, WalletStorageService } from "../../../../src";
 import { SysUserStorageService } from "../../../../src/services/storage/SysUserStorageService";
 import _ from "lodash";
-import { TypeUtil } from "../../../../src/utils/TypeUtil";
+import { testWalletObjList } from "../../../../src/configs/TestConfig";
+import { initWalletAsync, putCurrentWalletAsync } from "../../../../src/config";
+import { VaWalletEntity } from "../../../../src/validators/VaWalletEntity";
 
 
 /**
@@ -17,453 +19,282 @@ describe( "SysUserStorageService", () =>
 	{
 	} );
 
-	describe( "Basic usage", () =>
+	beforeEach( async () =>
 	{
-		it( "should generate a random password", async () =>
+		await new SysUserStorageService().clear();
+	});
+
+
+	describe( "Create User", () =>
+	{
+		const walletObject : WalletEntityBaseItem = testWalletObjList.alice;
+
+		it( "should generate a password by private key", async () =>
 		{
 			const sysUserStorageService = new SysUserStorageService();
-
-			const password = sysUserStorageService.generatePassword();
+			const password = await sysUserStorageService.generatePassword( walletObject );
 			expect( _.isString( password ) ).toBeTruthy();
-			expect( ! _.isEmpty( password ) ).toBeTruthy();
+			expect( !_.isEmpty( password ) ).toBeTruthy();
 		} );
 
-		//	it.concurrent
-		it( "should save a specified password into database", async () =>
+		it( "should create a user using .createUser", async () =>
 		{
+			//
+			//	JUST CREATE A USER, NOT AN ACCOUNT
+			//
 			const sysUserStorageService = new SysUserStorageService();
+			const pinCode = `123456`;
+			const created : boolean = await sysUserStorageService.createUser( walletObject, pinCode );
+			expect( created ).toBeTruthy();
 
-			const password = sysUserStorageService.generatePassword();
-			expect( _.isString( password ) ).toBeTruthy();
-			expect( ! _.isEmpty( password ) ).toBeTruthy();
-
-			const entityName = `myEntity`;
-			const pinCode = '123456';
-			const saved = await sysUserStorageService.savePassword( entityName, pinCode, password );
-
-			const extractedPassword = await sysUserStorageService.extractPassword( entityName, pinCode );
-			expect( extractedPassword ).toBeDefined();
-			expect( extractedPassword ).toBe( password );
+			await putCurrentWalletAsync( walletObject.address );
 		} );
 
-		it( "should save a random password into database", async () =>
+		it( "should create a user using initWalletAsync", async () =>
 		{
-			const sysUserStorageService = new SysUserStorageService();
-
-			const entityName = `myEntity`;
-			const pinCode = '123456';
-			const savedPassword = await sysUserStorageService.savePassword( entityName, pinCode );
-			expect( _.isString( savedPassword ) ).toBeTruthy();
-			expect( ! _.isEmpty( savedPassword ) ).toBeTruthy();
-
-			//	...
-			const extractedPassword = await sysUserStorageService.extractPassword( entityName, pinCode );
-			expect( extractedPassword ).toBeDefined();
-			expect( extractedPassword ).toBe( savedPassword );
-		} );
-
-		it( "should return this is the correct pinCode", async () =>
-		{
-			const sysUserStorageService = new SysUserStorageService();
-
-			const password = sysUserStorageService.generatePassword();
-			expect( _.isString( password ) ).toBeTruthy();
-			expect( ! _.isEmpty( password ) ).toBeTruthy();
-
-			const entityName = `myEntity`;
-			const pinCode = '123456';
-			const savedPassword = await sysUserStorageService.savePassword( entityName, pinCode, password );
-			expect( _.isString( savedPassword ) ).toBeTruthy();
-			expect( ! _.isEmpty( savedPassword ) ).toBeTruthy();
+			//
+			//	RECOMMENDED WAY TO CREATE AN ACCOUNT
+			//
+			const walletName = `MyWallet`;
+			const chainId = 1;
+			const pinCode = `123456`;
+			const toBeCreatedWalletItem : WalletEntityItem = {
+				...walletObject,
+				name: walletName,
+				chainId : chainId,
+				pinCode: ``
+			};
+			const created : boolean = await initWalletAsync( toBeCreatedWalletItem, pinCode, true );
+			expect( created ).toBeTruthy();
 
 			//
-			//	...
+			//	All the following codes are verification codes
 			//
-			const isValid = await sysUserStorageService.isValidPinCode( entityName, pinCode );
-			expect( isValid ).toBeTruthy();
-		} );
 
-		it( "should return this is the correct pinCode in BasicStorageService", async () =>
-		{
-			await new SysUserStorageService().clear();
+			const existByWalletEntityBaseItem = await new SysUserStorageService().existByWalletEntityBaseItem( walletObject );
+			expect( existByWalletEntityBaseItem ).toBeTruthy();
 
-			const pinCode = '123456';
-			const basicStorageService = new BasicStorageService( pinCode );
-			await basicStorageService.init();
+			const isValidPinCode = await new SysUserStorageService().isValidPinCode( pinCode );
+			expect( isValidPinCode ).toBeTruthy();
 
-			//
-			//	...
-			//
-			const isValid = await basicStorageService.isValidPinCode( pinCode );
-			expect( isValid ).toBeTruthy();
-		} );
+			const walletStorageService = new WalletStorageService( pinCode );
+			const existByWalletBaseItem = await walletStorageService.existByWalletEntityBaseItem( walletObject );
+			expect( existByWalletBaseItem ).toBeTruthy();
 
-		it( "should change pinCode from one to another", async () =>
-		{
-			const oldPinCode = '123456';
-			const newPinCode = '998765';
-			const sysUserStorageService = new SysUserStorageService();
 
-			//
-			//
-			//
-			const entityName = `myEntity`;
-			const savedPassword = await sysUserStorageService.savePassword( entityName, oldPinCode );
-			expect( _.isString( savedPassword ) ).toBeTruthy();
-			expect( ! _.isEmpty( savedPassword ) ).toBeTruthy();
+			const existByWalletItem = await walletStorageService.existByWalletEntityBaseItem( toBeCreatedWalletItem );
+			expect( existByWalletItem ).toBeTruthy();
 
-			const isValidOld = await sysUserStorageService.isValidPinCode( entityName, oldPinCode );
-			expect( isValidOld ).toBeTruthy();
-
-			const changed = await sysUserStorageService.changePinCode( entityName, oldPinCode, newPinCode );
-			expect( changed ).toBeTruthy();
-
-			const isValidNew = await sysUserStorageService.isValidPinCode( entityName, newPinCode );
-			expect( isValidNew ).toBeTruthy();
-		} );
-
-		it( "should change pinCode of [wallet_entity] from one to another", async () =>
-		{
-			await new Promise(async ( resolve ) =>
+			const walletKey : string | null = walletStorageService.getKeyByItem( toBeCreatedWalletItem );
+			expect( walletKey ).not.toBeNull();
+			expect( _.isString( walletKey ) && ! _.isEmpty( walletKey ) ).toBeTruthy();
+			if ( walletKey )
 			{
-				const oldPinCode = '123456';
-				const newPinCode = '998765';
-				const sysUserStorageService = new SysUserStorageService();
-
-				//
-				//	wallet_entity
-				//
-				const entityName = `wallet_entity`;
-				const savedPassword = await sysUserStorageService.savePassword( entityName, oldPinCode );
-				expect( _.isString( savedPassword ) ).toBeTruthy();
-				expect( ! _.isEmpty( savedPassword ) ).toBeTruthy();
-
-				const isValidOld = await sysUserStorageService.isValidPinCode( entityName, oldPinCode );
-				expect( isValidOld ).toBeTruthy();
-
-				//
-				//	saving and querying with WalletStorageService
-				//
-				const walletStorage = new WalletStorageService( oldPinCode );
-				const walletAddress = walletStorage.generateRandomWalletAddress();
-				const item : WalletEntityItem = {
-					name: 'My-First-Wallet',
-					address: walletAddress,	//	address of wallet
-					chainId: 5,		//	Ethereum Goerli Testnet
-					pinCode: '1234',
-					privateKey: '0x948427c37d662bde57c4d8765da63a87083186149ac6040b976a3ebb99876533',
-					publicKey: 'public key',
-					mnemonic: 'lab ball helmet sure replace gauge size rescue radar cluster remember twenty',
-					isHD: false,		//	HD wallet?
-					password: '11111',	//	The password of the wallet, used to encrypt mnemonic and privateKey. If password is not empty, mnemonic and privateKey should be ciphertext
-					index: 0,		//	The index of the generated wallet address. For non-HD wallets, the index will always be 0
-					path: '',		//	Wallet path. For non-HD wallets, the path is empty
-				};
-				const key : string | null = walletStorage.getKeyByItem( item );
-				expect( key ).toBeDefined();
-				expect( TypeUtil.isNotEmptyString( key ) ).toBeTruthy();
-				if ( key && TypeUtil.isNotEmptyString( key ) )
+				const walletItem : WalletEntityItem | null = await walletStorageService.get( walletKey );
+				expect( walletItem ).toBeDefined();
+				expect( VaWalletEntity.validateWalletEntityItem( walletItem ) ).toBeNull();
+				expect( !! walletItem ).toBeTruthy();
+				if ( walletItem )
 				{
-					const saved : boolean = await walletStorage.put( key, item );
-					const itemKey : string | null = walletStorage.getKeyByItem( item );
-					expect( itemKey ).toBeDefined();
-					expect( TypeUtil.isNotEmptyString( itemKey ) ).toBeTruthy();
-					if ( itemKey && TypeUtil.isNotEmptyString( itemKey ) )
-					{
-						const value : WalletEntityItem | null = await walletStorage.get( itemKey );
-
-						expect( saved ).toBe( true );
-						expect( value ).toHaveProperty( 'name' );
-						expect( value?.name ).toBe( item.name );
-						expect( value?.address ).toBe( item.address );
-						expect( value?.chainId ).toBe( item.chainId );
-						expect( value?.pinCode ).toBe( item.pinCode );
-						expect( value?.privateKey ).toBe( item.privateKey );
-						expect( value?.publicKey ).toBe( item.publicKey );
-						expect( value?.mnemonic ).toBe( item.mnemonic );
-						expect( value?.isHD ).toBe( item.isHD );
-						expect( value?.password ).toBe( item.password );
-						expect( value?.index ).toBe( item.index );
-						expect( value?.path ).toBe( item.path );
-					}
+					expect( walletItem.name ).toBe( walletName );
+					expect( walletItem.chainId ).toBe( chainId );
+					expect( walletItem.pinCode ).toBe( `` );
 				}
-
-				//
-				//	change pinCode
-				//
-				const changed = await sysUserStorageService.changePinCode( entityName, oldPinCode, newPinCode );
-				expect( changed ).toBeTruthy();
-
-				const isValidNew = await sysUserStorageService.isValidPinCode( entityName, newPinCode );
-				expect( isValidNew ).toBeTruthy();
-
-				//
-				//	querying with old pinCode
-				//
-				if ( key && TypeUtil.isNotEmptyString( key ) )
-				{
-					try
-					{
-						const oldWalletStorage = new WalletStorageService( oldPinCode );
-						const fatalValue : WalletEntityItem | null = await oldWalletStorage.get( key );
-					}
-					catch ( err )
-					{
-						//console.log( `err: `, err );
-						expect( 'string' === typeof err ).toBeTruthy();
-						expect( err ).toContain( `invalid pinCode` );
-					}
-				}
-
-
-				//
-				//	querying with new pinCode
-				//
-				const newWalletStorage = new WalletStorageService( newPinCode );
-				expect( newWalletStorage ).not.toBeNull();
-				if ( key && TypeUtil.isNotEmptyString( key ) )
-				{
-					const value : WalletEntityItem | null = await newWalletStorage.get( key );
-					expect( value ).not.toBeNull();
-					expect( value ).toHaveProperty( 'name' );
-					expect( value?.name ).toBe( item.name );
-					expect( value?.address ).toBe( item.address );
-					expect( value?.chainId ).toBe( item.chainId );
-					expect( value?.pinCode ).toBe( item.pinCode );
-					expect( value?.privateKey ).toBe( item.privateKey );
-					expect( value?.publicKey ).toBe( item.publicKey );
-					expect( value?.mnemonic ).toBe( item.mnemonic );
-					expect( value?.isHD ).toBe( item.isHD );
-					expect( value?.password ).toBe( item.password );
-					expect( value?.index ).toBe( item.index );
-					expect( value?.path ).toBe( item.path );
-				}
-
-				resolve( true );
-			});
+			}
 		} );
 
-		it( "should change pinCode of [wallet_entity] from one to another by way 2", async () =>
+		it( "should recover a user with new PIN code using initWalletAsync", async () =>
 		{
-			await new Promise(async ( resolve ) =>
-			{
-				const oldPinCode = '998765';
-				const newPinCode = '123456';
+			//
+			//	RECOMMENDED WAY TO RECOVER AN ACCOUNT
+			//
+			const walletName = `MyWallet`;
+			const chainId = 1;
+			const oldPinCode = `123456`;
+			const toBeCreatedWalletItem : WalletEntityItem = {
+				...walletObject,
+				name: walletName,
+				chainId : chainId,
+				pinCode: ``
+			};
+			const created : boolean = await initWalletAsync( toBeCreatedWalletItem, oldPinCode );
+			expect( created ).toBeTruthy();
 
-				//
-				//	walletStorage will be initialized with a random strong password encrypted by oldPinCode
-				//
-				const walletStorage = new WalletStorageService( oldPinCode );
-
-				//	try to save a wallet object into walletStorage
-				const walletAddress = walletStorage.generateRandomWalletAddress();
-				const item : WalletEntityItem = {
-					name: 'My-First-Wallet',
-					address: walletAddress,	//	address of wallet
-					chainId: 5,		//	Ethereum Goerli Testnet
-					pinCode: '1234',
-					privateKey: '0x948427c37d662bde57c4d8765da63a87083186149ac6040b976a3ebb99876533',
-					publicKey: 'public key',
-					mnemonic: 'lab ball helmet sure replace gauge size rescue radar cluster remember twenty',
-					isHD: false,		//	HD wallet?
-					password: '11111',	//	The password of the wallet, used to encrypt mnemonic and privateKey. If password is not empty, mnemonic and privateKey should be ciphertext
-					index: 0,		//	The index of the generated wallet address. For non-HD wallets, the index will always be 0
-					path: '',		//	Wallet path. For non-HD wallets, the path is empty
-				};
-				const key : string | null = walletStorage.getKeyByItem( item );
-				expect( key ).toBeDefined();
-				expect( TypeUtil.isNotEmptyString( key ) ).toBeTruthy();
-				if ( key && TypeUtil.isNotEmptyString( key ) )
-				{
-					const saved : boolean = await walletStorage.put( key, item );
-					const itemKey : string | null = walletStorage.getKeyByItem( item );
-					expect( itemKey ).toBeDefined();
-					expect( TypeUtil.isNotEmptyString( itemKey ) ).toBeTruthy();
-					if ( itemKey && TypeUtil.isNotEmptyString( itemKey ) )
-					{
-						const value : WalletEntityItem | null = await walletStorage.get( itemKey );
-
-						expect( saved ).toBe( true );
-						expect( value ).toHaveProperty( 'name' );
-						expect( value?.name ).toBe( item.name );
-						expect( value?.address ).toBe( item.address );
-						expect( value?.chainId ).toBe( item.chainId );
-						expect( value?.pinCode ).toBe( item.pinCode );
-						expect( value?.privateKey ).toBe( item.privateKey );
-						expect( value?.publicKey ).toBe( item.publicKey );
-						expect( value?.mnemonic ).toBe( item.mnemonic );
-						expect( value?.isHD ).toBe( item.isHD );
-						expect( value?.password ).toBe( item.password );
-						expect( value?.index ).toBe( item.index );
-						expect( value?.path ).toBe( item.path );
-					}
-				}
-
-				//
-				//	will try to change pinCode
-				//
-				const sysUserStorageService = new SysUserStorageService();
-				const entityName = `wallet_entity`;
-
-				//	checking old pinCode
-				const isValidOld = await sysUserStorageService.isValidPinCode( entityName, oldPinCode );
-				expect( isValidOld ).toBeTruthy();
-
-				//
-				//	change pinCode
-				//
-				const changed = await sysUserStorageService.changePinCode( entityName, oldPinCode, newPinCode );
-				expect( changed ).toBeTruthy();
-
-				//	checking new pinCode
-				const isValidNew = await sysUserStorageService.isValidPinCode( entityName, newPinCode );
-				expect( isValidNew ).toBeTruthy();
-
-				//
-				//	initialize WalletStorageService using old pinCode
-				//	the exception `invalid pinCode` will be thrown
-				//
-				if ( key && TypeUtil.isNotEmptyString( key ) )
-				{
-					try
-					{
-						const oldWalletStorage = new WalletStorageService( oldPinCode );
-						const fatalValue : WalletEntityItem | null = await oldWalletStorage.get( key );
-					}
-					catch ( err )
-					{
-						//console.log( `err: `, err );
-						expect( 'string' === typeof err ).toBeTruthy();
-						expect( err ).toContain( `invalid pinCode` );
-					}
-				}
-
-
-				//
-				//	initialize WalletStorageService using new pinCode
-				//	everything will work fine
-				//
-				const newWalletStorage = new WalletStorageService( newPinCode );
-				expect( newWalletStorage ).not.toBeNull();
-				if ( key && TypeUtil.isNotEmptyString( key ) )
-				{
-					const value : WalletEntityItem | null = await newWalletStorage.get( key );
-					expect( value ).not.toBeNull();
-					expect( value ).toHaveProperty( 'name' );
-					expect( value?.name ).toBe( item.name );
-					expect( value?.address ).toBe( item.address );
-					expect( value?.chainId ).toBe( item.chainId );
-					expect( value?.pinCode ).toBe( item.pinCode );
-					expect( value?.privateKey ).toBe( item.privateKey );
-					expect( value?.publicKey ).toBe( item.publicKey );
-					expect( value?.mnemonic ).toBe( item.mnemonic );
-					expect( value?.isHD ).toBe( item.isHD );
-					expect( value?.password ).toBe( item.password );
-					expect( value?.index ).toBe( item.index );
-					expect( value?.path ).toBe( item.path );
-				}
-
-				resolve( true );
-			});
-		} );
-
-		it( "should change pinCode from one to another in BasicStorageService", async () =>
-		{
-			await new SysUserStorageService().clear();
-
-			const oldPinCode = '123456';
-			const newPinCode = '998765';
-			const basicStorageService = new BasicStorageService( oldPinCode );
-			await basicStorageService.init();
-
-			const isValidOld = await basicStorageService.isValidPinCode( oldPinCode );
-			expect( isValidOld ).toBeTruthy();
-
-			const changed = await basicStorageService.changePinCode( oldPinCode, newPinCode );
-			expect( changed ).toBeTruthy();
-
-			const isValidNew = await basicStorageService.isValidPinCode( newPinCode );
-			expect( isValidNew ).toBeTruthy();
-		} );
-
-		it( "should throw an `invalid oldPinCode` exception in BasicStorageService", async () =>
-		{
-			await new SysUserStorageService().clear();
-
-			const oldPinCode = '123456';
-			const newPinCode = '998765';
-			const basicStorageService = new BasicStorageService( oldPinCode );
-			await basicStorageService.init();
-
-			const isValidOld = await basicStorageService.isValidPinCode( oldPinCode );
-			expect( isValidOld ).toBeTruthy();
 
 			try
 			{
-				await basicStorageService.changePinCode( `333333`, newPinCode );
+				const newPinCode = `888888`;
+				const toBeCreatedWalletItem2 : WalletEntityItem = {
+					...walletObject,
+					name: walletName,
+					chainId : chainId,
+					pinCode: ``
+				};
+				const created2 : boolean = await initWalletAsync( toBeCreatedWalletItem2, newPinCode );
+
+				//	should never go here
+				expect( created2 ).toBeTruthy();
+				expect( false ).toBeTruthy();
 			}
 			catch ( err )
 			{
-				expect( _.isString( err ) ).toBeTruthy();
-				expect( err ).toContain( `incorrect oldPinCode` );
+				const errorText = err as string;
+				expect( _.isString( errorText ) ).toBeTruthy();
+				expect( errorText && errorText.includes( `user already exists` ) ).toBeTruthy();
 			}
-		} );
 
-		it( "should throw an `pinCode no change` exception in BasicStorageService", async () =>
-		{
-			await new Promise(async ( resolve ) =>
+			const newPinCode3 = `999999`;
+			const toBeCreatedWalletItem3 : WalletEntityItem = {
+				...walletObject,
+				name: walletName,
+				chainId : chainId,
+				pinCode: ``
+			};
+			const created3 : boolean = await initWalletAsync( toBeCreatedWalletItem3, newPinCode3, true );
+			expect( created3 ).toBeTruthy();
+
+
+			//	the old PIN code is no longer valid
+			expect( await new SysUserStorageService().isValidPinCode( oldPinCode ) ).toBeFalsy();
+
+			//	the new PIN code is okay
+			expect( await new SysUserStorageService().isValidPinCode( newPinCode3 ) ).toBeTruthy();
+
+			//
+			//	All the following codes are verification codes
+			//
+
+			const existByWalletEntityBaseItem = await new SysUserStorageService().existByWalletEntityBaseItem( walletObject );
+			expect( existByWalletEntityBaseItem ).toBeTruthy();
+
+			const walletStorageService = new WalletStorageService( newPinCode3 );
+			const existByWalletBaseItem = await walletStorageService.existByWalletEntityBaseItem( walletObject );
+			expect( existByWalletBaseItem ).toBeTruthy();
+
+			const existByWalletItem = await walletStorageService.existByWalletEntityBaseItem( toBeCreatedWalletItem );
+			expect( existByWalletItem ).toBeTruthy();
+
+			const walletKey : string | null = walletStorageService.getKeyByItem( toBeCreatedWalletItem );
+			expect( walletKey ).not.toBeNull();
+			expect( _.isString( walletKey ) && ! _.isEmpty( walletKey ) ).toBeTruthy();
+			if ( walletKey )
 			{
-				await new SysUserStorageService().clear();
-
-				const oldPinCode = '123456';
-				const newPinCode = '123456';
-				const basicStorageService = new BasicStorageService( oldPinCode );
-				await basicStorageService.init();
-
-				const isValidOld = await basicStorageService.isValidPinCode( oldPinCode );
-				expect( isValidOld ).toBeTruthy();
-
-				try
+				const walletItem : WalletEntityItem | null = await walletStorageService.get( walletKey );
+				expect( walletItem ).toBeDefined();
+				expect( VaWalletEntity.validateWalletEntityItem( walletItem ) ).toBeNull();
+				expect( !! walletItem ).toBeTruthy();
+				if ( walletItem )
 				{
-					await basicStorageService.changePinCode( oldPinCode, newPinCode );
+					expect( walletItem.name ).toBe( walletName );
+					expect( walletItem.chainId ).toBe( chainId );
+					expect( walletItem.pinCode ).toBe( `` );
 				}
-				catch ( err )
-				{
-					expect( _.isString( err ) ).toBeTruthy();
-					expect( err ).toContain( `pinCode no change` );
-				}
+			}
 
-				resolve( true );
-			});
-		} );
+			const walletItemByCurrentWallet = walletStorageService.getByCurrentWallet();
+			expect( walletItemByCurrentWallet ).not.toBeNull();
+		});
 
-		it( "should throw an `invalid pinCode` exception in BasicStorageService", async () =>
+		it( "should recover a user with new PIN code using .createUser", async () =>
 		{
-			await new Promise(async ( resolve ) =>
+			const sysUserStorageService = new SysUserStorageService();
+			const pinCode1 = `123456`;
+			const created1 : boolean = await sysUserStorageService.createUser( walletObject, pinCode1 );
+			expect( created1 ).toBeTruthy();
+
+			try
 			{
-				await new SysUserStorageService().clear();
+				const pinCode2 = `345678`;
+				await sysUserStorageService.createUser( walletObject, pinCode2 );
+			}
+			catch ( err )
+			{
+				const errorText = err as string;
+				expect( _.isString( errorText ) ).toBeTruthy();
+				expect( errorText && errorText.includes( `user already exists` ) ).toBeTruthy();
+			}
 
-				//	...
-				const pinCode1 = '123456';
-				const pinCode2 = '111111';
-				expect( pinCode1 ).not.toBe( pinCode2 );
+			const pinCode3 = `789000`;
+			const created3 : boolean = await sysUserStorageService.createUser( walletObject, pinCode3, true );
+			expect( created3 ).toBeTruthy();
 
-				const basicStorageService1 = new BasicStorageService( pinCode1 );
-				await basicStorageService1.put( `key1`, `value1` );
+			const existByWalletEntityBaseItem = await sysUserStorageService.existByWalletEntityBaseItem( walletObject );
+			expect( existByWalletEntityBaseItem ).toBeTruthy();
 
-				try
-				{
-					const basicStorageService2 = new BasicStorageService( `111111` );
-					const value : string | null = await basicStorageService2.get( `key1` );
-				}
-				catch ( err )
-				{
-					expect( _.isString( err ) ).toBeTruthy();
-					expect( err ).toContain( `invalid pinCode` );
-				}
+			try
+			{
+				//	check PIN code
+				const isValidPinCode = await sysUserStorageService.isValidPinCode( pinCode3 );
+				expect( isValidPinCode ).toBeTruthy();
+			}
+			catch ( err )
+			{
+				const errorText = err as string;
+				expect( _.isString( errorText ) ).toBeTruthy();
+				expect( errorText && errorText.includes( `invalid currentWallet` ) ).toBeTruthy();
+			}
 
-				resolve( true );
-			});
+			//	check PIN code
+			await putCurrentWalletAsync( walletObject.address );
+			const isValidPinCode = await sysUserStorageService.isValidPinCode( pinCode3 );
+			expect( isValidPinCode ).toBeTruthy();
 		} );
+	})
+
+	describe( "change PIN code", () =>
+	{
+		const walletObject : WalletEntityBaseItem = testWalletObjList.alice;
+
+		it( "should change PIN Code from one to another", async () =>
+		{
+			const walletName = `MyWallet`;
+			const chainId = 1;
+			const oldPINCode = `123456`;
+			const toBeCreatedWalletItem : WalletEntityItem = {
+				...walletObject,
+				name: walletName,
+				chainId : chainId,
+				pinCode: ``
+			};
+			const created : boolean = await initWalletAsync( toBeCreatedWalletItem, oldPINCode, true );
+			expect( created ).toBeTruthy();
+
+			//	...
+			const newPINCode = '998765';
+			const sysUserStorageService = new SysUserStorageService();
+
+			try
+			{
+				await sysUserStorageService.changePinCode( walletObject, ``, newPINCode );
+			}
+			catch ( err )
+			{
+				const errorText = err as string;
+				expect( _.isString( errorText ) ).toBeTruthy();
+				expect( errorText && errorText.includes( `invalid oldPinCode` ) ).toBeTruthy();
+			}
+
+			try
+			{
+				await sysUserStorageService.changePinCode( walletObject, `1111`, newPINCode );
+			}
+			catch ( err )
+			{
+				const errorText = err as string;
+				expect( _.isString( errorText ) ).toBeTruthy();
+				expect( errorText && errorText.includes( `invalid oldPinCode` ) ).toBeTruthy();
+			}
+
+			expect( await sysUserStorageService.isValidPinCode( oldPINCode ) ).toBeTruthy();
+			expect( await sysUserStorageService.isValidPinCode( newPINCode ) ).toBeFalsy();
+
+			//	...
+			const changed : boolean = await sysUserStorageService.changePinCode( walletObject, oldPINCode, newPINCode );
+			expect( changed ).toBeTruthy();
+
+			expect( await sysUserStorageService.isValidPinCode( oldPINCode ) ).toBeFalsy();
+			expect( await sysUserStorageService.isValidPinCode( newPINCode ) ).toBeTruthy();
+		} );
+
 	} );
 } );

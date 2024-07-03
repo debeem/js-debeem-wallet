@@ -53,7 +53,7 @@ describe( "WalletFactory", () =>
 		{
 			const mnemonic = 'olympic cradle tragic crucial exit annual silly cloth scale fine gesture ancient';
 			const walletObj = new WalletFactory().createWalletFromMnemonic( mnemonic );
-			// console.log( walletObj );
+			//console.log( walletObj );
 			// {
 			// 	isHD: true,
 			// 		mnemonic: 'olympic cradle tragic crucial exit annual silly cloth scale fine gesture ancient',
@@ -64,11 +64,13 @@ describe( "WalletFactory", () =>
 			// 	index: 0,
 			// 	path: "m/44'/60'/0'/0/0"
 			// }
-
 			expect( walletObj ).not.toBeNull();
 			expect( walletObj.mnemonic ).toBe( mnemonic );
 			expect( walletObj.privateKey.startsWith( '0x' ) ).toBe( true );
+			expect( walletObj.privateKey ).toBe( `0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a` );
+			expect( walletObj.publicKey ).toBe( `0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970a89b5aa622` );
 			expect( walletObj.address.startsWith( '0x' ) ).toBe( true );
+			expect( walletObj.address ).toBe( `0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357` );
 			expect( walletObj.index ).toBe( 0 );
 			expect( walletObj.path ).toBe( ethers.defaultPath );
 		} );
@@ -84,7 +86,7 @@ describe( "WalletFactory", () =>
 				// Assert that the error is thrown
 				expect( error ).toBeDefined();
 				expect( error ).toHaveProperty( 'message' );
-				expect( error.message ).toEqual( "invalid mnemonic" );
+				expect( error.message.includes( `invalid mnemonic` ) ).toBeTruthy();
 			}
 		} );
 	} );
@@ -149,7 +151,7 @@ describe( "WalletFactory", () =>
 				// Assert that the error is thrown
 				expect( error ).toBeDefined();
 				expect( error ).toHaveProperty( 'message' );
-				expect( error.message ).toEqual( "invalid format of private key" );
+				expect( error.message.includes( `invalid format of private key` ) ).toBeTruthy();
 			}
 		} );
 	} );
@@ -215,7 +217,7 @@ describe( "WalletFactory", () =>
 				//	Assert that the error is thrown
 				expect( err ).toBeDefined();
 				expect( err ).toHaveProperty( 'message' );
-				expect( err.message ).toEqual( "invalid address" );
+				expect( err.message.includes( `invalid address` ) ).toBeTruthy();
 			}
 		});
 

@@ -15,8 +15,8 @@ export interface IStorageService
 	get( key : string ) : Promise<any | null>;
 
 	getFirst() : Promise<any | null>;
-	getAllKeys( query? : string, maxCount? : number ) : Promise<Array<string> | null>;
-	getAll( query? : string, maxCount? : number ) : Promise<Array<any> | null>;
+	getAllKeys( query? : string, maxCount? : number ) : Promise<Array<string>>;
+	getAll( query? : string, maxCount? : number ) : Promise<Array<any>>;
 
 	put( key : string, value : any ) : Promise<boolean>;
 

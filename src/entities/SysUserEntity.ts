@@ -11,14 +11,14 @@ import { DBSchema } from "idb";
 export interface SysUserItem
 {
 	/**
+	 * 	timestamp
+	 */
+	timestamp : number,
+
+	/**
 	 * 	wallet address
 	 */
 	wallet : string;
-
-	/**
-	 * 	entity name
-	 */
-	entity: string;
 
 	/**
 	 * 	password by Web3Digester.hashObject( { privateKey } )
@@ -26,9 +26,13 @@ export interface SysUserItem
 	password: string;
 
 	/**
+	 * 	hash value
+	 */
+	hash : string;
+
+	/**
 	 * 	let obj : SysUserItem = {
 	 * 	        wallet : `{ wallet address }`,
-	 * 	        entity : `{ entity name }`,
 	 * 	        password : `{ password string }`,
 	 * 	        sig : ``
 	 * 	}
@@ -49,6 +53,6 @@ export interface SysUserEntity extends DBSchema
 	root : {
 		key: string;
 		value: SysUserItem;
-		indexes: { 'by-entity': string };
+		indexes: { 'by-wallet': string };
 	};
 }

@@ -16,6 +16,9 @@ import { SysConfigStorageService } from "./services/storage/SysConfigStorageServ
 import { SysConfigKeys } from "./entities/SysConfigEntity";
 import _ from "lodash";
 import { WalletEntityItem } from "./entities/WalletEntity";
+import { VaWalletEntity } from "./validators/VaWalletEntity";
+import { SysUserStorageService } from "./services/storage/SysUserStorageService";
+import { WalletStorageService } from "./services/storage/WalletStorageService";
 
 
 /**
@@ -178,7 +181,7 @@ export function getCurrentChain() : number
  *
  * 	@returns {Promise<number | undefined>}
  */
-export function getCurrentChainAsync() : Promise<number | undefined>
+export async function getCurrentChainAsync() : Promise<number | undefined>
 {
 	return new Promise( async ( resolve, reject ) =>
 	{
@@ -228,7 +231,7 @@ export function setCurrentChain( chainId : number ) : void
  *	@param chainId	{number} numeric chainId
  * 	@returns {Promise<boolean>}
  */
-export function putCurrentChainAsync( chainId : number ) : Promise<boolean>
+export async function putCurrentChainAsync( chainId : number ) : Promise<boolean>
 {
 	return new Promise( async ( resolve, reject ) =>
 	{
@@ -277,7 +280,7 @@ export function revertToDefaultChain() : void
  *
  * 	@returns {void}
  */
-export function revertToDefaultChainAsync() : Promise<boolean>
+export async function revertToDefaultChainAsync() : Promise<boolean>
 {
 	currentChain = defaultChain;
 	return new Promise( async ( resolve, reject ) =>
@@ -309,7 +312,7 @@ export function revertToDefaultChainAsync() : Promise<boolean>
  *
  * 	@returns {Promise<number>}
  */
-export function getCurrentWalletAsync() : Promise< string | undefined >
+export async function getCurrentWalletAsync() : Promise< string | undefined >
 {
 	return new Promise( async ( resolve, reject ) =>
 	{
@@ -339,7 +342,7 @@ export function getCurrentWalletAsync() : Promise< string | undefined >
  *	@param wallet	{string} wallet address
  * 	@returns {Promise<boolean>}
  */
-export function putCurrentWalletAsync( wallet : string ) : Promise<boolean>
+export async function putCurrentWalletAsync( wallet : string ) : Promise<boolean>
 {
 	return new Promise( async ( resolve, reject ) =>
 	{
@@ -350,10 +353,8 @@ export function putCurrentWalletAsync( wallet : string ) : Promise<boolean>
 				return reject( `putCurrentWalletAsync :: invalid wallet` );
 			}
 
-			//	todo
-			//	get all wallet , get all keys
-			//	reject if wallet address not exists, notice user to init
-
+			//	...
+			wallet = wallet.trim().toLowerCase();
 			const saved : boolean = await new SysConfigStorageService().putConfig( SysConfigKeys.currentWallet, wallet );
 			resolve( saved );
 		}
@@ -364,23 +365,53 @@ export function putCurrentWalletAsync( wallet : string ) : Promise<boolean>
 	});
 }
 
-export function initWalletAsync( walletItem : WalletEntityItem ) : Promise<boolean>
+/**
+ *	init wallet/user
+ *
+ *	@param walletItem		{WalletEntityItem}
+ *	@param pinCode			{string}
+ *	@param [overwriteExisting]	{boolean} defaults to false
+ */
+export async function initWalletAsync( walletItem : WalletEntityItem, pinCode : string, overwriteExisting ?: boolean ) : Promise<boolean>
 {
 	return new Promise( async ( resolve, reject ) =>
 	{
 		try
 		{
-			if ( ! _.isString( wallet ) || _.isEmpty( wallet ) )
+			const vaError : string | null = VaWalletEntity.validateWalletEntityItem( walletItem );
+			if ( null !== vaError )
 			{
-				return reject( `putCurrentWalletAsync :: invalid wallet` );
+				return reject( `initWalletAsync :: ${ vaError }` );
+			}
+			if ( ! _.isString( pinCode ) )
+			{
+				return reject( `initWalletAsync :: invalid pinCode` );
 			}
 
-			//	todo
-			//	get all wallet , get all keys
-			//	reject if wallet address not exists, notice user to init
+			//	...
+			const sysUserStorageService = new SysUserStorageService();
 
-			const saved : boolean = await new SysConfigStorageService().putConfig( SysConfigKeys.currentWallet, wallet );
-			resolve( saved );
+			//	...
+			const userCreated : boolean = await sysUserStorageService.createUser( walletItem, pinCode, overwriteExisting );
+			if ( ! userCreated )
+			{
+				return reject( `initWalletAsync :: failed to create user` );
+			}
+
+			//	...
+			await putCurrentWalletAsync( walletItem.address );
+
+			//	...
+			const walletStorageService = new WalletStorageService( pinCode );
+			const walletKey : string | null = walletStorageService.getKeyByItem( walletItem );
+			if ( ! _.isString( walletKey ) || _.isEmpty( walletKey ) )
+			{
+				return reject( `initWalletAsync :: failed to get walletKey` );
+			}
+
+			//	...
+			const walletCreated : boolean = await walletStorageService.put( walletKey, walletItem );
+			resolve( walletCreated );
 		}
 		catch ( err )
 		{

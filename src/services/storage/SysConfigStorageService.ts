@@ -4,10 +4,11 @@
  */
 import { TestUtil } from "debeem-utils";
 
+
 if ( TestUtil.isTestEnv() )
 {
 	//import "fake-indexeddb/auto";
-	require('fake-indexeddb/auto');
+	require( 'fake-indexeddb/auto' );
 }
 
 import _, { parseInt } from "lodash";
@@ -15,32 +16,29 @@ import { openDB, StoreNames } from "idb";
 import { IDBPDatabase } from "idb/build/entry";
 import { AesCrypto } from "debeem-cipher";
 import { SysConfigEntity } from "../../entities/SysConfigEntity";
+import { IStorageService } from "./IStorageService";
+import { CallbackModels } from "../../models/CallbackModels";
 
 
 /**
  * 	@class
  */
-export class SysConfigStorageService
+export class SysConfigStorageService implements IStorageService
 {
 	/**
 	 *	@ignore
 	 */
-	protected sysDb !: IDBPDatabase<SysConfigEntity>;
+	protected sysDb ! : IDBPDatabase<SysConfigEntity>;
 
 	/**
 	 *	@ignore
 	 */
-	protected databaseName : string = 'sys_user_entity';
+	protected databaseName : string = 'sys_config_entity';
 
 	/**
 	 *	@ignore
 	 */
 	protected storeName : StoreNames<SysConfigEntity> = 'root';
-
-	/**
-	 *	@ignore
-	 */
-	protected storageCrypto : AesCrypto = new AesCrypto( `meta_beem_password_` );
 
 
 	constructor()
@@ -53,7 +51,7 @@ export class SysConfigStorageService
 	 * 	@ignore
 	 * 	@returns {Promise< IDBPDatabase<SysConfigEntity> | null >}
 	 */
-	async initDb() : Promise< IDBPDatabase<SysConfigEntity> | null >
+	protected async initDb() : Promise<IDBPDatabase<SysConfigEntity> | null>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -63,7 +61,7 @@ export class SysConfigStorageService
 				{
 					return resolve( this.sysDb );
 				}
-				if ( ! _.isString( this.databaseName ) || _.isEmpty( this.databaseName ) )
+				if ( !_.isString( this.databaseName ) || _.isEmpty( this.databaseName ) )
 				{
 					return resolve( null );
 				}
@@ -79,7 +77,7 @@ export class SysConfigStorageService
 							db.createObjectStore( storeName );
 						},
 					} );
-				if ( ! this.sysDb )
+				if ( !this.sysDb )
 				{
 					return reject( `${ this.constructor.name }.initDb :: null sysDb` );
 				}
@@ -90,7 +88,7 @@ export class SysConfigStorageService
 			{
 				reject( err );
 			}
-		});
+		} );
 	}
 
 	/**
@@ -98,7 +96,7 @@ export class SysConfigStorageService
 	 *	@param item	{any}
 	 *	@returns {boolean}
 	 */
-	public isValidSysConfigItem( item : any ) : boolean
+	public isValidItem( item : any ) : boolean
 	{
 		return _.isString( item );
 	}
@@ -108,7 +106,7 @@ export class SysConfigStorageService
 	 * 	@param key	{string}
 	 * 	@returns {number}
 	 */
-	public getConfigInt( key : string ) : Promise<number | undefined>
+	public async getConfigInt( key : string ) : Promise<number | undefined>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -126,7 +124,7 @@ export class SysConfigStorageService
 			{
 				reject( err );
 			}
-		});
+		} );
 	}
 
 	/**
@@ -134,7 +132,7 @@ export class SysConfigStorageService
 	 * 	@param key	{string}
 	 * 	@returns {number}
 	 */
-	public getConfigFloat( key : string ) : Promise<number | undefined>
+	public async getConfigFloat( key : string ) : Promise<number | undefined>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -152,7 +150,7 @@ export class SysConfigStorageService
 			{
 				reject( err );
 			}
-		});
+		} );
 	}
 
 	/**
@@ -160,18 +158,18 @@ export class SysConfigStorageService
 	 *	@param key	{string}
 	 *	@returns {Promise<string | undefined>}
 	 */
-	public getConfig( key : string ) : Promise<string | undefined>
+	public async getConfig( key : string ) : Promise<string | undefined>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
 			try
 			{
-				if ( ! _.isString( key ) || _.isEmpty( key ) )
+				if ( !_.isString( key ) || _.isEmpty( key ) )
 				{
 					return reject( `${ this.constructor.name }.getConfig :: invalid key` );
 				}
 
-				if ( ! await this.initDb() )
+				if ( !await this.initDb() )
 				{
 					return reject( `${ this.constructor.name }.getConfig :: failed to init db` );
 				}
@@ -185,7 +183,7 @@ export class SysConfigStorageService
 			{
 				reject( err );
 			}
-		});
+		} );
 	}
 
 	/**
@@ -194,22 +192,22 @@ export class SysConfigStorageService
 	 *	@param item	{string}
 	 *	@returns {Promise<boolean>}
 	 */
-	public putConfig( key : string, item : string ) : Promise<boolean>
+	public async putConfig( key : string, item : string ) : Promise<boolean>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
 			try
 			{
-				if ( ! _.isString( key ) || _.isEmpty( key ) )
+				if ( !_.isString( key ) || _.isEmpty( key ) )
 				{
 					return reject( `${ this.constructor.name }.putConfig :: invalid key` );
 				}
-				if ( ! this.isValidSysConfigItem( item ) )
+				if ( !this.isValidItem( item ) )
 				{
 					return reject( `${ this.constructor.name }.putConfig :: invalid item` );
 				}
 
-				if ( ! await this.initDb() )
+				if ( !await this.initDb() )
 				{
 					return reject( `${ this.constructor.name }.putConfig :: failed to init db` );
 				}
@@ -223,7 +221,7 @@ export class SysConfigStorageService
 			{
 				reject( err );
 			}
-		});
+		} );
 	}
 
 	/**
@@ -232,13 +230,13 @@ export class SysConfigStorageService
 	 * 	@group Basic Methods
 	 * 	@returns {Promise<boolean>}
 	 */
-	public clear() : Promise<boolean>
+	public async clear() : Promise<boolean>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
 			try
 			{
-				if ( ! await this.initDb() )
+				if ( !await this.initDb() )
 				{
 					return reject( `${ this.constructor.name }.clear :: failed to init db` );
 				}
@@ -252,6 +250,47 @@ export class SysConfigStorageService
 			{
 				reject( err );
 			}
-		});
+		} );
+	}
+
+
+	public getKeyByItem( value : any ) : string | null
+	{
+		throw new Error( "Method not implemented." );
+	}
+
+	public get( key : string ) : Promise<any>
+	{
+		throw new Error( "Method not implemented." );
+	}
+
+	public getFirst() : Promise<any>
+	{
+		throw new Error( "Method not implemented." );
+	}
+
+	public getAllKeys( query? : string | undefined, maxCount? : number | undefined ) : Promise<string[]>
+	{
+		throw new Error( "Method not implemented." );
+	}
+
+	public getAll( query? : string | undefined, maxCount? : number | undefined ) : Promise<any[]>
+	{
+		throw new Error( "Method not implemented." );
+	}
+
+	public put( key : string, value : any ) : Promise<boolean>
+	{
+		throw new Error( "Method not implemented." );
+	}
+
+	public delete( key : string ) : Promise<boolean>
+	{
+		throw new Error( "Method not implemented." );
+	}
+
+	public count( query? : string | undefined ) : Promise<number>
+	{
+		throw new Error( "Method not implemented." );
 	}
 }

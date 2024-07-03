@@ -3,7 +3,7 @@
  * 	@module TokenStorageService
  */
 import { VerifyUtil } from "../../utils/VerifyUtil";
-import { TestUtil } from "debeem-utils";
+import { TestUtil, TypeUtil } from "debeem-utils";
 
 if ( TestUtil.isTestEnv() )
 {
@@ -11,52 +11,79 @@ if ( TestUtil.isTestEnv() )
 	require('fake-indexeddb/auto');
 }
 
-import { TokenEntityItem } from "../../entities/TokenEntity";
+import { TokenEntity, TokenEntityItem } from "../../entities/TokenEntity";
 import { defaultTokens } from "../../constants/ConstantToken";
-import { AbstractStorageService } from "./AbstractStorageService";
 import { CallbackModels } from "../../models/CallbackModels";
 import { IStorageService } from "./IStorageService";
 import _ from "lodash";
 import { VaTokenEntity } from "../../validators/VaTokenEntity";
 import { getCurrentChain } from "../../config";
+import { IDBPDatabase } from "idb/build/entry";
+import { openDB, StoreNames } from "idb";
 
 
-export class TokenStorageService extends AbstractStorageService<TokenEntityItem> implements IStorageService
+export class TokenStorageService implements IStorageService
 {
-	constructor( pinCode : string = '' )
+	/**
+	 *	@ignore
+	 */
+	protected db !: IDBPDatabase<TokenEntity>;
+
+	/**
+	 *	@ignore
+	 *	@protected
+	 */
+	readonly databaseName : string = 'token_entity';
+
+	/**
+	 *	@ignore
+	 *	@protected
+	 */
+	readonly storeName : StoreNames<TokenEntity> = 'root';
+
+
+
+	constructor()
 	{
-		super( 'token_entity', pinCode );
 	}
 
-	// private async init()
-	// {
-	// 	if ( this.db )
-	// 	{
-	// 		return this.db;
-	// 	}
-	//
-	// 	return this.db = await openDB<TokenEntity>
-	// 	(
-	// 		'token_entity',
-	// 		1,
-	// 		{
-	// 		upgrade( db )
-	// 		{
-	// 			// const walletStore = db.createObjectStore('wallet', {
-	// 			// 	//	The 'name' property of the object will be the key.
-	// 			// 	keyPath: 'name',
-	// 			// 	autoIncrement : false,
-	// 			// } );
-	//
-	// 			//
-	// 			//	key is a random sha256 value
-	// 			//
-	// 			const walletStore = db.createObjectStore('root' );
-	// 			walletStore.createIndex( 'by-address', 'address' );
-	// 		},
-	// 	});
-	// }
+	protected async init()
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( this.db )
+				{
+					return resolve( this.db );
+				}
 
+				//	...
+				const storeName = this.storeName;
+				this.db = await openDB<TokenEntity>
+				(
+					this.databaseName,
+					1,
+					{
+						upgrade( db )
+						{
+							db.createObjectStore( storeName );
+						},
+					});
+				if ( ! this.db )
+				{
+					return reject( `${ this.constructor.name }.init :: null db` );
+				}
+
+				//	...
+				resolve( this.db );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
 
 	/**
 	 *	Check if the input object is a valid item
@@ -136,7 +163,7 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	 * 	@param wallet	{string} wallet address
 	 * 	@returns {Promise<boolean>}
 	 */
-	public flushDefault( wallet : string ) : Promise<boolean>
+	public async flushDefault( wallet : string ) : Promise<boolean>
 	{
 		return new Promise( async ( resolve, reject) =>
 		{
@@ -263,6 +290,107 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 		return `chain-${ chainId }-wallet-${ wallet.trim() }`.toLowerCase();
 	}
 
+	/**
+	 * 	get item
+	 *	@param key	{string}
+	 *	@returns {Promise<TokenEntityItem | null>}
+	 */
+	public async get( key : string ) : Promise<TokenEntityItem | null>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( ! _.isString( key ) || _.isEmpty( key ) )
+				{
+					return reject( `${ this.constructor.name }.get :: invalid key` );
+				}
+
+				await this.init();
+				if ( this.db )
+				{
+					const value : TokenEntityItem | undefined = await this.db.get( 'root', key );
+					return resolve( value ? value : null );
+				}
+
+				reject( null );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+	/**
+	 * 	get all keys
+	 *
+	 *	@param [query]		{string}
+	 *	@param [maxCount]	{number}
+	 *	@returns {Promise<Array<string>>}
+	 */
+	public async getAllKeys( query? : string, maxCount? : number ) : Promise<Array<string>>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				await this.init();
+				if ( this.db )
+				{
+					const value : Array<string> | null = await this.db.getAllKeys( 'root', query, maxCount );
+					return resolve( value ? value : [] );
+				}
+
+				//	...
+				reject( [] );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+	/**
+	 * 	put a value by key
+	 *
+	 * 	@param key	{string}
+	 *	@param value	{TokenEntityItem}
+	 *	@returns {Promise<boolean>}
+	 */
+	public async put( key : string, value : TokenEntityItem ) : Promise<boolean>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( ! _.isString( key ) || _.isEmpty( key ) )
+				{
+					return reject( `${ this.constructor.name }.put :: invalid key` );
+				}
+				if ( ! this.isValidItem( value ) )
+				{
+					return reject( `${ this.constructor.name }.put :: invalid value` );
+				}
+
+				//	...
+				await this.init();
+				if ( this.db )
+				{
+					await this.db.put( 'root', value, key );
+					return resolve( true );
+				}
+
+				//	...
+				reject( false );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
 
 	/**
 	 * 	get the first item by wallet address
@@ -328,7 +456,7 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 				}
 
 				//	...
-				const allKeys : Array<string> | null = await super.getAllKeys( query, maxCount );
+				const allKeys : Array<string> | null = await this.getAllKeys( query, maxCount );
 				if ( ! Array.isArray( allKeys ) || 0 === allKeys.length )
 				{
 					return resolve( null );
@@ -412,7 +540,7 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 				let tokenItems : Array<TokenEntityItem> = [];
 				for ( const tsKey of allTokenStorageKeys )
 				{
-					const item : TokenEntityItem | null = await super.get( tsKey );
+					const item : TokenEntityItem | null = await this.get( tsKey );
 					if ( null === item )
 					{
 						continue;
@@ -430,26 +558,6 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 				}
 
 				return resolve( tokenItems );
-
-				// const rawValues = await super.getAll( query, maxCount );
-				// if ( Array.isArray( rawValues ) )
-				// {
-				// 	let values : Array<TokenEntityItem> = [];
-				// 	for ( const item of rawValues )
-				// 	{
-				// 		if ( item &&
-				// 			null === VaTokenEntity.validateTokenEntityItemChainId( item.chainId ) &&
-				// 			null === VaTokenEntity.validateTokenEntityItemWallet( item.wallet ) &&
-				// 			chainId === item.chainId &&
-				// 			item.wallet.trim().toLowerCase() === wallet.trim().toLowerCase() )
-				// 		{
-				// 			values.push( item );
-				// 		}
-				// 	}
-				// 	return resolve( values );
-				// }
-				//
-				//resolve( null );
 			}
 			catch ( err )
 			{
@@ -513,7 +621,36 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 		});
 	}
 
+	/**
+	 *	@param key	- wallet address is the key
+	 *	@returns {Promise<boolean>}
+	 */
+	public delete( key : string ) : Promise<boolean>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( ! TypeUtil.isNotEmptyString( key ) )
+				{
+					return reject( `${ this.constructor.name }.delete :: invalid key` );
+				}
 
+				await this.init();
+				if ( this.db )
+				{
+					await this.db.delete( 'root', key );
+					return resolve( true );
+				}
+
+				reject( false );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
 
 	/**
 	 * 	@hidden
@@ -521,25 +658,16 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	 */
 	public async getFirst() : Promise<TokenEntityItem | null>
 	{
-		throw new Error( `this method has been deprecated and it is forbidden to call.` );
+		throw new Error( `${ this.constructor.name }.getFirst :: this method has been deprecated and it is forbidden to call.` );
 	}
 
 	/**
 	 * 	@hidden
 	 * 	@deprecated
 	 */
-	public async getAllKeys( query? : string, maxCount? : number ) : Promise<Array<string> | null>
+	public async getAll( query? : string, maxCount? : number ) : Promise<Array<TokenEntityItem | null>>
 	{
-		throw new Error( `this method has been deprecated and it is forbidden to call.` );
-	}
-
-	/**
-	 * 	@hidden
-	 * 	@deprecated
-	 */
-	public async getAll( query? : string, maxCount? : number ) : Promise<Array<TokenEntityItem | null> | null>
-	{
-		throw new Error( `this method has been deprecated and it is forbidden to call.` );
+		throw new Error( `${ this.constructor.name }.getFirst :: this method has been deprecated and it is forbidden to call.` );
 	}
 
 	/**
@@ -548,7 +676,7 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	 */
 	public async clear() : Promise<boolean>
 	{
-		throw new Error( `this method has been deprecated and it is forbidden to call.` );
+		throw new Error( `${ this.constructor.name }.getFirst :: this method has been deprecated and it is forbidden to call.` );
 	}
 
 	/**
@@ -557,6 +685,6 @@ export class TokenStorageService extends AbstractStorageService<TokenEntityItem>
 	 */
 	public async count( query? : string ) : Promise<number>
 	{
-		throw new Error( `this method has been deprecated and it is forbidden to call.` );
+		throw new Error( `${ this.constructor.name }.getFirst :: this method has been deprecated and it is forbidden to call.` );
 	}
 }
