@@ -2,7 +2,8 @@ import { describe, expect } from '@jest/globals';
 import { WalletEntityBaseItem, WalletFactory } from "../../../../src";
 import { ethers, isAddress } from "ethers";
 import { TypeUtil } from "debeem-utils";
-import { EtherWallet } from "debeem-id";
+import { EtherWallet, Web3Digester, Web3Signer, Web3Validator } from "debeem-id";
+import { AesCrypto } from "debeem-cipher";
 
 /**
  *	WalletFactory unit test
@@ -262,32 +263,430 @@ describe( "WalletFactory", () =>
 			expect( walletObj.index ).toBe( 0 );
 			expect( walletObj.path ).toBe( ethers.defaultPath );
 
-			const secondWalletObj = new WalletFactory().createNewAddress( walletObj );
+			const secondWalletObj = new WalletFactory().deriveNextWallet( walletObj );
 			expect( secondWalletObj.address ).toBe( secondAddress );
 			expect( EtherWallet.isValidLowercaseHex( secondWalletObj.address ) ).toBeTruthy();
 			expect( secondWalletObj.index ).toBe( 1 );
 			expect( secondWalletObj.path ).toBe( ethers.getIndexedAccountPath( 1 ) );
 
-			const thirdWalletObj = new WalletFactory().createNewAddress( secondWalletObj );
+			const thirdWalletObj = new WalletFactory().deriveNextWallet( secondWalletObj );
 			expect( thirdWalletObj.address ).toBe( thirdAddress );
 			expect( EtherWallet.isValidLowercaseHex( thirdWalletObj.address ) ).toBeTruthy();
 			expect( thirdWalletObj.index ).toBe( 2 );
 			expect( thirdWalletObj.path ).toBe( ethers.getIndexedAccountPath( 2 ) );
 		} );
+	} );
 
-		it( "should throw an error if the wallet is not valid", async () =>
+	describe( "Derive Chat Wallet", () =>
+	{
+		it( "should derive a chat wallet from a HD wallet", async () =>
 		{
-			try
-			{
-				new WalletFactory().createNewAddress( undefined );
-			}
-			catch ( error : any )
-			{
-				//	Assert that the error is thrown
-				expect( error ).toBeDefined();
-				expect( error ).toHaveProperty( 'message' );
-				expect( error.message ).toEqual( "wallet not specified" );
-			}
-		} );
-	} )
+			const mnemonic = 'olympic cradle tragic crucial exit annual silly cloth scale fine gesture ancient';
+
+			const walletObj = new WalletFactory().createWalletFromMnemonic( mnemonic );
+			//console.log( `walletObj :`, walletObj );
+			//	    walletObj : {
+			//       isHD: true,
+			//       mnemonic: 'olympic cradle tragic crucial exit annual silly cloth scale fine gesture ancient',
+			//       password: '',
+			//       address: '0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357',
+			//       publicKey: '0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970a89b5aa622',
+			//       privateKey: '0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a',
+			//       index: 0,
+			//       path: "m/44'/60'/0'/0/0"
+			//     }
+			expect( walletObj ).not.toBeNull();
+			expect( walletObj.isHD ).toBe( true );
+			expect( walletObj.mnemonic ).toBe( mnemonic );
+			expect( walletObj.address ).toBe( `0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357` );
+			expect( walletObj.publicKey ).toBe( `0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970a89b5aa622` );
+			expect( walletObj.privateKey ).toBe( `0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a` );
+			expect( walletObj.index ).toBe( 0 );
+			expect( walletObj.path ).toBe( ethers.defaultPath );
+
+			const chatWallet = new WalletFactory().deriveChatWallet( walletObj );
+			//console.log( `chatWallet :`, chatWallet );
+			//	    chatWallet : {
+			//       isHD: true,
+			//       mnemonic: 'olympic cradle tragic crucial exit annual silly cloth scale fine gesture ancient',
+			//       password: '',
+			//       address: '0xc2678a12d5c8b0508d375de67fbeb78afde5bb28',
+			//       publicKey: '0x035eb821f1b718419956d9d1d628ecd1359cc320c513e6953d18cb414d36a5c5b4',
+			//       privateKey: '0x7c0c63567803e67d74b59217f7cab9cb44a8747847585f52f317e72f092e5361',
+			//       index: 23041601,
+			//       path: "m/44'/60'/0'/0/23041601"
+			//     }
+			expect( chatWallet ).not.toBeNull();
+			expect( chatWallet.isHD ).toBe( true );
+			expect( chatWallet.mnemonic ).toBe( mnemonic );
+			expect( chatWallet.address ).toBe( `0xc2678a12d5c8b0508d375de67fbeb78afde5bb28` );
+			expect( chatWallet.publicKey ).toBe( `0x035eb821f1b718419956d9d1d628ecd1359cc320c513e6953d18cb414d36a5c5b4` );
+			expect( chatWallet.privateKey ).toBe( `0x7c0c63567803e67d74b59217f7cab9cb44a8747847585f52f317e72f092e5361` );
+			expect( chatWallet.index ).toBe( 23041601 );
+			expect( chatWallet.path ).toBe( "m/44'/60'/0'/0/23041601" );
+
+			//
+			//	sign and validate a data
+			//
+			let post = {
+				timestamp : new Date().getTime(),
+				hash : '',
+				version : '1.0.0',
+				wallet : chatWallet.address,
+				sig : ``,
+				body : 'Hello 1'
+			};
+			post.sig = await Web3Signer.signObject( chatWallet.privateKey, post );
+			post.hash = await Web3Digester.hashObject( post );
+			expect( post.sig ).toBeDefined();
+			expect( typeof post.sig ).toBe( 'string' );
+			expect( post.sig.length ).toBeGreaterThanOrEqual( 0 );
+			expect( post.hash ).toBeDefined();
+			expect( typeof post.hash ).toBe( 'string' );
+			expect( post.hash.length ).toBeGreaterThanOrEqual( 0 );
+
+			const validatedSig : boolean = await Web3Validator.validateObject( post.wallet, post, post.sig );
+			expect( validatedSig ).toBeTruthy();
+			//console.log( `post :`, post );
+			//	    post : {
+			//       timestamp: 1720226832393,
+			//       hash: '0xe82c12b3f3c21317f7b7c825686fe164c16432d6c7f95366ce33083e567f8aba',
+			//       version: '1.0.0',
+			//       wallet: '0xc2678a12d5c8b0508d375de67fbeb78afde5bb28',
+			//       sig: '0x6893995c8f570a8532911c9340057c12bb09c2c1621a0088b57cd68c523cb8967d7ad0860042e089d6aefce1f02703c9b6d59c09a1b59606f3ba01f04dea07741b',
+			//       body: 'Hello 1'
+			//     }
+			//
+		});
+
+		it( "should derive a chat wallet from a private key", async () =>
+		{
+			const privateKey = `0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a`;
+			const walletObj = new WalletFactory().createWalletFromPrivateKey( privateKey );
+			//console.log( `walletObj :`, walletObj );
+			//	    walletObj : {
+			//       isHD: false,
+			//       mnemonic: '',
+			//       password: '',
+			//       address: '0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357',
+			//       publicKey: '0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970a89b5aa622',
+			//       privateKey: '0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a',
+			//       index: 0,
+			//       path: null
+			//     }
+			expect( walletObj ).not.toBeNull();
+			expect( walletObj.isHD ).toBe( false );
+			expect( walletObj.mnemonic ).toBe( `` );
+			expect( walletObj.password ).toBe( `` );
+			expect( walletObj.address ).toBe( `0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357` );
+			expect( walletObj.publicKey ).toBe( `0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970a89b5aa622` );
+			expect( walletObj.privateKey ).toBe( `0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a` );
+			expect( walletObj.index ).toBe( 0 );
+			expect( walletObj.path ).toBe( null );
+
+			const chatWallet = new WalletFactory().deriveChatWallet( walletObj );
+			//console.log( `chatWallet :`, chatWallet );
+			//	    chatWallet : {
+			//       isHD: false,
+			//       mnemonic: '',
+			//       password: '',
+			//       address: '0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357',
+			//       publicKey: '0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970a89b5aa622',
+			//       privateKey: '0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a',
+			//       index: 0,
+			//       path: null
+			//     }
+			expect( chatWallet ).not.toBeNull();
+			expect( chatWallet.isHD ).toBe( false );
+			//expect( chatWallet.mnemonic ).toBe( mnemonic );
+			expect( chatWallet.address ).toBe( `0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357` );
+			expect( chatWallet.publicKey ).toBe( `0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970a89b5aa622` );
+			expect( chatWallet.privateKey ).toBe( `0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a` );
+			expect( chatWallet.index ).toBe( 0 );
+			expect( chatWallet.path ).toBe( null );
+
+			//	chatWallet should be exactly the same as walletObj
+			expect( chatWallet ).toBe( walletObj );
+			expect( chatWallet.isHD ).toBe( walletObj.isHD );
+			expect( chatWallet.mnemonic ).toBe( walletObj.mnemonic );
+			expect( chatWallet.address ).toBe( walletObj.address );
+			expect( chatWallet.publicKey ).toBe( walletObj.publicKey );
+			expect( chatWallet.privateKey ).toBe( walletObj.privateKey );
+			expect( chatWallet.index ).toBe( walletObj.index );
+			expect( chatWallet.path ).toBe( walletObj.path );
+
+			//
+			//	sign and validate a data
+			//
+			let post = {
+				timestamp : new Date().getTime(),
+				hash : '',
+				version : '1.0.0',
+				wallet : chatWallet.address,
+				sig : ``,
+				body : 'Hello 1'
+			};
+			post.sig = await Web3Signer.signObject( chatWallet.privateKey, post );
+			post.hash = await Web3Digester.hashObject( post );
+			expect( post.sig ).toBeDefined();
+			expect( typeof post.sig ).toBe( 'string' );
+			expect( post.sig.length ).toBeGreaterThanOrEqual( 0 );
+			expect( post.hash ).toBeDefined();
+			expect( typeof post.hash ).toBe( 'string' );
+			expect( post.hash.length ).toBeGreaterThanOrEqual( 0 );
+
+			const validatedSig : boolean = await Web3Validator.validateObject( post.wallet, post, post.sig );
+			expect( validatedSig ).toBeTruthy();
+			//console.log( `post :`, post );
+			//	    post : {
+			//       timestamp: 1720226681992,
+			//       hash: '0x98f62e6c8acc24ec2a2301f019593ff351923109f919b4d64ef38706984d78ac',
+			//       version: '1.0.0',
+			//       wallet: '0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357',
+			//       sig: '0xaae223d81c0459e92e91263d625dcd022e680c0a766b57a350c4a3ce38e0fe5141a9dd01336b95c2f1c44889c73a45bf911073e07823005318a6205b1718ec3b1c',
+			//       body: 'Hello 1'
+			//     }
+			//
+		});
+
+		it( "should send an encrypted message to Bob from Alice by the derived keys created from mnemonics", async () =>
+		{
+			const mnemonicAlice = 'olympic cradle tragic crucial exit annual silly cloth scale fine gesture ancient';
+			const mnemonicBob = 'retire inflict prevent believe question pipe rebel state visit little bind accuse';
+
+			const walletObjAlice = new WalletFactory().createWalletFromMnemonic( mnemonicAlice );
+			const walletObjBob = new WalletFactory().createWalletFromMnemonic( mnemonicBob );
+			expect( walletObjAlice ).not.toBeNull();
+			//console.log( `walletObjAlice :`, walletObjAlice );
+			//	    walletObjAlice : {
+			//       isHD: true,
+			//       mnemonic: 'olympic cradle tragic crucial exit annual silly cloth scale fine gesture ancient',
+			//       password: '',
+			//       address: '0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357',
+			//       publicKey: '0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970a89b5aa622',
+			//       privateKey: '0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a',
+			//       index: 0,
+			//       path: "m/44'/60'/0'/0/0"
+			//     }
+			expect( walletObjAlice.isHD ).toBe( true );
+			expect( walletObjAlice.address ).toBe( `0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357` );
+			expect( walletObjAlice.publicKey ).toBe( `0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970a89b5aa622` );
+			expect( walletObjAlice.privateKey ).toBe( `0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a` );
+
+			expect( walletObjBob ).not.toBeNull();
+			//console.log( `walletObjBob :`, walletObjBob );
+			//	    walletObjBob : {
+			//       isHD: true,
+			//       mnemonic: 'retire inflict prevent believe question pipe rebel state visit little bind accuse',
+			//       password: '',
+			//       address: '0x95a93fb72a160a2c8c9181eefa3b56273600758a',
+			//       publicKey: '0x0223e552b65526b686e92f0f8e8af7ef13fc66a7691eaa9864433e7c7b767f94a9',
+			//       privateKey: '0x794b0319ec5bececa8ca5d1ee2e07198aebb4cc6f3257069b739a86bb7edde8b',
+			//       index: 0,
+			//       path: "m/44'/60'/0'/0/0"
+			//     }
+			//
+			expect( walletObjBob.isHD ).toBe( true );
+			expect( walletObjBob.isHD ).toBe( true );
+			expect( walletObjBob.address ).toBe( `0x95a93fb72a160a2c8c9181eefa3b56273600758a` );
+			expect( walletObjBob.publicKey ).toBe( `0x0223e552b65526b686e92f0f8e8af7ef13fc66a7691eaa9864433e7c7b767f94a9` );
+			expect( walletObjBob.privateKey ).toBe( `0x794b0319ec5bececa8ca5d1ee2e07198aebb4cc6f3257069b739a86bb7edde8b` );
+
+			const chatWalletAlice = new WalletFactory().deriveChatWallet( walletObjAlice );
+			const chatWalletBob = new WalletFactory().deriveChatWallet( walletObjBob );
+
+			expect( chatWalletAlice ).not.toBeNull();
+			//console.log( `chatWalletAlice :`, chatWalletAlice );
+			//	    chatWalletAlice : {
+			//       isHD: true,
+			//       mnemonic: 'olympic cradle tragic crucial exit annual silly cloth scale fine gesture ancient',
+			//       password: '',
+			//       address: '0xc2678a12d5c8b0508d375de67fbeb78afde5bb28',
+			//       publicKey: '0x035eb821f1b718419956d9d1d628ecd1359cc320c513e6953d18cb414d36a5c5b4',
+			//       privateKey: '0x7c0c63567803e67d74b59217f7cab9cb44a8747847585f52f317e72f092e5361',
+			//       index: 23041601,
+			//       path: "m/44'/60'/0'/0/23041601"
+			//     }
+			expect( chatWalletAlice.isHD ).toBe( true );
+			expect( chatWalletAlice.isHD ).toBe( true );
+			expect( chatWalletAlice.address ).toBe( `0xc2678a12d5c8b0508d375de67fbeb78afde5bb28` );
+			expect( chatWalletAlice.publicKey ).toBe( `0x035eb821f1b718419956d9d1d628ecd1359cc320c513e6953d18cb414d36a5c5b4` );
+			expect( chatWalletAlice.privateKey ).toBe( `0x7c0c63567803e67d74b59217f7cab9cb44a8747847585f52f317e72f092e5361` );
+			expect( chatWalletAlice.index ).toBe( 23041601 );
+			expect( chatWalletAlice.path ).toBe( `m/44'/60'/0'/0/23041601` );
+
+			expect( chatWalletBob ).not.toBeNull();
+			//console.log( `chatWalletBob :`, chatWalletBob );
+			//	    chatWalletBob : {
+			//       isHD: true,
+			//       mnemonic: 'retire inflict prevent believe question pipe rebel state visit little bind accuse',
+			//       password: '',
+			//       address: '0x36c87231ca15c85d1c22c9825654fb220449890f',
+			//       publicKey: '0x02abb4068049ee215869217b322d5f4c505d345304574324a844cb71a33e8ae57b',
+			//       privateKey: '0xcceab048c0c711adfaa105f686b0155242db537efa7f7989c358c2cebc9f12da',
+			//       index: 23041601,
+			//       path: "m/44'/60'/0'/0/23041601"
+			//     }
+			expect( chatWalletBob.isHD ).toBe( true );
+			expect( chatWalletBob.isHD ).toBe( true );
+			expect( chatWalletBob.address ).toBe( `0x36c87231ca15c85d1c22c9825654fb220449890f` );
+			expect( chatWalletBob.publicKey ).toBe( `0x02abb4068049ee215869217b322d5f4c505d345304574324a844cb71a33e8ae57b` );
+			expect( chatWalletBob.privateKey ).toBe( `0xcceab048c0c711adfaa105f686b0155242db537efa7f7989c358c2cebc9f12da` );
+			expect( chatWalletBob.index ).toBe( 23041601 );
+			expect( chatWalletBob.path ).toBe( `m/44'/60'/0'/0/23041601` );
+
+
+			//
+			//	send an encrypted message to Bob from Alice
+			//
+			const fromPrivateKey = chatWalletAlice.privateKey;
+			const toPublicKey = chatWalletBob.publicKey;
+
+			//	ECDH
+			//	a key secure key exchange algorithm
+			const signingKey = new ethers.SigningKey( fromPrivateKey );
+			expect( signingKey ).not.toBeNull();
+
+			const sharedSecret = signingKey.computeSharedSecret( toPublicKey );
+			expect( sharedSecret ).toBe( `0x04ce426b7f7e8ba3f905880e17395e56b93670802a2328d0357239cc70c844675143ec18c32310820eb134d9bd6bb7557c84c6da20319c5c04a04a9703335f608f` )
+			//console.log( `fromPrivateKey: `, fromPrivateKey );
+			//	    fromPrivateKey:  0x7c0c63567803e67d74b59217f7cab9cb44a8747847585f52f317e72f092e5361
+			//
+			//console.log( `toPublicKey: `, toPublicKey );
+			//	    toPublicKey:  0x02abb4068049ee215869217b322d5f4c505d345304574324a844cb71a33e8ae57b
+			//
+			//console.log( `sharedSecret: `, sharedSecret );
+			//	    sharedSecret:  0x04ce426b7f7e8ba3f905880e17395e56b93670802a2328d0357239cc70c844675143ec18c32310820eb134d9bd6bb7557c84c6da20319c5c04a04a9703335f608f
+			//
+
+			const message = `hi, this is a greeting message from Alice.`;
+			const encrypted : string = new AesCrypto().encrypt( message, sharedSecret );
+			expect( encrypted ).toBe( `9dc9cca0fec4706922d00a9ab68fa12172529d46ba6dd9ff70f6422a71051cee795756dc30404dc79fac8303436dd436` );
+			//console.log( `encrypted :`, encrypted );
+			//	    encrypted : 9dc9cca0fec4706922d00a9ab68fa12172529d46ba6dd9ff70f6422a71051cee795756dc30404dc79fac8303436dd436
+			//
+
+			const decrypted : string = new AesCrypto().decrypt( encrypted, sharedSecret );
+			expect( decrypted ).toBe( message );
+		});
+
+		it( "should send an encrypted message to Bob from Alice by the derived keys created from private keys", async () =>
+		{
+			const privateKeyAlice = '0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a';
+			const privateKeyBob = '0x794b0319ec5bececa8ca5d1ee2e07198aebb4cc6f3257069b739a86bb7edde8b';
+
+			const walletObjAlice = new WalletFactory().createWalletFromPrivateKey( privateKeyAlice );
+			const walletObjBob = new WalletFactory().createWalletFromPrivateKey( privateKeyBob );
+			expect( walletObjAlice ).not.toBeNull();
+			//console.log( `walletObjAlice :`, walletObjAlice );
+			//	    walletObjAlice : {
+			//       isHD: false,
+			//       mnemonic: '',
+			//       password: '',
+			//       address: '0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357',
+			//       publicKey: '0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970a89b5aa622',
+			//       privateKey: '0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a',
+			//       index: 0,
+			//       path: null
+			//     }
+			expect( walletObjAlice.isHD ).toBe( false );
+			expect( walletObjAlice.address ).toBe( `0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357` );
+			expect( walletObjAlice.publicKey ).toBe( `0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970a89b5aa622` );
+			expect( walletObjAlice.privateKey ).toBe( `0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a` );
+
+			expect( walletObjBob ).not.toBeNull();
+			//console.log( `walletObjBob :`, walletObjBob );
+			//	    walletObjBob : {
+			//       isHD: false,
+			//       mnemonic: '',
+			//       password: '',
+			//       address: '0x95a93fb72a160a2c8c9181eefa3b56273600758a',
+			//       publicKey: '0x0223e552b65526b686e92f0f8e8af7ef13fc66a7691eaa9864433e7c7b767f94a9',
+			//       privateKey: '0x794b0319ec5bececa8ca5d1ee2e07198aebb4cc6f3257069b739a86bb7edde8b',
+			//       index: 0,
+			//       path: null
+			//     }
+			//
+			expect( walletObjBob.isHD ).toBe( false );
+			expect( walletObjBob.address ).toBe( `0x95a93fb72a160a2c8c9181eefa3b56273600758a` );
+			expect( walletObjBob.publicKey ).toBe( `0x0223e552b65526b686e92f0f8e8af7ef13fc66a7691eaa9864433e7c7b767f94a9` );
+			expect( walletObjBob.privateKey ).toBe( `0x794b0319ec5bececa8ca5d1ee2e07198aebb4cc6f3257069b739a86bb7edde8b` );
+
+			const chatWalletAlice = new WalletFactory().deriveChatWallet( walletObjAlice );
+			const chatWalletBob = new WalletFactory().deriveChatWallet( walletObjBob );
+
+			expect( chatWalletAlice ).not.toBeNull();
+			//console.log( `chatWalletAlice :`, chatWalletAlice );
+			//	    chatWalletAlice : {
+			//       isHD: false,
+			//       mnemonic: '',
+			//       password: '',
+			//       address: '0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357',
+			//       publicKey: '0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970a89b5aa622',
+			//       privateKey: '0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a',
+			//       index: 0,
+			//       path: null
+			//     }
+			expect( chatWalletAlice.isHD ).toBe( false );
+			expect( chatWalletAlice.address ).toBe( `0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357` );
+			expect( chatWalletAlice.publicKey ).toBe( `0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970a89b5aa622` );
+			expect( chatWalletAlice.privateKey ).toBe( `0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a` );
+			expect( chatWalletAlice.index ).toBe( 0 );
+			expect( chatWalletAlice.path ).toBe( null );
+
+			expect( chatWalletBob ).not.toBeNull();
+			//console.log( `chatWalletBob :`, chatWalletBob );
+			//	    chatWalletBob : {
+			//       isHD: false,
+			//       mnemonic: '',
+			//       password: '',
+			//       address: '0x95a93fb72a160a2c8c9181eefa3b56273600758a',
+			//       publicKey: '0x0223e552b65526b686e92f0f8e8af7ef13fc66a7691eaa9864433e7c7b767f94a9',
+			//       privateKey: '0x794b0319ec5bececa8ca5d1ee2e07198aebb4cc6f3257069b739a86bb7edde8b',
+			//       index: 0,
+			//       path: null
+			//     }
+			//
+			expect( chatWalletBob.isHD ).toBe( false );
+			expect( chatWalletBob.address ).toBe( `0x95a93fb72a160a2c8c9181eefa3b56273600758a` );
+			expect( chatWalletBob.publicKey ).toBe( `0x0223e552b65526b686e92f0f8e8af7ef13fc66a7691eaa9864433e7c7b767f94a9` );
+			expect( chatWalletBob.privateKey ).toBe( `0x794b0319ec5bececa8ca5d1ee2e07198aebb4cc6f3257069b739a86bb7edde8b` );
+			expect( chatWalletBob.index ).toBe( 0 );
+			expect( chatWalletBob.path ).toBe( null );
+
+
+			//
+			//	send an encrypted message to Bob from Alice
+			//
+			const fromPrivateKey = chatWalletAlice.privateKey;
+			const toPublicKey = chatWalletBob.publicKey;
+
+			//	ECDH
+			//	a key secure key exchange algorithm
+			const signingKey = new ethers.SigningKey( fromPrivateKey );
+			expect( signingKey ).not.toBeNull();
+
+			const sharedSecret = signingKey.computeSharedSecret( toPublicKey );
+			expect( sharedSecret ).toBe( `0x048a2a24d4d53dedc0080737207a104c09b65e82e0b456eef137543d0297fa8a984b1965eb0bb3398096ea569b1e79fe79c616b7e8f926ce072f03b7b64c05eca3` )
+			//console.log( `fromPrivateKey: `, fromPrivateKey );
+			//	    fromPrivateKey:  0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a
+			//
+			//console.log( `toPublicKey: `, toPublicKey );
+			//	    toPublicKey:  0x0223e552b65526b686e92f0f8e8af7ef13fc66a7691eaa9864433e7c7b767f94a9
+			//
+			//console.log( `sharedSecret: `, sharedSecret );
+			//	    sharedSecret:  0x048a2a24d4d53dedc0080737207a104c09b65e82e0b456eef137543d0297fa8a984b1965eb0bb3398096ea569b1e79fe79c616b7e8f926ce072f03b7b64c05eca3
+			//
+
+			const message = `hi, this is a greeting message from Alice.`;
+			const encrypted : string = new AesCrypto().encrypt( message, sharedSecret );
+			expect( encrypted ).toBe( `fb17b47f475794114a47bd44538b191d3d758ca746ea2cc021cb722d8a7b878ff8a229e23d0c31a1f6301d7a8961e126` );
+			//console.log( `encrypted :`, encrypted );
+			//	    encrypted : fb17b47f475794114a47bd44538b191d3d758ca746ea2cc021cb722d8a7b878ff8a229e23d0c31a1f6301d7a8961e126
+			//
+
+			const decrypted : string = new AesCrypto().decrypt( encrypted, sharedSecret );
+			expect( decrypted ).toBe( message );
+		});
+	});
 } );

@@ -11,6 +11,7 @@ import { TypeUtil } from "debeem-utils";
 import { WalletEntityBaseItem } from "../../entities/WalletEntity";
 import { EtherWallet } from "debeem-id";
 import { TWalletBaseItem } from "debeem-id";
+import _ from "lodash";
 
 
 /**
@@ -223,13 +224,50 @@ export class WalletFactory
 	}
 
 	/**
+	 * 	@deprecated
+	 *
 	 *	Generate a new address for the specified wallet
 	 *
 	 *	@param wallet	{any}	wallet object
 	 *	@returns {WalletEntityBaseItem}
 	 */
-	public createNewAddress( wallet : any ) : WalletEntityBaseItem
+	public createNewAddress( wallet : TWalletBaseItem ) : WalletEntityBaseItem
 	{
 		return EtherWallet.createNewAddress( wallet ) as WalletEntityBaseItem;
+	}
+
+	/**
+	 *	derive the next wallet
+	 *
+	 *	@param wallet	{TWalletBaseItem}	wallet object
+	 *	@returns {WalletEntityBaseItem}
+	 */
+	public deriveNextWallet( wallet : TWalletBaseItem ) : WalletEntityBaseItem
+	{
+		return EtherWallet.deriveNextWallet( wallet ) as WalletEntityBaseItem;
+	}
+
+
+	/**
+	 * 	derive a chat wallet from a wallet
+	 *
+	 * 	@param wallet	{TWalletBaseItem}	wallet object
+	 * 	@returns {WalletEntityBaseItem}
+	 */
+	public deriveChatWallet( wallet : TWalletBaseItem ) : TWalletBaseItem
+	{
+		if ( ! wallet )
+		{
+			throw new Error( 'WalletFactory.deriveChatWallet :: invalid wallet' );
+		}
+
+		if ( wallet.isHD &&
+			_.isString( wallet.mnemonic ) &&
+			! _.isEmpty( wallet.mnemonic ) )
+		{
+			return EtherWallet.deriveNewWalletByAddressIndex( wallet, 23041601 );
+		}
+
+		return wallet;
 	}
 }

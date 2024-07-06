@@ -1,7 +1,7 @@
 import { describe, expect } from '@jest/globals';
 import { BasicStorageService } from "../../../../src";
 import { TypeUtil } from "../../../../src/utils/TypeUtil";
-import { SysUserStorageService } from "../../../../src/services/storage/SysUserStorageService";
+import { SysUserStorageService } from "../../../../src";
 
 
 /**
@@ -41,7 +41,7 @@ describe( "BasicStorageService", () =>
 		{
 			await new SysUserStorageService().clear();
 
-			const basicStorageService = new BasicStorageService( `who basic password` );
+			const basicStorageService = new BasicStorageService();
 			await basicStorageService.clear();
 
 			const keyString : string = 'key1';
@@ -71,7 +71,7 @@ describe( "BasicStorageService", () =>
 		{
 			await new SysUserStorageService().clear();
 
-			const basicStorageService = new BasicStorageService( `my basic password` );
+			const basicStorageService = new BasicStorageService();
 			await basicStorageService.clear();
 
 			const keyString : string = 'key1';
@@ -97,7 +97,7 @@ describe( "BasicStorageService", () =>
 		{
 			await new SysUserStorageService().clear();
 
-			const basicStorageService = new BasicStorageService( `my basic password` );
+			const basicStorageService = new BasicStorageService();
 			await basicStorageService.clear();
 
 			const keyString : string = 'key1';
