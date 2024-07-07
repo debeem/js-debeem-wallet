@@ -304,7 +304,7 @@ describe( "WalletFactory", () =>
 			expect( walletObj.index ).toBe( 0 );
 			expect( walletObj.path ).toBe( ethers.defaultPath );
 
-			const chatWallet = new WalletFactory().deriveChatWallet( walletObj );
+			const chatWallet = new WalletFactory().deriveBusinessWallet( walletObj );
 			//console.log( `chatWallet :`, chatWallet );
 			//	    chatWallet : {
 			//       isHD: true,
@@ -384,7 +384,7 @@ describe( "WalletFactory", () =>
 			expect( walletObj.index ).toBe( 0 );
 			expect( walletObj.path ).toBe( null );
 
-			const chatWallet = new WalletFactory().deriveChatWallet( walletObj );
+			const chatWallet = new WalletFactory().deriveBusinessWallet( walletObj );
 			//console.log( `chatWallet :`, chatWallet );
 			//	    chatWallet : {
 			//       isHD: false,
@@ -449,7 +449,7 @@ describe( "WalletFactory", () =>
 			//
 		});
 
-		it( "should send an encrypted message to Bob from Alice by the derived keys created from mnemonics", async () =>
+		it( "should send an encrypted message to Bob from Alice by the derived keys been created from mnemonics", async () =>
 		{
 			const mnemonicAlice = 'olympic cradle tragic crucial exit annual silly cloth scale fine gesture ancient';
 			const mnemonicBob = 'retire inflict prevent believe question pipe rebel state visit little bind accuse';
@@ -492,8 +492,8 @@ describe( "WalletFactory", () =>
 			expect( walletObjBob.publicKey ).toBe( `0x0223e552b65526b686e92f0f8e8af7ef13fc66a7691eaa9864433e7c7b767f94a9` );
 			expect( walletObjBob.privateKey ).toBe( `0x794b0319ec5bececa8ca5d1ee2e07198aebb4cc6f3257069b739a86bb7edde8b` );
 
-			const chatWalletAlice = new WalletFactory().deriveChatWallet( walletObjAlice );
-			const chatWalletBob = new WalletFactory().deriveChatWallet( walletObjBob );
+			const chatWalletAlice = new WalletFactory().deriveBusinessWallet( walletObjAlice );
+			const chatWalletBob = new WalletFactory().deriveBusinessWallet( walletObjBob );
 
 			expect( chatWalletAlice ).not.toBeNull();
 			//console.log( `chatWalletAlice :`, chatWalletAlice );
@@ -570,7 +570,7 @@ describe( "WalletFactory", () =>
 			expect( decrypted ).toBe( message );
 		});
 
-		it( "should send an encrypted message to Bob from Alice by the derived keys created from private keys", async () =>
+		it( "should send an encrypted message to Bob from Alice by the derived keys been created from private keys", async () =>
 		{
 			const privateKeyAlice = '0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a';
 			const privateKeyBob = '0x794b0319ec5bececa8ca5d1ee2e07198aebb4cc6f3257069b739a86bb7edde8b';
@@ -612,8 +612,8 @@ describe( "WalletFactory", () =>
 			expect( walletObjBob.publicKey ).toBe( `0x0223e552b65526b686e92f0f8e8af7ef13fc66a7691eaa9864433e7c7b767f94a9` );
 			expect( walletObjBob.privateKey ).toBe( `0x794b0319ec5bececa8ca5d1ee2e07198aebb4cc6f3257069b739a86bb7edde8b` );
 
-			const chatWalletAlice = new WalletFactory().deriveChatWallet( walletObjAlice );
-			const chatWalletBob = new WalletFactory().deriveChatWallet( walletObjBob );
+			const chatWalletAlice = new WalletFactory().deriveBusinessWallet( walletObjAlice );
+			const chatWalletBob = new WalletFactory().deriveBusinessWallet( walletObjBob );
 
 			expect( chatWalletAlice ).not.toBeNull();
 			//console.log( `chatWalletAlice :`, chatWalletAlice );

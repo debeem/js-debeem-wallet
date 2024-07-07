@@ -1,10 +1,11 @@
 import { describe, expect } from '@jest/globals';
-import { WalletEntityBaseItem, WalletEntityItem, WalletStorageService } from "../../../../src";
+import { WalletEntityBaseItem, WalletEntityItem, WalletFactory, WalletStorageService } from "../../../../src";
 import { SysUserStorageService } from "../../../../src";
 import _ from "lodash";
 import { testWalletObjList } from "../../../../src/configs/TestConfig";
 import { initWalletAsync, putCurrentWalletAsync } from "../../../../src";
 import { VaWalletEntity } from "../../../../src/validators/VaWalletEntity";
+import { EtherWallet } from "debeem-id";
 
 
 /**
@@ -55,6 +56,12 @@ describe( "SysUserStorageService", () =>
 			//
 			//	RECOMMENDED WAY TO CREATE AN ACCOUNT
 			//
+			// const walletObject = EtherWallet.createWalletFromMnemonic();
+			// const walletObject = EtherWallet.createWalletFromMnemonic( `electric shoot legal trial crane rib garlic claw armed snow blind advance` );
+			// const walletObject = new WalletFactory().createWalletFromPrivateKey( `1111` );
+			// const walletObject = new WalletFactory().createWalletFromKeystore( `` );
+
+			//	...
 			const walletName = `MyWallet`;
 			const chainId = 1;
 			const pinCode = `123456`;
@@ -70,6 +77,13 @@ describe( "SysUserStorageService", () =>
 			//
 			//	All the following codes are verification codes
 			//
+			const walletStorageService = new WalletStorageService( pinCode );
+			const walletItemByCurrentWallet = walletStorageService.getByCurrentWallet();
+			expect( walletItemByCurrentWallet ).not.toBeNull();
+
+
+			const existByWalletBaseItem = await walletStorageService.existByWalletEntityBaseItem( walletObject );
+			expect( existByWalletBaseItem ).toBeTruthy();
 
 			const existByWalletEntityBaseItem = await new SysUserStorageService().existByWalletEntityBaseItem( walletObject );
 			expect( existByWalletEntityBaseItem ).toBeTruthy();
@@ -77,9 +91,6 @@ describe( "SysUserStorageService", () =>
 			const isValidPinCode = await new SysUserStorageService().isValidPinCode( pinCode );
 			expect( isValidPinCode ).toBeTruthy();
 
-			const walletStorageService = new WalletStorageService( pinCode );
-			const existByWalletBaseItem = await walletStorageService.existByWalletEntityBaseItem( walletObject );
-			expect( existByWalletBaseItem ).toBeTruthy();
 
 
 			const existByWalletItem = await walletStorageService.existByWalletEntityBaseItem( toBeCreatedWalletItem );

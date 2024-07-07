@@ -249,23 +249,29 @@ export class WalletFactory
 
 
 	/**
-	 * 	derive a chat wallet from a wallet
+	 * 	derive a business wallet from a wallet
 	 *
-	 * 	@param wallet	{TWalletBaseItem}	wallet object
+	 * 	@param wallet			{TWalletBaseItem}	wallet object
+	 * 	@param [addressIndex]		{number}
 	 * 	@returns {WalletEntityBaseItem}
 	 */
-	public deriveChatWallet( wallet : TWalletBaseItem ) : TWalletBaseItem
+	public deriveBusinessWallet( wallet : TWalletBaseItem, addressIndex ?: number ) : TWalletBaseItem
 	{
 		if ( ! wallet )
 		{
-			throw new Error( 'WalletFactory.deriveChatWallet :: invalid wallet' );
+			throw new Error( 'WalletFactory.deriveBusinessWallet :: invalid wallet' );
+		}
+
+		if ( ! addressIndex || ! EtherWallet.isValidNonHardenedAddressIndex( addressIndex ) )
+		{
+			addressIndex = 23041601;
 		}
 
 		if ( wallet.isHD &&
 			_.isString( wallet.mnemonic ) &&
 			! _.isEmpty( wallet.mnemonic ) )
 		{
-			return EtherWallet.deriveNewWalletByAddressIndex( wallet, 23041601 );
+			return EtherWallet.deriveNewWalletByAddressIndex( wallet, addressIndex );
 		}
 
 		return wallet;
