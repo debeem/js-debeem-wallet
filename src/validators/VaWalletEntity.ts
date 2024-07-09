@@ -29,10 +29,11 @@ export class VaWalletEntity
 
 		/**
 		 * 	mnemonic phrase, a word list
+		 * 	English, 日本語, Español, 中文(简体), 中文(繁體), Français, Italiano, 한국어, Čeština, Português
 		 */
-		if ( _.isString( walletEntityBaseItem.mnemonic ) )
+		if ( undefined !== walletEntityBaseItem.mnemonic )
 		{
-			if ( _.isEmpty( walletEntityBaseItem.mnemonic ) )
+			if ( ! _.isString( walletEntityBaseItem.mnemonic ) )
 			{
 				return `invalid walletEntityBaseItem.mnemonic`;
 			}

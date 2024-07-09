@@ -5,6 +5,7 @@ import { testUserList, testWalletObjList } from "../../../../src/configs/TestCon
 import _ from "lodash";
 import { getCurrentWalletAsync, initWalletAsync, putCurrentWalletAsync } from "../../../../src";
 import { TWalletBaseItem } from "debeem-id";
+import { VaWalletEntity } from "../../../../src/validators/VaWalletEntity";
 
 
 /**
@@ -17,6 +18,78 @@ describe( "WalletStorageService", () =>
 	});
 	afterAll( async () =>
 	{
+	});
+
+	describe( "WalletEntity Items", () =>
+	{
+		it ( "should return true for a complete object", async () =>
+		{
+			const valid : string | null = VaWalletEntity.validateWalletEntityBaseItem( testWalletObjList.alice );
+			expect( valid ).toBeNull();
+		});
+
+		it ( "should return true, by checking .mnemonic", async () =>
+		{
+			//
+			//	{
+			// 		isHD : true,
+			// 		mnemonic : walletObj?.mnemonic?.phrase,
+			// 		password : '',
+			// 		address : walletObj?.address,
+			// 		publicKey : walletObj?.publicKey,
+			// 		privateKey : walletObj?.privateKey,
+			// 		index : walletObj?.index,
+			// 		path : walletObj?.path
+			// 	}
+			//
+			expect( VaWalletEntity.validateWalletEntityBaseItem( {
+				...testWalletObjList.alice,
+				mnemonic : undefined
+			} ) ).toBeNull();
+			expect( VaWalletEntity.validateWalletEntityBaseItem( {
+				...testWalletObjList.alice,
+				mnemonic : ``
+			} ) ).toBeNull();
+
+			const error1 : string | null = VaWalletEntity.validateWalletEntityBaseItem( {
+				...testWalletObjList.alice,
+				mnemonic : null
+			} );
+			expect( error1 ).toBe( `invalid walletEntityBaseItem.mnemonic` );
+		});
+
+		it ( "should return true, by checking .password", async () =>
+		{
+			//
+			//	{
+			// 		isHD : true,
+			// 		mnemonic : walletObj?.mnemonic?.phrase,
+			// 		password : '',
+			// 		address : walletObj?.address,
+			// 		publicKey : walletObj?.publicKey,
+			// 		privateKey : walletObj?.privateKey,
+			// 		index : walletObj?.index,
+			// 		path : walletObj?.path
+			// 	}
+			//
+			const error1 : string | null = VaWalletEntity.validateWalletEntityBaseItem( {
+				...testWalletObjList.alice,
+				password : undefined
+			} );
+			expect( error1 ).toBe( `invalid walletEntityBaseItem.password` );
+
+			const error2 : string | null = VaWalletEntity.validateWalletEntityBaseItem( {
+				...testWalletObjList.alice,
+				password : null
+			} );
+			expect( error2 ).toBe( `invalid walletEntityBaseItem.password` );
+
+			const error3 : string | null = VaWalletEntity.validateWalletEntityBaseItem( {
+				...testWalletObjList.alice,
+				password : ``
+			} );
+			expect( error3 ).toBe( null );
+		});
 	});
 
 	describe( "Test getting and saving one object", () =>
