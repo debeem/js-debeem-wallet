@@ -747,8 +747,7 @@ describe( "WalletStorageService", () =>
 		it( "should list all wallet addresses and names", async () =>
 		{
 			//
-			//	step 1
-			//	create an account and save it into the local database
+			//	create two accounts, Alice and Bob
 			//
 			const pinCode = `123456`;
 			const chainId = 1;
@@ -823,8 +822,7 @@ describe( "WalletStorageService", () =>
 		it( "should change wallet name", async () =>
 		{
 			//
-			//	step 1
-			//	create an account and save it into the local database
+			//	create two accounts, Alice and Bob
 			//
 			const pinCode = `123456`;
 			const chainId = 1;
