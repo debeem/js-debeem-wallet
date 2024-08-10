@@ -645,7 +645,7 @@ describe( "WalletStorageService", () =>
 		it( "should return all encrypted wallets", async () =>
 		{
 			//
-			//	create two accounts, alice and bob
+			//	create two accounts, Alice and Bob
 			//
 			const pinCode = `123456`;
 			const chainId = 1;
