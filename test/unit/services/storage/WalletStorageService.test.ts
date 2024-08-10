@@ -640,7 +640,7 @@ describe( "WalletStorageService", () =>
 		});
 	});
 
-	describe( "Wallet Name", () =>
+	describe( "List wallet names", () =>
 	{
 		it( "should return all encrypted wallets", async () =>
 		{
@@ -871,6 +871,9 @@ describe( "WalletStorageService", () =>
 				} );
 			}
 
+			//
+			//	query the modified wallet data
+			//
 			const encryptedAliceWalletObj2 : WalletEntityItem | null = await walletStorageAlice.getByWallet( walletItemAlice.address );
 			//console.log( `encryptedAliceWalletObj2 :`, encryptedAliceWalletObj2 );
 			//	encryptedAliceWalletObj2 : {
@@ -889,6 +892,30 @@ describe( "WalletStorageService", () =>
 			expect( encryptedAliceWalletObj2 ).not.toBeNull();
 			expect( EtherWallet.isValidWalletFactoryData( encryptedAliceWalletObj2 ) ).toBeTruthy();
 			expect( encryptedAliceWalletObj2 && encryptedAliceWalletObj2.name === newNameAlice ).toBeTruthy();
+
+			//
+			//	query the modified sysUser data
+			//
+			const sysUserStorageService = new SysUserStorageService();
+			const sysUserKey : string | null = sysUserStorageService.getKeyByAddress( walletItemAlice.address );
+			expect( sysUserKey ).not.toBeNull();
+			expect( _.isString( sysUserKey ) && ! _.isEmpty( sysUserKey ) ).toBeTruthy();
+			if ( sysUserKey )
+			{
+				const sysUserItem : SysUserItem | null = await sysUserStorageService.get( sysUserKey );
+				//console.log( `sysUserItem :`, sysUserItem );
+				//	sysUserItem : {
+				//       timestamp: 1723301059567,
+				//       name: "New Alice's Wallet",
+				//       wallet: '0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357',
+				//       password: 'f9758a2200a6d69b3137ba4510c425538862a81e98b271de1081f8dd9223b7a8c6df182fb9d641432f2a1499f6cb6c32f65150bd571abb31efada5fa317406b45d01b666f41a9b99db8a91f28a34a7e3',
+				//       hash: '0xd987f117a11628f4e6a68494faa85daeff5590a88f003eca27e0d623f907426e',
+				//       sig: '0x60af2205ce7dc6951c39202ee3246e97221c0f71c4eee6bd00f14ebac176be0f62e95d4382419657076cb6c841373526f8abd257c57eccc63e0f2435e1f3af471b'
+				//     }
+				expect( sysUserItem ).not.toBeNull();
+				expect( sysUserStorageService.isValidItem( sysUserItem ) ).toBeTruthy();
+				expect( sysUserItem && sysUserItem.name === newNameAlice ).toBeTruthy();
+			}
 		});
 	});
 } );
