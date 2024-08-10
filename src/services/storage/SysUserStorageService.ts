@@ -2,7 +2,7 @@
  * 	@category Storage Services
  * 	@module SysUserStorageService
  */
-import { TestUtil } from "debeem-utils";
+import { TestUtil, TypeUtil } from "debeem-utils";
 
 if ( TestUtil.isTestEnv() )
 {
@@ -20,10 +20,12 @@ import { VerifyUtil } from "../../utils/VerifyUtil";
 import { isAddress } from "ethers";
 import { SysConfigStorageService } from "./SysConfigStorageService";
 import { SysConfigKeys } from "../../entities/SysConfigEntity";
-import { WalletEntityBaseItem } from "../../entities/WalletEntity";
+import { WalletEntityBaseItem, WalletEntityItem } from "../../entities/WalletEntity";
 import { VaWalletEntity } from "../../validators/VaWalletEntity";
-import { Web3Digester, Web3Signer, Web3Validator } from "debeem-id";
+import { EtherWallet, Web3Digester, Web3Signer, Web3Validator } from "debeem-id";
 import { IStorageService } from "./IStorageService";
+import { TWalletBaseItem } from "debeem-id/src/models/TWallet";
+import { EncryptedStorageOptions } from "../../models/StorageModels";
 
 
 /**
@@ -164,7 +166,7 @@ export class SysUserStorageService implements IStorageService
 	{
 		if ( this.isValidItem( item ) )
 		{
-			return item.wallet.trim().toLowerCase();
+			return this.getKeyByAddress( item.wallet );
 		}
 
 		return null;
@@ -181,7 +183,24 @@ export class SysUserStorageService implements IStorageService
 	{
 		if ( null === VaWalletEntity.validateWalletEntityBaseItem( walletBaseItem ) )
 		{
-			return walletBaseItem.address.trim().toLowerCase();
+			return this.getKeyByAddress( walletBaseItem.address );
+		}
+
+		return null;
+	}
+
+	/**
+	 * 	get storage key by wallet address
+	 *
+	 * 	@group Basic Methods
+	 *	@param address	{string} wallet address
+	 *	@returns {string | null}
+	 */
+	public getKeyByAddress( address : string ) : string | null
+	{
+		if ( _.isString( address ) && ! _.isEmpty( address ) )
+		{
+			return address.trim().toLowerCase();
 		}
 
 		return null;
@@ -225,18 +244,21 @@ export class SysUserStorageService implements IStorageService
 	/**
 	 * 	create a new user
 	 *
-	 *	@param walletBaseItem		{WalletEntityBaseItem}
+	 *	@param walletItem		{WalletEntityItem | WalletEntityBaseItem}
 	 *	@param pinCode			{string}
 	 *	@param [overwriteExisting]	{boolean} overwrite existing user
 	 *	@returns {Promise<boolean>}
 	 */
-	public async createUser( walletBaseItem : WalletEntityBaseItem, pinCode : string, overwriteExisting ?: boolean ) : Promise<boolean>
+	public async createUser(
+		walletItem : WalletEntityItem | WalletEntityBaseItem,
+		pinCode : string,
+		overwriteExisting ?: boolean ) : Promise<boolean>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
 			try
 			{
-				const errorVaWalletBaseItem : string | null = VaWalletEntity.validateWalletEntityBaseItem( walletBaseItem );
+				const errorVaWalletBaseItem : string | null = VaWalletEntity.validateWalletEntityBaseItem( walletItem );
 				if ( null !== errorVaWalletBaseItem )
 				{
 					return reject( `${ this.constructor.name }.createUser :: invalid walletBaseItem(${ errorVaWalletBaseItem })` );
@@ -248,7 +270,7 @@ export class SysUserStorageService implements IStorageService
 
 				if ( true === overwriteExisting )
 				{
-					const key : string | null = this.getKeyByWalletEntityBaseItem( walletBaseItem );
+					const key : string | null = this.getKeyByWalletEntityBaseItem( walletItem );
 					if ( ! _.isString( key ) || _.isEmpty( key ) )
 					{
 						return reject( `${ this.constructor.name }.createUser :: failed to get key` );
@@ -257,18 +279,19 @@ export class SysUserStorageService implements IStorageService
 					const sysUserItem : SysUserItem | null = await this.get( key );
 					if ( sysUserItem )
 					{
-						if ( ! await Web3Validator.validateObject( walletBaseItem.address, sysUserItem, sysUserItem.sig ) )
+						const exceptedKeys : Array<string> = [ `name` ];
+						if ( ! await Web3Validator.validateObject( walletItem.address, sysUserItem, sysUserItem.sig, exceptedKeys ) )
 						{
 							return reject( `${ this.constructor.name }.createUser :: walletBaseItem does not match the existing item by sig1` );
 						}
 
 						//	check by sig
 						const toBeCheckSig = {
-							...walletBaseItem,
-							wallet : walletBaseItem.address,
+							...walletItem,
+							wallet : walletItem.address,
 							timestamp : new Date().getTime()
 						};
-						const newItemSig = await Web3Signer.signObject( walletBaseItem.privateKey, toBeCheckSig );
+						const newItemSig = await Web3Signer.signObject( walletItem.privateKey, toBeCheckSig );
 						if ( ! await Web3Validator.validateObject( sysUserItem.wallet, toBeCheckSig, newItemSig ) )
 						{
 							return reject( `${ this.constructor.name }.createUser :: walletBaseItem does not match the existing item by sig2` );
@@ -277,14 +300,14 @@ export class SysUserStorageService implements IStorageService
 				}
 				else
 				{
-					if ( await this.existByWalletEntityBaseItem( walletBaseItem ) )
+					if ( await this.existByWalletEntityBaseItem( walletItem ) )
 					{
 						return reject( `${ this.constructor.name }.createUser :: user already exists` );
 					}
 				}
 
 				//	...
-				await this.savePassword( walletBaseItem, pinCode );
+				const plainPassword : string = await this.savePassword( walletItem, pinCode );
 				resolve( true );
 			}
 			catch ( err )
@@ -313,7 +336,7 @@ export class SysUserStorageService implements IStorageService
 				}
 
 				//	get current wallet
-				const currentWallet : string | undefined = await this.getCurrentWallet();
+				const currentWallet : string | undefined = await this.getCurrentWalletAddress();
 				if ( ! _.isString( currentWallet ) || _.isEmpty( currentWallet ) )
 				{
 					return reject( `${ this.constructor.name }.isValidPinCode :: invalid currentWallet` );
@@ -350,13 +373,13 @@ export class SysUserStorageService implements IStorageService
 	 * 	change pinCode
 	 *
 	 * 	@group Extended Methods
-	 *	@param walletBaseItem	{WalletEntityBaseItem} the wallet object
+	 *	@param walletBaseItem	{WalletEntityItem | WalletEntityBaseItem} the wallet object
 	 *	@param oldPinCode	{string} the old pinCode
 	 *	@param newPinCode	{string} the new pinCode
 	 *	@returns {Promise<boolean>}
 	 */
 	public async changePinCode(
-		walletBaseItem : WalletEntityBaseItem,
+		walletBaseItem : WalletEntityItem | WalletEntityBaseItem,
 		oldPinCode : string,
 		newPinCode : string ) : Promise<boolean>
 	{
@@ -383,7 +406,7 @@ export class SysUserStorageService implements IStorageService
 				}
 
 				//	get current wallet
-				const currentWallet : string | undefined = await this.getCurrentWallet();
+				const currentWallet : string | undefined = await this.getCurrentWalletAddress();
 				if ( ! _.isString( currentWallet ) || _.isEmpty( currentWallet ) )
 				{
 					return reject( `${ this.constructor.name }.changePinCode :: invalid currentWallet` );
@@ -417,7 +440,8 @@ export class SysUserStorageService implements IStorageService
 				}
 
 				//	verify the sig
-				if ( ! await Web3Validator.validateObject( sysUserItem.wallet, sysUserItem, sysUserItem.sig ) )
+				const exceptedKeys = [ `name` ];
+				if ( ! await Web3Validator.validateObject( sysUserItem.wallet, sysUserItem, sysUserItem.sig, exceptedKeys ) )
 				{
 					return reject( `${ this.constructor.name }.changePinCode :: failed to validate the password signature` );
 				}
@@ -437,10 +461,10 @@ export class SysUserStorageService implements IStorageService
 	 * 	generate a password
 	 *
 	 * 	@group Extended Methods
-	 * 	@param walletBaseItem	{WalletEntityBaseItem} the wallet object
+	 * 	@param walletBaseItem	{WalletEntityItem | WalletEntityBaseItem} the wallet object
 	 * 	@returns {string}
 	 */
-	public async generatePassword( walletBaseItem : WalletEntityBaseItem ) : Promise< string >
+	public async generatePassword( walletBaseItem : WalletEntityItem | WalletEntityBaseItem ) : Promise< string >
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -452,14 +476,49 @@ export class SysUserStorageService implements IStorageService
 					return reject( `${ this.constructor.name }.generatePassword :: invalid walletBaseItem(${ errorVaWalletBaseItem })` );
 				}
 
+				//	...
+				const password : string = await this.generatePasswordByPrivateKey( walletBaseItem.privateKey );
+				resolve( password.trim().toLowerCase() );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+	/**
+	 * 	generate a password by private key
+	 *
+	 * 	@group Extended Methods
+	 * 	@param privateKey	{string} private key
+	 * 	@returns {string}
+	 */
+	public async generatePasswordByPrivateKey( privateKey : string ) : Promise< string >
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( ! EtherWallet.isValidPrivateKey( privateKey ) )
+				{
+					return reject( `${ this.constructor.name }.generatePasswordByPrivateKey :: invalid privateKey` );
+				}
+
+				const walletObj : TWalletBaseItem = EtherWallet.createWalletFromPrivateKey( privateKey );
+				if ( ! EtherWallet.isValidWalletFactoryData( walletObj ) )
+				{
+					return reject( `${ this.constructor.name }.generatePasswordByPrivateKey :: failed to create wallet from privateKey` );
+				}
+
 				//
 				//	hash the private key three times
 				//
-				const walletAddress : string = walletBaseItem.address.trim().toLowerCase();
+				const walletAddress : string = walletObj.address.trim().toLowerCase();
 				let password : string = await Web3Digester.hashObject( {
 					timestamp : 1,
 					wallet : walletAddress,
-					privateKey : walletBaseItem.privateKey,
+					privateKey : walletObj.privateKey,
 				} );
 				password = await Web3Digester.hashObject( {
 					timestamp : 2,
@@ -487,9 +546,10 @@ export class SysUserStorageService implements IStorageService
 	 *
 	 * 	@group Extended Methods
 	 *	@param pinCode		{string} pinCode for decryption
+	 *	@param [options]	{EncryptedStorageOptions} encrypted storage options
 	 *	@returns { Promise< string | null > }
 	 */
-	public async extractPassword( pinCode : string ) : Promise< string | null >
+	public async extractPassword( pinCode : string, options ?: EncryptedStorageOptions ) : Promise< string | null >
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -500,18 +560,27 @@ export class SysUserStorageService implements IStorageService
 					return reject( `${ this.constructor.name }.extractPassword :: invalid pinCode` );
 				}
 
-				//	get current wallet
-				const currentWallet : string | undefined = await this.getCurrentWallet();
-				if ( ! _.isString( currentWallet ) || _.isEmpty( currentWallet ) )
+				let walletAddress : string | undefined = undefined;
+				if ( options?.address && EtherWallet.isValidAddress( options?.address ) )
 				{
-					return reject( `${ this.constructor.name }.extractPassword :: invalid currentWallet` );
+					//	user specified a wallet address
+					walletAddress = options.address;
+				}
+				else
+				{
+					//	get current wallet
+					walletAddress = await this.getCurrentWalletAddress();
+				}
+				if ( ! _.isString( walletAddress ) || _.isEmpty( walletAddress ) )
+				{
+					return reject( `${ this.constructor.name }.extractPassword :: invalid wallet address` );
 				}
 
 				//	...
 				await this.initDb();
 				await TestUtil.sleep( 1 );
 
-				const sysUser : SysUserItem | null = await this.get( currentWallet );
+				const sysUser : SysUserItem | null = await this.get( walletAddress );
 				if ( sysUser )
 				{
 					const plainPassword : string = this.storageCrypto.decrypt( sysUser.password, pinCode );
@@ -544,7 +613,7 @@ export class SysUserStorageService implements IStorageService
 	 *
 	 * 	@returns {Promise< string | undefined >}
 	 */
-	public async getCurrentWallet() : Promise< string | undefined >
+	public async getCurrentWalletAddress() : Promise< string | undefined >
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -587,17 +656,17 @@ export class SysUserStorageService implements IStorageService
 	 *	Saves the password encrypted with pinCode for the specified entity
 	 *
 	 * 	@group Extended Methods
-	 *	@param walletBaseItem	{WalletEntityBaseItem}
+	 *	@param walletItem	{WalletEntityItem | WalletEntityBaseItem}
 	 *	@param pinCode		{string} pinCode
 	 *	@returns { Promise<string> }
 	 */
-	protected async savePassword( walletBaseItem : WalletEntityBaseItem, pinCode : string ) : Promise<string>
+	protected async savePassword( walletItem : WalletEntityItem | WalletEntityBaseItem, pinCode : string ) : Promise<string>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
 			try
 			{
-				const errorVaWalletBaseItem : string | null = VaWalletEntity.validateWalletEntityBaseItem( walletBaseItem );
+				const errorVaWalletBaseItem : string | null = VaWalletEntity.validateWalletEntityBaseItem( walletItem );
 				if ( null !== errorVaWalletBaseItem )
 				{
 					return reject( `${ this.constructor.name }.savePassword :: invalid walletBaseItem(${ errorVaWalletBaseItem })` );
@@ -608,28 +677,37 @@ export class SysUserStorageService implements IStorageService
 				}
 
 				//	...
-				const key : string | null = this.getKeyByWalletEntityBaseItem( walletBaseItem );
+				const key : string | null = this.getKeyByWalletEntityBaseItem( walletItem );
 				if ( ! _.isString( key ) )
 				{
 					return reject( `${ this.constructor.name }.savePassword :: failed to get storage key` );
 				}
 
 				//	...
-				const plainPassword : string = await this.generatePassword( walletBaseItem );
+				const plainPassword : string = await this.generatePassword( walletItem );
 				if ( ! _.isString( plainPassword ) || _.isEmpty( plainPassword ) )
 				{
 					return reject( `${ this.constructor.name }.savePassword :: failed to generate password` );
 				}
 
+				let walletName : string | undefined = undefined;
+				if ( _.has( walletItem, 'name' ) &&
+					_.isString( walletItem[ `name` ] ) )
+				{
+					walletName = walletItem[ `name` ].trim();
+				}
+
+				const exceptedKeys : Array<string> = [ `name` ];
 				const encryptedPassword : string = this.storageCrypto.encrypt( plainPassword, pinCode );
 				let item : SysUserItem = {
 					timestamp : new Date().getTime(),
-					wallet : walletBaseItem.address.trim().toLowerCase(),
+					name : walletName,	//	`name` field will not be used by the signer
+					wallet : walletItem.address.trim().toLowerCase(),
 					password: encryptedPassword,
 					hash : ``,
 					sig : ``,
 				};
-				item.sig = await Web3Signer.signObject( walletBaseItem.privateKey, item );
+				item.sig = await Web3Signer.signObject( walletItem.privateKey, item, exceptedKeys );
 				item.hash = await Web3Digester.hashObject( item );
 
 				//	...
@@ -639,6 +717,51 @@ export class SysUserStorageService implements IStorageService
 
 				//	...
 				resolve( plainPassword );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+	/**
+	 * 	update name by address
+	 *
+	 *	@param address	{string}
+	 *	@param name	{string}
+	 *	@returns {Promise<boolean>}
+	 */
+	public async updateName( address : string, name : string ) : Promise<boolean>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				const key : string | null = this.getKeyByAddress( address );
+				if ( ! _.isString( key ) || _.isEmpty( key ) )
+				{
+					return reject( `${ this.constructor.name }.updateName :: invalid address` );
+				}
+
+				const userItem : SysUserItem | null = await this.get( key );
+				if ( ! userItem )
+				{
+					return reject( `${ this.constructor.name }.updateName :: not found by address` );
+				}
+
+				//	`name` field will not be used by the signer
+				const newUserItem : SysUserItem = {
+					...userItem,
+					name : name
+				};
+
+				await this.initDb();
+				await TestUtil.sleep( 1 );
+				await this.put( key, newUserItem );
+
+				//	...
+				resolve( true );
 			}
 			catch ( err )
 			{
@@ -726,29 +849,165 @@ export class SysUserStorageService implements IStorageService
 	}
 
 
-
-	public getFirst() : Promise<any>
+	/**
+	 * 	get the first item
+	 *
+	 * 	@group Basic Methods
+	 * 	@returns {Promise<SysUserItem | null>}
+	 */
+	public async getFirst() : Promise<SysUserItem | null>
 	{
-		throw new Error( "Method not implemented." );
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				const firstItems : Array<SysUserItem | null> | null = await this.getAll( undefined, 1 );
+				if ( Array.isArray( firstItems ) && 1 === firstItems.length )
+				{
+					return resolve( firstItems[ 0 ] );
+				}
+
+				//	...
+				resolve( null );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		} );
 	}
 
-	public getAllKeys( query? : string | undefined, maxCount? : number | undefined ) : Promise<string[]>
+	/**
+	 * 	get all of keys
+	 *
+	 * 	@group Basic Methods
+	 *	@param query	{string} query string
+	 *	@param maxCount	{number} maximum limit number
+	 *	@returns {Promise<Array<string>>}
+	 */
+	public async getAllKeys( query? : string, maxCount? : number ) : Promise<Array<string>>
 	{
-		throw new Error( "Method not implemented." );
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				await this.initDb();
+				await TestUtil.sleep( 1 );
+				if ( this.sysDb )
+				{
+					const value : Array<string> | null = await this.sysDb.getAllKeys( this.storeName, query, maxCount );
+					return resolve( value ? value : [] );
+				}
+
+				//	...
+				resolve( [] );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		} );
 	}
 
-	public getAll( query? : string | undefined, maxCount? : number | undefined ) : Promise<any[]>
+
+	/**
+	 * 	query all items
+	 *
+	 * 	@group Basic Methods
+	 *	@param query	{string} query string
+	 *	@param maxCount	{number} maximum limit number
+	 *	@returns {Promise<Array< SysUserItem | null >>}
+	 */
+	public getAll( query? : string | undefined, maxCount? : number | undefined ) : Promise<Array<SysUserItem | null>>
 	{
-		throw new Error( "Method not implemented." );
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				await this.initDb();
+				await TestUtil.sleep( 1 );
+				if ( this.sysDb )
+				{
+					const objectList : Array<SysUserItem> | null = await this.sysDb.getAll( this.storeName, query, maxCount );
+					if ( Array.isArray( objectList ) )
+					{
+						return resolve( objectList );
+					}
+				}
+
+				//	...
+				resolve( [] );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		} );
 	}
 
-	public delete( key : string ) : Promise<boolean>
+	/**
+	 *	delete item by key
+	 *
+	 * 	@group Basic Methods
+	 *	@param key {string} wallet address is the key
+	 *	@returns {Promise<boolean>}
+	 */
+	public async delete( key : string ) : Promise<boolean>
 	{
-		throw new Error( "Method not implemented." );
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( ! TypeUtil.isNotEmptyString( key ) )
+				{
+					return reject( `${ this.constructor.name }.delete :: invalid key for .delete` );
+				}
+
+				await this.initDb();
+				await TestUtil.sleep( 1 );
+				if ( this.sysDb )
+				{
+					await this.sysDb.delete( this.storeName, key );
+					return resolve( true );
+				}
+
+				resolve( false );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		} );
 	}
 
-	public count( query? : string | undefined ) : Promise<number>
+	/**
+	 * 	Retrieves the number of records matching the given query in a store.
+	 *
+	 * 	@group Basic Methods
+	 *	@param query	{string} query string
+	 *	@returns {Promise<number>}
+	 */
+	public async count( query? : string ) : Promise<number>
 	{
-		throw new Error( "Method not implemented." );
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				await this.initDb();
+				await TestUtil.sleep( 1 );
+				if ( this.sysDb )
+				{
+					const count : number = await this.sysDb.count( this.storeName, query );
+					resolve( count );
+				}
+
+				//	...
+				resolve( 0 );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		} );
 	}
 }

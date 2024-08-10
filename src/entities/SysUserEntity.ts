@@ -11,6 +11,11 @@ import { DBSchema } from "idb";
 export interface SysUserItem
 {
 	/**
+	 * 	name
+	 */
+	name ?: string;
+
+	/**
 	 * 	timestamp
 	 */
 	timestamp : number,

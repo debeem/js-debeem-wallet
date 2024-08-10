@@ -10,6 +10,8 @@ import { AesCrypto } from "debeem-cipher";
 import { IStorageService } from "./IStorageService";
 import { SysUserStorageService } from "./SysUserStorageService";
 import _ from "lodash";
+import { EtherWallet } from "debeem-id";
+import { EncryptedStorageOptions } from "../../models/StorageModels";
 
 
 /**
@@ -20,7 +22,7 @@ export abstract class AbstractEncryptedStorageService<T> implements IStorageServ
 	/**
 	 *	@ignore
 	 */
-	protected db !: IDBPDatabase<StorageEntity>;
+	protected db ! : IDBPDatabase<StorageEntity>;
 
 	/**
 	 *	@ignore
@@ -47,6 +49,12 @@ export abstract class AbstractEncryptedStorageService<T> implements IStorageServ
 	protected password : string = '';
 
 	/**
+	 * 	@ignore
+	 * 	@protected
+	 */
+	protected options : EncryptedStorageOptions = {};
+
+	/**
 	 *	@ignore
 	 *	@protected
 	 */
@@ -59,10 +67,21 @@ export abstract class AbstractEncryptedStorageService<T> implements IStorageServ
 	protected storageCrypto : AesCrypto = new AesCrypto( `metabeem_password_` );
 
 
-	protected constructor( databaseName : string, pinCode : string = '' )
+	/**
+	 *	@param databaseName	{string}
+	 *	@param [pinCode]	{string}
+	 *	@param [options]	{EncryptedStorageOptions}
+	 *	@protected
+	 */
+	protected constructor(
+		databaseName : string,
+		pinCode : string = '',
+		options ?: EncryptedStorageOptions
+	)
 	{
 		this.databaseName = databaseName;
 		this.pinCode = pinCode;
+		this.options = options ? _.cloneDeep( options ) : {};
 	}
 
 	/**
@@ -71,7 +90,7 @@ export abstract class AbstractEncryptedStorageService<T> implements IStorageServ
 	 * 	@ignore
 	 * 	@returns {Promise< IDBPDatabase<StorageEntity> | null >}
 	 */
-	protected async init() : Promise< IDBPDatabase<StorageEntity> | null >
+	protected async init() : Promise<IDBPDatabase<StorageEntity> | null>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -86,10 +105,25 @@ export abstract class AbstractEncryptedStorageService<T> implements IStorageServ
 					return resolve( null );
 				}
 
-				const password : string | null = await this.sysUserStorageService.extractPassword( this.pinCode );
-				if ( ! password )
+				let password : string | null = null;
+				if ( this.options.privateKey &&
+					EtherWallet.isValidPrivateKey( this.options.privateKey ) )
 				{
-					return reject( `${ this.constructor.name } :: invalid pinCode` );
+					//
+					//	try to generate password by the private key if user provides a private key
+					//
+					password = await this.sysUserStorageService.generatePasswordByPrivateKey( this.options.privateKey );
+				}
+				if ( ! _.isString( password ) || _.isEmpty( password ) )
+				{
+					//
+					//	try to extract password from database by the PIN Code
+					//
+					password = await this.sysUserStorageService.extractPassword( this.pinCode, this.options );
+				}
+				if ( ! _.isString( password ) || _.isEmpty( password ) )
+				{
+					return reject( `${ this.constructor.name } :: invalid pinCode or privateKey` );
 				}
 
 				//	...
@@ -106,7 +140,7 @@ export abstract class AbstractEncryptedStorageService<T> implements IStorageServ
 						{
 							db.createObjectStore( storeName );
 						},
-					});
+					} );
 				if ( ! this.db )
 				{
 					return reject( `${ this.constructor.name }.init :: null db` );
@@ -119,7 +153,7 @@ export abstract class AbstractEncryptedStorageService<T> implements IStorageServ
 			{
 				reject( err );
 			}
-		});
+		} );
 	}
 
 	/**
@@ -160,7 +194,7 @@ export abstract class AbstractEncryptedStorageService<T> implements IStorageServ
 			{
 				reject( err );
 			}
-		});
+		} );
 	}
 
 	/**
@@ -194,7 +228,7 @@ export abstract class AbstractEncryptedStorageService<T> implements IStorageServ
 			{
 				reject( err );
 			}
-		});
+		} );
 	}
 
 	/**
@@ -230,6 +264,7 @@ export abstract class AbstractEncryptedStorageService<T> implements IStorageServ
 						}
 						catch ( subError )
 						{
+							//console.error( `${ this.constructor.name }.get subError :`, subError )
 							return resolve( null );
 						}
 					}
@@ -243,7 +278,7 @@ export abstract class AbstractEncryptedStorageService<T> implements IStorageServ
 			{
 				reject( err );
 			}
-		});
+		} );
 	}
 
 	/**
@@ -254,7 +289,7 @@ export abstract class AbstractEncryptedStorageService<T> implements IStorageServ
 	 *	@param value	{T}	structured data objects
 	 *	@returns {Promise<boolean>}
 	 */
-	public async put( key: string, value : T ) : Promise<boolean>
+	public async put( key : string, value : T ) : Promise<boolean>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -285,7 +320,7 @@ export abstract class AbstractEncryptedStorageService<T> implements IStorageServ
 			{
 				reject( err );
 			}
-		});
+		} );
 	}
 
 	/**
@@ -300,7 +335,7 @@ export abstract class AbstractEncryptedStorageService<T> implements IStorageServ
 		{
 			try
 			{
-				const firstItems : Array< T | null> | null = await this.getAll( undefined, 1 );
+				const firstItems : Array<T | null> | null = await this.getAll( undefined, 1 );
 				if ( Array.isArray( firstItems ) && 1 === firstItems.length )
 				{
 					return resolve( firstItems[ 0 ] );
@@ -313,7 +348,7 @@ export abstract class AbstractEncryptedStorageService<T> implements IStorageServ
 			{
 				reject( err );
 			}
-		});
+		} );
 	}
 
 	/**
@@ -344,7 +379,7 @@ export abstract class AbstractEncryptedStorageService<T> implements IStorageServ
 			{
 				reject( err );
 			}
-		});
+		} );
 	}
 
 	/**
@@ -355,7 +390,7 @@ export abstract class AbstractEncryptedStorageService<T> implements IStorageServ
 	 *	@param maxCount	{number} maximum limit number
 	 *	@returns {Promise<Array< T | null >>}
 	 */
-	public async getAll( query? : string, maxCount? : number ) : Promise<Array< T | null >>
+	public async getAll( query? : string, maxCount? : number ) : Promise<Array<T | null>>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -367,7 +402,7 @@ export abstract class AbstractEncryptedStorageService<T> implements IStorageServ
 					const list : Array<string> | null = await this.db.getAll( this.storeName, query, maxCount );
 					if ( Array.isArray( list ) && list.length > 0 )
 					{
-						let objectList : Array< T | null > = [];
+						let objectList : Array<T | null> = [];
 						for ( const encrypted of list )
 						{
 							let object : T | null = null;
@@ -396,7 +431,7 @@ export abstract class AbstractEncryptedStorageService<T> implements IStorageServ
 			{
 				reject( err );
 			}
-		});
+		} );
 	}
 
 	/**
@@ -426,7 +461,7 @@ export abstract class AbstractEncryptedStorageService<T> implements IStorageServ
 			{
 				reject( err );
 			}
-		});
+		} );
 	}
 
 	/**

@@ -5,10 +5,11 @@
 import { CallbackModels } from "../../models/CallbackModels";
 import { TestUtil } from "debeem-utils";
 
+
 if ( TestUtil.isTestEnv() )
 {
 	//import "fake-indexeddb/auto";
-	require('fake-indexeddb/auto');
+	require( 'fake-indexeddb/auto' );
 }
 
 import { Wallet } from 'ethers';
@@ -20,13 +21,23 @@ import { VaWalletEntity } from "../../validators/VaWalletEntity";
 import _ from "lodash";
 import { SysConfigStorageService } from "./SysConfigStorageService";
 import { SysConfigKeys } from "../../entities/SysConfigEntity";
+import { EtherWallet } from "debeem-id";
+import { EncryptedStorageOptions } from "../../models/StorageModels";
 
 
 export class WalletStorageService extends AbstractEncryptedStorageService<WalletEntityItem> implements IStorageService
 {
-	constructor( pinCode : string = '' )
+	/**
+	 *	@param [pinCode]	{string}
+	 *	@param [options]	{EncryptedStorageOptions}
+	 *	@protected
+	 */
+	constructor(
+		pinCode : string = '',
+		options ?: EncryptedStorageOptions
+	)
 	{
-		super( 'wallet_entity', pinCode );
+		super( 'wallet_entity', pinCode, options );
 	}
 
 	// private async init()
@@ -78,7 +89,7 @@ export class WalletStorageService extends AbstractEncryptedStorageService<Wallet
 	 *	@param callback	{CallbackModels} a callback function address to receive error information
 	 * 	@returns {boolean}
 	 */
-	public isValidItem( item : any, callback ?: CallbackModels ) : boolean
+	public isValidItem( item : any, callback ? : CallbackModels ) : boolean
 	{
 		const error : string | null = VaWalletEntity.validateWalletEntityItem( item );
 		if ( null !== error )
@@ -102,7 +113,24 @@ export class WalletStorageService extends AbstractEncryptedStorageService<Wallet
 		const error : string | null = VaWalletEntity.validateWalletEntityBaseItem( item );
 		if ( null === error )
 		{
-			return item.address;
+			return this.getKeyByAddress( item.address );
+		}
+
+		return null;
+	}
+
+	/**
+	 * 	get storage key by wallet address
+	 *
+	 * 	@group Basic Methods
+	 *	@param address	{string} wallet address
+	 *	@returns {string | null}
+	 */
+	public getKeyByAddress( address : string ) : string | null
+	{
+		if ( EtherWallet.isValidAddress( address ) )
+		{
+			return address.trim().toLowerCase();
 		}
 
 		return null;
@@ -141,14 +169,14 @@ export class WalletStorageService extends AbstractEncryptedStorageService<Wallet
 			{
 				reject( err );
 			}
-		});
+		} );
 	}
 
 	/**
 	 * 	get item by CurrentWallet
 	 * 	@returns {Promise< WalletEntityItem | null >}
 	 */
-	public async getByCurrentWallet() : Promise< WalletEntityItem | null >
+	public async getByCurrentWallet() : Promise<WalletEntityItem | null>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -162,13 +190,47 @@ export class WalletStorageService extends AbstractEncryptedStorageService<Wallet
 				}
 
 				//	...
-				resolve( await this.get( currentWallet ) );
+				resolve( await this.getByWallet( currentWallet ) );
 			}
 			catch ( err )
 			{
 				reject( err );
 			}
-		});
+		} );
+	}
+
+	/**
+	 * 	get item by walletAddress
+	 *
+	 * 	@param walletAddress	{string}
+	 * 	@returns {Promise< WalletEntityItem | null >}
+	 */
+	public async getByWallet( walletAddress : string ) : Promise<WalletEntityItem | null>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( ! EtherWallet.isValidAddress( walletAddress ) )
+				{
+					return reject( `${ this.constructor.name }.getByWallet :: invalid walletAddress` );
+				}
+
+				//	...
+				const storageKey : string | null = this.getKeyByAddress( walletAddress );
+				if ( ! _.isString( storageKey ) || _.isEmpty( storageKey ) )
+				{
+					return reject( `${ this.constructor.name }.getByWallet :: failed to get storageKey` );
+				}
+
+				const walletItem : WalletEntityItem | null = await this.get( storageKey );
+				resolve( walletItem );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		} );
 	}
 
 	/**
@@ -179,7 +241,7 @@ export class WalletStorageService extends AbstractEncryptedStorageService<Wallet
 	 *	@param value	{WalletEntityItem}	structured data objects
 	 *	@returns {Promise<boolean>}
 	 */
-	public async put( key: string, value : WalletEntityItem ) : Promise<boolean>
+	public async put( key : string, value : WalletEntityItem ) : Promise<boolean>
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -194,12 +256,19 @@ export class WalletStorageService extends AbstractEncryptedStorageService<Wallet
 					...value,
 					pinCode : ``,
 				};
-				resolve( await super.put( key, value ) );
+				const saved : boolean = await super.put( key, value );
+				if ( saved )
+				{
+					await this.sysUserStorageService.updateName( value.address, value.name );
+				}
+
+				//	...
+				resolve( saved );
 			}
 			catch ( err )
 			{
 				reject( err );
 			}
-		});
+		} );
 	}
 }
