@@ -640,7 +640,7 @@ describe( "WalletStorageService", () =>
 		});
 	});
 
-	describe( "List wallet names", () =>
+	describe( "List all wallets, modify wallet names", () =>
 	{
 		it( "should return all encrypted wallets", async () =>
 		{
