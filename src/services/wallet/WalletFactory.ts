@@ -259,7 +259,7 @@ export class WalletFactory
 	{
 		if ( ! wallet )
 		{
-			throw new Error( 'WalletFactory.deriveBusinessWallet :: invalid wallet' );
+			throw new Error( `${ this.constructor.name }.deriveBusinessWallet :: invalid wallet` );
 		}
 
 		if ( ! addressIndex || ! EtherWallet.isValidNonHardenedAddressIndex( addressIndex ) )

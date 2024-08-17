@@ -42,6 +42,8 @@ describe( "WalletTransaction.account", () =>
 			const address = '0x47B506704DA0370840c2992A3d3d301FD3c260D3';
 
 			const balance = await new WalletAccount().queryBalance( address );
+			//console.log( `balance :`, balance );
+			//	balance : 2553243637330105070n
 			expect( balance ).toBeGreaterThan( 0 );
 			expect( TypeUtil.isNotEmptyString( ethers.formatEther( balance ) ) ).toBeTruthy();
 
@@ -141,7 +143,7 @@ describe( "WalletTransaction.account", () =>
 			{
 				// Assert that the error is thrown
 				expect( error ).toBeDefined();
-				expect( error ).toEqual( "wallet address not specified" );
+				expect( error ).toEqual( "WalletAccount.queryBalance :: wallet address not specified" );
 			}
 
 			try
@@ -152,7 +154,7 @@ describe( "WalletTransaction.account", () =>
 			{
 				// Assert that the error is thrown
 				expect( error ).toBeDefined();
-				expect( error ).toEqual( "invalid address" );
+				expect( error ).toEqual( "WalletAccount.queryTokenBalances :: invalid address" );
 			}
 
 			await TestUtil.sleep(3 * 1000 );
@@ -170,7 +172,7 @@ describe( "WalletTransaction.account", () =>
 			{
 				// Assert that the error is thrown
 				expect( error ).toBeDefined();
-				expect( error ).toEqual( "invalid contractAddresses" );
+				expect( error ).toEqual( "WalletAccount.queryTokenBalances :: invalid contractAddresses" );
 			}
 
 			await TestUtil.sleep(3 * 1000 );
@@ -224,35 +226,34 @@ describe( "WalletTransaction.account", () =>
 			for ( const pair of arr )
 			{
 				const priceObj : ChainLinkPriceResult | null = await new WalletAccount().queryPairPrice( pair );
-				//
 				//console.log( `priceObj :`, priceObj );
 				//    should output:
 				//    priceObj : {
 				//       chainLink: {
-				//         roundId: 110680464442257326336n,
-				//         answer: 7087192046296n,
-				//         startedAt: 1717653347n,
-				//         updatedAt: 1717653347n,
-				//         answeredInRound: 110680464442257326336n,
-				//         address: '0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c',
+				//         roundId: 18446744073709566541n,
+				//         answer: 5916613855044n,
+				//         startedAt: 1723874712n,
+				//         updatedAt: 1723874712n,
+				//         answeredInRound: 18446744073709566541n,
+				//         address: '0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43',
 				//         decimals: 8
 				//       },
-				//       price: 7087192046296n,
-				//       floatPrice: 70871.92
+				//       price: 5916613855044n,
+				//       floatPrice: 59166.13855044
 				//     }
 				//
 				//    priceObj : {
 				//       chainLink: {
-				//         roundId: 110680464442257327677n,
-				//         answer: 384815800000n,
-				//         startedAt: 1717653323n,
-				//         updatedAt: 1717653323n,
-				//         answeredInRound: 110680464442257327677n,
-				//         address: '0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419',
+				//         roundId: 18446744073709566855n,
+				//         answer: 260136339126n,
+				//         startedAt: 1723875000n,
+				//         updatedAt: 1723875000n,
+				//         answeredInRound: 18446744073709566855n,
+				//         address: '0x694AA1769357215DE4FAC081bf1f309aDC325306',
 				//         decimals: 8
 				//       },
-				//       price: 384815800000n,
-				//       floatPrice: 3848.15
+				//       price: 260136339126n,
+				//       floatPrice: 2601.36339126
 				//     }
 				//
 				expect( priceObj ).toBeDefined();
@@ -292,21 +293,21 @@ describe( "WalletTransaction.account", () =>
 			//
 			const pair : string = `USDC/USD`;
 			const priceObj : ChainLinkPriceResult | null = await new WalletAccount().queryPairPrice( pair );
-			//
-			//	should output:
-			// 	{
-			// 		chainLink: {
-			// 			roundId: 36893488147419104247n,
-			// 			answer: 99874900n,
-			// 			startedAt: 1692203003n,
-			// 			updatedAt: 1692203003n,
-			// 			answeredInRound: 36893488147419104247n,
-			// 			address: '0x3E7d1eAB13ad0104d2750B8863b489D65364e32D',
-			// 			decimals: 8
-			// 		},
-			// 		price: 0.99
-			// 	}
 			//console.log( priceObj );
+			//	should output:
+			//	{
+			//       chainLink: {
+			//         roundId: 18446744073709552307n,
+			//         answer: 99996913n,
+			//         startedAt: 1723860036n,
+			//         updatedAt: 1723860036n,
+			//         answeredInRound: 18446744073709552307n,
+			//         address: '0xA2F78ab2355fe2f984D808B5CeE7FD0A93D5270E',
+			//         decimals: 8
+			//       },
+			//       price: 99996913n,
+			//       floatPrice: 0.99996913
+			//     }
 			//
 			expect( priceObj ).toBeDefined();
 			expect( priceObj ).toHaveProperty( 'chainLink' );
@@ -338,21 +339,21 @@ describe( "WalletTransaction.account", () =>
 			//
 			const pair : string = `USDT/USD`;
 			const priceObj : ChainLinkPriceResult | null = await new WalletAccount().queryPairPrice( pair );
-			//
-			//	should output:
-			// 	{
-			// 		chainLink: {
-			// 			roundId: 36893488147419104247n,
-			// 			answer: 99874900n,
-			// 			startedAt: 1692203003n,
-			// 			updatedAt: 1692203003n,
-			// 			answeredInRound: 36893488147419104247n,
-			// 			address: '0x3E7d1eAB13ad0104d2750B8863b489D65364e32D',
-			// 			decimals: 8
-			// 		},
-			// 		price: 0.99
-			// 	}
 			//console.log( priceObj );
+			//	should output:
+			//	{
+			//       chainLink: {
+			//         roundId: 55340232221128654885n,
+			//         answer: 100021294n,
+			//         startedAt: 1723874303n,
+			//         updatedAt: 1723874327n,
+			//         answeredInRound: 55340232221128654885n,
+			//         address: '0x3E7d1eAB13ad0104d2750B8863b489D65364e32D',
+			//         decimals: 8
+			//       },
+			//       price: 100021294n,
+			//       floatPrice: 1.00021294
+			//     }
 			//
 			expect( priceObj ).toBeDefined();
 			expect( priceObj ).toHaveProperty( 'chainLink' );
@@ -386,13 +387,13 @@ describe( "WalletTransaction.account", () =>
 			//console.log( `value :`, value );
 			//
 			//	should output:
-			//	value : {
-			//       balance: 109962561842472260n,
+			//    value : {
+			//       balance: 2553243637330105070n,
 			//       balanceDecimals: 18,
-			//       floatBalance: 0.1,
-			//       value: 38747122937502939760817740000n,
+			//       floatBalance: 2.553243637330105,
+			//       value: 664191452711805965698731968820n,
 			//       valueDecimals: 26,
-			//       floatValue: 387.47
+			//       floatValue: 6641.9145271180605
 			//     }
 			//
 			expect( value ).toBeDefined();
@@ -436,12 +437,12 @@ describe( "WalletTransaction.account", () =>
 			//       {
 			//         pair: 'ETH/USD',
 			//         contractAddress: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
-			//         balance: 109962561842472260n,
+			//         balance: 2553243637330105070n,
 			//         balanceDecimals: 18,
-			//         floatBalance: 0.1,
-			//         value: 38747122937502939760817740000n,
+			//         floatBalance: 2.553243637330105,
+			//         value: 664191452711805965698731968820n,
 			//         valueDecimals: 26,
-			//         floatValue: 387.47
+			//         floatValue: 6641.9145271180605
 			//       }
 			//     ]
 			//
@@ -513,12 +514,12 @@ describe( "WalletTransaction.account", () =>
 			//       {
 			//         pair: 'USDT/USD',
 			//         contractAddress: '0xdAC17F958D2ee523a2206206994597C13D831ec7',
-			//         balance: 914883658n,
+			//         balance: 919083658n,
 			//         balanceDecimals: 6,
-			//         floatBalance: 914.88,
-			//         value: 91464578824892000n,
+			//         floatBalance: 919.083658,
+			//         value: 91927936767413452n,
 			//         valueDecimals: 14,
-			//         floatValue: 914.64
+			//         floatValue: 919.2793676741345
 			//       }
 			//     ]
 			//
@@ -589,43 +590,45 @@ describe( "WalletTransaction.account", () =>
 			const totalValues : TotalValues | null = await new WalletAccount().queryTotalValues( walletAddress );
 			//console.log( totalValues );
 			//	should output:
-			//	{
+			//	    {
 			//       total: {
 			//         balance: 0n,
+			//         balanceDecimals: 0,
 			//         floatBalance: 0,
-			//         value: 160830858755224499501518022432629n,
-			//         floatValue: 1616288.62
+			//         value: 7700586143264672009257523999227n,
+			//         valueDecimals: 0,
+			//         floatValue: 77925.830845488
 			//       },
 			//       values: [
 			//         {
 			//           pair: 'USDC/USD',
 			//           contractAddress: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
-			//           balance: 7065377042n,
+			//           balance: 690075n,
 			//           balanceDecimals: 6,
-			//           floatBalance: 7065.37,
-			//           value: 706540699919865808n,
+			//           floatBalance: 0.690075,
+			//           value: 69004516805775n,
 			//           valueDecimals: 14,
-			//           floatValue: 7065.4
+			//           floatValue: 0.69004516805775
 			//         },
 			//         {
 			//           pair: 'USDT/USD',
 			//           contractAddress: '0xdac17f958d2ee523a2206206994597c13d831ec7',
-			//           balance: 914883658n,
+			//           balance: 919083658n,
 			//           balanceDecimals: 6,
-			//           floatBalance: 914.88,
-			//           value: 91464578824892000n,
+			//           floatBalance: 919.083658,
+			//           value: 91927936767413452n,
 			//           valueDecimals: 14,
-			//           floatValue: 914.64
+			//           floatValue: 919.2793676741345
 			//         },
 			//         {
 			//           pair: 'ETH/USD',
 			//           contractAddress: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
-			//           balance: 456110626955260336927n,
+			//           balance: 29598602557480454349n,
 			//           balanceDecimals: 18,
-			//           floatBalance: 456.11,
-			//           value: 160830858755223701496239277674821n,
+			//           floatBalance: 29.598602557480458,
+			//           value: 7700586143264580012316239780000n,
 			//           valueDecimals: 26,
-			//           floatValue: 1608308.58
+			//           floatValue: 77005.8614326458
 			//         }
 			//       ]
 			//     }

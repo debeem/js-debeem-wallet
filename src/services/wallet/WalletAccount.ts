@@ -50,7 +50,7 @@ export class WalletAccount
 			{
 				if ( !TypeUtil.isNotEmptyString( address ) )
 				{
-					return reject( 'wallet address not specified' );
+					return reject( `${ this.constructor.name }.queryBalance :: wallet address not specified` );
 				}
 
 				const service : string = 'alchemy';
@@ -111,11 +111,11 @@ export class WalletAccount
 			{
 				if ( !TypeUtil.isNotEmptyString( address ) )
 				{
-					return reject( 'invalid address' );
+					return reject( `${ this.constructor.name }.queryTokenBalances :: invalid address` );
 				}
 				if ( !Array.isArray( tokens ) || 0 === tokens.length )
 				{
-					return reject( 'invalid contractAddresses' );
+					return reject( `${ this.constructor.name }.queryTokenBalances :: invalid contractAddresses` );
 				}
 
 				if ( ! ABI )
@@ -242,11 +242,11 @@ export class WalletAccount
 			{
 				if ( !TypeUtil.isNotEmptyString( address ) )
 				{
-					return reject( 'invalid address' );
+					return reject( `${ this.constructor.name }.queryValue :: invalid address` );
 				}
 				if ( !TypeUtil.isNotEmptyString( pair ) )
 				{
-					return reject( 'invalid pair' );
+					return reject( `${ this.constructor.name }.queryValue :: invalid pair` );
 				}
 
 				let floatBalance : number = 0.00;
@@ -255,7 +255,7 @@ export class WalletAccount
 				let floatValue : number = 0.00;
 
 				//	query the balance of native ETH
-				const balance : bigint = await this.ethQueryBalance( address );
+				const balance : bigint = await this.queryBalance( address );
 				if ( balance > 0 )
 				{
 					if ( decimals > 0 )
@@ -329,11 +329,11 @@ export class WalletAccount
 			{
 				if ( !TypeUtil.isNotEmptyString( address ) )
 				{
-					return reject( 'invalid address' );
+					return reject( `${ this.constructor.name }.queryTokenValues :: invalid address` );
 				}
 				if ( ! Array.isArray( tokens ) )
 				{
-					return reject( 'invalid tokens' );
+					return reject( `${ this.constructor.name }.queryTokenValues :: invalid tokens` );
 				}
 
 				//	query contract token balance
@@ -477,7 +477,7 @@ export class WalletAccount
 			{
 				if ( ! new WalletFactory().isValidAddress( address ) )
 				{
-					return reject( `invalid address` );
+					return reject( `${ this.constructor.name }.queryTotalValues :: invalid address` );
 				}
 
 				//	query all tokens of the wallet
