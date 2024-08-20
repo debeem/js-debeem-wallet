@@ -13,7 +13,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:cUSDCv3",
             "tokens"
         ],
         "logo": {
@@ -30,12 +33,37 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xd01409314acb3b245cea9500ece3f6fd4d70ea30.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LTO",
             "tokens"
+        ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0xb8c77482e45f1f44de1745f52c74426c631bdd52": {
+        "chainId": 1,
+        "symbol": "BNB",
+        "name": "BNB",
+        "address": "0xb8c77482e45f1f44de1745f52c74426c631bdd52",
+        "decimals": 18,
+        "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png",
+        "providers": [
+            "1inch",
+            "CoinGecko",
+            "Kleros Tokens"
+        ],
+        "eip2612": false,
+        "isFoT": false,
+        "tags": [
+            "crosschain",
+            "GROUP:BNB"
         ],
         "logo": {
             "oneInch": "",
@@ -52,13 +80,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
         "eip2612": true,
-        "isFoT": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -76,11 +104,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
+            "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:HIGH",
             "tokens"
         ],
         "logo": {
@@ -100,7 +131,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -121,7 +154,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:NEAR",
             "tokens"
         ],
         "logo": {
@@ -137,11 +173,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 9,
         "logoURI": "https://tokens.1inch.io/0x461b71cff4d4334bba09489ace4b5dc1a1813445.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -158,11 +195,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x55c08ca52497e2f1534b59e2917bf524d4765257.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -180,11 +218,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -202,11 +241,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -223,11 +263,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9e5bd9d9fad182ff0a93ba8085b664bcab00fa68.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -244,11 +285,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x30dcba0405004cf124045793e1933c798af9e66a.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -265,11 +307,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa8c8cfb141a3bb59fea1e2ea6b79b5ecbcd7b6ca.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -286,11 +329,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xfcf8eda095e37a41e002e266daad7efc1579bc0a.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -308,10 +352,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap"
+            "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -327,11 +373,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x32e6c34cd57087abbd59b5a4aecc4cb495924356.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BTBS",
             "tokens"
         ],
         "logo": {
@@ -349,11 +397,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -371,11 +420,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -393,12 +443,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "displayedSymbol": "rETH",
@@ -419,7 +470,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -437,12 +490,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -459,11 +513,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1117ac6ad6cdf1a3bc543bad3b133724620522d5.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MODA",
             "tokens"
         ],
         "logo": {
@@ -481,13 +537,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Roll Social Money",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -505,11 +562,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -526,11 +584,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x675bbc7514013e2073db7a919f6e4cbef576de37.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -551,7 +610,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PUNK",
             "tokens"
         ],
         "logo": {
@@ -569,11 +631,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -590,12 +653,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x43a96962254855f16b925556f9e97be436a43448.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap",
-            "Kleros Tokens"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -611,11 +674,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x0b63128c40737b13647552e0c926bcfeccc35f93.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -632,11 +696,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x74232704659ef37c08995e386a2e26cc27a8d7b1.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -653,11 +718,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x35e78b3982e87ecfd5b3f3265b601c046cdbe232.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -674,12 +740,36 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa41f142b6eb2b164f8164cae0716892ce02f311f.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
+        ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0x75231f58b43240c9718dd58b4967c5114342a86c": {
+        "chainId": 1,
+        "symbol": "OKB",
+        "name": "OKB",
+        "address": "0x75231f58b43240c9718dd58b4967c5114342a86c",
+        "decimals": 18,
+        "logoURI": "https://tokens-data.1inch.io/images/1/0x75231f58b43240c9718dd58b4967c5114342a86c.png",
+        "providers": [
+            "1inch",
+            "CMC200 ERC20",
+            "CoinGecko",
+            "Kleros Tokens"
+        ],
+        "eip2612": false,
+        "isFoT": false,
+        "tags": [
+            "crosschain"
         ],
         "logo": {
             "oneInch": "",
@@ -697,7 +787,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -714,11 +806,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf0d33beda4d734c72684b5f9abbebf715d0a7935.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -736,11 +829,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -759,7 +853,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -776,11 +872,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3ea8ea4237344c9931214796d9417af1a1180770.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FLX",
             "tokens"
         ],
         "logo": {
@@ -798,11 +896,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Trust Wallet Assets"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -819,11 +918,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9f52c8ecbee10e00d9faaac5ee9ba0ff6550f511.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -840,11 +940,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x329c6e459ffa7475718838145e5e85802db2a303.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -861,11 +962,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x83e9f223e1edb3486f876ee888d76bfba26c475a.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -883,12 +985,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -905,11 +1008,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x616e8bfa43f920657b3497dbf40d6b1a02d4608d.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -926,11 +1030,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3819f64f282bf135d62168c1e513280daf905e06.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -948,11 +1053,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -970,12 +1076,35 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
+        ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0x418d75f65a02b3d53b2418fb8e1fe493759c7605": {
+        "chainId": 1,
+        "symbol": "WBNB",
+        "name": "Wrapped BNB",
+        "address": "0x418d75f65a02b3d53b2418fb8e1fe493759c7605",
+        "decimals": 18,
+        "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/7192.png",
+        "providers": [
+            "1inch",
+            "CoinGecko"
+        ],
+        "eip2612": false,
+        "isFoT": false,
+        "tags": [
+            "crosschain",
+            "GROUP:WBNB"
         ],
         "logo": {
             "oneInch": "",
@@ -991,11 +1120,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3ec8798b81485a254928b70cda1cf0a2bb0b74d7.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Defiprime"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1013,12 +1143,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1035,12 +1166,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x86b4dbe5d203e634a12364c0e428fa242a3fba98.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1058,12 +1189,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
-            "Kleros Tokens"
+            "Kleros Tokens",
+            "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1080,11 +1213,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xe5a733681bbe6cd8c764bb8078ef8e13a576dd78.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1104,7 +1238,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1121,11 +1257,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x505b5eda5e25a67e1c24a2bf1a527ed9eb88bf04.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1143,11 +1280,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LYRA",
             "tokens"
         ],
         "logo": {
@@ -1165,11 +1304,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1187,11 +1327,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1209,11 +1350,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1231,11 +1373,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1253,12 +1396,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:AXL",
             "tokens"
         ],
         "logo": {
@@ -1275,31 +1420,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x12b6893ce26ea6341919fe289212ef77e51688c8.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
+            "Kleros Tokens",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "tokens"
-        ],
-        "logo": {
-            "oneInch": "",
-            "metaBeem": ""
-        }
-    },
-    "0x37cd4e8875e3edaffdfe9be63958f07effbd0bfd": {
-        "chainId": 1,
-        "symbol": "VCASH",
-        "name": "void.cash",
-        "address": "0x37cd4e8875e3edaffdfe9be63958f07effbd0bfd",
-        "decimals": 18,
-        "logoURI": "https://tokens.1inch.io/0x37cd4e8875e3edaffdfe9be63958f07effbd0bfd.png",
-        "providers": [
-            "1inch",
-            "Coinmarketcap"
-        ],
-        "eip2612": false,
-        "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1319,7 +1446,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1337,12 +1466,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1360,13 +1490,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1384,11 +1515,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:NUM",
             "tokens"
         ],
         "logo": {
@@ -1405,11 +1538,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xea7cc765ebc94c4805e3bff28d7e4ae48d06468a.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PAD",
             "tokens"
         ],
         "logo": {
@@ -1427,11 +1562,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1447,11 +1583,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xe5f7ef61443fc36ae040650aa585b0395aef77c8.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1470,7 +1607,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1489,7 +1628,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1508,7 +1649,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1527,7 +1670,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1546,7 +1691,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1564,11 +1711,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LIT",
             "tokens"
         ],
         "logo": {
@@ -1587,7 +1736,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -1595,7 +1743,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BADGER",
             "tokens"
         ],
         "logo": {
@@ -1612,9 +1763,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xc944e90c64b2c07662a292be6244bdf05cda44a7.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Gemini Token List",
             "Kleros Tokens",
@@ -1622,7 +1773,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GRAPH",
+            "GROUP:GRT",
             "tokens"
         ],
         "logo": {
@@ -1640,7 +1795,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Gemini Token List",
@@ -1649,7 +1803,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LDO",
             "tokens"
         ],
         "logo": {
@@ -1659,7 +1816,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
     },
     "0xae7ab96520de3a18e5e111b5eaab095312d7fe84": {
         "chainId": 1,
-        "symbol": "stETH",
+        "symbol": "StETH",
         "name": "stETH",
         "address": "0xae7ab96520de3a18e5e111b5eaab095312d7fe84",
         "decimals": 18,
@@ -1667,14 +1824,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:ETH",
             "tokens"
         ],
@@ -1694,7 +1852,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:cWETHv3",
             "tokens"
         ],
         "logo": {
@@ -1711,11 +1872,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x341c05c0e9b33c0e38d64de76516b2ce970bb3be.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1732,11 +1894,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9a96ec9b57fb64fbc60b423d1f4da7691bd35079.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1756,7 +1919,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1776,7 +1941,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1796,7 +1963,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1816,7 +1985,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1836,7 +2007,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1856,7 +2029,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1875,7 +2050,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1895,7 +2072,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1912,11 +2091,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x8c1bed5b9a0928467c9b1341da1d7bd5e10b6549.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1935,7 +2115,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Dharma Token List",
             "Furucombo",
@@ -1944,7 +2123,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:STAKE",
             "tokens"
         ],
         "logo": {
@@ -1962,13 +2144,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -1988,7 +2171,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Dharma Token List",
@@ -2001,7 +2183,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2019,7 +2203,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Dharma Token List",
             "Furucombo",
@@ -2029,7 +2212,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2048,7 +2233,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
-            "Coinmarketcap",
             "Compound",
             "Dharma Token List",
             "Furucombo",
@@ -2060,7 +2244,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BAT",
             "tokens"
         ],
         "logo": {
@@ -2078,14 +2265,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2103,14 +2291,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CMC DeFi",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:BTC",
             "tokens"
         ],
@@ -2130,7 +2319,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Dharma Token List",
             "Furucombo",
@@ -2141,7 +2329,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2160,14 +2350,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MATH",
             "tokens"
         ],
         "logo": {
@@ -2184,11 +2376,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x249ca82617ec3dfb2589c4c17ab7ec9765350a18.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2208,7 +2401,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2228,7 +2423,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2248,7 +2445,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2266,14 +2465,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2290,11 +2490,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x57700244b20f84799a31c6c96dadff373ca9d6c5.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2312,7 +2513,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -2320,7 +2520,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2339,14 +2541,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2363,13 +2566,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x5adc961d6ac3f7062d2ea45fefb8d8167d44b190.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2387,13 +2591,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "displayedSymbol": "PAR",
@@ -2412,7 +2617,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CMC DeFi",
-            "Coinmarketcap",
             "Curve Token List",
             "Dharma Token List",
             "Furucombo",
@@ -2421,7 +2625,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2441,7 +2647,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Dharma Token List",
@@ -2454,7 +2659,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2481,7 +2688,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2498,12 +2707,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CMC200 ERC20",
             "CMC DeFi",
             "CMC Stablecoin",
             "CoinGecko",
-            "Coinmarketcap",
             "Compound",
             "Curve Token List",
             "Defiprime",
@@ -2511,13 +2720,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
-            "Trust Wallet Assets",
             "Uniswap Labs Default",
             "Wrapped Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WBTC",
             "PEG:BTC",
             "tokens"
         ],
@@ -2536,7 +2747,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens",
             "Messari Verified",
@@ -2545,7 +2755,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2563,13 +2775,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2586,12 +2799,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x28dee01d53fed0edf5f6e310bf8ef9311513ae40.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2611,14 +2825,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2638,7 +2853,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2658,27 +2875,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "tokens"
-        ],
-        "logo": {
-            "oneInch": "",
-            "metaBeem": ""
-        }
-    },
-    "0x644192291cc835a93d6330b24ea5f5fedd0eef9e": {
-        "chainId": 1,
-        "symbol": "NXRA",
-        "name": "AllianceBlock Nexera Token",
-        "address": "0x644192291cc835a93d6330b24ea5f5fedd0eef9e",
-        "decimals": 18,
-        "logoURI": "https://tokens.1inch.io/0x644192291cc835a93d6330b24ea5f5fedd0eef9e.png",
-        "providers": [
-            "1inch",
-            "CoinGecko"
-        ],
-        "eip2612": true,
-        "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2699,7 +2898,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2718,7 +2919,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Dharma Token List",
             "Furucombo",
@@ -2730,7 +2930,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MANA",
             "tokens"
         ],
         "logo": {
@@ -2748,11 +2951,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2770,14 +2974,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2796,7 +3001,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -2804,7 +3008,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2822,12 +3028,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -2846,7 +3053,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -2855,7 +3061,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2876,7 +3084,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Gemini Token List",
@@ -2887,7 +3094,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2908,7 +3117,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2925,13 +3136,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1a5f9352af8af974bfc03399e3767df6370d82e4.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2949,12 +3161,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
+            "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -2974,7 +3188,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Dharma Token List",
@@ -2986,7 +3199,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3004,14 +3219,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3029,13 +3245,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3053,7 +3270,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Gemini Token List",
             "Kleros Tokens",
@@ -3063,7 +3279,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3081,7 +3299,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -3090,7 +3307,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BUSD",
             "PEG:USD",
             "tokens"
         ],
@@ -3109,11 +3329,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "Agora dataFi Tokens",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Compound",
             "Curve Token List",
             "Defiprime",
@@ -3126,7 +3346,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LINK",
             "tokens"
         ],
         "logo": {
@@ -3144,14 +3367,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GEN",
             "tokens"
         ],
         "logo": {
@@ -3169,12 +3394,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3193,7 +3419,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Compound",
             "Curve Token List",
             "Dharma Token List",
@@ -3203,7 +3428,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "savings"
         ],
         "logo": {
@@ -3221,12 +3448,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3243,12 +3471,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x607c794cda77efb21f8848b7910ecf27451ae842.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Dharma Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3267,7 +3496,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -3275,7 +3503,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3298,7 +3528,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "savings"
         ],
         "logo": {
@@ -3316,12 +3548,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3342,7 +3575,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Dharma Token List",
@@ -3354,7 +3586,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GNO",
             "tokens"
         ],
         "logo": {
@@ -3372,12 +3607,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3395,11 +3631,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3417,12 +3654,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3441,13 +3679,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3457,7 +3696,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
     },
     "0x71fc860f7d3a592a4a98740e39db31d25db65ae8": {
         "chainId": 1,
-        "symbol": "aUSDTv1",
+        "symbol": "aUSDT",
         "name": "Aave Interest bearing USDT",
         "address": "0x71fc860f7d3a592a4a98740e39db31d25db65ae8",
         "decimals": 6,
@@ -3466,13 +3705,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Zerion"
         ],
         "eip2612": false,
-        "isFoT": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "savings"
         ],
@@ -3492,7 +3731,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -3502,7 +3740,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SNT",
             "tokens"
         ],
         "logo": {
@@ -3523,7 +3764,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3540,11 +3783,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7b123f53421b1bf8533339bfbdc7c98aa94163db.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3562,12 +3806,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3585,13 +3830,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3619,7 +3865,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3637,14 +3885,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3662,14 +3911,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3689,7 +3939,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC200 ERC20",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -3697,7 +3946,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3717,7 +3968,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Agora dataFi Tokens",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -3725,7 +3975,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3744,13 +3996,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3769,7 +4022,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
@@ -3777,7 +4029,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3802,7 +4056,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SXP",
             "tokens"
         ],
         "logo": {
@@ -3822,16 +4079,18 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC Stablecoin",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
+            "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -3853,7 +4112,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3872,7 +4133,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
@@ -3881,7 +4141,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:REQ",
             "tokens"
         ],
         "logo": {
@@ -3900,7 +4163,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Trust Wallet Assets",
@@ -3908,7 +4170,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -3926,14 +4190,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PNK",
             "tokens"
         ],
         "logo": {
@@ -3950,13 +4216,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x95172ccbe8344fecd73d0a30f54123652981bd6f.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Dharma Token List",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "displayedSymbol": "LOCK",
@@ -3981,7 +4248,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4000,7 +4269,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Agora dataFi Tokens",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -4008,7 +4276,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4026,13 +4296,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4050,7 +4321,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Messari Verified",
             "MyCrypto Token List",
@@ -4058,7 +4328,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4068,7 +4340,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
     },
     "0x9ba00d6856a4edf4665bca2c2309936572473b7e": {
         "chainId": 1,
-        "symbol": "aUSDCv1",
+        "symbol": "aUSDC",
         "name": "Aave Interest bearing USDC",
         "address": "0x9ba00d6856a4edf4665bca2c2309936572473b7e",
         "decimals": 6,
@@ -4081,8 +4353,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
-        "isFoT": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -4100,13 +4373,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9cb2f26a23b8d89973f08c957c4d7cdf75cd341c.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Dharma Token List",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4123,11 +4397,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Dharma Token List",
@@ -4140,7 +4414,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MKR",
             "tokens"
         ],
         "logo": {
@@ -4157,11 +4434,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CMC200 ERC20",
             "CMC Stablecoin",
             "CoinGecko",
-            "Coinmarketcap",
             "Compound",
             "Curve Token List",
             "Defiprime",
@@ -4175,7 +4452,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDC",
             "PEG:USD",
             "tokens"
         ],
@@ -4195,7 +4475,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -4203,7 +4482,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4223,13 +4504,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DXD",
             "tokens"
         ],
         "logo": {
@@ -4255,7 +4538,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4272,11 +4557,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa462d0e6bb788c7807b1b1c96992ce1f7069e195.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4299,7 +4585,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "savings"
         ],
         "logo": {
@@ -4318,14 +4606,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4344,7 +4633,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -4352,7 +4640,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4371,13 +4661,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC Stablecoin",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4395,12 +4686,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PERL",
             "tokens"
         ],
         "logo": {
@@ -4417,12 +4710,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb6c4267c4877bb0d6b1685cfd85b0fbe82f105ec.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4442,7 +4736,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Dharma Token List",
             "Furucombo",
@@ -4453,7 +4746,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BAL",
             "tokens"
         ],
         "logo": {
@@ -4472,14 +4768,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BAND",
             "tokens"
         ],
         "logo": {
@@ -4500,7 +4798,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Dharma Token List",
             "Furucombo",
@@ -4511,7 +4808,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4532,7 +4831,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4554,7 +4855,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4573,14 +4876,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4597,11 +4901,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xc00e94cb662c3520282e6f5717214004a7f26888.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Compound",
             "Curve Token List",
             "Defiprime",
@@ -4614,7 +4918,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:COMP",
             "tokens"
         ],
         "logo": {
@@ -4634,7 +4941,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Dharma Token List",
@@ -4648,7 +4954,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SNX",
             "tokens"
         ],
         "logo": {
@@ -4666,13 +4975,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4689,9 +4999,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -4702,7 +5012,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WETH",
             "PEG:ETH",
             "tokens"
         ],
@@ -4721,7 +5034,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CMC DeFi",
-            "Coinmarketcap",
             "Compound",
             "Dharma Token List",
             "Kleros Tokens",
@@ -4730,7 +5042,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:BTC",
             "tokens"
         ],
@@ -4751,13 +5065,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4775,11 +5090,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4796,12 +5112,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xc3dd23a0a854b4f9ae80670f528094e9eb607ccb.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4819,14 +5136,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SWAP",
             "tokens"
         ],
         "logo": {
@@ -4844,7 +5163,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CMC DeFi",
-            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
@@ -4852,7 +5170,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4869,13 +5189,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xcd62b1c403fa761baadfc74c525ce2b51780b184.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Furucombo",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4892,13 +5213,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xd15ecdcf5ea68e3995b2d0527a0ae0a3258302f8.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4917,7 +5239,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Dharma Token List",
             "Kleros Tokens",
@@ -4927,7 +5248,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4946,7 +5269,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Dharma Token List",
             "Furucombo",
@@ -4955,7 +5277,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:AMPL",
             "tokens"
         ],
         "logo": {
@@ -4973,13 +5298,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -4997,13 +5323,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5022,7 +5349,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5040,7 +5369,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -5048,7 +5376,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5065,11 +5395,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xdac17f958d2ee523a2206206994597c13d831ec7.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CMC200 ERC20",
             "CMC Stablecoin",
             "CoinGecko",
-            "Coinmarketcap",
             "Compound",
             "Curve Token List",
             "Dharma Token List",
@@ -5082,7 +5412,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDT",
             "PEG:USD",
             "tokens"
         ],
@@ -5103,7 +5436,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC Stablecoin",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -5111,7 +5443,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:EURS",
             "PEG:EUR",
             "tokens"
         ],
@@ -5132,7 +5467,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Compound",
             "Dharma Token List",
             "Furucombo",
@@ -5142,7 +5476,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5160,14 +5496,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Messari Verified",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5184,11 +5521,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xdfe691f37b6264a90ff507eb359c45d55037951c.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5205,14 +5543,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xe17f017475a709de58e976081eb916081ff4c9d5.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5230,7 +5569,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Kleros Tokens",
             "Messari Verified",
@@ -5238,7 +5576,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5258,7 +5598,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Compound",
             "Defiprime",
             "Dharma Token List",
@@ -5270,7 +5609,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5287,11 +5628,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xe48972fcd82a274411c01834e2f031d4377fa2c0.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5310,7 +5652,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Dharma Token List",
             "Furucombo",
@@ -5319,7 +5660,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:renBTC",
             "PEG:BTC",
             "tokens"
         ],
@@ -5339,7 +5683,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Dharma Token List",
             "Furucombo",
@@ -5350,7 +5693,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5367,12 +5712,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf29e46887ffae92f1ff87dfe39713875da541373.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5389,11 +5735,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf2f9a7e93f845b3ce154efbeb64fb9346fcce509.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:POWER",
             "tokens"
         ],
         "logo": {
@@ -5420,7 +5768,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5438,7 +5788,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CMC DeFi",
-            "Coinmarketcap",
             "Compound",
             "Dharma Token List",
             "Furucombo",
@@ -5446,7 +5795,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "savings"
         ],
@@ -5464,12 +5815,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf8e386eda857484f5a12e4b5daa9984e06e73705.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5486,14 +5838,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf911a7ec46a2c6fa49193212fe4a2a9b95851c27.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Dharma Token List",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5512,7 +5865,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Messari Verified",
@@ -5520,7 +5872,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5539,14 +5893,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "savings"
         ],
         "logo": {
@@ -5566,7 +5921,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:AVAX",
+            "GROUP:BNB",
+            "GROUP:ETH",
+            "GROUP:FTM",
+            "GROUP:MATIC",
             "native",
             "PEG:ETH"
         ],
@@ -5591,7 +5953,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5609,14 +5973,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CMC DeFi",
-            "Coinmarketcap",
             "Compound",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5635,7 +6000,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Compound",
             "Dharma Token List",
             "Furucombo",
@@ -5644,7 +6008,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:ETH",
             "savings"
         ],
@@ -5664,7 +6030,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Compound",
             "Curve Token List",
             "Dharma Token List",
@@ -5674,7 +6039,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "savings"
         ],
@@ -5694,13 +6061,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5719,7 +6087,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -5730,7 +6097,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MATIC",
             "tokens"
         ],
         "logo": {
@@ -5747,11 +6117,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x6b175474e89094c44da98b954eedeac495271d0f.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CMC200 ERC20",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Compound",
             "Curve Token List",
             "Defiprime",
@@ -5765,7 +6135,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DAI",
             "PEG:USD",
             "tokens"
         ],
@@ -5786,13 +6159,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CMC DeFi",
             "CMC Stablecoin",
             "CoinGecko",
-            "Coinmarketcap",
             "Compound",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -5813,7 +6187,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Dharma Token List",
             "Furucombo",
@@ -5824,7 +6197,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:sUSD",
             "PEG:USD",
             "tokens"
         ],
@@ -5842,9 +6218,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x0000000000085d4780b73119b644ae5ecd22b376.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Compound",
             "Curve Token List",
             "Furucombo",
@@ -5853,7 +6229,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:TUSD",
             "PEG:USD",
             "tokens"
         ],
@@ -5871,14 +6250,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3a3a65aab0dd2a17e3f1947ba16138cd37d08c04.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Curve Token List",
             "Dharma Token List",
             "Furucombo",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:ETH",
             "tokens"
         ],
@@ -5898,12 +6278,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5925,7 +6306,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5942,12 +6325,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7d2d3688df45ce7c552e19c27e007673da9204b8.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5966,12 +6350,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -5993,7 +6378,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6014,7 +6401,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6037,7 +6426,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6055,13 +6446,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:BTC",
             "savings"
         ],
@@ -6084,7 +6476,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6105,7 +6499,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6125,7 +6521,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6144,7 +6542,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:BTC",
             "tokens"
         ],
@@ -6165,7 +6565,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -6186,7 +6588,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -6207,7 +6611,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -6228,7 +6634,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -6247,13 +6655,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6270,11 +6679,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4de2573e27e648607b50e1cfff921a33e4a34405.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6293,7 +6703,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC Stablecoin",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -6305,7 +6714,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -6328,7 +6739,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -6347,13 +6760,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6372,7 +6786,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Messari Verified",
@@ -6380,7 +6793,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6397,14 +6812,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1c5db575e2ff833e46a2e9864c22f4b22e0b37c2.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Wrapped Tokens",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6422,7 +6838,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -6430,32 +6845,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:BTC",
-            "tokens"
-        ],
-        "logo": {
-            "oneInch": "",
-            "metaBeem": ""
-        }
-    },
-    "0x3a9fff453d50d4ac52a6890647b823379ba36b9e": {
-        "chainId": 1,
-        "symbol": "SHUF",
-        "name": "Shuffle.Monster V3",
-        "address": "0x3a9fff453d50d4ac52a6890647b823379ba36b9e",
-        "decimals": 18,
-        "logoURI": "https://tokens.1inch.io/0x3a9fff453d50d4ac52a6890647b823379ba36b9e.png",
-        "providers": [
-            "1inch",
-            "Coinmarketcap",
-            "Kleros Tokens",
-            "MyCrypto Token List",
-            "Zerion"
-        ],
-        "eip2612": false,
-        "isFoT": true,
-        "tags": [
             "tokens"
         ],
         "logo": {
@@ -6473,13 +6866,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DONUT",
             "tokens"
         ],
         "logo": {
@@ -6498,17 +6893,19 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Gemini Token List",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Uniswap Labs Default",
+            "Uniswap Labs List",
+            "Zapper Token List",
             "Zerion"
         ],
         "eip2612": false,
-        "isFoT": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6526,7 +6923,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Gemini Token List",
             "Kleros Tokens",
@@ -6535,7 +6931,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6554,12 +6952,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "BA ERC20 SEC Action",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6577,7 +6976,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
@@ -6586,7 +6984,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6612,7 +7012,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:BTC",
             "tokens"
         ],
@@ -6632,14 +7034,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6657,35 +7060,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "tokens"
-        ],
-        "logo": {
-            "oneInch": "",
-            "metaBeem": ""
-        }
-    },
-    "0xa7de087329bfcda5639247f96140f9dabe3deed1": {
-        "chainId": 1,
-        "symbol": "STA",
-        "name": "Statera",
-        "address": "0xa7de087329bfcda5639247f96140f9dabe3deed1",
-        "decimals": 18,
-        "logoURI": "https://tokens.1inch.io/0xa7de087329bfcda5639247f96140f9dabe3deed1.png",
-        "providers": [
-            "1inch",
-            "CoinGecko",
-            "Coinmarketcap",
-            "Zerion"
-        ],
-        "eip2612": false,
-        "isFoT": true,
-        "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6703,12 +7084,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6726,14 +7108,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": true,
-        "isFoT": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6751,7 +7133,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -6759,7 +7140,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ADX",
             "tokens"
         ],
         "logo": {
@@ -6779,7 +7163,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Dharma Token List",
@@ -6790,7 +7173,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:CRV",
             "tokens"
         ],
         "logo": {
@@ -6808,7 +7194,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -6816,7 +7201,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:RING",
             "tokens"
         ],
         "logo": {
@@ -6838,7 +7226,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6856,14 +7246,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6881,14 +7272,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6906,14 +7298,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6932,13 +7325,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -6956,13 +7350,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -6981,13 +7376,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7006,14 +7402,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7032,12 +7429,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7054,12 +7452,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4fe5851c9af07df9e5ad8217afae1ea72737ebda.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Dharma Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7079,7 +7478,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -7090,7 +7488,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SUSHI",
             "tokens"
         ],
         "logo": {
@@ -7108,12 +7509,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7130,13 +7532,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xba21ef4c9f433ede00badefcc2754b8e74bd538a.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7153,13 +7556,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xfffffffff15abf397da76f1dcc1a1604f45126db.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7178,13 +7582,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7201,11 +7606,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x8a6f3bf52a26a21531514e23016eeae8ba7e7018.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7227,7 +7633,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -7247,7 +7655,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7266,7 +7676,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Gemini Token List",
@@ -7276,7 +7685,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7294,14 +7705,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GHST",
             "tokens"
         ],
         "logo": {
@@ -7318,10 +7731,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Compound",
             "Curve Token List",
             "Defiprime",
@@ -7334,7 +7747,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:UNI",
+            "GROUP:UNISWAP",
             "tokens"
         ],
         "logo": {
@@ -7354,7 +7771,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
@@ -7362,7 +7778,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PICKLE",
             "tokens"
         ],
         "logo": {
@@ -7381,13 +7800,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FRONT",
             "tokens"
         ],
         "logo": {
@@ -7406,7 +7827,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
@@ -7414,7 +7834,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7432,11 +7854,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7454,14 +7877,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
-        "isFoT": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -7481,7 +7904,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -7491,7 +7913,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:AAVE",
             "tokens"
         ],
         "logo": {
@@ -7511,14 +7936,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DODO",
             "tokens"
         ],
         "logo": {
@@ -7536,12 +7963,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7559,11 +7987,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MILK2",
             "tokens"
         ],
         "logo": {
@@ -7582,7 +8012,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
@@ -7609,14 +8038,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PERP",
             "tokens"
         ],
         "logo": {
@@ -7634,7 +8065,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CMC Stablecoin",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -7642,7 +8072,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -7660,11 +8092,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x87edffde3e14c7a66c9b9724747a1c5696b742e6.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7681,13 +8114,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xad6a626ae2b43dcb1b39430ce496d2fa0365ba9c.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7705,14 +8139,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CMC DeFi",
-            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7730,13 +8165,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Compound",
             "Furucombo",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "savings"
         ],
         "logo": {
@@ -7755,7 +8191,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -7763,7 +8198,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "pools"
         ],
@@ -7783,11 +8220,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7806,14 +8244,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7831,12 +8270,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7854,7 +8294,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -7862,7 +8301,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7881,7 +8322,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Gemini Token List",
             "Kleros Tokens",
@@ -7890,7 +8330,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7908,14 +8350,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7934,13 +8377,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FUSE",
             "tokens"
         ],
         "logo": {
@@ -7957,13 +8402,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x36f3fd68e7325a35eb768f1aedaae9ea0689d723.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -7981,7 +8427,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Gemini Token List",
@@ -7991,7 +8436,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8009,7 +8456,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CMC DeFi",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -8017,7 +8463,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -8036,11 +8484,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8058,12 +8507,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8080,12 +8530,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xea319e87cf06203dae107dd8e5672175e3ee976c.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8102,12 +8553,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3383c5a8969dc413bfddc9656eb80a1408e4ba20.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Furucombo",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8125,14 +8577,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8151,7 +8604,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Gemini Token List",
             "Kleros Tokens",
@@ -8160,7 +8612,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8178,12 +8632,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8202,11 +8657,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8224,11 +8680,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8246,11 +8703,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CMC DeFi",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8268,14 +8726,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Roll Social Money",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:AXS",
             "tokens"
         ],
         "logo": {
@@ -8293,14 +8753,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8319,13 +8780,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8344,11 +8806,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8367,14 +8830,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:POLS",
             "tokens"
         ],
         "logo": {
@@ -8392,12 +8857,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8415,13 +8881,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8439,11 +8906,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8460,11 +8928,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9d47894f8becb68b9cf3428d256311affe8b068b.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8482,12 +8951,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PLOT",
             "tokens"
         ],
         "logo": {
@@ -8505,12 +8976,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8529,12 +9001,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8551,13 +9024,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x12e51e77daaa58aa0e9247db7510ea4b46f9bead.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Furucombo",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8578,7 +9052,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8599,7 +9075,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8617,12 +9095,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8641,13 +9120,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8665,13 +9145,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8689,11 +9170,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8710,11 +9192,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3e780920601d61cedb860fe9c4a90c9ea6a35e78.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8734,14 +9217,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8759,12 +9243,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8782,11 +9267,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8804,12 +9290,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8827,11 +9314,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8849,7 +9337,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Trust Wallet Assets",
@@ -8857,7 +9344,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8876,12 +9365,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8898,12 +9388,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x26607ac599266b21d13c7acf7942c7701a8b699c.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8921,12 +9412,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BASE",
             "tokens"
         ],
         "logo": {
@@ -8946,7 +9439,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BONDLY",
             "tokens"
         ],
         "logo": {
@@ -8964,14 +9460,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -8994,7 +9491,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9018,7 +9517,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9041,7 +9542,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -9067,7 +9570,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9085,13 +9590,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9114,7 +9620,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9137,7 +9645,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9160,7 +9670,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9183,7 +9695,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9206,7 +9720,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9229,7 +9745,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9253,7 +9771,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -9278,7 +9798,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -9302,7 +9824,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9326,7 +9850,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -9351,7 +9877,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -9375,7 +9903,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:BTC",
             "tokens"
         ],
@@ -9401,7 +9931,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:ETH",
             "tokens"
         ],
@@ -9425,7 +9957,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9448,7 +9982,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9466,11 +10002,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9488,13 +10025,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9512,11 +10050,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9534,7 +10073,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -9543,7 +10081,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FXS",
             "tokens"
         ],
         "logo": {
@@ -9571,7 +10112,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:1INCH",
             "tokens"
         ],
         "logo": {
@@ -9589,12 +10133,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9611,11 +10156,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x368b3a58b5f49392e5c9e4c998cb0bb966752e51.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9632,11 +10178,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4b4d2e899658fb59b1d518b68fe836b100ee8958.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9654,11 +10201,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:XED",
             "tokens"
         ],
         "logo": {
@@ -9676,11 +10225,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9698,7 +10248,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -9707,7 +10256,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FOX",
             "tokens"
         ],
         "logo": {
@@ -9725,13 +10277,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WISE",
             "tokens"
         ],
         "logo": {
@@ -9749,14 +10303,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:COMBO",
             "tokens"
         ],
         "logo": {
@@ -9773,11 +10329,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x2b4200a8d373d484993c37d63ee14aee0096cd12.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -9797,14 +10354,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Agora dataFi Tokens",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9822,12 +10380,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9845,11 +10404,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:BTC",
             "tokens"
         ],
@@ -9868,7 +10428,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -9877,7 +10436,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FRAX",
             "tokens"
         ],
         "logo": {
@@ -9896,14 +10458,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:INJ",
             "tokens"
         ],
         "logo": {
@@ -9921,11 +10485,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9943,11 +10508,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9966,13 +10532,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -9990,13 +10557,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10014,14 +10582,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10040,7 +10609,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -10048,7 +10616,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SDT",
             "tokens"
         ],
         "logo": {
@@ -10065,12 +10636,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9248c485b0b80f76da451f167a8db30f33c70907.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10088,14 +10660,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ANKR",
             "tokens"
         ],
         "logo": {
@@ -10113,13 +10687,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Dharma Token List",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10141,7 +10716,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10163,7 +10740,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10181,12 +10760,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:REEF",
             "tokens"
         ],
         "logo": {
@@ -10204,7 +10785,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -10214,7 +10794,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10233,13 +10815,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10256,13 +10839,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x67c597624b17b16fb77959217360b7cd18284253.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10280,12 +10864,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10304,13 +10889,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10328,11 +10914,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
+            "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10350,12 +10938,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10373,11 +10962,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10396,11 +10986,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:RAMP",
             "tokens"
         ],
         "logo": {
@@ -10417,13 +11009,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb987d48ed8f2c468d52d6405624eadba5e76d723.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10440,11 +11033,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x159751323a9e0415dd3d6d42a1212fe9f4a0848c.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10463,13 +11057,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10491,7 +11086,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10513,7 +11110,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10531,12 +11130,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10562,7 +11162,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10580,12 +11182,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10603,12 +11206,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10626,7 +11230,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Gemini Token List",
             "Kleros Tokens",
@@ -10635,7 +11238,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SAND",
             "tokens"
         ],
         "logo": {
@@ -10654,12 +11260,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FRM",
             "tokens"
         ],
         "logo": {
@@ -10676,12 +11284,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x298d492e8c1d909d3f63bc4a36c66c64acb3d695.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
-        "isFoT": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10699,13 +11307,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10728,7 +11337,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10745,12 +11356,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1337def18c680af1f9f45cbcab6309562975b1dd.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10768,12 +11380,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10790,11 +11403,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3fa729b4548becbad4eab6ef18413470e6d5324c.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10816,7 +11430,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10834,14 +11450,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:ETH",
             "tokens"
         ],
@@ -10860,7 +11477,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Gemini Token List",
             "Kleros Tokens",
@@ -10870,7 +11486,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FTM",
             "tokens"
         ],
         "logo": {
@@ -10888,34 +11507,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "tokens"
-        ],
-        "logo": {
-            "oneInch": "",
-            "metaBeem": ""
-        }
-    },
-    "0xa1afffe3f4d611d252010e3eaf6f4d77088b0cd7": {
-        "chainId": 1,
-        "symbol": "RFI",
-        "name": "reflect.finance",
-        "address": "0xa1afffe3f4d611d252010e3eaf6f4d77088b0cd7",
-        "decimals": 9,
-        "logoURI": "https://tokens.1inch.io/0xa1afffe3f4d611d252010e3eaf6f4d77088b0cd7.png",
-        "providers": [
-            "1inch",
-            "Coinmarketcap",
-            "Zerion"
-        ],
-        "eip2612": false,
-        "isFoT": true,
-        "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10933,7 +11531,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -10941,7 +11538,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:UST",
             "tokens"
         ],
         "logo": {
@@ -10959,7 +11559,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Trust Wallet Assets",
@@ -10968,7 +11567,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -10985,13 +11586,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1d37986f252d0e349522ea6c3b98cb935495e63e.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11009,11 +11611,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11031,7 +11634,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
@@ -11039,7 +11641,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11059,7 +11663,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11077,11 +11683,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11099,11 +11706,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11121,12 +11729,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11144,12 +11753,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LINA",
             "tokens"
         ],
         "logo": {
@@ -11167,11 +11778,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11188,12 +11800,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9aeb50f542050172359a0e1a25a9933bc8c01259.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11213,7 +11826,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11231,7 +11846,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Gemini Token List",
@@ -11240,7 +11854,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11258,12 +11874,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11280,11 +11897,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x8a9c4dfe8b9d8962b31e4e16f8321c44d48e246e.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:NCT",
             "tokens"
         ],
         "logo": {
@@ -11302,13 +11921,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
+            "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11326,12 +11947,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11349,12 +11971,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11371,12 +11994,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x297d33e17e61c2ddd812389c2105193f8348188a.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11393,11 +12017,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xec681f28f4561c2a9534799aa38e0d36a83cf478.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11416,12 +12041,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11440,12 +12066,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11463,11 +12090,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11485,12 +12113,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11508,12 +12137,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DEXTF",
             "tokens"
         ],
         "logo": {
@@ -11530,11 +12161,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x018fb5af9d015af25592a014c4266a84143de7a0.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11552,11 +12184,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11574,11 +12207,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11595,11 +12229,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x66c0dded8433c9ea86c8cf91237b14e10b4d70b7.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11620,7 +12255,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11640,7 +12277,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11658,11 +12297,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ID",
             "tokens"
         ],
         "logo": {
@@ -11680,7 +12321,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Trust Wallet Assets",
@@ -11688,7 +12328,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11706,13 +12348,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DAO",
             "tokens"
         ],
         "logo": {
@@ -11729,11 +12373,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x76c5449f4950f6338a393f53cda8b53b0cd3ca3a.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11751,11 +12396,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11773,11 +12419,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11794,13 +12441,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1456688345527be1f37e9e627da0837d6f08c925.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -11821,7 +12469,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "MyCrypto Token List",
@@ -11829,7 +12476,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11850,7 +12499,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11867,7 +12518,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9af15d7b8776fa296019979e70a5be53c714a7ec.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
@@ -11889,11 +12539,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xe6c3502997f97f9bde34cb165fbce191065e068f.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11911,12 +12562,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11933,11 +12585,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x196c81385bc536467433014042788eb707703934.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11955,11 +12608,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -11977,12 +12631,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12000,12 +12655,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12023,12 +12679,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12045,12 +12702,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xed40834a13129509a89be39a9be9c0e96a0ddd71.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12068,13 +12726,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12092,13 +12751,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12116,11 +12776,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12137,12 +12798,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x10be9a8dae441d276a5027936c3aaded2d82bc15.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12160,11 +12822,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12182,13 +12845,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "MyCrypto Token List",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12205,11 +12869,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x945facb997494cc2570096c74b5f66a3507330a1.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:BTC",
             "tokens"
         ],
@@ -12228,14 +12893,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12254,12 +12920,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12277,11 +12944,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12300,7 +12968,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -12310,7 +12977,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:RAI",
             "tokens"
         ],
         "logo": {
@@ -12328,12 +12998,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12350,11 +13021,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x34612903db071e888a4dadcaa416d3ee263a87b9.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12372,11 +13044,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ALPA",
             "tokens"
         ],
         "logo": {
@@ -12394,11 +13068,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12415,12 +13090,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9a0aba393aac4dfbff4333b06c407458002c6183.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12437,11 +13112,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7eaf9c89037e4814dc0d9952ac7f888c784548db.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12460,12 +13136,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PREMIA",
             "tokens"
         ],
         "logo": {
@@ -12483,14 +13161,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Compound",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12508,11 +13187,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
+            "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12529,14 +13210,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xcb5f72d37685c3d5ad0bb5f982443bc8fcdf570e.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
-        "isFoT": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12554,14 +13235,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:REVV",
             "tokens"
         ],
         "logo": {
@@ -12579,11 +13262,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12601,11 +13285,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12622,6 +13307,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4691937a7508860f876c9c0a2a617e7d9e945d4b.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CoinGecko",
             "Furucombo",
@@ -12630,7 +13316,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WOO",
             "tokens"
         ],
         "logo": {
@@ -12648,12 +13337,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MOD",
             "tokens"
         ],
         "logo": {
@@ -12671,7 +13362,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Gemini Token List",
             "Kleros Tokens",
@@ -12679,7 +13369,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12697,13 +13389,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12721,12 +13414,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12744,12 +13438,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12767,13 +13462,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GET",
             "tokens"
         ],
         "logo": {
@@ -12791,11 +13488,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12813,12 +13511,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12836,11 +13535,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12858,12 +13558,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MONA",
             "tokens"
         ],
         "logo": {
@@ -12880,12 +13582,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9b53e429b0badd98ef7f01f03702986c516a5715.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12903,14 +13606,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SUPER",
             "tokens"
         ],
         "logo": {
@@ -12927,12 +13632,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x6149c26cd2f7b5ccdb32029af817123f6e37df5b.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12950,14 +13656,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12976,12 +13683,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -12998,11 +13706,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7777777777697cfeecf846a76326da79cc606517.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13020,13 +13729,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13043,11 +13753,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x6c972b70c533e2e045f333ee28b9ffb8d717be69.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13065,14 +13776,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13091,13 +13803,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13115,11 +13828,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13137,12 +13851,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13162,7 +13877,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13182,7 +13899,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13200,11 +13919,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13221,11 +13941,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x661ab0ed68000491d98c796146bcf28c20d7c559.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13243,13 +13964,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13267,13 +13989,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13291,11 +14014,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13312,11 +14036,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4c25bdf026ea05f32713f00f73ca55857fbf6342.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FONT",
             "tokens"
         ],
         "logo": {
@@ -13333,12 +14059,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x68a3637ba6e75c0f66b61a42639c4e9fcd3d4824.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13356,12 +14083,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13378,11 +14106,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x739763a258640919981f9ba610ae65492455be53.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13400,14 +14129,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13425,7 +14155,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Furucombo",
@@ -13435,7 +14164,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13456,7 +14187,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "displayedSymbol": "BANK",
@@ -13477,7 +14210,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13495,11 +14230,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13517,12 +14253,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13543,7 +14280,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:NFTI",
             "tokens"
         ],
         "logo": {
@@ -13565,7 +14305,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13583,13 +14325,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13608,7 +14351,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13626,11 +14371,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13647,11 +14393,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x892a6f9df0147e5f079b0993f486f9aca3c87881.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13672,7 +14419,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13690,14 +14439,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13715,13 +14465,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Uniswap Labs Default",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13740,12 +14491,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GOVI",
             "tokens"
         ],
         "logo": {
@@ -13763,11 +14516,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13784,13 +14538,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1cbb83ebcd552d5ebf8131ef8c9cd9d9bab342bc.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13808,12 +14563,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DFX",
             "tokens"
         ],
         "logo": {
@@ -13831,12 +14588,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Roll Social Money",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13855,7 +14613,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13874,7 +14634,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13892,12 +14654,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DUSK",
             "tokens"
         ],
         "logo": {
@@ -13915,12 +14679,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13938,13 +14703,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -13961,11 +14727,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x544c42fbb96b39b21df61cf322b5edc285ee7429.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:INSUR",
             "tokens"
         ],
         "logo": {
@@ -13983,11 +14751,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:CGG",
             "tokens"
         ],
         "logo": {
@@ -14005,11 +14775,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14030,7 +14801,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14048,12 +14821,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:TOWER",
             "tokens"
         ],
         "logo": {
@@ -14070,11 +14845,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa8b61cff52564758a204f841e636265bebc8db9b.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14091,11 +14867,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x850aab69f0e0171a9a49db8be3e71351c8247df4.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14113,11 +14890,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "MyCrypto Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14134,11 +14912,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x73374ea518de7addd4c2b624c0e8b113955ee041.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:JGN",
             "tokens"
         ],
         "logo": {
@@ -14156,12 +14936,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
-        "isFoT": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14178,11 +14958,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xe9a95d175a5f4c9369f3b74222402eb1b837693b.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14199,12 +14980,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xdea67845a51e24461d5fed8084e69b426af3d5db.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14221,11 +15003,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x8b39b70e39aa811b69365398e0aace9bee238aeb.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14241,11 +15024,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 8,
         "logoURI": "https://tokens.1inch.io/0xb20043f149817bff5322f1b928e89abfc65a9925.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14265,7 +15049,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DERI",
             "tokens"
         ],
         "logo": {
@@ -14282,11 +15069,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x14da7b27b2e0fedefe0a664118b0c9bc68e2e9af.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14305,7 +15093,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14323,11 +15113,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14344,11 +15135,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xd9c2d319cd7e6177336b0a9c93c21cb48d84fb54.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14371,7 +15163,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14388,11 +15182,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb9d99c33ea2d86ec5ec6b8a4dd816ebba64404af.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14410,11 +15205,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14430,11 +15226,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xa42f266684ac2ad6ecb00df95b1c76efbb6f136c.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14451,11 +15248,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x07bac35846e5ed502aa91adf6a9e7aa210f2dcbe.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14473,12 +15271,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:CHAIN",
             "tokens"
         ],
         "logo": {
@@ -14495,11 +15295,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9f9c8ec3534c3ce16f928381372bfbfbfb9f4d24.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14517,12 +15318,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14540,12 +15342,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14562,11 +15365,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xfc979087305a826c2b2a0056cfaba50aad3e6439.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14584,11 +15388,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14605,11 +15410,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa92e7c82b11d10716ab534051b271d2f6aef7df5.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14625,11 +15431,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xc3d088842dcf02c13699f936bb83dfbbc6f721ab.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:vETH",
             "tokens"
         ],
         "logo": {
@@ -14648,7 +15456,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14666,13 +15476,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14690,13 +15501,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -14715,13 +15527,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:XSGD",
             "tokens"
         ],
         "logo": {
@@ -14739,12 +15553,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14761,11 +15576,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa0cf46eb152656c7090e769916eb44a138aaa406.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14786,7 +15602,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14804,12 +15622,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14827,11 +15646,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14848,11 +15668,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x99295f1141d58a99e939f7be6bbe734916a875b8.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14870,11 +15691,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14891,11 +15713,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xff75ced57419bcaebe5f05254983b013b0646ef5.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:COOK",
             "tokens"
         ],
         "logo": {
@@ -14912,11 +15736,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x26c8afbbfe1ebaca03c2bb082e69d0476bffe099.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14936,7 +15761,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "MyCrypto Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14954,11 +15781,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14975,11 +15803,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x106538cc16f938776c7c180186975bca23875287.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -14996,11 +15825,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3505f494c3f0fed0b594e01fa41dd3967645ca39.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15017,11 +15847,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xfbbe9b1142c699512545f47937ee6fae0e4b0aa9.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15038,11 +15869,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x29cbd0510eec0327992cd6006e63f9fa8e7f33b7.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15059,12 +15891,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb78b3320493a4efaa1028130c5ba26f0b6085ef8.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15082,7 +15915,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Dharma Token List",
             "Kleros Tokens",
@@ -15091,7 +15923,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15109,12 +15943,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15131,11 +15966,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf3ae5d769e153ef72b4e3591ac004e89f48107a1.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15153,7 +15989,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Gemini Token List",
@@ -15162,7 +15997,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LUSD",
             "PEG:USD",
             "tokens"
         ],
@@ -15180,11 +16018,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xe0b9a2c3e9f40cf74b2c7f591b2b0cca055c3112.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15201,11 +16040,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x88acdd2a6425c3faae4bc9650fd7e27e0bebb7ab.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MIST",
             "tokens"
         ],
         "logo": {
@@ -15224,7 +16065,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15241,11 +16084,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x33840024177a7daca3468912363bed8b425015c5.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15263,11 +16107,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15285,11 +16130,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15307,11 +16153,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15329,11 +16176,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15351,11 +16199,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DG",
             "tokens"
         ],
         "logo": {
@@ -15372,11 +16222,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x16c52ceece2ed57dad87319d91b5e3637d50afa4.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Defiprime"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15395,7 +16246,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15417,7 +16270,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15434,11 +16289,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4730fb1463a6f1f44aeb45f6c5c422427f37f4d0.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15456,12 +16312,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15478,11 +16335,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xe796d6ca1ceb1b022ece5296226bf784110031cd.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15500,11 +16358,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15522,12 +16381,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:KNC",
             "tokens"
         ],
         "logo": {
@@ -15546,12 +16407,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC200 ERC20",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ORBS",
             "tokens"
         ],
         "logo": {
@@ -15568,11 +16431,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa02120696c7b8fe16c09c749e4598819b2b0e915.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WXT",
             "tokens"
         ],
         "logo": {
@@ -15589,11 +16454,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x2f109021afe75b949429fe30523ee7c0d5b27207.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15611,13 +16477,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15634,11 +16501,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x5218e472cfcfe0b64a064f055b43b4cdc9efd3a6.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15659,7 +16527,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15678,7 +16548,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:XEND",
             "tokens"
         ],
         "logo": {
@@ -15695,11 +16568,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x5a666c7d92e5fa7edcb6390e4efd6d0cdd69cf37.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MARSH",
             "tokens"
         ],
         "logo": {
@@ -15717,11 +16592,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15739,12 +16615,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15762,11 +16639,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:TEL",
             "tokens"
         ],
         "logo": {
@@ -15784,11 +16663,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "Arb Whitelist Era",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15806,12 +16686,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PENDLE",
             "tokens"
         ],
         "logo": {
@@ -15829,11 +16711,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15851,12 +16734,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15875,12 +16759,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15897,11 +16782,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7c8155909cd385f120a56ef90728dd50f9ccbe52.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15919,12 +16805,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PAID",
             "tokens"
         ],
         "logo": {
@@ -15940,11 +16828,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x182f4c4c97cd1c24e1df8fc4c053e5c47bf53bef.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15961,11 +16850,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7bef710a5759d197ec0bf621c3df802c2d60d848.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -15982,11 +16872,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x358aa737e033f34df7c54306960a38d09aabd523.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16004,14 +16895,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16029,11 +16921,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BANK",
             "tokens"
         ],
         "logo": {
@@ -16050,11 +16944,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x841fb148863454a3b3570f515414759be9091465.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16071,8 +16966,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa2b4c0af19cc16a6cfacce81f192b024d625817d_1.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -16093,11 +16987,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xee9801669c6138e84bd50deb500827b776777d28.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Kleros Tokens"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16135,11 +17030,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16157,14 +17053,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16183,7 +17080,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16201,14 +17100,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16226,12 +17126,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:alUSD",
             "PEG:USD",
             "tokens"
         ],
@@ -16249,11 +17151,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7697b462a7c4ff5f8b55bdbc2f4076c2af9cf51a.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16269,10 +17172,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x677ddbd918637e5f2c79e164d402454de7da8619.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -16291,13 +17197,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16315,11 +17222,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16335,11 +17243,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xeb58343b36c7528f23caae63a150240241310049.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16357,11 +17266,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16379,7 +17289,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens",
             "Messari Verified",
@@ -16389,7 +17298,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16407,11 +17318,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "Arb Whitelist Era",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DFYN",
             "tokens"
         ],
         "logo": {
@@ -16429,12 +17342,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Set"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MVI",
             "tokens"
         ],
         "logo": {
@@ -16451,11 +17366,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3301ee63fb29f863f2333bd4466acb46cd8323e6.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16473,7 +17389,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Gemini Token List",
             "Kleros Tokens",
@@ -16481,7 +17396,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LQTY",
             "tokens"
         ],
         "logo": {
@@ -16498,11 +17416,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x87de305311d5788e8da38d19bb427645b09cb4e5.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16519,11 +17438,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf65b5c5104c4fafd4b709d9d60a185eae063276c.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16547,7 +17467,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Wrapped Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:BTC",
             "tokens"
         ],
@@ -16564,8 +17486,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 9,
         "logoURI": "https://tokens.1inch.io/0x944eee930933be5e23b690c8589021ec8619a301.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -16586,8 +17507,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xdc349913d53b446485e98b76800b6254f43df695.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -16608,7 +17528,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1681bcb589b3cfcf0c0616b0ce9b19b240643dc1.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -16629,11 +17548,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 0,
         "logoURI": "https://tokens.1inch.io/0xa150db9b1fa65b44799d4dd949d922c0a33ee606.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16652,7 +17572,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "BA ERC20 SEC Action",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets"
         ],
@@ -16676,13 +17595,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:INST",
             "tokens"
         ],
         "logo": {
@@ -16699,7 +17620,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x456d8f0d25a4e787ee60c401f8b963a465148f70.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -16721,11 +17641,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x8cb924583681cbfe487a62140a994a49f833c244.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16742,11 +17663,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x10633216e7e8281e33c86f02bf8e565a635d9770.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16763,11 +17685,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xcadc0acd4b445166f12d2c07eac6e2544fbe2eef.png",
         "providers": [
             "1inch",
-            "CoinGecko",
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16783,11 +17706,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xed30dd7e50edf3581ad970efc5d9379ce2614adb.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16805,12 +17729,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16828,12 +17753,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16851,11 +17777,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16872,11 +17799,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x6595b8fd9c920c81500dca94e53cdc712513fb1f.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16893,11 +17821,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x474021845c4643113458ea4414bdb7fb74a01a77.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16915,13 +17844,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16939,11 +17869,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "displayedSymbol": "FLX",
@@ -16964,7 +17895,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -16981,11 +17914,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x69fa8e7f6bf1ca1fb0de61e1366f7412b827cc51.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17003,12 +17937,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17024,11 +17959,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x853bb55c1f469902f088a629db8c8803a9be3857.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17047,11 +17983,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DVF",
             "tokens"
         ],
         "logo": {
@@ -17069,11 +18007,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17091,12 +18030,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:EUR",
             "tokens"
         ],
@@ -17115,11 +18055,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17135,11 +18076,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x76417e660df3e5c90c0361674c192da152a806e4.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17157,11 +18099,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17179,11 +18122,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17201,11 +18145,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17227,7 +18172,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "MyCrypto Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17244,11 +18191,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x06f3c323f0238c72bf35011071f2b5b7f43a054c.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MASQ",
             "tokens"
         ],
         "logo": {
@@ -17265,7 +18214,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x106552c11272420aad5d7e94f8acab9095a6c952.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
@@ -17289,12 +18237,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17319,7 +18268,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17336,11 +18287,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa4ef4b0b23c1fc81d3f9ecf93510e64f58a4a016.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17358,12 +18310,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "MyCrypto Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17380,11 +18333,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x738865301a9b7dd80dc3666dd48cf034ec42bdda.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17402,10 +18356,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": true,
         "tags": [
             "tokens"
         ],
@@ -17424,11 +18378,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17445,11 +18400,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x62dc4817588d53a056cbbd18231d91ffccd34b2a.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17468,7 +18424,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17486,11 +18444,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17507,8 +18466,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa64dfe8d86963151e6496bee513e366f6e42ed79.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -17530,7 +18488,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Gemini Token List",
@@ -17538,7 +18495,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MIM",
             "tokens"
         ],
         "logo": {
@@ -17557,7 +18517,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Gemini Token List",
@@ -17566,7 +18525,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SPELL",
             "tokens"
         ],
         "logo": {
@@ -17583,11 +18545,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xde5ed76e7c05ec5e4572cfc88d1acea165109e44.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17605,12 +18568,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17620,7 +18584,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
     },
     "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0": {
         "chainId": 1,
-        "symbol": "wstETH",
+        "symbol": "WstETH",
         "name": "Wrapped liquid staked Ether 2.0",
         "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
         "decimals": 18,
@@ -17628,11 +18592,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:Wst ETH",
             "PEG:ETH",
             "tokens"
         ],
@@ -17652,6 +18618,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": true,
         "tags": [
             "tokens"
         ],
@@ -17669,7 +18636,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xaecc217a749c2405b5ebc9857a16d58bdc1c367f.png",
         "providers": [
             "1inch",
-            "CoinGecko",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -17697,7 +18663,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17716,7 +18684,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens",
@@ -17724,7 +18691,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:BTC",
             "tokens"
         ],
@@ -17744,7 +18713,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CMC DeFi",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Dharma Token List",
             "Furucombo",
@@ -17754,7 +18722,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:sETH",
             "PEG:ETH",
             "tokens"
         ],
@@ -17792,8 +18763,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 9,
         "logoURI": "https://tokens.1inch.io/0x0c3685559af6f3d20c501b1076a8056a0a14426a.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -17815,11 +18785,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17837,11 +18808,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:AURORA",
             "tokens"
         ],
         "logo": {
@@ -17858,11 +18831,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xed0889f7e1c7c7267407222be277e1f1ef4d4892.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17880,13 +18854,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17902,31 +18877,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 9,
         "logoURI": "https://tokens.1inch.io/0xfb40e79e56cc7d406707b66c4fd175e07eb2ae3c.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "tokens"
-        ],
-        "logo": {
-            "oneInch": "",
-            "metaBeem": ""
-        }
-    },
-    "0x28c5805b64d163588a909012a628b5a03c1041f9": {
-        "chainId": 1,
-        "symbol": "CHOPPER",
-        "name": "CHOPPER INU",
-        "address": "0x28c5805b64d163588a909012a628b5a03c1041f9",
-        "decimals": 9,
-        "logoURI": "https://tokens.1inch.io/0x28c5805b64d163588a909012a628b5a03c1041f9.png",
-        "providers": [
-            "1inch",
-            "Coinmarketcap"
-        ],
-        "eip2612": false,
-        "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17944,11 +18900,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -17965,8 +18922,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf32aa187d5bc16a2c02a6afb7df1459d0d107574.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -17988,12 +18944,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18011,12 +18968,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PSP",
             "tokens"
         ],
         "logo": {
@@ -18034,11 +18993,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18056,32 +19016,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "tokens"
-        ],
-        "logo": {
-            "oneInch": "",
-            "metaBeem": ""
-        }
-    },
-    "0xe87e15b9c7d989474cb6d8c56b3db4efad5b21e8": {
-        "chainId": 1,
-        "symbol": "HOKK",
-        "name": "Hokkaido Inu",
-        "address": "0xe87e15b9c7d989474cb6d8c56b3db4efad5b21e8",
-        "decimals": 18,
-        "logoURI": "https://tokens.1inch.io/0xe87e15b9c7d989474cb6d8c56b3db4efad5b21e8.png",
-        "providers": [
-            "1inch",
-            "CoinGecko"
-        ],
-        "eip2612": false,
-        "tags": [
+            "crosschain",
+            "GROUP:TONCOIN",
             "tokens"
         ],
         "logo": {
@@ -18099,12 +19041,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:APW",
             "tokens"
         ],
         "logo": {
@@ -18122,12 +19066,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:rETH",
             "tokens"
         ],
         "logo": {
@@ -18144,11 +19090,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1fbd3df007eb8a7477a1eab2c63483dcc24effd6.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18164,8 +19111,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 9,
         "logoURI": "https://tokens.1inch.io/0xb1a88c33091490218965787919fcc9862c1798ee.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -18186,11 +19132,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xcfeaead4947f0705a14ec42ac3d44129e1ef3ed5.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18208,32 +19155,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "Arb Whitelist Era",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "tokens"
-        ],
-        "logo": {
-            "oneInch": "",
-            "metaBeem": ""
-        }
-    },
-    "0x8254e26e453eb5abd29b3c37ac9e8da32e5d3299": {
-        "chainId": 1,
-        "symbol": "RBX",
-        "name": "RBX",
-        "address": "0x8254e26e453eb5abd29b3c37ac9e8da32e5d3299",
-        "decimals": 18,
-        "logoURI": "https://tokens.1inch.io/0x8254e26e453eb5abd29b3c37ac9e8da32e5d3299.png",
-        "providers": [
-            "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
-        ],
-        "eip2612": true,
-        "tags": [
+            "crosschain",
+            "GROUP:BLANK",
             "tokens"
         ],
         "logo": {
@@ -18250,11 +19178,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3b484b82567a09e2588a13d54d032153f0c0aee0.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18271,11 +19200,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x16cc8367055ae7e9157dbcb9d86fd6ce82522b31.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18293,11 +19223,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18316,12 +19247,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "MyCrypto Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18339,11 +19271,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BORING",
             "tokens"
         ],
         "logo": {
@@ -18359,8 +19293,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xa68dd8cb83097765263adad881af6eed479c4a33.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -18380,9 +19313,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xb56a1f3310578f23120182fb2e58c087efe6e147.png",
         "providers": [
-            "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -18406,7 +19337,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18424,13 +19357,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18448,10 +19382,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
-            "Kleros Tokens"
+            "Kleros Tokens",
+            "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": true,
         "tags": [
             "tokens"
         ],
@@ -18469,11 +19404,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x73d7c860998ca3c01ce8c808f5577d94d545d1b4.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18491,14 +19427,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:EURA",
             "PEG:EUR",
             "tokens"
         ],
@@ -18517,13 +19455,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18540,8 +19479,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x916c5de09cf63f6602d1e1793fb41f6437814a62.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -18563,11 +19501,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18584,11 +19523,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x618679df9efcd19694bb1daa8d00718eacfa2883_1.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18606,13 +19546,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18630,10 +19571,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap"
+            "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SIS",
             "tokens"
         ],
         "logo": {
@@ -18651,12 +19595,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18673,11 +19618,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xd5d86fc8d5c0ea1ac1ac5dfab6e529c9967a45e9.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18694,11 +19640,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x2602278ee1882889b946eb11dc0e810075650983.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18716,11 +19663,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18738,13 +19686,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18762,13 +19711,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Gemini Token List",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18789,7 +19739,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18807,12 +19759,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Trust Wallet Assets",
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SYN",
             "tokens"
         ],
         "logo": {
@@ -18829,11 +19783,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x5c147e74d63b1d31aa3fd78eb229b65161983b2b.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18851,11 +19806,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "MyCrypto Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18874,7 +19830,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18891,11 +19849,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa5f2211b9b8170f694421f2046281775e8468044.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:THOR",
             "tokens"
         ],
         "logo": {
@@ -18912,11 +19872,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4c2e59d098df7b6cbae0848d66de2f8a4889b9c3.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18934,13 +19895,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -18958,13 +19920,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:STG",
             "tokens"
         ],
         "logo": {
@@ -18980,11 +19944,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 0,
         "logoURI": "https://tokens.1inch.io/0xcc8fa225d80b9c7d42f96e9570156c65d6caaa25.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -19002,13 +19967,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Defiprime",
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -19022,16 +19988,18 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "name": "CoW Protocol Token",
         "address": "0xdef1ca1fb7fbcdc777520aa7f396b4e015f497ab",
         "decimals": 18,
-        "logoURI": "https://tokens.1inch.io/0xdef1ca1fb7fbcdc777520aa7f396b4e015f497ab.png",
+        "logoURI": "https://tokens-data.1inch.io/images/1/0xdef1ca1fb7fbcdc777520aa7f396b4e015f497ab.png",
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:COW",
             "tokens"
         ],
         "logo": {
@@ -19048,11 +20016,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3541a5c1b04adaba0b83f161747815cd7b1516bc.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -19070,7 +20039,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
@@ -19092,11 +20060,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9506d37f70eb4c3d79c398d326c871abbf10521d.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MLT",
             "tokens"
         ],
         "logo": {
@@ -19113,11 +20083,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4f640f2529ee0cf119a2881485845fa8e61a782a.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ORE",
             "tokens"
         ],
         "logo": {
@@ -19134,11 +20106,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7f280dac515121dcda3eac69eb4c13a52392cace.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -19159,7 +20132,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -19176,32 +20151,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xab2a7b5876d707e0126b3a75ef7781c77c8877ee.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "tokens"
-        ],
-        "logo": {
-            "oneInch": "",
-            "metaBeem": ""
-        }
-    },
-    "0x299698b4b44bd6d023981a7317798dee12860834": {
-        "chainId": 1,
-        "symbol": "NFP",
-        "name": "New Frontier Presents",
-        "address": "0x299698b4b44bd6d023981a7317798dee12860834",
-        "decimals": 9,
-        "logoURI": "https://tokens.1inch.io/0x299698b4b44bd6d023981a7317798dee12860834.png",
-        "providers": [
-            "1inch",
-            "Coinmarketcap",
-            "Kleros Tokens"
-        ],
-        "eip2612": true,
-        "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -19221,7 +20176,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DERC",
             "tokens"
         ],
         "logo": {
@@ -19238,11 +20196,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x0ab87046fbb341d058f17cbc4c1133f25a20a52f.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:gOHM",
             "tokens"
         ],
         "logo": {
@@ -19259,11 +20219,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3b9be07d622accaed78f479bc0edabfd6397e320.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -19281,7 +20242,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -19304,11 +20264,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:VLX",
             "tokens"
         ],
         "logo": {
@@ -19326,11 +20288,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "displayedSymbol": "DATA",
@@ -19348,11 +20311,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x2ba8349123de45e931a8c8264c332e6e9cf593f9.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BCMC",
             "tokens"
         ],
         "logo": {
@@ -19370,11 +20335,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GMEE",
             "tokens"
         ],
         "logo": {
@@ -19395,7 +20362,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "displayedSymbol": "UST",
@@ -19414,11 +20383,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:VISION",
             "tokens"
         ],
         "logo": {
@@ -19436,12 +20407,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -19458,11 +20430,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x656c00e1bcd96f256f224ad9112ff426ef053733.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -19479,11 +20452,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xe7f58a92476056627f9fdb92286778abd83b285f.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DWEB",
             "tokens"
         ],
         "logo": {
@@ -19499,11 +20474,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x7815bda662050d84718b988735218cffd32f75ea.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:YEL",
             "tokens"
         ],
         "logo": {
@@ -19521,11 +20498,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MYST",
             "tokens"
         ],
         "logo": {
@@ -19543,12 +20522,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PAR",
             "tokens"
         ],
         "logo": {
@@ -19568,7 +20549,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -19586,13 +20569,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDD",
             "PEG:USD",
             "tokens"
         ],
@@ -19611,11 +20596,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -19631,11 +20617,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x632806bf5c8f062932dd121244c9fbe7becb8b48.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -19653,13 +20640,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -19678,10 +20666,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap"
+            "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:XCAD",
             "tokens"
         ],
         "logo": {
@@ -19698,11 +20689,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xddd6a0ecc3c6f6c102e5ea3d8af7b801d1a77ac8.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:UNIX",
             "tokens"
         ],
         "logo": {
@@ -19720,12 +20713,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:IQ",
             "tokens"
         ],
         "logo": {
@@ -19741,11 +20736,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x48f07301e9e29c3c38a80ae8d9ae771f224f1054.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:XZAR",
             "tokens"
         ],
         "logo": {
@@ -19762,11 +20759,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa52bffad02b1fe3f86a543a4e81962d3b3bb01a7.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -19784,14 +20782,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:EURC",
             "PEG:EUR",
             "tokens"
         ],
@@ -19809,11 +20809,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4b520c812e8430659fc9f12f6d0c39026c83588d.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "displayedSymbol": "DG",
@@ -19834,7 +20835,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ADS",
             "tokens"
         ],
         "logo": {
@@ -19852,7 +20856,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Gemini Token List",
             "Kleros Tokens",
@@ -19860,7 +20863,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:IOTX",
             "tokens"
         ],
         "logo": {
@@ -19877,11 +20883,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xd0cd466b34a24fcb2f87676278af2005ca8a78c4.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:POP",
             "tokens"
         ],
         "logo": {
@@ -19898,11 +20906,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x2af1df3ab0ab157e1e2ad8f88a7d04fbea0c7dc6.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -19918,11 +20927,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xf063fe1ab7a291c5d06a86e14730b00bf24cb589.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SALE",
             "tokens"
         ],
         "logo": {
@@ -19941,7 +20952,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -19980,12 +20993,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:RPL",
             "tokens"
         ],
         "logo": {
@@ -20003,11 +21018,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
-            "Curve Token List"
+            "Curve Token List",
+            "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GAMMA",
             "tokens"
         ],
         "logo": {
@@ -20045,11 +21063,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Trust Wallet Assets"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20066,8 +21085,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3aada3e213abf8529606924d8d1c55cbdc70bf74.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -20088,32 +21106,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb4b9dc1c77bdbb135ea907fd5a08094d98883a35.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "tokens"
-        ],
-        "logo": {
-            "oneInch": "",
-            "metaBeem": ""
-        }
-    },
-    "0x4fd51cb87ffefdf1711112b5bd8ab682e54988ea": {
-        "chainId": 1,
-        "symbol": "WPT",
-        "name": "WPT Investing Corp",
-        "address": "0x4fd51cb87ffefdf1711112b5bd8ab682e54988ea",
-        "decimals": 18,
-        "logoURI": "https://tokens.1inch.io/0x4fd51cb87ffefdf1711112b5bd8ab682e54988ea.png",
-        "providers": [
-            "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
-        ],
-        "eip2612": false,
-        "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20131,12 +21129,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20153,11 +21152,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xd084944d3c05cd115c09d072b9f44ba3e0e45921.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20174,11 +21174,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb0b195aefa3650a6908f15cdac7d92f8a5791b0b.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20195,11 +21196,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4b13006980acb09645131b91d259eaa111eaf5ba.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MYC",
             "tokens"
         ],
         "logo": {
@@ -20217,12 +21220,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -20241,11 +21245,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DOLA",
             "PEG:USD",
             "tokens"
         ],
@@ -20263,11 +21269,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3af33bef05c2dcb3c7288b77fe1c8d2aeba4d789.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:KROM",
             "tokens"
         ],
         "logo": {
@@ -20285,12 +21293,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20308,12 +21317,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20330,8 +21340,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x6dca182ac5e3f99985bc4ee0f726d6472ab1ec55.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -20352,8 +21361,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x52662717e448be36cb54588499d5a8328bd95292.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -20375,12 +21383,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20398,11 +21407,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:CAPS",
             "tokens"
         ],
         "logo": {
@@ -20420,12 +21431,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20442,11 +21454,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xfd09911130e6930bf87f2b0554c44f400bd80d3e.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20465,7 +21478,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20483,12 +21498,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20505,11 +21521,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xfb782396c9b20e564a64896181c7ac8d8979d5f4.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20526,11 +21543,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xfa14fa6958401314851a17d6c5360ca29f74b57b.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SAITO",
             "tokens"
         ],
         "logo": {
@@ -20547,11 +21566,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf8e9f10c22840b613cda05a0c5fdb59a4d6cd7ef.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20570,7 +21590,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20588,11 +21610,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20613,7 +21636,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20629,11 +21654,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x1ea48b9965bb5086f3b468e50ed93888a661fc17.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20651,11 +21677,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20672,11 +21699,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf203ca1769ca8e9e8fe1da9d147db68b6c919817.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20694,11 +21722,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20716,11 +21745,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20740,7 +21770,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:RAINI",
             "tokens"
         ],
         "logo": {
@@ -20757,11 +21790,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9393fdc77090f31c7db989390d43f454b1a6e7f3.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DEC",
             "tokens"
         ],
         "logo": {
@@ -20779,11 +21814,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20800,11 +21836,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4740735aa98dc8aa232bd049f8f0210458e7fca3.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:RDT",
             "tokens"
         ],
         "logo": {
@@ -20822,11 +21860,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SOL",
             "tokens"
         ],
         "logo": {
@@ -20843,11 +21883,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xe0a189c975e4928222978a74517442239a0b86ff.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20865,12 +21906,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Gemini Token List",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20889,7 +21931,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20906,11 +21950,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x5aa158404fed6b4730c13f49d3a7f820e14a636f.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ULX",
             "tokens"
         ],
         "logo": {
@@ -20930,7 +21976,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -20947,11 +21995,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x58fcaa970339a9b1f8c0a5b4f3fcd7af2ba3075e.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:POLAR",
             "tokens"
         ],
         "logo": {
@@ -20969,13 +22019,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:cbETH",
             "tokens"
         ],
         "logo": {
@@ -20993,12 +22045,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21015,11 +22068,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xd3e4ba569045546d09cf021ecc5dfe42b1d7f6e4.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21036,11 +22090,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xd3c51de3e6dd9b53d7f37699afb3ee3bf9b9b3f4.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21058,7 +22113,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
@@ -21080,11 +22134,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xcb84d72e61e383767c4dfeb2d8ff7f4fb89abc6e.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21101,11 +22156,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xc98d64da73a6616c42117b582e832812e7b8d57f.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21122,11 +22178,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xc91a71a1ffa3d8b22ba615ba1b9c01b2bbbf55ad.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ZZ",
             "tokens"
         ],
         "logo": {
@@ -21143,11 +22201,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xc82e3db60a52cf7529253b4ec688f631aad9e7c2.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21157,17 +22216,17 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
     },
     "0xac57de9c1a09fec648e93eb98875b212db0d460b": {
         "chainId": 1,
-        "symbol": "BabyDoge",
+        "symbol": "Baby Doge",
         "name": "Baby Doge Coin",
         "address": "0xac57de9c1a09fec648e93eb98875b212db0d460b",
         "decimals": 9,
         "logoURI": "https://tokens.1inch.io/0xac57de9c1a09fec648e93eb98875b212db0d460b.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": true,
         "tags": [
             "tokens"
         ],
@@ -21186,10 +22245,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Curve Token List"
+            "Curve Token List",
+            "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21206,11 +22268,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xc55c2175e90a46602fd42e931f62b3acc1a013ca.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:STARS",
             "tokens"
         ],
         "logo": {
@@ -21228,11 +22292,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21250,11 +22315,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21271,11 +22337,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xc4f6e93aeddc11dc22268488465babcaf09399ac.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:HI",
             "tokens"
         ],
         "logo": {
@@ -21315,11 +22383,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21336,11 +22405,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xba8a621b4a54e61c442f5ec623687e2a942225ef.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21358,11 +22428,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21379,11 +22450,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb620be8a1949aa9532e6a3510132864ef9bc3f82.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21401,11 +22473,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21422,11 +22495,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xaa8330fb2b4d5d07abfe7a72262752a8505c6b37.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:POLC",
             "tokens"
         ],
         "logo": {
@@ -21444,11 +22519,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21468,7 +22544,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:TLOS",
             "tokens"
         ],
         "logo": {
@@ -21488,7 +22567,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:XETA",
             "tokens"
         ],
         "logo": {
@@ -21509,7 +22591,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:alETH",
             "tokens"
         ],
         "logo": {
@@ -21528,7 +22613,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21544,11 +22631,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xe5f7ef61443fc36ae040650aa585b0395aef77c8.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21564,11 +22652,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xe5f7ef61443fc36ae040650aa585b0395aef77c8.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21584,11 +22673,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xe5f7ef61443fc36ae040650aa585b0395aef77c8.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21604,11 +22694,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xe5f7ef61443fc36ae040650aa585b0395aef77c8.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21624,11 +22715,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xe5f7ef61443fc36ae040650aa585b0395aef77c8.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21644,11 +22736,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xe5f7ef61443fc36ae040650aa585b0395aef77c8.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21664,11 +22757,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xe5f7ef61443fc36ae040650aa585b0395aef77c8.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21684,11 +22778,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xe5f7ef61443fc36ae040650aa585b0395aef77c8.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21704,11 +22799,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xe5f7ef61443fc36ae040650aa585b0395aef77c8.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21727,7 +22823,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21746,7 +22844,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21764,10 +22864,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": true,
         "tags": [
             "tokens"
         ],
@@ -21787,7 +22887,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21806,7 +22908,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21825,7 +22929,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21844,7 +22950,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21863,7 +22971,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21882,7 +22992,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21901,7 +23013,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21920,7 +23034,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21939,7 +23055,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21958,7 +23076,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21977,7 +23097,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -21996,7 +23118,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22015,7 +23139,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22034,7 +23160,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22053,7 +23181,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22072,7 +23202,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22091,7 +23223,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22110,7 +23244,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22129,7 +23265,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22148,7 +23286,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22167,7 +23307,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22186,7 +23328,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22205,7 +23349,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22224,7 +23370,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22243,7 +23391,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22262,7 +23412,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22281,7 +23433,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22300,7 +23454,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22319,7 +23475,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22338,7 +23496,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22357,7 +23517,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22376,7 +23538,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22395,7 +23559,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22413,13 +23579,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22438,7 +23605,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22457,7 +23626,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22476,7 +23647,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22495,7 +23668,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22514,7 +23689,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22533,7 +23710,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22552,7 +23731,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22571,7 +23752,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22590,7 +23773,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22609,7 +23794,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22628,7 +23815,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22647,7 +23836,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22666,7 +23857,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22685,7 +23878,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22704,7 +23899,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22723,7 +23920,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22742,7 +23941,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22761,7 +23962,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22780,7 +23983,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22799,7 +24004,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22818,7 +24025,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22837,7 +24046,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22856,7 +24067,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22875,7 +24088,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22894,7 +24109,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22913,7 +24130,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22932,7 +24151,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22951,7 +24172,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22970,7 +24193,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -22989,7 +24214,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23008,7 +24235,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23027,7 +24256,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23046,7 +24277,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23063,11 +24296,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x662b67d00a13faf93254714dd601f5ed49ef2f51.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23086,7 +24320,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23105,7 +24341,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23124,7 +24362,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23143,7 +24383,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23162,7 +24404,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23181,7 +24425,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23200,7 +24446,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23219,7 +24467,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23238,7 +24488,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23257,7 +24509,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23276,7 +24530,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23295,7 +24551,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23314,7 +24572,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23333,7 +24593,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23352,7 +24614,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23371,7 +24635,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23390,7 +24656,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23409,7 +24677,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23428,7 +24698,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23447,7 +24719,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23466,7 +24740,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23485,7 +24761,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23504,7 +24782,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23523,7 +24803,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23542,7 +24824,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23561,7 +24845,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23580,7 +24866,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23599,7 +24887,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23618,7 +24908,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23637,7 +24929,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23656,7 +24950,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23675,7 +24971,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23694,7 +24992,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23713,7 +25013,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23732,7 +25034,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23751,7 +25055,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23770,7 +25076,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23789,7 +25097,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23808,7 +25118,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23827,7 +25139,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23846,7 +25160,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23865,7 +25181,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23884,7 +25202,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23903,7 +25223,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23922,7 +25244,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23941,7 +25265,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23960,7 +25286,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23979,7 +25307,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -23998,7 +25328,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24017,7 +25349,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24036,7 +25370,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24055,7 +25391,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24074,7 +25412,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24093,7 +25433,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24112,7 +25454,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24131,7 +25475,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24150,7 +25496,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24169,7 +25517,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24188,7 +25538,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24207,7 +25559,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24226,7 +25580,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24245,7 +25601,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24264,7 +25622,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24283,7 +25643,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24302,7 +25664,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24321,7 +25685,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24340,7 +25706,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24359,7 +25727,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24378,7 +25748,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24397,7 +25769,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24416,7 +25790,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24435,7 +25811,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24454,7 +25832,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24473,7 +25853,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24492,7 +25874,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24511,7 +25895,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24530,7 +25916,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24549,7 +25937,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24568,7 +25958,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24587,7 +25979,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24606,7 +26000,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24625,7 +26021,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24644,7 +26042,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24663,7 +26063,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24682,7 +26084,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24701,7 +26105,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24720,7 +26126,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24739,7 +26147,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24758,7 +26168,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24777,7 +26189,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24796,7 +26210,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24815,7 +26231,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24834,7 +26252,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24853,7 +26273,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24872,7 +26294,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24891,7 +26315,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24910,7 +26336,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24929,7 +26357,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24948,7 +26378,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24967,7 +26399,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -24986,7 +26420,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25005,7 +26441,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25024,7 +26462,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25043,7 +26483,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25062,7 +26504,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25081,7 +26525,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25100,7 +26546,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25119,7 +26567,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25138,7 +26588,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25157,7 +26609,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25176,7 +26630,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25195,7 +26651,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25214,7 +26672,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25233,7 +26693,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25252,7 +26714,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25271,7 +26735,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25290,7 +26756,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25309,7 +26777,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25328,7 +26798,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25347,7 +26819,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25366,7 +26840,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25385,7 +26861,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25404,7 +26882,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25423,7 +26903,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25442,7 +26924,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25461,7 +26945,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25480,7 +26966,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25499,7 +26987,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25518,7 +27008,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25537,7 +27029,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25556,7 +27050,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25575,7 +27071,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25594,7 +27092,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25613,7 +27113,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25632,7 +27134,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25651,7 +27155,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25670,7 +27176,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25689,7 +27197,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25708,7 +27218,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25727,7 +27239,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25746,7 +27260,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25765,7 +27281,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25784,7 +27302,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25803,7 +27323,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25822,7 +27344,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25841,7 +27365,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25860,7 +27386,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25879,7 +27407,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25898,7 +27428,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25917,7 +27449,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25936,7 +27470,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25955,7 +27491,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25974,7 +27512,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -25993,7 +27533,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26012,7 +27554,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26031,7 +27575,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26050,7 +27596,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26069,7 +27617,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26088,7 +27638,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26107,7 +27659,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26126,7 +27680,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26145,7 +27701,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26164,7 +27722,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26183,7 +27743,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26202,7 +27764,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26221,7 +27785,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26240,7 +27806,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26259,7 +27827,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26278,7 +27848,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26297,7 +27869,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26316,7 +27890,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26335,7 +27911,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26354,7 +27932,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26373,7 +27953,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26392,7 +27974,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26411,7 +27995,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26430,7 +28016,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26449,7 +28037,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26468,7 +28058,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26487,7 +28079,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26506,7 +28100,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26525,7 +28121,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26544,7 +28142,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26563,7 +28163,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26582,7 +28184,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26601,7 +28205,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26620,7 +28226,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26639,7 +28247,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26658,7 +28268,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26677,7 +28289,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26696,7 +28310,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26715,7 +28331,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26734,7 +28352,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26753,7 +28373,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26772,7 +28394,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26791,7 +28415,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26810,7 +28436,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26829,7 +28457,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26848,7 +28478,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26865,11 +28497,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7051faed0775f664a0286af4f75ef5ed74e02754.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26888,7 +28521,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26907,7 +28542,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26926,7 +28563,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26945,7 +28584,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26964,7 +28605,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -26983,7 +28626,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27002,7 +28647,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27021,7 +28668,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27040,7 +28689,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27059,7 +28710,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27078,7 +28731,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27097,7 +28752,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27116,7 +28773,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27135,7 +28794,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27154,7 +28815,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27173,7 +28836,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27192,7 +28857,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27211,7 +28878,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "staking"
         ],
         "logo": {
@@ -27230,7 +28899,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27248,11 +28919,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27269,11 +28941,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9625ce7753ace1fa1865a47aae2c5c2ce4418569.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27291,11 +28964,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27313,11 +28987,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SDAO",
             "tokens"
         ],
         "logo": {
@@ -27334,11 +29010,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x98585dfc8d9e7d48f0b1ae47ce33332cf4237d96.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:NEWO",
             "tokens"
         ],
         "logo": {
@@ -27356,11 +29034,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27377,11 +29056,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x8fc8f8269ebca376d046ce292dc7eac40c8d358a.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "displayedSymbol": "DFI",
@@ -27402,6 +29082,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": true,
         "tags": [
             "tokens"
         ],
@@ -27420,35 +29101,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Furucombo",
             "Kleros Tokens",
             "Trust Wallet Assets",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "tokens"
-        ],
-        "logo": {
-            "oneInch": "",
-            "metaBeem": ""
-        }
-    },
-    "0x83249c6794bca5a77eb8c0af9f1a86e055459cea": {
-        "chainId": 1,
-        "symbol": "GIGA",
-        "name": "GigaSwap",
-        "address": "0x83249c6794bca5a77eb8c0af9f1a86e055459cea",
-        "decimals": 9,
-        "logoURI": "https://tokens.1inch.io/0x83249c6794bca5a77eb8c0af9f1a86e055459cea.png",
-        "providers": [
-            "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
-        ],
-        "eip2612": false,
-        "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27465,11 +29126,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x823556202e86763853b40e9cde725f412e294689.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27486,11 +29148,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7d29a64504629172a429e64183d6673b9dacbfce.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27507,8 +29170,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x777e2ae845272a2f540ebf6a3d03734a5a8f618e.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
         "isFoT": true,
@@ -27529,11 +29191,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x721a1b990699ee9d90b6327faad0a3e840ae8335.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27550,11 +29213,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x7105e64bf67eca3ae9b123f0e5ca2b83b2ef2da0.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27571,11 +29235,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x70008f18fc58928dce982b0a69c2c21ff80dca54.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27593,11 +29258,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MULTI",
             "tokens"
         ],
         "logo": {
@@ -27615,11 +29282,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27637,12 +29305,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Furucombo"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27660,7 +29329,6 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Defiprime",
             "Furucombo",
             "Gemini Token List",
@@ -27668,7 +29336,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27685,11 +29355,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x5d285f735998f36631f678ff41fb56a10a4d0429.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MIX",
             "tokens"
         ],
         "logo": {
@@ -27707,12 +29379,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27732,7 +29405,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27750,33 +29425,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "tokens"
-        ],
-        "logo": {
-            "oneInch": "",
-            "metaBeem": ""
-        }
-    },
-    "0x5919dea604631016c15c805e3d948a0384879892": {
-        "chainId": 1,
-        "symbol": "PEEP$",
-        "name": "The Peoples Coin",
-        "address": "0x5919dea604631016c15c805e3d948a0384879892",
-        "decimals": 9,
-        "logoURI": "https://tokens.1inch.io/0x5919dea604631016c15c805e3d948a0384879892.png",
-        "providers": [
-            "1inch",
-            "CoinGecko",
-            "Coinmarketcap",
-            "Kleros Tokens"
-        ],
-        "eip2612": false,
-        "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27794,12 +29448,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ARB",
             "tokens"
         ],
         "logo": {
@@ -27817,12 +29473,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:sDAI",
             "PEG:USD",
             "tokens"
         ],
@@ -27840,11 +29498,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb755506531786c8ac63b756bab1ac387bacb0c04.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27864,7 +29523,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27884,7 +29545,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27904,7 +29567,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27924,7 +29589,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27942,11 +29609,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -27964,13 +29632,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PEPE",
             "tokens"
         ],
         "logo": {
@@ -27987,11 +29657,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x5026f006b85729a8b14553fae6af249ad16c9aab.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28009,12 +29680,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28034,7 +29706,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28055,7 +29729,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28073,12 +29749,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28096,11 +29773,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28118,11 +29796,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:crvUSD",
             "tokens"
         ],
         "logo": {
@@ -28139,11 +29819,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x57f12fe6a4e5fe819eec699fadf9db2d06606bb4.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28163,7 +29844,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28180,11 +29863,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x78a0a62fba6fb21a83fe8a3433d44c73a4017a6f.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28201,11 +29885,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb2e96a63479c2edd2fd62b382c89d5ca79f572d3.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28223,12 +29908,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28248,7 +29934,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28268,7 +29956,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28286,12 +29976,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28309,12 +30000,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GHO",
             "tokens"
         ],
         "logo": {
@@ -28334,7 +30027,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28354,7 +30049,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28372,14 +30069,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Dharma Token List",
             "Kleros Tokens",
             "MyCrypto Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:HEX",
             "tokens"
         ],
         "logo": {
@@ -28400,7 +30099,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28417,11 +30118,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x06ddb3a8bc0abc14f85e974cf1a93a6f8d4909d9.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28439,11 +30141,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28460,11 +30163,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xed1167b6dc64e8a366db86f2e952a482d0981ebd.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28484,7 +30188,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28504,7 +30210,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28522,11 +30230,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28543,11 +30252,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x056c1d42fb1326f57da7f19ebb7dda4673f1ff55.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28568,7 +30278,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28585,11 +30297,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xb504035a11e672e12a099f32b1672b9c4a78b22f.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28607,11 +30320,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28631,7 +30345,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28651,7 +30367,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28669,12 +30387,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDV",
             "tokens"
         ],
         "logo": {
@@ -28691,11 +30411,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x455e53cbb86018ac2b8092fdcd39d8444affc3f6.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28713,11 +30434,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28737,6 +30459,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": true,
         "tags": [
             "tokens"
         ],
@@ -28754,11 +30477,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1a2eb478fa07125c9935a77b3c03a82470801e30.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28775,11 +30499,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xcd5fe23c85820f7b72d0926fc9b05b43e359b7ee.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:weETH",
             "tokens"
         ],
         "logo": {
@@ -28797,12 +30523,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28819,11 +30546,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xf1c9acdc66974dfb6decb12aa385b9cd01190e38.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28843,7 +30571,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28861,11 +30591,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -28884,11 +30615,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -28908,7 +30640,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28927,7 +30661,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28944,11 +30680,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xbf5495efe5db9ce00f80364c8b423567e58d2110.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ezETH",
             "tokens"
         ],
         "logo": {
@@ -28965,11 +30703,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xde342a3e269056fc3305f9e315f4c40d917ba521.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -28986,13 +30725,34 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xa1290d69c65a6fe4df752f95823fae25cb99e5a7.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0x04c154b66cb340f3ae24111cc767e0184ed00cc6": {
+        "chainId": 1,
+        "symbol": "pxETH",
+        "name": "Pirex Ether",
+        "address": "0x04c154b66cb340f3ae24111cc767e0184ed00cc6",
+        "decimals": 18,
+        "logoURI": "https://tokens-data.1inch.io/images/1/0x04c154b66cb340f3ae24111cc767e0184ed00cc6.png",
+        "providers": [
+            "1inch",
+            "CoinGecko",
+            "Curve Token List"
+        ],
+        "eip2612": true,
+        "isFoT": false,
+        "tags": [],
         "logo": {
             "oneInch": "",
             "metaBeem": ""
@@ -29010,7 +30770,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29027,10 +30789,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x8457ca5040ad67fdebbcc8edce889a335bc0fbfb.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29051,7 +30816,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29068,11 +30835,33 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x15e6e0d4ebeac120f9a97e71faa6a0235b85ed12.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "tokens"
+        ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0xfe18ae03741a5b84e39c295ac9c856ed7991c38e": {
+        "chainId": 1,
+        "symbol": "CDCETH",
+        "name": "Crypto.com Wrapped Staked ETH",
+        "address": "0xfe18ae03741a5b84e39c295ac9c856ed7991c38e",
+        "decimals": 18,
+        "logoURI": "https://tokens-data.1inch.io/images/1/0xfe18ae03741a5b84e39c295ac9c856ed7991c38e.png",
+        "providers": [
+            "1inch"
+        ],
+        "eip2612": true,
+        "isFoT": false,
+        "tags": [
+            "PEG:ETH",
             "tokens"
         ],
         "logo": {
@@ -29090,10 +30879,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap"
+            "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29110,11 +30901,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xd9a442856c234a39a81a089c06451ebaa4306a72.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29131,11 +30923,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x922d8563631b03c2c4cf817f4d18f6883aba0109.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29153,11 +30946,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
-            "Kleros Tokens"
+            "Kleros Tokens",
+            "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29177,7 +30972,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29194,11 +30991,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x8aec4bbdcfb451aa289bfbd3c2f4e34a44ada1be.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29215,11 +31013,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x3429d03c6f7521aec737a0bbf2e5ddcef2c3ae31.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29238,7 +31037,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29258,7 +31059,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29277,9 +31080,30 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0x4a029f7bcf33acb03547d8fa7be840347973e24e": {
+        "chainId": 1,
+        "symbol": "MAZZE",
+        "name": "MAZZE",
+        "address": "0x4a029f7bcf33acb03547d8fa7be840347973e24e",
+        "decimals": 18,
+        "logoURI": "https://tokens-data.1inch.io/images/1/0x4a029f7bcf33acb03547d8fa7be840347973e24e.png",
+        "providers": [
+            "1inch",
+            "CoinGecko"
+        ],
+        "eip2612": true,
+        "isFoT": false,
+        "tags": [],
         "logo": {
             "oneInch": "",
             "metaBeem": ""
@@ -29296,7 +31120,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29315,7 +31141,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29334,7 +31162,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29353,7 +31183,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29372,7 +31204,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29391,7 +31225,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29410,7 +31246,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29429,7 +31267,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29448,7 +31288,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29466,10 +31308,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap"
+            "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29487,10 +31331,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": true,
         "tags": [
             "tokens"
         ],
@@ -29508,11 +31352,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xdbb7a34bf10169d6d2d0d02a6cbb436cf4381bfa.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29530,11 +31375,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
-            "Kleros Tokens"
+            "Kleros Tokens",
+            "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29551,12 +31398,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x36e66fbbce51e4cd5bd3c62b637eb411b18949d4.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29574,12 +31422,81 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Kleros Tokens",
+            "Uniswap Labs Default"
+        ],
+        "eip2612": false,
+        "isFoT": false,
+        "tags": [
+            "crosschain",
+            "tokens"
+        ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0x6985884c4392d348587b19cb9eaaf157f13271cd": {
+        "chainId": 1,
+        "symbol": "ZRO",
+        "name": "LayerZero",
+        "address": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+        "decimals": 18,
+        "logoURI": "https://tokens-data.1inch.io/images/1/0x6985884c4392d348587b19cb9eaaf157f13271cd.png",
+        "providers": [
+            "1inch",
+            "CoinGecko",
+            "Kleros Tokens",
+            "Uniswap Labs Default"
+        ],
+        "eip2612": false,
+        "isFoT": false,
+        "tags": [
+            "crosschain",
+            "GROUP:ZRO",
+            "tokens"
+        ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0xa059b81568fee88791de88232e838465826cf419": {
+        "chainId": 1,
+        "symbol": "THREE",
+        "name": "Three Protocol Token",
+        "address": "0xa059b81568fee88791de88232e838465826cf419",
+        "decimals": 9,
+        "logoURI": "https://tokens-data.1inch.io/images/1/0xa059b81568fee88791de88232e838465826cf419.png",
+        "providers": [
+            "1inch",
+            "CoinGecko"
+        ],
+        "eip2612": false,
+        "isFoT": false,
+        "tags": [],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0x525574c899a7c877a11865339e57376092168258": {
+        "chainId": 1,
+        "symbol": "GURU",
+        "name": "GURU Token",
+        "address": "0x525574c899a7c877a11865339e57376092168258",
+        "decimals": 18,
+        "logoURI": "https://tokens-data.1inch.io/images/1/0x525574c899a7c877a11865339e57376092168258.png",
+        "providers": [
+            "1inch",
+            "CoinGecko",
             "Coinmarketcap",
             "Kleros Tokens"
         ],
-        "eip2612": false,
+        "eip2612": true,
+        "isFoT": false,
         "tags": [
-            "tokens"
+            "crosschain"
         ],
         "logo": {
             "oneInch": "",
@@ -29595,13 +31512,54 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9e6be44cc1236eef7e1f197418592d363bedcd5a.png",
         "providers": [
             "1inch",
+            "CoinGecko"
+        ],
+        "eip2612": false,
+        "isFoT": false,
+        "tags": [
+            "crosschain",
+            "tokens"
+        ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0x6df0e641fc9847c0c6fde39be6253045440c14d3": {
+        "chainId": 1,
+        "symbol": "DINERO",
+        "name": "Dinero Governance Token",
+        "address": "0x6df0e641fc9847c0c6fde39be6253045440c14d3",
+        "decimals": 18,
+        "logoURI": "https://tokens-data.1inch.io/images/1/0x6df0e641fc9847c0c6fde39be6253045440c14d3.png",
+        "providers": [
+            "1inch",
             "CoinGecko",
             "Coinmarketcap"
         ],
-        "eip2612": false,
-        "tags": [
-            "tokens"
+        "eip2612": true,
+        "isFoT": false,
+        "tags": [],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0xee2a03aa6dacf51c18679c516ad5283d8e7c2637": {
+        "chainId": 1,
+        "symbol": "NEIRO",
+        "name": "Neiro",
+        "address": "0xee2a03aa6dacf51c18679c516ad5283d8e7c2637",
+        "decimals": 9,
+        "logoURI": "https://tokens-data.1inch.io/images/1/0xee2a03aa6dacf51c18679c516ad5283d8e7c2637.png",
+        "providers": [
+            "1inch",
+            "CoinGecko",
+            "Kleros Tokens"
         ],
+        "eip2612": false,
+        "isFoT": false,
+        "tags": [],
         "logo": {
             "oneInch": "",
             "metaBeem": ""
@@ -29621,8 +31579,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "native"
+            "crosschain",
+            "GROUP:ETH",
+            "native",
+            "PEG:ETH"
         ],
         "logo": {
             "oneInch": "",
@@ -29644,7 +31606,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WETH",
             "PEG:ETH",
             "tokens"
         ],
@@ -29668,7 +31633,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SNX",
             "tokens"
         ],
         "logo": {
@@ -29685,6 +31653,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xda10009cbd5d07dd0cecc66161fc93d7c9000da1.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CoinGecko",
             "Curve Token List",
@@ -29692,7 +31661,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DAI",
             "PEG:USD",
             "tokens"
         ],
@@ -29716,7 +31688,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDT",
             "PEG:USD",
             "tokens"
         ],
@@ -29740,7 +31715,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WBTC",
             "PEG:BTC",
             "tokens"
         ],
@@ -29764,7 +31742,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LINK",
             "tokens"
         ],
         "logo": {
@@ -29786,7 +31767,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDC.e",
             "PEG:USD",
             "tokens"
         ],
@@ -29810,7 +31794,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:sUSD",
             "PEG:USD",
             "tokens"
         ],
@@ -29832,7 +31819,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29852,7 +31841,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -29873,7 +31864,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:RAI",
             "tokens"
         ],
         "logo": {
@@ -29894,7 +31888,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DAI",
+            "GROUP:LYRA",
             "tokens"
         ],
         "logo": {
@@ -29912,11 +31910,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PERP",
             "tokens"
         ],
         "logo": {
@@ -29936,7 +31936,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:KROM",
             "tokens"
         ],
         "logo": {
@@ -29959,7 +31962,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:OP",
             "tokens"
         ],
@@ -29982,7 +31987,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30003,7 +32010,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:sETH",
             "PEG:ETH",
             "tokens"
         ],
@@ -30025,7 +32035,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USD+",
             "PEG:USD",
             "tokens"
         ],
@@ -30045,7 +32058,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SDL",
             "tokens"
         ],
         "logo": {
@@ -30065,7 +32081,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:STG",
             "tokens"
         ],
         "logo": {
@@ -30085,7 +32104,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DOLA",
             "PEG:USD",
             "tokens"
         ],
@@ -30108,7 +32130,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30130,7 +32154,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30140,7 +32166,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
     },
     "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb": {
         "chainId": 10,
-        "symbol": "wstETH",
+        "symbol": "WstETH",
         "name": "Wrapped liquid staked Ether 2.0",
         "address": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
         "decimals": 18,
@@ -30151,7 +32177,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:Wst ETH",
             "tokens"
         ],
         "logo": {
@@ -30171,7 +32200,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30191,7 +32222,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30211,7 +32244,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:alETH",
             "tokens"
         ],
         "logo": {
@@ -30231,7 +32267,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:alUSD",
             "tokens"
         ],
         "logo": {
@@ -30253,7 +32292,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:rETH",
             "tokens"
         ],
         "logo": {
@@ -30275,7 +32317,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MAI",
             "tokens"
         ],
         "logo": {
@@ -30297,7 +32342,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BUSD",
             "tokens"
         ],
         "logo": {
@@ -30317,7 +32365,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30337,7 +32387,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30357,7 +32409,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DHT",
             "tokens"
         ],
         "logo": {
@@ -30374,10 +32429,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x47536f17f4ff30e64a96a7555826b8f9e66ec468.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MMY",
             "tokens"
         ],
         "logo": {
@@ -30399,7 +32458,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDC",
             "tokens"
         ],
         "logo": {
@@ -30419,7 +32481,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30441,7 +32505,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30461,7 +32527,55 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "tokens"
+        ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0x528cdc92eab044e1e39fe43b9514bfdab4412b98": {
+        "chainId": 10,
+        "symbol": "GIV",
+        "name": "Giveth Token",
+        "address": "0x528cdc92eab044e1e39fe43b9514bfdab4412b98",
+        "decimals": 18,
+        "logoURI": null,
+        "providers": [
+            "1inch",
+            "CoinGecko",
+            "Kleros Tokens"
+        ],
+        "eip2612": false,
+        "isFoT": false,
+        "tags": [
+            "crosschain",
+            "GROUP:GIV"
+        ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0xad42d013ac31486b73b6b059e748172994736426": {
+        "chainId": 10,
+        "symbol": "1INCH",
+        "name": "1inch",
+        "address": "0xad42d013ac31486b73b6b059e748172994736426",
+        "decimals": 18,
+        "logoURI": "https://tokens.1inch.io/0xad42d013ac31486b73b6b059e748172994736426.png",
+        "providers": [
+            "1inch",
+            "Uniswap Labs Default"
+        ],
+        "eip2612": false,
+        "isFoT": false,
+        "tags": [
+            "crosschain",
+            "GROUP:1INCH",
             "tokens"
         ],
         "logo": {
@@ -30482,7 +32596,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30500,14 +32616,43 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDV",
             "PEG:USD",
+            "tokens"
+        ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0x6985884c4392d348587b19cb9eaaf157f13271cd": {
+        "chainId": 10,
+        "symbol": "ZRO",
+        "name": "LayerZero",
+        "address": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+        "decimals": 18,
+        "logoURI": "https://tokens-data.1inch.io/images/10/0x6985884c4392d348587b19cb9eaaf157f13271cd.png",
+        "providers": [
+            "1inch",
+            "CoinGecko",
+            "Coinmarketcap",
+            "Kleros Tokens",
+            "PancakeSwap Extended",
+            "Uniswap Labs Default"
+        ],
+        "eip2612": false,
+        "isFoT": false,
+        "tags": [
+            "crosschain",
+            "GROUP:ZRO",
             "tokens"
         ],
         "logo": {
@@ -30531,7 +32676,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30553,7 +32700,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30574,7 +32723,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SNX",
             "tokens"
         ],
         "logo": {
@@ -30594,7 +32746,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30616,7 +32770,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30640,7 +32796,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30664,7 +32822,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ADX",
             "tokens"
         ],
         "logo": {
@@ -30686,7 +32847,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Top 100"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MIST",
             "tokens"
         ],
         "logo": {
@@ -30705,12 +32869,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CoinGecko",
             "Coinmarketcap",
+            "Kleros Tokens",
             "PancakeSwap Extended",
             "PancakeSwap Top 100",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30729,11 +32896,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CoinGecko",
             "Coinmarketcap",
+            "Kleros Tokens",
             "PancakeSwap Extended",
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:HIGH",
             "tokens"
         ],
         "logo": {
@@ -30756,7 +32927,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Top 100"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30779,7 +32952,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Top 100"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PAID",
             "tokens"
         ],
         "logo": {
@@ -30804,7 +32980,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30826,7 +33004,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30849,7 +33029,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SDAO",
             "tokens"
         ],
         "logo": {
@@ -30871,7 +33054,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30893,7 +33078,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30915,7 +33102,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30936,7 +33125,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MIX",
             "tokens"
         ],
         "logo": {
@@ -30958,7 +33150,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -30980,7 +33174,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:TONCOIN",
             "tokens"
         ],
         "logo": {
@@ -31000,7 +33197,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31021,7 +33220,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31043,7 +33244,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31066,7 +33269,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31086,10 +33291,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko",
             "Coinmarketcap",
             "Kleros Tokens",
+            "PancakeSwap Extended",
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DAO",
             "tokens"
         ],
         "logo": {
@@ -31110,7 +33319,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31130,7 +33341,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BTBS",
             "tokens"
         ],
         "logo": {
@@ -31151,7 +33365,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31174,7 +33390,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:EURA",
             "PEG:EUR",
             "tokens"
         ],
@@ -31214,10 +33433,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap"
+            "Coinmarketcap",
+            "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GAMMA",
             "tokens"
         ],
         "logo": {
@@ -31239,7 +33462,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Top 100"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31260,7 +33485,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31280,7 +33507,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PEFI",
             "tokens"
         ],
         "logo": {
@@ -31301,7 +33531,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:UCO",
             "tokens"
         ],
         "logo": {
@@ -31322,7 +33555,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31345,7 +33580,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FTM",
             "tokens"
         ],
         "logo": {
@@ -31366,7 +33604,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:NFTD",
             "tokens"
         ],
         "logo": {
@@ -31386,7 +33627,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SWAP",
             "tokens"
         ],
         "logo": {
@@ -31410,7 +33654,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31431,7 +33677,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USD+",
             "tokens"
         ],
         "logo": {
@@ -31451,7 +33700,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31476,7 +33727,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31497,7 +33750,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:POLC",
             "tokens"
         ],
         "logo": {
@@ -31518,7 +33774,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31536,10 +33794,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap"
+            "Coinmarketcap",
+            "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31560,7 +33821,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31603,7 +33866,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:TLOS",
             "tokens"
         ],
         "logo": {
@@ -31626,7 +33892,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31649,7 +33917,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31667,10 +33937,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap"
+            "Coinmarketcap",
+            "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31691,7 +33964,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:AMPL",
             "tokens"
         ],
         "logo": {
@@ -31711,7 +33987,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31732,7 +34010,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ULX",
             "tokens"
         ],
         "logo": {
@@ -31753,7 +34034,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31773,7 +34056,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31818,7 +34103,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MATIC",
+            "PEG:MATIC",
             "tokens"
         ],
         "logo": {
@@ -31839,7 +34128,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31857,10 +34148,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap"
+            "Coinmarketcap",
+            "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31901,7 +34195,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31921,7 +34217,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31965,7 +34263,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -31986,7 +34286,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:STARS",
             "tokens"
         ],
         "logo": {
@@ -32007,7 +34310,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:HI",
             "tokens"
         ],
         "logo": {
@@ -32052,7 +34358,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32068,11 +34376,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xa4838122c683f732289805fc3c207febd55babdd.png",
         "providers": [
-            "1inch",
-            "CoinGecko"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32093,7 +34402,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32113,7 +34424,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32135,7 +34448,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Top 100"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32159,7 +34474,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Top 100"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32179,7 +34496,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:XETA",
             "tokens"
         ],
         "logo": {
@@ -32203,7 +34523,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32224,7 +34546,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32245,7 +34569,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DERI",
             "tokens"
         ],
         "logo": {
@@ -32269,7 +34596,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32289,7 +34618,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32309,7 +34640,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32331,7 +34664,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32353,7 +34688,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32376,7 +34713,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SOL",
             "tokens"
         ],
         "logo": {
@@ -32397,7 +34737,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DOMI",
             "tokens"
         ],
         "logo": {
@@ -32419,7 +34762,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32440,7 +34785,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32460,7 +34807,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32503,7 +34852,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32525,7 +34876,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32568,7 +34921,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "displayedSymbol": "GMT",
@@ -32592,7 +34947,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32614,7 +34971,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MULTI",
             "tokens"
         ],
         "logo": {
@@ -32633,10 +34993,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CoinGecko",
             "Coinmarketcap",
+            "Kleros Tokens",
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SIS",
             "tokens"
         ],
         "logo": {
@@ -32657,7 +35021,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32700,7 +35066,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:CGG",
             "tokens"
         ],
         "logo": {
@@ -32745,7 +35114,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:STG",
             "tokens"
         ],
         "logo": {
@@ -32766,7 +35138,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32788,7 +35162,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:CAPS",
             "tokens"
         ],
         "logo": {
@@ -32811,7 +35188,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MIM",
             "tokens"
         ],
         "logo": {
@@ -32852,8 +35232,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "native"
+            "crosschain",
+            "GROUP:BNB",
+            "native",
+            "PEG:BNB"
         ],
         "logo": {
             "oneInch": "",
@@ -32878,7 +35262,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WBNB",
             "PEG:BNB",
             "tokens"
         ],
@@ -32906,7 +35293,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDT",
             "PEG:USD",
             "tokens"
         ],
@@ -32933,7 +35323,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -32960,7 +35352,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BUSD",
             "PEG:USD",
             "tokens"
         ],
@@ -32989,7 +35384,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ETH",
             "PEG:ETH",
             "tokens"
         ],
@@ -33015,7 +35413,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33039,7 +35439,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33063,7 +35465,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33089,7 +35493,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33115,7 +35521,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:UST",
             "tokens"
         ],
         "logo": {
@@ -33143,7 +35552,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33170,7 +35581,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:UNI",
+            "GROUP:UNISWAP",
             "tokens"
         ],
         "logo": {
@@ -33198,7 +35613,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LINK",
             "tokens"
         ],
         "logo": {
@@ -33225,7 +35643,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDC",
             "PEG:USD",
             "tokens"
         ],
@@ -33245,7 +35666,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33273,7 +35696,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DAI",
             "PEG:USD",
             "tokens"
         ],
@@ -33298,7 +35724,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BAND",
             "tokens"
         ],
         "logo": {
@@ -33317,11 +35746,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CoinGecko",
             "Coinmarketcap",
-            "Kleros Tokens",
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33343,7 +35773,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33371,7 +35803,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33396,7 +35830,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Top 100"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33446,7 +35882,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33473,7 +35911,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33494,7 +35934,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:EGG",
             "tokens"
         ],
         "logo": {
@@ -33517,7 +35960,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33544,7 +35989,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SXP",
             "tokens"
         ],
         "logo": {
@@ -33571,7 +36019,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33598,7 +36048,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:COMP",
             "tokens"
         ],
         "logo": {
@@ -33619,7 +36072,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33644,7 +36099,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Top 100"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:REEF",
             "tokens"
         ],
         "logo": {
@@ -33674,7 +36132,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33700,7 +36160,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:INJ",
             "tokens"
         ],
         "logo": {
@@ -33725,7 +36188,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33749,7 +36214,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33775,7 +36242,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33799,7 +36268,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LIT",
             "tokens"
         ],
         "logo": {
@@ -33824,7 +36296,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33847,7 +36321,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33871,7 +36347,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Top 100"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FRONT",
             "tokens"
         ],
         "logo": {
@@ -33894,7 +36373,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33920,7 +36401,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33947,7 +36430,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -33977,7 +36462,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:1INCH",
             "tokens"
         ],
         "logo": {
@@ -34001,7 +36489,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34024,7 +36514,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -34048,7 +36540,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -34072,7 +36566,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -34096,7 +36592,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:BNB",
             "tokens"
         ],
@@ -34121,7 +36619,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34144,7 +36644,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34167,7 +36669,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:vETH",
             "PEG:ETH",
             "tokens"
         ],
@@ -34191,7 +36696,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34214,7 +36721,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34237,7 +36746,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34261,7 +36772,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34284,7 +36797,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34307,7 +36822,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:ETH",
             "tokens"
         ],
@@ -34332,7 +36849,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34355,7 +36874,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34381,7 +36902,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Venus Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:ETH",
             "tokens"
         ],
@@ -34406,7 +36929,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34430,7 +36955,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:renBTC",
             "tokens"
         ],
         "logo": {
@@ -34452,7 +36980,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BANANA",
             "tokens"
         ],
         "logo": {
@@ -34477,7 +37008,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34499,7 +37032,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:NEAR",
             "tokens"
         ],
         "logo": {
@@ -34520,7 +37056,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34544,7 +37082,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34568,7 +37108,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BAT",
             "tokens"
         ],
         "logo": {
@@ -34588,7 +37131,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34613,7 +37158,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Top 100"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DODO",
             "tokens"
         ],
         "logo": {
@@ -34637,7 +37185,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Top 100"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:IOTX",
             "tokens"
         ],
         "logo": {
@@ -34662,7 +37213,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ANKR",
             "tokens"
         ],
         "logo": {
@@ -34686,7 +37240,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Top 100"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LINA",
             "tokens"
         ],
         "logo": {
@@ -34711,7 +37268,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MATH",
             "tokens"
         ],
         "logo": {
@@ -34735,7 +37295,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LTO",
             "tokens"
         ],
         "logo": {
@@ -34754,6 +37317,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CoinGecko",
             "Coinmarketcap",
+            "Kleros Tokens",
             "PancakeSwap Extended",
             "Trust Wallet Assets"
         ],
@@ -34781,7 +37345,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ANY",
             "tokens"
         ],
         "logo": {
@@ -34800,7 +37367,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:JulD",
             "tokens"
         ],
         "logo": {
@@ -34823,7 +37393,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34846,7 +37418,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34868,7 +37442,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34889,7 +37465,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34909,7 +37487,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34930,7 +37510,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34955,7 +37537,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Top 100"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -34979,7 +37563,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ALPACA",
             "tokens"
         ],
         "logo": {
@@ -35000,7 +37587,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35020,7 +37609,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35044,7 +37635,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Top 100"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35063,7 +37656,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35083,7 +37678,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35105,7 +37702,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35128,7 +37727,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Top 100"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35147,7 +37748,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35169,7 +37772,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35190,7 +37795,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ALPA",
             "tokens"
         ],
         "logo": {
@@ -35212,7 +37820,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:JGN",
             "tokens"
         ],
         "logo": {
@@ -35234,7 +37845,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35254,7 +37867,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35273,7 +37888,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35334,7 +37951,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35356,7 +37975,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35376,7 +37997,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35398,7 +38021,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35419,7 +38044,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MILK2",
             "tokens"
         ],
         "logo": {
@@ -35441,7 +38069,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DUSK",
             "tokens"
         ],
         "logo": {
@@ -35465,7 +38096,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35488,7 +38121,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35509,7 +38144,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35549,7 +38186,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35592,7 +38231,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35612,7 +38253,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DFX",
             "tokens"
         ],
         "logo": {
@@ -35654,7 +38298,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35723,7 +38369,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Top 100"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35743,7 +38391,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35764,7 +38414,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35783,7 +38435,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:POLAR",
             "tokens"
         ],
         "logo": {
@@ -35804,7 +38459,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35824,7 +38481,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35846,7 +38505,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SUPER",
             "tokens"
         ],
         "logo": {
@@ -35868,7 +38530,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35952,7 +38616,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35975,7 +38641,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -35999,7 +38667,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36020,7 +38690,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:BNB",
             "tokens"
         ],
@@ -36040,7 +38712,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36059,7 +38733,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36080,7 +38756,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36106,7 +38784,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36127,7 +38807,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BONDLY",
             "tokens"
         ],
         "logo": {
@@ -36148,7 +38831,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36173,7 +38858,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36234,7 +38921,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:COOK",
             "tokens"
         ],
         "logo": {
@@ -36256,7 +38946,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36277,7 +38969,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36300,7 +38994,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Top 100"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36325,7 +39021,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36344,7 +39042,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36367,7 +39067,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FUSE",
             "tokens"
         ],
         "logo": {
@@ -36408,7 +39111,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36430,7 +39135,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:XED",
             "tokens"
         ],
         "logo": {
@@ -36470,7 +39178,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36489,7 +39199,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36532,7 +39244,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36702,7 +39416,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36725,7 +39441,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36748,7 +39466,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36767,7 +39487,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36809,7 +39531,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36833,7 +39557,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36853,7 +39579,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36876,7 +39604,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:POLS",
             "tokens"
         ],
         "logo": {
@@ -36896,7 +39627,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36918,7 +39651,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -36939,7 +39674,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:XEND",
             "tokens"
         ],
         "logo": {
@@ -36960,7 +39698,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37003,7 +39743,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MOD",
             "tokens"
         ],
         "logo": {
@@ -37023,7 +39766,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37044,7 +39789,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37064,7 +39811,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GEN",
             "tokens"
         ],
         "logo": {
@@ -37085,7 +39835,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37109,7 +39861,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37132,7 +39886,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MARSH",
             "tokens"
         ],
         "logo": {
@@ -37178,7 +39935,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Top 100"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:RAMP",
             "tokens"
         ],
         "logo": {
@@ -37220,7 +39980,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37325,7 +40087,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37387,7 +40151,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37454,7 +40220,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37475,7 +40243,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37517,7 +40287,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37540,7 +40312,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PERL",
             "tokens"
         ],
         "logo": {
@@ -37561,7 +40336,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:OM",
             "tokens"
         ],
         "logo": {
@@ -37641,6 +40419,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x4691937a7508860f876c9c0a2a617e7d9e945d4b.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CoinGecko",
             "Coinmarketcap",
@@ -37652,7 +40431,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WOO",
             "tokens"
         ],
         "logo": {
@@ -37670,11 +40452,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
-            "Trust Wallet Assets"
+            "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37715,7 +40498,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37739,7 +40524,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37760,7 +40547,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37784,7 +40573,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37805,7 +40596,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37824,7 +40617,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LAND",
             "tokens"
         ],
         "logo": {
@@ -37845,7 +40641,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37866,7 +40664,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FEED",
             "tokens"
         ],
         "logo": {
@@ -37888,7 +40689,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37909,7 +40712,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37930,7 +40735,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:KNC",
             "tokens"
         ],
         "logo": {
@@ -37953,7 +40761,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37974,7 +40784,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -37997,7 +40809,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -38038,7 +40852,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -38100,7 +40916,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -38121,7 +40939,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -38163,7 +40983,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -38273,7 +41095,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -38296,7 +41120,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BORING",
             "tokens"
         ],
         "logo": {
@@ -38316,7 +41143,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -38337,7 +41166,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -38357,7 +41188,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -38376,10 +41209,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CoinGecko",
             "Coinmarketcap",
-            "Kleros Tokens"
+            "Kleros Tokens",
+            "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -38400,7 +41236,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -38443,7 +41281,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -38463,7 +41303,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -38482,7 +41324,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:deUSDC",
             "PEG:USD",
             "tokens"
         ],
@@ -38505,7 +41350,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FRAX",
             "tokens"
         ],
         "logo": {
@@ -38527,7 +41375,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -38548,7 +41398,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ORE",
             "tokens"
         ],
         "logo": {
@@ -38569,7 +41422,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -38614,7 +41469,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:TOWER",
             "tokens"
         ],
         "logo": {
@@ -38635,7 +41493,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -38656,7 +41516,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -38678,7 +41540,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DERC",
             "tokens"
         ],
         "logo": {
@@ -38702,7 +41567,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -38723,7 +41590,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:TRY",
             "tokens"
         ],
         "logo": {
@@ -38744,7 +41614,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GAIA",
             "tokens"
         ],
         "logo": {
@@ -38766,7 +41639,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:VLX",
             "tokens"
         ],
         "logo": {
@@ -38788,7 +41664,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FRM",
             "tokens"
         ],
         "logo": {
@@ -38811,7 +41690,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:REVV",
             "tokens"
         ],
         "logo": {
@@ -38832,7 +41714,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BCMC",
             "tokens"
         ],
         "logo": {
@@ -38855,7 +41740,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GMEE",
             "tokens"
         ],
         "logo": {
@@ -38877,7 +41765,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -38921,7 +41811,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:YEL",
             "tokens"
         ],
         "logo": {
@@ -38943,7 +41836,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:INSUR",
             "tokens"
         ],
         "logo": {
@@ -38986,7 +41882,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39008,7 +41906,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDD",
             "PEG:USD",
             "tokens"
         ],
@@ -39029,7 +41930,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:XCAD",
             "tokens"
         ],
         "logo": {
@@ -39049,7 +41953,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39069,7 +41975,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39088,11 +41996,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CoinGecko",
             "Coinmarketcap",
-            "Kleros Tokens",
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39115,7 +42024,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DATA",
             "tokens"
         ],
         "logo": {
@@ -39140,7 +42052,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:AXS",
             "tokens"
         ],
         "logo": {
@@ -39161,7 +42076,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ADS",
             "tokens"
         ],
         "logo": {
@@ -39182,7 +42100,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SALE",
             "tokens"
         ],
         "logo": {
@@ -39204,7 +42125,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LIME",
             "tokens"
         ],
         "logo": {
@@ -39227,7 +42151,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39247,7 +42173,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39269,7 +42197,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39288,7 +42218,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39310,7 +42242,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SAITO",
             "tokens"
         ],
         "logo": {
@@ -39331,7 +42266,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39351,7 +42288,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39373,7 +42312,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Top 100"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39393,7 +42334,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39415,7 +42358,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39436,7 +42381,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39457,7 +42404,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:RAINI",
             "tokens"
         ],
         "logo": {
@@ -39477,7 +42427,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39499,7 +42451,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:NUM",
             "tokens"
         ],
         "logo": {
@@ -39519,7 +42474,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39540,7 +42497,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39561,7 +42520,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DEC",
             "tokens"
         ],
         "logo": {
@@ -39582,7 +42544,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:RDT",
             "tokens"
         ],
         "logo": {
@@ -39603,9 +42568,30 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0xa73164db271931cf952cbaeff9e8f5817b42fa5c": {
+        "chainId": 56,
+        "symbol": "LAND",
+        "name": "Landshare",
+        "address": "0xa73164db271931cf952cbaeff9e8f5817b42fa5c",
+        "decimals": 18,
+        "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/11245.png",
+        "providers": [
+            "1inch",
+            "CoinGecko"
+        ],
+        "eip2612": false,
+        "isFoT": false,
+        "tags": [],
         "logo": {
             "oneInch": "",
             "metaBeem": ""
@@ -39627,7 +42613,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ID",
             "tokens"
         ],
         "logo": {
@@ -39650,7 +42639,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:RDNT",
             "tokens"
         ],
         "logo": {
@@ -39674,7 +42666,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:TUSD",
             "PEG:USD",
             "tokens"
         ],
@@ -39698,7 +42693,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39715,11 +42712,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x0034719300501b06e10ebb1d07ea5967301f0941.png",
         "providers": [
             "1inch",
-            "CoinGecko",
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39742,7 +42740,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ORBS",
             "tokens"
         ],
         "logo": {
@@ -39763,7 +42764,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MLT",
             "tokens"
         ],
         "logo": {
@@ -39786,7 +42790,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39808,7 +42814,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39830,7 +42838,36 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "tokens"
+        ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0x6985884c4392d348587b19cb9eaaf157f13271cd": {
+        "chainId": 56,
+        "symbol": "ZRO",
+        "name": "LayerZero",
+        "address": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+        "decimals": 18,
+        "logoURI": "https://tokens-data.1inch.io/images/56/0x6985884c4392d348587b19cb9eaaf157f13271cd.png",
+        "providers": [
+            "1inch",
+            "CoinGecko",
+            "Coinmarketcap",
+            "Kleros Tokens",
+            "PancakeSwap Extended",
+            "Uniswap Labs Default"
+        ],
+        "eip2612": false,
+        "isFoT": false,
+        "tags": [
+            "crosschain",
+            "GROUP:ZRO",
             "tokens"
         ],
         "logo": {
@@ -39846,14 +42883,17 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "name": "CoW Protocol Token from Mainnet",
         "address": "0x177127622c4a00f3d409b75571e12cb3c8973d3c",
         "decimals": 18,
-        "logoURI": "https://tokens.1inch.io/0x177127622c4a00f3d409b75571e12cb3c8973d3c.png",
+        "logoURI": "https://tokens-data.1inch.io/images/100/0x177127622c4a00f3d409b75571e12cb3c8973d3c.png",
         "providers": [
             "1inch",
             "CoinGecko",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:COW",
             "tokens"
         ],
         "logo": {
@@ -39872,7 +42912,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39891,7 +42933,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39910,7 +42954,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39929,7 +42975,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39948,7 +42996,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39967,7 +43017,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -39986,7 +43038,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40005,7 +43059,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40024,7 +43080,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40043,7 +43101,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40062,7 +43122,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40081,7 +43143,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40100,7 +43164,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40119,7 +43185,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40138,7 +43206,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40157,7 +43227,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40176,7 +43248,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40195,7 +43269,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40214,7 +43290,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40233,7 +43311,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40252,7 +43332,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40271,7 +43353,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40290,7 +43374,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40309,7 +43395,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40328,7 +43416,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40347,7 +43437,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40366,7 +43458,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40385,7 +43479,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40404,7 +43500,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40423,7 +43521,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40444,7 +43544,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40463,7 +43565,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40482,7 +43586,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40501,7 +43607,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40520,7 +43628,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40539,7 +43649,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40558,7 +43670,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40577,7 +43691,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40596,7 +43712,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40615,7 +43733,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40634,7 +43754,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40653,7 +43775,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40672,7 +43796,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40691,7 +43817,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40710,7 +43838,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40729,7 +43859,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40748,7 +43880,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40767,7 +43901,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40786,7 +43922,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40805,7 +43943,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40824,7 +43964,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40843,7 +43985,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40862,7 +44006,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40881,7 +44027,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40900,7 +44048,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40919,7 +44069,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40938,7 +44090,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40957,7 +44111,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40976,7 +44132,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -40995,7 +44153,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41014,7 +44174,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41033,7 +44195,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41052,7 +44216,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41071,7 +44237,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41090,7 +44258,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41109,7 +44279,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41128,7 +44300,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41147,7 +44321,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41167,7 +44343,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:EUR",
             "tokens"
         ],
@@ -41189,7 +44367,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DXD",
             "tokens"
         ],
         "logo": {
@@ -41210,7 +44391,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FOX",
             "tokens"
         ],
         "logo": {
@@ -41231,7 +44415,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GIV",
             "tokens"
         ],
         "logo": {
@@ -41252,7 +44439,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GNO",
             "tokens"
         ],
         "logo": {
@@ -41273,7 +44463,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41295,7 +44487,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDC",
+            "PEG:USD",
             "tokens"
         ],
         "logo": {
@@ -41317,7 +44513,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDT",
             "PEG:USD",
             "tokens"
         ],
@@ -41339,7 +44538,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WBTC",
             "PEG:BTC",
             "tokens"
         ],
@@ -41361,7 +44563,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ETH",
+            "GROUP:WETH",
             "PEG:ETH",
             "tokens"
         ],
@@ -41384,7 +44590,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -41405,7 +44613,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41427,7 +44637,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41446,7 +44658,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41465,7 +44679,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41484,7 +44700,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41503,7 +44721,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41522,7 +44742,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41541,7 +44763,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41560,7 +44784,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41579,7 +44805,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41598,7 +44826,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41617,7 +44847,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41636,7 +44868,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41655,7 +44889,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41674,7 +44910,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41693,7 +44931,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41712,7 +44952,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41731,7 +44973,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41750,7 +44994,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41769,7 +45015,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41788,7 +45036,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41807,7 +45057,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41826,7 +45078,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41845,7 +45099,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41864,7 +45120,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41883,7 +45141,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41902,7 +45162,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41921,7 +45183,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41940,7 +45204,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41959,7 +45225,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41978,7 +45246,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -41997,7 +45267,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42016,7 +45288,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42035,7 +45309,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42054,7 +45330,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42073,7 +45351,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42092,7 +45372,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42111,7 +45393,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42130,7 +45414,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42149,7 +45435,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42168,7 +45456,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42187,7 +45477,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42206,7 +45498,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42225,7 +45519,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42244,7 +45540,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42263,7 +45561,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42282,7 +45582,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42301,7 +45603,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42320,7 +45624,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42339,7 +45645,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42358,7 +45666,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42377,7 +45687,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42396,7 +45708,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42415,7 +45729,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42434,7 +45750,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42453,7 +45771,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42472,7 +45792,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42491,7 +45813,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42510,7 +45834,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42529,7 +45855,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42548,7 +45876,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42567,7 +45897,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42586,7 +45918,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42605,7 +45939,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42624,7 +45960,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42643,7 +45981,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42662,7 +46002,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42681,7 +46023,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42700,7 +46044,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42719,7 +46065,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42738,7 +46086,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42757,7 +46107,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42776,7 +46128,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42795,7 +46149,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42814,7 +46170,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42833,7 +46191,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42852,7 +46212,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42871,7 +46233,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42890,7 +46254,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42909,7 +46275,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42928,7 +46296,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42947,7 +46317,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42966,7 +46338,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -42985,7 +46359,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43004,7 +46380,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43023,7 +46401,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43042,7 +46422,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43061,7 +46443,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43080,7 +46464,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43099,7 +46485,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43118,7 +46506,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43137,7 +46527,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43156,7 +46548,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43175,7 +46569,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43194,7 +46590,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43213,7 +46611,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43232,7 +46632,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43251,7 +46653,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43270,7 +46674,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43289,7 +46695,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43308,7 +46716,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43327,7 +46737,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43346,7 +46758,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43365,7 +46779,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43384,7 +46800,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43403,7 +46821,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43422,7 +46842,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43441,7 +46863,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43460,7 +46884,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43479,7 +46905,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43498,7 +46926,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43517,7 +46947,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43536,7 +46968,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43555,7 +46989,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43574,7 +47010,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43593,7 +47031,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43612,7 +47052,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43631,7 +47073,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43650,7 +47094,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43669,7 +47115,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43688,7 +47136,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43707,7 +47157,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43726,7 +47178,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43745,7 +47199,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43764,7 +47220,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43783,7 +47241,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43802,7 +47262,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43821,7 +47283,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43840,7 +47304,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43859,7 +47325,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43878,7 +47346,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43897,7 +47367,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43916,7 +47388,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43935,7 +47409,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43954,7 +47430,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43973,7 +47451,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -43992,7 +47472,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44011,7 +47493,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44030,7 +47514,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44049,7 +47535,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44068,7 +47556,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44087,7 +47577,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44106,7 +47598,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44125,7 +47619,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44144,7 +47640,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44163,7 +47661,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44182,7 +47682,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44201,7 +47703,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44220,7 +47724,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44239,7 +47745,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44258,7 +47766,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44277,7 +47787,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44296,7 +47808,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44315,7 +47829,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44334,7 +47850,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44353,7 +47871,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44372,7 +47892,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44391,7 +47913,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44410,7 +47934,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44429,7 +47955,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44448,7 +47976,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44467,7 +47997,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44486,7 +48018,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44505,7 +48039,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44524,7 +48060,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44543,7 +48081,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44562,7 +48102,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44581,7 +48123,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44600,7 +48144,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44619,7 +48165,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44638,7 +48186,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44657,7 +48207,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44676,7 +48228,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44695,7 +48249,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44714,7 +48270,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44733,7 +48291,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44752,7 +48312,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44771,7 +48333,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44790,7 +48354,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44809,7 +48375,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44828,7 +48396,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44847,7 +48417,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44866,7 +48438,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44885,7 +48459,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44904,7 +48480,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44923,7 +48501,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44942,7 +48522,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44961,7 +48543,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44980,7 +48564,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -44999,7 +48585,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45018,7 +48606,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45037,7 +48627,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45056,7 +48648,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45075,7 +48669,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45094,7 +48690,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45113,7 +48711,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45132,7 +48732,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45151,7 +48753,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45170,7 +48774,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45189,7 +48795,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45208,7 +48816,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45227,7 +48837,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45246,7 +48858,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45265,7 +48879,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45284,7 +48900,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45303,7 +48921,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45322,7 +48942,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45341,7 +48963,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45360,7 +48984,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45379,7 +49005,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45398,7 +49026,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45417,7 +49047,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45436,7 +49068,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45455,7 +49089,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45474,7 +49110,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45493,7 +49131,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45512,7 +49152,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45531,7 +49173,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45550,7 +49194,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45569,7 +49215,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45588,7 +49236,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45607,7 +49257,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45626,7 +49278,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45645,7 +49299,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45664,7 +49320,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45683,7 +49341,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45702,7 +49362,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45721,7 +49383,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45740,7 +49404,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45759,7 +49425,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45778,7 +49446,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45797,7 +49467,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45816,7 +49488,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45835,7 +49509,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45854,7 +49530,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45873,7 +49551,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45892,7 +49572,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45911,7 +49593,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45930,7 +49614,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45949,7 +49635,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45968,7 +49656,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -45987,7 +49677,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46006,7 +49698,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46025,7 +49719,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46046,7 +49742,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:STAKE",
             "tokens"
         ],
         "logo": {
@@ -46066,8 +49765,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "native"
+            "crosschain",
+            "native",
+            "PEG:USD"
         ],
         "logo": {
             "oneInch": "",
@@ -46087,7 +49789,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46107,29 +49811,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "tokens"
-        ],
-        "logo": {
-            "oneInch": "",
-            "metaBeem": ""
-        }
-    },
-    "0xdd96b45877d0e8361a4ddb732da741e97f3191ff": {
-        "chainId": 100,
-        "symbol": "BUSD",
-        "name": "BUSD Token from BSC",
-        "address": "0xdd96b45877d0e8361a4ddb732da741e97f3191ff",
-        "decimals": 18,
-        "logoURI": "https://tokens.1inch.io/0x4fabb145d64652a948d72533023f6e7a623c7c53.png",
-        "providers": [
-            "1inch",
-            "CoinGecko",
-            "Kleros Tokens"
-        ],
-        "eip2612": false,
-        "tags": [
-            "PEG:USD",
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46149,7 +49833,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DAI",
             "PEG:USD",
             "tokens"
         ],
@@ -46171,7 +49858,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DATA",
             "tokens"
         ],
         "logo": {
@@ -46191,7 +49881,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46212,7 +49904,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DONUT",
             "tokens"
         ],
         "logo": {
@@ -46233,7 +49928,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LINK",
             "tokens"
         ],
         "logo": {
@@ -46254,7 +49952,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46275,7 +49975,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46296,7 +49998,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PNK",
             "tokens"
         ],
         "logo": {
@@ -46316,7 +50021,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46335,7 +50042,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46354,7 +50063,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46373,7 +50084,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46392,7 +50105,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46411,7 +50126,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46430,7 +50147,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46449,7 +50168,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46468,7 +50189,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46487,7 +50210,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46506,7 +50231,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46525,7 +50252,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46544,7 +50273,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46563,7 +50294,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46582,7 +50315,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46601,7 +50336,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46620,7 +50357,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46639,7 +50378,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46658,7 +50399,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46677,7 +50420,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46696,7 +50441,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46715,7 +50462,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46734,7 +50483,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46755,7 +50506,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:EURA",
             "PEG:EUR",
             "tokens"
         ],
@@ -46775,7 +50529,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46794,7 +50550,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46813,7 +50571,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46832,7 +50592,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46851,7 +50613,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46870,7 +50634,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46889,7 +50655,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46908,7 +50676,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46927,7 +50697,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46946,7 +50718,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46965,7 +50739,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -46984,7 +50760,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47003,7 +50781,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47022,7 +50802,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47041,7 +50823,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47060,7 +50844,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47081,7 +50867,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:sDAI",
             "PEG:USD",
             "tokens"
         ],
@@ -47102,7 +50891,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47121,7 +50912,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47140,7 +50933,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47159,7 +50954,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47178,7 +50975,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47197,7 +50996,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47217,7 +51018,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47239,7 +51042,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47259,7 +51064,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MVX",
             "tokens"
         ],
         "logo": {
@@ -47279,7 +51087,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47298,12 +51108,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CoinGecko",
             "Kleros Tokens",
-            "SpookySwap Default List",
-            "Trust Wallet Assets",
-            "Uniswap Labs Default"
+            "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:STG",
             "tokens"
         ],
         "logo": {
@@ -47324,7 +51135,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47344,7 +51157,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MODA",
             "tokens"
         ],
         "logo": {
@@ -47366,7 +51182,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:axlUSDC",
             "tokens"
         ],
         "logo": {
@@ -47386,7 +51205,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:TRY",
             "tokens"
         ],
         "logo": {
@@ -47404,11 +51226,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Trust Wallet Assets",
-            "Uniswap Labs Default"
+            "Trust Wallet Assets"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BUSD",
             "tokens"
         ],
         "logo": {
@@ -47430,7 +51254,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47450,7 +51276,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BLANK",
             "tokens"
         ],
         "logo": {
@@ -47472,7 +51301,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:TUSD",
             "PEG:USD",
             "tokens"
         ],
@@ -47491,11 +51323,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47512,11 +51345,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x0c9c7712c83b3c70e7c5e11100d33d9401bdf9dd.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47536,7 +51370,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LIME",
             "tokens"
         ],
         "logo": {
@@ -47557,7 +51394,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47578,7 +51417,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LDO",
             "tokens"
         ],
         "logo": {
@@ -47601,7 +51443,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47620,7 +51464,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47640,7 +51486,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47664,7 +51512,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:HEX",
             "tokens"
         ],
         "logo": {
@@ -47685,7 +51536,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:renBTC",
             "tokens"
         ],
         "logo": {
@@ -47705,7 +51559,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47725,7 +51581,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:CHAIN",
             "tokens"
         ],
         "logo": {
@@ -47746,7 +51605,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47763,10 +51624,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x236eec6359fb44cce8f97e99387aa7f8cd5cde1f.png",
         "providers": [
             "1inch",
+            "CoinGecko",
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USD+",
             "PEG:USD",
             "tokens"
         ],
@@ -47787,7 +51652,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "displayedSymbol": "ICE",
@@ -47808,7 +51675,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47829,7 +51698,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47849,7 +51720,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47868,7 +51741,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47889,7 +51764,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SOL",
             "tokens"
         ],
         "logo": {
@@ -47909,7 +51787,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47929,7 +51809,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47949,7 +51831,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:NCT",
             "tokens"
         ],
         "logo": {
@@ -47969,7 +51854,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -47991,7 +51878,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:MATIC",
             "tokens"
         ],
@@ -48012,7 +51901,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48032,7 +51923,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48053,7 +51946,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Quickswap Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:CGG",
             "tokens"
         ],
         "logo": {
@@ -48073,7 +51969,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48094,7 +51992,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48114,7 +52014,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BANK",
             "tokens"
         ],
         "logo": {
@@ -48156,7 +52059,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MVI",
             "tokens"
         ],
         "logo": {
@@ -48176,7 +52082,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DWEB",
             "tokens"
         ],
         "logo": {
@@ -48196,7 +52105,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48216,7 +52127,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48237,7 +52150,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FOX",
             "tokens"
         ],
         "logo": {
@@ -48257,7 +52173,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48279,7 +52197,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48298,7 +52218,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SALE",
             "tokens"
         ],
         "logo": {
@@ -48319,7 +52242,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48339,7 +52264,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48359,7 +52286,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:RAI",
             "tokens"
         ],
         "logo": {
@@ -48379,7 +52309,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:INSUR",
             "tokens"
         ],
         "logo": {
@@ -48402,7 +52335,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GRAPH",
+            "GROUP:GRT",
             "tokens"
         ],
         "logo": {
@@ -48445,7 +52382,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MYST",
             "tokens"
         ],
         "logo": {
@@ -48465,7 +52405,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48485,7 +52427,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48505,7 +52449,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48526,7 +52472,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48547,7 +52495,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48567,7 +52517,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:gOHM",
             "tokens"
         ],
         "logo": {
@@ -48587,7 +52540,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48607,7 +52562,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48627,7 +52584,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PSP",
             "tokens"
         ],
         "logo": {
@@ -48649,7 +52609,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48672,7 +52634,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48692,7 +52656,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GAIA",
             "tokens"
         ],
         "logo": {
@@ -48713,7 +52680,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:REVV",
             "tokens"
         ],
         "logo": {
@@ -48733,7 +52703,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48753,7 +52725,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48773,8 +52747,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "native"
+            "crosschain",
+            "GROUP:MATIC",
+            "native",
+            "PEG:MATIC"
         ],
         "logo": {
             "oneInch": "",
@@ -48798,7 +52776,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:AAVE",
             "tokens"
         ],
         "logo": {
@@ -48816,12 +52797,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Quickswap Token List",
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -48845,7 +52827,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:UNI",
+            "GROUP:UNISWAP",
             "tokens"
         ],
         "logo": {
@@ -48870,7 +52856,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDT",
             "PEG:USD",
             "tokens"
         ],
@@ -48896,7 +52885,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DAI",
             "PEG:USD",
             "tokens"
         ],
@@ -48922,7 +52914,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WBTC",
             "PEG:BTC",
             "tokens"
         ],
@@ -48947,7 +52942,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LINK",
             "tokens"
         ],
         "logo": {
@@ -48968,7 +52966,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Quickswap Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SUPER",
             "tokens"
         ],
         "logo": {
@@ -48991,7 +52992,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MANA",
             "tokens"
         ],
         "logo": {
@@ -49016,7 +53020,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "PEG:MATIC",
             "tokens"
         ],
         "logo": {
@@ -49039,7 +53046,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:COMP",
             "tokens"
         ],
         "logo": {
@@ -49060,7 +53070,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Quickswap Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -49080,7 +53092,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Quickswap Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -49101,7 +53115,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Quickswap Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -49126,7 +53142,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP ETH",
+            "GROUP:WETH",
             "tokens"
         ],
         "logo": {
@@ -49148,7 +53168,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Quickswap Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GHST",
             "tokens"
         ],
         "logo": {
@@ -49169,7 +53192,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Quickswap Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MONA",
             "tokens"
         ],
         "logo": {
@@ -49191,7 +53217,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:OM",
             "tokens"
         ],
         "logo": {
@@ -49211,7 +53240,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PICKLE",
             "tokens"
         ],
         "logo": {
@@ -49232,7 +53264,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SDT",
             "tokens"
         ],
         "logo": {
@@ -49255,7 +53290,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SUSHI",
             "tokens"
         ],
         "logo": {
@@ -49276,7 +53314,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Quickswap Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -49297,7 +53337,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Quickswap Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:VISION",
             "tokens"
         ],
         "logo": {
@@ -49317,7 +53360,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Quickswap Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WISE",
             "tokens"
         ],
         "logo": {
@@ -49361,7 +53407,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Quickswap Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -49383,7 +53431,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Quickswap Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -49403,7 +53453,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Quickswap Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -49425,7 +53477,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -49446,7 +53500,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Quickswap Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PLOT",
             "tokens"
         ],
         "logo": {
@@ -49469,7 +53526,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:TEL",
             "tokens"
         ],
         "logo": {
@@ -49490,7 +53550,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -49512,7 +53574,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -49534,7 +53598,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:BTC",
             "tokens"
         ],
@@ -49556,7 +53622,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -49577,7 +53645,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -49598,7 +53668,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -49619,7 +53691,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -49644,7 +53718,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:CRV",
             "tokens"
         ],
         "logo": {
@@ -49666,7 +53743,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -49690,7 +53769,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -49711,7 +53792,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -49734,7 +53817,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DFYN",
             "tokens"
         ],
         "logo": {
@@ -49757,7 +53843,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WOO",
             "tokens"
         ],
         "logo": {
@@ -49799,7 +53888,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:QI",
             "tokens"
         ],
         "logo": {
@@ -49823,7 +53915,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:miMATIC",
+            "PEG:MATIC",
             "tokens"
         ],
         "logo": {
@@ -49845,7 +53941,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -49866,7 +53964,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:KNC",
             "tokens"
         ],
         "logo": {
@@ -49889,7 +53990,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BAL",
             "tokens"
         ],
         "logo": {
@@ -49909,7 +54013,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "displayedSymbol": "ICE",
@@ -49932,7 +54038,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -49953,7 +54061,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:UST",
             "tokens"
         ],
         "logo": {
@@ -49973,7 +54084,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -49993,7 +54106,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50013,7 +54128,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -50035,7 +54152,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Quickswap Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50056,7 +54175,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:EURS",
             "tokens"
         ],
         "logo": {
@@ -50076,7 +54198,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:APW",
             "tokens"
         ],
         "logo": {
@@ -50097,7 +54222,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DHT",
             "tokens"
         ],
         "logo": {
@@ -50117,7 +54245,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50137,7 +54267,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:INST",
             "tokens"
         ],
         "logo": {
@@ -50158,7 +54291,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50182,7 +54317,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:EURA",
             "PEG:EUR",
             "tokens"
         ],
@@ -50203,7 +54341,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:deUSDC",
             "PEG:USD",
             "tokens"
         ],
@@ -50226,7 +54367,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FRAX",
             "tokens"
         ],
         "logo": {
@@ -50247,7 +54391,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:REQ",
             "tokens"
         ],
         "logo": {
@@ -50267,7 +54414,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50283,11 +54432,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x8623e66bea0dce41b6d47f9c44e806a115babae0.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50307,7 +54457,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50327,7 +54479,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50347,7 +54501,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ORE",
             "tokens"
         ],
         "logo": {
@@ -50369,7 +54526,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50389,7 +54548,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50409,7 +54570,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50430,7 +54593,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50451,7 +54616,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50472,7 +54639,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SAND",
             "tokens"
         ],
         "logo": {
@@ -50493,7 +54663,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "displayedSymbol": "ICE",
@@ -50517,7 +54689,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SNX",
             "tokens"
         ],
         "logo": {
@@ -50538,7 +54713,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50558,7 +54735,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50578,7 +54757,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50600,7 +54781,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Quickswap Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:AVAX",
             "tokens"
         ],
         "logo": {
@@ -50624,7 +54808,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50645,7 +54831,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DG",
             "tokens"
         ],
         "logo": {
@@ -50665,7 +54854,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:TOWER",
             "tokens"
         ],
         "logo": {
@@ -50686,7 +54878,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50706,7 +54900,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DERC",
             "tokens"
         ],
         "logo": {
@@ -50726,7 +54923,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50747,7 +54946,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BANANA",
             "tokens"
         ],
         "logo": {
@@ -50768,7 +54970,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BCMC",
             "tokens"
         ],
         "logo": {
@@ -50788,7 +54993,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50809,7 +55016,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GMEE",
             "tokens"
         ],
         "logo": {
@@ -50834,7 +55044,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -50855,7 +55067,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DFX",
             "tokens"
         ],
         "logo": {
@@ -50876,7 +55091,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PAR",
             "tokens"
         ],
         "logo": {
@@ -50896,7 +55114,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50912,11 +55132,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x51b5619f5180e333d18b6310c8d540aea43a0371.png",
         "providers": [
-            "1inch",
-            "CoinGecko"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50936,7 +55157,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50956,7 +55179,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -50976,7 +55201,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:XCAD",
             "tokens"
         ],
         "logo": {
@@ -50995,7 +55223,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:UNIX",
             "tokens"
         ],
         "logo": {
@@ -51015,7 +55246,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51036,7 +55269,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Quickswap Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:IQ",
             "tokens"
         ],
         "logo": {
@@ -51057,7 +55293,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ORBS",
             "tokens"
         ],
         "logo": {
@@ -51076,7 +55315,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:XZAR",
             "tokens"
         ],
         "logo": {
@@ -51095,7 +55337,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51117,7 +55361,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51137,7 +55383,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51157,7 +55405,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GET",
             "tokens"
         ],
         "logo": {
@@ -51179,7 +55430,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DATA",
             "tokens"
         ],
         "logo": {
@@ -51199,7 +55453,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51219,7 +55475,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MASQ",
             "tokens"
         ],
         "logo": {
@@ -51239,7 +55498,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51260,7 +55521,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Quickswap Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ADS",
             "tokens"
         ],
         "logo": {
@@ -51280,7 +55544,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MOD",
             "tokens"
         ],
         "logo": {
@@ -51300,7 +55567,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BONDLY",
             "tokens"
         ],
         "logo": {
@@ -51320,7 +55590,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51340,7 +55612,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:POP",
             "tokens"
         ],
         "logo": {
@@ -51360,7 +55635,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51383,7 +55660,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:XSGD",
             "tokens"
         ],
         "logo": {
@@ -51402,7 +55682,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51444,11 +55726,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51469,7 +55752,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51489,7 +55774,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:UCO",
             "tokens"
         ],
         "logo": {
@@ -51509,7 +55797,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51529,7 +55819,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51549,7 +55841,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51569,11 +55863,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap",
             "Kleros Tokens",
             "PancakeSwap Extended",
-            "Quickswap Token List",
-            "SpookySwap Default List"
+            "Quickswap Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:YEL",
             "tokens"
         ],
         "logo": {
@@ -51593,7 +55889,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51603,7 +55901,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
     },
     "0x03b54a6e9a984069379fae1a4fc4dbae93b3bccd": {
         "chainId": 137,
-        "symbol": "wstETH",
+        "symbol": "WstETH",
         "name": "Wrapped liquid staked Ether 2.0 (PoS)",
         "address": "0x03b54a6e9a984069379fae1a4fc4dbae93b3bccd",
         "decimals": 18,
@@ -51614,7 +55912,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:Wst ETH",
             "tokens"
         ],
         "logo": {
@@ -51633,7 +55934,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:cUSDCv3",
             "tokens"
         ],
         "logo": {
@@ -51653,7 +55957,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51672,7 +55978,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51693,7 +56001,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51714,7 +56024,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51738,7 +56050,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDC",
             "tokens"
         ],
         "logo": {
@@ -51758,7 +56073,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51779,7 +56096,36 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "tokens"
+        ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0x6985884c4392d348587b19cb9eaaf157f13271cd": {
+        "chainId": 137,
+        "symbol": "ZRO",
+        "name": "LayerZero",
+        "address": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+        "decimals": 18,
+        "logoURI": "https://tokens-data.1inch.io/images/137/0x6985884c4392d348587b19cb9eaaf157f13271cd.png",
+        "providers": [
+            "1inch",
+            "CoinGecko",
+            "Coinmarketcap",
+            "Kleros Tokens",
+            "PancakeSwap Extended",
+            "Uniswap Labs Default"
+        ],
+        "eip2612": false,
+        "isFoT": false,
+        "tags": [
+            "crosschain",
+            "GROUP:ZRO",
             "tokens"
         ],
         "logo": {
@@ -51801,7 +56147,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51821,7 +56169,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51843,7 +56193,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51861,10 +56213,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Kleros Tokens",
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MMY",
             "tokens"
         ],
         "logo": {
@@ -51884,7 +56240,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51926,7 +56284,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -51946,7 +56306,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FONT",
             "tokens"
         ],
         "logo": {
@@ -51967,7 +56330,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -52008,11 +56373,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
+            "Kleros Tokens",
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52032,7 +56399,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:JOE",
             "tokens"
         ],
         "logo": {
@@ -52052,7 +56422,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52070,11 +56442,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52095,7 +56468,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52116,7 +56491,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52136,7 +56513,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52157,7 +56536,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:RING",
             "tokens"
         ],
         "logo": {
@@ -52178,7 +56560,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:RAINI",
             "tokens"
         ],
         "logo": {
@@ -52200,7 +56585,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52221,7 +56608,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52244,7 +56633,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MIM",
             "tokens"
         ],
         "logo": {
@@ -52265,7 +56657,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52285,7 +56679,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52305,7 +56701,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52326,7 +56724,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52345,7 +56745,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:JulD",
             "tokens"
         ],
         "logo": {
@@ -52365,7 +56768,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52384,7 +56789,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SNT",
             "tokens"
         ],
         "logo": {
@@ -52406,7 +56814,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52426,7 +56836,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52447,7 +56859,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52468,7 +56882,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52488,7 +56904,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:gOHM",
             "tokens"
         ],
         "logo": {
@@ -52510,7 +56929,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BNB",
             "PEG:BNB",
             "tokens"
         ],
@@ -52533,7 +56955,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52554,7 +56978,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:FTM",
             "tokens"
         ],
@@ -52579,7 +57005,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:STG",
             "tokens"
         ],
         "logo": {
@@ -52600,7 +57029,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ANY",
             "tokens"
         ],
         "logo": {
@@ -52623,7 +57055,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FRAX",
             "tokens"
         ],
         "logo": {
@@ -52647,7 +57082,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:YEL",
             "tokens"
         ],
         "logo": {
@@ -52669,7 +57107,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WOO",
             "tokens"
         ],
         "logo": {
@@ -52689,7 +57130,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52711,7 +57154,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52729,10 +57174,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Kleros Tokens",
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52753,7 +57201,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52773,7 +57223,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52794,7 +57246,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MATIC",
             "PEG:MATIC",
             "tokens"
         ],
@@ -52813,11 +57268,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52838,7 +57294,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52860,7 +57318,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52882,7 +57342,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52904,7 +57366,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PAR",
             "PEG:USD",
             "tokens"
         ],
@@ -52927,7 +57392,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:FTM",
             "tokens"
         ],
@@ -52951,7 +57418,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52972,7 +57441,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -52992,7 +57463,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53014,7 +57487,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SPELL",
             "tokens"
         ],
         "logo": {
@@ -53035,7 +57511,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53058,7 +57536,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:miMATIC",
+            "GROUP:PENDLE",
+            "PEG:MATIC",
             "tokens"
         ],
         "logo": {
@@ -53079,7 +57562,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53102,7 +57587,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:AVAX",
             "tokens"
         ],
         "logo": {
@@ -53122,7 +57610,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53144,7 +57634,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MOD",
             "tokens"
         ],
         "logo": {
@@ -53164,7 +57657,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:POWER",
             "tokens"
         ],
         "logo": {
@@ -53181,11 +57677,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x59c6606ed2af925f270733e378d6af7829b5b3cf.png",
         "providers": [
             "1inch",
-            "CoinGecko",
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53201,11 +57698,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xfb4d42bed5618fb1a377ddb64eb56b92a6d117f2.png",
         "providers": [
-            "1inch",
-            "Coinmarketcap"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53225,7 +57723,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53243,12 +57743,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens",
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ALPACA",
             "tokens"
         ],
         "logo": {
@@ -53271,7 +57773,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:CRV",
             "tokens"
         ],
         "logo": {
@@ -53293,7 +57798,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SUSHI",
             "tokens"
         ],
         "logo": {
@@ -53311,10 +57819,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
+            "Kleros Tokens",
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53335,7 +57846,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53356,7 +57869,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53379,7 +57894,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:TUSD",
             "PEG:USD",
             "tokens"
         ],
@@ -53397,11 +57915,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x65def5029a0e7591e46b38742bfedd1fb7b24436.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53418,11 +57937,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x8a41f13a4fae75ca88b1ee726ee9d52b148b0498.png",
         "providers": [
             "1inch",
-            "CoinGecko",
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53444,7 +57964,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53466,7 +57988,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:AAVE",
             "tokens"
         ],
         "logo": {
@@ -53486,8 +58011,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "native"
+            "crosschain",
+            "GROUP:FTM",
+            "native",
+            "PEG:FTM"
         ],
         "logo": {
             "oneInch": "",
@@ -53509,7 +58038,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53529,7 +58060,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53551,7 +58084,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53573,7 +58108,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:axlUSDC",
             "tokens"
         ],
         "logo": {
@@ -53594,7 +58132,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53615,7 +58155,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53637,7 +58179,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53659,7 +58203,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53680,7 +58226,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53700,7 +58248,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "SpookySwap Default List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53722,7 +58272,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WETH",
             "PEG:ETH",
             "tokens"
         ],
@@ -53743,7 +58296,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDC.e",
             "PEG:USD",
             "tokens"
         ],
@@ -53764,7 +58320,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53780,10 +58338,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/324/0xbfb4b5616044eded03e5b1ad75141f0d9cb1499b.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53802,7 +58363,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53821,7 +58384,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53840,7 +58405,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53860,7 +58427,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ETH",
             "native",
             "PEG:ETH"
         ],
@@ -53880,7 +58450,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:COMBO",
             "tokens"
         ],
         "logo": {
@@ -53899,7 +58472,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PERP",
             "tokens"
         ],
         "logo": {
@@ -53918,7 +58494,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53934,10 +58512,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/324/0x85d84c774cf8e9ff85342684b0e795df72a24908.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53953,10 +58534,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x47260090ce5e83454d5f05a0abbb2c953835f777.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -53975,7 +58559,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USD+",
             "tokens"
         ],
         "logo": {
@@ -53994,7 +58581,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -54013,7 +58602,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MVX",
             "tokens"
         ],
         "logo": {
@@ -54032,7 +58624,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LUSD",
             "tokens"
         ],
         "logo": {
@@ -54052,7 +58647,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WOO",
             "tokens"
         ],
         "logo": {
@@ -54068,10 +58666,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0xdd9f72afed3631a6c85b5369d84875e6c42f1827.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SIS",
             "tokens"
         ],
         "logo": {
@@ -54090,7 +58692,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDT",
             "tokens"
         ],
         "logo": {
@@ -54109,7 +58714,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DVF",
             "tokens"
         ],
         "logo": {
@@ -54128,7 +58736,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:rETH",
             "tokens"
         ],
         "logo": {
@@ -54147,7 +58758,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:RPL",
             "tokens"
         ],
         "logo": {
@@ -54166,7 +58780,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:cbETH",
             "tokens"
         ],
         "logo": {
@@ -54186,7 +58803,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WBTC",
             "tokens"
         ],
         "logo": {
@@ -54205,7 +58825,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PEPE",
             "tokens"
         ],
         "logo": {
@@ -54224,7 +58847,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -54244,7 +58869,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -54263,7 +58890,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -54282,7 +58911,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ZZ",
             "tokens"
         ],
         "logo": {
@@ -54301,7 +58933,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:KNC",
             "tokens"
         ],
         "logo": {
@@ -54320,7 +58955,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -54339,7 +58976,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LQTY",
             "tokens"
         ],
         "logo": {
@@ -54359,7 +58999,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:Cake",
             "tokens"
         ],
         "logo": {
@@ -54378,7 +59021,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GOVI",
             "tokens"
         ],
         "logo": {
@@ -54397,7 +59043,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DERI",
             "tokens"
         ],
         "logo": {
@@ -54416,7 +59065,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DEXTF",
             "tokens"
         ],
         "logo": {
@@ -54435,7 +59087,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -54454,7 +59108,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -54473,7 +59129,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -54492,7 +59150,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -54508,10 +59168,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x31c2c031fdc9d33e974f327ab0d9883eae06ca4a.png",
         "providers": [
-            "1inch"
+            "1inch",
+            "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -54530,7 +59193,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -54550,7 +59215,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDC",
             "PEG:USD",
             "tokens"
         ],
@@ -54570,7 +59238,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -54592,8 +59262,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "native"
+            "crosschain",
+            "native",
+            "PEG:KLAY"
         ],
         "logo": {
             "oneInch": "",
@@ -54611,7 +59284,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -54631,8 +59306,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "PEG:Klay",
+            "crosschain",
+            "PEG:KLAY",
             "tokens"
         ],
         "logo": {
@@ -54651,7 +59328,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDC",
             "PEG:USD",
             "tokens"
         ],
@@ -54671,7 +59351,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WBTC",
             "PEG:BTC",
             "tokens"
         ],
@@ -54691,7 +59374,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WETH",
             "PEG:ETH",
             "tokens"
         ],
@@ -54711,7 +59397,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DAI",
             "PEG:USD",
             "tokens"
         ],
@@ -54731,7 +59420,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:KLAY",
             "tokens"
         ],
@@ -54752,7 +59443,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -54771,7 +59464,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ETH",
             "PEG:ETH",
             "tokens"
         ],
@@ -54791,7 +59487,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -54810,7 +59508,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -54829,7 +59529,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:BTC",
             "tokens"
         ],
@@ -54849,7 +59551,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -54868,7 +59572,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PUNK",
             "tokens"
         ],
         "logo": {
@@ -54887,7 +59594,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -54906,7 +59615,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -54926,7 +59637,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -54945,7 +59658,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -54964,7 +59679,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -54983,7 +59700,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -55002,7 +59721,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -55021,7 +59742,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -55041,7 +59764,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -55063,8 +59788,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "native"
+            "crosschain",
+            "GROUP:ETH",
+            "native",
+            "PEG:ETH"
         ],
         "logo": {
             "oneInch": "",
@@ -55086,7 +59815,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WETH",
             "PEG:ETH",
             "tokens"
         ],
@@ -55126,7 +59858,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:axlUSDC",
             "PEG:USD",
             "tokens"
         ],
@@ -55147,7 +59882,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:AXL",
             "tokens"
         ],
         "logo": {
@@ -55166,7 +59904,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -55186,7 +59926,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -55206,7 +59948,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -55226,7 +59970,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -55245,7 +59991,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -55264,7 +60012,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -55283,7 +60033,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BASE",
             "tokens"
         ],
         "logo": {
@@ -55305,7 +60058,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DAI",
+            "GROUP:LYRA",
             "PEG:USD",
             "tokens"
         ],
@@ -55325,7 +60082,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -55346,7 +60105,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:cbETH",
             "PEG:ETH",
             "tokens"
         ],
@@ -55366,7 +60128,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USD+",
             "PEG:USD",
             "tokens"
         ],
@@ -55386,7 +60151,33 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:cUSDCv3",
+            "tokens"
+        ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0x4621b7a9c75199271f773ebd9a499dbd165c3191": {
+        "chainId": 8453,
+        "symbol": "DOLA",
+        "name": "Dola USD Stablecoin",
+        "address": "0x4621b7a9c75199271f773ebd9a499dbd165c3191",
+        "decimals": 18,
+        "logoURI": "https://tokens-data.1inch.io/images/8453/0x4621b7a9c75199271f773ebd9a499dbd165c3191.png",
+        "providers": [
+            "1inch"
+        ],
+        "eip2612": false,
+        "isFoT": false,
+        "tags": [
+            "crosschain",
+            "GROUP:DOLA",
+            "PEG:USD",
             "tokens"
         ],
         "logo": {
@@ -55405,7 +60196,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:cWETHv3",
             "tokens"
         ],
         "logo": {
@@ -55426,7 +60220,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDC",
+            "PEG:USD",
             "tokens"
         ],
         "logo": {
@@ -55446,7 +60244,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:rETH",
             "tokens"
         ],
         "logo": {
@@ -55466,7 +60267,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:Cake",
             "tokens"
         ],
         "logo": {
@@ -55487,7 +60291,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -55507,7 +60313,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:1INCH",
             "tokens"
         ],
         "logo": {
@@ -55517,7 +60326,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
     },
     "0xc1cba3fcea344f92d9239c08c0568f6f2f0ee452": {
         "chainId": 8453,
-        "symbol": "wstETH",
+        "symbol": "WstETH",
         "name": "Wrapped liquid staked Ether 2.0",
         "address": "0xc1cba3fcea344f92d9239c08c0568f6f2f0ee452",
         "decimals": 18,
@@ -55526,7 +60335,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:Wst ETH",
             "PEG:ETH",
             "tokens"
         ],
@@ -55546,7 +60358,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -55565,7 +60379,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -55584,7 +60400,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -55603,8 +60421,30 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
+        ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0x5efc4446e1d772428adbd6053a0421ca7b3ed85a": {
+        "chainId": 8453,
+        "symbol": "WAZ",
+        "name": "MikeAI",
+        "address": "0x5efc4446e1d772428adbd6053a0421ca7b3ed85a",
+        "decimals": 18,
+        "logoURI": null,
+        "providers": [
+            "1inch"
+        ],
+        "eip2612": false,
+        "isFoT": false,
+        "tags": [
+            "crosschain"
         ],
         "logo": {
             "oneInch": "",
@@ -55624,7 +60464,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -55645,7 +60487,36 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "tokens"
+        ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0x6985884c4392d348587b19cb9eaaf157f13271cd": {
+        "chainId": 8453,
+        "symbol": "ZRO",
+        "name": "LayerZero",
+        "address": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+        "decimals": 18,
+        "logoURI": "https://tokens-data.1inch.io/images/8453/0x6985884c4392d348587b19cb9eaaf157f13271cd.png",
+        "providers": [
+            "1inch",
+            "CoinGecko",
+            "Coinmarketcap",
+            "Kleros Tokens",
+            "PancakeSwap Extended",
+            "Uniswap Labs Default"
+        ],
+        "eip2612": false,
+        "isFoT": false,
+        "tags": [
+            "crosschain",
+            "GROUP:ZRO",
             "tokens"
         ],
         "logo": {
@@ -55668,7 +60539,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -55688,7 +60561,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:RPL",
             "tokens"
         ],
         "logo": {
@@ -55705,10 +60581,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9e758b8a98a42d612b3d38b66a22074dc03d7370.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SIS",
             "tokens"
         ],
         "logo": {
@@ -55730,7 +60610,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:rETH",
             "tokens"
         ],
         "logo": {
@@ -55748,12 +60631,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MAI",
             "PEG:USD",
             "tokens"
         ],
@@ -55774,7 +60659,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:KROM",
             "tokens"
         ],
         "logo": {
@@ -55797,7 +60685,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDC",
             "tokens"
         ],
         "logo": {
@@ -55819,7 +60710,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:JOE",
             "tokens"
         ],
         "logo": {
@@ -55840,7 +60734,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PENDLE",
             "tokens"
         ],
         "logo": {
@@ -55857,13 +60754,18 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xc944e90c64b2c07662a292be6244bdf05cda44a7.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CoinGecko",
             "Kleros Tokens",
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GRAPH",
+            "GROUP:GRT",
             "tokens"
         ],
         "logo": {
@@ -55883,7 +60785,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -55902,7 +60806,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -55922,7 +60828,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LYRA",
             "tokens"
         ],
         "logo": {
@@ -55963,7 +60872,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:ETH",
             "tokens"
         ],
@@ -55986,7 +60897,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -56005,7 +60918,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SDL",
             "tokens"
         ],
         "logo": {
@@ -56024,7 +60940,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MYC",
             "tokens"
         ],
         "logo": {
@@ -56045,7 +60964,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -56068,7 +60989,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -56090,7 +61013,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FRAX",
             "tokens"
         ],
         "logo": {
@@ -56111,7 +61037,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:STG",
             "tokens"
         ],
         "logo": {
@@ -56131,7 +61060,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -56153,7 +61084,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -56163,7 +61096,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
     },
     "0x5979d7b546e38e414f7e9822514be443a4800529": {
         "chainId": 42161,
-        "symbol": "wstETH",
+        "symbol": "WstETH",
         "name": "Wrapped liquid staked Ether 2.0",
         "address": "0x5979d7b546e38e414f7e9822514be443a4800529",
         "decimals": 18,
@@ -56174,7 +61107,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:Wst ETH",
             "tokens"
         ],
         "logo": {
@@ -56195,7 +61131,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -56216,7 +61154,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -56236,7 +61176,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -56257,7 +61199,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -56274,6 +61218,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CoinGecko",
             "Curve Token List",
@@ -56281,7 +61226,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:UNI",
+            "GROUP:UNISWAP",
             "tokens"
         ],
         "logo": {
@@ -56298,13 +61247,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xdac17f958d2ee523a2206206994597c13d831ec7.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Curve Token List",
-            "Uniswap Labs Default"
+            "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDT",
             "PEG:USD",
             "tokens"
         ],
@@ -56328,7 +61280,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDC.e",
             "PEG:USD",
             "tokens"
         ],
@@ -56346,14 +61301,17 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CoinGecko",
             "Curve Token List",
-            "Kleros Tokens",
-            "Uniswap Labs Default"
+            "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WBTC",
             "PEG:BTC",
             "tokens"
         ],
@@ -56371,6 +61329,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CoinGecko",
             "Curve Token List",
@@ -56378,7 +61337,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WETH",
             "PEG:ETH",
             "tokens"
         ],
@@ -56399,7 +61361,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -56416,6 +61380,7 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x6b175474e89094c44da98b954eedeac495271d0f.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CoinGecko",
             "Curve Token List",
@@ -56423,7 +61388,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DAI",
             "PEG:USD",
             "tokens"
         ],
@@ -56443,7 +61411,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -56462,11 +61432,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Kleros Tokens",
-            "Uniswap Labs Default"
+            "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SPELL",
             "tokens"
         ],
         "logo": {
@@ -56485,7 +61457,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -56505,7 +61479,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:deUSDC",
             "PEG:USD",
             "tokens"
         ],
@@ -56525,7 +61502,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:NFTI",
             "tokens"
         ],
         "logo": {
@@ -56546,7 +61526,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:EURA",
             "PEG:EUR",
             "tokens"
         ],
@@ -56569,7 +61552,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LDO",
             "tokens"
         ],
         "logo": {
@@ -56591,7 +61577,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MIM",
             "tokens"
         ],
         "logo": {
@@ -56612,7 +61601,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DHT",
             "tokens"
         ],
         "logo": {
@@ -56633,7 +61625,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DXD",
             "tokens"
         ],
         "logo": {
@@ -56655,7 +61650,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GMX",
             "tokens"
         ],
         "logo": {
@@ -56674,10 +61672,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Uniswap Labs Default"
+            "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GNO",
             "tokens"
         ],
         "logo": {
@@ -56697,7 +61698,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LAND",
             "tokens"
         ],
         "logo": {
@@ -56714,13 +61718,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x514910771af9ca656af840dff83e8264ecf986ca.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Kleros Tokens",
-            "Uniswap Labs Default"
+            "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LINK",
             "tokens"
         ],
         "logo": {
@@ -56742,7 +61749,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MATH",
             "tokens"
         ],
         "logo": {
@@ -56770,7 +61780,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -56787,11 +61799,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MKR",
             "tokens"
         ],
         "logo": {
@@ -56811,8 +61827,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "native"
+            "crosschain",
+            "GROUP:ETH",
+            "native",
+            "PEG:ETH"
         ],
         "logo": {
             "oneInch": "",
@@ -56833,7 +61853,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BADGER",
             "tokens"
         ],
         "logo": {
@@ -56856,7 +61879,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BAL",
             "tokens"
         ],
         "logo": {
@@ -56879,7 +61905,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -56899,7 +61927,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Arb Whitelist Era"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -56921,7 +61951,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PREMIA",
             "tokens"
         ],
         "logo": {
@@ -56940,11 +61973,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Kleros Tokens",
-            "Uniswap Labs Default"
+            "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SUSHI",
             "tokens"
         ],
         "logo": {
@@ -56966,7 +62001,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USD+",
             "tokens"
         ],
         "logo": {
@@ -56983,13 +62021,16 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xc00e94cb662c3520282e6f5717214004a7f26888.png",
         "providers": [
             "1inch",
+            "Arbed Arb Whitelist Era",
             "Arb Whitelist Era",
             "CoinGecko",
-            "Kleros Tokens",
-            "Uniswap Labs Default"
+            "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:COMP",
             "tokens"
         ],
         "logo": {
@@ -57013,7 +62054,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:CRV",
             "tokens"
         ],
         "logo": {
@@ -57032,7 +62076,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57052,7 +62098,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57072,7 +62120,33 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "tokens"
+        ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0x6a7661795c374c0bfc635934efaddff3a7ee23b6": {
+        "chainId": 42161,
+        "symbol": "DOLA",
+        "name": "Dola USD Stablecoin",
+        "address": "0x6a7661795c374c0bfc635934efaddff3a7ee23b6",
+        "decimals": 18,
+        "logoURI": "https://arbiscan.io/token/images/inversedolausd2_32.png",
+        "providers": [
+            "1inch",
+            "CoinGecko"
+        ],
+        "eip2612": true,
+        "isFoT": false,
+        "tags": [
+            "crosschain",
+            "GROUP:DOLA",
+            "PEG:USD",
             "tokens"
         ],
         "logo": {
@@ -57093,7 +62167,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:RDNT",
             "tokens"
         ],
         "logo": {
@@ -57115,7 +62192,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ARB",
             "tokens"
         ],
         "logo": {
@@ -57133,11 +62213,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57156,7 +62237,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57175,7 +62258,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57197,7 +62282,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57220,7 +62307,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57240,7 +62329,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:Cake",
             "tokens"
         ],
         "logo": {
@@ -57260,7 +62352,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:crvUSD",
             "tokens"
         ],
         "logo": {
@@ -57280,7 +62375,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57299,7 +62396,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:cUSDCv3",
             "tokens"
         ],
         "logo": {
@@ -57316,10 +62416,13 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x58b9cb810a68a7f3e1e4f8cb45d1b9b3c79705e8.png",
         "providers": [
             "1inch",
-            "CoinGecko"
+            "CoinGecko",
+            "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57337,13 +62440,15 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "providers": [
             "1inch",
             "CoinGecko",
-            "Coinmarketcap",
             "Curve Token List",
             "Kleros Tokens",
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDV",
             "PEG:USD",
             "tokens"
         ],
@@ -57364,7 +62469,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57384,7 +62491,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:weETH",
             "tokens"
         ],
         "logo": {
@@ -57406,8 +62516,53 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "PancakeSwap Extended"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ezETH",
             "tokens"
+        ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0x7cfadfd5645b50be87d546f42699d863648251ad": {
+        "chainId": 42161,
+        "symbol": "stataArbUSDCn",
+        "name": "Static Aave Arbitrum USDCn",
+        "address": "0x7cfadfd5645b50be87d546f42699d863648251ad",
+        "decimals": 6,
+        "logoURI": "https://tokens-data.1inch.io/images/42161/0x7cfadfd5645b50be87d546f42699d863648251ad.png",
+        "providers": [
+            "1inch"
+        ],
+        "eip2612": true,
+        "isFoT": false,
+        "tags": [
+            "crosschain"
+        ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0x7dff72693f6a4149b17e7c6314655f6a9f7c8b33": {
+        "chainId": 42161,
+        "symbol": "GHO",
+        "name": "Gho Token",
+        "address": "0x7dff72693f6a4149b17e7c6314655f6a9f7c8b33",
+        "decimals": 18,
+        "logoURI": "https://tokens-data.1inch.io/images/42161/0x7dff72693f6a4149b17e7c6314655f6a9f7c8b33.png",
+        "providers": [
+            "1inch",
+            "CoinGecko"
+        ],
+        "eip2612": true,
+        "isFoT": false,
+        "tags": [
+            "crosschain",
+            "GROUP:GHO"
         ],
         "logo": {
             "oneInch": "",
@@ -57430,7 +62585,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57450,7 +62607,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57471,7 +62630,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MAI",
             "PEG:USD",
             "tokens"
         ],
@@ -57491,7 +62653,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57511,7 +62675,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57534,7 +62700,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FRAX",
             "tokens"
         ],
         "logo": {
@@ -57557,7 +62726,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDT",
             "PEG:USD",
             "tokens"
         ],
@@ -57577,7 +62749,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57597,7 +62771,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FEED",
             "tokens"
         ],
         "logo": {
@@ -57617,7 +62794,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57636,7 +62815,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57657,7 +62838,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57678,7 +62861,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SOL",
             "tokens"
         ],
         "logo": {
@@ -57698,7 +62884,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DOMI",
             "tokens"
         ],
         "logo": {
@@ -57719,7 +62908,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57739,7 +62930,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57759,7 +62952,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:EURA",
             "PEG:EUR",
             "tokens"
         ],
@@ -57783,7 +62979,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Trust Wallet Assets"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57803,7 +63001,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:NFTD",
             "tokens"
         ],
         "logo": {
@@ -57824,7 +63025,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:TUSD",
             "PEG:USD",
             "tokens"
         ],
@@ -57845,7 +63049,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WXT",
             "tokens"
         ],
         "logo": {
@@ -57867,7 +63074,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:GMX",
             "tokens"
         ],
         "logo": {
@@ -57887,7 +63097,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:deUSDC",
             "PEG:USD",
             "tokens"
         ],
@@ -57908,7 +63121,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57927,7 +63142,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57947,7 +63164,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:renBTC",
             "PEG:BTC",
             "tokens"
         ],
@@ -57969,7 +63189,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -57988,7 +63210,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58007,7 +63231,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58027,7 +63253,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58048,7 +63276,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58067,7 +63297,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58087,7 +63319,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -58108,7 +63342,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -58131,7 +63367,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Zerion"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58152,7 +63390,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:BNB",
             "PEG:BNB",
             "tokens"
         ],
@@ -58174,7 +63415,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:QI",
             "tokens"
         ],
         "logo": {
@@ -58196,7 +63440,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:JOE",
             "tokens"
         ],
         "logo": {
@@ -58238,7 +63485,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58259,7 +63508,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:gOHM",
             "tokens"
         ],
         "logo": {
@@ -58279,7 +63531,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:COOK",
             "tokens"
         ],
         "logo": {
@@ -58299,7 +63554,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58322,7 +63579,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:ETH",
             "PEG:ETH",
             "tokens"
         ],
@@ -58346,7 +63606,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:AVAX",
             "tokens"
         ],
@@ -58368,7 +63630,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDC.e",
             "PEG:USD",
             "tokens"
         ],
@@ -58390,7 +63655,11 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDT",
+            "GROUP:USDT.e",
             "PEG:USD",
             "tokens"
         ],
@@ -58414,7 +63683,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:BTC",
             "tokens"
         ],
@@ -58438,7 +63709,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DAI",
             "PEG:USD",
             "tokens"
         ],
@@ -58459,7 +63733,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -58482,7 +63758,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58498,11 +63776,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x938fe3788222a74924e062120e7bfac829c719fb.png",
         "providers": [
-            "1inch",
-            "CoinGecko"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58521,7 +63800,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58543,7 +63824,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SPELL",
             "tokens"
         ],
         "logo": {
@@ -58563,7 +63847,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58585,7 +63871,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58606,7 +63894,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:SYN",
             "tokens"
         ],
         "logo": {
@@ -58626,7 +63917,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:THOR",
             "tokens"
         ],
         "logo": {
@@ -58645,7 +63939,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58666,7 +63962,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58686,7 +63984,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58706,7 +64006,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58729,7 +64031,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDC",
             "PEG:USD",
             "tokens"
         ],
@@ -58750,7 +64055,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58771,7 +64078,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Coinmarketcap"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:INSUR",
             "tokens"
         ],
         "logo": {
@@ -58791,7 +64101,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58811,7 +64123,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58831,7 +64145,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58851,8 +64167,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "native"
+            "crosschain",
+            "GROUP:AVAX",
+            "native",
+            "PEG:AVAX"
         ],
         "logo": {
             "oneInch": "",
@@ -58871,7 +64191,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:ETH",
             "tokens"
         ],
@@ -58915,7 +64237,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PEFI",
             "tokens"
         ],
         "logo": {
@@ -58935,7 +64260,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58955,7 +64282,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58971,11 +64300,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "decimals": 18,
         "logoURI": "https://tokens.1inch.io/0x1ecd47ff4d9598f89721a2866bfeb99505a413ed.png",
         "providers": [
-            "1inch",
-            "CoinGecko"
+            "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -58995,7 +64325,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59016,7 +64348,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FXS",
             "tokens"
         ],
         "logo": {
@@ -59038,7 +64373,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59059,7 +64396,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:BTC",
             "tokens"
         ],
@@ -59079,12 +64418,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch",
             "CoinGecko",
             "Kleros Tokens",
-            "SpookySwap Default List",
             "Trust Wallet Assets",
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:STG",
             "tokens"
         ],
         "logo": {
@@ -59103,7 +64444,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59124,7 +64467,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -59145,7 +64490,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:NEWO",
             "tokens"
         ],
         "logo": {
@@ -59164,7 +64512,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59184,7 +64534,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:BTC",
             "tokens"
         ],
@@ -59206,7 +64558,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59227,7 +64581,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59247,7 +64603,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59267,7 +64625,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59287,7 +64647,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59307,7 +64669,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59327,7 +64691,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:AMPL",
             "tokens"
         ],
         "logo": {
@@ -59346,7 +64713,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59366,7 +64735,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59383,11 +64754,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0xbd100d061e120b2c67a24453cf6368e63f1be056.png",
         "providers": [
             "1inch",
-            "CoinGecko",
-            "Coinmarketcap"
+            "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59407,7 +64779,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59427,7 +64801,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59446,7 +64822,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59466,7 +64844,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59485,7 +64865,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59505,7 +64887,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59522,11 +64906,14 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x808507121b80c02388fad14726482e061b8da827.png",
         "providers": [
             "1inch",
-            "Kleros Tokens",
-            "SpookySwap Default List"
+            "Kleros Tokens"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:miMATIC",
+            "GROUP:PENDLE",
             "tokens"
         ],
         "logo": {
@@ -59546,7 +64933,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59566,7 +64955,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59586,7 +64977,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59606,7 +64999,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59626,7 +65021,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:EGG",
             "tokens"
         ],
         "logo": {
@@ -59646,7 +65044,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59666,7 +65066,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -59689,7 +65091,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:LINK",
             "tokens"
         ],
         "logo": {
@@ -59710,7 +65115,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59730,7 +65137,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59751,7 +65160,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "PEG:USD",
             "tokens"
         ],
@@ -59775,7 +65186,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MIM",
             "tokens"
         ],
         "logo": {
@@ -59796,7 +65210,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59819,7 +65235,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Uniswap Labs Default"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:EURC",
             "tokens"
         ],
         "logo": {
@@ -59839,7 +65258,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59859,7 +65280,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59879,7 +65302,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59899,7 +65324,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59919,7 +65346,36 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "CoinGecko"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "tokens"
+        ],
+        "logo": {
+            "oneInch": "",
+            "metaBeem": ""
+        }
+    },
+    "0x6985884c4392d348587b19cb9eaaf157f13271cd": {
+        "chainId": 43114,
+        "symbol": "ZRO",
+        "name": "LayerZero",
+        "address": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+        "decimals": 18,
+        "logoURI": "https://tokens-data.1inch.io/images/43114/0x6985884c4392d348587b19cb9eaaf157f13271cd.png",
+        "providers": [
+            "1inch",
+            "CoinGecko",
+            "Coinmarketcap",
+            "Kleros Tokens",
+            "PancakeSwap Extended",
+            "Uniswap Labs Default"
+        ],
+        "eip2612": false,
+        "isFoT": false,
+        "tags": [
+            "crosschain",
+            "GROUP:ZRO",
             "tokens"
         ],
         "logo": {
@@ -59940,7 +65396,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59957,11 +65415,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
         "logoURI": "https://tokens.1inch.io/0x501ace9c35e60f03a2af4d484f49f9b1efde9f40.png",
         "providers": [
             "1inch",
-            "Coinmarketcap",
             "Kleros Tokens"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59980,7 +65439,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -59999,7 +65460,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -60018,7 +65481,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WETH",
             "PEG:ETH",
             "tokens"
         ],
@@ -60038,7 +65504,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:DAI",
             "PEG:USD",
             "tokens"
         ],
@@ -60058,7 +65527,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:AURORA",
             "tokens"
         ],
         "logo": {
@@ -60077,7 +65549,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -60096,7 +65570,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -60115,7 +65591,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -60134,7 +65612,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -60153,7 +65633,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": true,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -60172,7 +65654,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDC.e",
             "PEG:USD",
             "tokens"
         ],
@@ -60192,7 +65677,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:WBTC",
             "PEG:BTC",
             "tokens"
         ],
@@ -60212,7 +65700,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:NEAR",
             "tokens"
         ],
         "logo": {
@@ -60231,7 +65722,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -60250,7 +65743,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:USDT.e",
             "PEG:USD",
             "tokens"
         ],
@@ -60270,7 +65766,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PICKLE",
             "tokens"
         ],
         "logo": {
@@ -60290,8 +65789,12 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "Curve Token List"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
-            "native"
+            "crosschain",
+            "GROUP:ETH",
+            "native",
+            "PEG:ETH"
         ],
         "logo": {
             "oneInch": "",
@@ -60309,7 +65812,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FRAX",
             "tokens"
         ],
         "logo": {
@@ -60328,7 +65834,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:PAD",
             "tokens"
         ],
         "logo": {
@@ -60347,7 +65856,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:MODA",
             "tokens"
         ],
         "logo": {
@@ -60366,7 +65878,9 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
             "tokens"
         ],
         "logo": {
@@ -60385,7 +65899,10 @@ export const oneInchTokens : { [ key : number ] : OneInchTokenMap } = {
             "1inch"
         ],
         "eip2612": false,
+        "isFoT": false,
         "tags": [
+            "crosschain",
+            "GROUP:FLX",
             "tokens"
         ],
         "logo": {
