@@ -13,6 +13,7 @@ import {
 } from "../../../../src/models/TokenModels";
 import { ChainLinkPriceResult } from "../../../../src/services/rpcs/chainLink/ChainLinkService";
 import _ from "lodash";
+import { getCurrentChain } from "../../../../src";
 
 
 /**
@@ -214,17 +215,21 @@ describe( "WalletTransaction.account", () =>
 
 	describe( "Query Token Prices", () =>
 	{
-		it( "should return the live price of BTC/USD, ETH/USD on Ethereum Sepolia", async () =>
+		it( "should return the live price of BTC/USD ETH/USD ... on Ethereum mainnet", async () =>
 		{
 			//	switch chain/network to Eth.Sepolia
-			setCurrentChain( 11155111 );
+			const previousChain = getCurrentChain();
+			setCurrentChain( 1 );
 
 			//
 			//	https://docs.chain.link/data-feeds/price-feeds/addresses?network=ethereum&page=1
 			//
-			const arr = [ `BTC/USD`, `ETH/USD` ];
+			const arr = [ `BTC/USD`, `ETH/USD`, `BNB/USD`,
+				`1INCH/USD`, `AAVE/USD`, `APE/USD`, `ARB/USD`, `AVAX/USD`, `BAL/USD`,
+				`COMP/USD`, `CRV/USD`, `CVX/USD` ];
 			for ( const pair of arr )
 			{
+				//console.log( `pair :`, pair );
 				const priceObj : ChainLinkPriceResult | null = await new WalletAccount().queryPairPrice( pair );
 				//console.log( `priceObj :`, priceObj );
 				//    should output:
@@ -278,10 +283,84 @@ describe( "WalletTransaction.account", () =>
 				}
 
 				//	...
-				await TestUtil.sleep(2 * 1e3 );
+				await TestUtil.sleep(1 * 1e3 );
 			}
 
-		}, 20 * 1000 );
+			//	...
+			setCurrentChain( previousChain );
+
+		}, 90 * 1000 );
+
+
+		it( "should return the live price of BTC/USD ETH/USD on Ethereum Sepolia", async () =>
+		{
+			//	switch chain/network to Eth.Sepolia
+			setCurrentChain( 11155111 );
+
+			//
+			//	https://docs.chain.link/data-feeds/price-feeds/addresses?network=ethereum&page=1
+			//
+			const arr = [ `BTC/USD`, `ETH/USD` ];
+			for ( const pair of arr )
+			{
+				//console.log( `pair :`, pair );
+				const priceObj : ChainLinkPriceResult | null = await new WalletAccount().queryPairPrice( pair );
+				//console.log( `priceObj :`, priceObj );
+				//    should output:
+				//    priceObj : {
+				//       chainLink: {
+				//         roundId: 18446744073709566541n,
+				//         answer: 5916613855044n,
+				//         startedAt: 1723874712n,
+				//         updatedAt: 1723874712n,
+				//         answeredInRound: 18446744073709566541n,
+				//         address: '0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43',
+				//         decimals: 8
+				//       },
+				//       price: 5916613855044n,
+				//       floatPrice: 59166.13855044
+				//     }
+				//
+				//    priceObj : {
+				//       chainLink: {
+				//         roundId: 18446744073709566855n,
+				//         answer: 260136339126n,
+				//         startedAt: 1723875000n,
+				//         updatedAt: 1723875000n,
+				//         answeredInRound: 18446744073709566855n,
+				//         address: '0x694AA1769357215DE4FAC081bf1f309aDC325306',
+				//         decimals: 8
+				//       },
+				//       price: 260136339126n,
+				//       floatPrice: 2601.36339126
+				//     }
+				//
+				expect( priceObj ).toBeDefined();
+				expect( priceObj ).toHaveProperty( 'chainLink' );
+				expect( priceObj ).toHaveProperty( 'price' );
+				expect( priceObj ).toHaveProperty( 'floatPrice' );
+				if ( priceObj )
+				{
+					expect( TypeUtil.isBigint( priceObj.price ) ).toBeTruthy();
+					expect( priceObj.price ).toBeGreaterThan( BigInt( 0 ) );
+					expect( priceObj.floatPrice ).toBeGreaterThan( 0.0 );
+
+					expect( priceObj.chainLink ).toHaveProperty( 'roundId' );
+					expect( priceObj.chainLink ).toHaveProperty( 'answer' );
+					expect( priceObj.chainLink ).toHaveProperty( 'startedAt' );
+					expect( priceObj.chainLink ).toHaveProperty( 'updatedAt' );
+					expect( priceObj.chainLink ).toHaveProperty( 'answeredInRound' );
+					expect( priceObj.chainLink ).toHaveProperty( 'address' );
+					expect( priceObj.chainLink ).toHaveProperty( 'decimals' );
+
+					expect( priceObj.price ).toBeGreaterThan( 0.0 );
+				}
+
+				//	...
+				await TestUtil.sleep(1 * 1e3 );
+			}
+
+		}, 90 * 1000 );
 
 		it( "should return the live price of USDC/USD on Ethereum Sepolia", async () =>
 		{

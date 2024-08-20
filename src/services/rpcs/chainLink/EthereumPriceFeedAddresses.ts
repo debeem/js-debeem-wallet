@@ -13,6 +13,10 @@ export type ChainLinkPriceFeedAddressObject = {
 };
 
 export const priceFeedAddressesOnMainnet : ChainLinkPriceFeedAddressObject = {
+	"ARB/USD" : {
+		address : "0x31697852a68433DbCc2Ff612c516d69E3D9bd08F",
+		decimals : 8,
+	},
 	"1INCH/ETH" : {
 		address : "0x72AFAECF99C9d9C8215fF44C77B94B99C28741e8",
 		decimals : 18,
