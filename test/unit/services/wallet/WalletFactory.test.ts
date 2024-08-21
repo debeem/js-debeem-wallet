@@ -4,6 +4,7 @@ import { ethers, isAddress } from "ethers";
 import { TypeUtil } from "debeem-utils";
 import { EtherWallet, Web3Digester, Web3Signer, Web3Validator } from "debeem-id";
 import { AesCrypto } from "debeem-cipher";
+import { testMnemonicList } from "../../../../src/configs/TestConfig";
 
 /**
  *	WalletFactory unit test
@@ -19,6 +20,30 @@ describe( "WalletFactory", () =>
 
 	describe( "Create Wallet from Mnemonic", () =>
 	{
+		it( "should create a wallet from Alice's mnemonic", async () =>
+		{
+			const walletObj = new WalletFactory().createWalletFromMnemonic( testMnemonicList.alice );
+			//console.log( `walletObj :`, walletObj );
+			//	walletObj : {
+			//       isHD: true,
+			//       mnemonic: 'olympic cradle tragic crucial exit annual silly cloth scale fine gesture ancient',
+			//       password: '',
+			//       address: '0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357',
+			//       publicKey: '0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970a89b5aa622',
+			//       privateKey: '0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a',
+			//       index: 0,
+			//       path: "m/44'/60'/0'/0/0"
+			//     }
+			expect( walletObj ).not.toBeNull();
+			expect( walletObj.isHD ).toBe( true );
+			expect( walletObj.mnemonic ).toBe( `olympic cradle tragic crucial exit annual silly cloth scale fine gesture ancient` );
+			expect( walletObj.privateKey ).toBe( `0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a` );
+			expect( walletObj.publicKey ).toBe( `0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970a89b5aa622` );
+			expect( walletObj.address ).toBe( `0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357` );
+			expect( walletObj.index ).toBe( 0 );
+			expect( walletObj.path ).toBe( `m/44'/60'/0'/0/0` );
+		} );
+
 		it( "should create a wallet from a empty mnemonic", async () =>
 		{
 			// Create a wallet from the mnemonic
