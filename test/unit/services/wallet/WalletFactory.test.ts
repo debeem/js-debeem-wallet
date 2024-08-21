@@ -44,6 +44,54 @@ describe( "WalletFactory", () =>
 			expect( walletObj.path ).toBe( `m/44'/60'/0'/0/0` );
 		} );
 
+		it( "should create a wallet from Bob's mnemonic", async () =>
+		{
+			const walletObj = new WalletFactory().createWalletFromMnemonic( testMnemonicList.bob );
+			//console.log( `walletObj :`, walletObj );
+			//	walletObj : {
+			//       isHD: true,
+			//       mnemonic: 'evidence cement snap basket genre fantasy degree ability sunset pistol palace target',
+			//       password: '',
+			//       address: '0xcbb8f66676737f0423bdda7bb1d8b84fc3c257e8',
+			//       publicKey: '0x02fc39345f9e415b421bd06c02f648be13c334b3ec4ab33b2d2437a00d6d7b01cc',
+			//       privateKey: '0x2f246e9d20d984e51800e758def8d99f314f6d1c680277dcc2c0060e4b43dfa3',
+			//       index: 0,
+			//       path: "m/44'/60'/0'/0/0"
+			//     }
+			expect( walletObj ).not.toBeNull();
+			expect( walletObj.isHD ).toBe( true );
+			expect( walletObj.mnemonic ).toBe( `evidence cement snap basket genre fantasy degree ability sunset pistol palace target` );
+			expect( walletObj.privateKey ).toBe( `0x2f246e9d20d984e51800e758def8d99f314f6d1c680277dcc2c0060e4b43dfa3` );
+			expect( walletObj.publicKey ).toBe( `0x02fc39345f9e415b421bd06c02f648be13c334b3ec4ab33b2d2437a00d6d7b01cc` );
+			expect( walletObj.address ).toBe( `0xcbb8f66676737f0423bdda7bb1d8b84fc3c257e8` );
+			expect( walletObj.index ).toBe( 0 );
+			expect( walletObj.path ).toBe( `m/44'/60'/0'/0/0` );
+		} );
+
+		it( "should create a wallet from Mary's mnemonic", async () =>
+		{
+			const walletObj = new WalletFactory().createWalletFromMnemonic( testMnemonicList.mary );
+			//console.log( `walletObj :`, walletObj );
+			//	walletObj : {
+			//       isHD: true,
+			//       mnemonic: 'electric shoot legal trial crane rib garlic claw armed snow blind advance',
+			//       password: '',
+			//       address: '0xc4321e386bbc48692b49ec4230034ea78d2a5b55',
+			//       publicKey: '0x031e3440eb90788bedd955398a039d75ee3ade799d13a48eafe5f20b009cd8bace',
+			//       privateKey: '0xd449e4bb488ca6050beb042f4478214a0fc063aa9ea7c0d865c3813367805e1e',
+			//       index: 0,
+			//       path: "m/44'/60'/0'/0/0"
+			//     }
+			expect( walletObj ).not.toBeNull();
+			expect( walletObj.isHD ).toBe( true );
+			expect( walletObj.mnemonic ).toBe( `electric shoot legal trial crane rib garlic claw armed snow blind advance` );
+			expect( walletObj.privateKey ).toBe( `0xd449e4bb488ca6050beb042f4478214a0fc063aa9ea7c0d865c3813367805e1e` );
+			expect( walletObj.publicKey ).toBe( `0x031e3440eb90788bedd955398a039d75ee3ade799d13a48eafe5f20b009cd8bace` );
+			expect( walletObj.address ).toBe( `0xc4321e386bbc48692b49ec4230034ea78d2a5b55` );
+			expect( walletObj.index ).toBe( 0 );
+			expect( walletObj.path ).toBe( `m/44'/60'/0'/0/0` );
+		} );
+
 		it( "should create a wallet from a empty mnemonic", async () =>
 		{
 			// Create a wallet from the mnemonic
