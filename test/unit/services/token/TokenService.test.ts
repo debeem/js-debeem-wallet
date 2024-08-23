@@ -455,6 +455,7 @@ describe( "TokenService", () =>
 
 		it( "should return the logo url of a token", async () =>
 		{
+			//	AVAX
 			const contractAddress : string = new TokenService( currentChainId ).nativeTokenAddress;
 			const logoItem : OneInchTokenLogoItem | null = await new TokenService( currentChainId ).getItemLogo( contractAddress );
 			//console.log( `currentChainId : ${ currentChainId }, logoItem :`, logoItem );
