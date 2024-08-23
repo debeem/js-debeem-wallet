@@ -293,14 +293,14 @@ export class OneInchTokenService extends AbstractRpcService implements IRpcServi
 		{
 			return false;
 		}
-		if ( ! _.isString( logoItem.oneInch ) )
-		{
-			return false;
-		}
-		if ( ! _.isString( logoItem.metaBeem ) )
-		{
-			return false;
-		}
+		// if ( ! _.isString( logoItem.oneInch ) )
+		// {
+		// 	return false;
+		// }
+		// if ( ! _.isString( logoItem.metaBeem ) )
+		// {
+		// 	return false;
+		// }
 		if ( undefined !== logoItem.base64 )
 		{
 			if ( ! _.isString( logoItem.base64 ) )

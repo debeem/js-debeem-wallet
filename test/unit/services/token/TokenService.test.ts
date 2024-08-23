@@ -118,16 +118,18 @@ describe( "TokenService", () =>
 			expect( logoItem ).toBeDefined();
 			expect( OneInchTokenService.isValid1InchTokenLogoItem( logoItem ) ).toBeTruthy();
 			expect( logoItem && _.isString( logoItem.oneInch ) ).toBeTruthy();
-			expect( logoItem && logoItem.oneInch.startsWith( 'https://' ) ).toBeTruthy();
+			expect( logoItem && logoItem.oneInch && logoItem.oneInch.startsWith( 'https://' ) ).toBeTruthy();
 			expect( logoItem && _.isString( logoItem.metaBeem ) ).toBeTruthy();
-			expect( logoItem && logoItem.metaBeem.startsWith( 'https://' ) ).toBeTruthy();
+			expect( logoItem && logoItem.metaBeem && logoItem.metaBeem.startsWith( 'https://' ) ).toBeTruthy();
 		} );
 
 		it( "should return the logo url", async () =>
 		{
 			const arrContractAddresses = [
-				`0x111111111117dC0aa78b770fA6A738034120C302`,
-				`0xC167f62e93775ACADeb3d2B0940bce560171Fdf3`
+				`0x111111111117dC0aa78b770fA6A738034120C302`,	//	1INCH Token
+				`0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9`,	//	AAVE
+				`0xc18360217d8f7ab5e7c516566761ea12ce7f9d72`,	//	ENS Token
+				`0x4d224452801aced8b2f0aebe155379bb5d594381`,	//	APE (ApeCoin)
 			];
 
 			for ( const contractAddress of arrContractAddresses )
@@ -144,9 +146,9 @@ describe( "TokenService", () =>
 				expect( logoItem ).not.toBeNull();
 				expect( OneInchTokenService.isValid1InchTokenLogoItem( logoItem ) ).toBeTruthy();
 				expect( logoItem && _.isString( logoItem.oneInch ) ).toBeTruthy();
-				expect( logoItem && logoItem.oneInch.startsWith( 'https://' ) ).toBeTruthy();
+				expect( logoItem && logoItem.oneInch && logoItem.oneInch.startsWith( 'https://' ) ).toBeTruthy();
 				expect( logoItem && _.isString( logoItem.metaBeem ) ).toBeTruthy();
-				expect( logoItem && logoItem.metaBeem.startsWith( 'https://' ) ).toBeTruthy();
+				expect( logoItem && logoItem.metaBeem && logoItem.metaBeem.startsWith( 'https://' ) ).toBeTruthy();
 			}
 		} );
 
@@ -166,9 +168,9 @@ describe( "TokenService", () =>
 			expect( logoItem ).toBeDefined();
 			expect( OneInchTokenService.isValid1InchTokenLogoItem( logoItem ) ).toBeTruthy();
 			expect( logoItem && _.isString( logoItem.oneInch ) ).toBeTruthy();
-			expect( logoItem && logoItem.oneInch.startsWith( 'https://' ) ).toBeTruthy();
+			expect( logoItem && logoItem.oneInch && logoItem.oneInch.startsWith( 'https://' ) ).toBeTruthy();
 			expect( logoItem && _.isString( logoItem.metaBeem ) ).toBeTruthy();
-			expect( logoItem && logoItem.metaBeem.startsWith( 'https://' ) ).toBeTruthy();
+			expect( logoItem && logoItem.metaBeem && logoItem.metaBeem.startsWith( 'https://' ) ).toBeTruthy();
 
 			setCurrentChain( currentChainId );
 		} );
@@ -239,9 +241,9 @@ describe( "TokenService", () =>
 			expect( logoItem ).toBeDefined();
 			expect( OneInchTokenService.isValid1InchTokenLogoItem( logoItem ) ).toBeTruthy();
 			expect( logoItem && _.isString( logoItem.oneInch ) ).toBeTruthy();
-			expect( logoItem && logoItem.oneInch.startsWith( 'https://' ) ).toBeTruthy();
+			expect( logoItem && logoItem.oneInch && logoItem.oneInch.startsWith( 'https://' ) ).toBeTruthy();
 			expect( logoItem && _.isString( logoItem.metaBeem ) ).toBeTruthy();
-			expect( logoItem && logoItem.metaBeem.startsWith( 'https://' ) ).toBeTruthy();
+			expect( logoItem && logoItem.metaBeem && logoItem.metaBeem.startsWith( 'https://' ) ).toBeTruthy();
 		} );
 	} );
 
@@ -311,9 +313,9 @@ describe( "TokenService", () =>
 			expect( logoItem ).toBeDefined();
 			expect( OneInchTokenService.isValid1InchTokenLogoItem( logoItem ) ).toBeTruthy();
 			expect( logoItem && _.isString( logoItem.oneInch ) ).toBeTruthy();
-			expect( logoItem && logoItem.oneInch.startsWith( 'https://' ) ).toBeTruthy();
+			expect( logoItem && logoItem.oneInch && logoItem.oneInch.startsWith( 'https://' ) ).toBeTruthy();
 			expect( logoItem && _.isString( logoItem.metaBeem ) ).toBeTruthy();
-			expect( logoItem && logoItem.metaBeem.startsWith( 'https://' ) ).toBeTruthy();
+			expect( logoItem && logoItem.metaBeem && logoItem.metaBeem.startsWith( 'https://' ) ).toBeTruthy();
 		} );
 
 		it( "should return the USDT logo item", async () =>
@@ -331,9 +333,9 @@ describe( "TokenService", () =>
 			expect( logoItem ).toBeDefined();
 			expect( OneInchTokenService.isValid1InchTokenLogoItem( logoItem ) ).toBeTruthy();
 			expect( logoItem && _.isString( logoItem.oneInch ) ).toBeTruthy();
-			expect( logoItem && logoItem.oneInch.startsWith( 'https://' ) ).toBeTruthy();
+			expect( logoItem && logoItem.oneInch && logoItem.oneInch.startsWith( 'https://' ) ).toBeTruthy();
 			expect( logoItem && _.isString( logoItem.metaBeem ) ).toBeTruthy();
-			expect( logoItem && logoItem.metaBeem.startsWith( 'https://' ) ).toBeTruthy();
+			expect( logoItem && logoItem.metaBeem && logoItem.metaBeem.startsWith( 'https://' ) ).toBeTruthy();
 			expect( logoItem && _.isString( logoItem.base64 ) && ! _.isEmpty( logoItem.base64 ) ).toBeTruthy();
 		} );
 	} );
@@ -389,20 +391,83 @@ describe( "TokenService", () =>
 		it( "should return the logo url of a token", async () =>
 		{
 			const contractAddress : string = new TokenService( currentChainId ).nativeTokenAddress;
-			const logoItem : OneInchTokenLogoItem | null = await new TokenService().getItemLogo( contractAddress );
-			//console.log( `logoItem :`, logoItem );
+			const logoItem : OneInchTokenLogoItem | null = await new TokenService( currentChainId ).getItemLogo( contractAddress );
+			//console.log( `currentChainId : ${ currentChainId }, logoItem :`, logoItem );
 			//	should output:
-			//	logoItem : {
-			//       oneInch: 'https://tokens.1inch.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png',
-			//       metaBeem: 'https://tokens.metabeem.io/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee.png',
-			//       base64: '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'
+			//	currentChainId : 56, logoItem : {
+			//       oneInch: 'https://tokens.1inch.io/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png',
+			//       metaBeem: 'https://tokens.metabeem.io/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png'
 			//     }
 			expect( logoItem ).toBeDefined();
 			expect( OneInchTokenService.isValid1InchTokenLogoItem( logoItem ) ).toBeTruthy();
 			expect( logoItem && _.isString( logoItem.oneInch ) ).toBeTruthy();
-			expect( logoItem && logoItem.oneInch.startsWith( 'https://' ) ).toBeTruthy();
-			expect( logoItem && _.isString( logoItem.metaBeem ) ).toBeTruthy();
-			expect( logoItem && logoItem.metaBeem.startsWith( 'https://' ) ).toBeTruthy();
+			expect( logoItem && logoItem.oneInch && logoItem.oneInch.startsWith( 'https://' ) ).toBeTruthy();
+			expect( logoItem && logoItem.metaBeem && logoItem.metaBeem.startsWith( 'https://' ) ).toBeTruthy();
+		} );
+	} );
+
+	describe( "Token Item on Avalanche C-Chain", () =>
+	{
+		const currentChainId = 43114;
+		it( "should return true in checking the native address", async () =>
+		{
+			const contractAddress : string = new TokenService( currentChainId ).nativeTokenAddress;
+			const isETH = new TokenService( currentChainId ).isNativeToken( contractAddress );
+			expect( isETH ).toBeDefined();
+			expect( isETH ).toBeTruthy();
+		} );
+
+		it( "should return true in the existing check", async () =>
+		{
+			const contractAddress : string = new TokenService( currentChainId ).nativeTokenAddress;
+			const exist = await new TokenService( currentChainId ).exists( contractAddress );
+			expect( exist ).toBeDefined();
+			expect( exist ).toBeTruthy();
+		} );
+		it( "should return a token item", async () =>
+		{
+			const contractAddress : string = new TokenService( currentChainId ).nativeTokenAddress;
+			const item = await new TokenService( currentChainId ).getItem( contractAddress );
+			//console.log( `item: `, item );
+			//    should output:
+			//    item:  {
+			//       chainId: 56,
+			//       symbol: 'BNB',
+			//       name: 'BNB',
+			//       address: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
+			//       decimals: 18,
+			//       logoURI: 'https://tokens.1inch.io/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png',
+			//       providers: [ '1inch', 'Curve Token List' ],
+			//       eip2612: false,
+			//       tags: [ 'native' ]
+			//     }
+			expect( item ).toBeDefined();
+			expect( OneInchTokenService.isValid1InchTokenItem( item ) ).toBeTruthy();
+		} );
+
+		it( "should return the decimal value of a token", async () =>
+		{
+			const contractAddress : string = new TokenService( currentChainId ).nativeTokenAddress;
+			const decimals = await new TokenService( currentChainId ).getItemDecimals( contractAddress );
+			expect( decimals ).toBeDefined();
+			expect( _.isNumber( decimals ) ).toBeTruthy();
+		} );
+
+		it( "should return the logo url of a token", async () =>
+		{
+			const contractAddress : string = new TokenService( currentChainId ).nativeTokenAddress;
+			const logoItem : OneInchTokenLogoItem | null = await new TokenService( currentChainId ).getItemLogo( contractAddress );
+			//console.log( `currentChainId : ${ currentChainId }, logoItem :`, logoItem );
+			//	should output:
+			//	currentChainId : 43114, logoItem : {
+			//       oneInch: 'https://tokens.1inch.io/0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7.png',
+			//       metaBeem: 'https://tokens.metabeem.io/0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7.png'
+			//     }
+			expect( logoItem ).toBeDefined();
+			expect( OneInchTokenService.isValid1InchTokenLogoItem( logoItem ) ).toBeTruthy();
+			expect( logoItem && _.isString( logoItem.oneInch ) ).toBeTruthy();
+			expect( logoItem && logoItem.oneInch && logoItem.oneInch.startsWith( 'https://' ) ).toBeTruthy();
+			expect( logoItem && logoItem.metaBeem && logoItem.metaBeem.startsWith( 'https://' ) ).toBeTruthy();
 		} );
 	} );
 
@@ -455,9 +520,9 @@ describe( "TokenService", () =>
 			expect( logoItem ).toBeDefined();
 			expect( OneInchTokenService.isValid1InchTokenLogoItem( logoItem ) ).toBeTruthy();
 			expect( logoItem && _.isString( logoItem.oneInch ) ).toBeTruthy();
-			expect( logoItem && logoItem.oneInch.startsWith( 'https://' ) ).toBeTruthy();
+			expect( logoItem && logoItem.oneInch && logoItem.oneInch.startsWith( 'https://' ) ).toBeTruthy();
 			expect( logoItem && _.isString( logoItem.metaBeem ) ).toBeTruthy();
-			expect( logoItem && logoItem.metaBeem.startsWith( 'https://' ) ).toBeTruthy();
+			expect( logoItem && logoItem.metaBeem && logoItem.metaBeem.startsWith( 'https://' ) ).toBeTruthy();
 		} );
 	} );
 } );

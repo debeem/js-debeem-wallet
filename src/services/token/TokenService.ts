@@ -6,16 +6,15 @@
  */
 import { MathUtil } from "debeem-utils";
 import _ from "lodash";
-import {OneInchTokenService} from "../rpcs/oneInchToken/OneInchTokenService";
+import { OneInchTokenService } from "../rpcs/oneInchToken/OneInchTokenService";
 import { OneInchTokenItem, OneInchTokenLogoImageItem, OneInchTokenLogoItem } from "../../models/TokenModels";
-import {RpcSupportedChainMap} from "../../models/RpcModels";
-import {AbstractRpcService} from "../rpcs/AbstractRpcService";
-import {IRpcService} from "../rpcs/IRpcService";
-import {NetworkModels} from "../../models/NetworkModels";
+import { RpcSupportedChainMap } from "../../models/RpcModels";
+import { AbstractRpcService } from "../rpcs/AbstractRpcService";
+import { IRpcService } from "../rpcs/IRpcService";
+import { NetworkModels } from "../../models/NetworkModels";
 import { oneInchTokens } from "../../resources/oneInchTokens";
 import { oneInchTokensSepolia } from "../../resources/oneInchTokens.sepolia";
 import { oneInchTokenLogoImages } from "../../resources/oneInchTokenLogoImages";
-
 
 
 /**
@@ -40,7 +39,7 @@ export class TokenService extends AbstractRpcService implements IRpcService
 	 *
 	 *	@param chainId {number} the chainId number. defaults to getCurrentChain()
 	 */
-	constructor( chainId ?: number )
+	constructor( chainId ? : number )
 	{
 		super( chainId );
 		this.setChainMap( new OneInchTokenService( 1 ).supportedChainMap );
@@ -56,7 +55,7 @@ export class TokenService extends AbstractRpcService implements IRpcService
 	 * 	1 : "mainnet",		//	Ethereum mainnet
 	 * 	42161 : "arb1",		//	Arbitrum One
 	 * 	1313161554 : "aurora",	//	Aurora Mainnet
-	 * 	43114 : "avax",		//	Avalanche C-Chain
+	 * 	43114 : "avax",		//	Avalanche C-Chain, token : AVAX
 	 * 	8453 : "base",		//	Base
 	 * 	56 : "bnb",		//	BNB Smart Chain Mainnet
 	 * 	324 : "zksync",		//	zkSync Era Mainnet
@@ -202,16 +201,19 @@ export class TokenService extends AbstractRpcService implements IRpcService
 					}
 				}
 
-				if ( item && OneInchTokenService.isValid1InchTokenItem( item ) )
+				if ( item && item.logoURI &&
+					OneInchTokenService.isValid1InchTokenItem( item ) )
 				{
-					const contractAddress : string = item.address;
+					const tokenContractAddress : string | null = this.extractTokenContractAddressFromUrl( item.logoURI );
+					//const contractAddress : string = item.address;
 					item.logo = {
-						oneInch : `https://tokens.1inch.io/${ contractAddress }.png`,
-						metaBeem : `https://tokens.metabeem.io/${ contractAddress }.png`,
+						oneInch : item.logoURI,
+						metaBeem : `https://tokens.metabeem.io/${ tokenContractAddress }.png`,
 					};
-					if ( _.has( oneInchTokenLogoImages, contractAddress ) )
+					if ( tokenContractAddress &&
+						_.has( oneInchTokenLogoImages, tokenContractAddress ) )
 					{
-						const logoImage : OneInchTokenLogoImageItem | null = oneInchTokenLogoImages[ contractAddress ];
+						const logoImage : OneInchTokenLogoImageItem | null = oneInchTokenLogoImages[ tokenContractAddress ];
 						if ( null !== logoImage )
 						{
 							item.logo.base64 = logoImage.base64;
@@ -226,7 +228,7 @@ export class TokenService extends AbstractRpcService implements IRpcService
 			{
 				reject( err );
 			}
-		});
+		} );
 	}
 
 	/**
@@ -248,7 +250,7 @@ export class TokenService extends AbstractRpcService implements IRpcService
 			{
 				reject( err );
 			}
-		});
+		} );
 	}
 
 
@@ -304,7 +306,7 @@ export class TokenService extends AbstractRpcService implements IRpcService
 			}
 
 			return resolve( NaN );
-		});
+		} );
 	}
 
 	/**
@@ -350,9 +352,52 @@ export class TokenService extends AbstractRpcService implements IRpcService
 			{
 				reject( err );
 			}
-		});
+		} );
 	}
 
+	/**
+	 *	@param url	{string}
+	 *	@returns {string | null}
+	 *	@protected
+	 *
+	 * 	@example
+	 * 	const url = "https://tokens.1inch.io/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png";
+	 *	const token = extractTokenFromURL(url);
+	 *	console.log(token); // "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c"
+	 */
+	protected extractTokenContractAddressFromUrl( url : string ) : string | null
+	{
+		try
+		{
+			const parsedUrl = new URL( url );
+			if ( ! parsedUrl )
+			{
+				return null;
+			}
+			if ( ! _.isString( parsedUrl.pathname ) || _.isEmpty( parsedUrl.pathname ) )
+			{
+				return null;
+			}
+
+			//	split the path, using '/' as the separator
+			const pathSegments = parsedUrl.pathname.split( '/' );
+			if ( ! Array.isArray( pathSegments ) || 0 === pathSegments.length )
+			{
+				return null;
+			}
+
+			//	return the last part, minus the ".png" extension
+			const tokenWithExtension = pathSegments[ pathSegments.length - 1 ];
+
+			//	extract the part without extension
+			return tokenWithExtension.replace( '.png', '' );
+		}
+		catch ( err )
+		{
+		}
+
+		return null;
+	}
 
 
 	/**
@@ -366,7 +411,7 @@ export class TokenService extends AbstractRpcService implements IRpcService
 	/**
 	 * 	@hidden
 	 */
-	public getNetworkByChainId( chainId ?: number ) : string | null
+	public getNetworkByChainId( chainId ? : number ) : string | null
 	{
 		return super.getNetworkByChainId( chainId );
 	}
@@ -374,7 +419,7 @@ export class TokenService extends AbstractRpcService implements IRpcService
 	/**
 	 * 	@hidden
 	 */
-	public getEndpointByChainId( chainId ?: number ) : string
+	public getEndpointByChainId( chainId ? : number ) : string
 	{
 		return super.getEndpointByChainId( chainId );
 	}

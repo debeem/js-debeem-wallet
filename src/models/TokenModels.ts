@@ -67,17 +67,17 @@ export type OneInchTokenLogoItem = {
 	/**
 	 * 	logo url provided by OneInch
 	 */
-	oneInch : string,
+	oneInch ?: string | null,
 
 	/**
 	 *	logo url provided by MetaBeem
 	 */
-	metaBeem : string,
+	metaBeem ?: string | null,
 
 	/**
 	 * 	base64-encoded string of the image file
 	 */
-	base64 ?: string,
+	base64 ?: string | null,
 
 };
 
