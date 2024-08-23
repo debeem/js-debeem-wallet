@@ -3,7 +3,6 @@ import {OneInchTokenService, setCurrentChain, TokenService} from "../../../../sr
 import _ from "lodash";
 import {RpcSupportedChainMap} from "../../../../src/models/RpcModels";
 import { OneInchTokenLogoItem } from "../../../../src/models/TokenModels";
-import { getCurrentChain } from "../../../../src";
 
 
 /**
