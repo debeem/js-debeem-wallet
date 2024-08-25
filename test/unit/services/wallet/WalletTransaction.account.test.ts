@@ -411,6 +411,7 @@ describe( "WalletTransaction.account", () =>
 		it( "should return the live price of USDT/USD on Ethereum Mainnet", async () =>
 		{
 			//	switch chain/network to Eth.Mainnet
+			const previousChain = getCurrentChain();
 			setCurrentChain( 1 );
 
 			//
@@ -450,6 +451,10 @@ describe( "WalletTransaction.account", () =>
 				expect( priceObj.price ).toBeGreaterThan( 0.0 );
 			}
 
+			//	...
+			setCurrentChain( previousChain );
+
+			//	...
 			await TestUtil.sleep(3 * 1e3 );
 
 		}, 20 * 1000 );
