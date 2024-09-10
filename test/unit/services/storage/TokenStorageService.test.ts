@@ -1,13 +1,13 @@
 import { describe, expect } from '@jest/globals';
 import {
 	BasicStorageService,
-	getCurrentChain,
+	getCurrentChain, getCurrentChainAsync,
 	setCurrentChain,
 	TokenEntityItem,
 	TokenStorageService
 } from "../../../../src";
 import { TypeUtil } from "../../../../src/utils/TypeUtil";
-import { SysUserStorageService } from "../../../../src/services/storage/SysUserStorageService";
+import { SysUserStorageService } from "../../../../src";
 
 
 /**
@@ -35,7 +35,9 @@ describe( "TokenStorageService", () =>
 
 		it( "should return items by wallet address", async () =>
 		{
-			setCurrentChain( 1 );
+			const previousChain = getCurrentChain();
+			const currentChain = 1;
+			setCurrentChain( currentChain );
 
 			//await new SysUserStorageService().clear();
 			const tokenStorageService = new TokenStorageService();
@@ -51,6 +53,7 @@ describe( "TokenStorageService", () =>
 			await tokenStorageService.flushDefault( walletAddress );
 			const count1 : number = await tokenStorageService.countByWallet( walletAddress );
 			expect( count1 ).toBe( defaultTokens.length );
+
 
 			//	unique key: chainId + wallet + address
 			const walletAddress2 = `0x8B4c0Dc5AA90c322C747c10FDD7cf1759D343573`;
@@ -72,6 +75,7 @@ describe( "TokenStorageService", () =>
 
 			//	tokens 1
 			const tokens1 : Array<TokenEntityItem> | null = await tokenStorageService.getAllByWallet( walletAddress );
+			//console.log( `tokens1 :`, tokens1 );
 			expect( Array.isArray( tokens1 ) && tokens1.length === count1 ).toBeTruthy();
 			if ( tokens1 )
 			{
@@ -105,6 +109,9 @@ describe( "TokenStorageService", () =>
 			await tokenStorageService.clearByWallet( walletAddress2 );
 			expect( await tokenStorageService.countByWallet( walletAddress ) ).toBe( 0 );
 			expect( await tokenStorageService.countByWallet( walletAddress2 ) ).toBe( 0 );
+
+			//	...
+			setCurrentChain( previousChain );
 		} );
 	} );
 
