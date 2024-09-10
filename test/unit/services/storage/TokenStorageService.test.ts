@@ -1,8 +1,7 @@
 import { describe, expect } from '@jest/globals';
 import {
 	BasicStorageService,
-	getCurrentChain, getCurrentChainAsync,
-	setCurrentChain,
+	getCurrentChain, setCurrentChain,
 	TokenEntityItem,
 	TokenStorageService
 } from "../../../../src";
