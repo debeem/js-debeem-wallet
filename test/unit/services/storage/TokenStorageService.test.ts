@@ -75,7 +75,6 @@ describe( "TokenStorageService", () =>
 
 			//	tokens 1
 			const tokens1 : Array<TokenEntityItem> | null = await tokenStorageService.getAllByWallet( walletAddress );
-			//console.log( `tokens1 :`, tokens1 );
 			expect( Array.isArray( tokens1 ) && tokens1.length === count1 ).toBeTruthy();
 			if ( tokens1 )
 			{
