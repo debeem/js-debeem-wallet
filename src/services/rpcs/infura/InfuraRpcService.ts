@@ -16,6 +16,7 @@ import { TransactionDetailItem } from "../../../models/TransactionModels";
 import { AccessListish } from "ethers/src.ts/transaction";
 import { RpcCache } from "../RpcCache";
 import { RpcCacheItem } from "../../../models/RpcCacheModels";
+import { BlockItem } from "../../../models/BlockModels";
 
 
 export class InfuraRpcService extends AbstractRpcService implements IRpcService
@@ -412,6 +413,79 @@ export class InfuraRpcService extends AbstractRpcService implements IRpcService
 					transactionIndex : transactionIndex,
 					yParity : yParity,
 				} );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+	/**
+	 * 	query information about a block by blockHash
+	 *	@param blockHash		{string}	A string representing the hash (32 bytes) of a block.
+	 *	@param [transactionDetails]	{boolean}	If set to true, returns the full transaction objects,
+	 *							if false returns only the hashes of the transactions.
+	 *	@returns {Promise<BlockItem>}
+	 */
+	public fetchBlockByHash( blockHash : string, transactionDetails ?: boolean ) : Promise<BlockItem>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( ! TypeUtil.isNotEmptyString( blockHash ) )
+				{
+					return reject( `invalid blockHash` );
+				}
+
+				//	...
+				const params = [ blockHash, !! transactionDetails ];
+				const blockInfo : BlockItem = await this.fetchEthValue( 'eth_getBlockByHash', params );
+				if ( blockInfo )
+				{
+					blockInfo.timestampInSecond = MathUtil.intFromHex( blockInfo.timestamp );
+				}
+
+				resolve( blockInfo );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		});
+	}
+
+	/**
+	 * 	query information about a block by hexBlockNumber
+	 *	@param hexBlockNumber		{string}	A hexadecimal block number, or one of the string tags
+	 *							latest, earliest, pending, safe, or finalized.
+	 *							https://ethereum.org/en/developers/docs/apis/json-rpc/#default-block
+
+	 *	@param [transactionDetails]	{boolean}	If set to true, returns the full transaction objects,
+	 *							if false returns only the hashes of the transactions.
+	 * 	@returns {Promise<BlockItem>}
+	 */
+	public fetchBlockByNumber( hexBlockNumber : string, transactionDetails ?: boolean ) : Promise<BlockItem>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( ! TypeUtil.isNotEmptyString( hexBlockNumber ) )
+				{
+					return reject( `invalid hexBlockNumber` );
+				}
+
+				//	...
+				const params = [ hexBlockNumber, !! transactionDetails ];
+				const blockInfo : BlockItem = await this.fetchEthValue( 'eth_getBlockByNumber', params );
+				if ( blockInfo )
+				{
+					blockInfo.timestampInSecond = MathUtil.intFromHex( blockInfo.timestamp );
+				}
+
+				resolve( blockInfo );
 			}
 			catch ( err )
 			{

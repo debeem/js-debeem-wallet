@@ -41,9 +41,9 @@ export * from "./services/token/TokenService";
  *
  * 	services/wallet
  */
-import type { NetworkModels } from "./models/NetworkModels";
-import type { UsdtABIItem } from "./models/ABIModels";
-export type { NetworkModels, UsdtABIItem }
+export * from "./models/NetworkModels";
+export * from "./models/ABIModels";
+export * from "./models/BlockModels";
 
 export * from "./services/wallet/WalletFactory";
 export * from "./services/wallet/WalletAccount";

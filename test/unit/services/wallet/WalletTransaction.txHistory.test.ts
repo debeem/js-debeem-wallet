@@ -1,5 +1,5 @@
 import { describe, expect } from '@jest/globals';
-import { setCurrentChain, TokenService, WalletTransaction } from "../../../../src";
+import { BlockItem, setCurrentChain, TokenService, WalletTransaction } from "../../../../src";
 import { TypeUtil } from "../../../../src/utils/TypeUtil";
 import {
 	EnumTransactionTransferTypes,
@@ -669,6 +669,7 @@ describe( "WalletTransaction.txHistory", () =>
 			const fetchOptions : TransactionHistoryFetchOptions = {
 				sort : 'desc',
 			};
+			const walletAddress = `0xd526a2216196bef034eac4de568127cdbedba538`;
 			const txResult : TransactionHistoryResult = await new WalletTransaction().queryTransactionHistory( walletAddress, queryOptions, fetchOptions );
 			const txList = txResult.transfers;
 			expect( txList ).toBeDefined();
@@ -677,16 +678,77 @@ describe( "WalletTransaction.txHistory", () =>
 			if ( Array.isArray( txList ) )
 			{
 				let maxRequests = 3;
+				let blockObjects : Record< string, BlockItem > = {};
 				for ( const tx of txList )
 				{
-					//console.log( `tx :`, tx );
+					console.log( `tx :`, tx );
 					expect( tx ).toBeDefined();
 					expect( tx ).toHaveProperty( 'blockNum' );
 					expect( tx ).toHaveProperty( 'uniqueId' );
 					expect( tx ).toHaveProperty( 'hash' );
+					expect( _.isString( tx.blockNum ) ).toBeTruthy();
+					expect( _.isEmpty( tx.blockNum ) ).toBeFalsy();
 					expect( _.isString( tx.hash ) ).toBeTruthy();
 					expect( _.isEmpty( tx.hash ) ).toBeFalsy();
 					expect( _.startsWith( tx.hash, `0x` ) ).toBeTruthy();
+
+					if ( ! blockObjects.hasOwnProperty( tx.blockNum ) )
+					{
+						blockObjects[ tx.blockNum ] = await new WalletTransaction().queryBlockByNumber( tx.blockNum );
+					}
+					//console.log( `blockObjects[ tx.blockNum ] :`, blockObjects[ tx.blockNum ] );
+					//blockObjects[ tx.blockNum ] : {
+					//       baseFeePerGas: '0x6c3d436c4',
+					//       blobGasUsed: '0xc0000',
+					//       difficulty: '0x0',
+					//       excessBlobGas: '0x40000',
+					//       extraData: '0x496c6c756d696e61746520446d6f63726174697a6520447374726962757465',
+					//       gasLimit: '0x1c9c380',
+					//       gasUsed: '0x9193c2',
+					//       hash: '0x98e86e42e604d8bea43ad60d13d0352119a01b793edee8d3025b46af6b0aa376',
+					//       logsBloom: '0x4420000000014000001004c284002044000900200005c08800040808068082080008800000202000324084000016c1a05400008226050890110430040024200000045000000500005400204a846096800420400202062460408008800840a2000c1802009288690208a0002080018d80942800c40008428800114410000960044220012408a0000021d000500a0100500000580820030000800104084444000102080004438113000010c1841002a008200000480090484000b0650aa0824888000010820000500000016300880300d480248120c14800001004001021006001001000000100202020602040200c003001010100689104000401288084110004',
+					//       miner: '0x13cb6ae34a13a0977f4d7101ebc24b87bb23f0d5',
+					//       mixHash: '0x595c074cfb143bd170cd2486a19617a47842833d347c8d558cefd428a114b042',
+					//       nonce: '0x0000000000000000',
+					//       number: '0x670412',
+					//       parentBeaconBlockRoot: '0x52f2d973b5b568d7b8b0e2fb85d7b86749778fc541f3f4090ffb33498d307293',
+					//       parentHash: '0x6ef71cd50e96f3066dc69dbf9a5cbfab04affa12d775520b58faf8aa648b7ac4',
+					//       receiptsRoot: '0x9c3e70ca6a5292283993d696e5320752291c7bcdd780433e53df407c7ffcda76',
+					//       sha3Uncles: '0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347',
+					//       size: '0x241b2',
+					//       stateRoot: '0x69db64947f3d966bc25acb68b9881d3669051d57f8472e48399a8575ea6d9c63',
+					//       timestamp: '0x66f2ba64',
+					//       totalDifficulty: '0x3c656d23029ab0',
+					//       transactions: [
+					//         '0xb3633639131f8d8f045321cb5bf9b66d1394756c73da1421672bf658f83d78b9',
+					//         '0x3fe2dc313f96e8eea3ef1209ba8b8d13778fa86bca3d2abaa46d9bd2bb5eb33d',
+					//	   ...
+					//       ],
+					//       transactionsRoot: '0x8afe86df6de320bc49ad7b2e42ce1475ded1605ab6feeab2aa4e47f6f8455d8e',
+					//       uncles: [],
+					//       withdrawals: [
+					//         {
+					//           address: '0x25c4a76e7d118705e7ea2e9b7d8c59930d8acd3b',
+					//           amount: '0x2e1b5',
+					//           index: '0x395ec09',
+					//           validatorIndex: '0x1bf'
+					//         },
+					//         ...
+					//       ],
+					//       withdrawalsRoot: '0xdcaf9edf9f747ad30dd913164b9590c33174d747577ebde0fb8a507411c855d7',
+					//       timestampInSecond: 1727183460
+					//     }
+					const blockInfo = blockObjects[ tx.blockNum ];
+					expect( blockInfo ).toBeDefined();
+					expect( blockInfo ).not.toBeNull();
+					expect( blockInfo ).toHaveProperty( 'timestampInSecond' );
+					expect( _.isNumber( blockInfo.timestampInSecond ) ).toBeTruthy();
+					expect( blockInfo.timestampInSecond ).toBeGreaterThan( 0 );
+					const blockDate = new Date( blockInfo.timestampInSecond * 1000 );
+					console.log( `blockDate :`, blockDate.toLocaleString() );
+					//	blockDate : 9/24/2024, 9:33:36 PM
+					//	blockDate : 9/24/2024, 9:11:00 PM
+
 
 					//	...
 					const txReceipt : any = await new WalletTransaction().queryTransactionReceipt( tx.hash );

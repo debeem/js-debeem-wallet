@@ -25,6 +25,7 @@ import {
 } from "../../models/TransactionModels";
 import _ from "lodash";
 import {AddressLike} from "ethers/src.ts/address";
+import { BlockItem } from "../../models/BlockModels";
 
 /**
  *	Please configure chain/network before using this class.
@@ -777,5 +778,30 @@ export class WalletTransaction
 	public async queryTransactionReceipt( txHash : string ) : Promise<any>
 	{
 		return new InfuraRpcService( getCurrentChain() ).fetchEthTransactionReceipt( txHash );
+	}
+
+
+	/**
+	 * 	query information about a block by blockHash
+	 *	@param blockHash		{string}	A string representing the hash (32 bytes) of a block.
+	 *	@param [transactionDetails]	{boolean}	If set to true, returns the full transaction objects,
+	 *							if false returns only the hashes of the transactions.
+	 *	@returns {Promise<BlockItem>}
+	 */
+	public queryBlockByHash( blockHash : string, transactionDetails ?: boolean ) : Promise<BlockItem>
+	{
+		return new InfuraRpcService( getCurrentChain() ).fetchBlockByHash( blockHash, transactionDetails );
+	}
+
+	/**
+	 * 	query information about a block by hexBlockNumber
+	 *	@param hexBlockNumber		{string}	A hexadecimal block number, or one of the string tags
+	 *							latest, earliest, pending, safe, or finalized.
+	 *	@param [transactionDetails]	{boolean}	If set to true, returns the full transaction objects,
+	 *							if false returns only the hashes of the transactions.
+	 */
+	public queryBlockByNumber( hexBlockNumber : string, transactionDetails ?: boolean ) : Promise<BlockItem>
+	{
+		return new InfuraRpcService( getCurrentChain() ).fetchBlockByNumber( hexBlockNumber, transactionDetails );
 	}
 }
