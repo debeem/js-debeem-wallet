@@ -95,9 +95,9 @@ describe( "OneInchTokenService", () =>
 			expect( logoItem ).toBeDefined();
 			expect( OneInchTokenService.isValid1InchTokenLogoItem( logoItem ) ).toBeTruthy();
 			expect( logoItem && _.isString( logoItem.oneInch ) ).toBeTruthy();
-			expect( logoItem && logoItem.oneInch.startsWith( 'https://' ) ).toBeTruthy();
+			expect( logoItem && logoItem.oneInch && logoItem.oneInch.startsWith( 'https://' ) ).toBeTruthy();
 			expect( logoItem && _.isString( logoItem.metaBeem ) ).toBeTruthy();
-			expect( logoItem && logoItem.metaBeem.startsWith( 'https://' ) ).toBeTruthy();
+			expect( logoItem && logoItem.metaBeem && logoItem.metaBeem.startsWith( 'https://' ) ).toBeTruthy();
 		} );
 
 		// it( "Should return the url address of the [Tether USD] icon by its contract address", async () =>

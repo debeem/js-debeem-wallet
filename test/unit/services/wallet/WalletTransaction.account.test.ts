@@ -465,19 +465,22 @@ describe( "WalletTransaction.account", () =>
 	{
 		it( "should return the ETH balance and value in USD using .queryValue", async () =>
 		{
-			const address = '0x47B506704DA0370840c2992A3d3d301FD3c260D3';
+			//const address = '0x47B506704DA0370840c2992A3d3d301FD3c260D3';
+			const address = '0xd352928173460a1c21bb690bd8aedc5e94b80cc8';
 			const pair : string	= `ETH/USD`;
 			const value : TokenValueItem = await new WalletAccount().queryValue( address, pair );
 			//console.log( `value :`, value );
 			//
 			//	should output:
-			//    value : {
-			//       balance: 2553243637330105070n,
+			//	    value : {
+			//       balance: 10000000000n,
 			//       balanceDecimals: 18,
-			//       floatBalance: 2.553243637330105,
-			//       value: 664191452711805965698731968820n,
+			//       floatBalance: 1e-8,
+			//       stringBalance: '0.00000001',
+			//       value: 2440430000000000000000n,
 			//       valueDecimals: 26,
-			//       floatValue: 6641.9145271180605
+			//       floatValue: 0.0000244043,
+			//       stringValue: '0.0000244043'
 			//     }
 			//
 			expect( value ).toBeDefined();
@@ -487,11 +490,13 @@ describe( "WalletTransaction.account", () =>
 				expect( typeof value.floatBalance ).toBe( 'number' );
 				expect( value.balance ).toBeGreaterThan( 0 );
 				expect( value.floatBalance ).toBeGreaterThan( 0 );
+				expect( _.isEmpty( value.stringBalance ) ).toBeFalsy();
 
 				expect( typeof value.value ).toBe( 'bigint' );
 				expect( typeof value.floatValue ).toBe( 'number' );
 				expect( value.value ).toBeGreaterThan( 0 );
 				expect( value.floatValue ).toBeGreaterThan( 0 );
+				expect( _.isEmpty( value.stringValue ) ).toBeFalsy();
 
 				const calcFloatBalance = MathUtil.floatValueFromBigint( value.balance, value.balanceDecimals );
 				const calcFloatValue = MathUtil.floatValueFromBigint( value.value, value.valueDecimals );
@@ -517,16 +522,18 @@ describe( "WalletTransaction.account", () =>
 			const values : Array<ContractTokenValueItem> = await new WalletAccount().queryTokenValues( address, tokens );
 			//console.log( `values`, values );
 			//	should output:
-			//	values [
+			//	    values [
 			//       {
 			//         pair: 'ETH/USD',
 			//         contractAddress: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
-			//         balance: 2553243637330105070n,
+			//         balance: 2752601976690597070n,
 			//         balanceDecimals: 18,
-			//         floatBalance: 2.553243637330105,
-			//         value: 664191452711805965698731968820n,
+			//         floatBalance: 2.7526019766905967,
+			//         stringBalance: '2.75260197669059707',
+			//         value: 671753244197503380754010000000n,
 			//         valueDecimals: 26,
-			//         floatValue: 6641.9145271180605
+			//         floatValue: 6717.532441975035,
+			//         stringValue: '6717.5324419750338075401'
 			//       }
 			//     ]
 			//
@@ -548,6 +555,7 @@ describe( "WalletTransaction.account", () =>
 						expect( value.balance ).toBeGreaterThanOrEqual( 0 );
 						expect( value.balanceDecimals ).toBeGreaterThanOrEqual( 0 );
 						expect( value.floatBalance ).toBeGreaterThanOrEqual( 0 );
+						expect( _.isEmpty( value.stringBalance ) ).toBeFalsy();
 
 						expect( typeof value.value ).toBe( 'bigint' );
 						expect( typeof value.valueDecimals ).toBe( 'number' );
@@ -555,6 +563,7 @@ describe( "WalletTransaction.account", () =>
 						expect( value.value ).toBeGreaterThanOrEqual( 0 );
 						expect( value.valueDecimals ).toBeGreaterThanOrEqual( 0 );
 						expect( value.floatValue ).toBeGreaterThanOrEqual( 0 );
+						expect( _.isEmpty( value.stringValue ) ).toBeFalsy();
 
 						const calcFloatBalance = MathUtil.floatValueFromBigint( value.balance, value.balanceDecimals );
 						const calcFloatValue = MathUtil.floatValueFromBigint( value.value, value.valueDecimals );

@@ -237,8 +237,12 @@ export async function putCurrentChainAsync( chainId : number ) : Promise<boolean
 	{
 		try
 		{
+			//	save chainId into local database
 			const value : string = String( chainId );
 			const saved : boolean = await new SysConfigStorageService().putConfig( SysConfigKeys.currentChain, value );
+
+			//	set chainId into memory
+			setCurrentChain( chainId );
 			resolve( saved );
 		}
 		catch ( err )

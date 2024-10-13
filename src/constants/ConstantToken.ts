@@ -60,7 +60,9 @@ export const defaultTokenValueItem : TokenValueItem = {
 	balance : BigInt( 0 ),
 	balanceDecimals : 0,
 	floatBalance : 0,
+	stringBalance : ``,
 	value : BigInt( 0 ),
 	valueDecimals : 0,
 	floatValue : 0,
+	stringValue : ``,
 };

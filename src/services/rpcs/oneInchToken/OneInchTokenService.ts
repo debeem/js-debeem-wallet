@@ -169,6 +169,10 @@ export class OneInchTokenService extends AbstractRpcService implements IRpcServi
 					]
 				};
 				const response : FetchResponse = await FetchUtil.getRequest( options );
+				console.log( `fetchTokenMap url: `, url );
+				console.log( `fetchTokenMap options: `, options );
+				//console.log( `fetchTokenMap response: `, response );
+				console.log( `fetchTokenMap response.bodyJson: `, response.bodyJson );
 				if ( ! response || ! response.bodyJson || ! _.isObject( response.bodyJson ) )
 				{
 					return reject(`invalid response`);

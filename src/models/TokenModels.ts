@@ -20,11 +20,13 @@ export type TokenValueItem = {
 	balance : bigint,
 	balanceDecimals : number,
 	floatBalance : number,
+	stringBalance : string,
 
 	//	value
 	value : bigint,
 	valueDecimals : number,
 	floatValue : number,
+	stringValue : string,
 };
 
 /**

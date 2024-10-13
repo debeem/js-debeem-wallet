@@ -250,9 +250,11 @@ export class WalletAccount
 				}
 
 				let floatBalance : number = 0.00;
+				let stringBalance : string = ``;
 				let bigValue : bigint = BigInt( 0 );
 				let valueDecimals : number = 0;
 				let floatValue : number = 0.00;
+				let stringValue : string = ``;
 
 				//	query the balance of native ETH
 				const balance : bigint = await this.queryBalance( address );
@@ -261,6 +263,7 @@ export class WalletAccount
 					if ( decimals > 0 )
 					{
 						floatBalance = MathUtil.floatValueFromBigint( balance, decimals );
+						stringBalance = MathUtil.stringFromBigint( balance, decimals );
 					}
 
 					//	...
@@ -285,6 +288,7 @@ export class WalletAccount
 							//	decimals for balance
 							valueDecimals = priceFeedAddressItem.decimals + decimals;
 							floatValue = MathUtil.floatValueFromBigint( bigValue, valueDecimals );
+							stringValue = MathUtil.stringFromBigint( bigValue, valueDecimals );
 						}
 					}
 				}
@@ -294,10 +298,12 @@ export class WalletAccount
 					balance : balance,
 					balanceDecimals : decimals,
 					floatBalance : floatBalance,
+					stringBalance : stringBalance,
 
 					value : bigValue,
 					valueDecimals : valueDecimals,
 					floatValue : floatValue,
+					stringValue : stringValue,
 				};
 				resolve( value );
 			}
@@ -374,15 +380,19 @@ export class WalletAccount
 					// 	"tokenBalance": 11111111n
 					// },
 					let floatBalance : number = 0.00;
+					let stringBalance : string = ``;
 
 					let bigValue : bigint = BigInt( 0 );
 					let valueDecimals : number = 0;
 					let floatValue : number = 0.00;
+					let stringValue : string = ``;
+
 					if ( balance.tokenBalance > 0 )
 					{
 						if ( balance.decimals && balance.decimals > 0 )
 						{
 							floatBalance = MathUtil.floatValueFromBigint( balance.tokenBalance, balance.decimals );
+							stringBalance = MathUtil.stringFromBigint( balance.tokenBalance, balance.decimals );
 						}
 
 						//	...
@@ -406,6 +416,7 @@ export class WalletAccount
 								//	update floatValue
 								valueDecimals = priceFeedItem.decimals + balance.decimals;
 								floatValue = MathUtil.floatValueFromBigint( bigValue, valueDecimals );
+								stringValue = MathUtil.stringFromBigint( bigValue, valueDecimals );
 							}
 						}
 					}
@@ -418,10 +429,12 @@ export class WalletAccount
 						balance : balance.tokenBalance,
 						balanceDecimals : balance.decimals,
 						floatBalance : floatBalance,
+						stringBalance : stringBalance,
 
 						value : bigValue,
 						valueDecimals : valueDecimals,
 						floatValue : floatValue,
+						stringValue : stringValue,
 					};
 					values.push( value );
 				}
