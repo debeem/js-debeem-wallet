@@ -6,6 +6,7 @@ import { EtherWallet, Web3Digester, Web3Signer, Web3Validator } from "debeem-id"
 import { AesCrypto } from "debeem-cipher";
 import { testMnemonicList } from "../../../../src/configs/TestConfig";
 
+
 /**
  *	WalletFactory unit test
  */
@@ -42,6 +43,25 @@ describe( "WalletFactory", () =>
 			expect( walletObj.address ).toBe( `0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357` );
 			expect( walletObj.index ).toBe( 0 );
 			expect( walletObj.path ).toBe( `m/44'/60'/0'/0/0` );
+		} );
+
+		it( 'should compute wallet address from private/public key', () =>
+		{
+			const privateKey = '0xf8ba731e3d09ce93ee6256d7393e993be01cd84de044798372c0d1a8ad9b952a';
+			const publicKey = '0x03ed2098910ab9068abd54e1562eb9dee3cb2d9fc1426dfe91541970a89b5aa622';
+			const address = `0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357`;
+			const walletAddress1 = ethers.computeAddress( privateKey );
+			const walletAddress2 = ethers.computeAddress( publicKey );
+			//console.log( `walletAddress1 :`, walletAddress1 );
+			//
+			//	walletAddress1 : 0xC8F60EaF5988aC37a2963aC5Fabe97f709d6b357
+			//
+			//console.log( `walletAddress2 :`, walletAddress2 );
+			//
+			//	walletAddress2 : 0xC8F60EaF5988aC37a2963aC5Fabe97f709d6b357
+			//
+			expect( walletAddress1.trim().toLowerCase() ).toBe( address );
+			expect( walletAddress2.trim().toLowerCase() ).toBe( address );
 		} );
 
 		it( "should create a wallet from Bob's mnemonic", async () =>
