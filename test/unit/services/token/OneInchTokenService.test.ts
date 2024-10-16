@@ -20,67 +20,111 @@ describe( "OneInchTokenService", () =>
 
 	describe( "Token List", () =>
 	{
-		it( "should return a token list", async () =>
-		{
-			const oneInch = new OneInchTokenService( getCurrentChain() );
-			const res = await oneInch.fetchTokenMap();
-			expect( res ).toBeDefined();
-			const keys = _.keys( res );
-			expect( Array.isArray( keys ) && keys.length > 0 ).toBeTruthy();
-			for ( const key in res )
-			{
-				expect( OneInchTokenService.isValid1InchTokenItem( res[ key ] ) ).toBeTruthy();
-			}
-		} );
+		//
+		//	Since 1inch only allows KYC-verified accounts to use its API,
+		//	starting from October 2024, remote API calls will no longer be made,
+		//	and only offline data from 1inch will be used.
+		//
+		// it( "should return a token list", async () =>
+		// {
+		// 	const oneInch = new OneInchTokenService( getCurrentChain() );
+		// 	const res = await oneInch.fetchTokenMap();
+		// 	expect( res ).toBeDefined();
+		// 	const keys = _.keys( res );
+		// 	expect( Array.isArray( keys ) && keys.length > 0 ).toBeTruthy();
+		// 	for ( const key in res )
+		// 	{
+		// 		expect( OneInchTokenService.isValid1InchTokenItem( res[ key ] ) ).toBeTruthy();
+		// 	}
+		// } );
 	} );
 
 	describe( "Token Custom Info", () =>
 	{
-		it( "should return a custom contract token info", async () =>
+		it( 'should return a token info by contract address and chainId', async () =>
 		{
-			const oneInch = new OneInchTokenService( getCurrentChain() );
-			const res = await oneInch.fetchTokenItemInfo( "0x491e136ff7ff03e6ab097e54734697bb5802fc1c" );
-
-			//	{
-			//		"id": 385599,
-			//		"symbol": "KTN",
-			//		"name": "Kattana",
-			//		"address": "0x491e136ff7ff03e6ab097e54734697bb5802fc1c",
-			//		"decimals": 18,
-			//		"logoURI": "https://tokens.1inch.io/0x491e136ff7ff03e6ab097e54734697bb5802fc1c.png",
-			//		"rating": 3,
-			//		"eip2612": null,
-			//		"tags": [
-			//			{
-			//				"value": "tokens",
-			//				"provider": "1inch"
-			//			}
-			//		],
-			//		"providers": [
-			//			"1inch",
-			//			"Trust Wallet Assets",
-			//			"Zapper Token List"
-			//		]
-			//	}
+			const chainId = 1;
+			const oneInch = new OneInchTokenService( chainId );
+			const tokenItem = await oneInch.getTokenItemInfo( `0x491e136ff7ff03e6ab097e54734697bb5802fc1c` );
+			//console.log( `tokenItem :`, tokenItem );
 			//
-			//	{
-			//		"address": "0x491e136ff7ff03e6ab097e54734697bb5802fc1c",
-			//		"decimals": 18,
-			//		"eip2612": null,
-			//		"logoURI": "https://tokens.1inch.io/0x491e136ff7ff03e6ab097e54734697bb5802fc1c.png",
-			//		"name": "Kattana",
-			//		"providers": ["Trust Wallet Assets", "Zapper Token List", "1inch"],
-			//		"rating": 3,
-			//		"symbol":"KTN",
-			//		"tags": [{"provider": "1inch", "value": "tokens"}]
-			//	}
+			//	tokenItem : {
+			//       chainId: 1,
+			//       symbol: 'KTN',
+			//       name: 'Kattana',
+			//       address: '0x491e136ff7ff03e6ab097e54734697bb5802fc1c',
+			//       decimals: 18,
+			//       logoURI: 'https://tokens.1inch.io/0x491e136ff7ff03e6ab097e54734697bb5802fc1c.png',
+			//       providers: [ '1inch', 'CoinGecko', 'Kleros Tokens' ],
+			//       eip2612: false,
+			//       isFoT: false,
+			//       tags: [ 'crosschain', 'tokens' ],
+			//       logo: {
+			//         oneInch: 'https://tokens.1inch.io/0x491e136ff7ff03e6ab097e54734697bb5802fc1c.png',
+			//         metaBeem: 'https://tokens.metabeem.io/0x491e136ff7ff03e6ab097e54734697bb5802fc1c.png'
+			//       }
+			//     }
 			//
-			expect( res ).toBeDefined();
-			expect( res ).toHaveProperty( 'address' );
-			expect( res ).toHaveProperty( 'decimals' );
-			expect( res ).toHaveProperty( 'name' );
-			expect( res ).toHaveProperty( 'symbol' );
+			expect( tokenItem ).toBeDefined();
+			expect( tokenItem ).toHaveProperty( 'chainId' );
+			expect( tokenItem ).toHaveProperty( 'symbol' );
+			expect( tokenItem ).toHaveProperty( 'name' );
+			expect( tokenItem ).toHaveProperty( 'address' );
+			expect( tokenItem ).toHaveProperty( 'decimals' );
+			expect( tokenItem ).toHaveProperty( 'logoURI' );
+			expect( tokenItem ).toHaveProperty( 'logo' );
 		} );
+
+		//
+		//	Since 1inch only allows KYC-verified accounts to use its API,
+		//	starting from October 2024, remote API calls will no longer be made,
+		//	and only offline data from 1inch will be used.
+		//
+		// it( "should fetch a token info by contract address and chainId", async () =>
+		// {
+		// 	const chainId = 1;
+		// 	const oneInch = new OneInchTokenService( chainId );
+		// 	const res = await oneInch.fetchTokenItemInfo( "0x491e136ff7ff03e6ab097e54734697bb5802fc1c" );
+		// 	//	{
+		// 	//		"id": 385599,
+		// 	//		"symbol": "KTN",
+		// 	//		"name": "Kattana",
+		// 	//		"address": "0x491e136ff7ff03e6ab097e54734697bb5802fc1c",
+		// 	//		"decimals": 18,
+		// 	//		"logoURI": "https://tokens.1inch.io/0x491e136ff7ff03e6ab097e54734697bb5802fc1c.png",
+		// 	//		"rating": 3,
+		// 	//		"eip2612": null,
+		// 	//		"tags": [
+		// 	//			{
+		// 	//				"value": "tokens",
+		// 	//				"provider": "1inch"
+		// 	//			}
+		// 	//		],
+		// 	//		"providers": [
+		// 	//			"1inch",
+		// 	//			"Trust Wallet Assets",
+		// 	//			"Zapper Token List"
+		// 	//		]
+		// 	//	}
+		// 	//
+		// 	//	{
+		// 	//		"address": "0x491e136ff7ff03e6ab097e54734697bb5802fc1c",
+		// 	//		"decimals": 18,
+		// 	//		"eip2612": null,
+		// 	//		"logoURI": "https://tokens.1inch.io/0x491e136ff7ff03e6ab097e54734697bb5802fc1c.png",
+		// 	//		"name": "Kattana",
+		// 	//		"providers": ["Trust Wallet Assets", "Zapper Token List", "1inch"],
+		// 	//		"rating": 3,
+		// 	//		"symbol":"KTN",
+		// 	//		"tags": [{"provider": "1inch", "value": "tokens"}]
+		// 	//	}
+		// 	//
+		// 	expect( res ).toBeDefined();
+		// 	expect( res ).toHaveProperty( 'address' );
+		// 	expect( res ).toHaveProperty( 'decimals' );
+		// 	expect( res ).toHaveProperty( 'name' );
+		// 	expect( res ).toHaveProperty( 'symbol' );
+		// } );
 
 		it( "Should return the url address of the [Tether USD] icon", async () =>
 		{

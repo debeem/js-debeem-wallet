@@ -7,14 +7,11 @@
 import { MathUtil } from "debeem-utils";
 import _ from "lodash";
 import { OneInchTokenService } from "../rpcs/oneInchToken/OneInchTokenService";
-import { OneInchTokenItem, OneInchTokenLogoImageItem, OneInchTokenLogoItem } from "../../models/TokenModels";
+import { OneInchTokenItem, OneInchTokenLogoItem } from "../../models/TokenModels";
 import { RpcSupportedChainMap } from "../../models/RpcModels";
 import { AbstractRpcService } from "../rpcs/AbstractRpcService";
 import { IRpcService } from "../rpcs/IRpcService";
 import { NetworkModels } from "../../models/NetworkModels";
-import { oneInchTokens } from "../../resources/oneInchTokens";
-import { oneInchTokensSepolia } from "../../resources/oneInchTokens.sepolia";
-import { oneInchTokenLogoImages } from "../../resources/oneInchTokenLogoImages";
 
 
 /**
@@ -153,76 +150,9 @@ export class TokenService extends AbstractRpcService implements IRpcService
 					return reject( `${ this.constructor.name }.getItem :: invalid contractAddress` );
 				}
 
-				//	...
-				contractAddress = contractAddress.trim().toLowerCase();
-
-				//
-				//	search item from local
-				//
-				const supportedChains = new OneInchTokenService( 1 ).supportedChains;
-				if ( ! supportedChains.includes( this.chainId ) &&
-					11155111 !== this.chainId )
-				{
-					//	unsupported by chainId
-					return resolve( null );
-				}
-
-				let item : OneInchTokenItem | null = null;
-
-				//	on Sepolia
-				if ( 11155111 === this.chainId )
-				{
-					if ( _.has( oneInchTokensSepolia, contractAddress ) )
-					{
-						item = oneInchTokensSepolia[ contractAddress ];
-					}
-				}
-
-				//	try to get from local cache file
-				if ( ! OneInchTokenService.isValid1InchTokenItem( item ) )
-				{
-					let tokenMap = oneInchTokens[ this.chainId ];
-					if ( _.isObject( tokenMap ) &&
-						_.has( tokenMap, contractAddress ) )
-					{
-						item = tokenMap[ contractAddress ];
-					}
-				}
-
-				//	try to fetch from internet
-				if ( ! OneInchTokenService.isValid1InchTokenItem( item ) )
-				{
-					try
-					{
-						item = await new OneInchTokenService( this.chainId ).fetchTokenItemInfo( contractAddress );
-					}
-					catch ( err )
-					{
-					}
-				}
-
-				if ( item && item.logoURI &&
-					OneInchTokenService.isValid1InchTokenItem( item ) )
-				{
-					const tokenContractAddress : string | null = this.extractTokenContractAddressFromUrl( item.logoURI );
-					//const contractAddress : string = item.address;
-					item.logo = {
-						oneInch : item.logoURI,
-						metaBeem : `https://tokens.metabeem.io/${ tokenContractAddress }.png`,
-					};
-					if ( tokenContractAddress &&
-						_.has( oneInchTokenLogoImages, tokenContractAddress ) )
-					{
-						const logoImage : OneInchTokenLogoImageItem | null = oneInchTokenLogoImages[ tokenContractAddress ];
-						if ( null !== logoImage )
-						{
-							item.logo.base64 = logoImage.base64;
-						}
-					}
-				}
-
-				//	...
-				resolve( OneInchTokenService.isValid1InchTokenItem( item ) ? item : null );
+				const oneInch = new OneInchTokenService( this.chainId );
+				const item = await oneInch.getTokenItemInfo( contractAddress );
+				resolve( item );
 			}
 			catch ( err )
 			{
@@ -230,6 +160,7 @@ export class TokenService extends AbstractRpcService implements IRpcService
 			}
 		} );
 	}
+
 
 	/**
 	 * 	check if the token exists by contractAddress
@@ -353,50 +284,6 @@ export class TokenService extends AbstractRpcService implements IRpcService
 				reject( err );
 			}
 		} );
-	}
-
-	/**
-	 *	@param url	{string}
-	 *	@returns {string | null}
-	 *	@protected
-	 *
-	 * 	@example
-	 * 	const url = "https://tokens.1inch.io/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png";
-	 *	const token = extractTokenFromURL(url);
-	 *	console.log(token); // "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c"
-	 */
-	protected extractTokenContractAddressFromUrl( url : string ) : string | null
-	{
-		try
-		{
-			const parsedUrl = new URL( url );
-			if ( ! parsedUrl )
-			{
-				return null;
-			}
-			if ( ! _.isString( parsedUrl.pathname ) || _.isEmpty( parsedUrl.pathname ) )
-			{
-				return null;
-			}
-
-			//	split the path, using '/' as the separator
-			const pathSegments = parsedUrl.pathname.split( '/' );
-			if ( ! Array.isArray( pathSegments ) || 0 === pathSegments.length )
-			{
-				return null;
-			}
-
-			//	return the last part, minus the ".png" extension
-			const tokenWithExtension = pathSegments[ pathSegments.length - 1 ];
-
-			//	extract the part without extension
-			return tokenWithExtension.replace( '.png', '' );
-		}
-		catch ( err )
-		{
-		}
-
-		return null;
 	}
 
 

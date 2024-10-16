@@ -8,8 +8,16 @@ import { AbstractRpcService } from "../AbstractRpcService";
 import { IRpcService } from "../IRpcService";
 import { oneInch } from "../../../config";
 import { NetworkModels } from "../../../models/NetworkModels";
-import { defaultOneInchTokenLogoItem, OneInchTokenItem, OneInchTokenMap } from "../../../models/TokenModels";
+import {
+	defaultOneInchTokenLogoItem,
+	OneInchTokenItem,
+	OneInchTokenLogoImageItem,
+	OneInchTokenMap
+} from "../../../models/TokenModels";
 import _ from "lodash";
+import { oneInchTokensSepolia } from "../../../resources/oneInchTokens.sepolia";
+import { oneInchTokens } from "../../../resources/oneInchTokens";
+import { oneInchTokenLogoImages } from "../../../resources/oneInchTokenLogoImages";
 
 /**
  * 	@class OneInchTokenService
@@ -26,6 +34,8 @@ export class OneInchTokenService extends AbstractRpcService implements IRpcServi
 	{
 		super( chainId );
 		this.setChainMap({
+			11155111 : "Sepolia",	//	Ethereum testnet Sepolia
+
 			1 : "mainnet",		//	Ethereum mainnet
 			42161 : "arb1",		//	Arbitrum One
 			1313161554 : "aurora",	//	Aurora Mainnet
@@ -65,6 +75,141 @@ export class OneInchTokenService extends AbstractRpcService implements IRpcServi
 	public getEndpointByChainId( chainId ?: number ) : string
 	{
 		return `https://api.1inch.dev`;
+	}
+
+
+	/**
+	 * 	get token item info
+	 *
+	 * 	@example
+	 * ```ts
+	 * //
+	 * //    switch chain/network to BNB Smart Chain Mainnet
+	 * //
+	 * const currentChainId = 56;
+	 *
+	 * const contractAddress : string = new OneInchTokenService( currentChainId ).nativeTokenAddress;
+	 * const item = await new OneInchTokenService( currentChainId ).getTokenItemInfo( contractAddress );
+	 * //    should return:
+	 * {
+	 *    chainId: 56,
+	 *    symbol: 'BNB',
+	 *    name: 'BNB',
+	 *    address: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
+	 *    decimals: 18,
+	 *    logoURI: 'https://tokens.1inch.io/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png',
+	 *    providers: [ '1inch', 'Curve Token List' ],
+	 *    eip2612: false,
+	 *    tags: [ 'native' ]
+	 * }
+	 * ```
+	 *
+	 *	@param contractAddress	{string} contract address
+	 *	@returns {Promise<OneInchTokenItem | null>}
+	 */
+	public getTokenItemInfo( contractAddress : string ) : Promise<OneInchTokenItem | null>
+	{
+		return new Promise( async ( resolve, reject ) =>
+		{
+			try
+			{
+				if ( ! _.isNumber( this.chainId ) || this.chainId <= 0 )
+				{
+					return reject( `${ this.constructor.name }.getTokenItemInfo :: invalid chainId` );
+				}
+				if ( ! _.isString( contractAddress ) || _.isEmpty( contractAddress ) )
+				{
+					return reject( `${ this.constructor.name }.getTokenItemInfo :: invalid contractAddress` );
+				}
+
+				//	...
+				contractAddress = contractAddress.trim().toLowerCase();
+
+				//
+				//	search item from local
+				//
+				const supportedChains = new OneInchTokenService( 1 ).supportedChains;
+				if ( ! supportedChains.includes( this.chainId ) )
+				{
+					//	unsupported by chainId
+					return resolve( null );
+				}
+
+				let item : OneInchTokenItem | null = null;
+
+				//
+				//	Since 1inch does not support the Sepolia network,
+				//	token data for the Sepolia network has been added manually.
+				//
+				if ( 11155111 === this.chainId )
+				{
+					//	on Sepolia
+					if ( _.has( oneInchTokensSepolia, contractAddress ) )
+					{
+						item = oneInchTokensSepolia[ contractAddress ];
+					}
+				}
+				else
+				{
+					//	try to get from local cache file
+					if ( _.has( oneInchTokens, this.chainId ) )
+					{
+						let tokenMap = oneInchTokens[ this.chainId ];
+						if ( _.isObject( tokenMap ) &&
+							_.has( tokenMap, contractAddress ) )
+						{
+							item = tokenMap[ contractAddress ];
+						}
+					}
+
+					//
+					//	Since 1inch only allows KYC-verified accounts to use its API,
+					//	starting from October 2024, remote API calls will no longer be made,
+					//	and only offline data from 1inch will be used.
+					//
+					//
+					//	try to fetch from internet
+					// if ( ! OneInchTokenService.isValid1InchTokenItem( item ) )
+					// {
+					// 	try
+					// 	{
+					// 		item = await new OneInchTokenService( this.chainId ).fetchTokenItemInfo( contractAddress );
+					// 	}
+					// 	catch ( err )
+					// 	{
+					// 	}
+					// }
+				}
+
+				if ( item &&
+					item.logoURI &&
+					OneInchTokenService.isValid1InchTokenItem( item ) )
+				{
+					const tokenContractAddress : string | null = this.extractTokenContractAddressFromUrl( item.logoURI );
+					//const contractAddress : string = item.address;
+					item.logo = {
+						oneInch : item.logoURI,
+						metaBeem : `https://tokens.metabeem.io/${ tokenContractAddress }.png`,
+					};
+					if ( tokenContractAddress &&
+						_.has( oneInchTokenLogoImages, tokenContractAddress ) )
+					{
+						const logoImage : OneInchTokenLogoImageItem | null = oneInchTokenLogoImages[ tokenContractAddress ];
+						if ( null !== logoImage )
+						{
+							item.logo.base64 = logoImage.base64;
+						}
+					}
+				}
+
+				//	...
+				resolve( OneInchTokenService.isValid1InchTokenItem( item ) ? item : null );
+			}
+			catch ( err )
+			{
+				reject( err );
+			}
+		} );
 	}
 
 	/**
@@ -314,5 +459,49 @@ export class OneInchTokenService extends AbstractRpcService implements IRpcServi
 		}
 
 		return true;
+	}
+
+	/**
+	 *	@param url	{string}
+	 *	@returns {string | null}
+	 *	@protected
+	 *
+	 * 	@example
+	 * 	const url = "https://tokens.1inch.io/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png";
+	 *	const token = extractTokenFromURL(url);
+	 *	console.log(token); // "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c"
+	 */
+	protected extractTokenContractAddressFromUrl( url : string ) : string | null
+	{
+		try
+		{
+			const parsedUrl = new URL( url );
+			if ( ! parsedUrl )
+			{
+				return null;
+			}
+			if ( ! _.isString( parsedUrl.pathname ) || _.isEmpty( parsedUrl.pathname ) )
+			{
+				return null;
+			}
+
+			//	split the path, using '/' as the separator
+			const pathSegments = parsedUrl.pathname.split( '/' );
+			if ( ! Array.isArray( pathSegments ) || 0 === pathSegments.length )
+			{
+				return null;
+			}
+
+			//	return the last part, minus the ".png" extension
+			const tokenWithExtension = pathSegments[ pathSegments.length - 1 ];
+
+			//	extract the part without extension
+			return tokenWithExtension.replace( '.png', '' );
+		}
+		catch ( err )
+		{
+		}
+
+		return null;
 	}
 }
