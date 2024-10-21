@@ -318,13 +318,14 @@ export class SysUserStorageService implements IStorageService
 	}
 
 	/**
-	 * 	Check if the pinCode is correct
+	 * 	check if the PIN Code is correct
 	 *
 	 * 	@group Extended Methods
 	 *	@param pinCode		{string} the PIN Code
+	 *	@param [walletAddress]	{string} the user specified wallet address for verification
 	 *	@returns { Promise< boolean > }
 	 */
-	public async isValidPinCode( pinCode : string ) : Promise< boolean >
+	public async isValidPinCode( pinCode : string, walletAddress ?: string ) : Promise< boolean >
 	{
 		return new Promise( async ( resolve, reject ) =>
 		{
@@ -335,17 +336,20 @@ export class SysUserStorageService implements IStorageService
 					return reject( `${ this.constructor.name }.isValidPinCode :: invalid pinCode` );
 				}
 
-				//	get current wallet
-				const currentWallet : string | undefined = await this.getCurrentWalletAddress();
-				if ( ! _.isString( currentWallet ) || _.isEmpty( currentWallet ) )
+				if ( ! EtherWallet.isValidAddress( walletAddress ) )
 				{
-					return reject( `${ this.constructor.name }.isValidPinCode :: invalid currentWallet` );
+					//	get current wallet
+					walletAddress = await this.getCurrentWalletAddress();
+				}
+				if ( ! walletAddress || ! EtherWallet.isValidAddress( walletAddress ) )
+				{
+					return reject( `${ this.constructor.name }.isValidPinCode :: invalid walletAddress` );
 				}
 
 				//	...
 				await this.initDb();
 				await TestUtil.sleep( 1 );
-				const sysUserItem : SysUserItem | null = await this.get( currentWallet );
+				const sysUserItem : SysUserItem | null = await this.get( walletAddress );
 				if ( ! sysUserItem )
 				{
 					return reject( `${ this.constructor.name }.isValidPinCode :: user not found` );

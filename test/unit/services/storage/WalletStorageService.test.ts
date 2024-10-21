@@ -98,7 +98,7 @@ describe( "WalletStorageService", () =>
 		const walletObject = testWalletObjList.alice;
 		const pinCode = `123456`;
 
-		it( "should throw `invalid currentWallet`", async () =>
+		it( "should throw `invalid walletAddress`", async () =>
 		{
 			try
 			{

@@ -1,5 +1,11 @@
 import { describe, expect } from '@jest/globals';
-import { WalletEntityBaseItem, WalletEntityItem, WalletFactory, WalletStorageService } from "../../../../src";
+import {
+	getCurrentWalletAsync,
+	WalletEntityBaseItem,
+	WalletEntityItem,
+	WalletFactory,
+	WalletStorageService
+} from "../../../../src";
 import { SysUserStorageService } from "../../../../src";
 import _ from "lodash";
 import { testWalletObjList } from "../../../../src/configs/TestConfig";
@@ -242,7 +248,7 @@ describe( "SysUserStorageService", () =>
 			{
 				const errorText = err as string;
 				expect( _.isString( errorText ) ).toBeTruthy();
-				expect( errorText && errorText.includes( `invalid currentWallet` ) ).toBeTruthy();
+				expect( errorText && errorText.includes( `invalid walletAddress` ) ).toBeTruthy();
 			}
 
 			//	check PIN code
@@ -250,7 +256,7 @@ describe( "SysUserStorageService", () =>
 			const isValidPinCode = await sysUserStorageService.isValidPinCode( pinCode3 );
 			expect( isValidPinCode ).toBeTruthy();
 		} );
-	})
+	});
 
 	describe( "change PIN code", () =>
 	{
@@ -308,4 +314,111 @@ describe( "SysUserStorageService", () =>
 		} );
 
 	} );
+
+	describe( "Switch account, verify PIN Code", () =>
+	{
+		it( `should verify PIN Code for current user`, async () =>
+		{
+			const chainId = 1;
+
+			//
+			//	step 1
+			//	create a wallet for Alice
+			//
+			const alicePINCode = `123456`;
+			const aliceWallet : WalletEntityItem = {
+				...testWalletObjList.alice,
+				name: `Alice's Wallet`,
+				chainId : chainId,
+				pinCode: ``
+			};
+			const aliceCreated : boolean = await initWalletAsync( aliceWallet, alicePINCode, true );
+			expect( aliceCreated ).toBeTruthy();
+
+			//	After calling initWalletAsync, the current account automatically switches to Alice
+			const alicePinCodeVerificationResult = await new SysUserStorageService().isValidPinCode( alicePINCode );
+			expect( alicePinCodeVerificationResult ).toBeTruthy();
+
+			//
+			//	step 2
+			//	create a wallet for Bob
+			//
+			const bobPINCode = `789000`;
+			const bobWallet : WalletEntityItem = {
+				...testWalletObjList.alice,
+				name: `Alice's Wallet`,
+				chainId : chainId,
+				pinCode: ``
+			};
+			const bobCreated : boolean = await initWalletAsync( bobWallet, bobPINCode, true );
+			expect( bobCreated ).toBeTruthy();
+
+			//	After calling initWalletAsync, the current account automatically switches to Bob
+			const bobPinCodeVerificationResult = await new SysUserStorageService().isValidPinCode( bobPINCode );
+			expect( bobPinCodeVerificationResult ).toBeTruthy();
+		} );
+
+		it( `should verify PIN Code for specified user's PIN code`, async () =>
+		{
+			const chainId = 1;
+
+			//
+			//	step 1
+			//	create a wallet for Alice
+			//
+			const alicePINCode = `123456`;
+			const aliceWallet : WalletEntityItem = {
+				...testWalletObjList.alice,
+				name: `Alice's Wallet`,
+				chainId : chainId,
+				pinCode: ``
+			};
+			const aliceCreated : boolean = await initWalletAsync( aliceWallet, alicePINCode, true );
+			expect( aliceCreated ).toBeTruthy();
+
+			const currentWallet1 = await getCurrentWalletAsync();
+			expect( currentWallet1 ).toBe( aliceWallet.address );
+
+			//	After calling initWalletAsync, the current account automatically switches to Alice
+			const alicePinCodeVerificationResult = await new SysUserStorageService().isValidPinCode( alicePINCode );
+			expect( alicePinCodeVerificationResult ).toBeTruthy();
+
+			//
+			//	step 2
+			//	create a wallet for Bob
+			//
+			const bobPINCode = `789000`;
+			const bobWallet : WalletEntityItem = {
+				...testWalletObjList.bob,
+				name: `Bob's Wallet`,
+				chainId : chainId,
+				pinCode: ``
+			};
+			const bobCreated : boolean = await initWalletAsync( bobWallet, bobPINCode, true );
+			expect( bobCreated ).toBeTruthy();
+
+			const currentWallet2 = await getCurrentWalletAsync();
+			expect( currentWallet2 ).toBe( bobWallet.address );
+
+			//	After calling initWalletAsync, the current account automatically switches to Bob
+			const bobPinCodeVerificationResult = await new SysUserStorageService().isValidPinCode( bobPINCode );
+			expect( bobPinCodeVerificationResult ).toBeTruthy();
+
+			//
+			//	KEY DIFFERENCE:
+			//	specify Alice's wallet address through the second parameter
+			//
+			//	console.log( `alicePINCode: ${ alicePINCode }, aliceWallet address: ${ aliceWallet.address }` );
+			//	    alicePINCode: 123456, aliceWallet address: 0xc8f60eaf5988ac37a2963ac5fabe97f709d6b357
+			const alicePinCodeVerificationResultByWalletAddress =
+				await new SysUserStorageService().isValidPinCode( alicePINCode, aliceWallet.address );
+			expect( alicePinCodeVerificationResultByWalletAddress ).toBeTruthy();
+
+			//console.log( `bobPINCode: ${ bobPINCode }, bobWallet address: ${ bobWallet.address }` );
+			//	    bobPINCode: 789000, bobWallet address: 0xcbb8f66676737f0423bdda7bb1d8b84fc3c257e8
+			const bobPinCodeVerificationResultByWalletAddress =
+				await new SysUserStorageService().isValidPinCode( bobPINCode, bobWallet.address );
+			expect( bobPinCodeVerificationResultByWalletAddress ).toBeTruthy();
+		} );
+	});
 } );
