@@ -1,5 +1,5 @@
 import { describe, expect } from '@jest/globals';
-import { SysUserItem, SysUserStorageService, WalletStorageService } from "../../../../src";
+import { SysUserItem, SysUserStorageService, WalletFactory, WalletStorageService } from "../../../../src";
 import { WalletEntityItem } from "../../../../src";
 import { testUserList, testWalletObjList } from "../../../../src/configs/TestConfig";
 import _ from "lodash";
@@ -586,7 +586,7 @@ describe( "WalletStorageService", () =>
 
 	describe( "Decrypt wallet item using privateKey", () =>
 	{
-		it( "should decrypt an encrypted wallet data using privateKey", async () =>
+		it( "should decrypt an encrypted wallet using privateKey derived from a mnemonic", async () =>
 		{
 			//
 			//	step 1
@@ -609,11 +609,68 @@ describe( "WalletStorageService", () =>
 			//	step 2
 			//	instantiate an encrypted wallet storage using private key
 			//
-			const encryptedStorageOptions1 : EncryptedStorageOptions = {
-				address : walletObject.address,
-				privateKey : walletObject.privateKey
+			const aliceMnemonic = testWalletObjList.alice.mnemonic;
+			const aliceWalletFromMnemonic = new WalletFactory().createWalletFromMnemonic( aliceMnemonic );
+			const aliceEncryptedStorageOptions : EncryptedStorageOptions = {
+				address : aliceWalletFromMnemonic.address,
+				privateKey : aliceWalletFromMnemonic.privateKey
 			};
-			const walletStorage : WalletStorageService = new WalletStorageService( undefined, encryptedStorageOptions1 );
+			const walletStorage : WalletStorageService = new WalletStorageService( undefined, aliceEncryptedStorageOptions );
+			const allKeys1 : Array<string> = await walletStorage.getAllKeys();
+			expect( Array.isArray( allKeys1 ) ).toBeTruthy();
+			expect( allKeys1.length ).toBeGreaterThan( 0 );
+
+			//
+			//	step 3
+			//	query wallet object by a wallet address
+			//
+			const encryptedWalletObj : WalletEntityItem | null = await walletStorage.getByWallet( toBeCreatedWalletItem.address );
+			expect( encryptedWalletObj ).not.toBeNull();
+			expect( EtherWallet.isValidWalletFactoryData( encryptedWalletObj ) ).toBeTruthy();
+			expect( encryptedWalletObj ).toHaveProperty( 'name' );
+			expect( encryptedWalletObj?.name ).toBe( toBeCreatedWalletItem.name );
+			expect( encryptedWalletObj?.address ).toBe( toBeCreatedWalletItem.address );
+			expect( encryptedWalletObj?.chainId ).toBe( toBeCreatedWalletItem.chainId );
+			expect( encryptedWalletObj?.pinCode ).toBe( toBeCreatedWalletItem.pinCode );
+			expect( encryptedWalletObj?.privateKey ).toBe( toBeCreatedWalletItem.privateKey );
+			expect( encryptedWalletObj?.publicKey ).toBe( toBeCreatedWalletItem.publicKey );
+			expect( encryptedWalletObj?.mnemonic ).toBe( toBeCreatedWalletItem.mnemonic );
+			expect( encryptedWalletObj?.isHD ).toBe( toBeCreatedWalletItem.isHD );
+			expect( encryptedWalletObj?.password ).toBe( toBeCreatedWalletItem.password );
+			expect( encryptedWalletObj?.index ).toBe( toBeCreatedWalletItem.index );
+			expect( encryptedWalletObj?.path ).toBe( toBeCreatedWalletItem.path );
+		});
+
+		it( "should decrypt an encrypted wallet using privateKey derived from a private key", async () =>
+		{
+			//
+			//	step 1
+			//	create an account and save it into the local database
+			//
+			const walletObject = testWalletObjList.alice;
+			const walletName = `MyWallet`;
+			const pinCode = `123456`;
+			const chainId = 1;
+			const toBeCreatedWalletItem : WalletEntityItem = {
+				...walletObject,
+				name : walletName,
+				chainId : chainId,
+				pinCode : ``
+			};
+			const created : boolean = await initWalletAsync( toBeCreatedWalletItem, pinCode, true );
+			expect( created ).toBeTruthy();
+
+			//
+			//	step 2
+			//	instantiate an encrypted wallet storage using private key
+			//
+			const alicePrivateKey = testWalletObjList.alice.privateKey;
+			const aliceWalletFromPrivateKey = new WalletFactory().createWalletFromPrivateKey( alicePrivateKey );
+			const aliceEncryptedStorageOptions : EncryptedStorageOptions = {
+				address : aliceWalletFromPrivateKey.address,
+				privateKey : aliceWalletFromPrivateKey.privateKey
+			};
+			const walletStorage : WalletStorageService = new WalletStorageService( undefined, aliceEncryptedStorageOptions );
 			const allKeys1 : Array<string> = await walletStorage.getAllKeys();
 			expect( Array.isArray( allKeys1 ) ).toBeTruthy();
 			expect( allKeys1.length ).toBeGreaterThan( 0 );
