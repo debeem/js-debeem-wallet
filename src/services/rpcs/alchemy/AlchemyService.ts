@@ -704,8 +704,8 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 				//           tokenId: null,
 				//           asset: 'ETH',
 				//           category: 'external',
-				//           rawContract: [Object],
-				//           metadata: [Object]
+				//           rawContract: { value: '0x2c68af0bb140000', address: null, decimal: '0x12' },
+				//           metadata: { blockTimestamp: '2024-10-21T04:42:24.000Z' }
 				//         }
 				//       ],
 				//       pageKey: 'e78062fc-ece2-445f-9381-27c12ce0ae82'
@@ -714,6 +714,22 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 				let txList : Array<TransactionHistoryItem> = [];
 				for ( const transfer of result.transfers )
 				{
+					let stringValue = null;
+					if ( _.isObject( transfer.rawContract ) &&
+						_.isString( transfer.rawContract.value ) &&
+						_.isString( transfer.rawContract.decimal ) )
+					{
+						const rawContractValue = transfer.rawContract.value.trim().toLowerCase();
+						const rawContractDecimal = transfer.rawContract.decimal.trim().toLowerCase();
+						if ( rawContractValue.startsWith( `0x` ) && rawContractDecimal.startsWith( `0x` ) )
+						{
+							stringValue = MathUtil.stringFromBigint(
+								MathUtil.bigintFromHex( rawContractValue ),
+								MathUtil.intFromHex( rawContractDecimal )
+							);
+						}
+					}
+
 					txList.push({
 						...transfer,
 						blockNum: transfer.blockNum,
@@ -722,6 +738,7 @@ export class AlchemyService extends AbstractRpcService implements IRpcService
 						from: transfer.from,
 						to: transfer.to,
 						value: transfer.value,
+						stringValue: stringValue,
 						erc721TokenId: transfer.erc721TokenId,
 						erc1155Metadata: transfer.erc1155Metadata,
 						tokenId: transfer.tokenId,

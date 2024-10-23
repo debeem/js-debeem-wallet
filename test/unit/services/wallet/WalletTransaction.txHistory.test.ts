@@ -70,41 +70,44 @@ describe( "WalletTransaction.txHistory", () =>
 					pageSize : 10,
 					pageKey : nextPageKey,
 				};
+				//const walletAddress = `0x9cba178b004908d2d8a13e2f74814d0a8d86432e`;
 				//console.log( `will query:`, fetchOptions );
 				const txResult : TransactionHistoryResult =
 					await new WalletTransaction().queryTransactionHistory( walletAddress, queryOptions, fetchOptions );
 				//console.log( `txResult :`, txResult );
 				//    txResult : {
 				//	transfers: [
-				//         {
-				//           blockNum: '0x5dcff7',
-				//           uniqueId: '0x27cc43ddb6e4d369d262bd56780abba6441747d408855ad26fb3c550250a902c:external',
-				//           hash: '0x27cc43ddb6e4d369d262bd56780abba6441747d408855ad26fb3c550250a902c',
+				//	   {
+				//           blockNum: '0x6980db',
+				//           uniqueId: '0x4c8340aea8df33bb12bd1d7b9817e292c06c54babcd65241a6071873b7129662:external',
+				//           hash: '0x4c8340aea8df33bb12bd1d7b9817e292c06c54babcd65241a6071873b7129662',
 				//           from: '0x47b506704da0370840c2992a3d3d301fd3c260d3',
-				//           to: '0x3a62dffe13529d981f2155f764d8e109772a0566',
-				//           value: 0.01,
+				//           to: '0xcc361bdf821563d2a8ac5b57a9e34ec5ca48c5f3',
+				//           value: 0.2,
 				//           erc721TokenId: null,
 				//           erc1155Metadata: null,
 				//           tokenId: null,
 				//           asset: 'ETH',
 				//           category: 'external',
 				//           rawContract: [Object],
-				//           metadata: [Object]
+				//           metadata: [Object],
+				//           stringValue: '0.2'
 				//         },
 				//         {
-				//           blockNum: '0x5dc9c3',
-				//           uniqueId: '0xaeac7eea528092c8b35063fba37c473effc76d6dd1b081e59dc7cf6d206aaf97:external',
-				//           hash: '0xaeac7eea528092c8b35063fba37c473effc76d6dd1b081e59dc7cf6d206aaf97',
-				//           from: '0x47b506704da0370840c2992a3d3d301fd3c260d3',
-				//           to: '0x9e15898acf36c544b6f4547269ca8385ce6304d8',
-				//           value: 0,
+				//           blockNum: '0x6980d9',
+				//           uniqueId: '0x2f0a11f5e92a7a4d8412bc5dc94daeda2787c165a4eee310667342d6406682f8:external',
+				//           hash: '0x2f0a11f5e92a7a4d8412bc5dc94daeda2787c165a4eee310667342d6406682f8',
+				//           from: '0x7ed746476a7f6520babd24eee1fdbcd0f7fb271f',
+				//           to: '0x47b506704da0370840c2992a3d3d301fd3c260d3',
+				//           value: 0.1,
 				//           erc721TokenId: null,
 				//           erc1155Metadata: null,
 				//           tokenId: null,
 				//           asset: 'ETH',
 				//           category: 'external',
 				//           rawContract: [Object],
-				//           metadata: [Object]
+				//           metadata: [Object],
+				//           stringValue: '0.1'
 				//         },
 				//	],
 				//	pageKey: '433864cf-d090-40b9-a3b1-a8147300dba7|M|1df5eb30-8509-40ea-bea5-6e6024f9ec2c'
@@ -151,6 +154,7 @@ describe( "WalletTransaction.txHistory", () =>
 						expect( tx ).toHaveProperty( 'from' );
 						expect( tx ).toHaveProperty( 'to' );
 						expect( tx ).toHaveProperty( 'value' );
+						expect( tx ).toHaveProperty( 'stringValue' );
 						expect( tx ).toHaveProperty( 'erc721TokenId' );
 						expect( tx ).toHaveProperty( 'erc1155Metadata' );
 						expect( tx ).toHaveProperty( 'tokenId' );
@@ -160,6 +164,8 @@ describe( "WalletTransaction.txHistory", () =>
 
 						expect( isAddress( tx.from ) ).toBeTruthy();
 						expect( isAddress( tx.to ) ).toBeTruthy();
+
+						expect( _.isString( tx.stringValue ) || null === tx.stringValue ).toBeTruthy();
 
 						expect( TypeUtil.isNotNullObject( tx.rawContract ) ).toBeTruthy();
 						expect( tx.rawContract ).toHaveProperty( 'value' );
@@ -681,16 +687,20 @@ describe( "WalletTransaction.txHistory", () =>
 				let blockObjects : Record< string, BlockItem > = {};
 				for ( const tx of txList )
 				{
-					console.log( `tx :`, tx );
+					//console.log( `tx :`, tx );
 					expect( tx ).toBeDefined();
 					expect( tx ).toHaveProperty( 'blockNum' );
 					expect( tx ).toHaveProperty( 'uniqueId' );
 					expect( tx ).toHaveProperty( 'hash' );
+					expect( tx ).toHaveProperty( 'value' );
+					expect( tx ).toHaveProperty( 'stringValue' );
 					expect( _.isString( tx.blockNum ) ).toBeTruthy();
 					expect( _.isEmpty( tx.blockNum ) ).toBeFalsy();
 					expect( _.isString( tx.hash ) ).toBeTruthy();
 					expect( _.isEmpty( tx.hash ) ).toBeFalsy();
 					expect( _.startsWith( tx.hash, `0x` ) ).toBeTruthy();
+					expect( _.isNumber( tx.value ) ).toBeTruthy();
+					expect( _.isString( tx.stringValue ) || null == tx.stringValue ).toBeTruthy();
 
 					if ( ! blockObjects.hasOwnProperty( tx.blockNum ) )
 					{

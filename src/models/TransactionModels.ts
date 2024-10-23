@@ -189,6 +189,11 @@ export type TransactionHistoryItem =
 	value: number | null,
 
 	/**
+	 * 	`0.01`
+	 */
+	stringValue : string | null;
+
+	/**
 	 *
 	 */
 	erc721TokenId: string | null,

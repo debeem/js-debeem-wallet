@@ -1,6 +1,6 @@
 {
 	"name": "debeem-wallet",
-	"version": "1.0.69",
+	"version": "1.0.70",
 	"description": "Ethereum Wallet by DeBeem, Team.",
 	"main": "dist/index.js",
 	"browser": "dist/index.js",
